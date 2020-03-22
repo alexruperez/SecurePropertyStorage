@@ -1,0 +1,1484 @@
+// !$*UTF8*$!
+{
+   archiveVersion = "1";
+   objectVersion = "46";
+   objects = {
+      "OBJ_1" = {
+         isa = "PBXProject";
+         attributes = {
+            LastSwiftMigration = "9999";
+            LastUpgradeCheck = "9999";
+         };
+         buildConfigurationList = "OBJ_2";
+         compatibilityVersion = "Xcode 3.2";
+         developmentRegion = "en";
+         hasScannedForEncodings = "0";
+         knownRegions = (
+            "en"
+         );
+         mainGroup = "OBJ_5";
+         productRefGroup = "OBJ_32";
+         projectDirPath = ".";
+         targets = (
+            "PropertyWrappers::Keychain",
+            "PropertyWrappers::KeychainDynamic::ProductTarget",
+            "PropertyWrappers::PropertyWrappers::ProductTarget",
+            "PropertyWrappers::PropertyWrappersDynamic::ProductTarget",
+            "PropertyWrappers::SwiftPMPackageDescription",
+            "PropertyWrappers::PropertyWrappersPackageTests::ProductTarget",
+            "PropertyWrappers::PropertyWrappersTests",
+            "PropertyWrappers::Singleton",
+            "PropertyWrappers::SingletonDynamic::ProductTarget",
+            "PropertyWrappers::Storage",
+            "PropertyWrappers::StorageDynamic::ProductTarget",
+            "PropertyWrappers::UserDefault",
+            "PropertyWrappers::UserDefaultDynamic::ProductTarget"
+         );
+      };
+      "OBJ_10" = {
+         isa = "PBXFileReference";
+         path = "Keychain.swift";
+         sourceTree = "<group>";
+      };
+      "OBJ_100" = {
+         isa = "PBXBuildFile";
+         fileRef = "PropertyWrappers::Keychain::Product";
+      };
+      "OBJ_101" = {
+         isa = "PBXBuildFile";
+         fileRef = "PropertyWrappers::Storage::Product";
+      };
+      "OBJ_102" = {
+         isa = "PBXTargetDependency";
+         target = "PropertyWrappers::Singleton";
+      };
+      "OBJ_103" = {
+         isa = "PBXTargetDependency";
+         target = "PropertyWrappers::UserDefault";
+      };
+      "OBJ_104" = {
+         isa = "PBXTargetDependency";
+         target = "PropertyWrappers::Keychain";
+      };
+      "OBJ_105" = {
+         isa = "PBXTargetDependency";
+         target = "PropertyWrappers::Storage";
+      };
+      "OBJ_106" = {
+         isa = "XCConfigurationList";
+         buildConfigurations = (
+            "OBJ_107",
+            "OBJ_108"
+         );
+         defaultConfigurationIsVisible = "0";
+         defaultConfigurationName = "Release";
+      };
+      "OBJ_107" = {
+         isa = "XCBuildConfiguration";
+         buildSettings = {
+            ENABLE_TESTABILITY = "YES";
+            FRAMEWORK_SEARCH_PATHS = (
+               "$(inherited)",
+               "$(PLATFORM_DIR)/Developer/Library/Frameworks"
+            );
+            HEADER_SEARCH_PATHS = (
+               "$(inherited)"
+            );
+            INFOPLIST_FILE = "PropertyWrappers.xcodeproj/Singleton_Info.plist";
+            IPHONEOS_DEPLOYMENT_TARGET = "13.0";
+            LD_RUNPATH_SEARCH_PATHS = (
+               "$(inherited)",
+               "$(TOOLCHAIN_DIR)/usr/lib/swift/macosx"
+            );
+            MACOSX_DEPLOYMENT_TARGET = "10.15";
+            OTHER_CFLAGS = (
+               "$(inherited)"
+            );
+            OTHER_LDFLAGS = (
+               "$(inherited)"
+            );
+            OTHER_SWIFT_FLAGS = (
+               "$(inherited)"
+            );
+            PRODUCT_BUNDLE_IDENTIFIER = "Singleton";
+            PRODUCT_MODULE_NAME = "$(TARGET_NAME:c99extidentifier)";
+            PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+            SKIP_INSTALL = "YES";
+            SWIFT_ACTIVE_COMPILATION_CONDITIONS = (
+               "$(inherited)"
+            );
+            SWIFT_VERSION = "5.0";
+            TARGET_NAME = "Singleton";
+            TVOS_DEPLOYMENT_TARGET = "13.0";
+            WATCHOS_DEPLOYMENT_TARGET = "6.0";
+         };
+         name = "Debug";
+      };
+      "OBJ_108" = {
+         isa = "XCBuildConfiguration";
+         buildSettings = {
+            ENABLE_TESTABILITY = "YES";
+            FRAMEWORK_SEARCH_PATHS = (
+               "$(inherited)",
+               "$(PLATFORM_DIR)/Developer/Library/Frameworks"
+            );
+            HEADER_SEARCH_PATHS = (
+               "$(inherited)"
+            );
+            INFOPLIST_FILE = "PropertyWrappers.xcodeproj/Singleton_Info.plist";
+            IPHONEOS_DEPLOYMENT_TARGET = "13.0";
+            LD_RUNPATH_SEARCH_PATHS = (
+               "$(inherited)",
+               "$(TOOLCHAIN_DIR)/usr/lib/swift/macosx"
+            );
+            MACOSX_DEPLOYMENT_TARGET = "10.15";
+            OTHER_CFLAGS = (
+               "$(inherited)"
+            );
+            OTHER_LDFLAGS = (
+               "$(inherited)"
+            );
+            OTHER_SWIFT_FLAGS = (
+               "$(inherited)"
+            );
+            PRODUCT_BUNDLE_IDENTIFIER = "Singleton";
+            PRODUCT_MODULE_NAME = "$(TARGET_NAME:c99extidentifier)";
+            PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+            SKIP_INSTALL = "YES";
+            SWIFT_ACTIVE_COMPILATION_CONDITIONS = (
+               "$(inherited)"
+            );
+            SWIFT_VERSION = "5.0";
+            TARGET_NAME = "Singleton";
+            TVOS_DEPLOYMENT_TARGET = "13.0";
+            WATCHOS_DEPLOYMENT_TARGET = "6.0";
+         };
+         name = "Release";
+      };
+      "OBJ_109" = {
+         isa = "PBXSourcesBuildPhase";
+         files = (
+            "OBJ_110",
+            "OBJ_111"
+         );
+      };
+      "OBJ_11" = {
+         isa = "PBXFileReference";
+         path = "KeychainError.swift";
+         sourceTree = "<group>";
+      };
+      "OBJ_110" = {
+         isa = "PBXBuildFile";
+         fileRef = "OBJ_14";
+      };
+      "OBJ_111" = {
+         isa = "PBXBuildFile";
+         fileRef = "OBJ_15";
+      };
+      "OBJ_112" = {
+         isa = "PBXFrameworksBuildPhase";
+         files = (
+            "OBJ_113",
+            "OBJ_114"
+         );
+      };
+      "OBJ_113" = {
+         isa = "PBXBuildFile";
+         fileRef = "PropertyWrappers::Keychain::Product";
+      };
+      "OBJ_114" = {
+         isa = "PBXBuildFile";
+         fileRef = "PropertyWrappers::Storage::Product";
+      };
+      "OBJ_115" = {
+         isa = "PBXTargetDependency";
+         target = "PropertyWrappers::Keychain";
+      };
+      "OBJ_116" = {
+         isa = "PBXTargetDependency";
+         target = "PropertyWrappers::Storage";
+      };
+      "OBJ_118" = {
+         isa = "XCConfigurationList";
+         buildConfigurations = (
+            "OBJ_119",
+            "OBJ_120"
+         );
+         defaultConfigurationIsVisible = "0";
+         defaultConfigurationName = "Release";
+      };
+      "OBJ_119" = {
+         isa = "XCBuildConfiguration";
+         buildSettings = {
+         };
+         name = "Debug";
+      };
+      "OBJ_12" = {
+         isa = "PBXFileReference";
+         path = "KeychainStorage.swift";
+         sourceTree = "<group>";
+      };
+      "OBJ_120" = {
+         isa = "XCBuildConfiguration";
+         buildSettings = {
+         };
+         name = "Release";
+      };
+      "OBJ_121" = {
+         isa = "PBXTargetDependency";
+         target = "PropertyWrappers::Storage";
+      };
+      "OBJ_122" = {
+         isa = "PBXTargetDependency";
+         target = "PropertyWrappers::Singleton";
+      };
+      "OBJ_123" = {
+         isa = "XCConfigurationList";
+         buildConfigurations = (
+            "OBJ_124",
+            "OBJ_125"
+         );
+         defaultConfigurationIsVisible = "0";
+         defaultConfigurationName = "Release";
+      };
+      "OBJ_124" = {
+         isa = "XCBuildConfiguration";
+         buildSettings = {
+            ENABLE_TESTABILITY = "YES";
+            FRAMEWORK_SEARCH_PATHS = (
+               "$(inherited)",
+               "$(PLATFORM_DIR)/Developer/Library/Frameworks"
+            );
+            HEADER_SEARCH_PATHS = (
+               "$(inherited)"
+            );
+            INFOPLIST_FILE = "PropertyWrappers.xcodeproj/Storage_Info.plist";
+            IPHONEOS_DEPLOYMENT_TARGET = "13.0";
+            LD_RUNPATH_SEARCH_PATHS = (
+               "$(inherited)",
+               "$(TOOLCHAIN_DIR)/usr/lib/swift/macosx"
+            );
+            MACOSX_DEPLOYMENT_TARGET = "10.15";
+            OTHER_CFLAGS = (
+               "$(inherited)"
+            );
+            OTHER_LDFLAGS = (
+               "$(inherited)"
+            );
+            OTHER_SWIFT_FLAGS = (
+               "$(inherited)"
+            );
+            PRODUCT_BUNDLE_IDENTIFIER = "Storage";
+            PRODUCT_MODULE_NAME = "$(TARGET_NAME:c99extidentifier)";
+            PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+            SKIP_INSTALL = "YES";
+            SWIFT_ACTIVE_COMPILATION_CONDITIONS = (
+               "$(inherited)"
+            );
+            SWIFT_VERSION = "5.0";
+            TARGET_NAME = "Storage";
+            TVOS_DEPLOYMENT_TARGET = "13.0";
+            WATCHOS_DEPLOYMENT_TARGET = "6.0";
+         };
+         name = "Debug";
+      };
+      "OBJ_125" = {
+         isa = "XCBuildConfiguration";
+         buildSettings = {
+            ENABLE_TESTABILITY = "YES";
+            FRAMEWORK_SEARCH_PATHS = (
+               "$(inherited)",
+               "$(PLATFORM_DIR)/Developer/Library/Frameworks"
+            );
+            HEADER_SEARCH_PATHS = (
+               "$(inherited)"
+            );
+            INFOPLIST_FILE = "PropertyWrappers.xcodeproj/Storage_Info.plist";
+            IPHONEOS_DEPLOYMENT_TARGET = "13.0";
+            LD_RUNPATH_SEARCH_PATHS = (
+               "$(inherited)",
+               "$(TOOLCHAIN_DIR)/usr/lib/swift/macosx"
+            );
+            MACOSX_DEPLOYMENT_TARGET = "10.15";
+            OTHER_CFLAGS = (
+               "$(inherited)"
+            );
+            OTHER_LDFLAGS = (
+               "$(inherited)"
+            );
+            OTHER_SWIFT_FLAGS = (
+               "$(inherited)"
+            );
+            PRODUCT_BUNDLE_IDENTIFIER = "Storage";
+            PRODUCT_MODULE_NAME = "$(TARGET_NAME:c99extidentifier)";
+            PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+            SKIP_INSTALL = "YES";
+            SWIFT_ACTIVE_COMPILATION_CONDITIONS = (
+               "$(inherited)"
+            );
+            SWIFT_VERSION = "5.0";
+            TARGET_NAME = "Storage";
+            TVOS_DEPLOYMENT_TARGET = "13.0";
+            WATCHOS_DEPLOYMENT_TARGET = "6.0";
+         };
+         name = "Release";
+      };
+      "OBJ_126" = {
+         isa = "PBXSourcesBuildPhase";
+         files = (
+            "OBJ_127",
+            "OBJ_128",
+            "OBJ_129",
+            "OBJ_130",
+            "OBJ_131",
+            "OBJ_132"
+         );
+      };
+      "OBJ_127" = {
+         isa = "PBXBuildFile";
+         fileRef = "OBJ_17";
+      };
+      "OBJ_128" = {
+         isa = "PBXBuildFile";
+         fileRef = "OBJ_18";
+      };
+      "OBJ_129" = {
+         isa = "PBXBuildFile";
+         fileRef = "OBJ_19";
+      };
+      "OBJ_13" = {
+         isa = "PBXGroup";
+         children = (
+            "OBJ_14",
+            "OBJ_15"
+         );
+         name = "Singleton";
+         path = "Sources/Singleton";
+         sourceTree = "SOURCE_ROOT";
+      };
+      "OBJ_130" = {
+         isa = "PBXBuildFile";
+         fileRef = "OBJ_20";
+      };
+      "OBJ_131" = {
+         isa = "PBXBuildFile";
+         fileRef = "OBJ_21";
+      };
+      "OBJ_132" = {
+         isa = "PBXBuildFile";
+         fileRef = "OBJ_22";
+      };
+      "OBJ_133" = {
+         isa = "PBXFrameworksBuildPhase";
+         files = (
+         );
+      };
+      "OBJ_135" = {
+         isa = "XCConfigurationList";
+         buildConfigurations = (
+            "OBJ_136",
+            "OBJ_137"
+         );
+         defaultConfigurationIsVisible = "0";
+         defaultConfigurationName = "Release";
+      };
+      "OBJ_136" = {
+         isa = "XCBuildConfiguration";
+         buildSettings = {
+         };
+         name = "Debug";
+      };
+      "OBJ_137" = {
+         isa = "XCBuildConfiguration";
+         buildSettings = {
+         };
+         name = "Release";
+      };
+      "OBJ_138" = {
+         isa = "PBXTargetDependency";
+         target = "PropertyWrappers::Storage";
+      };
+      "OBJ_139" = {
+         isa = "XCConfigurationList";
+         buildConfigurations = (
+            "OBJ_140",
+            "OBJ_141"
+         );
+         defaultConfigurationIsVisible = "0";
+         defaultConfigurationName = "Release";
+      };
+      "OBJ_14" = {
+         isa = "PBXFileReference";
+         path = "Singleton.swift";
+         sourceTree = "<group>";
+      };
+      "OBJ_140" = {
+         isa = "XCBuildConfiguration";
+         buildSettings = {
+            ENABLE_TESTABILITY = "YES";
+            FRAMEWORK_SEARCH_PATHS = (
+               "$(inherited)",
+               "$(PLATFORM_DIR)/Developer/Library/Frameworks"
+            );
+            HEADER_SEARCH_PATHS = (
+               "$(inherited)"
+            );
+            INFOPLIST_FILE = "PropertyWrappers.xcodeproj/UserDefault_Info.plist";
+            IPHONEOS_DEPLOYMENT_TARGET = "13.0";
+            LD_RUNPATH_SEARCH_PATHS = (
+               "$(inherited)",
+               "$(TOOLCHAIN_DIR)/usr/lib/swift/macosx"
+            );
+            MACOSX_DEPLOYMENT_TARGET = "10.15";
+            OTHER_CFLAGS = (
+               "$(inherited)"
+            );
+            OTHER_LDFLAGS = (
+               "$(inherited)"
+            );
+            OTHER_SWIFT_FLAGS = (
+               "$(inherited)"
+            );
+            PRODUCT_BUNDLE_IDENTIFIER = "UserDefault";
+            PRODUCT_MODULE_NAME = "$(TARGET_NAME:c99extidentifier)";
+            PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+            SKIP_INSTALL = "YES";
+            SWIFT_ACTIVE_COMPILATION_CONDITIONS = (
+               "$(inherited)"
+            );
+            SWIFT_VERSION = "5.0";
+            TARGET_NAME = "UserDefault";
+            TVOS_DEPLOYMENT_TARGET = "13.0";
+            WATCHOS_DEPLOYMENT_TARGET = "6.0";
+         };
+         name = "Debug";
+      };
+      "OBJ_141" = {
+         isa = "XCBuildConfiguration";
+         buildSettings = {
+            ENABLE_TESTABILITY = "YES";
+            FRAMEWORK_SEARCH_PATHS = (
+               "$(inherited)",
+               "$(PLATFORM_DIR)/Developer/Library/Frameworks"
+            );
+            HEADER_SEARCH_PATHS = (
+               "$(inherited)"
+            );
+            INFOPLIST_FILE = "PropertyWrappers.xcodeproj/UserDefault_Info.plist";
+            IPHONEOS_DEPLOYMENT_TARGET = "13.0";
+            LD_RUNPATH_SEARCH_PATHS = (
+               "$(inherited)",
+               "$(TOOLCHAIN_DIR)/usr/lib/swift/macosx"
+            );
+            MACOSX_DEPLOYMENT_TARGET = "10.15";
+            OTHER_CFLAGS = (
+               "$(inherited)"
+            );
+            OTHER_LDFLAGS = (
+               "$(inherited)"
+            );
+            OTHER_SWIFT_FLAGS = (
+               "$(inherited)"
+            );
+            PRODUCT_BUNDLE_IDENTIFIER = "UserDefault";
+            PRODUCT_MODULE_NAME = "$(TARGET_NAME:c99extidentifier)";
+            PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+            SKIP_INSTALL = "YES";
+            SWIFT_ACTIVE_COMPILATION_CONDITIONS = (
+               "$(inherited)"
+            );
+            SWIFT_VERSION = "5.0";
+            TARGET_NAME = "UserDefault";
+            TVOS_DEPLOYMENT_TARGET = "13.0";
+            WATCHOS_DEPLOYMENT_TARGET = "6.0";
+         };
+         name = "Release";
+      };
+      "OBJ_142" = {
+         isa = "PBXSourcesBuildPhase";
+         files = (
+            "OBJ_143",
+            "OBJ_144"
+         );
+      };
+      "OBJ_143" = {
+         isa = "PBXBuildFile";
+         fileRef = "OBJ_24";
+      };
+      "OBJ_144" = {
+         isa = "PBXBuildFile";
+         fileRef = "OBJ_25";
+      };
+      "OBJ_145" = {
+         isa = "PBXFrameworksBuildPhase";
+         files = (
+            "OBJ_146",
+            "OBJ_147"
+         );
+      };
+      "OBJ_146" = {
+         isa = "PBXBuildFile";
+         fileRef = "PropertyWrappers::Keychain::Product";
+      };
+      "OBJ_147" = {
+         isa = "PBXBuildFile";
+         fileRef = "PropertyWrappers::Storage::Product";
+      };
+      "OBJ_148" = {
+         isa = "PBXTargetDependency";
+         target = "PropertyWrappers::Keychain";
+      };
+      "OBJ_149" = {
+         isa = "PBXTargetDependency";
+         target = "PropertyWrappers::Storage";
+      };
+      "OBJ_15" = {
+         isa = "PBXFileReference";
+         path = "SingletonStorage.swift";
+         sourceTree = "<group>";
+      };
+      "OBJ_151" = {
+         isa = "XCConfigurationList";
+         buildConfigurations = (
+            "OBJ_152",
+            "OBJ_153"
+         );
+         defaultConfigurationIsVisible = "0";
+         defaultConfigurationName = "Release";
+      };
+      "OBJ_152" = {
+         isa = "XCBuildConfiguration";
+         buildSettings = {
+         };
+         name = "Debug";
+      };
+      "OBJ_153" = {
+         isa = "XCBuildConfiguration";
+         buildSettings = {
+         };
+         name = "Release";
+      };
+      "OBJ_154" = {
+         isa = "PBXTargetDependency";
+         target = "PropertyWrappers::Storage";
+      };
+      "OBJ_155" = {
+         isa = "PBXTargetDependency";
+         target = "PropertyWrappers::UserDefault";
+      };
+      "OBJ_16" = {
+         isa = "PBXGroup";
+         children = (
+            "OBJ_17",
+            "OBJ_18",
+            "OBJ_19",
+            "OBJ_20",
+            "OBJ_21",
+            "OBJ_22"
+         );
+         name = "Storage";
+         path = "Sources/Storage";
+         sourceTree = "SOURCE_ROOT";
+      };
+      "OBJ_17" = {
+         isa = "PBXFileReference";
+         path = "DataConvertible.swift";
+         sourceTree = "<group>";
+      };
+      "OBJ_18" = {
+         isa = "PBXFileReference";
+         path = "DelegatedStorage.swift";
+         sourceTree = "<group>";
+      };
+      "OBJ_19" = {
+         isa = "PBXFileReference";
+         path = "Storage.swift";
+         sourceTree = "<group>";
+      };
+      "OBJ_2" = {
+         isa = "XCConfigurationList";
+         buildConfigurations = (
+            "OBJ_3",
+            "OBJ_4"
+         );
+         defaultConfigurationIsVisible = "0";
+         defaultConfigurationName = "Release";
+      };
+      "OBJ_20" = {
+         isa = "PBXFileReference";
+         path = "StorageData.swift";
+         sourceTree = "<group>";
+      };
+      "OBJ_21" = {
+         isa = "PBXFileReference";
+         path = "StorageDelegate.swift";
+         sourceTree = "<group>";
+      };
+      "OBJ_22" = {
+         isa = "PBXFileReference";
+         path = "Store.swift";
+         sourceTree = "<group>";
+      };
+      "OBJ_23" = {
+         isa = "PBXGroup";
+         children = (
+            "OBJ_24",
+            "OBJ_25"
+         );
+         name = "UserDefault";
+         path = "Sources/UserDefault";
+         sourceTree = "SOURCE_ROOT";
+      };
+      "OBJ_24" = {
+         isa = "PBXFileReference";
+         path = "UserDefault.swift";
+         sourceTree = "<group>";
+      };
+      "OBJ_25" = {
+         isa = "PBXFileReference";
+         path = "UserDefaultsStorage.swift";
+         sourceTree = "<group>";
+      };
+      "OBJ_26" = {
+         isa = "PBXGroup";
+         children = (
+            "OBJ_27"
+         );
+         name = "Tests";
+         path = "";
+         sourceTree = "SOURCE_ROOT";
+      };
+      "OBJ_27" = {
+         isa = "PBXGroup";
+         children = (
+            "OBJ_28",
+            "OBJ_29",
+            "OBJ_30",
+            "OBJ_31"
+         );
+         name = "PropertyWrappersTests";
+         path = "Tests/PropertyWrappersTests";
+         sourceTree = "SOURCE_ROOT";
+      };
+      "OBJ_28" = {
+         isa = "PBXFileReference";
+         path = "KeychainTests.swift";
+         sourceTree = "<group>";
+      };
+      "OBJ_29" = {
+         isa = "PBXFileReference";
+         path = "SingletonTests.swift";
+         sourceTree = "<group>";
+      };
+      "OBJ_3" = {
+         isa = "XCBuildConfiguration";
+         buildSettings = {
+            CLANG_ENABLE_OBJC_ARC = "YES";
+            COMBINE_HIDPI_IMAGES = "YES";
+            COPY_PHASE_STRIP = "NO";
+            DEBUG_INFORMATION_FORMAT = "dwarf";
+            DYLIB_INSTALL_NAME_BASE = "@rpath";
+            ENABLE_NS_ASSERTIONS = "YES";
+            GCC_OPTIMIZATION_LEVEL = "0";
+            GCC_PREPROCESSOR_DEFINITIONS = (
+               "$(inherited)",
+               "SWIFT_PACKAGE=1",
+               "DEBUG=1"
+            );
+            MACOSX_DEPLOYMENT_TARGET = "10.10";
+            ONLY_ACTIVE_ARCH = "YES";
+            OTHER_SWIFT_FLAGS = (
+               "$(inherited)",
+               "-DXcode"
+            );
+            PRODUCT_NAME = "$(TARGET_NAME)";
+            SDKROOT = "macosx";
+            SUPPORTED_PLATFORMS = (
+               "macosx",
+               "iphoneos",
+               "iphonesimulator",
+               "appletvos",
+               "appletvsimulator",
+               "watchos",
+               "watchsimulator"
+            );
+            SWIFT_ACTIVE_COMPILATION_CONDITIONS = (
+               "$(inherited)",
+               "SWIFT_PACKAGE",
+               "DEBUG"
+            );
+            SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+            USE_HEADERMAP = "NO";
+         };
+         name = "Debug";
+      };
+      "OBJ_30" = {
+         isa = "PBXFileReference";
+         path = "UserDefaultTests.swift";
+         sourceTree = "<group>";
+      };
+      "OBJ_31" = {
+         isa = "PBXFileReference";
+         path = "XCTestManifests.swift";
+         sourceTree = "<group>";
+      };
+      "OBJ_32" = {
+         isa = "PBXGroup";
+         children = (
+            "PropertyWrappers::Singleton::Product",
+            "PropertyWrappers::UserDefault::Product",
+            "PropertyWrappers::Storage::Product",
+            "PropertyWrappers::Keychain::Product",
+            "PropertyWrappers::PropertyWrappersTests::Product"
+         );
+         name = "Products";
+         path = "";
+         sourceTree = "BUILT_PRODUCTS_DIR";
+      };
+      "OBJ_38" = {
+         isa = "PBXFileReference";
+         path = "LICENSE";
+         sourceTree = "<group>";
+      };
+      "OBJ_39" = {
+         isa = "PBXFileReference";
+         path = "README.md";
+         sourceTree = "<group>";
+      };
+      "OBJ_4" = {
+         isa = "XCBuildConfiguration";
+         buildSettings = {
+            CLANG_ENABLE_OBJC_ARC = "YES";
+            COMBINE_HIDPI_IMAGES = "YES";
+            COPY_PHASE_STRIP = "YES";
+            DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+            DYLIB_INSTALL_NAME_BASE = "@rpath";
+            GCC_OPTIMIZATION_LEVEL = "s";
+            GCC_PREPROCESSOR_DEFINITIONS = (
+               "$(inherited)",
+               "SWIFT_PACKAGE=1"
+            );
+            MACOSX_DEPLOYMENT_TARGET = "10.10";
+            OTHER_SWIFT_FLAGS = (
+               "$(inherited)",
+               "-DXcode"
+            );
+            PRODUCT_NAME = "$(TARGET_NAME)";
+            SDKROOT = "macosx";
+            SUPPORTED_PLATFORMS = (
+               "macosx",
+               "iphoneos",
+               "iphonesimulator",
+               "appletvos",
+               "appletvsimulator",
+               "watchos",
+               "watchsimulator"
+            );
+            SWIFT_ACTIVE_COMPILATION_CONDITIONS = (
+               "$(inherited)",
+               "SWIFT_PACKAGE"
+            );
+            SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
+            USE_HEADERMAP = "NO";
+         };
+         name = "Release";
+      };
+      "OBJ_41" = {
+         isa = "XCConfigurationList";
+         buildConfigurations = (
+            "OBJ_42",
+            "OBJ_43"
+         );
+         defaultConfigurationIsVisible = "0";
+         defaultConfigurationName = "Release";
+      };
+      "OBJ_42" = {
+         isa = "XCBuildConfiguration";
+         buildSettings = {
+            ENABLE_TESTABILITY = "YES";
+            FRAMEWORK_SEARCH_PATHS = (
+               "$(inherited)",
+               "$(PLATFORM_DIR)/Developer/Library/Frameworks"
+            );
+            HEADER_SEARCH_PATHS = (
+               "$(inherited)"
+            );
+            INFOPLIST_FILE = "PropertyWrappers.xcodeproj/Keychain_Info.plist";
+            IPHONEOS_DEPLOYMENT_TARGET = "13.0";
+            LD_RUNPATH_SEARCH_PATHS = (
+               "$(inherited)",
+               "$(TOOLCHAIN_DIR)/usr/lib/swift/macosx"
+            );
+            MACOSX_DEPLOYMENT_TARGET = "10.15";
+            OTHER_CFLAGS = (
+               "$(inherited)"
+            );
+            OTHER_LDFLAGS = (
+               "$(inherited)"
+            );
+            OTHER_SWIFT_FLAGS = (
+               "$(inherited)"
+            );
+            PRODUCT_BUNDLE_IDENTIFIER = "Keychain";
+            PRODUCT_MODULE_NAME = "$(TARGET_NAME:c99extidentifier)";
+            PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+            SKIP_INSTALL = "YES";
+            SWIFT_ACTIVE_COMPILATION_CONDITIONS = (
+               "$(inherited)"
+            );
+            SWIFT_VERSION = "5.0";
+            TARGET_NAME = "Keychain";
+            TVOS_DEPLOYMENT_TARGET = "13.0";
+            WATCHOS_DEPLOYMENT_TARGET = "6.0";
+         };
+         name = "Debug";
+      };
+      "OBJ_43" = {
+         isa = "XCBuildConfiguration";
+         buildSettings = {
+            ENABLE_TESTABILITY = "YES";
+            FRAMEWORK_SEARCH_PATHS = (
+               "$(inherited)",
+               "$(PLATFORM_DIR)/Developer/Library/Frameworks"
+            );
+            HEADER_SEARCH_PATHS = (
+               "$(inherited)"
+            );
+            INFOPLIST_FILE = "PropertyWrappers.xcodeproj/Keychain_Info.plist";
+            IPHONEOS_DEPLOYMENT_TARGET = "13.0";
+            LD_RUNPATH_SEARCH_PATHS = (
+               "$(inherited)",
+               "$(TOOLCHAIN_DIR)/usr/lib/swift/macosx"
+            );
+            MACOSX_DEPLOYMENT_TARGET = "10.15";
+            OTHER_CFLAGS = (
+               "$(inherited)"
+            );
+            OTHER_LDFLAGS = (
+               "$(inherited)"
+            );
+            OTHER_SWIFT_FLAGS = (
+               "$(inherited)"
+            );
+            PRODUCT_BUNDLE_IDENTIFIER = "Keychain";
+            PRODUCT_MODULE_NAME = "$(TARGET_NAME:c99extidentifier)";
+            PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+            SKIP_INSTALL = "YES";
+            SWIFT_ACTIVE_COMPILATION_CONDITIONS = (
+               "$(inherited)"
+            );
+            SWIFT_VERSION = "5.0";
+            TARGET_NAME = "Keychain";
+            TVOS_DEPLOYMENT_TARGET = "13.0";
+            WATCHOS_DEPLOYMENT_TARGET = "6.0";
+         };
+         name = "Release";
+      };
+      "OBJ_44" = {
+         isa = "PBXSourcesBuildPhase";
+         files = (
+            "OBJ_45",
+            "OBJ_46",
+            "OBJ_47",
+            "OBJ_48"
+         );
+      };
+      "OBJ_45" = {
+         isa = "PBXBuildFile";
+         fileRef = "OBJ_9";
+      };
+      "OBJ_46" = {
+         isa = "PBXBuildFile";
+         fileRef = "OBJ_10";
+      };
+      "OBJ_47" = {
+         isa = "PBXBuildFile";
+         fileRef = "OBJ_11";
+      };
+      "OBJ_48" = {
+         isa = "PBXBuildFile";
+         fileRef = "OBJ_12";
+      };
+      "OBJ_49" = {
+         isa = "PBXFrameworksBuildPhase";
+         files = (
+            "OBJ_50"
+         );
+      };
+      "OBJ_5" = {
+         isa = "PBXGroup";
+         children = (
+            "OBJ_6",
+            "OBJ_7",
+            "OBJ_26",
+            "OBJ_32",
+            "OBJ_38",
+            "OBJ_39"
+         );
+         path = "";
+         sourceTree = "<group>";
+      };
+      "OBJ_50" = {
+         isa = "PBXBuildFile";
+         fileRef = "PropertyWrappers::Storage::Product";
+      };
+      "OBJ_51" = {
+         isa = "PBXTargetDependency";
+         target = "PropertyWrappers::Storage";
+      };
+      "OBJ_54" = {
+         isa = "XCConfigurationList";
+         buildConfigurations = (
+            "OBJ_55",
+            "OBJ_56"
+         );
+         defaultConfigurationIsVisible = "0";
+         defaultConfigurationName = "Release";
+      };
+      "OBJ_55" = {
+         isa = "XCBuildConfiguration";
+         buildSettings = {
+         };
+         name = "Debug";
+      };
+      "OBJ_56" = {
+         isa = "XCBuildConfiguration";
+         buildSettings = {
+         };
+         name = "Release";
+      };
+      "OBJ_57" = {
+         isa = "PBXTargetDependency";
+         target = "PropertyWrappers::Storage";
+      };
+      "OBJ_58" = {
+         isa = "PBXTargetDependency";
+         target = "PropertyWrappers::Keychain";
+      };
+      "OBJ_6" = {
+         isa = "PBXFileReference";
+         explicitFileType = "sourcecode.swift";
+         path = "Package.swift";
+         sourceTree = "<group>";
+      };
+      "OBJ_60" = {
+         isa = "XCConfigurationList";
+         buildConfigurations = (
+            "OBJ_61",
+            "OBJ_62"
+         );
+         defaultConfigurationIsVisible = "0";
+         defaultConfigurationName = "Release";
+      };
+      "OBJ_61" = {
+         isa = "XCBuildConfiguration";
+         buildSettings = {
+         };
+         name = "Debug";
+      };
+      "OBJ_62" = {
+         isa = "XCBuildConfiguration";
+         buildSettings = {
+         };
+         name = "Release";
+      };
+      "OBJ_63" = {
+         isa = "PBXTargetDependency";
+         target = "PropertyWrappers::Storage";
+      };
+      "OBJ_64" = {
+         isa = "PBXTargetDependency";
+         target = "PropertyWrappers::UserDefault";
+      };
+      "OBJ_66" = {
+         isa = "PBXTargetDependency";
+         target = "PropertyWrappers::Singleton";
+      };
+      "OBJ_68" = {
+         isa = "PBXTargetDependency";
+         target = "PropertyWrappers::Keychain";
+      };
+      "OBJ_7" = {
+         isa = "PBXGroup";
+         children = (
+            "OBJ_8",
+            "OBJ_13",
+            "OBJ_16",
+            "OBJ_23"
+         );
+         name = "Sources";
+         path = "";
+         sourceTree = "SOURCE_ROOT";
+      };
+      "OBJ_70" = {
+         isa = "XCConfigurationList";
+         buildConfigurations = (
+            "OBJ_71",
+            "OBJ_72"
+         );
+         defaultConfigurationIsVisible = "0";
+         defaultConfigurationName = "Release";
+      };
+      "OBJ_71" = {
+         isa = "XCBuildConfiguration";
+         buildSettings = {
+         };
+         name = "Debug";
+      };
+      "OBJ_72" = {
+         isa = "XCBuildConfiguration";
+         buildSettings = {
+         };
+         name = "Release";
+      };
+      "OBJ_73" = {
+         isa = "PBXTargetDependency";
+         target = "PropertyWrappers::Storage";
+      };
+      "OBJ_74" = {
+         isa = "PBXTargetDependency";
+         target = "PropertyWrappers::UserDefault";
+      };
+      "OBJ_75" = {
+         isa = "PBXTargetDependency";
+         target = "PropertyWrappers::Singleton";
+      };
+      "OBJ_76" = {
+         isa = "PBXTargetDependency";
+         target = "PropertyWrappers::Keychain";
+      };
+      "OBJ_78" = {
+         isa = "XCConfigurationList";
+         buildConfigurations = (
+            "OBJ_79",
+            "OBJ_80"
+         );
+         defaultConfigurationIsVisible = "0";
+         defaultConfigurationName = "Release";
+      };
+      "OBJ_79" = {
+         isa = "XCBuildConfiguration";
+         buildSettings = {
+            LD = "/usr/bin/true";
+            OTHER_SWIFT_FLAGS = (
+               "-swift-version",
+               "5",
+               "-I",
+               "$(TOOLCHAIN_DIR)/usr/lib/swift/pm/4_2",
+               "-target",
+               "x86_64-apple-macosx10.10",
+               "-sdk",
+               "/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.15.sdk",
+               "-package-description-version",
+               "5.1"
+            );
+            SWIFT_VERSION = "5.0";
+         };
+         name = "Debug";
+      };
+      "OBJ_8" = {
+         isa = "PBXGroup";
+         children = (
+            "OBJ_9",
+            "OBJ_10",
+            "OBJ_11",
+            "OBJ_12"
+         );
+         name = "Keychain";
+         path = "Sources/Keychain";
+         sourceTree = "SOURCE_ROOT";
+      };
+      "OBJ_80" = {
+         isa = "XCBuildConfiguration";
+         buildSettings = {
+            LD = "/usr/bin/true";
+            OTHER_SWIFT_FLAGS = (
+               "-swift-version",
+               "5",
+               "-I",
+               "$(TOOLCHAIN_DIR)/usr/lib/swift/pm/4_2",
+               "-target",
+               "x86_64-apple-macosx10.10",
+               "-sdk",
+               "/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.15.sdk",
+               "-package-description-version",
+               "5.1"
+            );
+            SWIFT_VERSION = "5.0";
+         };
+         name = "Release";
+      };
+      "OBJ_81" = {
+         isa = "PBXSourcesBuildPhase";
+         files = (
+            "OBJ_82"
+         );
+      };
+      "OBJ_82" = {
+         isa = "PBXBuildFile";
+         fileRef = "OBJ_6";
+      };
+      "OBJ_84" = {
+         isa = "XCConfigurationList";
+         buildConfigurations = (
+            "OBJ_85",
+            "OBJ_86"
+         );
+         defaultConfigurationIsVisible = "0";
+         defaultConfigurationName = "Release";
+      };
+      "OBJ_85" = {
+         isa = "XCBuildConfiguration";
+         buildSettings = {
+         };
+         name = "Debug";
+      };
+      "OBJ_86" = {
+         isa = "XCBuildConfiguration";
+         buildSettings = {
+         };
+         name = "Release";
+      };
+      "OBJ_87" = {
+         isa = "PBXTargetDependency";
+         target = "PropertyWrappers::PropertyWrappersTests";
+      };
+      "OBJ_89" = {
+         isa = "XCConfigurationList";
+         buildConfigurations = (
+            "OBJ_90",
+            "OBJ_91"
+         );
+         defaultConfigurationIsVisible = "0";
+         defaultConfigurationName = "Release";
+      };
+      "OBJ_9" = {
+         isa = "PBXFileReference";
+         path = "CryptoData.swift";
+         sourceTree = "<group>";
+      };
+      "OBJ_90" = {
+         isa = "XCBuildConfiguration";
+         buildSettings = {
+            CLANG_ENABLE_MODULES = "YES";
+            EMBEDDED_CONTENT_CONTAINS_SWIFT = "YES";
+            FRAMEWORK_SEARCH_PATHS = (
+               "$(inherited)",
+               "$(PLATFORM_DIR)/Developer/Library/Frameworks"
+            );
+            HEADER_SEARCH_PATHS = (
+               "$(inherited)"
+            );
+            INFOPLIST_FILE = "PropertyWrappers.xcodeproj/PropertyWrappersTests_Info.plist";
+            IPHONEOS_DEPLOYMENT_TARGET = "13.0";
+            LD_RUNPATH_SEARCH_PATHS = (
+               "$(inherited)",
+               "@loader_path/../Frameworks",
+               "@loader_path/Frameworks"
+            );
+            MACOSX_DEPLOYMENT_TARGET = "10.15";
+            OTHER_CFLAGS = (
+               "$(inherited)"
+            );
+            OTHER_LDFLAGS = (
+               "$(inherited)"
+            );
+            OTHER_SWIFT_FLAGS = (
+               "$(inherited)"
+            );
+            SWIFT_ACTIVE_COMPILATION_CONDITIONS = (
+               "$(inherited)"
+            );
+            SWIFT_VERSION = "5.0";
+            TARGET_NAME = "PropertyWrappersTests";
+            TVOS_DEPLOYMENT_TARGET = "13.0";
+            WATCHOS_DEPLOYMENT_TARGET = "6.0";
+         };
+         name = "Debug";
+      };
+      "OBJ_91" = {
+         isa = "XCBuildConfiguration";
+         buildSettings = {
+            CLANG_ENABLE_MODULES = "YES";
+            EMBEDDED_CONTENT_CONTAINS_SWIFT = "YES";
+            FRAMEWORK_SEARCH_PATHS = (
+               "$(inherited)",
+               "$(PLATFORM_DIR)/Developer/Library/Frameworks"
+            );
+            HEADER_SEARCH_PATHS = (
+               "$(inherited)"
+            );
+            INFOPLIST_FILE = "PropertyWrappers.xcodeproj/PropertyWrappersTests_Info.plist";
+            IPHONEOS_DEPLOYMENT_TARGET = "13.0";
+            LD_RUNPATH_SEARCH_PATHS = (
+               "$(inherited)",
+               "@loader_path/../Frameworks",
+               "@loader_path/Frameworks"
+            );
+            MACOSX_DEPLOYMENT_TARGET = "10.15";
+            OTHER_CFLAGS = (
+               "$(inherited)"
+            );
+            OTHER_LDFLAGS = (
+               "$(inherited)"
+            );
+            OTHER_SWIFT_FLAGS = (
+               "$(inherited)"
+            );
+            SWIFT_ACTIVE_COMPILATION_CONDITIONS = (
+               "$(inherited)"
+            );
+            SWIFT_VERSION = "5.0";
+            TARGET_NAME = "PropertyWrappersTests";
+            TVOS_DEPLOYMENT_TARGET = "13.0";
+            WATCHOS_DEPLOYMENT_TARGET = "6.0";
+         };
+         name = "Release";
+      };
+      "OBJ_92" = {
+         isa = "PBXSourcesBuildPhase";
+         files = (
+            "OBJ_93",
+            "OBJ_94",
+            "OBJ_95",
+            "OBJ_96"
+         );
+      };
+      "OBJ_93" = {
+         isa = "PBXBuildFile";
+         fileRef = "OBJ_28";
+      };
+      "OBJ_94" = {
+         isa = "PBXBuildFile";
+         fileRef = "OBJ_29";
+      };
+      "OBJ_95" = {
+         isa = "PBXBuildFile";
+         fileRef = "OBJ_30";
+      };
+      "OBJ_96" = {
+         isa = "PBXBuildFile";
+         fileRef = "OBJ_31";
+      };
+      "OBJ_97" = {
+         isa = "PBXFrameworksBuildPhase";
+         files = (
+            "OBJ_98",
+            "OBJ_99",
+            "OBJ_100",
+            "OBJ_101"
+         );
+      };
+      "OBJ_98" = {
+         isa = "PBXBuildFile";
+         fileRef = "PropertyWrappers::Singleton::Product";
+      };
+      "OBJ_99" = {
+         isa = "PBXBuildFile";
+         fileRef = "PropertyWrappers::UserDefault::Product";
+      };
+      "PropertyWrappers::Keychain" = {
+         isa = "PBXNativeTarget";
+         buildConfigurationList = "OBJ_41";
+         buildPhases = (
+            "OBJ_44",
+            "OBJ_49"
+         );
+         dependencies = (
+            "OBJ_51"
+         );
+         name = "Keychain";
+         productName = "Keychain";
+         productReference = "PropertyWrappers::Keychain::Product";
+         productType = "com.apple.product-type.framework";
+      };
+      "PropertyWrappers::Keychain::Product" = {
+         isa = "PBXFileReference";
+         path = "Keychain.framework";
+         sourceTree = "BUILT_PRODUCTS_DIR";
+      };
+      "PropertyWrappers::KeychainDynamic::ProductTarget" = {
+         isa = "PBXAggregateTarget";
+         buildConfigurationList = "OBJ_54";
+         buildPhases = (
+         );
+         dependencies = (
+            "OBJ_57",
+            "OBJ_58"
+         );
+         name = "KeychainDynamic";
+         productName = "KeychainDynamic";
+      };
+      "PropertyWrappers::PropertyWrappers::ProductTarget" = {
+         isa = "PBXAggregateTarget";
+         buildConfigurationList = "OBJ_60";
+         buildPhases = (
+         );
+         dependencies = (
+            "OBJ_63",
+            "OBJ_64",
+            "OBJ_66",
+            "OBJ_68"
+         );
+         name = "PropertyWrappers";
+         productName = "PropertyWrappers";
+      };
+      "PropertyWrappers::PropertyWrappersDynamic::ProductTarget" = {
+         isa = "PBXAggregateTarget";
+         buildConfigurationList = "OBJ_70";
+         buildPhases = (
+         );
+         dependencies = (
+            "OBJ_73",
+            "OBJ_74",
+            "OBJ_75",
+            "OBJ_76"
+         );
+         name = "PropertyWrappersDynamic";
+         productName = "PropertyWrappersDynamic";
+      };
+      "PropertyWrappers::PropertyWrappersPackageTests::ProductTarget" = {
+         isa = "PBXAggregateTarget";
+         buildConfigurationList = "OBJ_84";
+         buildPhases = (
+         );
+         dependencies = (
+            "OBJ_87"
+         );
+         name = "PropertyWrappersPackageTests";
+         productName = "PropertyWrappersPackageTests";
+      };
+      "PropertyWrappers::PropertyWrappersTests" = {
+         isa = "PBXNativeTarget";
+         buildConfigurationList = "OBJ_89";
+         buildPhases = (
+            "OBJ_92",
+            "OBJ_97"
+         );
+         dependencies = (
+            "OBJ_102",
+            "OBJ_103",
+            "OBJ_104",
+            "OBJ_105"
+         );
+         name = "PropertyWrappersTests";
+         productName = "PropertyWrappersTests";
+         productReference = "PropertyWrappers::PropertyWrappersTests::Product";
+         productType = "com.apple.product-type.bundle.unit-test";
+      };
+      "PropertyWrappers::PropertyWrappersTests::Product" = {
+         isa = "PBXFileReference";
+         path = "PropertyWrappersTests.xctest";
+         sourceTree = "BUILT_PRODUCTS_DIR";
+      };
+      "PropertyWrappers::Singleton" = {
+         isa = "PBXNativeTarget";
+         buildConfigurationList = "OBJ_106";
+         buildPhases = (
+            "OBJ_109",
+            "OBJ_112"
+         );
+         dependencies = (
+            "OBJ_115",
+            "OBJ_116"
+         );
+         name = "Singleton";
+         productName = "Singleton";
+         productReference = "PropertyWrappers::Singleton::Product";
+         productType = "com.apple.product-type.framework";
+      };
+      "PropertyWrappers::Singleton::Product" = {
+         isa = "PBXFileReference";
+         path = "Singleton.framework";
+         sourceTree = "BUILT_PRODUCTS_DIR";
+      };
+      "PropertyWrappers::SingletonDynamic::ProductTarget" = {
+         isa = "PBXAggregateTarget";
+         buildConfigurationList = "OBJ_118";
+         buildPhases = (
+         );
+         dependencies = (
+            "OBJ_121",
+            "OBJ_122"
+         );
+         name = "SingletonDynamic";
+         productName = "SingletonDynamic";
+      };
+      "PropertyWrappers::Storage" = {
+         isa = "PBXNativeTarget";
+         buildConfigurationList = "OBJ_123";
+         buildPhases = (
+            "OBJ_126",
+            "OBJ_133"
+         );
+         dependencies = (
+         );
+         name = "Storage";
+         productName = "Storage";
+         productReference = "PropertyWrappers::Storage::Product";
+         productType = "com.apple.product-type.framework";
+      };
+      "PropertyWrappers::Storage::Product" = {
+         isa = "PBXFileReference";
+         path = "Storage.framework";
+         sourceTree = "BUILT_PRODUCTS_DIR";
+      };
+      "PropertyWrappers::StorageDynamic::ProductTarget" = {
+         isa = "PBXAggregateTarget";
+         buildConfigurationList = "OBJ_135";
+         buildPhases = (
+         );
+         dependencies = (
+            "OBJ_138"
+         );
+         name = "StorageDynamic";
+         productName = "StorageDynamic";
+      };
+      "PropertyWrappers::SwiftPMPackageDescription" = {
+         isa = "PBXNativeTarget";
+         buildConfigurationList = "OBJ_78";
+         buildPhases = (
+            "OBJ_81"
+         );
+         dependencies = (
+         );
+         name = "PropertyWrappersPackageDescription";
+         productName = "PropertyWrappersPackageDescription";
+         productType = "com.apple.product-type.framework";
+      };
+      "PropertyWrappers::UserDefault" = {
+         isa = "PBXNativeTarget";
+         buildConfigurationList = "OBJ_139";
+         buildPhases = (
+            "OBJ_142",
+            "OBJ_145"
+         );
+         dependencies = (
+            "OBJ_148",
+            "OBJ_149"
+         );
+         name = "UserDefault";
+         productName = "UserDefault";
+         productReference = "PropertyWrappers::UserDefault::Product";
+         productType = "com.apple.product-type.framework";
+      };
+      "PropertyWrappers::UserDefault::Product" = {
+         isa = "PBXFileReference";
+         path = "UserDefault.framework";
+         sourceTree = "BUILT_PRODUCTS_DIR";
+      };
+      "PropertyWrappers::UserDefaultDynamic::ProductTarget" = {
+         isa = "PBXAggregateTarget";
+         buildConfigurationList = "OBJ_151";
+         buildPhases = (
+         );
+         dependencies = (
+            "OBJ_154",
+            "OBJ_155"
+         );
+         name = "UserDefaultDynamic";
+         productName = "UserDefaultDynamic";
+      };
+   };
+   rootObject = "OBJ_1";
+}

@@ -9,6 +9,7 @@ xcuserdata/
 *.ipa
 *.dSYM.zip
 *.dSYM
+*.zip
 
 ## Playgrounds
 timeline.xctimeline
@@ -18,5 +19,7 @@ playground.xcworkspace
 Packages/
 Package.pins
 Package.resolved
-*.xcodeproj
 .build/
+
+# Carthage
+Carthage/Build/

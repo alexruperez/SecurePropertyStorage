@@ -1,0 +1,7 @@
+language: swift
+osx_image: xcode11.3
+xcode_project: PropertyWrappers.xcodeproj
+xcode_scheme: PropertyWrappers-Package
+xcode_destination: platform=macOS
+after_success:
+  - bash <(curl -s https://codecov.io/bash)
