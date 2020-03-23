@@ -79,7 +79,7 @@ You have a series of products that you can choose:
 
 *For more information, see [the Swift Package Manager documentation](https://github.com/apple/swift-package-manager/tree/master/Documentation).*
 
-#### Or you can use [*Carthage*](https://github.com/Carthage/Carthage):
+#### Or you can use [Carthage](https://github.com/Carthage/Carthage):
 
 ```ogdl
 github "alexruperez/PropertyWrappers"
