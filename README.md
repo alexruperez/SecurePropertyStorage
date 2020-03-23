@@ -3,9 +3,10 @@
 
 [![Twitter](https://img.shields.io/badge/contact-%40alexruperez-blue)](http://twitter.com/alexruperez)
 [![Swift](https://img.shields.io/badge/swift-5-orange)](https://swift.org)
+[![License](https://img.shields.io/github/license/alexruperez/PropertyWrappers)](LICENSE)
 [![Swift Package Manager compatible](https://img.shields.io/badge/Swift%20Package%20Manager-compatible-4BC51D.svg?style=flat)](https://swift.org/package-manager)
 [![Carthage compatible](https://img.shields.io/badge/Carthage-compatible-4BC51D.svg?style=flat)](https://github.com/Carthage/Carthage)
-[![License](https://img.shields.io/github/license/alexruperez/PropertyWrappers)](LICENSE)
+![Swift](https://github.com/alexruperez/PropertyWrappers/workflows/Swift/badge.svg)
 [![Build Status](https://travis-ci.com/alexruperez/PropertyWrappers.svg?branch=master)](https://travis-ci.com/alexruperez/PropertyWrappers)
 [![Coverage](https://img.shields.io/codecov/c/github/alexruperez/PropertyWrappers)](https://codecov.io/gh/alexruperez/PropertyWrappers)
 
