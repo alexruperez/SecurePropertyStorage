@@ -1,4 +1,4 @@
-# 🔐 SecurePropertyStorage
+# 🔐 Secure Property Storage
 > Helps you define secure storages for your properties using Swift *property wrappers*.
 
 [![Twitter](https://img.shields.io/badge/contact-%40alexruperez-blue)](http://twitter.com/alexruperez)
