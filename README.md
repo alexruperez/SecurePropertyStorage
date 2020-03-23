@@ -1,14 +1,14 @@
-# 🎁 PropertyWrappers
-> Helps you define storages for your properties using Swift *property wrappers*.
+# 🔐 SecurePropertyStorage
+> Helps you define secure storages for your properties using Swift *property wrappers*.
 
 [![Twitter](https://img.shields.io/badge/contact-%40alexruperez-blue)](http://twitter.com/alexruperez)
 [![Swift](https://img.shields.io/badge/swift-5-orange)](https://swift.org)
-[![License](https://img.shields.io/github/license/alexruperez/PropertyWrappers)](LICENSE)
+[![License](https://img.shields.io/github/license/alexruperez/SecurePropertyStorage)](LICENSE)
 [![Swift Package Manager compatible](https://img.shields.io/badge/Swift%20Package%20Manager-compatible-4BC51D.svg?style=flat)](https://swift.org/package-manager)
 [![Carthage compatible](https://img.shields.io/badge/Carthage-compatible-4BC51D.svg?style=flat)](https://github.com/Carthage/Carthage)
-![Swift](https://github.com/alexruperez/PropertyWrappers/workflows/Swift/badge.svg)
-[![Build Status](https://travis-ci.com/alexruperez/PropertyWrappers.svg?branch=master)](https://travis-ci.com/alexruperez/PropertyWrappers)
-[![Coverage](https://img.shields.io/codecov/c/github/alexruperez/PropertyWrappers)](https://codecov.io/gh/alexruperez/PropertyWrappers)
+![Swift](https://github.com/alexruperez/SecurePropertyStorage/workflows/Swift/badge.svg)
+[![Build Status](https://travis-ci.com/alexruperez/SecurePropertyStorage.svg?branch=master)](https://travis-ci.com/alexruperez/SecurePropertyStorage)
+[![Coverage](https://img.shields.io/codecov/c/github/alexruperez/SecurePropertyStorage)](https://codecov.io/gh/alexruperez/SecurePropertyStorage)
 
 ## 🌟 Features
 
@@ -64,15 +64,15 @@ As `SingletonStorage`, [`DelegatedStorage`](Sources/Storage/DelegatedStorage.swi
 
 ## ⚙️ Installation
 
-#### You can use the [Swift Package Manager](https://github.com/apple/swift-package-manager) by declaring PropertyWrappers as a dependency in your `Package.swift` file:
+#### You can use the [Swift Package Manager](https://github.com/apple/swift-package-manager) by declaring SecurePropertyStorage as a dependency in your `Package.swift` file:
 
 ```swift
-.package(url: "https://github.com/alexruperez/PropertyWrappers", from: "0.1.0")
+.package(url: "https://github.com/alexruperez/SecurePropertyStorage", from: "0.1.0")
 ```
 
 You have a series of products that you can choose:
 
-- **PropertyWrappers**: All property wrappers, by default.
+- **SecurePropertyStorage**: All property wrappers, by default.
 - **UserDefault**: @UserDefault property wrapper.
 - **Keychain**: @Keychain property wrapper.
 - **Singleton**: @Singleton property wrapper.
@@ -83,7 +83,7 @@ You have a series of products that you can choose:
 #### Or you can use [Carthage](https://github.com/Carthage/Carthage):
 
 ```ogdl
-github "alexruperez/PropertyWrappers"
+github "alexruperez/SecurePropertyStorage"
 ```
 
 ## 🍻 Etc.
@@ -97,4 +97,4 @@ Alex Rupérez – [@alexruperez](https://twitter.com/alexruperez) – contact@al
 
 ## 👮‍♂️ License
 
-*PropertyWrappers* is available under the MIT license. See the [LICENSE](LICENSE) file for more info.
+*SecurePropertyStorage* is available under the MIT license. See the [LICENSE](LICENSE) file for more info.

@@ -14,24 +14,10 @@
             buildForAnalyzing = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "PropertyWrappers::Keychain"
-               BuildableName = "Keychain.framework"
-               BlueprintName = "Keychain"
-               ReferencedContainer = "container:PropertyWrappers.xcodeproj">
-            </BuildableReference>
-         </BuildActionEntry>
-         <BuildActionEntry
-            buildForTesting = "YES"
-            buildForRunning = "YES"
-            buildForProfiling = "YES"
-            buildForArchiving = "YES"
-            buildForAnalyzing = "YES">
-            <BuildableReference
-               BuildableIdentifier = "primary"
-               BlueprintIdentifier = "PropertyWrappers::UserDefault"
+               BlueprintIdentifier = "SecurePropertyStorage::UserDefault"
                BuildableName = "UserDefault.framework"
                BlueprintName = "UserDefault"
-               ReferencedContainer = "container:PropertyWrappers.xcodeproj">
+               ReferencedContainer = "container:SecurePropertyStorage.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
          <BuildActionEntry
@@ -42,10 +28,24 @@
             buildForAnalyzing = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "PropertyWrappers::Singleton"
+               BlueprintIdentifier = "SecurePropertyStorage::Keychain"
+               BuildableName = "Keychain.framework"
+               BlueprintName = "Keychain"
+               ReferencedContainer = "container:SecurePropertyStorage.xcodeproj">
+            </BuildableReference>
+         </BuildActionEntry>
+         <BuildActionEntry
+            buildForTesting = "YES"
+            buildForRunning = "YES"
+            buildForProfiling = "YES"
+            buildForArchiving = "YES"
+            buildForAnalyzing = "YES">
+            <BuildableReference
+               BuildableIdentifier = "primary"
+               BlueprintIdentifier = "SecurePropertyStorage::Singleton"
                BuildableName = "Singleton.framework"
                BlueprintName = "Singleton"
-               ReferencedContainer = "container:PropertyWrappers.xcodeproj">
+               ReferencedContainer = "container:SecurePropertyStorage.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
          <BuildActionEntry
@@ -56,10 +56,10 @@
             buildForAnalyzing = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "PropertyWrappers::Storage"
+               BlueprintIdentifier = "SecurePropertyStorage::Storage"
                BuildableName = "Storage.framework"
                BlueprintName = "Storage"
-               ReferencedContainer = "container:PropertyWrappers.xcodeproj">
+               ReferencedContainer = "container:SecurePropertyStorage.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
       </BuildActionEntries>
@@ -75,10 +75,10 @@
             skipped = "NO">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "PropertyWrappers::PropertyWrappersTests"
-               BuildableName = "PropertyWrappersTests.xctest"
-               BlueprintName = "PropertyWrappersTests"
-               ReferencedContainer = "container:PropertyWrappers.xcodeproj">
+               BlueprintIdentifier = "SecurePropertyStorage::SecurePropertyStorageTests"
+               BuildableName = "SecurePropertyStorageTests.xctest"
+               BlueprintName = "SecurePropertyStorageTests"
+               ReferencedContainer = "container:SecurePropertyStorage.xcodeproj">
             </BuildableReference>
          </TestableReference>
       </Testables>

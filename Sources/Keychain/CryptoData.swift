@@ -8,7 +8,7 @@ extension SymmetricKey: StorageData {
     }
 
     public static func generate() -> SymmetricKey {
-        let account = "PropertyWrappers.SymmetricKey"
+        let account = "SecurePropertyStorage.SymmetricKey"
         let keychainStorage = KeychainStorageDelegate()
         do {
             guard let symmetricKey: SymmetricKey = try keychainStorage.read(account: account) else {
@@ -35,7 +35,7 @@ extension AES.GCM.Nonce: StorageData {
     }
 
     public static func generate() -> AES.GCM.Nonce {
-        let account = "PropertyWrappers.Nonce"
+        let account = "SecurePropertyStorage.Nonce"
         let keychainStorage = KeychainStorageDelegate()
         do {
             guard let nonce: AES.GCM.Nonce = try keychainStorage.read(account: account) else {

@@ -3,7 +3,7 @@
 import PackageDescription
 
 let package = Package(
-    name: "PropertyWrappers",
+    name: "SecurePropertyStorage",
     platforms: [
         .iOS(.v13),
         .macOS(.v10_15),
@@ -12,7 +12,7 @@ let package = Package(
     ],
     products: [
         .library(
-            name: "PropertyWrappers",
+            name: "SecurePropertyStorage",
             targets: ["Storage", "UserDefault", "Singleton", "Keychain"]),
         .library(
             name: "Storage",
@@ -27,7 +27,7 @@ let package = Package(
             name: "Keychain",
             targets: ["Storage", "Keychain"]),
         .library(
-            name: "PropertyWrappersDynamic",
+            name: "SecurePropertyStorageDynamic",
             type: .dynamic,
             targets: ["Storage", "UserDefault", "Singleton", "Keychain"]),
         .library(
@@ -60,7 +60,7 @@ let package = Package(
             name: "Keychain",
             dependencies: ["Storage"]),
         .testTarget(
-            name: "PropertyWrappersTests",
+            name: "SecurePropertyStorageTests",
             dependencies: ["Storage", "UserDefault", "Singleton", "Keychain"])
     ]
 )

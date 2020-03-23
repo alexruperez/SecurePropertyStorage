@@ -20,19 +20,19 @@
          productRefGroup = "OBJ_32";
          projectDirPath = ".";
          targets = (
-            "PropertyWrappers::Keychain",
-            "PropertyWrappers::KeychainDynamic::ProductTarget",
-            "PropertyWrappers::PropertyWrappers::ProductTarget",
-            "PropertyWrappers::PropertyWrappersDynamic::ProductTarget",
-            "PropertyWrappers::SwiftPMPackageDescription",
-            "PropertyWrappers::PropertyWrappersPackageTests::ProductTarget",
-            "PropertyWrappers::PropertyWrappersTests",
-            "PropertyWrappers::Singleton",
-            "PropertyWrappers::SingletonDynamic::ProductTarget",
-            "PropertyWrappers::Storage",
-            "PropertyWrappers::StorageDynamic::ProductTarget",
-            "PropertyWrappers::UserDefault",
-            "PropertyWrappers::UserDefaultDynamic::ProductTarget"
+            "SecurePropertyStorage::Keychain",
+            "SecurePropertyStorage::KeychainDynamic::ProductTarget",
+            "SecurePropertyStorage::SecurePropertyStorage::ProductTarget",
+            "SecurePropertyStorage::SecurePropertyStorageDynamic::ProductTarget",
+            "SecurePropertyStorage::SwiftPMPackageDescription",
+            "SecurePropertyStorage::SecurePropertyStoragePackageTests::ProductTarget",
+            "SecurePropertyStorage::SecurePropertyStorageTests",
+            "SecurePropertyStorage::Singleton",
+            "SecurePropertyStorage::SingletonDynamic::ProductTarget",
+            "SecurePropertyStorage::Storage",
+            "SecurePropertyStorage::StorageDynamic::ProductTarget",
+            "SecurePropertyStorage::UserDefault",
+            "SecurePropertyStorage::UserDefaultDynamic::ProductTarget"
          );
       };
       "OBJ_10" = {
@@ -42,27 +42,27 @@
       };
       "OBJ_100" = {
          isa = "PBXBuildFile";
-         fileRef = "PropertyWrappers::Keychain::Product";
+         fileRef = "SecurePropertyStorage::Keychain::Product";
       };
       "OBJ_101" = {
          isa = "PBXBuildFile";
-         fileRef = "PropertyWrappers::Storage::Product";
+         fileRef = "SecurePropertyStorage::Storage::Product";
       };
       "OBJ_102" = {
          isa = "PBXTargetDependency";
-         target = "PropertyWrappers::Singleton";
+         target = "SecurePropertyStorage::Singleton";
       };
       "OBJ_103" = {
          isa = "PBXTargetDependency";
-         target = "PropertyWrappers::UserDefault";
+         target = "SecurePropertyStorage::UserDefault";
       };
       "OBJ_104" = {
          isa = "PBXTargetDependency";
-         target = "PropertyWrappers::Keychain";
+         target = "SecurePropertyStorage::Keychain";
       };
       "OBJ_105" = {
          isa = "PBXTargetDependency";
-         target = "PropertyWrappers::Storage";
+         target = "SecurePropertyStorage::Storage";
       };
       "OBJ_106" = {
          isa = "XCConfigurationList";
@@ -84,7 +84,7 @@
             HEADER_SEARCH_PATHS = (
                "$(inherited)"
             );
-            INFOPLIST_FILE = "PropertyWrappers.xcodeproj/Singleton_Info.plist";
+            INFOPLIST_FILE = "SecurePropertyStorage.xcodeproj/Singleton_Info.plist";
             IPHONEOS_DEPLOYMENT_TARGET = "13.0";
             LD_RUNPATH_SEARCH_PATHS = (
                "$(inherited)",
@@ -125,7 +125,7 @@
             HEADER_SEARCH_PATHS = (
                "$(inherited)"
             );
-            INFOPLIST_FILE = "PropertyWrappers.xcodeproj/Singleton_Info.plist";
+            INFOPLIST_FILE = "SecurePropertyStorage.xcodeproj/Singleton_Info.plist";
             IPHONEOS_DEPLOYMENT_TARGET = "13.0";
             LD_RUNPATH_SEARCH_PATHS = (
                "$(inherited)",
@@ -184,19 +184,19 @@
       };
       "OBJ_113" = {
          isa = "PBXBuildFile";
-         fileRef = "PropertyWrappers::Keychain::Product";
+         fileRef = "SecurePropertyStorage::Keychain::Product";
       };
       "OBJ_114" = {
          isa = "PBXBuildFile";
-         fileRef = "PropertyWrappers::Storage::Product";
+         fileRef = "SecurePropertyStorage::Storage::Product";
       };
       "OBJ_115" = {
          isa = "PBXTargetDependency";
-         target = "PropertyWrappers::Keychain";
+         target = "SecurePropertyStorage::Keychain";
       };
       "OBJ_116" = {
          isa = "PBXTargetDependency";
-         target = "PropertyWrappers::Storage";
+         target = "SecurePropertyStorage::Storage";
       };
       "OBJ_118" = {
          isa = "XCConfigurationList";
@@ -226,11 +226,11 @@
       };
       "OBJ_121" = {
          isa = "PBXTargetDependency";
-         target = "PropertyWrappers::Storage";
+         target = "SecurePropertyStorage::Storage";
       };
       "OBJ_122" = {
          isa = "PBXTargetDependency";
-         target = "PropertyWrappers::Singleton";
+         target = "SecurePropertyStorage::Singleton";
       };
       "OBJ_123" = {
          isa = "XCConfigurationList";
@@ -252,7 +252,7 @@
             HEADER_SEARCH_PATHS = (
                "$(inherited)"
             );
-            INFOPLIST_FILE = "PropertyWrappers.xcodeproj/Storage_Info.plist";
+            INFOPLIST_FILE = "SecurePropertyStorage.xcodeproj/Storage_Info.plist";
             IPHONEOS_DEPLOYMENT_TARGET = "13.0";
             LD_RUNPATH_SEARCH_PATHS = (
                "$(inherited)",
@@ -293,7 +293,7 @@
             HEADER_SEARCH_PATHS = (
                "$(inherited)"
             );
-            INFOPLIST_FILE = "PropertyWrappers.xcodeproj/Storage_Info.plist";
+            INFOPLIST_FILE = "SecurePropertyStorage.xcodeproj/Storage_Info.plist";
             IPHONEOS_DEPLOYMENT_TARGET = "13.0";
             LD_RUNPATH_SEARCH_PATHS = (
                "$(inherited)",
@@ -396,7 +396,7 @@
       };
       "OBJ_138" = {
          isa = "PBXTargetDependency";
-         target = "PropertyWrappers::Storage";
+         target = "SecurePropertyStorage::Storage";
       };
       "OBJ_139" = {
          isa = "XCConfigurationList";
@@ -423,7 +423,7 @@
             HEADER_SEARCH_PATHS = (
                "$(inherited)"
             );
-            INFOPLIST_FILE = "PropertyWrappers.xcodeproj/UserDefault_Info.plist";
+            INFOPLIST_FILE = "SecurePropertyStorage.xcodeproj/UserDefault_Info.plist";
             IPHONEOS_DEPLOYMENT_TARGET = "13.0";
             LD_RUNPATH_SEARCH_PATHS = (
                "$(inherited)",
@@ -464,7 +464,7 @@
             HEADER_SEARCH_PATHS = (
                "$(inherited)"
             );
-            INFOPLIST_FILE = "PropertyWrappers.xcodeproj/UserDefault_Info.plist";
+            INFOPLIST_FILE = "SecurePropertyStorage.xcodeproj/UserDefault_Info.plist";
             IPHONEOS_DEPLOYMENT_TARGET = "13.0";
             LD_RUNPATH_SEARCH_PATHS = (
                "$(inherited)",
@@ -518,19 +518,19 @@
       };
       "OBJ_146" = {
          isa = "PBXBuildFile";
-         fileRef = "PropertyWrappers::Keychain::Product";
+         fileRef = "SecurePropertyStorage::Keychain::Product";
       };
       "OBJ_147" = {
          isa = "PBXBuildFile";
-         fileRef = "PropertyWrappers::Storage::Product";
+         fileRef = "SecurePropertyStorage::Storage::Product";
       };
       "OBJ_148" = {
          isa = "PBXTargetDependency";
-         target = "PropertyWrappers::Keychain";
+         target = "SecurePropertyStorage::Keychain";
       };
       "OBJ_149" = {
          isa = "PBXTargetDependency";
-         target = "PropertyWrappers::Storage";
+         target = "SecurePropertyStorage::Storage";
       };
       "OBJ_15" = {
          isa = "PBXFileReference";
@@ -560,11 +560,11 @@
       };
       "OBJ_154" = {
          isa = "PBXTargetDependency";
-         target = "PropertyWrappers::Storage";
+         target = "SecurePropertyStorage::Storage";
       };
       "OBJ_155" = {
          isa = "PBXTargetDependency";
-         target = "PropertyWrappers::UserDefault";
+         target = "SecurePropertyStorage::UserDefault";
       };
       "OBJ_16" = {
          isa = "PBXGroup";
@@ -656,8 +656,8 @@
             "OBJ_30",
             "OBJ_31"
          );
-         name = "PropertyWrappersTests";
-         path = "Tests/PropertyWrappersTests";
+         name = "SecurePropertyStorageTests";
+         path = "Tests/SecurePropertyStorageTests";
          sourceTree = "SOURCE_ROOT";
       };
       "OBJ_28" = {
@@ -725,11 +725,11 @@
       "OBJ_32" = {
          isa = "PBXGroup";
          children = (
-            "PropertyWrappers::Singleton::Product",
-            "PropertyWrappers::UserDefault::Product",
-            "PropertyWrappers::Storage::Product",
-            "PropertyWrappers::Keychain::Product",
-            "PropertyWrappers::PropertyWrappersTests::Product"
+            "SecurePropertyStorage::Storage::Product",
+            "SecurePropertyStorage::UserDefault::Product",
+            "SecurePropertyStorage::Keychain::Product",
+            "SecurePropertyStorage::SecurePropertyStorageTests::Product",
+            "SecurePropertyStorage::Singleton::Product"
          );
          name = "Products";
          path = "";
@@ -803,7 +803,7 @@
             HEADER_SEARCH_PATHS = (
                "$(inherited)"
             );
-            INFOPLIST_FILE = "PropertyWrappers.xcodeproj/Keychain_Info.plist";
+            INFOPLIST_FILE = "SecurePropertyStorage.xcodeproj/Keychain_Info.plist";
             IPHONEOS_DEPLOYMENT_TARGET = "13.0";
             LD_RUNPATH_SEARCH_PATHS = (
                "$(inherited)",
@@ -844,7 +844,7 @@
             HEADER_SEARCH_PATHS = (
                "$(inherited)"
             );
-            INFOPLIST_FILE = "PropertyWrappers.xcodeproj/Keychain_Info.plist";
+            INFOPLIST_FILE = "SecurePropertyStorage.xcodeproj/Keychain_Info.plist";
             IPHONEOS_DEPLOYMENT_TARGET = "13.0";
             LD_RUNPATH_SEARCH_PATHS = (
                "$(inherited)",
@@ -920,11 +920,11 @@
       };
       "OBJ_50" = {
          isa = "PBXBuildFile";
-         fileRef = "PropertyWrappers::Storage::Product";
+         fileRef = "SecurePropertyStorage::Storage::Product";
       };
       "OBJ_51" = {
          isa = "PBXTargetDependency";
-         target = "PropertyWrappers::Storage";
+         target = "SecurePropertyStorage::Storage";
       };
       "OBJ_54" = {
          isa = "XCConfigurationList";
@@ -949,11 +949,11 @@
       };
       "OBJ_57" = {
          isa = "PBXTargetDependency";
-         target = "PropertyWrappers::Storage";
+         target = "SecurePropertyStorage::Storage";
       };
       "OBJ_58" = {
          isa = "PBXTargetDependency";
-         target = "PropertyWrappers::Keychain";
+         target = "SecurePropertyStorage::Keychain";
       };
       "OBJ_6" = {
          isa = "PBXFileReference";
@@ -984,19 +984,19 @@
       };
       "OBJ_63" = {
          isa = "PBXTargetDependency";
-         target = "PropertyWrappers::Storage";
+         target = "SecurePropertyStorage::Storage";
       };
       "OBJ_64" = {
          isa = "PBXTargetDependency";
-         target = "PropertyWrappers::UserDefault";
+         target = "SecurePropertyStorage::UserDefault";
       };
       "OBJ_66" = {
          isa = "PBXTargetDependency";
-         target = "PropertyWrappers::Singleton";
+         target = "SecurePropertyStorage::Singleton";
       };
       "OBJ_68" = {
          isa = "PBXTargetDependency";
-         target = "PropertyWrappers::Keychain";
+         target = "SecurePropertyStorage::Keychain";
       };
       "OBJ_7" = {
          isa = "PBXGroup";
@@ -1033,19 +1033,19 @@
       };
       "OBJ_73" = {
          isa = "PBXTargetDependency";
-         target = "PropertyWrappers::Storage";
+         target = "SecurePropertyStorage::Storage";
       };
       "OBJ_74" = {
          isa = "PBXTargetDependency";
-         target = "PropertyWrappers::UserDefault";
+         target = "SecurePropertyStorage::UserDefault";
       };
       "OBJ_75" = {
          isa = "PBXTargetDependency";
-         target = "PropertyWrappers::Singleton";
+         target = "SecurePropertyStorage::Singleton";
       };
       "OBJ_76" = {
          isa = "PBXTargetDependency";
-         target = "PropertyWrappers::Keychain";
+         target = "SecurePropertyStorage::Keychain";
       };
       "OBJ_78" = {
          isa = "XCConfigurationList";
@@ -1141,7 +1141,7 @@
       };
       "OBJ_87" = {
          isa = "PBXTargetDependency";
-         target = "PropertyWrappers::PropertyWrappersTests";
+         target = "SecurePropertyStorage::SecurePropertyStorageTests";
       };
       "OBJ_89" = {
          isa = "XCConfigurationList";
@@ -1169,7 +1169,7 @@
             HEADER_SEARCH_PATHS = (
                "$(inherited)"
             );
-            INFOPLIST_FILE = "PropertyWrappers.xcodeproj/PropertyWrappersTests_Info.plist";
+            INFOPLIST_FILE = "SecurePropertyStorage.xcodeproj/SecurePropertyStorageTests_Info.plist";
             IPHONEOS_DEPLOYMENT_TARGET = "13.0";
             LD_RUNPATH_SEARCH_PATHS = (
                "$(inherited)",
@@ -1190,7 +1190,7 @@
                "$(inherited)"
             );
             SWIFT_VERSION = "5.0";
-            TARGET_NAME = "PropertyWrappersTests";
+            TARGET_NAME = "SecurePropertyStorageTests";
             TVOS_DEPLOYMENT_TARGET = "13.0";
             WATCHOS_DEPLOYMENT_TARGET = "6.0";
          };
@@ -1208,7 +1208,7 @@
             HEADER_SEARCH_PATHS = (
                "$(inherited)"
             );
-            INFOPLIST_FILE = "PropertyWrappers.xcodeproj/PropertyWrappersTests_Info.plist";
+            INFOPLIST_FILE = "SecurePropertyStorage.xcodeproj/SecurePropertyStorageTests_Info.plist";
             IPHONEOS_DEPLOYMENT_TARGET = "13.0";
             LD_RUNPATH_SEARCH_PATHS = (
                "$(inherited)",
@@ -1229,7 +1229,7 @@
                "$(inherited)"
             );
             SWIFT_VERSION = "5.0";
-            TARGET_NAME = "PropertyWrappersTests";
+            TARGET_NAME = "SecurePropertyStorageTests";
             TVOS_DEPLOYMENT_TARGET = "13.0";
             WATCHOS_DEPLOYMENT_TARGET = "6.0";
          };
@@ -1271,13 +1271,13 @@
       };
       "OBJ_98" = {
          isa = "PBXBuildFile";
-         fileRef = "PropertyWrappers::Singleton::Product";
+         fileRef = "SecurePropertyStorage::Singleton::Product";
       };
       "OBJ_99" = {
          isa = "PBXBuildFile";
-         fileRef = "PropertyWrappers::UserDefault::Product";
+         fileRef = "SecurePropertyStorage::UserDefault::Product";
       };
-      "PropertyWrappers::Keychain" = {
+      "SecurePropertyStorage::Keychain" = {
          isa = "PBXNativeTarget";
          buildConfigurationList = "OBJ_41";
          buildPhases = (
@@ -1289,15 +1289,15 @@
          );
          name = "Keychain";
          productName = "Keychain";
-         productReference = "PropertyWrappers::Keychain::Product";
+         productReference = "SecurePropertyStorage::Keychain::Product";
          productType = "com.apple.product-type.framework";
       };
-      "PropertyWrappers::Keychain::Product" = {
+      "SecurePropertyStorage::Keychain::Product" = {
          isa = "PBXFileReference";
          path = "Keychain.framework";
          sourceTree = "BUILT_PRODUCTS_DIR";
       };
-      "PropertyWrappers::KeychainDynamic::ProductTarget" = {
+      "SecurePropertyStorage::KeychainDynamic::ProductTarget" = {
          isa = "PBXAggregateTarget";
          buildConfigurationList = "OBJ_54";
          buildPhases = (
@@ -1309,7 +1309,7 @@
          name = "KeychainDynamic";
          productName = "KeychainDynamic";
       };
-      "PropertyWrappers::PropertyWrappers::ProductTarget" = {
+      "SecurePropertyStorage::SecurePropertyStorage::ProductTarget" = {
          isa = "PBXAggregateTarget";
          buildConfigurationList = "OBJ_60";
          buildPhases = (
@@ -1320,10 +1320,10 @@
             "OBJ_66",
             "OBJ_68"
          );
-         name = "PropertyWrappers";
-         productName = "PropertyWrappers";
+         name = "SecurePropertyStorage";
+         productName = "SecurePropertyStorage";
       };
-      "PropertyWrappers::PropertyWrappersDynamic::ProductTarget" = {
+      "SecurePropertyStorage::SecurePropertyStorageDynamic::ProductTarget" = {
          isa = "PBXAggregateTarget";
          buildConfigurationList = "OBJ_70";
          buildPhases = (
@@ -1334,10 +1334,10 @@
             "OBJ_75",
             "OBJ_76"
          );
-         name = "PropertyWrappersDynamic";
-         productName = "PropertyWrappersDynamic";
+         name = "SecurePropertyStorageDynamic";
+         productName = "SecurePropertyStorageDynamic";
       };
-      "PropertyWrappers::PropertyWrappersPackageTests::ProductTarget" = {
+      "SecurePropertyStorage::SecurePropertyStoragePackageTests::ProductTarget" = {
          isa = "PBXAggregateTarget";
          buildConfigurationList = "OBJ_84";
          buildPhases = (
@@ -1345,10 +1345,10 @@
          dependencies = (
             "OBJ_87"
          );
-         name = "PropertyWrappersPackageTests";
-         productName = "PropertyWrappersPackageTests";
+         name = "SecurePropertyStoragePackageTests";
+         productName = "SecurePropertyStoragePackageTests";
       };
-      "PropertyWrappers::PropertyWrappersTests" = {
+      "SecurePropertyStorage::SecurePropertyStorageTests" = {
          isa = "PBXNativeTarget";
          buildConfigurationList = "OBJ_89";
          buildPhases = (
@@ -1361,17 +1361,17 @@
             "OBJ_104",
             "OBJ_105"
          );
-         name = "PropertyWrappersTests";
-         productName = "PropertyWrappersTests";
-         productReference = "PropertyWrappers::PropertyWrappersTests::Product";
+         name = "SecurePropertyStorageTests";
+         productName = "SecurePropertyStorageTests";
+         productReference = "SecurePropertyStorage::SecurePropertyStorageTests::Product";
          productType = "com.apple.product-type.bundle.unit-test";
       };
-      "PropertyWrappers::PropertyWrappersTests::Product" = {
+      "SecurePropertyStorage::SecurePropertyStorageTests::Product" = {
          isa = "PBXFileReference";
-         path = "PropertyWrappersTests.xctest";
+         path = "SecurePropertyStorageTests.xctest";
          sourceTree = "BUILT_PRODUCTS_DIR";
       };
-      "PropertyWrappers::Singleton" = {
+      "SecurePropertyStorage::Singleton" = {
          isa = "PBXNativeTarget";
          buildConfigurationList = "OBJ_106";
          buildPhases = (
@@ -1384,15 +1384,15 @@
          );
          name = "Singleton";
          productName = "Singleton";
-         productReference = "PropertyWrappers::Singleton::Product";
+         productReference = "SecurePropertyStorage::Singleton::Product";
          productType = "com.apple.product-type.framework";
       };
-      "PropertyWrappers::Singleton::Product" = {
+      "SecurePropertyStorage::Singleton::Product" = {
          isa = "PBXFileReference";
          path = "Singleton.framework";
          sourceTree = "BUILT_PRODUCTS_DIR";
       };
-      "PropertyWrappers::SingletonDynamic::ProductTarget" = {
+      "SecurePropertyStorage::SingletonDynamic::ProductTarget" = {
          isa = "PBXAggregateTarget";
          buildConfigurationList = "OBJ_118";
          buildPhases = (
@@ -1404,7 +1404,7 @@
          name = "SingletonDynamic";
          productName = "SingletonDynamic";
       };
-      "PropertyWrappers::Storage" = {
+      "SecurePropertyStorage::Storage" = {
          isa = "PBXNativeTarget";
          buildConfigurationList = "OBJ_123";
          buildPhases = (
@@ -1415,15 +1415,15 @@
          );
          name = "Storage";
          productName = "Storage";
-         productReference = "PropertyWrappers::Storage::Product";
+         productReference = "SecurePropertyStorage::Storage::Product";
          productType = "com.apple.product-type.framework";
       };
-      "PropertyWrappers::Storage::Product" = {
+      "SecurePropertyStorage::Storage::Product" = {
          isa = "PBXFileReference";
          path = "Storage.framework";
          sourceTree = "BUILT_PRODUCTS_DIR";
       };
-      "PropertyWrappers::StorageDynamic::ProductTarget" = {
+      "SecurePropertyStorage::StorageDynamic::ProductTarget" = {
          isa = "PBXAggregateTarget";
          buildConfigurationList = "OBJ_135";
          buildPhases = (
@@ -1434,7 +1434,7 @@
          name = "StorageDynamic";
          productName = "StorageDynamic";
       };
-      "PropertyWrappers::SwiftPMPackageDescription" = {
+      "SecurePropertyStorage::SwiftPMPackageDescription" = {
          isa = "PBXNativeTarget";
          buildConfigurationList = "OBJ_78";
          buildPhases = (
@@ -1442,11 +1442,11 @@
          );
          dependencies = (
          );
-         name = "PropertyWrappersPackageDescription";
-         productName = "PropertyWrappersPackageDescription";
+         name = "SecurePropertyStoragePackageDescription";
+         productName = "SecurePropertyStoragePackageDescription";
          productType = "com.apple.product-type.framework";
       };
-      "PropertyWrappers::UserDefault" = {
+      "SecurePropertyStorage::UserDefault" = {
          isa = "PBXNativeTarget";
          buildConfigurationList = "OBJ_139";
          buildPhases = (
@@ -1459,15 +1459,15 @@
          );
          name = "UserDefault";
          productName = "UserDefault";
-         productReference = "PropertyWrappers::UserDefault::Product";
+         productReference = "SecurePropertyStorage::UserDefault::Product";
          productType = "com.apple.product-type.framework";
       };
-      "PropertyWrappers::UserDefault::Product" = {
+      "SecurePropertyStorage::UserDefault::Product" = {
          isa = "PBXFileReference";
          path = "UserDefault.framework";
          sourceTree = "BUILT_PRODUCTS_DIR";
       };
-      "PropertyWrappers::UserDefaultDynamic::ProductTarget" = {
+      "SecurePropertyStorage::UserDefaultDynamic::ProductTarget" = {
          isa = "PBXAggregateTarget";
          buildConfigurationList = "OBJ_151";
          buildPhases = (

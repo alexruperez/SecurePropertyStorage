@@ -1,7 +1,7 @@
 language: swift
 osx_image: xcode11.3
-xcode_project: PropertyWrappers.xcodeproj
-xcode_scheme: PropertyWrappers-Package
+xcode_project: SecurePropertyStorage.xcodeproj
+xcode_scheme: SecurePropertyStorage-Package
 xcode_destination: platform=iOS Simulator,OS=13.3,name=iPhone 11
 after_success:
   - bash <(curl -s https://codecov.io/bash)
