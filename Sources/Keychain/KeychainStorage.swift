@@ -3,7 +3,7 @@ import Foundation
 import Storage
 
 open class KeychainStorage: DelegatedStorage {
-    open class var standard: DelegatedStorage { shared }
+    open class var standard: KeychainStorage { shared }
     private static let shared = KeychainStorage()
 
     public convenience init(_ delegate: StorageDelegate = KeychainStorageDelegate(),

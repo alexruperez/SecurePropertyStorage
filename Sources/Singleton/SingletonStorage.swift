@@ -4,7 +4,7 @@ import Keychain
 import Storage
 
 open class SingletonStorage: DelegatedStorage {
-    open class var standard: DelegatedStorage { shared }
+    open class var standard: SingletonStorage { shared }
     private static let shared = SingletonStorage()
 
     public convenience init(_ delegate: StorageDelegate = SingletonStorageDelegate(),

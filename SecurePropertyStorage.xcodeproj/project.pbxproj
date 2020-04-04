@@ -725,11 +725,11 @@
       "OBJ_32" = {
          isa = "PBXGroup";
          children = (
-            "SecurePropertyStorage::Storage::Product",
-            "SecurePropertyStorage::UserDefault::Product",
             "SecurePropertyStorage::Keychain::Product",
+            "SecurePropertyStorage::Storage::Product",
             "SecurePropertyStorage::SecurePropertyStorageTests::Product",
-            "SecurePropertyStorage::Singleton::Product"
+            "SecurePropertyStorage::Singleton::Product",
+            "SecurePropertyStorage::UserDefault::Product"
          );
          name = "Products";
          path = "";
@@ -1070,7 +1070,7 @@
                "-sdk",
                "/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.15.sdk",
                "-package-description-version",
-               "5.1"
+               "5.1.0"
             );
             SWIFT_VERSION = "5.0";
          };
@@ -1102,7 +1102,7 @@
                "-sdk",
                "/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.15.sdk",
                "-package-description-version",
-               "5.1"
+               "5.1.0"
             );
             SWIFT_VERSION = "5.0";
          };
