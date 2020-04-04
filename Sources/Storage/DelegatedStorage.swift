@@ -22,14 +22,14 @@ open class DelegatedStorage: Storage {
         self.errorClosure = errorClosure
     }
 
-    open func register(defaults registrationDictionary: [String: Any]) {
+    open func register(defaults registrationDictionary: [StoreKey: Any]) {
         registrationDictionary.forEach { key, value in
             if let _: Data = try? data(forKey: key) { return }
             set(value, forKey: key)
         }
     }
 
-    open func value<V>(forKey key: String) -> V? {
+    open func value<V>(forKey key: StoreKey) -> V? {
         do {
             return try object(forKey: key) as? V
         } catch {
@@ -38,7 +38,7 @@ open class DelegatedStorage: Storage {
         }
     }
 
-    open func object(forKey key: String) throws -> Any? {
+    open func object(forKey key: StoreKey) throws -> Any? {
         guard let data: Data = try data(forKey: key),
             let object = try NSKeyedUnarchiver.unarchiveTopLevelObjectWithData(data) else {
                 return nil
@@ -46,7 +46,7 @@ open class DelegatedStorage: Storage {
         return object
     }
 
-    open func string(forKey key: String) -> String? {
+    open func string(forKey key: StoreKey) -> String? {
         guard let data: Data = try? data(forKey: key),
             let string = String(data) else {
                 return nil
@@ -54,19 +54,19 @@ open class DelegatedStorage: Storage {
         return string
     }
 
-    open func array(forKey key: String) -> [Any]? {
+    open func array(forKey key: StoreKey) -> [Any]? {
         value(forKey: key)
     }
 
-    open func dictionary(forKey key: String) -> [String: Any]? {
+    open func dictionary(forKey key: StoreKey) -> [String: Any]? {
         value(forKey: key)
     }
 
-    open func stringArray(forKey key: String) -> [String]? {
+    open func stringArray(forKey key: StoreKey) -> [String]? {
         value(forKey: key)
     }
 
-    open func integer(forKey key: String) -> Int {
+    open func integer(forKey key: StoreKey) -> Int {
         guard let data: Data = try? data(forKey: key),
             let integer = Int(data) else {
                 return 0
@@ -74,7 +74,7 @@ open class DelegatedStorage: Storage {
         return integer
     }
 
-    open func float(forKey key: String) -> Float {
+    open func float(forKey key: StoreKey) -> Float {
         guard let data: Data = try? data(forKey: key),
             let float = Float(data) else {
                 return 0
@@ -82,7 +82,7 @@ open class DelegatedStorage: Storage {
         return float
     }
 
-    open func double(forKey key: String) -> Double {
+    open func double(forKey key: StoreKey) -> Double {
         guard let data: Data = try? data(forKey: key),
             let double = Double(data) else {
                 return 0
@@ -90,7 +90,7 @@ open class DelegatedStorage: Storage {
         return double
     }
 
-    open func bool(forKey key: String) -> Bool {
+    open func bool(forKey key: StoreKey) -> Bool {
         guard let data: Data = try? data(forKey: key),
             let bool = Bool(data) else {
                 return false
@@ -98,14 +98,14 @@ open class DelegatedStorage: Storage {
         return bool
     }
 
-    open func url(forKey key: String) -> URL? {
+    open func url(forKey key: StoreKey) -> URL? {
         guard let data: Data = try? data(forKey: key) else {
             return nil
         }
         return URL(dataRepresentation: data, relativeTo: nil)
     }
 
-    open func data<D: StorageData>(forKey key: String) throws -> D? {
+    open func data<D: StorageData>(forKey key: StoreKey) throws -> D? {
         guard let data: Data = try delegate.data(forKey: hash(key)) else {
             return nil
         }
@@ -119,31 +119,31 @@ open class DelegatedStorage: Storage {
                                 using: symmetricKey) as? D
     }
 
-    open func set(_ value: Int, forKey key: String) {
+    open func set(_ value: Int, forKey key: StoreKey) {
         try? set(value.data, forKey: key)
     }
 
-    open func set(_ value: Float, forKey key: String) {
+    open func set(_ value: Float, forKey key: StoreKey) {
         try? set(value.data, forKey: key)
     }
 
-    open func set(_ value: Double, forKey key: String) {
+    open func set(_ value: Double, forKey key: StoreKey) {
         try? set(value.data, forKey: key)
     }
 
-    open func set(_ value: Bool, forKey key: String) {
+    open func set(_ value: Bool, forKey key: StoreKey) {
         try? set(value.data, forKey: key)
     }
 
-    open func set(_ url: URL?, forKey key: String) {
+    open func set(_ url: URL?, forKey key: StoreKey) {
         try? set(url?.dataRepresentation, forKey: key)
     }
 
-    open func set(_ string: String, forKey key: String) {
+    open func set(_ string: String, forKey key: StoreKey) {
         try? set(string.data, forKey: key)
     }
 
-    open func set<V>(_ value: V?, forKey key: String) {
+    open func set<V>(_ value: V?, forKey key: StoreKey) {
         do {
             guard let value = value else {
                 try remove(forKey: key)
@@ -157,7 +157,7 @@ open class DelegatedStorage: Storage {
         }
     }
 
-    open func set<D: StorageData>(_ data: D?, forKey key: String) throws {
+    open func set<D: StorageData>(_ data: D?, forKey key: StoreKey) throws {
         guard let bytes = data else {
             try remove(forKey: key)
             return
@@ -176,11 +176,11 @@ open class DelegatedStorage: Storage {
         }
     }
 
-    open func remove(forKey key: String) throws {
+    open func remove(forKey key: StoreKey) throws {
         try delegate.remove(forKey: hash(key))
     }
 
-    private func hash(_ key: String) -> String {
+    private func hash(_ key: StoreKey) -> String {
         return SHA512.hash(string: key)
     }
 }

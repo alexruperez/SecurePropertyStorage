@@ -21,9 +21,9 @@ open class SingletonStorageDelegate: StorageDelegate {
 
     public init() {}
 
-    open func data<D: StorageData>(forKey key: String) throws -> D? { shared[key] as? D }
+    open func data<D: StorageData>(forKey key: StoreKey) -> D? { shared[key] as? D }
 
-    open func set<D: StorageData>(_ data: D?, forKey key: String) throws { shared[key] = data }
+    open func set<D: StorageData>(_ data: D?, forKey key: StoreKey) { shared[key] = data }
 
-    open func remove(forKey key: String) throws { shared.removeValue(forKey: key) }
+    open func remove(forKey key: StoreKey) { shared.removeValue(forKey: key) }
 }

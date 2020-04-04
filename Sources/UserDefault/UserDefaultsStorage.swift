@@ -26,87 +26,87 @@ open class UserDefaultsStorage: UserDefaults, Storage {
                                    authenticationTag: authenticationTag)
     }
 
-    open func data<D: StorageData>(forKey key: String) throws -> D? {
+    open func data<D: StorageData>(forKey key: StoreKey) -> D? {
         super.data(forKey: key) as? D
     }
 
-    open func set<D: StorageData>(_ data: D?, forKey defaultName: String) throws {
+    open func set<D: StorageData>(_ data: D?, forKey defaultName: StoreKey) {
         super.set(data, forKey: defaultName)
     }
 
-    open func remove(forKey key: String) throws {
+    open func remove(forKey key: StoreKey) {
         super.removeObject(forKey: key)
     }
 
-    open override func register(defaults registrationDictionary: [String: Any]) {
+    open override func register(defaults registrationDictionary: [StoreKey: Any]) {
         storage.register(defaults: registrationDictionary)
     }
 
-    public func value<V>(forKey key: String) -> V? {
+    public func value<V>(forKey key: StoreKey) -> V? {
         storage.value(forKey: key)
     }
 
-    open func set(_ string: String, forKey key: String) {
+    open func set(_ string: String, forKey key: StoreKey) {
         storage.set(string, forKey: key)
     }
 
-    public func set<V>(_ value: V?, forKey key: String) {
+    public func set<V>(_ value: V?, forKey key: StoreKey) {
         storage.set(value, forKey: key)
     }
 
-    open override func string(forKey defaultName: String) -> String? {
+    open override func string(forKey defaultName: StoreKey) -> String? {
         storage.string(forKey: defaultName)
     }
 
-    open override func array(forKey defaultName: String) -> [Any]? {
+    open override func array(forKey defaultName: StoreKey) -> [Any]? {
         storage.array(forKey: defaultName)
     }
 
-    open override func dictionary(forKey defaultName: String) -> [String: Any]? {
+    open override func dictionary(forKey defaultName: StoreKey) -> [String: Any]? {
         storage.dictionary(forKey: defaultName)
     }
 
-    open override func stringArray(forKey defaultName: String) -> [String]? {
+    open override func stringArray(forKey defaultName: StoreKey) -> [String]? {
         storage.stringArray(forKey: defaultName)
     }
 
-    open override func integer(forKey defaultName: String) -> Int {
+    open override func integer(forKey defaultName: StoreKey) -> Int {
         storage.integer(forKey: defaultName)
     }
 
-    open override func float(forKey defaultName: String) -> Float {
+    open override func float(forKey defaultName: StoreKey) -> Float {
         storage.float(forKey: defaultName)
     }
 
-    open override func double(forKey defaultName: String) -> Double {
+    open override func double(forKey defaultName: StoreKey) -> Double {
         storage.double(forKey: defaultName)
     }
 
-    open override func bool(forKey defaultName: String) -> Bool {
+    open override func bool(forKey defaultName: StoreKey) -> Bool {
         storage.bool(forKey: defaultName)
     }
 
-    open override func url(forKey defaultName: String) -> URL? {
+    open override func url(forKey defaultName: StoreKey) -> URL? {
         storage.url(forKey: defaultName)
     }
 
-    open override func set(_ value: Int, forKey defaultName: String) {
+    open override func set(_ value: Int, forKey defaultName: StoreKey) {
         storage.set(value, forKey: defaultName)
     }
 
-    open override func set(_ value: Float, forKey defaultName: String) {
+    open override func set(_ value: Float, forKey defaultName: StoreKey) {
         storage.set(value, forKey: defaultName)
     }
 
-    open override func set(_ value: Double, forKey defaultName: String) {
+    open override func set(_ value: Double, forKey defaultName: StoreKey) {
         storage.set(value, forKey: defaultName)
     }
 
-    open override func set(_ value: Bool, forKey defaultName: String) {
+    open override func set(_ value: Bool, forKey defaultName: StoreKey) {
         storage.set(value, forKey: defaultName)
     }
 
-    open override func set(_ url: URL?, forKey defaultName: String) {
+    open override func set(_ url: URL?, forKey defaultName: StoreKey) {
         storage.set(url, forKey: defaultName)
     }
 }

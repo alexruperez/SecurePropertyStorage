@@ -1,22 +1,24 @@
 import Foundation
 
+public typealias StoreKey = String
+
 public protocol Storage: StorageDelegate {
-    func register(defaults registration: [String: Any])
-    func value<V>(forKey key: String) -> V?
-    func string(forKey key: String) -> String?
-    func array(forKey key: String) -> [Any]?
-    func dictionary(forKey key: String) -> [String: Any]?
-    func stringArray(forKey key: String) -> [String]?
-    func integer(forKey key: String) -> Int
-    func float(forKey key: String) -> Float
-    func double(forKey key: String) -> Double
-    func bool(forKey key: String) -> Bool
-    func url(forKey key: String) -> URL?
-    func set(_ value: Int, forKey key: String)
-    func set(_ value: Float, forKey key: String)
-    func set(_ value: Double, forKey key: String)
-    func set(_ value: Bool, forKey key: String)
-    func set(_ url: URL?, forKey key: String)
-    func set(_ string: String, forKey key: String)
-    func set<V>(_ value: V?, forKey key: String)
+    func register(defaults registration: [StoreKey: Any])
+    func value<V>(forKey key: StoreKey) -> V?
+    func string(forKey key: StoreKey) -> String?
+    func array(forKey key: StoreKey) -> [Any]?
+    func dictionary(forKey key: StoreKey) -> [String: Any]?
+    func stringArray(forKey key: StoreKey) -> [String]?
+    func integer(forKey key: StoreKey) -> Int
+    func float(forKey key: StoreKey) -> Float
+    func double(forKey key: StoreKey) -> Double
+    func bool(forKey key: StoreKey) -> Bool
+    func url(forKey key: StoreKey) -> URL?
+    func set(_ value: Int, forKey key: StoreKey)
+    func set(_ value: Float, forKey key: StoreKey)
+    func set(_ value: Double, forKey key: StoreKey)
+    func set(_ value: Bool, forKey key: StoreKey)
+    func set(_ url: URL?, forKey key: StoreKey)
+    func set(_ string: String, forKey key: StoreKey)
+    func set<V>(_ value: V?, forKey key: StoreKey)
 }

@@ -7,29 +7,31 @@ open class KeychainStorage: DelegatedStorage {
     private static let shared = KeychainStorage()
 
     public convenience init(_ delegate: StorageDelegate = KeychainStorageDelegate(),
-                            authenticationTag: Data? = nil) {
+                            authenticationTag: Data? = nil,
+                            errorClosure: StorageErrorClosure? = nil) {
         self.init(delegate,
                   symmetricKey: SymmetricKey.generate(),
                   nonce: AES.GCM.Nonce.generate(),
-                  authenticationTag: authenticationTag)
+                  authenticationTag: authenticationTag,
+                  errorClosure: errorClosure)
     }
 }
 
 open class KeychainStorageDelegate: StorageDelegate {
     public init() {}
 
-    open func data<D: StorageData>(forKey key: String) throws -> D? {
+    open func data<D: StorageData>(forKey key: StoreKey) throws -> D? {
         try read(account: key)
     }
 
-    open func set<D: StorageData>(_ data: D?, forKey key: String) throws {
+    open func set<D: StorageData>(_ data: D?, forKey key: StoreKey) throws {
         try remove(forKey: key)
         if let data = data {
             try store(data, account: key)
         }
     }
 
-    open func remove(forKey key: String) throws {
+    open func remove(forKey key: StoreKey) throws {
         try delete(account: key)
     }
 

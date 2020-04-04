@@ -6,8 +6,9 @@
 [![License](https://img.shields.io/github/license/alexruperez/SecurePropertyStorage)](LICENSE)
 [![Swift Package Manager compatible](https://img.shields.io/badge/Swift%20Package%20Manager-compatible-4BC51D.svg?style=flat)](https://swift.org/package-manager)
 [![Carthage compatible](https://img.shields.io/badge/Carthage-compatible-4BC51D.svg?style=flat)](https://github.com/Carthage/Carthage)
-![Swift](https://github.com/alexruperez/SecurePropertyStorage/workflows/Swift/badge.svg)
+[![Swift Action](https://github.com/alexruperez/SecurePropertyStorage/workflows/Swift/badge.svg)](https://github.com/alexruperez/SecurePropertyStorage/actions)
 [![Build Status](https://travis-ci.com/alexruperez/SecurePropertyStorage.svg?branch=master)](https://travis-ci.com/alexruperez/SecurePropertyStorage)
+[![CodeBeat](https://codebeat.co/badges/09a12f07-f53c-4149-b033-df576ec3733b)](https://codebeat.co/projects/github-com-alexruperez-propertywrappers-master)
 [![Coverage](https://img.shields.io/codecov/c/github/alexruperez/SecurePropertyStorage)](https://codecov.io/gh/alexruperez/SecurePropertyStorage)
 
 ## 🌟 Features
@@ -88,6 +89,7 @@ github "alexruperez/SecurePropertyStorage"
 
 ## 🍻 Etc.
 
+* Featured in [Dave Verwer](https://twitter.com/daveverwer)'s iOS Dev Weekly - [Issue 450](https://iosdevweekly.com/issues/450?#ll98q5s), thanks Dave!
 * Contributions are very welcome.
 * Attribution is appreciated (let's spread the word!), but not mandatory.
 

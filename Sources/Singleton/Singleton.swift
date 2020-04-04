@@ -1,15 +1,13 @@
 import Storage
 
 @propertyWrapper
-public struct Singleton<Value> {
-    private let key: StoreKey
-
-    public init(_ key: String) {
-        self.key = key
+open class Singleton<Value>: StorePropertyWrapper {
+    public convenience init(_ key: StoreKey) {
+        self.init(SingletonStorage.standard, key)
     }
 
-    public var wrappedValue: Value? {
-        get { SingletonStorage.standard.value(forKey: key) }
-        set { SingletonStorage.standard.set(newValue, forKey: key) }
+    open var wrappedValue: Value? {
+        get { storage.value(forKey: key) }
+        set { storage.set(newValue, forKey: key) }
     }
 }

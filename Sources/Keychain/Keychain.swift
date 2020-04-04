@@ -1,15 +1,13 @@
 import Storage
 
 @propertyWrapper
-public struct Keychain<Value> {
-    private let key: StoreKey
-
-    public init(_ key: String) {
-        self.key = key
+open class Keychain<Value>: StorePropertyWrapper {
+    public convenience init(_ key: StoreKey) {
+        self.init(KeychainStorage.standard, key)
     }
 
-    public var wrappedValue: Value? {
-        get { KeychainStorage.standard.value(forKey: key) }
-        set { KeychainStorage.standard.set(newValue, forKey: key) }
+    open var wrappedValue: Value? {
+        get { storage.value(forKey: key) }
+        set { storage.set(newValue, forKey: key) }
     }
 }

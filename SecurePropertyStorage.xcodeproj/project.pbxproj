@@ -726,9 +726,9 @@
          isa = "PBXGroup";
          children = (
             "SecurePropertyStorage::Keychain::Product",
-            "SecurePropertyStorage::Storage::Product",
             "SecurePropertyStorage::SecurePropertyStorageTests::Product",
             "SecurePropertyStorage::Singleton::Product",
+            "SecurePropertyStorage::Storage::Product",
             "SecurePropertyStorage::UserDefault::Product"
          );
          name = "Products";
