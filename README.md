@@ -96,7 +96,7 @@ github "alexruperez/SecurePropertyStorage"
 
 ## 👨‍💻 Author
 
-Alex Rupérez – [@alexruperez](https://twitter.com/alexruperez) – contact@alexruperez.com
+Alex Rupérez – [@alexruperez](https://twitter.com/alexruperez) – me@alexruperez.com
 
 ## 👮‍♂️ License
 
