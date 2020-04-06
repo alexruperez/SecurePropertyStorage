@@ -2,12 +2,24 @@ import XCTest
 import UserDefault
 import Storage
 
+enum UserDefaultsCodable: String, Codable {
+    case test
+}
+
 let userDefaultsTagStorage = UserDefaultsStorage(authenticationTag: Data())
 
 final class UserDefaultTests: XCTestCase {
     @Store(userDefaultsTagStorage, "userDefaultsTagStore") var userDefaultsTagStore: String?
     @Store(UserDefaultsStorage.standard, "userDefaultsStore") var userDefaultsStore: String?
     @UserDefault("userDefaults") var userDefaults: String?
+    @Store(userDefaultsTagStorage, "userDefaultsTagDefault") var userDefaultsTagDefault = "tagDefault"
+    @UserDefault("userDefaultsDefault") var userDefaultsDefault = "default"
+    @CodableStore(userDefaultsTagStorage, "userDefaultsTagCodable") var userDefaultsTagCodable = UserDefaultsCodable.test
+    @CodableUserDefault("userDefaultsCodable") var userDefaultsCodable = UserDefaultsCodable.test
+    @UnwrappedStore(userDefaultsTagStorage, "unwrappedUserDefaultsTagDefault") var unwrappedUserDefaultsTagDefault = "tagDefault"
+    @UnwrappedUserDefault("unwrappedUserDefaultsDefault") var unwrappedUserDefaultsDefault = "default"
+    @UnwrappedCodableStore(userDefaultsTagStorage, "unwrappedUserDefaultsTagCodable") var unwrappedUserDefaultsTagCodable = UserDefaultsCodable.test
+    @UnwrappedCodableUserDefault("unwrappedUserDefaultsCodable") var unwrappedUserDefaultsCodable = UserDefaultsCodable.test
 
     func testUserDefault() {
         userDefaultsStore = nil
@@ -29,6 +41,18 @@ final class UserDefaultTests: XCTestCase {
         userDefaults = nil
         XCTAssertNil(userDefaults)
         XCTAssertNotEqual(userDefaults, userDefaultsTagStore)
+        XCTAssertEqual(userDefaultsTagDefault, "tagDefault")
+        XCTAssertEqual(userDefaultsDefault, "default")
+        userDefaultsDefault = nil
+        XCTAssertNil(userDefaultsDefault)
+        XCTAssertEqual(userDefaultsTagCodable, .test)
+        XCTAssertEqual(userDefaultsCodable, .test)
+        userDefaultsCodable = nil
+        XCTAssertNil(userDefaultsCodable)
+        XCTAssertEqual(unwrappedUserDefaultsTagDefault, "tagDefault")
+        XCTAssertEqual(unwrappedUserDefaultsDefault, "default")
+        XCTAssertEqual(unwrappedUserDefaultsTagCodable, .test)
+        XCTAssertEqual(unwrappedUserDefaultsCodable, .test)
     }
 
     func testUserDefaultArray() {
@@ -205,6 +229,6 @@ final class UserDefaultTests: XCTestCase {
         ("testUserDefaultDoubleNil", testUserDefaultDoubleNil),
         ("testUserDefaultBoolNil", testUserDefaultBoolNil),
         ("testUserDefaultStringNil", testUserDefaultStringNil),
-        ("testUserDefaultURLNil", testUserDefaultURLNil)
+        ("testUserDefaultURLNil", testUserDefaultURLNil),
     ]
 }

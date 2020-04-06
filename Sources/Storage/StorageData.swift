@@ -13,7 +13,7 @@ public extension ContiguousBytes {
                                                      pointer,
                                                      $0.count,
                                                      kCFAllocatorNull)
-            return((cfdata as NSData?) as Data?) ?? Data()
+            return ((cfdata as NSData?) as Data?) ?? Data()
         }
     }
 }
@@ -25,13 +25,23 @@ public extension StorageData {
 }
 
 extension HashFunction {
-    public static func hash(string: String) -> String {
+    static func hash(string: String) -> String {
         hash(data: string.data).compactMap { String(format: "%02x", $0) }.joined()
+    }
+}
+
+extension Encodable {
+    func encode() throws -> Data {
+        try JSONEncoder().encode(self)
     }
 }
 
 extension Data: StorageData {
     public init<B: ContiguousBytes>(bytes: B) throws {
         self = bytes.data
+    }
+
+    func decode<D: Decodable>(_ type: D.Type) throws -> D {
+        try JSONDecoder().decode(type, from: self)
     }
 }

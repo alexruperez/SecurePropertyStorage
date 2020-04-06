@@ -42,16 +42,24 @@ open class UserDefaultsStorage: UserDefaults, Storage {
         storage.register(defaults: registrationDictionary)
     }
 
-    public func value<V>(forKey key: StoreKey) -> V? {
+    open func value<V>(forKey key: StoreKey) -> V? {
         storage.value(forKey: key)
+    }
+
+    open func decodable<D: Decodable>(forKey key: StoreKey) -> D? {
+        storage.decodable(forKey: key)
     }
 
     open func set(_ string: String, forKey key: StoreKey) {
         storage.set(string, forKey: key)
     }
 
-    public func set<V>(_ value: V?, forKey key: StoreKey) {
+    open func set<V>(_ value: V?, forKey key: StoreKey) {
         storage.set(value, forKey: key)
+    }
+
+    open func set(encodable: Encodable?, forKey key: StoreKey) {
+        storage.set(encodable: encodable, forKey: key)
     }
 
     open override func string(forKey defaultName: StoreKey) -> String? {

@@ -41,15 +41,27 @@ open class DelegatedStorage: Storage {
     open func object(forKey key: StoreKey) throws -> Any? {
         guard let data: Data = try data(forKey: key),
             let object = try NSKeyedUnarchiver.unarchiveTopLevelObjectWithData(data) else {
-                return nil
+            return nil
         }
         return object
+    }
+
+    open func decodable<D: Decodable>(forKey key: StoreKey) -> D? {
+        do {
+            guard let data: Data = try data(forKey: key) else {
+                return nil
+            }
+            return try data.decode(D.self)
+        } catch {
+            errorClosure?(error)
+            return nil
+        }
     }
 
     open func string(forKey key: StoreKey) -> String? {
         guard let data: Data = try? data(forKey: key),
             let string = String(data) else {
-                return nil
+            return nil
         }
         return string
     }
@@ -69,7 +81,7 @@ open class DelegatedStorage: Storage {
     open func integer(forKey key: StoreKey) -> Int {
         guard let data: Data = try? data(forKey: key),
             let integer = Int(data) else {
-                return 0
+            return 0
         }
         return integer
     }
@@ -77,7 +89,7 @@ open class DelegatedStorage: Storage {
     open func float(forKey key: StoreKey) -> Float {
         guard let data: Data = try? data(forKey: key),
             let float = Float(data) else {
-                return 0
+            return 0
         }
         return float
     }
@@ -85,7 +97,7 @@ open class DelegatedStorage: Storage {
     open func double(forKey key: StoreKey) -> Double {
         guard let data: Data = try? data(forKey: key),
             let double = Double(data) else {
-                return 0
+            return 0
         }
         return double
     }
@@ -93,7 +105,7 @@ open class DelegatedStorage: Storage {
     open func bool(forKey key: StoreKey) -> Bool {
         guard let data: Data = try? data(forKey: key),
             let bool = Bool(data) else {
-                return false
+            return false
         }
         return bool
     }
@@ -145,12 +157,33 @@ open class DelegatedStorage: Storage {
 
     open func set<V>(_ value: V?, forKey key: StoreKey) {
         do {
-            guard let value = value else {
+            try set(object: value, forKey: key)
+        } catch {
+            guard let encodable = value as? Encodable else {
+                errorClosure?(error)
+                return
+            }
+            set(encodable: encodable, forKey: key)
+        }
+    }
+
+    open func set(object: Any?, forKey key: StoreKey) throws {
+        guard let object = object else {
+            try remove(forKey: key)
+            return
+        }
+        let data = try NSKeyedArchiver.archivedData(withRootObject: object,
+                                                    requiringSecureCoding: object is NSSecureCoding)
+        try set(data, forKey: key)
+    }
+
+    open func set(encodable: Encodable?, forKey key: StoreKey) {
+        do {
+            guard let encodable = encodable else {
                 try remove(forKey: key)
                 return
             }
-            let data = try NSKeyedArchiver.archivedData(withRootObject: value,
-                                                        requiringSecureCoding: value is NSSecureCoding)
+            let data = try encodable.encode()
             try set(data, forKey: key)
         } catch {
             errorClosure?(error)
@@ -181,6 +214,6 @@ open class DelegatedStorage: Storage {
     }
 
     private func hash(_ key: StoreKey) -> String {
-        return SHA512.hash(string: key)
+        SHA512.hash(string: key)
     }
 }

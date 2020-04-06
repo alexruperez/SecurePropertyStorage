@@ -16,12 +16,14 @@
 
 All keys are hashed using [SHA512](https://en.wikipedia.org/wiki/SHA-2) and all values are encrypted using [AES](https://en.wikipedia.org/wiki/Advanced_Encryption_Standard)-[GCM](https://en.wikipedia.org/wiki/Galois/Counter_Mode) to keep user information safe, auto*magic*ally. Symmetric key and nonce, are stored in Keychain in a totally secure way. 
 
+## 🐒 Basic usage
+
 ### @UserDefault
 
-This property wrapper will store your property in [UserDefaults](https://developer.apple.com/documentation/foundation/userdefaults) using `StoreKey` (any `String` but i recommend you a String typed enum).
+This property wrapper will store your property in [UserDefaults](https://developer.apple.com/documentation/foundation/userdefaults) using `StoreKey` (any `String` but i recommend you a String typed enum). Optionally, you can assign a default value to the property that will be secure stored at initialization.
 
 ```swift
-@UserDefault(<#StoreKey#>) var yourProperty: YourType?
+@UserDefault(<#StoreKey#>) var yourProperty: YourType? = yourDefaultValueIfNeeded
 ```
 
 [`UserDefaultsStorage`](Sources/UserDefault/UserDefaultsStorage.swift) is also available, a subclass of [`UserDefaults`](https://developer.apple.com/documentation/foundation/userdefaults) with all the security provided by this library.
@@ -31,7 +33,7 @@ This property wrapper will store your property in [UserDefaults](https://develop
 This property wrapper will store your property in [Keychain](https://developer.apple.com/documentation/security/keychain_services) using `StoreKey`.
 
 ```swift
-@Keychain(<#StoreKey#>) var yourProperty: YourType?
+@Keychain(<#StoreKey#>) var yourProperty: YourType? = yourDefaultValueIfNeeded
 ```
 
 As `UserDefaultsStorage`, [`KeychainStorage`](Sources/Keychain/KeychainStorage.swift) is also available.
@@ -41,7 +43,7 @@ As `UserDefaultsStorage`, [`KeychainStorage`](Sources/Keychain/KeychainStorage.s
 This property wrapper will store your property in a memory [singleton](https://en.wikipedia.org/wiki/Singleton_pattern),  every property with the same wrapper and key can access or modify the value from wherever it is.
 
 ```swift
-@Singleton(<#StoreKey#>) var yourProperty: YourType?
+@Singleton(<#StoreKey#>) var yourProperty: YourType? = yourDefaultValueIfNeeded
 ```
 
 As `KeychainStorage`, [`SingletonStorage`](Sources/Singleton/SingletonStorage.swift) is also available.
@@ -51,10 +53,37 @@ As `KeychainStorage`, [`SingletonStorage`](Sources/Singleton/SingletonStorage.sw
 This is a custom wrapper, you can define your own [`Storage`](Sources/Storage/Storage.swift) protocol implementation.
 
 ```swift
-@Store(<#Storage#>, <#StoreKey#>) var yourProperty: YourType?
+@Store(<#Storage#>, <#StoreKey#>) var yourProperty: YourType? = yourDefaultValueIfNeeded
 ```
 
 As `SingletonStorage`, [`DelegatedStorage`](Sources/Storage/DelegatedStorage.swift) is also available with all the magic of this library.
+
+## 🧙‍♂️ Codable usage
+
+If your property conforms [`Codable`](https://developer.apple.com/documentation/swift/codable) protocol, just add `Codable` keyword as prefix of your property wrapper.
+
+- **@CodableUserDefault**
+- **@CodableKeychain**
+- **@CodableSingleton**
+- **@CodableStore**
+
+## 🥡 Unwrapped usage
+
+To avoid continually unwrapping your property, just add `Unwrapped` keyword as prefix of your property wrapper, assign a default value (mandatory), and it will return stored value or default value, but your property will always be there for you.
+
+- **@UnwrappedUserDefault**
+- **@UnwrappedKeychain**
+- **@UnwrappedSingleton**
+- **@UnwrappedStore**
+
+## 🥡 + 🧙‍♂️ Combo usage
+
+You can also combine previous cases in case you need it, unwrapped first please.
+
+- **@UnwrappedCodableUserDefault**
+- **@UnwrappedCodableKeychain**
+- **@UnwrappedCodableSingleton**
+- **@UnwrappedCodableStore**
 
 ## 🛠 Compatibility
 
@@ -75,10 +104,10 @@ As `SingletonStorage`, [`DelegatedStorage`](Sources/Storage/DelegatedStorage.swi
 You have a series of products that you can choose:
 
 - **SecurePropertyStorage**: All property wrappers, by default.
-- **UserDefault**: @UserDefault property wrapper.
-- **Keychain**: @Keychain property wrapper.
-- **Singleton**: @Singleton property wrapper.
-- **Storage**: @Store property wrapper.
+- **UserDefault**: @*UserDefault property wrappers.
+- **Keychain**: @*Keychain property wrappers.
+- **Singleton**: @*Singleton property wrappers.
+- **Storage**: @*Store property wrappers.
 
 *For more information, see [the Swift Package Manager documentation](https://github.com/apple/swift-package-manager/tree/master/Documentation).*
 
@@ -90,9 +119,9 @@ github "alexruperez/SecurePropertyStorage"
 
 ## 🍻 Etc.
 
-* Featured in [Dave Verwer](https://twitter.com/daveverwer)'s iOS Dev Weekly - [Issue 450](https://iosdevweekly.com/issues/450?#ll98q5s), thanks Dave!
-* Contributions are very welcome.
-* Attribution is appreciated (let's spread the word!), but not mandatory.
+- Featured in [Dave Verwer](https://twitter.com/daveverwer)'s iOS Dev Weekly - [Issue 450](https://iosdevweekly.com/issues/450?#ll98q5s), thanks Dave!
+- Contributions are very welcome.
+- Attribution is appreciated (let's spread the word!), but not mandatory.
 
 ## 👨‍💻 Author
 
