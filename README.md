@@ -86,6 +86,34 @@ You can also combine previous cases in case you need it, unwrapped first please.
 - **@UnwrappedCodableSingleton**
 - **@UnwrappedCodableStore**
 
+## 👀 Examples
+
+> Talk is cheap. Show me the code.
+
+```swift
+    // Securely stored in UserDefaults.
+    @UserDefault("username") var username: String?
+
+    // Securely stored in Keychain.
+    @Keychain("password") var password: String?
+
+    // Securely stored in a Singleton storage.
+    @Singleton("sessionToken") var sessionToken: String?
+
+    // Securely stored in a Singleton storage.
+    // Always has a value, the stored or the default.
+    @UnwrappedSingleton("refreshToken") var refreshToken: String = "B0610306-A33F"
+
+    struct User: Codable {
+        var username: String?
+        var password: String?
+        var sessionToken: String?
+    }
+
+    // Codable model securely stored in UserDefaults.
+    @CodableUserDefault("user") var user: User?
+```
+
 ## 🛠 Compatibility
 
 - macOS 10.15+
