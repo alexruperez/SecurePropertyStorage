@@ -1,11 +1,19 @@
 import Foundation
 import CryptoKit
 
+/// Indicates that the conforming type is a contiguous collection of raw bytes
+/// whose underlying storage is directly accessible by withUnsafeBytes.
 public protocol StorageData: ContiguousBytes, CustomStringConvertible {
-    init<B: ContiguousBytes>(bytes: B) throws
+    /**
+    Create a `StorageData`.
+
+    - Parameter bytes: `ContiguousBytes` of `StorageData`.
+    */
+    init<B: StorageData>(bytes: B) throws
 }
 
 public extension ContiguousBytes {
+    /// `Data` representation.
     var data: Data {
         withUnsafeBytes {
             let pointer = $0.baseAddress?.assumingMemoryBound(to: UInt8.self)
@@ -18,6 +26,7 @@ public extension ContiguousBytes {
     }
 }
 
+/// `StorageData` extension to conform `CustomStringConvertible`.
 public extension StorageData {
     var description: String {
         data.withUnsafeBytes { "Data representation contains \($0.count) bytes." }
@@ -37,7 +46,12 @@ extension Encodable {
 }
 
 extension Data: StorageData {
-    public init<B: ContiguousBytes>(bytes: B) throws {
+    /**
+    Create a `Data`.
+
+    - Parameter bytes: `StorageData` of `Data`.
+    */
+    public init<B: StorageData>(bytes: B) {
         self = bytes.data
     }
 
