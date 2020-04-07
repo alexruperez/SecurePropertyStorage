@@ -11,7 +11,7 @@
 [![Build Status](https://app.bitrise.io/app/4fed1af31836d3bc/status.svg?token=bYImtoKj0hxqCxnORhdgyg&branch=master)](https://app.bitrise.io/app/4fed1af31836d3bc)
 [![CodeBeat](https://codebeat.co/badges/09a12f07-f53c-4149-b033-df576ec3733b)](https://codebeat.co/projects/github-com-alexruperez-propertywrappers-master)
 [![Coverage](https://img.shields.io/codecov/c/github/alexruperez/SecurePropertyStorage)](https://codecov.io/gh/alexruperez/SecurePropertyStorage)
-[![Documentation](Docs/badge.svg)](https://alexruperez.github.io/SecurePropertyStorage)
+[![Documentation](docs/badge.svg)](https://alexruperez.github.io/SecurePropertyStorage)
 
 ## 🌟 Features
 

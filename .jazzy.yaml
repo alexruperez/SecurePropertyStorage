@@ -5,7 +5,6 @@ copyright: Copyright (c) 2020 Alex Rupérez
 github_file_prefix: https://github.com/alexruperez/SecurePropertyStorage/blob/master
 github_url: https://github.com/alexruperez/SecurePropertyStorage
 module: SecurePropertyStorage
-output: Docs
 root_url: https://alexruperez.github.io/SecurePropertyStorage
 sourcekitten_sourcefile:
   - Docs/Storage.json
