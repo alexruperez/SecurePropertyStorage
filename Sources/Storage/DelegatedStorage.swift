@@ -1,15 +1,27 @@
 import CryptoKit
 import Foundation
 
+/// Error closure to handle `StorageDelegate` errors.
 public typealias StorageErrorClosure = (Error) -> Void
 
+/// Class with the main `CryptoKit` logic.
 open class DelegatedStorage: Storage {
     private let delegate: StorageDelegate
     private let symmetricKey: SymmetricKey
     private let nonce: AES.GCM.Nonce?
     private let authenticationTag: Data?
+    /// Error closure to handle `StorageDelegate` errors.
     open var errorClosure: StorageErrorClosure?
 
+    /**
+    Create a `DelegatedStorage`.
+
+    - Parameter delegate: `StorageDelegate` that stores `StorageData`.
+    - Parameter symmetricKey: A cryptographic key used to seal the message.
+    - Parameter nonce: A nonce used during the sealing process.
+    - Parameter authenticationTag: Custom additional `Data` to be authenticated.
+    - Parameter errorClosure: Closure to handle `StorageDelegate` errors.
+    */
     public init(_ delegate: StorageDelegate,
                 symmetricKey: SymmetricKey,
                 nonce: AES.GCM.Nonce? = nil,
@@ -24,7 +36,7 @@ open class DelegatedStorage: Storage {
 
     open func register(defaults registrationDictionary: [StoreKey: Any]) {
         registrationDictionary.forEach { key, value in
-            if let _: Data = try? data(forKey: key) { return }
+            if let _: Data = data(forKey: key) { return }
             set(value, forKey: key)
         }
     }
@@ -38,18 +50,35 @@ open class DelegatedStorage: Storage {
         }
     }
 
+    /**
+    Returns the `NSCoding` conforming object associated with the specified `StoreKey`.
+
+    - Parameter key: A `StoreKey` in storage.
+    */
     open func object(forKey key: StoreKey) throws -> Any? {
-        guard let data: Data = try data(forKey: key),
+        guard let data: Data = data(forKey: key),
             let object = try NSKeyedUnarchiver.unarchiveTopLevelObjectWithData(data) else {
-                return nil
+            return nil
         }
         return object
     }
 
-    open func string(forKey key: StoreKey) -> String? {
-        guard let data: Data = try? data(forKey: key),
-            let string = String(data) else {
+    open func decodable<D: Decodable>(forKey key: StoreKey) -> D? {
+        do {
+            guard let data: Data = data(forKey: key) else {
                 return nil
+            }
+            return try data.decode(D.self)
+        } catch {
+            errorClosure?(error)
+            return nil
+        }
+    }
+
+    open func string(forKey key: StoreKey) -> String? {
+        guard let data: Data = data(forKey: key),
+            let string = String(data) else {
+            return nil
         }
         return string
     }
@@ -67,56 +96,61 @@ open class DelegatedStorage: Storage {
     }
 
     open func integer(forKey key: StoreKey) -> Int {
-        guard let data: Data = try? data(forKey: key),
+        guard let data: Data = data(forKey: key),
             let integer = Int(data) else {
-                return 0
+            return 0
         }
         return integer
     }
 
     open func float(forKey key: StoreKey) -> Float {
-        guard let data: Data = try? data(forKey: key),
+        guard let data: Data = data(forKey: key),
             let float = Float(data) else {
-                return 0
+            return 0
         }
         return float
     }
 
     open func double(forKey key: StoreKey) -> Double {
-        guard let data: Data = try? data(forKey: key),
+        guard let data: Data = data(forKey: key),
             let double = Double(data) else {
-                return 0
+            return 0
         }
         return double
     }
 
     open func bool(forKey key: StoreKey) -> Bool {
-        guard let data: Data = try? data(forKey: key),
+        guard let data: Data = data(forKey: key),
             let bool = Bool(data) else {
-                return false
+            return false
         }
         return bool
     }
 
     open func url(forKey key: StoreKey) -> URL? {
-        guard let data: Data = try? data(forKey: key) else {
+        guard let data: Data = data(forKey: key) else {
             return nil
         }
         return URL(dataRepresentation: data, relativeTo: nil)
     }
 
-    open func data<D: StorageData>(forKey key: StoreKey) throws -> D? {
-        guard let data: Data = try delegate.data(forKey: hash(key)) else {
+    open func data<D: StorageData>(forKey key: StoreKey) -> D? {
+        do {
+            guard let data: Data = try delegate.data(forKey: hash(key)) else {
+                return nil
+            }
+            let sealedBox = try AES.GCM.SealedBox(combined: data)
+            if let authenticationTag = authenticationTag {
+                return try AES.GCM.open(sealedBox,
+                                        using: symmetricKey,
+                                        authenticating: authenticationTag) as? D
+            }
+            return try AES.GCM.open(sealedBox,
+                                    using: symmetricKey) as? D
+        } catch {
+            errorClosure?(error)
             return nil
         }
-        let sealedBox = try AES.GCM.SealedBox(combined: data)
-        if let authenticationTag = authenticationTag {
-            return try AES.GCM.open(sealedBox,
-                                    using: symmetricKey,
-                                    authenticating: authenticationTag) as? D
-        }
-        return try AES.GCM.open(sealedBox,
-                                using: symmetricKey) as? D
     }
 
     open func set(_ value: Int, forKey key: StoreKey) {
@@ -145,12 +179,39 @@ open class DelegatedStorage: Storage {
 
     open func set<V>(_ value: V?, forKey key: StoreKey) {
         do {
-            guard let value = value else {
-                try remove(forKey: key)
+            try set(object: value, forKey: key)
+        } catch {
+            guard let encodable = value as? Encodable else {
+                errorClosure?(error)
                 return
             }
-            let data = try NSKeyedArchiver.archivedData(withRootObject: value,
-                                                        requiringSecureCoding: value is NSSecureCoding)
+            set(encodable: encodable, forKey: key)
+        }
+    }
+
+    /**
+    Sets the value of the specified `StoreKey` to the specified `NSCoding` conforming object.
+
+    - Parameter value: `NSCoding` conforming object.
+    - Parameter key: The `StoreKey` with which to associate the value.
+    */
+    open func set(object: Any?, forKey key: StoreKey) throws {
+        guard let object = object else {
+            remove(forKey: key)
+            return
+        }
+        let data = try NSKeyedArchiver.archivedData(withRootObject: object,
+                                                    requiringSecureCoding: object is NSSecureCoding)
+        try set(data, forKey: key)
+    }
+
+    open func set(encodable: Encodable?, forKey key: StoreKey) {
+        guard let encodable = encodable else {
+            remove(forKey: key)
+            return
+        }
+        do {
+            let data = try encodable.encode()
             try set(data, forKey: key)
         } catch {
             errorClosure?(error)
@@ -159,7 +220,7 @@ open class DelegatedStorage: Storage {
 
     open func set<D: StorageData>(_ data: D?, forKey key: StoreKey) throws {
         guard let bytes = data else {
-            try remove(forKey: key)
+            remove(forKey: key)
             return
         }
         if let authenticationTag = authenticationTag {
@@ -176,11 +237,15 @@ open class DelegatedStorage: Storage {
         }
     }
 
-    open func remove(forKey key: StoreKey) throws {
-        try delegate.remove(forKey: hash(key))
+    open func remove(forKey key: StoreKey) {
+        do {
+            try delegate.remove(forKey: hash(key))
+        } catch {
+            errorClosure?(error)
+        }
     }
 
     private func hash(_ key: StoreKey) -> String {
-        return SHA512.hash(string: key)
+        SHA512.hash(string: key)
     }
 }

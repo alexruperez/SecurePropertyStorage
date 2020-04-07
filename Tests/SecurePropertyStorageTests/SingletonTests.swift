@@ -2,12 +2,24 @@ import XCTest
 import Singleton
 import Storage
 
+enum SingletonCodable: String, Codable {
+    case test
+}
+
 let singletonTagStorage: DelegatedStorage = SingletonStorage(authenticationTag: Data())
 
 final class SingletonTests: XCTestCase {
     @Store(singletonTagStorage, "singletonTagStore") var singletonTagStore: String?
     @Store(SingletonStorage.standard, "singletonStore") var singletonStore: String?
     @Singleton("singleton") var singleton: String?
+    @Store(singletonTagStorage, "singletonTagDefault") var singletonTagDefault = "tagDefault"
+    @Singleton("singletonDefault") var singletonDefault = "default"
+    @CodableStore(singletonTagStorage, "singletonTagCodable") var singletonTagCodable = SingletonCodable.test
+    @CodableSingleton("singletonCodable") var singletonCodable = SingletonCodable.test
+    @UnwrappedStore(singletonTagStorage, "unwrappedSingletonTagDefault") var unwrappedSingletonTagDefault = "tagDefault"
+    @UnwrappedSingleton("unwrappedSingletonDefault") var unwrappedSingletonDefault = "default"
+    @UnwrappedCodableStore(singletonTagStorage, "unwrappedSingletonTagCodable") var unwrappedSingletonTagCodable = SingletonCodable.test
+    @UnwrappedCodableSingleton("unwrappedSingletonCodable") var unwrappedSingletonCodable = SingletonCodable.test
 
     func testSingleton() {
         singletonStore = nil
@@ -30,9 +42,21 @@ final class SingletonTests: XCTestCase {
         singleton = nil
         XCTAssertNil(singleton)
         XCTAssertNotEqual(singleton, singletonTagStore)
+        XCTAssertEqual(singletonTagDefault, "tagDefault")
+        XCTAssertEqual(singletonDefault, "default")
+        singletonDefault = nil
+        XCTAssertNil(singletonDefault)
+        XCTAssertEqual(singletonTagCodable, .test)
+        XCTAssertEqual(singletonCodable, .test)
+        singletonCodable = nil
+        XCTAssertNil(singletonCodable)
+        XCTAssertEqual(unwrappedSingletonTagDefault, "tagDefault")
+        XCTAssertEqual(unwrappedSingletonDefault, "default")
+        XCTAssertEqual(unwrappedSingletonTagCodable, .test)
+        XCTAssertEqual(unwrappedSingletonCodable, .test)
     }
 
     static var allTests = [
-        ("testSingleton", testSingleton)
+        ("testSingleton", testSingleton),
     ]
 }

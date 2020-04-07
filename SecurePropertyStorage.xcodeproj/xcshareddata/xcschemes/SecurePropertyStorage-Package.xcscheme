@@ -14,9 +14,9 @@
             buildForAnalyzing = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "SecurePropertyStorage::Keychain"
-               BuildableName = "Keychain.framework"
-               BlueprintName = "Keychain"
+               BlueprintIdentifier = "SecurePropertyStorage::UserDefault"
+               BuildableName = "UserDefault.framework"
+               BlueprintName = "UserDefault"
                ReferencedContainer = "container:SecurePropertyStorage.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
@@ -28,9 +28,9 @@
             buildForAnalyzing = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "SecurePropertyStorage::UserDefault"
-               BuildableName = "UserDefault.framework"
-               BlueprintName = "UserDefault"
+               BlueprintIdentifier = "SecurePropertyStorage::Keychain"
+               BuildableName = "Keychain.framework"
+               BlueprintName = "Keychain"
                ReferencedContainer = "container:SecurePropertyStorage.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>

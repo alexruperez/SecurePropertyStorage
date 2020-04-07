@@ -23,3 +23,6 @@ Package.resolved
 
 # Carthage
 Carthage/Build/
+
+#Jazzy
+build/

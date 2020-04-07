@@ -3,10 +3,18 @@ import Foundation
 import Storage
 
 extension SymmetricKey: StorageData {
-    public init<B: ContiguousBytes>(bytes: B) throws {
+    /**
+    Create a `SymmetricKey`.
+
+    - Parameter bytes: `StorageData` of `SymmetricKey`.
+
+    - Throws: `CipherError` errors.
+    */
+    public init<B: StorageData>(bytes: B) throws {
         self.init(data: bytes)
     }
 
+    /// Generate a `SymmetricKey` and store it on the keychain.
     public static func generate() -> SymmetricKey {
         let account = "SecurePropertyStorage.SymmetricKey"
         let keychainStorage = KeychainStorageDelegate()
@@ -30,10 +38,18 @@ extension SymmetricKey: StorageData {
 }
 
 extension AES.GCM.Nonce: StorageData {
-    public init<B: ContiguousBytes>(bytes: B) throws {
+    /**
+    Create a `AES.GCM.Nonce`.
+
+    - Parameter bytes: `StorageData` of `AES.GCM.Nonce`.
+
+    - Throws: `CipherError` errors.
+    */
+    public init<B: StorageData>(bytes: B) throws {
         try self.init(data: bytes.data)
     }
 
+    /// Generate a `AES.GCM.Nonce` and store it on the keychain.
     public static func generate() -> AES.GCM.Nonce {
         let account = "SecurePropertyStorage.Nonce"
         let keychainStorage = KeychainStorageDelegate()
