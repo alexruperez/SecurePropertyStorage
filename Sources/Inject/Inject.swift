@@ -74,7 +74,7 @@ public class Inject<Dependency>: InjectPropertyWrapper<Dependency> {
     }
 
     /// Property wrapper stored dependency.
-    open var wrappedValue: Dependency? { try? resolve() }
+    public var wrappedValue: Dependency? { try? resolve() }
 }
 
 /// `@UnwrappedInject` property wrapper.
@@ -86,7 +86,7 @@ public class UnwrappedInject<Dependency>: InjectPropertyWrapper<Dependency> {
     }
 
     /// Property wrapper stored dependency.
-    open var wrappedValue: Dependency {
+    public var wrappedValue: Dependency {
         do {
             return try resolve()
         } catch {
@@ -97,7 +97,7 @@ public class UnwrappedInject<Dependency>: InjectPropertyWrapper<Dependency> {
 
 /// `@Register` property wrapper.
 @propertyWrapper
-open class Register<Dependency>: InjectPropertyWrapper<Dependency> {
+public class Register<Dependency>: InjectPropertyWrapper<Dependency> {
     /**
      Create a `Register` property wrapper.
 
@@ -109,7 +109,7 @@ open class Register<Dependency>: InjectPropertyWrapper<Dependency> {
     }
 
     /// Property wrapper stored dependency.
-    open var wrappedValue: Dependency {
+    public var wrappedValue: Dependency {
         get {
             do {
                 return try resolve()
