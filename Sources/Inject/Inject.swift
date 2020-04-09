@@ -67,7 +67,7 @@ open class InjectPropertyWrapper<Dependency>: StorePropertyWrapper {
 
 /// `@Inject` property wrapper.
 @propertyWrapper
-open class Inject<Dependency>: InjectPropertyWrapper<Dependency> {
+public class Inject<Dependency>: InjectPropertyWrapper<Dependency> {
     /// Create a `Inject` property wrapper.
     public convenience init() {
         self.init([])
@@ -79,7 +79,7 @@ open class Inject<Dependency>: InjectPropertyWrapper<Dependency> {
 
 /// `@UnwrappedInject` property wrapper.
 @propertyWrapper
-open class UnwrappedInject<Dependency>: InjectPropertyWrapper<Dependency> {
+public class UnwrappedInject<Dependency>: InjectPropertyWrapper<Dependency> {
     /// Create a `UnwrappedInject` property wrapper.
     public convenience init() {
         self.init([])
