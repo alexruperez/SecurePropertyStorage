@@ -10,11 +10,11 @@ open class SingletonStorage: DelegatedStorage {
     private static let shared = SingletonStorage()
 
     /**
-    Create a `SingletonStorage`.
+     Create a `SingletonStorage`.
 
-    - Parameter delegate: `StorageDelegate`, defaults `SingletonStorageDelegate`.
-    - Parameter authenticationTag: Custom additional `Data` to be authenticated.
-    */
+     - Parameter delegate: `StorageDelegate`, defaults `SingletonStorageDelegate`.
+     - Parameter authenticationTag: Custom additional `Data` to be authenticated.
+     */
     public convenience init(_ delegate: StorageDelegate = SingletonStorageDelegate(),
                             authenticationTag: Data? = nil) {
         self.init(delegate,
@@ -32,26 +32,26 @@ open class SingletonStorageDelegate: StorageDelegate {
     public init() {}
 
     /**
-    Get `StorageData` for `StoreKey` from the keychain.
+     Get `StorageData` for `StoreKey` from the keychain.
 
-    - Parameter key: `StoreKey` to store the `StorageData`.
+     - Parameter key: `StoreKey` to store the `StorageData`.
 
-    - Returns: `StorageData` for `StoreKey`.
-    */
+     - Returns: `StorageData` for `StoreKey`.
+     */
     open func data<D: StorageData>(forKey key: StoreKey) -> D? { storage[key] as? D }
 
     /**
-    Set `StorageData` for `StoreKey` in the keychain.
+     Set `StorageData` for `StoreKey` in the keychain.
 
-    - Parameter data: `StorageData` to store.
-    - Parameter key: `StoreKey` to store the `StorageData`.
-    */
+     - Parameter data: `StorageData` to store.
+     - Parameter key: `StoreKey` to store the `StorageData`.
+     */
     open func set<D: StorageData>(_ data: D?, forKey key: StoreKey) { storage[key] = data }
 
     /**
-    Remove `StorageData` for `StoreKey` from the keychain.
+     Remove `StorageData` for `StoreKey` from the keychain.
 
-    - Parameter key: `StoreKey` to remove.
-    */
+     - Parameter key: `StoreKey` to remove.
+     */
     open func remove(forKey key: StoreKey) { storage.removeValue(forKey: key) }
 }

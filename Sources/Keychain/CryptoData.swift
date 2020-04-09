@@ -4,12 +4,12 @@ import Storage
 
 extension SymmetricKey: StorageData {
     /**
-    Create a `SymmetricKey`.
+     Create a `SymmetricKey`.
 
-    - Parameter bytes: `StorageData` of `SymmetricKey`.
+     - Parameter bytes: `StorageData` of `SymmetricKey`.
 
-    - Throws: `CipherError` errors.
-    */
+     - Throws: `CipherError` errors.
+     */
     public init<B: StorageData>(bytes: B) throws {
         self.init(data: bytes)
     }
@@ -39,12 +39,12 @@ extension SymmetricKey: StorageData {
 
 extension AES.GCM.Nonce: StorageData {
     /**
-    Create a `AES.GCM.Nonce`.
+     Create a `AES.GCM.Nonce`.
 
-    - Parameter bytes: `StorageData` of `AES.GCM.Nonce`.
+     - Parameter bytes: `StorageData` of `AES.GCM.Nonce`.
 
-    - Throws: `CipherError` errors.
-    */
+     - Throws: `CipherError` errors.
+     */
     public init<B: StorageData>(bytes: B) throws {
         try self.init(data: bytes.data)
     }

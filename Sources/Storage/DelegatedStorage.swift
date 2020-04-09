@@ -14,14 +14,14 @@ open class DelegatedStorage: Storage {
     open var errorClosure: StorageErrorClosure?
 
     /**
-    Create a `DelegatedStorage`.
+     Create a `DelegatedStorage`.
 
-    - Parameter delegate: `StorageDelegate` that stores `StorageData`.
-    - Parameter symmetricKey: A cryptographic key used to seal the message.
-    - Parameter nonce: A nonce used during the sealing process.
-    - Parameter authenticationTag: Custom additional `Data` to be authenticated.
-    - Parameter errorClosure: Closure to handle `StorageDelegate` errors.
-    */
+     - Parameter delegate: `StorageDelegate` that stores `StorageData`.
+     - Parameter symmetricKey: A cryptographic key used to seal the message.
+     - Parameter nonce: A nonce used during the sealing process.
+     - Parameter authenticationTag: Custom additional `Data` to be authenticated.
+     - Parameter errorClosure: Closure to handle `StorageDelegate` errors.
+     */
     public init(_ delegate: StorageDelegate? = nil,
                 symmetricKey: SymmetricKey? = nil,
                 nonce: AES.GCM.Nonce? = nil,
@@ -51,10 +51,10 @@ open class DelegatedStorage: Storage {
     }
 
     /**
-    Returns the `NSCoding` conforming object associated with the specified `StoreKey`.
+     Returns the `NSCoding` conforming object associated with the specified `StoreKey`.
 
-    - Parameter key: A `StoreKey` in storage.
-    */
+     - Parameter key: A `StoreKey` in storage.
+     */
     open func object(forKey key: StoreKey) throws -> Any? {
         guard let data: Data = data(forKey: key),
             let object = try NSKeyedUnarchiver.unarchiveTopLevelObjectWithData(data) else {
@@ -191,11 +191,11 @@ open class DelegatedStorage: Storage {
     }
 
     /**
-    Sets the value of the specified `StoreKey` to the specified `NSCoding` conforming object.
+     Sets the value of the specified `StoreKey` to the specified `NSCoding` conforming object.
 
-    - Parameter value: `NSCoding` conforming object.
-    - Parameter key: The `StoreKey` with which to associate the value.
-    */
+     - Parameter value: `NSCoding` conforming object.
+     - Parameter key: The `StoreKey` with which to associate the value.
+     */
     open func set(object: Any?, forKey key: StoreKey) throws {
         guard let object = object else {
             remove(forKey: key)

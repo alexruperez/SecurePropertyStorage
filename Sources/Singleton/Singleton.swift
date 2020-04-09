@@ -4,20 +4,20 @@ import Storage
 @propertyWrapper
 open class Singleton<Value>: StorePropertyWrapper {
     /**
-    Create a `Singleton` property wrapper.
+     Create a `Singleton` property wrapper.
 
-    - Parameter key: `StoreKey` to store the value.
-    */
+     - Parameter key: `StoreKey` to store the value.
+     */
     public convenience init(_ key: StoreKey) {
         self.init(SingletonStorage.standard, key)
     }
 
     /**
-    Create a `Singleton` property wrapper.
+     Create a `Singleton` property wrapper.
 
-    - Parameter wrappedValue: Default value.
-    - Parameter key: `StoreKey` to store the value.
-    */
+     - Parameter wrappedValue: Default value.
+     - Parameter key: `StoreKey` to store the value.
+     */
     public convenience init(wrappedValue: Value?, _ key: StoreKey) {
         self.init(key)
         self.wrappedValue = wrappedValue
@@ -41,11 +41,11 @@ open class UnwrappedSingleton<Value>: StorePropertyWrapperProtocol {
     open var defaultValue: Value
 
     /**
-    Create a `UnwrappedSingleton` property wrapper.
+     Create a `UnwrappedSingleton` property wrapper.
 
-    - Parameter wrappedValue: Default value.
-    - Parameter key: `StoreKey` to store the value.
-    */
+     - Parameter wrappedValue: Default value.
+     - Parameter key: `StoreKey` to store the value.
+     */
     public required init(wrappedValue: Value, _ key: StoreKey) {
         storage = SingletonStorage.standard
         self.key = key
@@ -64,20 +64,20 @@ open class UnwrappedSingleton<Value>: StorePropertyWrapperProtocol {
 @propertyWrapper
 open class CodableSingleton<Value: Codable>: StorePropertyWrapper {
     /**
-    Create a `CodableSingleton` property wrapper.
+     Create a `CodableSingleton` property wrapper.
 
-    - Parameter key: `StoreKey` to store the value.
-    */
+     - Parameter key: `StoreKey` to store the value.
+     */
     public convenience init(_ key: StoreKey) {
         self.init(SingletonStorage.standard, key)
     }
 
     /**
-    Create a `CodableSingleton` property wrapper.
+     Create a `CodableSingleton` property wrapper.
 
-    - Parameter wrappedValue: Default value.
-    - Parameter key: `StoreKey` to store the value.
-    */
+     - Parameter wrappedValue: Default value.
+     - Parameter key: `StoreKey` to store the value.
+     */
     public convenience init(wrappedValue: Value?, _ key: StoreKey) {
         self.init(key)
         self.wrappedValue = wrappedValue
@@ -101,11 +101,11 @@ open class UnwrappedCodableSingleton<Value: Codable>: StorePropertyWrapperProtoc
     open var defaultValue: Value
 
     /**
-    Create a `UnwrappedCodableSingleton` property wrapper.
+     Create a `UnwrappedCodableSingleton` property wrapper.
 
-    - Parameter wrappedValue: Default value.
-    - Parameter key: `StoreKey` to store the value.
-    */
+     - Parameter wrappedValue: Default value.
+     - Parameter key: `StoreKey` to store the value.
+     */
     public required init(wrappedValue: Value, _ key: StoreKey) {
         storage = SingletonStorage.standard
         self.key = key

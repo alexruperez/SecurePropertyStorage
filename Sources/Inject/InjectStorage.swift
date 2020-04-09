@@ -8,10 +8,10 @@ open class InjectStorage: DelegatedStorage {
     var storage = [StoreKey: [Any]]()
 
     /**
-    Returns the `[Any]` of dependencies associated with the specified `StoreKey`.
+     Returns the `[Any]` of dependencies associated with the specified `StoreKey`.
 
-    - Parameter key: A `StoreKey` in storage.
-    */
+     - Parameter key: A `StoreKey` in storage.
+     */
     open override func array(forKey key: StoreKey) -> [Any]? { storage[hash(key)] }
 
     open override func set(object: Any?, forKey key: StoreKey) {

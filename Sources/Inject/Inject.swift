@@ -10,38 +10,38 @@ open class InjectPropertyWrapper<Dependency>: StorePropertyWrapper {
     open var qualifiers: [Qualifier]?
 
     /**
-    Create a inject property wrapper.
+     Create a inject property wrapper.
 
-    - Parameter qualifier: Any `@objc protocol` to be used as qualifier of your dependencies.
-    */
+     - Parameter qualifier: Any `@objc protocol` to be used as qualifier of your dependencies.
+     */
     public convenience init(_ qualifier: Qualifier) {
         self.init([qualifier])
     }
 
     /**
-    Create a inject property wrapper.
+     Create a inject property wrapper.
 
-    - Parameter qualifiers: All `@objc protocol`s to be used as qualifiers of your dependencies.
-    */
+     - Parameter qualifiers: All `@objc protocol`s to be used as qualifiers of your dependencies.
+     */
     public convenience init(_ qualifiers: [Qualifier]) {
         self.init(InjectStorage.standard, String(describing: Dependency.self))
         self.qualifiers = qualifiers
     }
 
     /**
-    Register a dependency.
+     Register a dependency.
 
-    - Parameter dependency: Your dependency to register.
-    */
+     - Parameter dependency: Your dependency to register.
+     */
     open func register(_ dependency: Dependency?) {
         storage.set(dependency, forKey: key)
     }
 
     /**
-    Resolve a dependency.
+     Resolve a dependency.
 
-    - Returns: Your dependency resolved.
-    */
+     - Returns: Your dependency resolved.
+     */
     open func resolve() throws -> Dependency {
         guard let dependencies: [Any] = storage.array(forKey: key) else {
             throw InjectError.notFound(Dependency.self)
@@ -99,10 +99,10 @@ open class UnwrappedInject<Dependency>: InjectPropertyWrapper<Dependency> {
 @propertyWrapper
 open class Register<Dependency>: InjectPropertyWrapper<Dependency> {
     /**
-    Create a `Register` property wrapper.
+     Create a `Register` property wrapper.
 
-    - Parameter wrappedValue: Registered dependency.
-    */
+     - Parameter wrappedValue: Registered dependency.
+     */
     public convenience init(wrappedValue: Dependency) {
         self.init([])
         self.wrappedValue = wrappedValue
