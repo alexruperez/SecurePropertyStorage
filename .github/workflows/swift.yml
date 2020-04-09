@@ -17,3 +17,8 @@ jobs:
       run: swift build -v
     - name: Run tests
       run: swift test -v
+    - name: Codecov
+      uses: codecov/codecov-action@v1
+      with:
+        flags: unittests
+        fail_ci_if_error: true

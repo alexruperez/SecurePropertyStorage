@@ -2,6 +2,13 @@
 
 ## Next Version
 
+## 0.3.0
+
+#### Added
+- Added `Inject`, `UnwrappedInject` and `Register` property wrappers for dependency injection with qualifiers. [#4](https://github.com/alexruperez/SecurePropertyStorage/pull/4)
+
+[Commits](https://github.com/alexruperez/SecurePropertyStorage/compare/0.2.0...0.3.0)
+
 ## 0.2.0
 
 #### Added

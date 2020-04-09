@@ -1,4 +1,4 @@
-// swift-tools-version:5.1
+// swift-tools-version:5.2
 
 import PackageDescription
 
@@ -13,7 +13,7 @@ let package = Package(
     products: [
         .library(
             name: "SecurePropertyStorage",
-            targets: ["Storage", "UserDefault", "Singleton", "Keychain"]
+            targets: ["Storage", "UserDefault", "Singleton", "Keychain", "Inject"]
         ),
         .library(
             name: "Storage",
@@ -32,9 +32,13 @@ let package = Package(
             targets: ["Storage", "Keychain"]
         ),
         .library(
+            name: "Inject",
+            targets: ["Storage", "Inject"]
+        ),
+        .library(
             name: "SecurePropertyStorageDynamic",
             type: .dynamic,
-            targets: ["Storage", "UserDefault", "Singleton", "Keychain"]
+            targets: ["Storage", "UserDefault", "Singleton", "Keychain", "Inject"]
         ),
         .library(
             name: "StorageDynamic",
@@ -56,6 +60,11 @@ let package = Package(
             type: .dynamic,
             targets: ["Storage", "Keychain"]
         ),
+        .library(
+            name: "InjectDynamic",
+            type: .dynamic,
+            targets: ["Storage", "Inject"]
+        ),
     ],
     targets: [
         .target(
@@ -72,9 +81,13 @@ let package = Package(
             name: "Keychain",
             dependencies: ["Storage"]
         ),
+        .target(
+            name: "Inject",
+            dependencies: ["Storage"]
+        ),
         .testTarget(
             name: "SecurePropertyStorageTests",
-            dependencies: ["Storage", "UserDefault", "Singleton", "Keychain"]
+            dependencies: ["Storage", "UserDefault", "Singleton", "Keychain", "Inject"]
         ),
     ]
 )

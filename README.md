@@ -59,6 +59,8 @@ This is a custom wrapper, you can define your own [`Storage`](Sources/Storage/St
 
 As `SingletonStorage`, [`DelegatedStorage`](Sources/Storage/DelegatedStorage.swift) is also available with all the magic of this library.
 
+### @Inject
+
 ## 🧙‍♂️ Codable usage
 
 If your property conforms [`Codable`](https://developer.apple.com/documentation/swift/codable) protocol, just add `Codable` keyword as prefix of your property wrapper.
@@ -127,7 +129,7 @@ You can also combine previous cases in case you need it, unwrapped first please.
 #### You can use the [Swift Package Manager](https://github.com/apple/swift-package-manager) by declaring SecurePropertyStorage as a dependency in your `Package.swift` file:
 
 ```swift
-.package(url: "https://github.com/alexruperez/SecurePropertyStorage", from: "0.1.0")
+.package(url: "https://github.com/alexruperez/SecurePropertyStorage", from: "0.3.0")
 ```
 
 You have a series of products that you can choose:
@@ -137,6 +139,7 @@ You have a series of products that you can choose:
 - **Keychain**: @*Keychain property wrappers.
 - **Singleton**: @*Singleton property wrappers.
 - **Storage**: @*Store property wrappers.
+- **Inject**: @*Inject property wrappers.
 
 *For more information, see [the Swift Package Manager documentation](https://github.com/apple/swift-package-manager/tree/master/Documentation).*
 

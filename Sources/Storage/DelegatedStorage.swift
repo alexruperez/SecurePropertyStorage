@@ -6,8 +6,8 @@ public typealias StorageErrorClosure = (Error) -> Void
 
 /// Class with the main `CryptoKit` logic.
 open class DelegatedStorage: Storage {
-    private let delegate: StorageDelegate
-    private let symmetricKey: SymmetricKey
+    private let delegate: StorageDelegate?
+    private let symmetricKey: SymmetricKey?
     private let nonce: AES.GCM.Nonce?
     private let authenticationTag: Data?
     /// Error closure to handle `StorageDelegate` errors.
@@ -22,8 +22,8 @@ open class DelegatedStorage: Storage {
     - Parameter authenticationTag: Custom additional `Data` to be authenticated.
     - Parameter errorClosure: Closure to handle `StorageDelegate` errors.
     */
-    public init(_ delegate: StorageDelegate,
-                symmetricKey: SymmetricKey,
+    public init(_ delegate: StorageDelegate? = nil,
+                symmetricKey: SymmetricKey? = nil,
                 nonce: AES.GCM.Nonce? = nil,
                 authenticationTag: Data? = nil,
                 errorClosure: StorageErrorClosure? = nil) {
@@ -136,7 +136,8 @@ open class DelegatedStorage: Storage {
 
     open func data<D: StorageData>(forKey key: StoreKey) -> D? {
         do {
-            guard let data: Data = try delegate.data(forKey: hash(key)) else {
+            guard let data: Data = try delegate?.data(forKey: hash(key)),
+                let symmetricKey = symmetricKey else {
                 return nil
             }
             let sealedBox = try AES.GCM.SealedBox(combined: data)
@@ -219,7 +220,8 @@ open class DelegatedStorage: Storage {
     }
 
     open func set<D: StorageData>(_ data: D?, forKey key: StoreKey) throws {
-        guard let bytes = data else {
+        guard let bytes = data,
+            let symmetricKey = symmetricKey else {
             remove(forKey: key)
             return
         }
@@ -228,24 +230,25 @@ open class DelegatedStorage: Storage {
                                              using: symmetricKey,
                                              nonce: nonce,
                                              authenticating: authenticationTag)
-            try delegate.set(sealedBox.combined, forKey: hash(key))
+            try delegate?.set(sealedBox.combined, forKey: hash(key))
         } else {
             let sealedBox = try AES.GCM.seal(bytes.data,
                                              using: symmetricKey,
                                              nonce: nonce)
-            try delegate.set(sealedBox.combined, forKey: hash(key))
+            try delegate?.set(sealedBox.combined, forKey: hash(key))
         }
     }
 
     open func remove(forKey key: StoreKey) {
         do {
-            try delegate.remove(forKey: hash(key))
+            try delegate?.remove(forKey: hash(key))
         } catch {
             errorClosure?(error)
         }
     }
 
-    private func hash(_ key: StoreKey) -> String {
+    /// Hash `StoreKey` using SHA-512.
+    public func hash(_ key: StoreKey) -> String {
         SHA512.hash(string: key)
     }
 }

@@ -26,7 +26,7 @@ open class SingletonStorage: DelegatedStorage {
 
 /// `SingletonStorageDelegate` conforming `StorageDelegate` protocol.
 open class SingletonStorageDelegate: StorageDelegate {
-    private var shared = [AnyHashable: Any]()
+    private var storage = [AnyHashable: Any]()
 
     /// Create a `SingletonStorageDelegate`.
     public init() {}
@@ -38,7 +38,7 @@ open class SingletonStorageDelegate: StorageDelegate {
 
     - Returns: `StorageData` for `StoreKey`.
     */
-    open func data<D: StorageData>(forKey key: StoreKey) -> D? { shared[key] as? D }
+    open func data<D: StorageData>(forKey key: StoreKey) -> D? { storage[key] as? D }
 
     /**
     Set `StorageData` for `StoreKey` in the keychain.
@@ -46,12 +46,12 @@ open class SingletonStorageDelegate: StorageDelegate {
     - Parameter data: `StorageData` to store.
     - Parameter key: `StoreKey` to store the `StorageData`.
     */
-    open func set<D: StorageData>(_ data: D?, forKey key: StoreKey) { shared[key] = data }
+    open func set<D: StorageData>(_ data: D?, forKey key: StoreKey) { storage[key] = data }
 
     /**
     Remove `StorageData` for `StoreKey` from the keychain.
 
     - Parameter key: `StoreKey` to remove.
     */
-    open func remove(forKey key: StoreKey) { shared.removeValue(forKey: key) }
+    open func remove(forKey key: StoreKey) { storage.removeValue(forKey: key) }
 }
