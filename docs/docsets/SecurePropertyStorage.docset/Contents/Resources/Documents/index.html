@@ -225,13 +225,15 @@
 <p><a href="http://twitter.com/alexruperez"><img src="https://img.shields.io/badge/contact-%40alexruperez-blue" alt="Twitter"></a>
 <a href="https://swift.org"><img src="https://img.shields.io/badge/swift-5-orange" alt="Swift"></a>
 <a href="LICENSE"><img src="https://img.shields.io/github/license/alexruperez/SecurePropertyStorage" alt="License"></a>
-<a href="https://swift.org/package-manager"><img src="https://img.shields.io/badge/Swift%20Package%20Manager-compatible-4BC51D.svg?style=flat" alt="Swift Package Manager compatible"></a>
-<a href="https://github.com/Carthage/Carthage"><img src="https://img.shields.io/badge/Carthage-compatible-4BC51D.svg?style=flat" alt="Carthage compatible"></a>
+<a href="https://swift.org/package-manager"><img src="https://img.shields.io/badge/Swift%20Package%20Manager-compatible-4BC51D.svg?style=flat" alt="Swift Package Manager"></a>
+<a href="https://github.com/Carthage/Carthage"><img src="https://img.shields.io/badge/Carthage-compatible-4BC51D.svg?style=flat" alt="Carthage"></a>
 <a href="https://github.com/alexruperez/SecurePropertyStorage/actions"><img src="https://github.com/alexruperez/SecurePropertyStorage/workflows/Swift/badge.svg" alt="Swift Action"></a>
 <a href="https://travis-ci.com/alexruperez/SecurePropertyStorage"><img src="https://travis-ci.com/alexruperez/SecurePropertyStorage.svg?branch=master" alt="Build Status"></a>
-<a href="https://app.bitrise.io/app/4fed1af31836d3bc"><img src="https://app.bitrise.io/app/4fed1af31836d3bc/status.svg?token=bYImtoKj0hxqCxnORhdgyg&branch=master" alt="Build Status"></a>
-<a href="https://codebeat.co/projects/github-com-alexruperez-propertywrappers-master"><img src="https://codebeat.co/badges/09a12f07-f53c-4149-b033-df576ec3733b" alt="CodeBeat"></a>
-<a href="https://codecov.io/gh/alexruperez/SecurePropertyStorage"><img src="https://img.shields.io/codecov/c/github/alexruperez/SecurePropertyStorage" alt="Coverage"></a>
+<a href="https://app.bitrise.io/app/4fed1af31836d3bc"><img src="https://app.bitrise.io/app/4fed1af31836d3bc/status.svg?token=bYImtoKj0hxqCxnORhdgyg&branch=master" alt="Bitrise"></a>
+<a href="https://codebeat.co/projects/github-com-alexruperez-propertywrappers-master"><img src="https://codebeat.co/badges/09a12f07-f53c-4149-b033-df576ec3733b" alt="Codebeat"></a>
+<a href="https://app.codacy.com/manual/alexruperez/SecurePropertyStorage"><img src="https://api.codacy.com/project/badge/Grade/53a23dd2feca4b7ca8357c918c7d49c9" alt="Quality"></a>
+<a href="https://codeclimate.com/github/alexruperez/SecurePropertyStorage/maintainability"><img src="https://api.codeclimate.com/v1/badges/bbf38ddca9a26703cefd/maintainability" alt="Maintainability"></a>
+<a href="https://codecov.io/gh/alexruperez/SecurePropertyStorage"><img src="https://codecov.io/gh/alexruperez/SecurePropertyStorage/branch/master/graph/badge.svg" alt="Coverage"></a>
 <a href="https://alexruperez.github.io/SecurePropertyStorage"><img src="docs/badge.svg" alt="Documentation"></a></p>
 <h2 id='features' class='heading'>🌟 Features</h2>
 
@@ -240,32 +242,43 @@
 <h3 id='userdefault' class='heading'>@UserDefault</h3>
 
 <p>This property wrapper will store your property in <a href="https://developer.apple.com/documentation/foundation/userdefaults">UserDefaults</a> using <code><a href="Typealiases.html#/s:7Storage8StoreKeya">StoreKey</a></code> (any <code>String</code> but i recommend you a String typed enum). Optionally, you can assign a default value to the property that will be secure stored at initialization.</p>
-<pre class="highlight swift"><code><span class="kd">@UserDefault(&lt;#StoreKey#&gt;)</span> <span class="k">var</span> <span class="nv">yourProperty</span><span class="p">:</span> <span class="kt">YourType</span><span class="p">?</span> <span class="o">=</span> <span class="n">yourDefaultValueIfNeeded</span>
+<pre class="highlight swift"><code><span class="kd">@UserDefault(&lt;#StoreKey#&gt;)</span>
+<span class="k">var</span> <span class="nv">yourProperty</span><span class="p">:</span> <span class="kt">YourType</span><span class="p">?</span> <span class="o">=</span> <span class="n">yourDefaultValueIfNeeded</span>
 </code></pre>
 
 <p><a href="Sources/UserDefault/UserDefaultsStorage.swift"><code><a href="Classes/UserDefaultsStorage.html">UserDefaultsStorage</a></code></a> is also available, a subclass of <a href="https://developer.apple.com/documentation/foundation/userdefaults"><code>UserDefaults</code></a> with all the security provided by this library.</p>
 <h3 id='keychain' class='heading'>@Keychain</h3>
 
 <p>This property wrapper will store your property in <a href="https://developer.apple.com/documentation/security/keychain_services">Keychain</a> using <code><a href="Typealiases.html#/s:7Storage8StoreKeya">StoreKey</a></code>.</p>
-<pre class="highlight swift"><code><span class="kd">@Keychain(&lt;#StoreKey#&gt;)</span> <span class="k">var</span> <span class="nv">yourProperty</span><span class="p">:</span> <span class="kt">YourType</span><span class="p">?</span> <span class="o">=</span> <span class="n">yourDefaultValueIfNeeded</span>
+<pre class="highlight swift"><code><span class="kd">@Keychain(&lt;#StoreKey#&gt;)</span>
+<span class="k">var</span> <span class="nv">yourProperty</span><span class="p">:</span> <span class="kt">YourType</span><span class="p">?</span> <span class="o">=</span> <span class="n">yourDefaultValueIfNeeded</span>
 </code></pre>
 
 <p>As <code><a href="Classes/UserDefaultsStorage.html">UserDefaultsStorage</a></code>, <a href="Sources/Keychain/KeychainStorage.swift"><code><a href="Classes/KeychainStorage.html">KeychainStorage</a></code></a> is also available.</p>
 <h3 id='singleton' class='heading'>@Singleton</h3>
 
 <p>This property wrapper will store your property in a memory <a href="https://en.wikipedia.org/wiki/Singleton_pattern">singleton</a>,  every property with the same wrapper and key can access or modify the value from wherever it is.</p>
-<pre class="highlight swift"><code><span class="kd">@Singleton(&lt;#StoreKey#&gt;)</span> <span class="k">var</span> <span class="nv">yourProperty</span><span class="p">:</span> <span class="kt">YourType</span><span class="p">?</span> <span class="o">=</span> <span class="n">yourDefaultValueIfNeeded</span>
+<pre class="highlight swift"><code><span class="kd">@Singleton(&lt;#StoreKey#&gt;)</span>
+<span class="k">var</span> <span class="nv">yourProperty</span><span class="p">:</span> <span class="kt">YourType</span><span class="p">?</span> <span class="o">=</span> <span class="n">yourDefaultValueIfNeeded</span>
 </code></pre>
 
 <p>As <code><a href="Classes/KeychainStorage.html">KeychainStorage</a></code>, <a href="Sources/Singleton/SingletonStorage.swift"><code><a href="Classes/SingletonStorage.html">SingletonStorage</a></code></a> is also available.</p>
+<h3 id='inject' class='heading'>@Inject</h3>
+
+<p>This property wrapper is similar to <code>@Singleton</code> but, together with <code>@Register</code>, will inject your dependencies. More details in <a href="#-dependency-injection-usage">Dependency Injection usage</a> guide.</p>
+<pre class="highlight swift"><code><span class="kd">@Inject</span>
+<span class="k">var</span> <span class="nv">yourDependency</span><span class="p">:</span> <span class="kt">YourProtocol</span><span class="p">?</span>
+</code></pre>
+
+<p>As <code><a href="Classes/SingletonStorage.html">SingletonStorage</a></code>, <a href="Sources/Inject/InjectStorage.swift"><code><a href="Classes/InjectStorage.html">InjectStorage</a></code></a> is also available.</p>
 <h3 id='store' class='heading'>@Store</h3>
 
 <p>This is a custom wrapper, you can define your own <a href="Sources/Storage/Storage.swift"><code><a href="Protocols/Storage.html">Storage</a></code></a> protocol implementation.</p>
-<pre class="highlight swift"><code><span class="kd">@Store(&lt;#Storage#&gt;, &lt;#StoreKey#&gt;)</span> <span class="k">var</span> <span class="nv">yourProperty</span><span class="p">:</span> <span class="kt">YourType</span><span class="p">?</span> <span class="o">=</span> <span class="n">yourDefaultValueIfNeeded</span>
+<pre class="highlight swift"><code><span class="kd">@Store(&lt;#Storage#&gt;, &lt;#StoreKey#&gt;)</span>
+<span class="k">var</span> <span class="nv">yourProperty</span><span class="p">:</span> <span class="kt">YourType</span><span class="p">?</span> <span class="o">=</span> <span class="n">yourDefaultValueIfNeeded</span>
 </code></pre>
 
-<p>As <code><a href="Classes/SingletonStorage.html">SingletonStorage</a></code>, <a href="Sources/Storage/DelegatedStorage.swift"><code><a href="Classes/DelegatedStorage.html">DelegatedStorage</a></code></a> is also available with all the magic of this library.</p>
-<h3 id='inject' class='heading'>@Inject</h3>
+<p>As <code><a href="Classes/InjectStorage.html">InjectStorage</a></code>, <a href="Sources/Storage/DelegatedStorage.swift"><code><a href="Classes/DelegatedStorage.html">DelegatedStorage</a></code></a> is also available with all the magic of this library.</p>
 <h2 id='️-codable-usage' class='heading'>🧙‍♂️ Codable usage</h2>
 
 <p>If your property conforms <a href="https://developer.apple.com/documentation/swift/codable"><code>Codable</code></a> protocol, just add <code>Codable</code> keyword as prefix of your property wrapper.</p>
@@ -278,12 +291,13 @@
 </ul>
 <h2 id='unwrapped-usage' class='heading'>🥡 Unwrapped usage</h2>
 
-<p>To avoid continually unwrapping your property, just add <code>Unwrapped</code> keyword as prefix of your property wrapper, assign a default value (mandatory), and it will return stored value or default value, but your property will always be there for you.</p>
+<p>To avoid continually unwrapping your property, just add <code>Unwrapped</code> keyword as prefix of your property wrapper, assign a default value (mandatory except for <code>@UnwrappedInject</code>), and it will return stored value or default value, but your property will always be there for you.</p>
 
 <ul>
 <li><strong>@UnwrappedUserDefault</strong></li>
 <li><strong>@UnwrappedKeychain</strong></li>
 <li><strong>@UnwrappedSingleton</strong></li>
+<li><strong>@UnwrappedInject</strong></li>
 <li><strong>@UnwrappedStore</strong></li>
 </ul>
 <h2 id='️-combo-usage' class='heading'>🥡 + 🧙‍♂️ Combo usage</h2>
@@ -296,23 +310,91 @@
 <li><strong>@UnwrappedCodableSingleton</strong></li>
 <li><strong>@UnwrappedCodableStore</strong></li>
 </ul>
+<h2 id='dependency-injection-usage' class='heading'>💉 Dependency Injection usage</h2>
+
+<ul>
+<li><strong>@Register</strong></li>
+</ul>
+
+<p>This property wrapper will register the implementations of your dependencies. You can register them wherever you want before inject it, but be sure to do it only once (except if you use <a href="#qualifiers">qualifiers</a>), for example, in an <code>Injector</code> class.</p>
+<pre class="highlight swift"><code><span class="kd">@Register</span>
+<span class="k">var</span> <span class="nv">yourDependency</span><span class="p">:</span> <span class="kt">YourProtocol</span> <span class="o">=</span> <span class="kt">YourImplementation</span>
+</code></pre>
+
+<ul>
+<li><strong>@Inject</strong> and <strong>@UnwrappedInject</strong></li>
+</ul>
+
+<p>This property wrapper injects your dependencies <code>@Register</code> implementations.</p>
+<pre class="highlight swift"><code><span class="kd">@Inject</span>
+<span class="k">var</span> <span class="nv">yourDependency</span><span class="p">:</span> <span class="kt">YourProtocol</span><span class="p">?</span>
+
+<span class="kd">@UnwrappedInject</span>
+<span class="k">var</span> <span class="nv">yourUnwrappedDependency</span><span class="p">:</span> <span class="kt">YourProtocol</span>
+</code></pre>
+<h3 id='qualifiers' class='heading'>Qualifiers</h3>
+
+<p>You can use <a href="https://javaee.github.io/tutorial/cdi-basic006.html">qualifiers</a> to provide various implementations of a particular dependency. A qualifier is just a <code>@objc protocol</code> that you apply to a <code>class</code>.</p>
+
+<p>For example, you could declare <code>Dog</code> and <code>Cat</code> qualifier protocols and apply it to another class that conforms <code>Animal</code> protocol. To declare this qualifier, use the following code:</p>
+<pre class="highlight swift"><code><span class="kd">protocol</span> <span class="kt">Animal</span> <span class="p">{</span>
+  <span class="kd">func</span> <span class="nf">sound</span><span class="p">()</span>
+<span class="p">}</span>
+
+<span class="kd">@objc</span> <span class="kd">protocol</span> <span class="kt">Dog</span> <span class="p">{}</span>
+
+<span class="kd">@objc</span> <span class="kd">protocol</span> <span class="kt">Cat</span> <span class="p">{}</span>
+</code></pre>
+
+<p>You can then define multiple classes that conforms <code>Animal</code> protocol and uses this qualifiers:</p>
+<pre class="highlight swift"><code><span class="kd">class</span> <span class="kt">DogImplementation</span><span class="p">:</span> <span class="kt">Animal</span><span class="p">,</span> <span class="kt">Dog</span> <span class="p">{</span>
+    <span class="kd">func</span> <span class="nf">sound</span><span class="p">()</span> <span class="p">{</span> <span class="nf">print</span><span class="p">(</span><span class="s">"Woof!"</span><span class="p">)</span> <span class="p">}</span>
+<span class="p">}</span>
+
+<span class="kd">class</span> <span class="kt">CatImplementation</span><span class="p">:</span> <span class="kt">Animal</span><span class="p">,</span> <span class="kt">Cat</span> <span class="p">{</span>
+    <span class="kd">func</span> <span class="nf">sound</span><span class="p">()</span> <span class="p">{</span> <span class="nf">print</span><span class="p">(</span><span class="s">"Meow!"</span><span class="p">)</span> <span class="p">}</span>
+<span class="p">}</span>
+</code></pre>
+
+<p>Both implementations of the class can now be <code>@Register</code>:</p>
+<pre class="highlight swift"><code><span class="kd">@Register</span>
+<span class="k">var</span> <span class="nv">registerDog</span><span class="p">:</span> <span class="kt">Animal</span> <span class="o">=</span> <span class="kt">DogImplementation</span><span class="p">()</span>
+
+<span class="kd">@Register</span>
+<span class="k">var</span> <span class="nv">registerCat</span><span class="p">:</span> <span class="kt">Animal</span> <span class="o">=</span> <span class="kt">CatImplementation</span><span class="p">()</span>
+</code></pre>
+
+<p>To inject one or the other implementation, simply add the qualifier(s) to your <code>@Inject</code>:</p>
+<pre class="highlight swift"><code><span class="kd">@UnwrappedInject(Dog.self)</span>
+<span class="k">var</span> <span class="nv">dog</span><span class="p">:</span> <span class="kt">Animal</span>
+
+<span class="kd">@UnwrappedInject(Cat.self)</span>
+<span class="k">var</span> <span class="nv">cat</span><span class="p">:</span> <span class="kt">Animal</span>
+
+<span class="n">dog</span><span class="o">.</span><span class="nf">sound</span><span class="p">()</span> <span class="c1">// prints Woof!</span>
+<span class="n">cat</span><span class="o">.</span><span class="nf">sound</span><span class="p">()</span> <span class="c1">// prints Meow!</span>
+</code></pre>
 <h2 id='examples' class='heading'>👀 Examples</h2>
 
 <blockquote>
 <p>Talk is cheap. Show me the code.</p>
 </blockquote>
 <pre class="highlight swift"><code>    <span class="c1">// Securely stored in UserDefaults.</span>
-    <span class="kd">@UserDefault("username")</span> <span class="k">var</span> <span class="nv">username</span><span class="p">:</span> <span class="kt">String</span><span class="p">?</span>
+    <span class="kd">@UserDefault("username")</span>
+    <span class="k">var</span> <span class="nv">username</span><span class="p">:</span> <span class="kt">String</span><span class="p">?</span>
 
     <span class="c1">// Securely stored in Keychain.</span>
-    <span class="kd">@Keychain("password")</span> <span class="k">var</span> <span class="nv">password</span><span class="p">:</span> <span class="kt">String</span><span class="p">?</span>
+    <span class="kd">@Keychain("password")</span>
+    <span class="k">var</span> <span class="nv">password</span><span class="p">:</span> <span class="kt">String</span><span class="p">?</span>
 
     <span class="c1">// Securely stored in a Singleton storage.</span>
-    <span class="kd">@Singleton("sessionToken")</span> <span class="k">var</span> <span class="nv">sessionToken</span><span class="p">:</span> <span class="kt">String</span><span class="p">?</span>
+    <span class="kd">@Singleton("sessionToken")</span>
+    <span class="k">var</span> <span class="nv">sessionToken</span><span class="p">:</span> <span class="kt">String</span><span class="p">?</span>
 
     <span class="c1">// Securely stored in a Singleton storage.</span>
     <span class="c1">// Always has a value, the stored or the default.</span>
-    <span class="kd">@UnwrappedSingleton("refreshToken")</span> <span class="k">var</span> <span class="nv">refreshToken</span><span class="p">:</span> <span class="kt">String</span> <span class="o">=</span> <span class="s">"B0610306-A33F"</span>
+    <span class="kd">@UnwrappedSingleton("refreshToken")</span>
+    <span class="k">var</span> <span class="nv">refreshToken</span><span class="p">:</span> <span class="kt">String</span> <span class="o">=</span> <span class="s">"B0610306-A33F"</span>
 
     <span class="kd">struct</span> <span class="kt">User</span><span class="p">:</span> <span class="kt">Codable</span> <span class="p">{</span>
         <span class="k">let</span> <span class="nv">username</span><span class="p">:</span> <span class="kt">String</span>
@@ -321,7 +403,8 @@
     <span class="p">}</span>
 
     <span class="c1">// Codable model securely stored in UserDefaults.</span>
-    <span class="kd">@CodableUserDefault("user")</span> <span class="k">var</span> <span class="nv">user</span><span class="p">:</span> <span class="kt">User</span><span class="p">?</span>
+    <span class="kd">@CodableUserDefault("user")</span>
+    <span class="k">var</span> <span class="nv">user</span><span class="p">:</span> <span class="kt">User</span><span class="p">?</span>
 </code></pre>
 <h2 id='compatibility' class='heading'>🛠 Compatibility</h2>
 

@@ -7,12 +7,12 @@ public enum InjectError: Error, CustomStringConvertible {
 
     public var description: String {
         switch self {
-        case .notFound(let dependency):
+        case let .notFound(dependency):
             return """
             No dependency registered for \(dependency),
             please use @Register property wrapper to specify what you want to inject.
             """
-        case .moreThanOne(let dependency):
+        case let .moreThanOne(dependency):
             return """
             More than one dependency registered for \(dependency),
             please use a Qualifier to specify which one you want to inject.
