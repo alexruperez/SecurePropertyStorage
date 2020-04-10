@@ -10,6 +10,7 @@
 [![Build Status](https://travis-ci.com/alexruperez/SecurePropertyStorage.svg?branch=master)](https://travis-ci.com/alexruperez/SecurePropertyStorage)
 [![Build Status](https://app.bitrise.io/app/4fed1af31836d3bc/status.svg?token=bYImtoKj0hxqCxnORhdgyg&branch=master)](https://app.bitrise.io/app/4fed1af31836d3bc)
 [![CodeBeat](https://codebeat.co/badges/09a12f07-f53c-4149-b033-df576ec3733b)](https://codebeat.co/projects/github-com-alexruperez-propertywrappers-master)
+[![Codacy](https://api.codacy.com/project/badge/Grade/53a23dd2feca4b7ca8357c918c7d49c9)](https://app.codacy.com/manual/alexruperez/SecurePropertyStorage)
 [![Coverage](https://img.shields.io/codecov/c/github/alexruperez/SecurePropertyStorage)](https://codecov.io/gh/alexruperez/SecurePropertyStorage)
 [![Documentation](docs/badge.svg)](https://alexruperez.github.io/SecurePropertyStorage)
 

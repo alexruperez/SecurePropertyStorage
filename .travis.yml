@@ -5,3 +5,4 @@ xcode_scheme: SecurePropertyStorage-Package
 xcode_destination: platform=iOS Simulator,OS=13.3,name=iPhone 11
 after_success:
   - bash <(curl -s https://codecov.io/bash)
+  - bash <(curl -Ls https://coverage.codacy.com/get.sh)
