@@ -12,7 +12,9 @@ extension DataConvertible {
 extension DataConvertible where Self: ExpressibleByBooleanLiteral {
     init?(_ data: Data) {
         var value: Self = false
-        guard data.count == MemoryLayout.size(ofValue: value) else { return nil }
+        guard data.count == MemoryLayout.size(ofValue: value) else {
+            return nil
+        }
         _ = withUnsafeMutableBytes(of: &value) { data.copyBytes(to: $0) }
         self = value
     }
@@ -21,7 +23,9 @@ extension DataConvertible where Self: ExpressibleByBooleanLiteral {
 extension DataConvertible where Self: ExpressibleByIntegerLiteral {
     init?(_ data: Data) {
         var value: Self = 0
-        guard data.count == MemoryLayout.size(ofValue: value) else { return nil }
+        guard data.count == MemoryLayout.size(ofValue: value) else {
+            return nil
+        }
         _ = withUnsafeMutableBytes(of: &value) { data.copyBytes(to: $0) }
         self = value
     }

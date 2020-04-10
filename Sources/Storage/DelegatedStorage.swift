@@ -36,7 +36,9 @@ open class DelegatedStorage: Storage {
 
     open func register(defaults registrationDictionary: [StoreKey: Any]) {
         registrationDictionary.forEach { key, value in
-            if let _: Data = data(forKey: key) { return }
+            if let _: Data = data(forKey: key) {
+                return
+            }
             set(value, forKey: key)
         }
     }

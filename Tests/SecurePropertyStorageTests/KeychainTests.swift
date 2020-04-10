@@ -1,6 +1,6 @@
-import XCTest
 import Keychain
 import Storage
+import XCTest
 
 enum KeychainCodable: String, Codable {
     case test
@@ -10,17 +10,28 @@ enum KeychainCodable: String, Codable {
 let keychainTagStorage: DelegatedStorage = KeychainStorage(authenticationTag: Data())
 
 final class KeychainTests: XCTestCase {
-    @Store(keychainTagStorage, "keychainTagStore") var keychainTagStore: String?
-    @Store(KeychainStorage.standard, "keychainStore") var keychainStore: String?
-    @Keychain("keychain") var keychain: String?
-    @Store(keychainTagStorage, "keychainTagDefault") var keychainTagDefault = "tagDefault"
-    @Keychain("keychainDefault") var keychainDefault = "default"
-    @CodableStore(keychainTagStorage, "keychainTagCodable") var keychainTagCodable = KeychainCodable.test
-    @CodableKeychain("keychainCodable") var keychainCodable = KeychainCodable.test
-    @UnwrappedStore(keychainTagStorage, "unwrappedKeychainTagDefault") var unwrappedKeychainTagDefault = "tagDefault"
-    @UnwrappedKeychain("unwrappedKeychainDefault") var unwrappedKeychainDefault = "default"
-    @UnwrappedCodableStore(keychainTagStorage, "unwrappedKeychainTagCodable") var unwrappedKeychainTagCodable = KeychainCodable.test
-    @UnwrappedCodableKeychain("unwrappedKeychainCodable") var unwrappedKeychainCodable = KeychainCodable.test
+    @Store(keychainTagStorage, "keychainTagStore")
+    var keychainTagStore: String?
+    @Store(KeychainStorage.standard, "keychainStore")
+    var keychainStore: String?
+    @Keychain("keychain")
+    var keychain: String?
+    @Store(keychainTagStorage, "keychainTagDefault")
+    var keychainTagDefault = "tagDefault"
+    @Keychain("keychainDefault")
+    var keychainDefault = "default"
+    @CodableStore(keychainTagStorage, "keychainTagCodable")
+    var keychainTagCodable = KeychainCodable.test
+    @CodableKeychain("keychainCodable")
+    var keychainCodable = KeychainCodable.test
+    @UnwrappedStore(keychainTagStorage, "unwrappedKeychainTagDefault")
+    var unwrappedKeychainTagDefault = "tagDefault"
+    @UnwrappedKeychain("unwrappedKeychainDefault")
+    var unwrappedKeychainDefault = "default"
+    @UnwrappedCodableStore(keychainTagStorage, "unwrappedKeychainTagCodable")
+    var unwrappedKeychainTagCodable = KeychainCodable.test
+    @UnwrappedCodableKeychain("unwrappedKeychainCodable")
+    var unwrappedKeychainCodable = KeychainCodable.test
 
     func testKeychainTagStoreError() {
         let keychainTagStoreError = expectation(description: "keychainTagStoreError")
@@ -204,6 +215,6 @@ final class KeychainTests: XCTestCase {
         ("testUnwrappedKeychainTagStoreDefaultError", testUnwrappedKeychainTagStoreDefaultError),
         ("testUnwrappedKeychainDefaultError", testUnwrappedKeychainDefaultError),
         ("testUnwrappedKeychainTagStoreCodableError", testUnwrappedKeychainTagStoreCodableError),
-        ("testUnwrappedKeychainCodableError", testUnwrappedKeychainCodableError),
+        ("testUnwrappedKeychainCodableError", testUnwrappedKeychainCodableError)
     ]
 }

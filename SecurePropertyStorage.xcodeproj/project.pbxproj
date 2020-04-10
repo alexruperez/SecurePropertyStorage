@@ -9,100 +9,100 @@
 /* Begin PBXAggregateTarget section */
 		"SecurePropertyStorage::InjectDynamic::ProductTarget" /* InjectDynamic */ = {
 			isa = PBXAggregateTarget;
-			buildConfigurationList = OBJ_66 /* Build configuration list for PBXAggregateTarget "InjectDynamic" */;
+			buildConfigurationList = OBJ_63 /* Build configuration list for PBXAggregateTarget "InjectDynamic" */;
 			buildPhases = (
 			);
 			dependencies = (
-				OBJ_69 /* PBXTargetDependency */,
-				OBJ_70 /* PBXTargetDependency */,
+				OBJ_66 /* PBXTargetDependency */,
+				OBJ_67 /* PBXTargetDependency */,
 			);
 			name = InjectDynamic;
 			productName = InjectDynamic;
 		};
 		"SecurePropertyStorage::KeychainDynamic::ProductTarget" /* KeychainDynamic */ = {
 			isa = PBXAggregateTarget;
-			buildConfigurationList = OBJ_83 /* Build configuration list for PBXAggregateTarget "KeychainDynamic" */;
+			buildConfigurationList = OBJ_81 /* Build configuration list for PBXAggregateTarget "KeychainDynamic" */;
 			buildPhases = (
 			);
 			dependencies = (
-				OBJ_86 /* PBXTargetDependency */,
-				OBJ_87 /* PBXTargetDependency */,
+				OBJ_84 /* PBXTargetDependency */,
+				OBJ_85 /* PBXTargetDependency */,
 			);
 			name = KeychainDynamic;
 			productName = KeychainDynamic;
 		};
 		"SecurePropertyStorage::SecurePropertyStorage::ProductTarget" /* SecurePropertyStorage */ = {
 			isa = PBXAggregateTarget;
-			buildConfigurationList = OBJ_89 /* Build configuration list for PBXAggregateTarget "SecurePropertyStorage" */;
+			buildConfigurationList = OBJ_87 /* Build configuration list for PBXAggregateTarget "SecurePropertyStorage" */;
 			buildPhases = (
 			);
 			dependencies = (
-				OBJ_92 /* PBXTargetDependency */,
+				OBJ_90 /* PBXTargetDependency */,
+				OBJ_91 /* PBXTargetDependency */,
 				OBJ_93 /* PBXTargetDependency */,
 				OBJ_95 /* PBXTargetDependency */,
 				OBJ_96 /* PBXTargetDependency */,
-				OBJ_97 /* PBXTargetDependency */,
 			);
 			name = SecurePropertyStorage;
 			productName = SecurePropertyStorage;
 		};
 		"SecurePropertyStorage::SecurePropertyStorageDynamic::ProductTarget" /* SecurePropertyStorageDynamic */ = {
 			isa = PBXAggregateTarget;
-			buildConfigurationList = OBJ_99 /* Build configuration list for PBXAggregateTarget "SecurePropertyStorageDynamic" */;
+			buildConfigurationList = OBJ_98 /* Build configuration list for PBXAggregateTarget "SecurePropertyStorageDynamic" */;
 			buildPhases = (
 			);
 			dependencies = (
+				OBJ_101 /* PBXTargetDependency */,
 				OBJ_102 /* PBXTargetDependency */,
 				OBJ_103 /* PBXTargetDependency */,
 				OBJ_104 /* PBXTargetDependency */,
 				OBJ_105 /* PBXTargetDependency */,
-				OBJ_106 /* PBXTargetDependency */,
 			);
 			name = SecurePropertyStorageDynamic;
 			productName = SecurePropertyStorageDynamic;
 		};
 		"SecurePropertyStorage::SecurePropertyStoragePackageTests::ProductTarget" /* SecurePropertyStoragePackageTests */ = {
 			isa = PBXAggregateTarget;
-			buildConfigurationList = OBJ_114 /* Build configuration list for PBXAggregateTarget "SecurePropertyStoragePackageTests" */;
+			buildConfigurationList = OBJ_113 /* Build configuration list for PBXAggregateTarget "SecurePropertyStoragePackageTests" */;
 			buildPhases = (
 			);
 			dependencies = (
-				OBJ_117 /* PBXTargetDependency */,
+				OBJ_116 /* PBXTargetDependency */,
 			);
 			name = SecurePropertyStoragePackageTests;
 			productName = SecurePropertyStoragePackageTests;
 		};
 		"SecurePropertyStorage::SingletonDynamic::ProductTarget" /* SingletonDynamic */ = {
 			isa = PBXAggregateTarget;
-			buildConfigurationList = OBJ_151 /* Build configuration list for PBXAggregateTarget "SingletonDynamic" */;
+			buildConfigurationList = OBJ_150 /* Build configuration list for PBXAggregateTarget "SingletonDynamic" */;
 			buildPhases = (
 			);
 			dependencies = (
+				OBJ_153 /* PBXTargetDependency */,
 				OBJ_154 /* PBXTargetDependency */,
-				OBJ_155 /* PBXTargetDependency */,
 			);
 			name = SingletonDynamic;
 			productName = SingletonDynamic;
 		};
 		"SecurePropertyStorage::StorageDynamic::ProductTarget" /* StorageDynamic */ = {
 			isa = PBXAggregateTarget;
-			buildConfigurationList = OBJ_168 /* Build configuration list for PBXAggregateTarget "StorageDynamic" */;
+			buildConfigurationList = OBJ_167 /* Build configuration list for PBXAggregateTarget "StorageDynamic" */;
 			buildPhases = (
 			);
 			dependencies = (
-				OBJ_171 /* PBXTargetDependency */,
+				OBJ_170 /* PBXTargetDependency */,
 			);
 			name = StorageDynamic;
 			productName = StorageDynamic;
 		};
 		"SecurePropertyStorage::UserDefaultDynamic::ProductTarget" /* UserDefaultDynamic */ = {
 			isa = PBXAggregateTarget;
-			buildConfigurationList = OBJ_184 /* Build configuration list for PBXAggregateTarget "UserDefaultDynamic" */;
+			buildConfigurationList = OBJ_183 /* Build configuration list for PBXAggregateTarget "UserDefaultDynamic" */;
 			buildPhases = (
 			);
 			dependencies = (
+				OBJ_186 /* PBXTargetDependency */,
 				OBJ_187 /* PBXTargetDependency */,
-				OBJ_188 /* PBXTargetDependency */,
 			);
 			name = UserDefaultDynamic;
 			productName = UserDefaultDynamic;
@@ -110,165 +110,290 @@
 /* End PBXAggregateTarget section */
 
 /* Begin PBXBuildFile section */
-		D53D6B83243FBAC000D99838 /* InjectError.swift in Sources */ = {isa = PBXBuildFile; fileRef = D53D6B82243FBAC000D99838 /* InjectError.swift */; };
-		OBJ_112 /* Package.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_6 /* Package.swift */; };
-		OBJ_123 /* InjectTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_31 /* InjectTests.swift */; };
-		OBJ_124 /* KeychainTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_32 /* KeychainTests.swift */; };
-		OBJ_125 /* SingletonTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_33 /* SingletonTests.swift */; };
-		OBJ_126 /* UserDefaultTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_34 /* UserDefaultTests.swift */; };
-		OBJ_127 /* XCTestManifests.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_35 /* XCTestManifests.swift */; };
-		OBJ_129 /* Inject.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = "SecurePropertyStorage::Inject::Product" /* Inject.framework */; };
-		OBJ_130 /* Singleton.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = "SecurePropertyStorage::Singleton::Product" /* Singleton.framework */; };
-		OBJ_131 /* UserDefault.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = "SecurePropertyStorage::UserDefault::Product" /* UserDefault.framework */; };
-		OBJ_132 /* Keychain.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = "SecurePropertyStorage::Keychain::Product" /* Keychain.framework */; };
-		OBJ_133 /* Storage.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = "SecurePropertyStorage::Storage::Product" /* Storage.framework */; };
-		OBJ_143 /* Singleton.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_17 /* Singleton.swift */; };
-		OBJ_144 /* SingletonStorage.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_18 /* SingletonStorage.swift */; };
-		OBJ_146 /* Keychain.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = "SecurePropertyStorage::Keychain::Product" /* Keychain.framework */; };
-		OBJ_147 /* Storage.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = "SecurePropertyStorage::Storage::Product" /* Storage.framework */; };
-		OBJ_160 /* DataConvertible.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_20 /* DataConvertible.swift */; };
-		OBJ_161 /* DelegatedStorage.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_21 /* DelegatedStorage.swift */; };
-		OBJ_162 /* Storage.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_22 /* Storage.swift */; };
-		OBJ_163 /* StorageData.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_23 /* StorageData.swift */; };
-		OBJ_164 /* StorageDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_24 /* StorageDelegate.swift */; };
-		OBJ_165 /* Store.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_25 /* Store.swift */; };
-		OBJ_176 /* UserDefault.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_27 /* UserDefault.swift */; };
-		OBJ_177 /* UserDefaultsStorage.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_28 /* UserDefaultsStorage.swift */; };
-		OBJ_179 /* Keychain.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = "SecurePropertyStorage::Keychain::Product" /* Keychain.framework */; };
-		OBJ_180 /* Storage.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = "SecurePropertyStorage::Storage::Product" /* Storage.framework */; };
-		OBJ_53 /* Inject.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_9 /* Inject.swift */; };
-		OBJ_54 /* InjectStorage.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_10 /* InjectStorage.swift */; };
-		OBJ_56 /* Singleton.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = "SecurePropertyStorage::Singleton::Product" /* Singleton.framework */; };
-		OBJ_57 /* Keychain.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = "SecurePropertyStorage::Keychain::Product" /* Keychain.framework */; };
-		OBJ_58 /* Storage.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = "SecurePropertyStorage::Storage::Product" /* Storage.framework */; };
-		OBJ_75 /* CryptoData.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_12 /* CryptoData.swift */; };
-		OBJ_76 /* Keychain.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_13 /* Keychain.swift */; };
-		OBJ_77 /* KeychainError.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_14 /* KeychainError.swift */; };
-		OBJ_78 /* KeychainStorage.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_15 /* KeychainStorage.swift */; };
-		OBJ_80 /* Storage.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = "SecurePropertyStorage::Storage::Product" /* Storage.framework */; };
+		OBJ_111 /* Package.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_6 /* Package.swift */; };
+		OBJ_122 /* InjectTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_32 /* InjectTests.swift */; };
+		OBJ_123 /* KeychainTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_33 /* KeychainTests.swift */; };
+		OBJ_124 /* SingletonTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_34 /* SingletonTests.swift */; };
+		OBJ_125 /* UserDefaultTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_35 /* UserDefaultTests.swift */; };
+		OBJ_126 /* XCTestManifests.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_36 /* XCTestManifests.swift */; };
+		OBJ_128 /* Inject.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = "SecurePropertyStorage::Inject::Product" /* Inject.framework */; };
+		OBJ_129 /* Singleton.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = "SecurePropertyStorage::Singleton::Product" /* Singleton.framework */; };
+		OBJ_130 /* UserDefault.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = "SecurePropertyStorage::UserDefault::Product" /* UserDefault.framework */; };
+		OBJ_131 /* Keychain.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = "SecurePropertyStorage::Keychain::Product" /* Keychain.framework */; };
+		OBJ_132 /* Storage.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = "SecurePropertyStorage::Storage::Product" /* Storage.framework */; };
+		OBJ_142 /* Singleton.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_18 /* Singleton.swift */; };
+		OBJ_143 /* SingletonStorage.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_19 /* SingletonStorage.swift */; };
+		OBJ_145 /* Keychain.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = "SecurePropertyStorage::Keychain::Product" /* Keychain.framework */; };
+		OBJ_146 /* Storage.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = "SecurePropertyStorage::Storage::Product" /* Storage.framework */; };
+		OBJ_159 /* DataConvertible.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_21 /* DataConvertible.swift */; };
+		OBJ_160 /* DelegatedStorage.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_22 /* DelegatedStorage.swift */; };
+		OBJ_161 /* Storage.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_23 /* Storage.swift */; };
+		OBJ_162 /* StorageData.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_24 /* StorageData.swift */; };
+		OBJ_163 /* StorageDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_25 /* StorageDelegate.swift */; };
+		OBJ_164 /* Store.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_26 /* Store.swift */; };
+		OBJ_175 /* UserDefault.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_28 /* UserDefault.swift */; };
+		OBJ_176 /* UserDefaultsStorage.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_29 /* UserDefaultsStorage.swift */; };
+		OBJ_178 /* Keychain.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = "SecurePropertyStorage::Keychain::Product" /* Keychain.framework */; };
+		OBJ_179 /* Storage.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = "SecurePropertyStorage::Storage::Product" /* Storage.framework */; };
+		OBJ_55 /* Inject.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_9 /* Inject.swift */; };
+		OBJ_56 /* InjectError.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_10 /* InjectError.swift */; };
+		OBJ_57 /* InjectStorage.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_11 /* InjectStorage.swift */; };
+		OBJ_59 /* Storage.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = "SecurePropertyStorage::Storage::Product" /* Storage.framework */; };
+		OBJ_73 /* CryptoData.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_13 /* CryptoData.swift */; };
+		OBJ_74 /* Keychain.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_14 /* Keychain.swift */; };
+		OBJ_75 /* KeychainError.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_15 /* KeychainError.swift */; };
+		OBJ_76 /* KeychainStorage.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_16 /* KeychainStorage.swift */; };
+		OBJ_78 /* Storage.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = "SecurePropertyStorage::Storage::Product" /* Storage.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
-		D53D6B75243F542300D99838 /* PBXContainerItemProxy */ = {
+		D56C2D8D24405184001CA006 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = OBJ_1 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = "SecurePropertyStorage::Storage";
+			remoteInfo = Storage;
+		};
+		D56C2D8E24405184001CA006 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = OBJ_1 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = "SecurePropertyStorage::Storage";
+			remoteInfo = Storage;
+		};
+		D56C2D8F24405184001CA006 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = OBJ_1 /* Project object */;
 			proxyType = 1;
 			remoteGlobalIDString = "SecurePropertyStorage::Keychain";
 			remoteInfo = Keychain;
 		};
-		D53D6B76243F542300D99838 /* PBXContainerItemProxy */ = {
+		D56C2D9024405184001CA006 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = OBJ_1 /* Project object */;
 			proxyType = 1;
 			remoteGlobalIDString = "SecurePropertyStorage::Storage";
 			remoteInfo = Storage;
 		};
-		D53D6B77243F542300D99838 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = OBJ_1 /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = "SecurePropertyStorage::Storage";
-			remoteInfo = Storage;
-		};
-		D53D6B78243F542300D99838 /* PBXContainerItemProxy */ = {
+		D56C2D9124405184001CA006 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = OBJ_1 /* Project object */;
 			proxyType = 1;
 			remoteGlobalIDString = "SecurePropertyStorage::Keychain";
 			remoteInfo = Keychain;
 		};
-		D53D6B79243F542300D99838 /* PBXContainerItemProxy */ = {
+		D56C2D9224405184001CA006 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = OBJ_1 /* Project object */;
 			proxyType = 1;
 			remoteGlobalIDString = "SecurePropertyStorage::Storage";
 			remoteInfo = Storage;
 		};
-		D53D6B7A243F542300D99838 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = OBJ_1 /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = "SecurePropertyStorage::Singleton";
-			remoteInfo = Singleton;
-		};
-		D53D6B7B243F542300D99838 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = OBJ_1 /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = "SecurePropertyStorage::Keychain";
-			remoteInfo = Keychain;
-		};
-		D53D6B7C243F542300D99838 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = OBJ_1 /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = "SecurePropertyStorage::Storage";
-			remoteInfo = Storage;
-		};
-		D53D6B7D243F542500D99838 /* PBXContainerItemProxy */ = {
+		D56C2D9324405184001CA006 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = OBJ_1 /* Project object */;
 			proxyType = 1;
 			remoteGlobalIDString = "SecurePropertyStorage::Inject";
 			remoteInfo = Inject;
 		};
-		D53D6B7E243F542500D99838 /* PBXContainerItemProxy */ = {
+		D56C2D9424405184001CA006 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = OBJ_1 /* Project object */;
 			proxyType = 1;
 			remoteGlobalIDString = "SecurePropertyStorage::Singleton";
 			remoteInfo = Singleton;
 		};
-		D53D6B7F243F542500D99838 /* PBXContainerItemProxy */ = {
+		D56C2D9524405184001CA006 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = OBJ_1 /* Project object */;
 			proxyType = 1;
 			remoteGlobalIDString = "SecurePropertyStorage::UserDefault";
 			remoteInfo = UserDefault;
 		};
-		D53D6B80243F542500D99838 /* PBXContainerItemProxy */ = {
+		D56C2D9624405184001CA006 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = OBJ_1 /* Project object */;
 			proxyType = 1;
 			remoteGlobalIDString = "SecurePropertyStorage::Keychain";
 			remoteInfo = Keychain;
 		};
-		D53D6B81243F542500D99838 /* PBXContainerItemProxy */ = {
+		D56C2D9724405184001CA006 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = OBJ_1 /* Project object */;
 			proxyType = 1;
 			remoteGlobalIDString = "SecurePropertyStorage::Storage";
 			remoteInfo = Storage;
 		};
+		D56C2D9824405185001CA006 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = OBJ_1 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = "SecurePropertyStorage::Storage";
+			remoteInfo = Storage;
+		};
+		D56C2D9924405185001CA006 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = OBJ_1 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = "SecurePropertyStorage::Inject";
+			remoteInfo = Inject;
+		};
+		D56C2D9A24405185001CA006 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = OBJ_1 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = "SecurePropertyStorage::Storage";
+			remoteInfo = Storage;
+		};
+		D56C2D9B24405185001CA006 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = OBJ_1 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = "SecurePropertyStorage::Keychain";
+			remoteInfo = Keychain;
+		};
+		D56C2D9C24405185001CA006 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = OBJ_1 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = "SecurePropertyStorage::Storage";
+			remoteInfo = Storage;
+		};
+		D56C2D9D24405185001CA006 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = OBJ_1 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = "SecurePropertyStorage::UserDefault";
+			remoteInfo = UserDefault;
+		};
+		D56C2D9E24405185001CA006 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = OBJ_1 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = "SecurePropertyStorage::Singleton";
+			remoteInfo = Singleton;
+		};
+		D56C2D9F24405185001CA006 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = OBJ_1 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = "SecurePropertyStorage::Keychain";
+			remoteInfo = Keychain;
+		};
+		D56C2DA024405185001CA006 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = OBJ_1 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = "SecurePropertyStorage::Inject";
+			remoteInfo = Inject;
+		};
+		D56C2DA124405185001CA006 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = OBJ_1 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = "SecurePropertyStorage::Storage";
+			remoteInfo = Storage;
+		};
+		D56C2DA224405185001CA006 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = OBJ_1 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = "SecurePropertyStorage::UserDefault";
+			remoteInfo = UserDefault;
+		};
+		D56C2DA324405185001CA006 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = OBJ_1 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = "SecurePropertyStorage::Singleton";
+			remoteInfo = Singleton;
+		};
+		D56C2DA424405185001CA006 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = OBJ_1 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = "SecurePropertyStorage::Keychain";
+			remoteInfo = Keychain;
+		};
+		D56C2DA524405185001CA006 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = OBJ_1 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = "SecurePropertyStorage::Inject";
+			remoteInfo = Inject;
+		};
+		D56C2DA624405185001CA006 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = OBJ_1 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = "SecurePropertyStorage::SecurePropertyStorageTests";
+			remoteInfo = SecurePropertyStorageTests;
+		};
+		D56C2DA724405185001CA006 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = OBJ_1 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = "SecurePropertyStorage::Storage";
+			remoteInfo = Storage;
+		};
+		D56C2DA824405185001CA006 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = OBJ_1 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = "SecurePropertyStorage::Singleton";
+			remoteInfo = Singleton;
+		};
+		D56C2DA924405185001CA006 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = OBJ_1 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = "SecurePropertyStorage::Storage";
+			remoteInfo = Storage;
+		};
+		D56C2DAA24405185001CA006 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = OBJ_1 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = "SecurePropertyStorage::Storage";
+			remoteInfo = Storage;
+		};
+		D56C2DAB24405185001CA006 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = OBJ_1 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = "SecurePropertyStorage::UserDefault";
+			remoteInfo = UserDefault;
+		};
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		D53D6B82243FBAC000D99838 /* InjectError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InjectError.swift; sourceTree = "<group>"; };
-		OBJ_10 /* InjectStorage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InjectStorage.swift; sourceTree = "<group>"; };
-		OBJ_12 /* CryptoData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CryptoData.swift; sourceTree = "<group>"; };
-		OBJ_13 /* Keychain.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Keychain.swift; sourceTree = "<group>"; };
-		OBJ_14 /* KeychainError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KeychainError.swift; sourceTree = "<group>"; };
-		OBJ_15 /* KeychainStorage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KeychainStorage.swift; sourceTree = "<group>"; };
-		OBJ_17 /* Singleton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Singleton.swift; sourceTree = "<group>"; };
-		OBJ_18 /* SingletonStorage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SingletonStorage.swift; sourceTree = "<group>"; };
-		OBJ_20 /* DataConvertible.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataConvertible.swift; sourceTree = "<group>"; };
-		OBJ_21 /* DelegatedStorage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DelegatedStorage.swift; sourceTree = "<group>"; };
-		OBJ_22 /* Storage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Storage.swift; sourceTree = "<group>"; };
-		OBJ_23 /* StorageData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StorageData.swift; sourceTree = "<group>"; };
-		OBJ_24 /* StorageDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StorageDelegate.swift; sourceTree = "<group>"; };
-		OBJ_25 /* Store.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Store.swift; sourceTree = "<group>"; };
-		OBJ_27 /* UserDefault.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserDefault.swift; sourceTree = "<group>"; };
-		OBJ_28 /* UserDefaultsStorage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserDefaultsStorage.swift; sourceTree = "<group>"; };
-		OBJ_31 /* InjectTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InjectTests.swift; sourceTree = "<group>"; };
-		OBJ_32 /* KeychainTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KeychainTests.swift; sourceTree = "<group>"; };
-		OBJ_33 /* SingletonTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SingletonTests.swift; sourceTree = "<group>"; };
-		OBJ_34 /* UserDefaultTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserDefaultTests.swift; sourceTree = "<group>"; };
-		OBJ_35 /* XCTestManifests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = XCTestManifests.swift; sourceTree = "<group>"; };
-		OBJ_43 /* docs */ = {isa = PBXFileReference; lastKnownFileType = folder; path = docs; sourceTree = SOURCE_ROOT; };
-		OBJ_44 /* LICENSE */ = {isa = PBXFileReference; lastKnownFileType = text; path = LICENSE; sourceTree = "<group>"; };
-		OBJ_45 /* jazzy.sh */ = {isa = PBXFileReference; lastKnownFileType = text.script.sh; path = jazzy.sh; sourceTree = "<group>"; };
-		OBJ_46 /* CHANGELOG.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = CHANGELOG.md; sourceTree = "<group>"; };
-		OBJ_47 /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
+		OBJ_10 /* InjectError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InjectError.swift; sourceTree = "<group>"; };
+		OBJ_11 /* InjectStorage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InjectStorage.swift; sourceTree = "<group>"; };
+		OBJ_13 /* CryptoData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CryptoData.swift; sourceTree = "<group>"; };
+		OBJ_14 /* Keychain.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Keychain.swift; sourceTree = "<group>"; };
+		OBJ_15 /* KeychainError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KeychainError.swift; sourceTree = "<group>"; };
+		OBJ_16 /* KeychainStorage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KeychainStorage.swift; sourceTree = "<group>"; };
+		OBJ_18 /* Singleton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Singleton.swift; sourceTree = "<group>"; };
+		OBJ_19 /* SingletonStorage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SingletonStorage.swift; sourceTree = "<group>"; };
+		OBJ_21 /* DataConvertible.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataConvertible.swift; sourceTree = "<group>"; };
+		OBJ_22 /* DelegatedStorage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DelegatedStorage.swift; sourceTree = "<group>"; };
+		OBJ_23 /* Storage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Storage.swift; sourceTree = "<group>"; };
+		OBJ_24 /* StorageData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StorageData.swift; sourceTree = "<group>"; };
+		OBJ_25 /* StorageDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StorageDelegate.swift; sourceTree = "<group>"; };
+		OBJ_26 /* Store.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Store.swift; sourceTree = "<group>"; };
+		OBJ_28 /* UserDefault.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserDefault.swift; sourceTree = "<group>"; };
+		OBJ_29 /* UserDefaultsStorage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserDefaultsStorage.swift; sourceTree = "<group>"; };
+		OBJ_32 /* InjectTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InjectTests.swift; sourceTree = "<group>"; };
+		OBJ_33 /* KeychainTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KeychainTests.swift; sourceTree = "<group>"; };
+		OBJ_34 /* SingletonTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SingletonTests.swift; sourceTree = "<group>"; };
+		OBJ_35 /* UserDefaultTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserDefaultTests.swift; sourceTree = "<group>"; };
+		OBJ_36 /* XCTestManifests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = XCTestManifests.swift; sourceTree = "<group>"; };
+		OBJ_44 /* docs */ = {isa = PBXFileReference; lastKnownFileType = folder; path = docs; sourceTree = SOURCE_ROOT; };
+		OBJ_45 /* build */ = {isa = PBXFileReference; lastKnownFileType = folder; path = build; sourceTree = SOURCE_ROOT; };
+		OBJ_46 /* LICENSE */ = {isa = PBXFileReference; lastKnownFileType = text; path = LICENSE; sourceTree = "<group>"; };
+		OBJ_47 /* jazzy.sh */ = {isa = PBXFileReference; lastKnownFileType = text.script.sh; path = jazzy.sh; sourceTree = "<group>"; };
+		OBJ_48 /* CHANGELOG.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = CHANGELOG.md; sourceTree = "<group>"; };
+		OBJ_49 /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
 		OBJ_6 /* Package.swift */ = {isa = PBXFileReference; explicitFileType = sourcecode.swift; path = Package.swift; sourceTree = "<group>"; };
 		OBJ_9 /* Inject.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Inject.swift; sourceTree = "<group>"; };
 		"SecurePropertyStorage::Inject::Product" /* Inject.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Inject.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -280,168 +405,166 @@
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
-		OBJ_128 /* Frameworks */ = {
+		OBJ_127 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 0;
 			files = (
-				OBJ_129 /* Inject.framework in Frameworks */,
-				OBJ_130 /* Singleton.framework in Frameworks */,
-				OBJ_131 /* UserDefault.framework in Frameworks */,
-				OBJ_132 /* Keychain.framework in Frameworks */,
-				OBJ_133 /* Storage.framework in Frameworks */,
+				OBJ_128 /* Inject.framework in Frameworks */,
+				OBJ_129 /* Singleton.framework in Frameworks */,
+				OBJ_130 /* UserDefault.framework in Frameworks */,
+				OBJ_131 /* Keychain.framework in Frameworks */,
+				OBJ_132 /* Storage.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		OBJ_145 /* Frameworks */ = {
+		OBJ_144 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 0;
 			files = (
-				OBJ_146 /* Keychain.framework in Frameworks */,
-				OBJ_147 /* Storage.framework in Frameworks */,
+				OBJ_145 /* Keychain.framework in Frameworks */,
+				OBJ_146 /* Storage.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		OBJ_166 /* Frameworks */ = {
+		OBJ_165 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 0;
 			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		OBJ_178 /* Frameworks */ = {
+		OBJ_177 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 0;
 			files = (
-				OBJ_179 /* Keychain.framework in Frameworks */,
-				OBJ_180 /* Storage.framework in Frameworks */,
+				OBJ_178 /* Keychain.framework in Frameworks */,
+				OBJ_179 /* Storage.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		OBJ_55 /* Frameworks */ = {
+		OBJ_58 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 0;
 			files = (
-				OBJ_56 /* Singleton.framework in Frameworks */,
-				OBJ_57 /* Keychain.framework in Frameworks */,
-				OBJ_58 /* Storage.framework in Frameworks */,
+				OBJ_59 /* Storage.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		OBJ_79 /* Frameworks */ = {
+		OBJ_77 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 0;
 			files = (
-				OBJ_80 /* Storage.framework in Frameworks */,
+				OBJ_78 /* Storage.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		OBJ_11 /* Keychain */ = {
+		OBJ_12 /* Keychain */ = {
 			isa = PBXGroup;
 			children = (
-				OBJ_12 /* CryptoData.swift */,
-				OBJ_13 /* Keychain.swift */,
-				OBJ_14 /* KeychainError.swift */,
-				OBJ_15 /* KeychainStorage.swift */,
+				OBJ_13 /* CryptoData.swift */,
+				OBJ_14 /* Keychain.swift */,
+				OBJ_15 /* KeychainError.swift */,
+				OBJ_16 /* KeychainStorage.swift */,
 			);
 			name = Keychain;
 			path = Sources/Keychain;
 			sourceTree = SOURCE_ROOT;
 		};
-		OBJ_16 /* Singleton */ = {
+		OBJ_17 /* Singleton */ = {
 			isa = PBXGroup;
 			children = (
-				OBJ_17 /* Singleton.swift */,
-				OBJ_18 /* SingletonStorage.swift */,
+				OBJ_18 /* Singleton.swift */,
+				OBJ_19 /* SingletonStorage.swift */,
 			);
 			name = Singleton;
 			path = Sources/Singleton;
 			sourceTree = SOURCE_ROOT;
 		};
-		OBJ_19 /* Storage */ = {
+		OBJ_20 /* Storage */ = {
 			isa = PBXGroup;
 			children = (
-				OBJ_20 /* DataConvertible.swift */,
-				OBJ_21 /* DelegatedStorage.swift */,
-				OBJ_22 /* Storage.swift */,
-				OBJ_23 /* StorageData.swift */,
-				OBJ_24 /* StorageDelegate.swift */,
-				OBJ_25 /* Store.swift */,
+				OBJ_21 /* DataConvertible.swift */,
+				OBJ_22 /* DelegatedStorage.swift */,
+				OBJ_23 /* Storage.swift */,
+				OBJ_24 /* StorageData.swift */,
+				OBJ_25 /* StorageDelegate.swift */,
+				OBJ_26 /* Store.swift */,
 			);
 			name = Storage;
 			path = Sources/Storage;
 			sourceTree = SOURCE_ROOT;
 		};
-		OBJ_26 /* UserDefault */ = {
+		OBJ_27 /* UserDefault */ = {
 			isa = PBXGroup;
 			children = (
-				OBJ_27 /* UserDefault.swift */,
-				OBJ_28 /* UserDefaultsStorage.swift */,
+				OBJ_28 /* UserDefault.swift */,
+				OBJ_29 /* UserDefaultsStorage.swift */,
 			);
 			name = UserDefault;
 			path = Sources/UserDefault;
 			sourceTree = SOURCE_ROOT;
 		};
-		OBJ_29 /* Tests */ = {
+		OBJ_30 /* Tests */ = {
 			isa = PBXGroup;
 			children = (
-				OBJ_30 /* SecurePropertyStorageTests */,
+				OBJ_31 /* SecurePropertyStorageTests */,
 			);
 			name = Tests;
 			sourceTree = SOURCE_ROOT;
 		};
-		OBJ_30 /* SecurePropertyStorageTests */ = {
+		OBJ_31 /* SecurePropertyStorageTests */ = {
 			isa = PBXGroup;
 			children = (
-				OBJ_31 /* InjectTests.swift */,
-				OBJ_32 /* KeychainTests.swift */,
-				OBJ_33 /* SingletonTests.swift */,
-				OBJ_34 /* UserDefaultTests.swift */,
-				OBJ_35 /* XCTestManifests.swift */,
+				OBJ_32 /* InjectTests.swift */,
+				OBJ_33 /* KeychainTests.swift */,
+				OBJ_34 /* SingletonTests.swift */,
+				OBJ_35 /* UserDefaultTests.swift */,
+				OBJ_36 /* XCTestManifests.swift */,
 			);
 			name = SecurePropertyStorageTests;
 			path = Tests/SecurePropertyStorageTests;
 			sourceTree = SOURCE_ROOT;
 		};
-		OBJ_36 /* Products */ = {
+		OBJ_37 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				"SecurePropertyStorage::UserDefault::Product" /* UserDefault.framework */,
 				"SecurePropertyStorage::Keychain::Product" /* Keychain.framework */,
 				"SecurePropertyStorage::Storage::Product" /* Storage.framework */,
-				"SecurePropertyStorage::Inject::Product" /* Inject.framework */,
-				"SecurePropertyStorage::Singleton::Product" /* Singleton.framework */,
 				"SecurePropertyStorage::SecurePropertyStorageTests::Product" /* SecurePropertyStorageTests.xctest */,
+				"SecurePropertyStorage::Singleton::Product" /* Singleton.framework */,
+				"SecurePropertyStorage::Inject::Product" /* Inject.framework */,
+				"SecurePropertyStorage::UserDefault::Product" /* UserDefault.framework */,
 			);
 			name = Products;
 			sourceTree = BUILT_PRODUCTS_DIR;
 		};
-		OBJ_5 /*  */ = {
+		OBJ_5 = {
 			isa = PBXGroup;
 			children = (
 				OBJ_6 /* Package.swift */,
 				OBJ_7 /* Sources */,
-				OBJ_29 /* Tests */,
-				OBJ_36 /* Products */,
-				OBJ_43 /* docs */,
-				OBJ_44 /* LICENSE */,
-				OBJ_45 /* jazzy.sh */,
-				OBJ_46 /* CHANGELOG.md */,
-				OBJ_47 /* README.md */,
+				OBJ_30 /* Tests */,
+				OBJ_37 /* Products */,
+				OBJ_44 /* docs */,
+				OBJ_45 /* build */,
+				OBJ_46 /* LICENSE */,
+				OBJ_47 /* jazzy.sh */,
+				OBJ_48 /* CHANGELOG.md */,
+				OBJ_49 /* README.md */,
 			);
-			name = "";
 			sourceTree = "<group>";
 		};
 		OBJ_7 /* Sources */ = {
 			isa = PBXGroup;
 			children = (
 				OBJ_8 /* Inject */,
-				OBJ_11 /* Keychain */,
-				OBJ_16 /* Singleton */,
-				OBJ_19 /* Storage */,
-				OBJ_26 /* UserDefault */,
+				OBJ_12 /* Keychain */,
+				OBJ_17 /* Singleton */,
+				OBJ_20 /* Storage */,
+				OBJ_27 /* UserDefault */,
 			);
 			name = Sources;
 			sourceTree = SOURCE_ROOT;
@@ -450,8 +573,8 @@
 			isa = PBXGroup;
 			children = (
 				OBJ_9 /* Inject.swift */,
-				OBJ_10 /* InjectStorage.swift */,
-				D53D6B82243FBAC000D99838 /* InjectError.swift */,
+				OBJ_10 /* InjectError.swift */,
+				OBJ_11 /* InjectStorage.swift */,
 			);
 			name = Inject;
 			path = Sources/Inject;
@@ -462,17 +585,15 @@
 /* Begin PBXNativeTarget section */
 		"SecurePropertyStorage::Inject" /* Inject */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = OBJ_49 /* Build configuration list for PBXNativeTarget "Inject" */;
+			buildConfigurationList = OBJ_51 /* Build configuration list for PBXNativeTarget "Inject" */;
 			buildPhases = (
-				OBJ_52 /* Sources */,
-				OBJ_55 /* Frameworks */,
+				OBJ_54 /* Sources */,
+				OBJ_58 /* Frameworks */,
 			);
 			buildRules = (
 			);
 			dependencies = (
-				OBJ_59 /* PBXTargetDependency */,
-				OBJ_61 /* PBXTargetDependency */,
-				OBJ_63 /* PBXTargetDependency */,
+				OBJ_60 /* PBXTargetDependency */,
 			);
 			name = Inject;
 			productName = Inject;
@@ -481,15 +602,15 @@
 		};
 		"SecurePropertyStorage::Keychain" /* Keychain */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = OBJ_71 /* Build configuration list for PBXNativeTarget "Keychain" */;
+			buildConfigurationList = OBJ_69 /* Build configuration list for PBXNativeTarget "Keychain" */;
 			buildPhases = (
-				OBJ_74 /* Sources */,
-				OBJ_79 /* Frameworks */,
+				OBJ_72 /* Sources */,
+				OBJ_77 /* Frameworks */,
 			);
 			buildRules = (
 			);
 			dependencies = (
-				OBJ_81 /* PBXTargetDependency */,
+				OBJ_79 /* PBXTargetDependency */,
 			);
 			name = Keychain;
 			productName = Keychain;
@@ -498,19 +619,19 @@
 		};
 		"SecurePropertyStorage::SecurePropertyStorageTests" /* SecurePropertyStorageTests */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = OBJ_119 /* Build configuration list for PBXNativeTarget "SecurePropertyStorageTests" */;
+			buildConfigurationList = OBJ_118 /* Build configuration list for PBXNativeTarget "SecurePropertyStorageTests" */;
 			buildPhases = (
-				OBJ_122 /* Sources */,
-				OBJ_128 /* Frameworks */,
+				OBJ_121 /* Sources */,
+				OBJ_127 /* Frameworks */,
 			);
 			buildRules = (
 			);
 			dependencies = (
+				OBJ_133 /* PBXTargetDependency */,
 				OBJ_134 /* PBXTargetDependency */,
 				OBJ_135 /* PBXTargetDependency */,
 				OBJ_136 /* PBXTargetDependency */,
 				OBJ_137 /* PBXTargetDependency */,
-				OBJ_138 /* PBXTargetDependency */,
 			);
 			name = SecurePropertyStorageTests;
 			productName = SecurePropertyStorageTests;
@@ -519,16 +640,16 @@
 		};
 		"SecurePropertyStorage::Singleton" /* Singleton */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = OBJ_139 /* Build configuration list for PBXNativeTarget "Singleton" */;
+			buildConfigurationList = OBJ_138 /* Build configuration list for PBXNativeTarget "Singleton" */;
 			buildPhases = (
-				OBJ_142 /* Sources */,
-				OBJ_145 /* Frameworks */,
+				OBJ_141 /* Sources */,
+				OBJ_144 /* Frameworks */,
 			);
 			buildRules = (
 			);
 			dependencies = (
+				OBJ_147 /* PBXTargetDependency */,
 				OBJ_148 /* PBXTargetDependency */,
-				OBJ_149 /* PBXTargetDependency */,
 			);
 			name = Singleton;
 			productName = Singleton;
@@ -537,10 +658,11 @@
 		};
 		"SecurePropertyStorage::Storage" /* Storage */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = OBJ_156 /* Build configuration list for PBXNativeTarget "Storage" */;
+			buildConfigurationList = OBJ_155 /* Build configuration list for PBXNativeTarget "Storage" */;
 			buildPhases = (
-				OBJ_159 /* Sources */,
-				OBJ_166 /* Frameworks */,
+				OBJ_158 /* Sources */,
+				OBJ_165 /* Frameworks */,
+				D56C2DAC24405190001CA006 /* SwiftLint */,
 			);
 			buildRules = (
 			);
@@ -553,9 +675,9 @@
 		};
 		"SecurePropertyStorage::SwiftPMPackageDescription" /* SecurePropertyStoragePackageDescription */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = OBJ_108 /* Build configuration list for PBXNativeTarget "SecurePropertyStoragePackageDescription" */;
+			buildConfigurationList = OBJ_107 /* Build configuration list for PBXNativeTarget "SecurePropertyStoragePackageDescription" */;
 			buildPhases = (
-				OBJ_111 /* Sources */,
+				OBJ_110 /* Sources */,
 			);
 			buildRules = (
 			);
@@ -567,16 +689,16 @@
 		};
 		"SecurePropertyStorage::UserDefault" /* UserDefault */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = OBJ_172 /* Build configuration list for PBXNativeTarget "UserDefault" */;
+			buildConfigurationList = OBJ_171 /* Build configuration list for PBXNativeTarget "UserDefault" */;
 			buildPhases = (
-				OBJ_175 /* Sources */,
-				OBJ_178 /* Frameworks */,
+				OBJ_174 /* Sources */,
+				OBJ_177 /* Frameworks */,
 			);
 			buildRules = (
 			);
 			dependencies = (
+				OBJ_180 /* PBXTargetDependency */,
 				OBJ_181 /* PBXTargetDependency */,
-				OBJ_182 /* PBXTargetDependency */,
 			);
 			name = UserDefault;
 			productName = UserDefault;
@@ -599,8 +721,8 @@
 			knownRegions = (
 				en,
 			);
-			mainGroup = OBJ_5 /*  */;
-			productRefGroup = OBJ_36 /* Products */;
+			mainGroup = OBJ_5;
+			productRefGroup = OBJ_37 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
@@ -623,293 +745,298 @@
 		};
 /* End PBXProject section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		D56C2DAC24405190001CA006 /* SwiftLint */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+			);
+			name = SwiftLint;
+			outputFileListPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "if which swiftlint >/dev/null; then\n  swiftlint\nelse\n  echo \"warning: SwiftLint not installed, download from https://github.com/realm/SwiftLint\"\nfi\n";
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
-		OBJ_111 /* Sources */ = {
+		OBJ_110 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 0;
 			files = (
-				OBJ_112 /* Package.swift in Sources */,
+				OBJ_111 /* Package.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		OBJ_122 /* Sources */ = {
+		OBJ_121 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 0;
 			files = (
-				OBJ_123 /* InjectTests.swift in Sources */,
-				OBJ_124 /* KeychainTests.swift in Sources */,
-				OBJ_125 /* SingletonTests.swift in Sources */,
-				OBJ_126 /* UserDefaultTests.swift in Sources */,
-				OBJ_127 /* XCTestManifests.swift in Sources */,
+				OBJ_122 /* InjectTests.swift in Sources */,
+				OBJ_123 /* KeychainTests.swift in Sources */,
+				OBJ_124 /* SingletonTests.swift in Sources */,
+				OBJ_125 /* UserDefaultTests.swift in Sources */,
+				OBJ_126 /* XCTestManifests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		OBJ_142 /* Sources */ = {
+		OBJ_141 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 0;
 			files = (
-				OBJ_143 /* Singleton.swift in Sources */,
-				OBJ_144 /* SingletonStorage.swift in Sources */,
+				OBJ_142 /* Singleton.swift in Sources */,
+				OBJ_143 /* SingletonStorage.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		OBJ_159 /* Sources */ = {
+		OBJ_158 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 0;
 			files = (
-				OBJ_160 /* DataConvertible.swift in Sources */,
-				OBJ_161 /* DelegatedStorage.swift in Sources */,
-				OBJ_162 /* Storage.swift in Sources */,
-				OBJ_163 /* StorageData.swift in Sources */,
-				OBJ_164 /* StorageDelegate.swift in Sources */,
-				OBJ_165 /* Store.swift in Sources */,
+				OBJ_159 /* DataConvertible.swift in Sources */,
+				OBJ_160 /* DelegatedStorage.swift in Sources */,
+				OBJ_161 /* Storage.swift in Sources */,
+				OBJ_162 /* StorageData.swift in Sources */,
+				OBJ_163 /* StorageDelegate.swift in Sources */,
+				OBJ_164 /* Store.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		OBJ_175 /* Sources */ = {
+		OBJ_174 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 0;
 			files = (
-				OBJ_176 /* UserDefault.swift in Sources */,
-				OBJ_177 /* UserDefaultsStorage.swift in Sources */,
+				OBJ_175 /* UserDefault.swift in Sources */,
+				OBJ_176 /* UserDefaultsStorage.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		OBJ_52 /* Sources */ = {
+		OBJ_54 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 0;
 			files = (
-				OBJ_53 /* Inject.swift in Sources */,
-				D53D6B83243FBAC000D99838 /* InjectError.swift in Sources */,
-				OBJ_54 /* InjectStorage.swift in Sources */,
+				OBJ_55 /* Inject.swift in Sources */,
+				OBJ_56 /* InjectError.swift in Sources */,
+				OBJ_57 /* InjectStorage.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		OBJ_74 /* Sources */ = {
+		OBJ_72 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 0;
 			files = (
-				OBJ_75 /* CryptoData.swift in Sources */,
-				OBJ_76 /* Keychain.swift in Sources */,
-				OBJ_77 /* KeychainError.swift in Sources */,
-				OBJ_78 /* KeychainStorage.swift in Sources */,
+				OBJ_73 /* CryptoData.swift in Sources */,
+				OBJ_74 /* Keychain.swift in Sources */,
+				OBJ_75 /* KeychainError.swift in Sources */,
+				OBJ_76 /* KeychainStorage.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
-		OBJ_102 /* PBXTargetDependency */ = {
+		OBJ_101 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			target = "SecurePropertyStorage::Storage" /* Storage */;
-			targetProxy = "SecurePropertyStorage::Storage" /* Storage */;
+			targetProxy = D56C2DA124405185001CA006 /* PBXContainerItemProxy */;
+		};
+		OBJ_102 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = "SecurePropertyStorage::UserDefault" /* UserDefault */;
+			targetProxy = D56C2DA224405185001CA006 /* PBXContainerItemProxy */;
 		};
 		OBJ_103 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = "SecurePropertyStorage::UserDefault" /* UserDefault */;
-			targetProxy = "SecurePropertyStorage::UserDefault" /* UserDefault */;
+			target = "SecurePropertyStorage::Singleton" /* Singleton */;
+			targetProxy = D56C2DA324405185001CA006 /* PBXContainerItemProxy */;
 		};
 		OBJ_104 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = "SecurePropertyStorage::Singleton" /* Singleton */;
-			targetProxy = "SecurePropertyStorage::Singleton" /* Singleton */;
+			target = "SecurePropertyStorage::Keychain" /* Keychain */;
+			targetProxy = D56C2DA424405185001CA006 /* PBXContainerItemProxy */;
 		};
 		OBJ_105 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = "SecurePropertyStorage::Keychain" /* Keychain */;
-			targetProxy = "SecurePropertyStorage::Keychain" /* Keychain */;
-		};
-		OBJ_106 /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
 			target = "SecurePropertyStorage::Inject" /* Inject */;
-			targetProxy = "SecurePropertyStorage::Inject" /* Inject */;
+			targetProxy = D56C2DA524405185001CA006 /* PBXContainerItemProxy */;
 		};
-		OBJ_117 /* PBXTargetDependency */ = {
+		OBJ_116 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			target = "SecurePropertyStorage::SecurePropertyStorageTests" /* SecurePropertyStorageTests */;
-			targetProxy = "SecurePropertyStorage::SecurePropertyStorageTests" /* SecurePropertyStorageTests */;
+			targetProxy = D56C2DA624405185001CA006 /* PBXContainerItemProxy */;
+		};
+		OBJ_133 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = "SecurePropertyStorage::Inject" /* Inject */;
+			targetProxy = D56C2D9324405184001CA006 /* PBXContainerItemProxy */;
 		};
 		OBJ_134 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = "SecurePropertyStorage::Inject" /* Inject */;
-			targetProxy = D53D6B7D243F542500D99838 /* PBXContainerItemProxy */;
+			target = "SecurePropertyStorage::Singleton" /* Singleton */;
+			targetProxy = D56C2D9424405184001CA006 /* PBXContainerItemProxy */;
 		};
 		OBJ_135 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = "SecurePropertyStorage::Singleton" /* Singleton */;
-			targetProxy = D53D6B7E243F542500D99838 /* PBXContainerItemProxy */;
+			target = "SecurePropertyStorage::UserDefault" /* UserDefault */;
+			targetProxy = D56C2D9524405184001CA006 /* PBXContainerItemProxy */;
 		};
 		OBJ_136 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = "SecurePropertyStorage::UserDefault" /* UserDefault */;
-			targetProxy = D53D6B7F243F542500D99838 /* PBXContainerItemProxy */;
+			target = "SecurePropertyStorage::Keychain" /* Keychain */;
+			targetProxy = D56C2D9624405184001CA006 /* PBXContainerItemProxy */;
 		};
 		OBJ_137 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = "SecurePropertyStorage::Keychain" /* Keychain */;
-			targetProxy = D53D6B80243F542500D99838 /* PBXContainerItemProxy */;
-		};
-		OBJ_138 /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
 			target = "SecurePropertyStorage::Storage" /* Storage */;
-			targetProxy = D53D6B81243F542500D99838 /* PBXContainerItemProxy */;
+			targetProxy = D56C2D9724405184001CA006 /* PBXContainerItemProxy */;
+		};
+		OBJ_147 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = "SecurePropertyStorage::Keychain" /* Keychain */;
+			targetProxy = D56C2D8F24405184001CA006 /* PBXContainerItemProxy */;
 		};
 		OBJ_148 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = "SecurePropertyStorage::Keychain" /* Keychain */;
-			targetProxy = D53D6B78243F542300D99838 /* PBXContainerItemProxy */;
+			target = "SecurePropertyStorage::Storage" /* Storage */;
+			targetProxy = D56C2D9024405184001CA006 /* PBXContainerItemProxy */;
 		};
-		OBJ_149 /* PBXTargetDependency */ = {
+		OBJ_153 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			target = "SecurePropertyStorage::Storage" /* Storage */;
-			targetProxy = D53D6B79243F542300D99838 /* PBXContainerItemProxy */;
+			targetProxy = D56C2DA724405185001CA006 /* PBXContainerItemProxy */;
 		};
 		OBJ_154 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = "SecurePropertyStorage::Storage" /* Storage */;
-			targetProxy = "SecurePropertyStorage::Storage" /* Storage */;
-		};
-		OBJ_155 /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
 			target = "SecurePropertyStorage::Singleton" /* Singleton */;
-			targetProxy = "SecurePropertyStorage::Singleton" /* Singleton */;
+			targetProxy = D56C2DA824405185001CA006 /* PBXContainerItemProxy */;
 		};
-		OBJ_171 /* PBXTargetDependency */ = {
+		OBJ_170 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			target = "SecurePropertyStorage::Storage" /* Storage */;
-			targetProxy = "SecurePropertyStorage::Storage" /* Storage */;
+			targetProxy = D56C2DA924405185001CA006 /* PBXContainerItemProxy */;
+		};
+		OBJ_180 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = "SecurePropertyStorage::Keychain" /* Keychain */;
+			targetProxy = D56C2D9124405184001CA006 /* PBXContainerItemProxy */;
 		};
 		OBJ_181 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = "SecurePropertyStorage::Keychain" /* Keychain */;
-			targetProxy = D53D6B75243F542300D99838 /* PBXContainerItemProxy */;
+			target = "SecurePropertyStorage::Storage" /* Storage */;
+			targetProxy = D56C2D9224405184001CA006 /* PBXContainerItemProxy */;
 		};
-		OBJ_182 /* PBXTargetDependency */ = {
+		OBJ_186 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			target = "SecurePropertyStorage::Storage" /* Storage */;
-			targetProxy = D53D6B77243F542300D99838 /* PBXContainerItemProxy */;
+			targetProxy = D56C2DAA24405185001CA006 /* PBXContainerItemProxy */;
 		};
 		OBJ_187 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = "SecurePropertyStorage::Storage" /* Storage */;
-			targetProxy = "SecurePropertyStorage::Storage" /* Storage */;
-		};
-		OBJ_188 /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
 			target = "SecurePropertyStorage::UserDefault" /* UserDefault */;
-			targetProxy = "SecurePropertyStorage::UserDefault" /* UserDefault */;
+			targetProxy = D56C2DAB24405185001CA006 /* PBXContainerItemProxy */;
 		};
-		OBJ_59 /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			target = "SecurePropertyStorage::Singleton" /* Singleton */;
-			targetProxy = D53D6B7A243F542300D99838 /* PBXContainerItemProxy */;
-		};
-		OBJ_61 /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			target = "SecurePropertyStorage::Keychain" /* Keychain */;
-			targetProxy = D53D6B7B243F542300D99838 /* PBXContainerItemProxy */;
-		};
-		OBJ_63 /* PBXTargetDependency */ = {
+		OBJ_60 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			target = "SecurePropertyStorage::Storage" /* Storage */;
-			targetProxy = D53D6B7C243F542300D99838 /* PBXContainerItemProxy */;
+			targetProxy = D56C2D8E24405184001CA006 /* PBXContainerItemProxy */;
 		};
-		OBJ_69 /* PBXTargetDependency */ = {
+		OBJ_66 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			target = "SecurePropertyStorage::Storage" /* Storage */;
-			targetProxy = "SecurePropertyStorage::Storage" /* Storage */;
+			targetProxy = D56C2D9824405185001CA006 /* PBXContainerItemProxy */;
 		};
-		OBJ_70 /* PBXTargetDependency */ = {
+		OBJ_67 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			target = "SecurePropertyStorage::Inject" /* Inject */;
-			targetProxy = "SecurePropertyStorage::Inject" /* Inject */;
+			targetProxy = D56C2D9924405185001CA006 /* PBXContainerItemProxy */;
 		};
-		OBJ_81 /* PBXTargetDependency */ = {
+		OBJ_79 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			target = "SecurePropertyStorage::Storage" /* Storage */;
-			targetProxy = D53D6B76243F542300D99838 /* PBXContainerItemProxy */;
+			targetProxy = D56C2D8D24405184001CA006 /* PBXContainerItemProxy */;
 		};
-		OBJ_86 /* PBXTargetDependency */ = {
+		OBJ_84 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			target = "SecurePropertyStorage::Storage" /* Storage */;
-			targetProxy = "SecurePropertyStorage::Storage" /* Storage */;
+			targetProxy = D56C2D9A24405185001CA006 /* PBXContainerItemProxy */;
 		};
-		OBJ_87 /* PBXTargetDependency */ = {
+		OBJ_85 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			target = "SecurePropertyStorage::Keychain" /* Keychain */;
-			targetProxy = "SecurePropertyStorage::Keychain" /* Keychain */;
+			targetProxy = D56C2D9B24405185001CA006 /* PBXContainerItemProxy */;
 		};
-		OBJ_92 /* PBXTargetDependency */ = {
+		OBJ_90 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			target = "SecurePropertyStorage::Storage" /* Storage */;
-			targetProxy = "SecurePropertyStorage::Storage" /* Storage */;
+			targetProxy = D56C2D9C24405185001CA006 /* PBXContainerItemProxy */;
+		};
+		OBJ_91 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = "SecurePropertyStorage::UserDefault" /* UserDefault */;
+			targetProxy = D56C2D9D24405185001CA006 /* PBXContainerItemProxy */;
 		};
 		OBJ_93 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = "SecurePropertyStorage::UserDefault" /* UserDefault */;
-			targetProxy = "SecurePropertyStorage::UserDefault" /* UserDefault */;
+			target = "SecurePropertyStorage::Singleton" /* Singleton */;
+			targetProxy = D56C2D9E24405185001CA006 /* PBXContainerItemProxy */;
 		};
 		OBJ_95 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = "SecurePropertyStorage::Singleton" /* Singleton */;
-			targetProxy = "SecurePropertyStorage::Singleton" /* Singleton */;
+			target = "SecurePropertyStorage::Keychain" /* Keychain */;
+			targetProxy = D56C2D9F24405185001CA006 /* PBXContainerItemProxy */;
 		};
 		OBJ_96 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = "SecurePropertyStorage::Keychain" /* Keychain */;
-			targetProxy = "SecurePropertyStorage::Keychain" /* Keychain */;
-		};
-		OBJ_97 /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
 			target = "SecurePropertyStorage::Inject" /* Inject */;
-			targetProxy = "SecurePropertyStorage::Inject" /* Inject */;
+			targetProxy = D56C2DA024405185001CA006 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
 /* Begin XCBuildConfiguration section */
-		OBJ_100 /* Debug */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-			};
-			name = Debug;
-		};
-		OBJ_101 /* Release */ = {
+		OBJ_100 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 			};
 			name = Release;
 		};
-		OBJ_109 /* Debug */ = {
+		OBJ_108 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				LD = /usr/bin/true;
-				OTHER_SWIFT_FLAGS = "-swift-version 5 -I $(TOOLCHAIN_DIR)/usr/lib/swift/pm/4_2 -target x86_64-apple-macosx10.10 -sdk /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.15.sdk -package-description-version 5.2.0";
+				OTHER_SWIFT_FLAGS = "-swift-version 5 -I $(TOOLCHAIN_DIR)/usr/lib/swift/pm/4_2 -target x86_64-apple-macosx10.10 -sdk /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.15.sdk -package-description-version 5.1.0";
 				SWIFT_VERSION = 5.0;
 			};
 			name = Debug;
 		};
-		OBJ_110 /* Release */ = {
+		OBJ_109 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				LD = /usr/bin/true;
-				OTHER_SWIFT_FLAGS = "-swift-version 5 -I $(TOOLCHAIN_DIR)/usr/lib/swift/pm/4_2 -target x86_64-apple-macosx10.10 -sdk /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.15.sdk -package-description-version 5.2.0";
+				OTHER_SWIFT_FLAGS = "-swift-version 5 -I $(TOOLCHAIN_DIR)/usr/lib/swift/pm/4_2 -target x86_64-apple-macosx10.10 -sdk /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.15.sdk -package-description-version 5.1.0";
 				SWIFT_VERSION = 5.0;
 			};
 			name = Release;
 		};
-		OBJ_115 /* Debug */ = {
+		OBJ_114 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 			};
 			name = Debug;
 		};
-		OBJ_116 /* Release */ = {
+		OBJ_115 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 			};
 			name = Release;
 		};
-		OBJ_120 /* Debug */ = {
+		OBJ_119 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				CLANG_ENABLE_MODULES = YES;
@@ -934,7 +1061,7 @@
 			};
 			name = Debug;
 		};
-		OBJ_121 /* Release */ = {
+		OBJ_120 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				CLANG_ENABLE_MODULES = YES;
@@ -959,7 +1086,7 @@
 			};
 			name = Release;
 		};
-		OBJ_140 /* Debug */ = {
+		OBJ_139 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ENABLE_TESTABILITY = YES;
@@ -987,7 +1114,7 @@
 			};
 			name = Debug;
 		};
-		OBJ_141 /* Release */ = {
+		OBJ_140 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ENABLE_TESTABILITY = YES;
@@ -1015,19 +1142,19 @@
 			};
 			name = Release;
 		};
-		OBJ_152 /* Debug */ = {
+		OBJ_151 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 			};
 			name = Debug;
 		};
-		OBJ_153 /* Release */ = {
+		OBJ_152 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 			};
 			name = Release;
 		};
-		OBJ_157 /* Debug */ = {
+		OBJ_156 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ENABLE_TESTABILITY = YES;
@@ -1055,7 +1182,7 @@
 			};
 			name = Debug;
 		};
-		OBJ_158 /* Release */ = {
+		OBJ_157 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ENABLE_TESTABILITY = YES;
@@ -1083,19 +1210,19 @@
 			};
 			name = Release;
 		};
-		OBJ_169 /* Debug */ = {
+		OBJ_168 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 			};
 			name = Debug;
 		};
-		OBJ_170 /* Release */ = {
+		OBJ_169 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 			};
 			name = Release;
 		};
-		OBJ_173 /* Debug */ = {
+		OBJ_172 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ENABLE_TESTABILITY = YES;
@@ -1123,7 +1250,7 @@
 			};
 			name = Debug;
 		};
-		OBJ_174 /* Release */ = {
+		OBJ_173 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ENABLE_TESTABILITY = YES;
@@ -1151,13 +1278,13 @@
 			};
 			name = Release;
 		};
-		OBJ_185 /* Debug */ = {
+		OBJ_184 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 			};
 			name = Debug;
 		};
-		OBJ_186 /* Release */ = {
+		OBJ_185 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 			};
@@ -1214,7 +1341,7 @@
 			};
 			name = Release;
 		};
-		OBJ_50 /* Debug */ = {
+		OBJ_52 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ENABLE_TESTABILITY = YES;
@@ -1242,7 +1369,7 @@
 			};
 			name = Debug;
 		};
-		OBJ_51 /* Release */ = {
+		OBJ_53 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ENABLE_TESTABILITY = YES;
@@ -1270,19 +1397,19 @@
 			};
 			name = Release;
 		};
-		OBJ_67 /* Debug */ = {
+		OBJ_64 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 			};
 			name = Debug;
 		};
-		OBJ_68 /* Release */ = {
+		OBJ_65 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 			};
 			name = Release;
 		};
-		OBJ_72 /* Debug */ = {
+		OBJ_70 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ENABLE_TESTABILITY = YES;
@@ -1310,7 +1437,7 @@
 			};
 			name = Debug;
 		};
-		OBJ_73 /* Release */ = {
+		OBJ_71 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ENABLE_TESTABILITY = YES;
@@ -1338,110 +1465,116 @@
 			};
 			name = Release;
 		};
-		OBJ_84 /* Debug */ = {
+		OBJ_82 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 			};
 			name = Debug;
 		};
-		OBJ_85 /* Release */ = {
+		OBJ_83 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 			};
 			name = Release;
 		};
-		OBJ_90 /* Debug */ = {
+		OBJ_88 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 			};
 			name = Debug;
 		};
-		OBJ_91 /* Release */ = {
+		OBJ_89 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 			};
 			name = Release;
+		};
+		OBJ_99 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+			};
+			name = Debug;
 		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		OBJ_108 /* Build configuration list for PBXNativeTarget "SecurePropertyStoragePackageDescription" */ = {
+		OBJ_107 /* Build configuration list for PBXNativeTarget "SecurePropertyStoragePackageDescription" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				OBJ_109 /* Debug */,
-				OBJ_110 /* Release */,
+				OBJ_108 /* Debug */,
+				OBJ_109 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		OBJ_114 /* Build configuration list for PBXAggregateTarget "SecurePropertyStoragePackageTests" */ = {
+		OBJ_113 /* Build configuration list for PBXAggregateTarget "SecurePropertyStoragePackageTests" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				OBJ_115 /* Debug */,
-				OBJ_116 /* Release */,
+				OBJ_114 /* Debug */,
+				OBJ_115 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		OBJ_119 /* Build configuration list for PBXNativeTarget "SecurePropertyStorageTests" */ = {
+		OBJ_118 /* Build configuration list for PBXNativeTarget "SecurePropertyStorageTests" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				OBJ_120 /* Debug */,
-				OBJ_121 /* Release */,
+				OBJ_119 /* Debug */,
+				OBJ_120 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		OBJ_139 /* Build configuration list for PBXNativeTarget "Singleton" */ = {
+		OBJ_138 /* Build configuration list for PBXNativeTarget "Singleton" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				OBJ_140 /* Debug */,
-				OBJ_141 /* Release */,
+				OBJ_139 /* Debug */,
+				OBJ_140 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		OBJ_151 /* Build configuration list for PBXAggregateTarget "SingletonDynamic" */ = {
+		OBJ_150 /* Build configuration list for PBXAggregateTarget "SingletonDynamic" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				OBJ_152 /* Debug */,
-				OBJ_153 /* Release */,
+				OBJ_151 /* Debug */,
+				OBJ_152 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		OBJ_156 /* Build configuration list for PBXNativeTarget "Storage" */ = {
+		OBJ_155 /* Build configuration list for PBXNativeTarget "Storage" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				OBJ_157 /* Debug */,
-				OBJ_158 /* Release */,
+				OBJ_156 /* Debug */,
+				OBJ_157 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		OBJ_168 /* Build configuration list for PBXAggregateTarget "StorageDynamic" */ = {
+		OBJ_167 /* Build configuration list for PBXAggregateTarget "StorageDynamic" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				OBJ_169 /* Debug */,
-				OBJ_170 /* Release */,
+				OBJ_168 /* Debug */,
+				OBJ_169 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		OBJ_172 /* Build configuration list for PBXNativeTarget "UserDefault" */ = {
+		OBJ_171 /* Build configuration list for PBXNativeTarget "UserDefault" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				OBJ_173 /* Debug */,
-				OBJ_174 /* Release */,
+				OBJ_172 /* Debug */,
+				OBJ_173 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		OBJ_184 /* Build configuration list for PBXAggregateTarget "UserDefaultDynamic" */ = {
+		OBJ_183 /* Build configuration list for PBXAggregateTarget "UserDefaultDynamic" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				OBJ_185 /* Debug */,
-				OBJ_186 /* Release */,
+				OBJ_184 /* Debug */,
+				OBJ_185 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
@@ -1455,56 +1588,56 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		OBJ_49 /* Build configuration list for PBXNativeTarget "Inject" */ = {
+		OBJ_51 /* Build configuration list for PBXNativeTarget "Inject" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				OBJ_50 /* Debug */,
-				OBJ_51 /* Release */,
+				OBJ_52 /* Debug */,
+				OBJ_53 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		OBJ_66 /* Build configuration list for PBXAggregateTarget "InjectDynamic" */ = {
+		OBJ_63 /* Build configuration list for PBXAggregateTarget "InjectDynamic" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				OBJ_67 /* Debug */,
-				OBJ_68 /* Release */,
+				OBJ_64 /* Debug */,
+				OBJ_65 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		OBJ_71 /* Build configuration list for PBXNativeTarget "Keychain" */ = {
+		OBJ_69 /* Build configuration list for PBXNativeTarget "Keychain" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				OBJ_72 /* Debug */,
-				OBJ_73 /* Release */,
+				OBJ_70 /* Debug */,
+				OBJ_71 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		OBJ_83 /* Build configuration list for PBXAggregateTarget "KeychainDynamic" */ = {
+		OBJ_81 /* Build configuration list for PBXAggregateTarget "KeychainDynamic" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				OBJ_84 /* Debug */,
-				OBJ_85 /* Release */,
+				OBJ_82 /* Debug */,
+				OBJ_83 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		OBJ_89 /* Build configuration list for PBXAggregateTarget "SecurePropertyStorage" */ = {
+		OBJ_87 /* Build configuration list for PBXAggregateTarget "SecurePropertyStorage" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				OBJ_90 /* Debug */,
-				OBJ_91 /* Release */,
+				OBJ_88 /* Debug */,
+				OBJ_89 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		OBJ_99 /* Build configuration list for PBXAggregateTarget "SecurePropertyStorageDynamic" */ = {
+		OBJ_98 /* Build configuration list for PBXAggregateTarget "SecurePropertyStorageDynamic" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				OBJ_100 /* Debug */,
-				OBJ_101 /* Release */,
+				OBJ_99 /* Debug */,
+				OBJ_100 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;

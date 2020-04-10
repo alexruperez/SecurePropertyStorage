@@ -89,8 +89,10 @@ public class UnwrappedInject<Dependency>: InjectPropertyWrapper<Dependency> {
     public var wrappedValue: Dependency {
         do {
             return try resolve()
+        } catch let error as InjectError {
+            fatalError(error.description)
         } catch {
-            fatalError((error as! InjectError).description)
+            fatalError(error.localizedDescription)
         }
     }
 }
@@ -113,8 +115,10 @@ public class Register<Dependency>: InjectPropertyWrapper<Dependency> {
         get {
             do {
                 return try resolve()
+            } catch let error as InjectError {
+                fatalError(error.description)
             } catch {
-                fatalError((error as! InjectError).description)
+                fatalError(error.localizedDescription)
             }
         }
         set { register(newValue) }

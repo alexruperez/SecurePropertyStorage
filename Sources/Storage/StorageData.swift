@@ -1,5 +1,5 @@
-import Foundation
 import CryptoKit
+import Foundation
 
 /// Indicates that the conforming type is a contiguous collection of raw bytes
 /// whose underlying storage is directly accessible by withUnsafeBytes.

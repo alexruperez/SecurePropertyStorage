@@ -1,5 +1,5 @@
-import XCTest
 @testable import Inject
+import XCTest
 
 protocol SubDependencyProtocol {}
 
@@ -21,8 +21,10 @@ protocol DependencyProtocol {
 
 class Dependency: DependencyProtocol, Equatable, DependencyQualifier {
     let timestamp = Date().timeIntervalSince1970
-    @Inject var sub: SubDependencyProtocol?
-    @Inject var subClass: SubDependency?
+    @Inject
+    var sub: SubDependencyProtocol?
+    @Inject
+    var subClass: SubDependency?
     var subDependency: SubDependency? { sub as? SubDependency }
 
     static func == (lhs: Dependency, rhs: Dependency) -> Bool {
@@ -35,16 +37,26 @@ class AlternativeDependency: DependencyProtocol, AlternativeQualifier {
 }
 
 final class InjectTests: XCTestCase {
-    @Register private var register: DependencyProtocol = Dependency()
-    @Register private var registerAlternative: DependencyProtocol = AlternativeDependency()
-    @Register private var registerClass: Dependency = Dependency()
-    @Register private var registerSub: SubDependencyProtocol = SubDependency()
-    @Register private var registerSubClass: SubDependency = SubDependency()
-    @Inject(DependencyQualifier.self) var inject: DependencyProtocol?
-    @Inject(AlternativeQualifier.self) var alternative: DependencyProtocol?
-    @Inject var injectClass: Dependency?
-    @UnwrappedInject(DependencyQualifier.self) var unwrappedInject: DependencyProtocol
-    @UnwrappedInject var unwrappedClass: Dependency
+    @Register
+    private var register: DependencyProtocol = Dependency()
+    @Register
+    private var registerAlternative: DependencyProtocol = AlternativeDependency()
+    @Register
+    private var registerClass = Dependency()
+    @Register
+    private var registerSub: SubDependencyProtocol = SubDependency()
+    @Register
+    private var registerSubClass = SubDependency()
+    @Inject(DependencyQualifier.self)
+    var inject: DependencyProtocol?
+    @Inject(AlternativeQualifier.self)
+    var alternative: DependencyProtocol?
+    @Inject
+    var injectClass: Dependency?
+    @UnwrappedInject(DependencyQualifier.self)
+    var unwrappedInject: DependencyProtocol
+    @UnwrappedInject
+    var unwrappedClass: Dependency
     var injectDependency: Dependency? { inject as? Dependency }
     var unwrappedDependency: Dependency? { unwrappedInject as? Dependency }
 
@@ -71,6 +83,6 @@ final class InjectTests: XCTestCase {
     }
 
     static var allTests = [
-        ("testInject", testInject),
+        ("testInject", testInject)
     ]
 }

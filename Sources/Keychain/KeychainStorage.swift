@@ -111,10 +111,14 @@ open class KeychainStorageDelegate: StorageDelegate {
         var item: CFTypeRef?
         switch SecItemCopyMatching(query as CFDictionary, &item) {
         case errSecSuccess:
-            guard let bytes = item as? Data else { return nil }
+            guard let bytes = item as? Data else {
+                return nil
+            }
             return try D(bytes: bytes)
-        case errSecItemNotFound: return nil
-        case let status: throw KeychainError.error("Keychain read failed: \(status.message)")
+        case errSecItemNotFound:
+            return nil
+        case let status:
+            throw KeychainError.error("Keychain read failed: \(status.message)")
         }
     }
 
@@ -130,7 +134,8 @@ open class KeychainStorageDelegate: StorageDelegate {
                      kSecUseDataProtectionKeychain: true,
                      kSecAttrAccount: account] as [String: Any]
         switch SecItemDelete(query as CFDictionary) {
-        case errSecItemNotFound, errSecSuccess: break
+        case errSecItemNotFound, errSecSuccess:
+            break
         case let status:
             throw KeychainError.error("Unexpected deletion error: \(status.message)")
         }
