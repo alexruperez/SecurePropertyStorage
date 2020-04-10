@@ -10,4 +10,5 @@
 --disable numberFormatting
 --disable redundantRawValues
 --disable andOperator
+--disable trailingCommas
 --ifdef noindent

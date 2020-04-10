@@ -1,6 +1,6 @@
-import XCTest
-import UserDefault
 import Storage
+import UserDefault
+import XCTest
 
 enum UserDefaultsCodable: String, Codable {
     case test
@@ -9,17 +9,28 @@ enum UserDefaultsCodable: String, Codable {
 let userDefaultsTagStorage = UserDefaultsStorage(authenticationTag: Data())
 
 final class UserDefaultTests: XCTestCase {
-    @Store(userDefaultsTagStorage, "userDefaultsTagStore") var userDefaultsTagStore: String?
-    @Store(UserDefaultsStorage.standard, "userDefaultsStore") var userDefaultsStore: String?
-    @UserDefault("userDefaults") var userDefaults: String?
-    @Store(userDefaultsTagStorage, "userDefaultsTagDefault") var userDefaultsTagDefault = "tagDefault"
-    @UserDefault("userDefaultsDefault") var userDefaultsDefault = "default"
-    @CodableStore(userDefaultsTagStorage, "userDefaultsTagCodable") var userDefaultsTagCodable = UserDefaultsCodable.test
-    @CodableUserDefault("userDefaultsCodable") var userDefaultsCodable = UserDefaultsCodable.test
-    @UnwrappedStore(userDefaultsTagStorage, "unwrappedUserDefaultsTagDefault") var unwrappedUserDefaultsTagDefault = "tagDefault"
-    @UnwrappedUserDefault("unwrappedUserDefaultsDefault") var unwrappedUserDefaultsDefault = "default"
-    @UnwrappedCodableStore(userDefaultsTagStorage, "unwrappedUserDefaultsTagCodable") var unwrappedUserDefaultsTagCodable = UserDefaultsCodable.test
-    @UnwrappedCodableUserDefault("unwrappedUserDefaultsCodable") var unwrappedUserDefaultsCodable = UserDefaultsCodable.test
+    @Store(userDefaultsTagStorage, "userDefaultsTagStore")
+    var userDefaultsTagStore: String?
+    @Store(UserDefaultsStorage.standard, "userDefaultsStore")
+    var userDefaultsStore: String?
+    @UserDefault("userDefaults")
+    var userDefaults: String?
+    @Store(userDefaultsTagStorage, "userDefaultsTagDefault")
+    var userDefaultsTagDefault = "tagDefault"
+    @UserDefault("userDefaultsDefault")
+    var userDefaultsDefault = "default"
+    @CodableStore(userDefaultsTagStorage, "userDefaultsTagCodable")
+    var userDefaultsTagCodable = UserDefaultsCodable.test
+    @CodableUserDefault("userDefaultsCodable")
+    var userDefaultsCodable = UserDefaultsCodable.test
+    @UnwrappedStore(userDefaultsTagStorage, "unwrappedUserDefaultsTagDefault")
+    var unwrappedUserDefaultsTagDefault = "tagDefault"
+    @UnwrappedUserDefault("unwrappedUserDefaultsDefault")
+    var unwrappedUserDefaultsDefault = "default"
+    @UnwrappedCodableStore(userDefaultsTagStorage, "unwrappedUserDefaultsTagCodable")
+    var unwrappedUserDefaultsTagCodable = UserDefaultsCodable.test
+    @UnwrappedCodableUserDefault("unwrappedUserDefaultsCodable")
+    var unwrappedUserDefaultsCodable = UserDefaultsCodable.test
 
     func testUserDefault() {
         userDefaultsStore = nil
@@ -189,7 +200,7 @@ final class UserDefaultTests: XCTestCase {
         let value: Bool? = nil
         XCTAssertNil(value)
         userDefaults.set(value, forKey: key)
-        XCTAssertEqual(userDefaults.bool(forKey: key), false)
+        XCTAssertFalse(userDefaults.bool(forKey: key))
     }
 
     func testUserDefaultStringNil() {
@@ -229,6 +240,6 @@ final class UserDefaultTests: XCTestCase {
         ("testUserDefaultDoubleNil", testUserDefaultDoubleNil),
         ("testUserDefaultBoolNil", testUserDefaultBoolNil),
         ("testUserDefaultStringNil", testUserDefaultStringNil),
-        ("testUserDefaultURLNil", testUserDefaultURLNil),
+        ("testUserDefaultURLNil", testUserDefaultURLNil)
     ]
 }

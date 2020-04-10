@@ -1,14 +1,14 @@
-import Foundation
 import CryptoKit
+import Foundation
 
 /// Indicates that the conforming type is a contiguous collection of raw bytes
 /// whose underlying storage is directly accessible by withUnsafeBytes.
 public protocol StorageData: ContiguousBytes, CustomStringConvertible {
     /**
-    Create a `StorageData`.
+     Create a `StorageData`.
 
-    - Parameter bytes: `ContiguousBytes` of `StorageData`.
-    */
+     - Parameter bytes: `ContiguousBytes` of `StorageData`.
+     */
     init<B: StorageData>(bytes: B) throws
 }
 
@@ -47,10 +47,10 @@ extension Encodable {
 
 extension Data: StorageData {
     /**
-    Create a `Data`.
+     Create a `Data`.
 
-    - Parameter bytes: `StorageData` of `Data`.
-    */
+     - Parameter bytes: `StorageData` of `Data`.
+     */
     public init<B: StorageData>(bytes: B) {
         self = bytes.data
     }

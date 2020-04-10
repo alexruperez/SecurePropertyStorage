@@ -26,3 +26,6 @@ Carthage/Build/
 
 #Jazzy
 build/
+
+#SwiftLint
+rule_docs/

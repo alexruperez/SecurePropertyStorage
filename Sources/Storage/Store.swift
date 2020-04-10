@@ -14,11 +14,11 @@ open class StorePropertyWrapper: StorePropertyWrapperProtocol {
     open var key: StoreKey
 
     /**
-    Create a property wrapper.
+     Create a property wrapper.
 
-    - Parameter storage: `Storage` used by property wrapper.
-    - Parameter key: `StoreKey` to store the value.
-    */
+     - Parameter storage: `Storage` used by property wrapper.
+     - Parameter key: `StoreKey` to store the value.
+     */
     public required init(_ storage: Storage, _ key: StoreKey) {
         self.storage = storage
         self.key = key
@@ -29,12 +29,12 @@ open class StorePropertyWrapper: StorePropertyWrapperProtocol {
 @propertyWrapper
 open class Store<Value>: StorePropertyWrapper {
     /**
-    Create a `Store` property wrapper.
+     Create a `Store` property wrapper.
 
-    - Parameter wrappedValue: Default value.
-    - Parameter storage: `Storage` used by property wrapper.
-    - Parameter key: `StoreKey` to store the value.
-    */
+     - Parameter wrappedValue: Default value.
+     - Parameter storage: `Storage` used by property wrapper.
+     - Parameter key: `StoreKey` to store the value.
+     */
     public convenience init(wrappedValue: Value?, _ storage: Storage, _ key: StoreKey) {
         self.init(storage, key)
         self.wrappedValue = wrappedValue
@@ -58,12 +58,12 @@ open class UnwrappedStore<Value>: StorePropertyWrapperProtocol {
     open var defaultValue: Value
 
     /**
-    Create a `UnwrappedStore` property wrapper.
+     Create a `UnwrappedStore` property wrapper.
 
-    - Parameter wrappedValue: Default value.
-    - Parameter storage: `Storage` used by property wrapper.
-    - Parameter key: `StoreKey` to store the value.
-    */
+     - Parameter wrappedValue: Default value.
+     - Parameter storage: `Storage` used by property wrapper.
+     - Parameter key: `StoreKey` to store the value.
+     */
     public required init(wrappedValue: Value, _ storage: Storage, _ key: StoreKey) {
         self.storage = storage
         self.key = key
@@ -82,12 +82,12 @@ open class UnwrappedStore<Value>: StorePropertyWrapperProtocol {
 @propertyWrapper
 open class CodableStore<Value: Codable>: StorePropertyWrapper {
     /**
-    Create a `CodableStore` property wrapper.
+     Create a `CodableStore` property wrapper.
 
-    - Parameter wrappedValue: Default value.
-    - Parameter storage: `Storage` used by property wrapper.
-    - Parameter key: `StoreKey` to store the value.
-    */
+     - Parameter wrappedValue: Default value.
+     - Parameter storage: `Storage` used by property wrapper.
+     - Parameter key: `StoreKey` to store the value.
+     */
     public convenience init(wrappedValue: Value?, _ storage: Storage, _ key: StoreKey) {
         self.init(storage, key)
         self.wrappedValue = wrappedValue
@@ -111,12 +111,12 @@ open class UnwrappedCodableStore<Value: Codable>: StorePropertyWrapperProtocol {
     open var defaultValue: Value
 
     /**
-    Create a `UnwrappedCodableStore` property wrapper.
+     Create a `UnwrappedCodableStore` property wrapper.
 
-    - Parameter wrappedValue: Default value.
-    - Parameter storage: `Storage` used by property wrapper.
-    - Parameter key: `StoreKey` to store the value.
-    */
+     - Parameter wrappedValue: Default value.
+     - Parameter storage: `Storage` used by property wrapper.
+     - Parameter key: `StoreKey` to store the value.
+     */
     public required init(wrappedValue: Value, _ storage: Storage, _ key: StoreKey) {
         self.storage = storage
         self.key = key

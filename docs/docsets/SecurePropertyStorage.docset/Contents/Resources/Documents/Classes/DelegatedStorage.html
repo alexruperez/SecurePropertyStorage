@@ -75,6 +75,15 @@
                 <a class="nav-group-task-link" href="../Classes/DelegatedStorage.html">DelegatedStorage</a>
               </li>
               <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Classes/Inject.html">Inject</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Classes/InjectPropertyWrapper.html">InjectPropertyWrapper</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Classes/InjectStorage.html">InjectStorage</a>
+              </li>
+              <li class="nav-group-task">
                 <a class="nav-group-task-link" href="../Classes/Keychain.html">Keychain</a>
               </li>
               <li class="nav-group-task">
@@ -82,6 +91,9 @@
               </li>
               <li class="nav-group-task">
                 <a class="nav-group-task-link" href="../Classes/KeychainStorageDelegate.html">KeychainStorageDelegate</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Classes/Register.html">Register</a>
               </li>
               <li class="nav-group-task">
                 <a class="nav-group-task-link" href="../Classes/Singleton.html">Singleton</a>
@@ -111,6 +123,9 @@
                 <a class="nav-group-task-link" href="../Classes/UnwrappedCodableUserDefault.html">UnwrappedCodableUserDefault</a>
               </li>
               <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Classes/UnwrappedInject.html">UnwrappedInject</a>
+              </li>
+              <li class="nav-group-task">
                 <a class="nav-group-task-link" href="../Classes/UnwrappedKeychain.html">UnwrappedKeychain</a>
               </li>
               <li class="nav-group-task">
@@ -133,6 +148,9 @@
           <li class="nav-group-name">
             <a class="nav-group-name-link" href="../Enums.html">Enumerations</a>
             <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Enums/InjectError.html">InjectError</a>
+              </li>
               <li class="nav-group-task">
                 <a class="nav-group-task-link" href="../Enums/KeychainError.html">KeychainError</a>
               </li>
@@ -181,6 +199,9 @@
           <li class="nav-group-name">
             <a class="nav-group-name-link" href="../Typealiases.html">Type Aliases</a>
             <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Typealiases.html#/s:6Inject9Qualifiera">Qualifier</a>
+              </li>
               <li class="nav-group-task">
                 <a class="nav-group-task-link" href="../Typealiases.html#/s:7Storage0A12ErrorClosurea">StorageErrorClosure</a>
               </li>
@@ -244,9 +265,9 @@
                 <li class="item">
                   <div>
                     <code>
-                    <a name="/s:7Storage09DelegatedA0C_12symmetricKey5nonce17authenticationTag12errorClosureAcA0A8Delegate_p_9CryptoKit09SymmetricD0VAI3AESO3GCMO5NonceVSg10Foundation4DataVSgys5Error_pcSgtcfc"></a>
+                    <a name="/s:7Storage09DelegatedA0C_12symmetricKey5nonce17authenticationTag12errorClosureAcA0A8Delegate_pSg_9CryptoKit09SymmetricD0VSgAJ3AESO3GCMO5NonceVSg10Foundation4DataVSgys5Error_pcSgtcfc"></a>
                     <a name="//apple_ref/swift/Method/init(_:symmetricKey:nonce:authenticationTag:errorClosure:)" class="dashAnchor"></a>
-                    <a class="token" href="#/s:7Storage09DelegatedA0C_12symmetricKey5nonce17authenticationTag12errorClosureAcA0A8Delegate_p_9CryptoKit09SymmetricD0VAI3AESO3GCMO5NonceVSg10Foundation4DataVSgys5Error_pcSgtcfc">init(_:<wbr>symmetricKey:<wbr>nonce:<wbr>authenticationTag:<wbr>errorClosure:<wbr>)</a>
+                    <a class="token" href="#/s:7Storage09DelegatedA0C_12symmetricKey5nonce17authenticationTag12errorClosureAcA0A8Delegate_pSg_9CryptoKit09SymmetricD0VSgAJ3AESO3GCMO5NonceVSg10Foundation4DataVSgys5Error_pcSgtcfc">init(_:<wbr>symmetricKey:<wbr>nonce:<wbr>authenticationTag:<wbr>errorClosure:<wbr>)</a>
                     </code>
                   </div>
                   <div class="height-container">
@@ -261,8 +282,8 @@
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="nf">init</span><span class="p">(</span><span class="n">_</span> <span class="nv">delegate</span><span class="p">:</span> <span class="kt"><a href="../Protocols/StorageDelegate.html">StorageDelegate</a></span><span class="p">,</span>
-            <span class="nv">symmetricKey</span><span class="p">:</span> <span class="kt">SymmetricKey</span><span class="p">,</span>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="nf">init</span><span class="p">(</span><span class="n">_</span> <span class="nv">delegate</span><span class="p">:</span> <span class="kt"><a href="../Protocols/StorageDelegate.html">StorageDelegate</a></span><span class="p">?</span> <span class="o">=</span> <span class="kc">nil</span><span class="p">,</span>
+            <span class="nv">symmetricKey</span><span class="p">:</span> <span class="kt">SymmetricKey</span><span class="p">?</span> <span class="o">=</span> <span class="kc">nil</span><span class="p">,</span>
             <span class="nv">nonce</span><span class="p">:</span> <span class="kt">AES</span><span class="o">.</span><span class="kt">GCM</span><span class="o">.</span><span class="kt">Nonce</span><span class="p">?</span> <span class="o">=</span> <span class="kc">nil</span><span class="p">,</span>
             <span class="nv">authenticationTag</span><span class="p">:</span> <span class="kt">Data</span><span class="p">?</span> <span class="o">=</span> <span class="kc">nil</span><span class="p">,</span>
             <span class="nv">errorClosure</span><span class="p">:</span> <span class="kt"><a href="../Typealiases.html#/s:7Storage0A12ErrorClosurea">StorageErrorClosure</a></span><span class="p">?</span> <span class="o">=</span> <span class="kc">nil</span><span class="p">)</span></code></pre>
@@ -366,7 +387,7 @@
                         </div>
                       </div>
                       <div class="slightly-smaller">
-                        <a href="https://github.com/alexruperez/SecurePropertyStorage/blob/master/Sources/Storage/DelegatedStorage.swift#L37-L42">Show on GitHub</a>
+                        <a href="https://github.com/alexruperez/SecurePropertyStorage/blob/master/Sources/Storage/DelegatedStorage.swift#L37-L44">Show on GitHub</a>
                       </div>
                     </section>
                   </div>
@@ -395,7 +416,7 @@
                         </div>
                       </div>
                       <div class="slightly-smaller">
-                        <a href="https://github.com/alexruperez/SecurePropertyStorage/blob/master/Sources/Storage/DelegatedStorage.swift#L44-L51">Show on GitHub</a>
+                        <a href="https://github.com/alexruperez/SecurePropertyStorage/blob/master/Sources/Storage/DelegatedStorage.swift#L46-L53">Show on GitHub</a>
                       </div>
                     </section>
                   </div>
@@ -444,7 +465,7 @@
                         </table>
                       </div>
                       <div class="slightly-smaller">
-                        <a href="https://github.com/alexruperez/SecurePropertyStorage/blob/master/Sources/Storage/DelegatedStorage.swift#L58-L64">Show on GitHub</a>
+                        <a href="https://github.com/alexruperez/SecurePropertyStorage/blob/master/Sources/Storage/DelegatedStorage.swift#L60-L66">Show on GitHub</a>
                       </div>
                     </section>
                   </div>
@@ -473,7 +494,7 @@
                         </div>
                       </div>
                       <div class="slightly-smaller">
-                        <a href="https://github.com/alexruperez/SecurePropertyStorage/blob/master/Sources/Storage/DelegatedStorage.swift#L66-L76">Show on GitHub</a>
+                        <a href="https://github.com/alexruperez/SecurePropertyStorage/blob/master/Sources/Storage/DelegatedStorage.swift#L68-L78">Show on GitHub</a>
                       </div>
                     </section>
                   </div>
@@ -502,7 +523,7 @@
                         </div>
                       </div>
                       <div class="slightly-smaller">
-                        <a href="https://github.com/alexruperez/SecurePropertyStorage/blob/master/Sources/Storage/DelegatedStorage.swift#L78-L84">Show on GitHub</a>
+                        <a href="https://github.com/alexruperez/SecurePropertyStorage/blob/master/Sources/Storage/DelegatedStorage.swift#L80-L86">Show on GitHub</a>
                       </div>
                     </section>
                   </div>
@@ -531,7 +552,7 @@
                         </div>
                       </div>
                       <div class="slightly-smaller">
-                        <a href="https://github.com/alexruperez/SecurePropertyStorage/blob/master/Sources/Storage/DelegatedStorage.swift#L86-L88">Show on GitHub</a>
+                        <a href="https://github.com/alexruperez/SecurePropertyStorage/blob/master/Sources/Storage/DelegatedStorage.swift#L88-L90">Show on GitHub</a>
                       </div>
                     </section>
                   </div>
@@ -560,7 +581,7 @@
                         </div>
                       </div>
                       <div class="slightly-smaller">
-                        <a href="https://github.com/alexruperez/SecurePropertyStorage/blob/master/Sources/Storage/DelegatedStorage.swift#L90-L92">Show on GitHub</a>
+                        <a href="https://github.com/alexruperez/SecurePropertyStorage/blob/master/Sources/Storage/DelegatedStorage.swift#L92-L94">Show on GitHub</a>
                       </div>
                     </section>
                   </div>
@@ -589,7 +610,7 @@
                         </div>
                       </div>
                       <div class="slightly-smaller">
-                        <a href="https://github.com/alexruperez/SecurePropertyStorage/blob/master/Sources/Storage/DelegatedStorage.swift#L94-L96">Show on GitHub</a>
+                        <a href="https://github.com/alexruperez/SecurePropertyStorage/blob/master/Sources/Storage/DelegatedStorage.swift#L96-L98">Show on GitHub</a>
                       </div>
                     </section>
                   </div>
@@ -618,7 +639,7 @@
                         </div>
                       </div>
                       <div class="slightly-smaller">
-                        <a href="https://github.com/alexruperez/SecurePropertyStorage/blob/master/Sources/Storage/DelegatedStorage.swift#L98-L104">Show on GitHub</a>
+                        <a href="https://github.com/alexruperez/SecurePropertyStorage/blob/master/Sources/Storage/DelegatedStorage.swift#L100-L106">Show on GitHub</a>
                       </div>
                     </section>
                   </div>
@@ -647,7 +668,7 @@
                         </div>
                       </div>
                       <div class="slightly-smaller">
-                        <a href="https://github.com/alexruperez/SecurePropertyStorage/blob/master/Sources/Storage/DelegatedStorage.swift#L106-L112">Show on GitHub</a>
+                        <a href="https://github.com/alexruperez/SecurePropertyStorage/blob/master/Sources/Storage/DelegatedStorage.swift#L108-L114">Show on GitHub</a>
                       </div>
                     </section>
                   </div>
@@ -676,7 +697,7 @@
                         </div>
                       </div>
                       <div class="slightly-smaller">
-                        <a href="https://github.com/alexruperez/SecurePropertyStorage/blob/master/Sources/Storage/DelegatedStorage.swift#L114-L120">Show on GitHub</a>
+                        <a href="https://github.com/alexruperez/SecurePropertyStorage/blob/master/Sources/Storage/DelegatedStorage.swift#L116-L122">Show on GitHub</a>
                       </div>
                     </section>
                   </div>
@@ -705,7 +726,7 @@
                         </div>
                       </div>
                       <div class="slightly-smaller">
-                        <a href="https://github.com/alexruperez/SecurePropertyStorage/blob/master/Sources/Storage/DelegatedStorage.swift#L122-L128">Show on GitHub</a>
+                        <a href="https://github.com/alexruperez/SecurePropertyStorage/blob/master/Sources/Storage/DelegatedStorage.swift#L124-L130">Show on GitHub</a>
                       </div>
                     </section>
                   </div>
@@ -734,7 +755,7 @@
                         </div>
                       </div>
                       <div class="slightly-smaller">
-                        <a href="https://github.com/alexruperez/SecurePropertyStorage/blob/master/Sources/Storage/DelegatedStorage.swift#L130-L135">Show on GitHub</a>
+                        <a href="https://github.com/alexruperez/SecurePropertyStorage/blob/master/Sources/Storage/DelegatedStorage.swift#L132-L137">Show on GitHub</a>
                       </div>
                     </section>
                   </div>
@@ -763,7 +784,7 @@
                         </div>
                       </div>
                       <div class="slightly-smaller">
-                        <a href="https://github.com/alexruperez/SecurePropertyStorage/blob/master/Sources/Storage/DelegatedStorage.swift#L137-L154">Show on GitHub</a>
+                        <a href="https://github.com/alexruperez/SecurePropertyStorage/blob/master/Sources/Storage/DelegatedStorage.swift#L139-L157">Show on GitHub</a>
                       </div>
                     </section>
                   </div>
@@ -792,7 +813,7 @@
                         </div>
                       </div>
                       <div class="slightly-smaller">
-                        <a href="https://github.com/alexruperez/SecurePropertyStorage/blob/master/Sources/Storage/DelegatedStorage.swift#L156-L158">Show on GitHub</a>
+                        <a href="https://github.com/alexruperez/SecurePropertyStorage/blob/master/Sources/Storage/DelegatedStorage.swift#L159-L161">Show on GitHub</a>
                       </div>
                     </section>
                   </div>
@@ -821,7 +842,7 @@
                         </div>
                       </div>
                       <div class="slightly-smaller">
-                        <a href="https://github.com/alexruperez/SecurePropertyStorage/blob/master/Sources/Storage/DelegatedStorage.swift#L160-L162">Show on GitHub</a>
+                        <a href="https://github.com/alexruperez/SecurePropertyStorage/blob/master/Sources/Storage/DelegatedStorage.swift#L163-L165">Show on GitHub</a>
                       </div>
                     </section>
                   </div>
@@ -850,7 +871,7 @@
                         </div>
                       </div>
                       <div class="slightly-smaller">
-                        <a href="https://github.com/alexruperez/SecurePropertyStorage/blob/master/Sources/Storage/DelegatedStorage.swift#L164-L166">Show on GitHub</a>
+                        <a href="https://github.com/alexruperez/SecurePropertyStorage/blob/master/Sources/Storage/DelegatedStorage.swift#L167-L169">Show on GitHub</a>
                       </div>
                     </section>
                   </div>
@@ -879,7 +900,7 @@
                         </div>
                       </div>
                       <div class="slightly-smaller">
-                        <a href="https://github.com/alexruperez/SecurePropertyStorage/blob/master/Sources/Storage/DelegatedStorage.swift#L168-L170">Show on GitHub</a>
+                        <a href="https://github.com/alexruperez/SecurePropertyStorage/blob/master/Sources/Storage/DelegatedStorage.swift#L171-L173">Show on GitHub</a>
                       </div>
                     </section>
                   </div>
@@ -908,7 +929,7 @@
                         </div>
                       </div>
                       <div class="slightly-smaller">
-                        <a href="https://github.com/alexruperez/SecurePropertyStorage/blob/master/Sources/Storage/DelegatedStorage.swift#L172-L174">Show on GitHub</a>
+                        <a href="https://github.com/alexruperez/SecurePropertyStorage/blob/master/Sources/Storage/DelegatedStorage.swift#L175-L177">Show on GitHub</a>
                       </div>
                     </section>
                   </div>
@@ -937,7 +958,7 @@
                         </div>
                       </div>
                       <div class="slightly-smaller">
-                        <a href="https://github.com/alexruperez/SecurePropertyStorage/blob/master/Sources/Storage/DelegatedStorage.swift#L176-L178">Show on GitHub</a>
+                        <a href="https://github.com/alexruperez/SecurePropertyStorage/blob/master/Sources/Storage/DelegatedStorage.swift#L179-L181">Show on GitHub</a>
                       </div>
                     </section>
                   </div>
@@ -966,7 +987,7 @@
                         </div>
                       </div>
                       <div class="slightly-smaller">
-                        <a href="https://github.com/alexruperez/SecurePropertyStorage/blob/master/Sources/Storage/DelegatedStorage.swift#L180-L190">Show on GitHub</a>
+                        <a href="https://github.com/alexruperez/SecurePropertyStorage/blob/master/Sources/Storage/DelegatedStorage.swift#L183-L193">Show on GitHub</a>
                       </div>
                     </section>
                   </div>
@@ -1027,7 +1048,7 @@
                         </table>
                       </div>
                       <div class="slightly-smaller">
-                        <a href="https://github.com/alexruperez/SecurePropertyStorage/blob/master/Sources/Storage/DelegatedStorage.swift#L198-L206">Show on GitHub</a>
+                        <a href="https://github.com/alexruperez/SecurePropertyStorage/blob/master/Sources/Storage/DelegatedStorage.swift#L201-L209">Show on GitHub</a>
                       </div>
                     </section>
                   </div>
@@ -1056,7 +1077,7 @@
                         </div>
                       </div>
                       <div class="slightly-smaller">
-                        <a href="https://github.com/alexruperez/SecurePropertyStorage/blob/master/Sources/Storage/DelegatedStorage.swift#L208-L219">Show on GitHub</a>
+                        <a href="https://github.com/alexruperez/SecurePropertyStorage/blob/master/Sources/Storage/DelegatedStorage.swift#L211-L222">Show on GitHub</a>
                       </div>
                     </section>
                   </div>
@@ -1085,7 +1106,7 @@
                         </div>
                       </div>
                       <div class="slightly-smaller">
-                        <a href="https://github.com/alexruperez/SecurePropertyStorage/blob/master/Sources/Storage/DelegatedStorage.swift#L221-L238">Show on GitHub</a>
+                        <a href="https://github.com/alexruperez/SecurePropertyStorage/blob/master/Sources/Storage/DelegatedStorage.swift#L224-L242">Show on GitHub</a>
                       </div>
                     </section>
                   </div>
@@ -1114,7 +1135,37 @@
                         </div>
                       </div>
                       <div class="slightly-smaller">
-                        <a href="https://github.com/alexruperez/SecurePropertyStorage/blob/master/Sources/Storage/DelegatedStorage.swift#L240-L246">Show on GitHub</a>
+                        <a href="https://github.com/alexruperez/SecurePropertyStorage/blob/master/Sources/Storage/DelegatedStorage.swift#L244-L250">Show on GitHub</a>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:7Storage09DelegatedA0C4hashyS2SF"></a>
+                    <a name="//apple_ref/swift/Method/hash(_:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:7Storage09DelegatedA0C4hashyS2SF">hash(_:<wbr>)</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Hash <code><a href="../Typealiases.html#/s:7Storage8StoreKeya">StoreKey</a></code> using SHA-512.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">func</span> <span class="nf">hash</span><span class="p">(</span><span class="n">_</span> <span class="nv">key</span><span class="p">:</span> <span class="kt"><a href="../Typealiases.html#/s:7Storage8StoreKeya">StoreKey</a></span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt">String</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div class="slightly-smaller">
+                        <a href="https://github.com/alexruperez/SecurePropertyStorage/blob/master/Sources/Storage/DelegatedStorage.swift#L253-L255">Show on GitHub</a>
                       </div>
                     </section>
                   </div>

@@ -11,4 +11,5 @@ sourcekitten_sourcefile:
   - Docs/Keychain.json
   - Docs/UserDefault.json
   - Docs/Singleton.json
+  - Docs/Inject.json
 theme: fullwidth
