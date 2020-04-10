@@ -1,6 +1,7 @@
 # 🔐 Secure Property Storage
 > Helps you define secure storages for your properties using Swift *property wrappers*.
 
+[![Codacy Badge](https://api.codacy.com/project/badge/Grade/53a23dd2feca4b7ca8357c918c7d49c9)](https://app.codacy.com/manual/alexruperez/SecurePropertyStorage?utm_source=github.com&utm_medium=referral&utm_content=alexruperez/SecurePropertyStorage&utm_campaign=Badge_Grade_Dashboard)
 [![Twitter](https://img.shields.io/badge/contact-%40alexruperez-blue)](http://twitter.com/alexruperez)
 [![Swift](https://img.shields.io/badge/swift-5-orange)](https://swift.org)
 [![License](https://img.shields.io/github/license/alexruperez/SecurePropertyStorage)](LICENSE)
