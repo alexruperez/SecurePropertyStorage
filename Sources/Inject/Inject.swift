@@ -85,7 +85,7 @@ open class InjectPropertyWrapper<Dependency, Parameters>: StorePropertyWrapper {
     func instance(_ dependencies: [Any],
                   _ scope: Scope,
                   _ parameters: Parameters?) -> Dependency? {
-        typealias BuilderWithParameters = (Parameters?) -> Dependency
+        typealias BuilderWithParameters = (Parameters) -> Dependency
         typealias Builder = () -> Dependency
         var builderWithParameters: BuilderWithParameters?
         var builder: Builder?
@@ -108,7 +108,8 @@ open class InjectPropertyWrapper<Dependency, Parameters>: StorePropertyWrapper {
         if instances.count == 1 {
             return instances.first
         } else if instances.isEmpty {
-            if let builder = builderWithParameters {
+            if let parameters = parameters,
+                let builder = builderWithParameters {
                 return builder(parameters)
             }
             if let builder = builder {

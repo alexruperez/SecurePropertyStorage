@@ -38,6 +38,12 @@ class AlternativeDependency: DependencyProtocol, AlternativeQualifier {
     let timestamp = Date().timeIntervalSince1970
 }
 
+protocol MockableProtocol {}
+
+class MockInstance: MockableProtocol, Mock {}
+
+class RealInstance: MockableProtocol {}
+
 protocol InstanceProtocol {
     var timestamp: TimeInterval { get }
 }
@@ -45,20 +51,14 @@ protocol InstanceProtocol {
 class InstanceDependency: InstanceProtocol, Equatable {
     let timestamp: TimeInterval
 
-    init(timestamp: TimeInterval? = nil) {
-        self.timestamp = timestamp ?? Date().timeIntervalSince1970
+    init(_ timestamp: TimeInterval) {
+        self.timestamp = timestamp
     }
 
     static func == (lhs: InstanceDependency, rhs: InstanceDependency) -> Bool {
         lhs.timestamp == rhs.timestamp
     }
 }
-
-protocol MockableProtocol {}
-
-class MockInstance: MockableProtocol, Mock {}
-
-class RealInstance: MockableProtocol {}
 
 final class InjectTests: XCTestCase {
     @Register
@@ -72,19 +72,19 @@ final class InjectTests: XCTestCase {
     @Register
     private var registerSubClass = SubDependency()
     @Register
+    private var registerMock: MockableProtocol = MockInstance()
+    @Register
+    private var registerReal: MockableProtocol = RealInstance()
+    @Register
     private var registerBuilder = {
-        InstanceDependency() as InstanceProtocol
+        InstanceDependency(Date().timeIntervalSince1970) as InstanceProtocol
     }
 
     @Register
     private var registerBuilderWith = { parameters in
-        InstanceDependency(timestamp: parameters) as InstanceProtocol
+        InstanceDependency(parameters) as InstanceProtocol
     }
 
-    @Register
-    private var registerMock: MockableProtocol = MockInstance()
-    @Register
-    private var registerReal: MockableProtocol = RealInstance()
     @Inject(DependencyQualifier.self)
     var inject: DependencyProtocol?
     @Inject(AlternativeQualifier.self)
@@ -99,12 +99,12 @@ final class InjectTests: XCTestCase {
     var instance: InstanceProtocol?
     @UnwrappedInject
     var unwrappedInstance: InstanceProtocol
+    @Inject
+    var mock: MockableProtocol?
     @InjectWith(Date().timeIntervalSince1970)
     var instanceWith: InstanceProtocol?
     @UnwrappedInjectWith(Date().timeIntervalSince1970)
     var unwrappedInstanceWith: InstanceProtocol
-    @Inject
-    var mock: MockableProtocol?
     var injectDependency: Dependency? { inject as? Dependency }
     var unwrappedDependency: Dependency? { unwrappedInject as? Dependency }
     var injectInstance: InstanceDependency? { instance as? InstanceDependency }
