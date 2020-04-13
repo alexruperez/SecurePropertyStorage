@@ -82,9 +82,9 @@ open class InjectPropertyWrapper<Dependency, Parameters>: StorePropertyWrapper {
         throw InjectError.moreThanOne(Dependency.self)
     }
 
-    func instance(_ dependencies: [Any],
-                  _ scope: Scope,
-                  _ parameters: Parameters?) -> Dependency? {
+    open func instance(_ dependencies: [Any],
+                       _ scope: Scope,
+                       _ parameters: Parameters?) -> Dependency? {
         typealias BuilderWithParameters = (Parameters) -> Dependency
         typealias Builder = () -> Dependency
         var builderWithParameters: BuilderWithParameters?
@@ -123,7 +123,7 @@ open class InjectPropertyWrapper<Dependency, Parameters>: StorePropertyWrapper {
         return nil
     }
 
-    func description(_ error: Error) -> String {
+    open func description(_ error: Error) -> String {
         if let error = error as? InjectError {
             return error.description
         }
@@ -134,7 +134,7 @@ open class InjectPropertyWrapper<Dependency, Parameters>: StorePropertyWrapper {
 /// `@Inject` property wrapper.
 @propertyWrapper
 public class Inject<Dependency>: InjectPropertyWrapper<Dependency, Void> {
-    var scope: Scope = .singleton
+    public var scope: Scope = .singleton
 
     /// Create a `Inject` property wrapper.
     public convenience init(_ scope: Scope = .singleton) {
@@ -149,7 +149,7 @@ public class Inject<Dependency>: InjectPropertyWrapper<Dependency, Void> {
 /// `@Inject` property wrapper.
 @propertyWrapper
 public class InjectWith<Dependency, Parameters>: InjectPropertyWrapper<Dependency, Parameters> {
-    var parameters: Parameters?
+    public var parameters: Parameters?
 
     /// Create a `Inject` property wrapper.
     public convenience init(_ parameters: Parameters) {
@@ -164,7 +164,7 @@ public class InjectWith<Dependency, Parameters>: InjectPropertyWrapper<Dependenc
 /// `@UnwrappedInject` property wrapper.
 @propertyWrapper
 public class UnwrappedInject<Dependency>: InjectPropertyWrapper<Dependency, Void> {
-    var scope: Scope = .singleton
+    public var scope: Scope = .singleton
 
     /// Create a `UnwrappedInject` property wrapper.
     public convenience init(_ scope: Scope = .singleton) {
@@ -185,7 +185,7 @@ public class UnwrappedInject<Dependency>: InjectPropertyWrapper<Dependency, Void
 /// `@UnwrappedInject` property wrapper.
 @propertyWrapper
 public class UnwrappedInjectWith<Dependency, Parameters>: InjectPropertyWrapper<Dependency, Parameters> {
-    var parameters: Parameters?
+    public var parameters: Parameters?
 
     /// Create a `UnwrappedInject` property wrapper.
     public convenience init(_ parameters: Parameters) {
