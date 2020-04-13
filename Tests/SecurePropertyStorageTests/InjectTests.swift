@@ -27,6 +27,8 @@ class Dependency: DependencyProtocol, Equatable, DependencyQualifier {
     var subClass: SubDependency?
     var subDependency: SubDependency? { sub as? SubDependency }
 
+    init() {}
+
     static func == (lhs: Dependency, rhs: Dependency) -> Bool {
         lhs.timestamp == rhs.timestamp
     }
@@ -73,10 +75,12 @@ final class InjectTests: XCTestCase {
     private var registerBuilder = {
         InstanceDependency() as InstanceProtocol
     }
+
     @Register
     private var registerBuilderWith = { parameters in
         InstanceDependency(timestamp: parameters) as InstanceProtocol
     }
+
     @Register
     private var registerMock: MockableProtocol = MockInstance()
     @Register
@@ -140,7 +144,7 @@ final class InjectTests: XCTestCase {
             .contains("String"))
         XCTAssert(stringPropertyWrapper
             .description(CocoaError(.userCancelled))
-        .contains("cancelled"))
+            .contains("cancelled"))
     }
 
     static var allTests = [
