@@ -6,43 +6,45 @@ import Storage
 open class KeychainStorage: DelegatedStorage {
     /// `KeychainStorage` shared instance.
     open class var standard: KeychainStorage { shared }
-    private static let shared = KeychainStorage(accessGroup: nil)
+    private static let shared = KeychainStorage()
+    private var keychainDelegate: KeychainStorageDelegate? { delegate as? KeychainStorageDelegate }
+    
+    /// Access group where `StorageData` is in.
+    open var accessGroup: String? {
+        get { keychainDelegate?.accessGroup }
+        set { keychainDelegate?.accessGroup = newValue }
+    }
+
+    /// Whether the `StorageData` can be synchronized.
+    open var synchronizable: Bool {
+        get { keychainDelegate?.synchronizable ?? false }
+        set { keychainDelegate?.synchronizable = newValue }
+    }
 
     /**
      Create a `KeychainStorage`.
 
      - Parameter delegate: `StorageDelegate`, defaults `KeychainStorageDelegate`.
-     - Parameter symmetricKey: A cryptographic key used to seal the message.
-     - Parameter nonce: A nonce used during the sealing process.
      - Parameter authenticationTag: Custom additional `Data` to be authenticated.
-     - Parameter accessGroup: Access group where `StorageData` is in.
-     - Parameter synchronizable: Whether the `StorageData` can be synchronized.
      - Parameter errorClosure: Closure to handle `KeychainStorageDelegate` errors.
      */
     public convenience init(_ delegate: StorageDelegate = KeychainStorageDelegate(),
-                            symmetricKey: SymmetricKey? = SymmetricKey.generate(),
-                            nonce: AES.GCM.Nonce? = AES.GCM.Nonce.generate(),
                             authenticationTag: Data? = nil,
-                            accessGroup: String?,
-                            synchronizable: Bool = false,
                             errorClosure: StorageErrorClosure? = nil) {
         self.init(delegate,
-                  symmetricKey: symmetricKey,
-                  nonce: nonce,
+                  symmetricKey: SymmetricKey.generate(),
+                  nonce: AES.GCM.Nonce.generate(),
                   authenticationTag: authenticationTag,
                   errorClosure: errorClosure)
-        let delegate = delegate as? KeychainStorageDelegate
-        delegate?.accessGroup = accessGroup
-        delegate?.synchronizable = synchronizable
     }
 }
 
 /// `KeychainStorageDelegate` conforming `StorageDelegate` protocol.
 open class KeychainStorageDelegate: StorageDelegate {
     /// Access group where `StorageData` is in.
-    var accessGroup: String?
+    open var accessGroup: String?
     /// Whether the `StorageData` can be synchronized.
-    var synchronizable = false
+    open var synchronizable = false
 
     /// Create a `KeychainStorageDelegate`.
     public init() {}
@@ -71,7 +73,7 @@ open class KeychainStorageDelegate: StorageDelegate {
      - Throws: `KeychainError.error`.
      */
     open func set<D: StorageData>(_ data: D?, forKey key: StoreKey) throws {
-        try remove(forKey: key)
+        try? remove(forKey: key)
         if let data = data {
             try store(data,
                       account: key,

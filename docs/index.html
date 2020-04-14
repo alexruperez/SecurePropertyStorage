@@ -22,7 +22,7 @@
         <a class="header-link" href="index.html">
           SecurePropertyStorage Docs
         </a>
-         (100% documented)
+         (99% documented)
       </p>
     
       <p class="header-col--secondary">
@@ -258,7 +258,7 @@ Optionally, you can assign a default value to the property that will be secure s
 <span class="k">var</span> <span class="nv">yourProperty</span><span class="p">:</span> <span class="kt">YourType</span><span class="p">?</span> <span class="o">=</span> <span class="n">yourDefaultValueIfNeeded</span>
 </code></pre>
 
-<p><a href="Sources/UserDefault/UserDefaultsStorage.swift"><code><a href="Classes/UserDefaultsStorage.html">UserDefaultsStorage</a></code></a> is also available, a subclass of <a href="https://developer.apple.com/documentation/foundation/userdefaults"><code>UserDefaults</code></a> with all the security provided by this library.</p>
+<p><a href="Sources/UserDefault/UserDefaultsStorage.swift"><code><a href="Classes/UserDefaultsStorage.html">UserDefaultsStorage</a></code></a> is also available, a subclass of <a href="https://developer.apple.com/documentation/foundation/userdefaults"><code>UserDefaults</code></a> with all the security provided by this library, where you can customize suite name.</p>
 <h3 id='keychain' class='heading'>@Keychain</h3>
 
 <p>This property wrapper will store your property in <a href="https://developer.apple.com/documentation/security/keychain_services">Keychain</a> using <code><a href="Typealiases.html#/s:7Storage8StoreKeya">StoreKey</a></code>.</p>
@@ -266,7 +266,7 @@ Optionally, you can assign a default value to the property that will be secure s
 <span class="k">var</span> <span class="nv">yourProperty</span><span class="p">:</span> <span class="kt">YourType</span><span class="p">?</span> <span class="o">=</span> <span class="n">yourDefaultValueIfNeeded</span>
 </code></pre>
 
-<p>As <code><a href="Classes/UserDefaultsStorage.html">UserDefaultsStorage</a></code>, <a href="Sources/Keychain/KeychainStorage.swift"><code><a href="Classes/KeychainStorage.html">KeychainStorage</a></code></a> is also available.</p>
+<p>As <code><a href="Classes/UserDefaultsStorage.html">UserDefaultsStorage</a></code>, <a href="Sources/Keychain/KeychainStorage.swift"><code><a href="Classes/KeychainStorage.html">KeychainStorage</a></code></a> is also available, where you can customize access group or synchronize it with iCloud.</p>
 <h3 id='singleton' class='heading'>@Singleton</h3>
 
 <p>This property wrapper will store your property in a memory <a href="https://en.wikipedia.org/wiki/Singleton_pattern">singleton</a>,  every property with the same wrapper and key can access or modify the value from wherever it is.</p>
@@ -286,7 +286,7 @@ Optionally, you can assign a default value to the property that will be secure s
 <h3 id='store' class='heading'>@Store</h3>
 
 <p>This is a custom wrapper, you can define your own <a href="Sources/Storage/Storage.swift"><code><a href="Protocols/Storage.html">Storage</a></code></a> protocol implementation.</p>
-<pre class="highlight swift"><code><span class="kd">@Store(&lt;#Storage#&gt;, &lt;#StoreKey#&gt;)</span>
+<pre class="highlight swift"><code><span class="kd">@Store(&lt;#YourStorage#&gt;, &lt;#StoreKey#&gt;)</span>
 <span class="k">var</span> <span class="nv">yourProperty</span><span class="p">:</span> <span class="kt">YourType</span><span class="p">?</span> <span class="o">=</span> <span class="n">yourDefaultValueIfNeeded</span>
 </code></pre>
 

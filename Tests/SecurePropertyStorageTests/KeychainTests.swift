@@ -7,9 +7,12 @@ enum KeychainCodable: String, Codable {
     case test2
 }
 
-let keychainTagStorage: DelegatedStorage = KeychainStorage(authenticationTag: Data(),
-                                                           accessGroup: "",
-                                                           synchronizable: true)
+let keychainTagStorage: KeychainStorage = {
+    let keychainStorage = KeychainStorage(authenticationTag: Data())
+    keychainStorage.accessGroup = ""
+    keychainStorage.synchronizable = true
+    return keychainStorage
+}()
 
 final class KeychainTests: XCTestCase {
     @Store(keychainTagStorage, "keychainTagStore")
@@ -34,6 +37,14 @@ final class KeychainTests: XCTestCase {
     var unwrappedKeychainTagCodable = KeychainCodable.test
     @UnwrappedCodableKeychain("unwrappedKeychainCodable")
     var unwrappedKeychainCodable = KeychainCodable.test
+
+    func testKeychainStorageAccessGroup() {
+        XCTAssertEqual(keychainTagStorage.accessGroup, "")
+    }
+
+    func testKeychainStorageSynchronizable() {
+        XCTAssertTrue(keychainTagStorage.synchronizable)
+    }
 
     func testKeychainTagStoreError() {
         let keychainTagStoreError = expectation(description: "keychainTagStoreError")

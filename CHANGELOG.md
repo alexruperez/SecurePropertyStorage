@@ -10,7 +10,7 @@
 - `@InjectWith` and `@UnwrappedInjectWith` parameters property wrappers. [#6](https://github.com/alexruperez/SecurePropertyStorage/pull/6)
 - Instance inject scope.
 - Mock qualifier for testing.
-- `KeychainStorage` access group and synchronizable options. Thanks for the feedback [@JesusAntonioGil](https://github.com/JesusAntonioGil)!
+- `KeychainStorage` access group and synchronizable properties. Thanks for the feedback [@JesusAntonioGil](https://github.com/JesusAntonioGil)!
 
 #### Fixed
 - Strong typing on non-`@Store` property wrappers to avoid mixing. Thanks for the feedback [@JesusAntonioGil](https://github.com/JesusAntonioGil)!
