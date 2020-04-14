@@ -2,7 +2,7 @@ import Storage
 
 /// `@Keychain` property wrapper.
 @propertyWrapper
-open class Keychain<Value>: StorePropertyWrapper {
+open class Keychain<Value>: StorePropertyWrapper<KeychainStorage> {
     /**
      Create a `Keychain` property wrapper.
 
@@ -34,7 +34,7 @@ open class Keychain<Value>: StorePropertyWrapper {
 @propertyWrapper
 open class UnwrappedKeychain<Value>: StorePropertyWrapperProtocol {
     /// `Storage` used by property wrapper.
-    open var storage: Storage
+    open var storage: KeychainStorage
     /// `StoreKey` to store the value.
     open var key: StoreKey
     /// Default value.
@@ -62,7 +62,7 @@ open class UnwrappedKeychain<Value>: StorePropertyWrapperProtocol {
 
 /// `@CodableKeychain` property wrapper.
 @propertyWrapper
-open class CodableKeychain<Value: Codable>: StorePropertyWrapper {
+open class CodableKeychain<Value: Codable>: StorePropertyWrapper<KeychainStorage> {
     /**
      Create a `CodableKeychain` property wrapper.
 
@@ -94,7 +94,7 @@ open class CodableKeychain<Value: Codable>: StorePropertyWrapper {
 @propertyWrapper
 open class UnwrappedCodableKeychain<Value: Codable>: StorePropertyWrapperProtocol {
     /// `Storage` used by property wrapper.
-    open var storage: Storage
+    open var storage: KeychainStorage
     /// `StoreKey` to store the value.
     open var key: StoreKey
     /// Default value.

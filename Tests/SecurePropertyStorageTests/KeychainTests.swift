@@ -7,7 +7,7 @@ enum KeychainCodable: String, Codable {
     case test2
 }
 
-let keychainTagStorage: DelegatedStorage = KeychainStorage(authenticationTag: Data())
+let keychainTagStorage: DelegatedStorage = KeychainStorage(authenticationTag: Data(), accessGroup: nil)
 
 final class KeychainTests: XCTestCase {
     @Store(keychainTagStorage, "keychainTagStore")

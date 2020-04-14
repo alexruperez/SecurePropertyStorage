@@ -30,7 +30,7 @@ Optionally, you can assign a default value to the property that will be secure s
 var yourProperty: YourType? = yourDefaultValueIfNeeded
 ```
 
-[`UserDefaultsStorage`](Sources/UserDefault/UserDefaultsStorage.swift) is also available, a subclass of [`UserDefaults`](https://developer.apple.com/documentation/foundation/userdefaults) with all the security provided by this library.
+[`UserDefaultsStorage`](Sources/UserDefault/UserDefaultsStorage.swift) is also available, a subclass of [`UserDefaults`](https://developer.apple.com/documentation/foundation/userdefaults) with all the security provided by this library, where you can customize suite name.
 
 ### @Keychain
 
@@ -41,7 +41,7 @@ This property wrapper will store your property in [Keychain](https://developer.a
 var yourProperty: YourType? = yourDefaultValueIfNeeded
 ```
 
-As `UserDefaultsStorage`, [`KeychainStorage`](Sources/Keychain/KeychainStorage.swift) is also available.
+As `UserDefaultsStorage`, [`KeychainStorage(accessGroup:)`](Sources/Keychain/KeychainStorage.swift) is also available, where you can customize access group or synchronize it with iCloud.
 
 ### @Singleton
 
@@ -70,7 +70,7 @@ As `SingletonStorage`, [`InjectStorage`](Sources/Inject/InjectStorage.swift) is 
 This is a custom wrapper, you can define your own [`Storage`](Sources/Storage/Storage.swift) protocol implementation.
 
 ```swift
-@Store(<#Storage#>, <#StoreKey#>)
+@Store(<#YourStorage#>, <#StoreKey#>)
 var yourProperty: YourType? = yourDefaultValueIfNeeded
 ```
 

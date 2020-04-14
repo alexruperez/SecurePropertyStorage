@@ -269,7 +269,7 @@
                         </div>
                       </div>
                       <div class="slightly-smaller">
-                        <a href="https://github.com/alexruperez/SecurePropertyStorage/blob/master/Sources/Keychain/KeychainStorage.swift#L32">Show on GitHub</a>
+                        <a href="https://github.com/alexruperez/SecurePropertyStorage/blob/master/Sources/Keychain/KeychainStorage.swift#L48">Show on GitHub</a>
                       </div>
                     </section>
                   </div>
@@ -327,7 +327,7 @@
                         <p><code><a href="../Protocols/StorageData.html">StorageData</a></code> for <code><a href="../Typealiases.html#/s:7Storage8StoreKeya">StoreKey</a></code>.</p>
                       </div>
                       <div class="slightly-smaller">
-                        <a href="https://github.com/alexruperez/SecurePropertyStorage/blob/master/Sources/Keychain/KeychainStorage.swift#L43-L45">Show on GitHub</a>
+                        <a href="https://github.com/alexruperez/SecurePropertyStorage/blob/master/Sources/Keychain/KeychainStorage.swift#L59-L63">Show on GitHub</a>
                       </div>
                     </section>
                   </div>
@@ -393,7 +393,7 @@
                         </table>
                       </div>
                       <div class="slightly-smaller">
-                        <a href="https://github.com/alexruperez/SecurePropertyStorage/blob/master/Sources/Keychain/KeychainStorage.swift#L55-L60">Show on GitHub</a>
+                        <a href="https://github.com/alexruperez/SecurePropertyStorage/blob/master/Sources/Keychain/KeychainStorage.swift#L73-L81">Show on GitHub</a>
                       </div>
                     </section>
                   </div>
@@ -447,7 +447,7 @@
                         </table>
                       </div>
                       <div class="slightly-smaller">
-                        <a href="https://github.com/alexruperez/SecurePropertyStorage/blob/master/Sources/Keychain/KeychainStorage.swift#L69-L71">Show on GitHub</a>
+                        <a href="https://github.com/alexruperez/SecurePropertyStorage/blob/master/Sources/Keychain/KeychainStorage.swift#L90-L94">Show on GitHub</a>
                       </div>
                     </section>
                   </div>
@@ -455,9 +455,9 @@
                 <li class="item">
                   <div>
                     <code>
-                    <a name="/s:8Keychain0A15StorageDelegateC5store_7account10accessibleyx_SSSo11CFStringRefatK0B00B4DataRzlF"></a>
-                    <a name="//apple_ref/swift/Method/store(_:account:accessible:)" class="dashAnchor"></a>
-                    <a class="token" href="#/s:8Keychain0A15StorageDelegateC5store_7account10accessibleyx_SSSo11CFStringRefatK0B00B4DataRzlF">store(_:<wbr>account:<wbr>accessible:<wbr>)</a>
+                    <a name="/s:8Keychain0A15StorageDelegateC5store_7account10accessible11accessGroup14synchronizableyx_SSSo11CFStringRefaSSSgSbtK0B00B4DataRzlF"></a>
+                    <a name="//apple_ref/swift/Method/store(_:account:accessible:accessGroup:synchronizable:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:8Keychain0A15StorageDelegateC5store_7account10accessible11accessGroup14synchronizableyx_SSSo11CFStringRefaSSSgSbtK0B00B4DataRzlF">store(_:<wbr>account:<wbr>accessible:<wbr>accessGroup:<wbr>synchronizable:<wbr>)</a>
                     </code>
                   </div>
                   <div class="height-container">
@@ -479,7 +479,9 @@
                           <p class="aside-title">Swift</p>
                           <pre class="highlight swift"><code><span class="kd">open</span> <span class="kd">func</span> <span class="n">store</span><span class="o">&lt;</span><span class="kt">D</span><span class="p">:</span> <span class="kt"><a href="../Protocols/StorageData.html">StorageData</a></span><span class="o">&gt;</span><span class="p">(</span><span class="n">_</span> <span class="nv">value</span><span class="p">:</span> <span class="kt">D</span><span class="p">,</span>
                                 <span class="nv">account</span><span class="p">:</span> <span class="kt">String</span><span class="p">,</span>
-                                <span class="nv">accessible</span><span class="p">:</span> <span class="kt">CFString</span> <span class="o">=</span> <span class="n">kSecAttrAccessibleWhenUnlocked</span><span class="p">)</span> <span class="k">throws</span></code></pre>
+                                <span class="nv">accessible</span><span class="p">:</span> <span class="kt">CFString</span> <span class="o">=</span> <span class="n">kSecAttrAccessibleWhenUnlocked</span><span class="p">,</span>
+                                <span class="nv">accessGroup</span><span class="p">:</span> <span class="kt">String</span><span class="p">?</span> <span class="o">=</span> <span class="kc">nil</span><span class="p">,</span>
+                                <span class="nv">synchronizable</span><span class="p">:</span> <span class="kt">Bool</span> <span class="o">=</span> <span class="kc">false</span><span class="p">)</span> <span class="k">throws</span></code></pre>
 
                         </div>
                       </div>
@@ -523,11 +525,35 @@
                                 </div>
                               </td>
                             </tr>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>accessGroup</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>Access group where <code><a href="../Protocols/StorageData.html">StorageData</a></code> is in.</p>
+                                </div>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>synchronizable</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>Whether the <code><a href="../Protocols/StorageData.html">StorageData</a></code> can be synchronized.</p>
+                                </div>
+                              </td>
+                            </tr>
                           </tbody>
                         </table>
                       </div>
                       <div class="slightly-smaller">
-                        <a href="https://github.com/alexruperez/SecurePropertyStorage/blob/master/Sources/Keychain/KeychainStorage.swift#L82-L94">Show on GitHub</a>
+                        <a href="https://github.com/alexruperez/SecurePropertyStorage/blob/master/Sources/Keychain/KeychainStorage.swift#L107-L128">Show on GitHub</a>
                       </div>
                     </section>
                   </div>
@@ -535,9 +561,9 @@
                 <li class="item">
                   <div>
                     <code>
-                    <a name="/s:8Keychain0A15StorageDelegateC4read7accountxSgSS_tK0B00B4DataRzlF"></a>
-                    <a name="//apple_ref/swift/Method/read(account:)" class="dashAnchor"></a>
-                    <a class="token" href="#/s:8Keychain0A15StorageDelegateC4read7accountxSgSS_tK0B00B4DataRzlF">read(account:<wbr>)</a>
+                    <a name="/s:8Keychain0A15StorageDelegateC4read7account11accessGroup14synchronizablexSgSS_SSSgSbtK0B00B4DataRzlF"></a>
+                    <a name="//apple_ref/swift/Method/read(account:accessGroup:synchronizable:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:8Keychain0A15StorageDelegateC4read7account11accessGroup14synchronizablexSgSS_SSSgSbtK0B00B4DataRzlF">read(account:<wbr>accessGroup:<wbr>synchronizable:<wbr>)</a>
                     </code>
                   </div>
                   <div class="height-container">
@@ -557,7 +583,9 @@
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">open</span> <span class="kd">func</span> <span class="n">read</span><span class="o">&lt;</span><span class="kt">D</span><span class="o">&gt;</span><span class="p">(</span><span class="nv">account</span><span class="p">:</span> <span class="kt">String</span><span class="p">)</span> <span class="k">throws</span> <span class="o">-&gt;</span> <span class="kt">D</span><span class="p">?</span> <span class="k">where</span> <span class="kt">D</span> <span class="p">:</span> <span class="kt"><a href="../Protocols/StorageData.html">StorageData</a></span></code></pre>
+                          <pre class="highlight swift"><code><span class="kd">open</span> <span class="kd">func</span> <span class="n">read</span><span class="o">&lt;</span><span class="kt">D</span><span class="p">:</span> <span class="kt"><a href="../Protocols/StorageData.html">StorageData</a></span><span class="o">&gt;</span><span class="p">(</span><span class="nv">account</span><span class="p">:</span> <span class="kt">String</span><span class="p">,</span>
+                               <span class="nv">accessGroup</span><span class="p">:</span> <span class="kt">String</span><span class="p">?</span> <span class="o">=</span> <span class="kc">nil</span><span class="p">,</span>
+                               <span class="nv">synchronizable</span><span class="p">:</span> <span class="kt">Bool</span> <span class="o">=</span> <span class="kc">false</span><span class="p">)</span> <span class="k">throws</span> <span class="o">-&gt;</span> <span class="kt">D</span><span class="p">?</span></code></pre>
 
                         </div>
                       </div>
@@ -577,6 +605,30 @@
                                 </div>
                               </td>
                             </tr>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>accessGroup</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>Access group where <code><a href="../Protocols/StorageData.html">StorageData</a></code> is in.</p>
+                                </div>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>synchronizable</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>Whether the <code><a href="../Protocols/StorageData.html">StorageData</a></code> can be synchronized.</p>
+                                </div>
+                              </td>
+                            </tr>
                           </tbody>
                         </table>
                       </div>
@@ -585,7 +637,7 @@
                         <p><code><a href="../Protocols/StorageData.html">StorageData</a></code> for account.</p>
                       </div>
                       <div class="slightly-smaller">
-                        <a href="https://github.com/alexruperez/SecurePropertyStorage/blob/master/Sources/Keychain/KeychainStorage.swift#L105-L123">Show on GitHub</a>
+                        <a href="https://github.com/alexruperez/SecurePropertyStorage/blob/master/Sources/Keychain/KeychainStorage.swift#L141-L167">Show on GitHub</a>
                       </div>
                     </section>
                   </div>
@@ -593,9 +645,9 @@
                 <li class="item">
                   <div>
                     <code>
-                    <a name="/s:8Keychain0A15StorageDelegateC6delete7accountySS_tKF"></a>
-                    <a name="//apple_ref/swift/Method/delete(account:)" class="dashAnchor"></a>
-                    <a class="token" href="#/s:8Keychain0A15StorageDelegateC6delete7accountySS_tKF">delete(account:<wbr>)</a>
+                    <a name="/s:8Keychain0A15StorageDelegateC6delete7account11accessGroup14synchronizableySS_SSSgSbtKF"></a>
+                    <a name="//apple_ref/swift/Method/delete(account:accessGroup:synchronizable:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:8Keychain0A15StorageDelegateC6delete7account11accessGroup14synchronizableySS_SSSgSbtKF">delete(account:<wbr>accessGroup:<wbr>synchronizable:<wbr>)</a>
                     </code>
                   </div>
                   <div class="height-container">
@@ -615,7 +667,9 @@
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">open</span> <span class="kd">func</span> <span class="nf">delete</span><span class="p">(</span><span class="nv">account</span><span class="p">:</span> <span class="kt">String</span><span class="p">)</span> <span class="k">throws</span></code></pre>
+                          <pre class="highlight swift"><code><span class="kd">open</span> <span class="kd">func</span> <span class="nf">delete</span><span class="p">(</span><span class="nv">account</span><span class="p">:</span> <span class="kt">String</span><span class="p">,</span>
+                 <span class="nv">accessGroup</span><span class="p">:</span> <span class="kt">String</span><span class="p">?</span> <span class="o">=</span> <span class="kc">nil</span><span class="p">,</span>
+                 <span class="nv">synchronizable</span><span class="p">:</span> <span class="kt">Bool</span> <span class="o">=</span> <span class="kc">false</span><span class="p">)</span> <span class="k">throws</span></code></pre>
 
                         </div>
                       </div>
@@ -635,11 +689,35 @@
                                 </div>
                               </td>
                             </tr>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>accessGroup</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>Access group where <code><a href="../Protocols/StorageData.html">StorageData</a></code> is in.</p>
+                                </div>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>synchronizable</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>Whether the <code><a href="../Protocols/StorageData.html">StorageData</a></code> can be synchronized.</p>
+                                </div>
+                              </td>
+                            </tr>
                           </tbody>
                         </table>
                       </div>
                       <div class="slightly-smaller">
-                        <a href="https://github.com/alexruperez/SecurePropertyStorage/blob/master/Sources/Keychain/KeychainStorage.swift#L132-L142">Show on GitHub</a>
+                        <a href="https://github.com/alexruperez/SecurePropertyStorage/blob/master/Sources/Keychain/KeychainStorage.swift#L178-L197">Show on GitHub</a>
                       </div>
                     </section>
                   </div>

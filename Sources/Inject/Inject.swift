@@ -8,7 +8,7 @@ public typealias Qualifier = Protocol
 @objc public protocol Mock {}
 
 /// Inject property wrapper reusable class.
-open class InjectPropertyWrapper<Dependency, Parameters>: StorePropertyWrapper {
+open class InjectPropertyWrapper<Dependency, Parameters>: StorePropertyWrapper<InjectStorage> {
     /// Injection scope.
     public enum Scope {
         /// Singleton injection scope.

@@ -6,28 +6,44 @@ import Storage
 open class KeychainStorage: DelegatedStorage {
     /// `KeychainStorage` shared instance.
     open class var standard: KeychainStorage { shared }
-    private static let shared = KeychainStorage()
+    private static let shared = KeychainStorage(accessGroup: nil)
 
     /**
      Create a `KeychainStorage`.
 
      - Parameter delegate: `StorageDelegate`, defaults `KeychainStorageDelegate`.
+     - Parameter symmetricKey: A cryptographic key used to seal the message.
+     - Parameter nonce: A nonce used during the sealing process.
      - Parameter authenticationTag: Custom additional `Data` to be authenticated.
+     - Parameter accessGroup: Access group where `StorageData` is in.
+     - Parameter synchronizable: Whether the `StorageData` can be synchronized.
      - Parameter errorClosure: Closure to handle `KeychainStorageDelegate` errors.
      */
     public convenience init(_ delegate: StorageDelegate = KeychainStorageDelegate(),
+                            symmetricKey: SymmetricKey? = SymmetricKey.generate(),
+                            nonce: AES.GCM.Nonce? = AES.GCM.Nonce.generate(),
                             authenticationTag: Data? = nil,
+                            accessGroup: String?,
+                            synchronizable: Bool = false,
                             errorClosure: StorageErrorClosure? = nil) {
         self.init(delegate,
-                  symmetricKey: SymmetricKey.generate(),
-                  nonce: AES.GCM.Nonce.generate(),
+                  symmetricKey: symmetricKey,
+                  nonce: nonce,
                   authenticationTag: authenticationTag,
                   errorClosure: errorClosure)
+        let delegate = delegate as? KeychainStorageDelegate
+        delegate?.accessGroup = accessGroup
+        delegate?.synchronizable = synchronizable
     }
 }
 
 /// `KeychainStorageDelegate` conforming `StorageDelegate` protocol.
 open class KeychainStorageDelegate: StorageDelegate {
+    /// Access group where `StorageData` is in.
+    var accessGroup: String?
+    /// Whether the `StorageData` can be synchronized.
+    var synchronizable = false
+
     /// Create a `KeychainStorageDelegate`.
     public init() {}
 
@@ -41,7 +57,9 @@ open class KeychainStorageDelegate: StorageDelegate {
      - Returns: `StorageData` for `StoreKey`.
      */
     open func data<D: StorageData>(forKey key: StoreKey) throws -> D? {
-        try read(account: key)
+        try read(account: key,
+                 accessGroup: accessGroup,
+                 synchronizable: synchronizable)
     }
 
     /**
@@ -55,7 +73,10 @@ open class KeychainStorageDelegate: StorageDelegate {
     open func set<D: StorageData>(_ data: D?, forKey key: StoreKey) throws {
         try remove(forKey: key)
         if let data = data {
-            try store(data, account: key)
+            try store(data,
+                      account: key,
+                      accessGroup: accessGroup,
+                      synchronizable: synchronizable)
         }
     }
 
@@ -67,7 +88,9 @@ open class KeychainStorageDelegate: StorageDelegate {
      - Throws: `KeychainError.error`.
      */
     open func remove(forKey key: StoreKey) throws {
-        try delete(account: key)
+        try delete(account: key,
+                   accessGroup: accessGroup,
+                   synchronizable: synchronizable)
     }
 
     /**
@@ -76,17 +99,28 @@ open class KeychainStorageDelegate: StorageDelegate {
      - Parameter value: `StorageData` to store.
      - Parameter account: Item's account name.
      - Parameter accessible: When the keychain item is accessible.
+     - Parameter accessGroup: Access group where `StorageData` is in.
+     - Parameter synchronizable: Whether the `StorageData` can be synchronized.
 
      - Throws: `KeychainError.error`.
      */
     open func store<D: StorageData>(_ value: D,
                                     account: String,
-                                    accessible: CFString = kSecAttrAccessibleWhenUnlocked) throws {
-        let query = [kSecClass: kSecClassGenericPassword,
+                                    accessible: CFString = kSecAttrAccessibleWhenUnlocked,
+                                    accessGroup: String? = nil,
+                                    synchronizable: Bool = false) throws {
+        var query = [kSecClass: kSecClassGenericPassword,
                      kSecAttrAccount: account,
                      kSecAttrAccessible: accessible,
                      kSecUseDataProtectionKeychain: true,
-                     kSecValueData: value.data] as [String: Any]
+                     kSecValueData: value.data] as [CFString: Any]
+        if let accessGroup = accessGroup {
+            query[kSecAttrAccessGroup] = accessGroup
+        }
+        if synchronizable {
+            query[kSecAttrSynchronizable] = kCFBooleanTrue
+        }
+
         let status = SecItemAdd(query as CFDictionary, nil)
         guard status == errSecSuccess else {
             throw KeychainError.error("Unable to store item: \(status.message)")
@@ -97,16 +131,26 @@ open class KeychainStorageDelegate: StorageDelegate {
      Read `StorageData` for account from the keychain.
 
      - Parameter account: Item's account name.
+     - Parameter accessGroup: Access group where `StorageData` is in.
+     - Parameter synchronizable: Whether the `StorageData` can be synchronized.
 
      - Throws: `KeychainError.error`.
 
      - Returns: `StorageData` for account.
      */
-    open func read<D: StorageData>(account: String) throws -> D? {
-        let query = [kSecClass: kSecClassGenericPassword,
+    open func read<D: StorageData>(account: String,
+                                   accessGroup: String? = nil,
+                                   synchronizable: Bool = false) throws -> D? {
+        var query = [kSecClass: kSecClassGenericPassword,
                      kSecAttrAccount: account,
                      kSecUseDataProtectionKeychain: true,
-                     kSecReturnData: true] as [String: Any]
+                     kSecReturnData: true] as [CFString: Any]
+        if let accessGroup = accessGroup {
+            query[kSecAttrAccessGroup] = accessGroup
+        }
+        if synchronizable {
+            query[kSecAttrSynchronizable] = kCFBooleanTrue
+        }
 
         var item: CFTypeRef?
         switch SecItemCopyMatching(query as CFDictionary, &item) {
@@ -126,13 +170,24 @@ open class KeychainStorageDelegate: StorageDelegate {
      Delete item for account from the keychain.
 
      - Parameter account: Item's account name.
+     - Parameter accessGroup: Access group where `StorageData` is in.
+     - Parameter synchronizable: Whether the `StorageData` can be synchronized.
 
      - Throws: `KeychainError.error`.
      */
-    open func delete(account: String) throws {
-        let query = [kSecClass: kSecClassGenericPassword,
+    open func delete(account: String,
+                     accessGroup: String? = nil,
+                     synchronizable: Bool = false) throws {
+        var query = [kSecClass: kSecClassGenericPassword,
                      kSecUseDataProtectionKeychain: true,
-                     kSecAttrAccount: account] as [String: Any]
+                     kSecAttrAccount: account] as [CFString: Any]
+        if let accessGroup = accessGroup {
+            query[kSecAttrAccessGroup] = accessGroup
+        }
+        if synchronizable {
+            query[kSecAttrSynchronizable] = kCFBooleanTrue
+        }
+
         switch SecItemDelete(query as CFDictionary) {
         case errSecItemNotFound, errSecSuccess:
             break

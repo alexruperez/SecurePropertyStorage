@@ -2,7 +2,7 @@ import Storage
 
 /// `@UserDefault` property wrapper.
 @propertyWrapper
-open class UserDefault<Value>: StorePropertyWrapper {
+open class UserDefault<Value>: StorePropertyWrapper<UserDefaultsStorage> {
     /**
      Create a `UserDefault` property wrapper.
 
@@ -34,7 +34,7 @@ open class UserDefault<Value>: StorePropertyWrapper {
 @propertyWrapper
 open class UnwrappedUserDefault<Value>: StorePropertyWrapperProtocol {
     /// `Storage` used by property wrapper.
-    open var storage: Storage
+    open var storage: UserDefaultsStorage
     /// `StoreKey` to store the value.
     open var key: StoreKey
     /// Default value.
@@ -62,7 +62,7 @@ open class UnwrappedUserDefault<Value>: StorePropertyWrapperProtocol {
 
 /// `@CodableUserDefault` property wrapper.
 @propertyWrapper
-open class CodableUserDefault<Value: Codable>: StorePropertyWrapper {
+open class CodableUserDefault<Value: Codable>: StorePropertyWrapper<UserDefaultsStorage> {
     /**
      Create a `CodableUserDefault` property wrapper.
 
@@ -94,7 +94,7 @@ open class CodableUserDefault<Value: Codable>: StorePropertyWrapper {
 @propertyWrapper
 open class UnwrappedCodableUserDefault<Value: Codable>: StorePropertyWrapperProtocol {
     /// `Storage` used by property wrapper.
-    open var storage: Storage
+    open var storage: UserDefaultsStorage
     /// `StoreKey` to store the value.
     open var key: StoreKey
     /// Default value.
