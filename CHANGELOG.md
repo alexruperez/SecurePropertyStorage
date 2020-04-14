@@ -2,6 +2,17 @@
 
 ## Next Version
 
+## 0.3.1
+
+#### Added
+- Register builder closures.
+- Register builder closures with parameters.
+- `@InjectWith` and `@UnwrappedInjectWith` parameters property wrappers. [#6](https://github.com/alexruperez/SecurePropertyStorage/pull/6)
+- Instance inject scope.
+- Mock qualifier for testing.
+
+[Commits](https://github.com/alexruperez/SecurePropertyStorage/compare/0.3.0...0.3.1)
+
 ## 0.3.0
 
 #### Added
