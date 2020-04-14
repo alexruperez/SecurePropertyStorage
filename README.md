@@ -1,5 +1,7 @@
 # 🔐 Secure Property Storage
-> Helps you define secure storages for your properties using Swift *property wrappers*.
+
+> Helps you define secure storages for your properties using Swift _property
+> wrappers_.
 
 [![Twitter](https://img.shields.io/badge/contact-%40alexruperez-blue)](http://twitter.com/alexruperez)
 [![Swift](https://img.shields.io/badge/swift-5-orange)](https://swift.org)
@@ -16,70 +18,94 @@
 
 ## 🌟 Features
 
-All keys are hashed using [SHA512](https://en.wikipedia.org/wiki/SHA-2) and all values are encrypted using [AES](https://en.wikipedia.org/wiki/Advanced_Encryption_Standard)-[GCM](https://en.wikipedia.org/wiki/Galois/Counter_Mode) to keep user information safe, auto*magic*ally.
-Symmetric key and nonce, are stored in Keychain in a totally secure way. 
+All keys are hashed using [SHA512](https://en.wikipedia.org/wiki/SHA-2) and all
+values are encrypted using
+[AES](https://en.wikipedia.org/wiki/Advanced_Encryption_Standard)-[GCM](https://en.wikipedia.org/wiki/Galois/Counter_Mode)
+to keep user information safe, auto*magic*ally. Symmetric key and nonce, are
+stored in Keychain in a totally secure way.
 
 ## 🐒 Basic usage
 
 ### @UserDefault
 
-This property wrapper will store your property in [UserDefaults](https://developer.apple.com/documentation/foundation/userdefaults) using `StoreKey` (any `String` but i recommend you a String typed enum).
-Optionally, you can assign a default value to the property that will be secure stored at initialization.
+This property wrapper will store your property in
+[UserDefaults](https://developer.apple.com/documentation/foundation/userdefaults)
+using `StoreKey` (any `String` but i recommend you a String typed enum).
+Optionally, you can assign a default value to the property that will be secure
+stored at initialization.
 
 ```swift
 @UserDefault(<#StoreKey#>)
 var yourProperty: YourType? = yourDefaultValueIfNeeded
 ```
 
-[`UserDefaultsStorage`](Sources/UserDefault/UserDefaultsStorage.swift) is also available, a subclass of [`UserDefaults`](https://developer.apple.com/documentation/foundation/userdefaults) with all the security provided by this library.
+[`UserDefaultsStorage`](Sources/UserDefault/UserDefaultsStorage.swift) is also
+available, a subclass of
+[`UserDefaults`](https://developer.apple.com/documentation/foundation/userdefaults)
+with all the security provided by this library.
 
 ### @Keychain
 
-This property wrapper will store your property in [Keychain](https://developer.apple.com/documentation/security/keychain_services) using `StoreKey`.
+This property wrapper will store your property in
+[Keychain](https://developer.apple.com/documentation/security/keychain_services)
+using `StoreKey`.
 
 ```swift
 @Keychain(<#StoreKey#>)
 var yourProperty: YourType? = yourDefaultValueIfNeeded
 ```
 
-As `UserDefaultsStorage`, [`KeychainStorage`](Sources/Keychain/KeychainStorage.swift) is also available.
+As `UserDefaultsStorage`,
+[`KeychainStorage`](Sources/Keychain/KeychainStorage.swift) is also available.
 
 ### @Singleton
 
-This property wrapper will store your property in a memory [singleton](https://en.wikipedia.org/wiki/Singleton_pattern),  every property with the same wrapper and key can access or modify the value from wherever it is.
+This property wrapper will store your property in a memory
+[singleton](https://en.wikipedia.org/wiki/Singleton_pattern), every property
+with the same wrapper and key can access or modify the value from wherever it
+is.
 
 ```swift
 @Singleton(<#StoreKey#>)
 var yourProperty: YourType? = yourDefaultValueIfNeeded
 ```
 
-As `KeychainStorage`, [`SingletonStorage`](Sources/Singleton/SingletonStorage.swift) is also available.
+As `KeychainStorage`,
+[`SingletonStorage`](Sources/Singleton/SingletonStorage.swift) is also
+available.
 
 ### @Inject
 
-This property wrapper is similar to `@Singleton` but, together with `@Register`, will inject your dependencies. More details in [Dependency Injection usage](#-dependency-injection-usage) guide.
+This property wrapper is similar to `@Singleton` but, together with `@Register`,
+will inject your dependencies. More details in
+[Dependency Injection usage](#-dependency-injection-usage) guide.
 
 ```swift
 @Inject
 var yourDependency: YourProtocol?
 ```
 
-As `SingletonStorage`, [`InjectStorage`](Sources/Inject/InjectStorage.swift) is also available.
+As `SingletonStorage`, [`InjectStorage`](Sources/Inject/InjectStorage.swift) is
+also available.
 
 ### @Store
 
-This is a custom wrapper, you can define your own [`Storage`](Sources/Storage/Storage.swift) protocol implementation.
+This is a custom wrapper, you can define your own
+[`Storage`](Sources/Storage/Storage.swift) protocol implementation.
 
 ```swift
 @Store(<#Storage#>, <#StoreKey#>)
 var yourProperty: YourType? = yourDefaultValueIfNeeded
 ```
 
-As `InjectStorage`, [`DelegatedStorage`](Sources/Storage/DelegatedStorage.swift) is also available with all the magic of this library.
+As `InjectStorage`, [`DelegatedStorage`](Sources/Storage/DelegatedStorage.swift)
+is also available with all the magic of this library.
 
 ## 🧙‍♂️ Codable usage
 
-If your property conforms [`Codable`](https://developer.apple.com/documentation/swift/codable) protocol, just add `Codable` keyword as prefix of your property wrapper.
+If your property conforms
+[`Codable`](https://developer.apple.com/documentation/swift/codable) protocol,
+just add `Codable` keyword as prefix of your property wrapper.
 
 - **@CodableUserDefault**
 - **@CodableKeychain**
@@ -88,7 +114,10 @@ If your property conforms [`Codable`](https://developer.apple.com/documentation/
 
 ## 🥡 Unwrapped usage
 
-To avoid continually unwrapping your property, just add `Unwrapped` keyword as prefix of your property wrapper, assign a default value (mandatory except for `@UnwrappedInject`), and it will return stored value or default value, but your property will always be there for you.
+To avoid continually unwrapping your property, just add `Unwrapped` keyword as
+prefix of your property wrapper, assign a default value (mandatory except for
+`@UnwrappedInject`), and it will return stored value or default value, but your
+property will always be there for you.
 
 - **@UnwrappedUserDefault**
 - **@UnwrappedKeychain**
@@ -110,8 +139,10 @@ You can also combine previous cases in case you need it, unwrapped first please.
 - **@Register**
 
 This property wrapper will register the implementations of your dependencies.
-Register them wherever you want before inject it, but be sure to do it only once (except if you use [qualifiers](#qualifiers)), for example, in an `Injector` class.
-You can register through a protocol or directly using your class implementation.
+Register them wherever you want before inject it, but be sure to do it only once
+(except if you use [qualifiers](#qualifiers)), for example, in an `Injector`
+class. You can register through a protocol or directly using your class
+implementation.
 
 ```swift
 @Register
@@ -121,8 +152,8 @@ var yourDependency: YourProtocol = YourImplementation()
 var yourDependency = YourImplementation()
 ```
 
-You can also define a closure that builds your dependency.
-Just remember cast your dependency if you are going to inject it through a protocol.
+You can also define a closure that builds your dependency. Just remember cast
+your dependency if you are going to inject it through a protocol.
 
 ```swift
 @Register
@@ -156,7 +187,9 @@ var yourUnwrappedDependency: YourImplementation
 
 #### Scope
 
-Because these property wrappers works similarly to `@Singleton`, the default scope is `.singleton`, but if you use builder closures on `@Register`, you can modify them to inject a single instance.
+Because these property wrappers works similarly to `@Singleton`, the default
+scope is `.singleton`, but if you use builder closures on `@Register`, you can
+modify them to inject a single instance.
 
 ```swift
 @Inject(.instance)
@@ -168,9 +201,9 @@ var yourUnwrappedDependency: YourProtocol
 
 - **@InjectWith** and **@UnwrappedInjectWith**
 
-Your dependency may need parameters when injecting, you can pass them with these property wrappers.
-Simply define a model with your dependency parameters  and pass it.
-It will inject a new instance built with these parameters.
+Your dependency may need parameters when injecting, you can pass them with these
+property wrappers. Simply define a model with your dependency parameters and
+pass it. It will inject a new instance built with these parameters.
 
 ```swift
 @Register
@@ -187,9 +220,13 @@ var yourUnwrappedDependency: YourProtocol
 
 ### Qualifiers
 
-You can use [qualifiers](https://javaee.github.io/tutorial/cdi-basic006.html) to provide various implementations of a particular dependency. A qualifier is just a `@objc protocol` that you apply to a `class`.
+You can use [qualifiers](https://javaee.github.io/tutorial/cdi-basic006.html) to
+provide various implementations of a particular dependency. A qualifier is just
+a `@objc protocol` that you apply to a `class`.
 
-For example, you could declare `Dog` and `Cat` qualifier protocols and apply it to another class that conforms `Animal` protocol. To declare this qualifier, use the following code:
+For example, you could declare `Dog` and `Cat` qualifier protocols and apply it
+to another class that conforms `Animal` protocol. To declare this qualifier, use
+the following code:
 
 ```swift
 protocol Animal {
@@ -201,7 +238,8 @@ protocol Animal {
 @objc protocol Cat {}
 ```
 
-You can then define multiple classes that conforms `Animal` protocol and uses this qualifiers:
+You can then define multiple classes that conforms `Animal` protocol and uses
+this qualifiers:
 
 ```swift
 class DogImplementation: Animal, Dog {
@@ -223,7 +261,8 @@ var registerDog: Animal = DogImplementation()
 var registerCat: Animal = CatImplementation()
 ```
 
-To inject one or the other implementation, simply add the qualifier(s) to your `@Inject`:
+To inject one or the other implementation, simply add the qualifier(s) to your
+`@Inject`:
 
 ```swift
 @UnwrappedInject(Dog.self)
@@ -238,8 +277,10 @@ cat.sound() // prints Meow!
 
 ### Testing
 
-One of the advantages of dependency injection is that the code can be easily testable with mock implementation.
-That is why there is a `Mock` qualifier that has priority over all, so you can have your dependencies defined in the app and create your mock in the test target simply by adding this qualifier.
+One of the advantages of dependency injection is that the code can be easily
+testable with mock implementation. That is why there is a `Mock` qualifier that
+has priority over all, so you can have your dependencies defined in the app and
+create your mock in the test target simply by adding this qualifier.
 
 ```swift
 // App target
@@ -311,15 +352,17 @@ var yourDependency: YourProtocol = YourMock()
 .package(url: "https://github.com/alexruperez/SecurePropertyStorage", from: "0.3.0")
 ```
 
-By default, all property wrappers are installed, but if you want, you can choose only certain products:
+By default, all property wrappers are installed, but if you want, you can choose
+only certain products:
 
-- **UserDefault**: @*UserDefault property wrappers.
-- **Keychain**: @*Keychain property wrappers.
-- **Singleton**: @*Singleton property wrappers.
-- **Storage**: @*Store property wrappers.
-- **Inject**: @*Inject property wrappers.
+- **UserDefault**: @\*UserDefault property wrappers.
+- **Keychain**: @\*Keychain property wrappers.
+- **Singleton**: @\*Singleton property wrappers.
+- **Storage**: @\*Store property wrappers.
+- **Inject**: @\*Inject property wrappers.
 
-*For more information, see [the Swift Package Manager documentation](https://github.com/apple/swift-package-manager/tree/master/Documentation).*
+_For more information, see
+[the Swift Package Manager documentation](https://github.com/apple/swift-package-manager/tree/master/Documentation)._
 
 #### Or you can use [Carthage](https://github.com/Carthage/Carthage):
 
@@ -329,14 +372,17 @@ github "alexruperez/SecurePropertyStorage"
 
 ## 🍻 Etc.
 
-- Featured in [Dave Verwer](https://twitter.com/daveverwer)'s iOS Dev Weekly - [Issue 450](https://iosdevweekly.com/issues/450?#ll98q5s), thanks Dave!
+- Featured in [Dave Verwer](https://twitter.com/daveverwer)'s iOS Dev Weekly -
+  [Issue 450](https://iosdevweekly.com/issues/450?#ll98q5s), thanks Dave!
 - Contributions are very welcome.
 - Attribution is appreciated (let's spread the word!), but not mandatory.
 
 ## 👨‍💻 Author
 
-Alex Rupérez – [@alexruperez](https://twitter.com/alexruperez) – me@alexruperez.com
+Alex Rupérez – [@alexruperez](https://twitter.com/alexruperez) –
+me@alexruperez.com
 
 ## 👮‍♂️ License
 
-*SecurePropertyStorage* is available under the MIT license. See the [LICENSE](LICENSE) file for more info.
+_SecurePropertyStorage_ is available under the MIT license. See the
+[LICENSE](LICENSE) file for more info.
