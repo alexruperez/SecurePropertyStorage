@@ -8,7 +8,7 @@ open class KeychainStorage: DelegatedStorage {
     open class var standard: KeychainStorage { shared }
     private static let shared = KeychainStorage()
     private var keychainDelegate: KeychainStorageDelegate? { delegate as? KeychainStorageDelegate }
-    
+
     /// Access group where `StorageData` is in.
     open var accessGroup: String? {
         get { keychainDelegate?.accessGroup }
