@@ -21,7 +21,6 @@ extension SymmetricKey: StorageData {
         do {
             guard let symmetricKey: SymmetricKey = try keychainStorage.read(account: account) else {
                 let symmetricKey = SymmetricKey(size: .bits256)
-                print("Symmetric key created. \(symmetricKey.description)")
                 try keychainStorage.store(symmetricKey, account: account)
                 return symmetricKey
             }
@@ -56,7 +55,6 @@ extension AES.GCM.Nonce: StorageData {
         do {
             guard let nonce: AES.GCM.Nonce = try keychainStorage.read(account: account) else {
                 let nonce = AES.GCM.Nonce()
-                print("Nonce created. \(nonce.description)")
                 try keychainStorage.store(nonce, account: account)
                 return nonce
             }
