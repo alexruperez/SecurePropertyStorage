@@ -7,7 +7,9 @@ enum KeychainCodable: String, Codable {
     case test2
 }
 
-let keychainTagStorage: DelegatedStorage = KeychainStorage(authenticationTag: Data(), accessGroup: nil)
+let keychainTagStorage: DelegatedStorage = KeychainStorage(authenticationTag: Data(),
+                                                           accessGroup: "",
+                                                           synchronizable: true)
 
 final class KeychainTests: XCTestCase {
     @Store(keychainTagStorage, "keychainTagStore")
@@ -39,6 +41,7 @@ final class KeychainTests: XCTestCase {
             if case let KeychainError.error(message) = error {
                 XCTAssertFalse(message.isEmpty)
                 keychainTagStoreError.fulfill()
+                keychainTagStorage.errorClosure = nil
             }
         }
         keychainTagStore = "testKeychainTagStore"
@@ -78,6 +81,7 @@ final class KeychainTests: XCTestCase {
             if case let KeychainError.error(message) = error {
                 XCTAssertFalse(message.isEmpty)
                 keychainTagStoreDefaultError.fulfill()
+                keychainTagStorage.errorClosure = nil
             }
         }
         keychainTagDefault = "testKeychainTagStore"
@@ -104,6 +108,7 @@ final class KeychainTests: XCTestCase {
             if case let KeychainError.error(message) = error {
                 XCTAssertFalse(message.isEmpty)
                 keychainTagStoreCodableError.fulfill()
+                keychainTagStorage.errorClosure = nil
             }
         }
         keychainTagCodable = .test
@@ -130,6 +135,7 @@ final class KeychainTests: XCTestCase {
             if case let KeychainError.error(message) = error {
                 XCTAssertFalse(message.isEmpty)
                 unwrappedKeychainTagStoreDefaultError.fulfill()
+                keychainTagStorage.errorClosure = nil
             }
         }
         unwrappedKeychainTagDefault = "tagDefault2"
@@ -156,6 +162,7 @@ final class KeychainTests: XCTestCase {
             if case let KeychainError.error(message) = error {
                 XCTAssertFalse(message.isEmpty)
                 unwrappedKeychainTagStoreCodableError.fulfill()
+                keychainTagStorage.errorClosure = nil
             }
         }
         unwrappedKeychainTagCodable = .test2
