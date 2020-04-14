@@ -81,7 +81,13 @@
                 <a class="nav-group-task-link" href="../Classes/InjectPropertyWrapper.html">InjectPropertyWrapper</a>
               </li>
               <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Classes/InjectPropertyWrapper/Scope.html">– Scope</a>
+              </li>
+              <li class="nav-group-task">
                 <a class="nav-group-task-link" href="../Classes/InjectStorage.html">InjectStorage</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Classes/InjectWith.html">InjectWith</a>
               </li>
               <li class="nav-group-task">
                 <a class="nav-group-task-link" href="../Classes/Keychain.html">Keychain</a>
@@ -124,6 +130,9 @@
               </li>
               <li class="nav-group-task">
                 <a class="nav-group-task-link" href="../Classes/UnwrappedInject.html">UnwrappedInject</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Classes/UnwrappedInjectWith.html">UnwrappedInjectWith</a>
               </li>
               <li class="nav-group-task">
                 <a class="nav-group-task-link" href="../Classes/UnwrappedKeychain.html">UnwrappedKeychain</a>
@@ -183,6 +192,9 @@
             <a class="nav-group-name-link" href="../Protocols.html">Protocols</a>
             <ul class="nav-group-tasks">
               <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Protocols.html#/c:@M@Inject@objc(pl)Mock">Mock</a>
+              </li>
+              <li class="nav-group-task">
                 <a class="nav-group-task-link" href="../Protocols/Storage.html">Storage</a>
               </li>
               <li class="nav-group-task">
@@ -219,7 +231,7 @@
             <h1>InjectPropertyWrapper</h1>
               <div class="declaration">
                 <div class="language">
-                  <pre class="highlight swift"><code><span class="kd">open</span> <span class="kd">class</span> <span class="kt">InjectPropertyWrapper</span><span class="o">&lt;</span><span class="kt">Dependency</span><span class="o">&gt;</span> <span class="p">:</span> <span class="kt"><a href="../Classes/StorePropertyWrapper.html">StorePropertyWrapper</a></span></code></pre>
+                  <pre class="highlight swift"><code><span class="kd">open</span> <span class="kd">class</span> <span class="kt">InjectPropertyWrapper</span><span class="o">&lt;</span><span class="kt">Dependency</span><span class="p">,</span> <span class="kt">Parameters</span><span class="o">&gt;</span> <span class="p">:</span> <span class="kt"><a href="../Classes/StorePropertyWrapper.html">StorePropertyWrapper</a></span></code></pre>
 
                 </div>
               </div>
@@ -232,6 +244,37 @@
           <div class="section-content">
             <div class="task-group">
               <ul class="item-container">
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:6Inject0A15PropertyWrapperC5ScopeO"></a>
+                    <a name="//apple_ref/swift/Enum/Scope" class="dashAnchor"></a>
+                    <a class="token" href="#/s:6Inject0A15PropertyWrapperC5ScopeO">Scope</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Injection scope.</p>
+
+                        <a href="../Classes/InjectPropertyWrapper/Scope.html" class="slightly-smaller">See more</a>
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">enum</span> <span class="kt">Scope</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div class="slightly-smaller">
+                        <a href="https://github.com/alexruperez/SecurePropertyStorage/blob/master/Sources/Inject/Inject.swift#L13-L18">Show on GitHub</a>
+                      </div>
+                    </section>
+                  </div>
+                </li>
                 <li class="item">
                   <div>
                     <code>
@@ -257,7 +300,7 @@
                         </div>
                       </div>
                       <div class="slightly-smaller">
-                        <a href="https://github.com/alexruperez/SecurePropertyStorage/blob/master/Sources/Inject/Inject.swift#L10">Show on GitHub</a>
+                        <a href="https://github.com/alexruperez/SecurePropertyStorage/blob/master/Sources/Inject/Inject.swift#L21">Show on GitHub</a>
                       </div>
                     </section>
                   </div>
@@ -265,9 +308,9 @@
                 <li class="item">
                   <div>
                     <code>
-                    <a name="/s:6Inject0A15PropertyWrapperCyACyxGSo8ProtocolCcfc"></a>
+                    <a name="/s:6Inject0A15PropertyWrapperCyACyxq_GSo8ProtocolCcfc"></a>
                     <a name="//apple_ref/swift/Method/init(_:)" class="dashAnchor"></a>
-                    <a class="token" href="#/s:6Inject0A15PropertyWrapperCyACyxGSo8ProtocolCcfc">init(_:<wbr>)</a>
+                    <a class="token" href="#/s:6Inject0A15PropertyWrapperCyACyxq_GSo8ProtocolCcfc">init(_:<wbr>)</a>
                     </code>
                   </div>
                   <div class="height-container">
@@ -306,7 +349,7 @@
                         </table>
                       </div>
                       <div class="slightly-smaller">
-                        <a href="https://github.com/alexruperez/SecurePropertyStorage/blob/master/Sources/Inject/Inject.swift#L17-L19">Show on GitHub</a>
+                        <a href="https://github.com/alexruperez/SecurePropertyStorage/blob/master/Sources/Inject/Inject.swift#L28-L30">Show on GitHub</a>
                       </div>
                     </section>
                   </div>
@@ -314,9 +357,9 @@
                 <li class="item">
                   <div>
                     <code>
-                    <a name="/s:6Inject0A15PropertyWrapperCyACyxGSaySo8ProtocolCGcfc"></a>
+                    <a name="/s:6Inject0A15PropertyWrapperCyACyxq_GSaySo8ProtocolCGcfc"></a>
                     <a name="//apple_ref/swift/Method/init(_:)" class="dashAnchor"></a>
-                    <a class="token" href="#/s:6Inject0A15PropertyWrapperCyACyxGSaySo8ProtocolCGcfc">init(_:<wbr>)</a>
+                    <a class="token" href="#/s:6Inject0A15PropertyWrapperCyACyxq_GSaySo8ProtocolCGcfc">init(_:<wbr>)</a>
                     </code>
                   </div>
                   <div class="height-container">
@@ -355,7 +398,7 @@
                         </table>
                       </div>
                       <div class="slightly-smaller">
-                        <a href="https://github.com/alexruperez/SecurePropertyStorage/blob/master/Sources/Inject/Inject.swift#L26-L29">Show on GitHub</a>
+                        <a href="https://github.com/alexruperez/SecurePropertyStorage/blob/master/Sources/Inject/Inject.swift#L37-L44">Show on GitHub</a>
                       </div>
                     </section>
                   </div>
@@ -396,7 +439,7 @@
                               </td>
                               <td>
                                 <div>
-                                  <p>Your dependency to register.</p>
+                                  <p>Dependency to register.</p>
                                 </div>
                               </td>
                             </tr>
@@ -404,7 +447,7 @@
                         </table>
                       </div>
                       <div class="slightly-smaller">
-                        <a href="https://github.com/alexruperez/SecurePropertyStorage/blob/master/Sources/Inject/Inject.swift#L36-L38">Show on GitHub</a>
+                        <a href="https://github.com/alexruperez/SecurePropertyStorage/blob/master/Sources/Inject/Inject.swift#L51-L53">Show on GitHub</a>
                       </div>
                     </section>
                   </div>
@@ -412,9 +455,9 @@
                 <li class="item">
                   <div>
                     <code>
-                    <a name="/s:6Inject0A15PropertyWrapperC7resolvexyKF"></a>
-                    <a name="//apple_ref/swift/Method/resolve()" class="dashAnchor"></a>
-                    <a class="token" href="#/s:6Inject0A15PropertyWrapperC7resolvexyKF">resolve()</a>
+                    <a name="/s:6Inject0A15PropertyWrapperC7resolveyxAC5ScopeOyxq__G_q_SgtKF"></a>
+                    <a name="//apple_ref/swift/Method/resolve(_:_:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:6Inject0A15PropertyWrapperC7resolveyxAC5ScopeOyxq__G_q_SgtKF">resolve(_:<wbr>_:<wbr>)</a>
                     </code>
                   </div>
                   <div class="height-container">
@@ -423,22 +466,187 @@
                       <div class="pointer"></div>
                       <div class="abstract">
                         <p>Resolve a dependency.</p>
+<div class="aside aside-throws">
+    <p class="aside-title">Throws</p>
+    <p><code><a href="../Enums/InjectError.html">InjectError</a></code>.</p>
+
+</div>
 
                       </div>
                       <div class="declaration">
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">open</span> <span class="kd">func</span> <span class="nf">resolve</span><span class="p">()</span> <span class="k">throws</span> <span class="o">-&gt;</span> <span class="kt">Dependency</span></code></pre>
+                          <pre class="highlight swift"><code><span class="kd">open</span> <span class="kd">func</span> <span class="nf">resolve</span><span class="p">(</span><span class="n">_</span> <span class="nv">scope</span><span class="p">:</span> <span class="kt"><a href="../Classes/InjectPropertyWrapper/Scope.html">Scope</a></span> <span class="o">=</span> <span class="o">.</span><span class="n">singleton</span><span class="p">,</span>
+                  <span class="n">_</span> <span class="nv">parameters</span><span class="p">:</span> <span class="kt">Parameters</span><span class="p">?</span> <span class="o">=</span> <span class="kc">nil</span><span class="p">)</span> <span class="k">throws</span> <span class="o">-&gt;</span> <span class="kt">Dependency</span></code></pre>
 
                         </div>
                       </div>
                       <div>
+                        <h4>Parameters</h4>
+                        <table class="graybox">
+                          <tbody>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>scope</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>Dependency injection scope.</p>
+                                </div>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>parameters</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>Parameters to inject in builder.</p>
+                                </div>
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </div>
+                      <div>
                         <h4>Return Value</h4>
-                        <p>Your dependency resolved.</p>
+                        <p>Resolved dependency.</p>
                       </div>
                       <div class="slightly-smaller">
-                        <a href="https://github.com/alexruperez/SecurePropertyStorage/blob/master/Sources/Inject/Inject.swift#L45-L65">Show on GitHub</a>
+                        <a href="https://github.com/alexruperez/SecurePropertyStorage/blob/master/Sources/Inject/Inject.swift#L65-L92">Show on GitHub</a>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:6Inject0A15PropertyWrapperC8instanceyxSgSayypG_AC5ScopeOyxq__Gq_SgtF"></a>
+                    <a name="//apple_ref/swift/Method/instance(_:_:_:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:6Inject0A15PropertyWrapperC8instanceyxSgSayypG_AC5ScopeOyxq__Gq_SgtF">instance(_:<wbr>_:<wbr>_:<wbr>)</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Resolve a dependency from candidate dependencies or by calling the builder if necessary.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">open</span> <span class="kd">func</span> <span class="nf">instance</span><span class="p">(</span><span class="n">_</span> <span class="nv">dependencies</span><span class="p">:</span> <span class="p">[</span><span class="kt">Any</span><span class="p">],</span>
+                   <span class="n">_</span> <span class="nv">scope</span><span class="p">:</span> <span class="kt"><a href="../Classes/InjectPropertyWrapper/Scope.html">Scope</a></span><span class="p">,</span>
+                   <span class="n">_</span> <span class="nv">parameters</span><span class="p">:</span> <span class="kt">Parameters</span><span class="p">?)</span> <span class="o">-&gt;</span> <span class="kt">Dependency</span><span class="p">?</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div>
+                        <h4>Parameters</h4>
+                        <table class="graybox">
+                          <tbody>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>dependencies</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>Candidate dependencies.</p>
+                                </div>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>scope</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>Dependency injection scope.</p>
+                                </div>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>parameters</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>Parameters to inject in builder.</p>
+                                </div>
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </div>
+                      <div>
+                        <h4>Return Value</h4>
+                        <p>Resolved dependency.</p>
+                      </div>
+                      <div class="slightly-smaller">
+                        <a href="https://github.com/alexruperez/SecurePropertyStorage/blob/master/Sources/Inject/Inject.swift#L103-L142">Show on GitHub</a>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:6Inject0A15PropertyWrapperC11descriptionySSs5Error_pF"></a>
+                    <a name="//apple_ref/swift/Method/description(_:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:6Inject0A15PropertyWrapperC11descriptionySSs5Error_pF">description(_:<wbr>)</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>A <code>String</code> representation of <code>Error</code>.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">open</span> <span class="kd">func</span> <span class="nf">description</span><span class="p">(</span><span class="n">_</span> <span class="nv">error</span><span class="p">:</span> <span class="kt">Error</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt">String</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div>
+                        <h4>Parameters</h4>
+                        <table class="graybox">
+                          <tbody>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>error</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>Any <code>Error</code>.</p>
+                                </div>
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </div>
+                      <div class="slightly-smaller">
+                        <a href="https://github.com/alexruperez/SecurePropertyStorage/blob/master/Sources/Inject/Inject.swift#L149-L154">Show on GitHub</a>
                       </div>
                     </section>
                   </div>

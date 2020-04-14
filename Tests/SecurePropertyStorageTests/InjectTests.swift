@@ -27,8 +27,6 @@ class Dependency: DependencyProtocol, Equatable, DependencyQualifier {
     var subClass: SubDependency?
     var subDependency: SubDependency? { sub as? SubDependency }
 
-    init() {}
-
     static func == (lhs: Dependency, rhs: Dependency) -> Bool {
         lhs.timestamp == rhs.timestamp
     }
@@ -96,8 +94,12 @@ final class InjectTests: XCTestCase {
     @UnwrappedInject
     var unwrappedClass: Dependency
     @Inject
-    var instance: InstanceProtocol?
+    var sharedInstance: InstanceProtocol?
     @UnwrappedInject
+    var unwrappedSharedInstance: InstanceProtocol
+    @Inject(.instance)
+    var instance: InstanceProtocol?
+    @UnwrappedInject(.instance)
     var unwrappedInstance: InstanceProtocol
     @Inject
     var mock: MockableProtocol?
@@ -107,6 +109,8 @@ final class InjectTests: XCTestCase {
     var unwrappedInstanceWith: InstanceProtocol
     var injectDependency: Dependency? { inject as? Dependency }
     var unwrappedDependency: Dependency? { unwrappedInject as? Dependency }
+    var injectSharedInstance: InstanceDependency? { sharedInstance as? InstanceDependency }
+    var injectUnwrappedSharedInstance: InstanceDependency? { unwrappedSharedInstance as? InstanceDependency }
     var injectInstance: InstanceDependency? { instance as? InstanceDependency }
     var injectUnwrappedInstance: InstanceDependency? { unwrappedInstance as? InstanceDependency }
     var injectInstanceWith: InstanceDependency? { instanceWith as? InstanceDependency }
@@ -124,9 +128,11 @@ final class InjectTests: XCTestCase {
         XCTAssertEqual(injectDependency, unwrappedDependency)
         XCTAssertEqual(registerClass, injectClass)
         XCTAssertEqual(injectClass, unwrappedClass)
-        XCTAssertNotNil(injectInstance)
-        XCTAssertEqual(injectInstance, injectUnwrappedInstance)
-        XCTAssertNotNil(injectInstanceWith)
+        XCTAssertNotNil(sharedInstance)
+        XCTAssertEqual(injectSharedInstance, injectUnwrappedSharedInstance)
+        XCTAssertNotNil(instance)
+        XCTAssertNotEqual(injectInstance, injectUnwrappedInstance)
+        XCTAssertNotNil(instanceWith)
         XCTAssertNotEqual(injectInstanceWith, injectUnwrappedInstanceWith)
         XCTAssert(mock is MockInstance)
 

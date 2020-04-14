@@ -398,7 +398,7 @@
 		OBJ_9 /* Inject.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Inject.swift; sourceTree = "<group>"; };
 		"SecurePropertyStorage::Inject::Product" /* Inject.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Inject.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		"SecurePropertyStorage::Keychain::Product" /* Keychain.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Keychain.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		"SecurePropertyStorage::SecurePropertyStorageTests::Product" /* SecurePropertyStorageTests.xctest */ = {isa = PBXFileReference; lastKnownFileType = file; path = SecurePropertyStorageTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		"SecurePropertyStorage::SecurePropertyStorageTests::Product" /* SecurePropertyStorageTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; path = SecurePropertyStorageTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		"SecurePropertyStorage::Singleton::Product" /* Singleton.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Singleton.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		"SecurePropertyStorage::Storage::Product" /* Storage.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Storage.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		"SecurePropertyStorage::UserDefault::Product" /* UserDefault.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = UserDefault.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -1053,6 +1053,7 @@
 				OTHER_CFLAGS = "$(inherited)";
 				OTHER_LDFLAGS = "$(inherited)";
 				OTHER_SWIFT_FLAGS = "$(inherited)";
+				PRODUCT_BUNDLE_IDENTIFIER = Tests;
 				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited)";
 				SWIFT_VERSION = 5.0;
 				TARGET_NAME = SecurePropertyStorageTests;
@@ -1078,6 +1079,7 @@
 				OTHER_CFLAGS = "$(inherited)";
 				OTHER_LDFLAGS = "$(inherited)";
 				OTHER_SWIFT_FLAGS = "$(inherited)";
+				PRODUCT_BUNDLE_IDENTIFIER = Tests;
 				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited)";
 				SWIFT_VERSION = 5.0;
 				TARGET_NAME = SecurePropertyStorageTests;

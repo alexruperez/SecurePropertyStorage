@@ -9,8 +9,12 @@ public typealias Qualifier = Protocol
 
 /// Inject property wrapper reusable class.
 open class InjectPropertyWrapper<Dependency, Parameters>: StorePropertyWrapper {
+    /// Injection scope.
     public enum Scope {
-        case singleton, instance
+        /// Singleton injection scope.
+        case singleton
+        /// Instance injection scope.
+        case instance
     }
 
     /// All `@objc protocol`s to be used as qualifiers of your dependencies.
@@ -42,7 +46,7 @@ open class InjectPropertyWrapper<Dependency, Parameters>: StorePropertyWrapper {
     /**
      Register a dependency.
 
-     - Parameter dependency: Your dependency to register.
+     - Parameter dependency: Dependency to register.
      */
     open func register(_ dependency: Dependency?) {
         storage.set(dependency, forKey: key)
@@ -51,7 +55,12 @@ open class InjectPropertyWrapper<Dependency, Parameters>: StorePropertyWrapper {
     /**
      Resolve a dependency.
 
-     - Returns: Your dependency resolved.
+     - Parameter scope: Dependency injection scope.
+     - Parameter parameters: Parameters to inject in builder.
+
+     - Throws: `InjectError`.
+
+     - Returns: Resolved dependency.
      */
     open func resolve(_ scope: Scope = .singleton,
                       _ parameters: Parameters? = nil) throws -> Dependency {
@@ -82,6 +91,15 @@ open class InjectPropertyWrapper<Dependency, Parameters>: StorePropertyWrapper {
         throw InjectError.moreThanOne(Dependency.self)
     }
 
+    /**
+     Resolve a dependency from candidate dependencies or by calling the builder if necessary.
+
+     - Parameter dependencies: Candidate dependencies.
+     - Parameter scope: Dependency injection scope.
+     - Parameter parameters: Parameters to inject in builder.
+
+     - Returns: Resolved dependency.
+     */
     open func instance(_ dependencies: [Any],
                        _ scope: Scope,
                        _ parameters: Parameters?) -> Dependency? {
@@ -123,6 +141,11 @@ open class InjectPropertyWrapper<Dependency, Parameters>: StorePropertyWrapper {
         return nil
     }
 
+    /**
+     A `String` representation of `Error`.
+
+     - Parameter error: Any `Error`.
+     */
     open func description(_ error: Error) -> String {
         if let error = error as? InjectError {
             return error.description
@@ -134,9 +157,14 @@ open class InjectPropertyWrapper<Dependency, Parameters>: StorePropertyWrapper {
 /// `@Inject` property wrapper.
 @propertyWrapper
 public class Inject<Dependency>: InjectPropertyWrapper<Dependency, Void> {
+    /// Injection scope.
     public var scope: Scope = .singleton
 
-    /// Create a `Inject` property wrapper.
+    /**
+     Create a `Inject` property wrapper.
+
+     - Parameter scope: Injection scope.
+     */
     public convenience init(_ scope: Scope = .singleton) {
         self.init([])
         self.scope = scope
@@ -146,27 +174,37 @@ public class Inject<Dependency>: InjectPropertyWrapper<Dependency, Void> {
     public var wrappedValue: Dependency? { try? resolve(scope) }
 }
 
-/// `@Inject` property wrapper.
+/// `@InjectWith` property wrapper.
 @propertyWrapper
 public class InjectWith<Dependency, Parameters>: InjectPropertyWrapper<Dependency, Parameters> {
+    /// Parameters to inject in builder.
     public var parameters: Parameters?
 
-    /// Create a `Inject` property wrapper.
+    /**
+     Create a `InjectWith` property wrapper.
+
+     - Parameter parameters: Parameters to inject in builder.
+     */
     public convenience init(_ parameters: Parameters) {
         self.init([])
         self.parameters = parameters
     }
 
-    /// Property wrapper stored dependency.
+    /// New dependency instance with parameters injected.
     public var wrappedValue: Dependency? { try? resolve(.instance, parameters) }
 }
 
 /// `@UnwrappedInject` property wrapper.
 @propertyWrapper
 public class UnwrappedInject<Dependency>: InjectPropertyWrapper<Dependency, Void> {
+    /// Injection scope.
     public var scope: Scope = .singleton
 
-    /// Create a `UnwrappedInject` property wrapper.
+    /**
+     Create a `UnwrappedInject` property wrapper.
+
+     - Parameter scope: Injection scope.
+     */
     public convenience init(_ scope: Scope = .singleton) {
         self.init([])
         self.scope = scope
@@ -182,18 +220,23 @@ public class UnwrappedInject<Dependency>: InjectPropertyWrapper<Dependency, Void
     }
 }
 
-/// `@UnwrappedInject` property wrapper.
+/// `@UnwrappedInjectWith` property wrapper.
 @propertyWrapper
 public class UnwrappedInjectWith<Dependency, Parameters>: InjectPropertyWrapper<Dependency, Parameters> {
+    /// Parameters to inject in builder.
     public var parameters: Parameters?
 
-    /// Create a `UnwrappedInject` property wrapper.
+    /**
+     Create a `UnwrappedInjectWith` property wrapper.
+
+     - Parameter parameters: Parameters to inject in builder.
+     */
     public convenience init(_ parameters: Parameters) {
         self.init([])
         self.parameters = parameters
     }
 
-    /// Property wrapper stored dependency.
+    /// New dependency instance with parameters injected.
     public var wrappedValue: Dependency {
         do {
             return try resolve(.instance, parameters)

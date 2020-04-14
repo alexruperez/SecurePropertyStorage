@@ -81,7 +81,13 @@
                 <a class="nav-group-task-link" href="Classes/InjectPropertyWrapper.html">InjectPropertyWrapper</a>
               </li>
               <li class="nav-group-task">
+                <a class="nav-group-task-link" href="Classes/InjectPropertyWrapper/Scope.html">– Scope</a>
+              </li>
+              <li class="nav-group-task">
                 <a class="nav-group-task-link" href="Classes/InjectStorage.html">InjectStorage</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="Classes/InjectWith.html">InjectWith</a>
               </li>
               <li class="nav-group-task">
                 <a class="nav-group-task-link" href="Classes/Keychain.html">Keychain</a>
@@ -124,6 +130,9 @@
               </li>
               <li class="nav-group-task">
                 <a class="nav-group-task-link" href="Classes/UnwrappedInject.html">UnwrappedInject</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="Classes/UnwrappedInjectWith.html">UnwrappedInjectWith</a>
               </li>
               <li class="nav-group-task">
                 <a class="nav-group-task-link" href="Classes/UnwrappedKeychain.html">UnwrappedKeychain</a>
@@ -182,6 +191,9 @@
           <li class="nav-group-name">
             <a class="nav-group-name-link" href="Protocols.html">Protocols</a>
             <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="Protocols.html#/c:@M@Inject@objc(pl)Mock">Mock</a>
+              </li>
               <li class="nav-group-task">
                 <a class="nav-group-task-link" href="Protocols/Storage.html">Storage</a>
               </li>
@@ -347,6 +359,37 @@ whose underlying storage is directly accessible by withUnsafeBytes.</p>
                       </div>
                       <div class="slightly-smaller">
                         <a href="https://github.com/alexruperez/SecurePropertyStorage/blob/master/Sources/Storage/Store.swift#L2-L7">Show on GitHub</a>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/c:@M@Inject@objc(pl)Mock"></a>
+                    <a name="//apple_ref/swift/Protocol/Mock" class="dashAnchor"></a>
+                    <a class="token" href="#/c:@M@Inject@objc(pl)Mock">Mock</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Mock qualifier indicating that dependency must be injected before any other registered.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">@objc</span>
+<span class="kd">public</span> <span class="kd">protocol</span> <span class="kt">Mock</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div class="slightly-smaller">
+                        <a href="https://github.com/alexruperez/SecurePropertyStorage/blob/master/Sources/Inject/Inject.swift#L8">Show on GitHub</a>
                       </div>
                     </section>
                   </div>

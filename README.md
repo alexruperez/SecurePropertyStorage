@@ -16,13 +16,15 @@
 
 ## 🌟 Features
 
-All keys are hashed using [SHA512](https://en.wikipedia.org/wiki/SHA-2) and all values are encrypted using [AES](https://en.wikipedia.org/wiki/Advanced_Encryption_Standard)-[GCM](https://en.wikipedia.org/wiki/Galois/Counter_Mode) to keep user information safe, auto*magic*ally. Symmetric key and nonce, are stored in Keychain in a totally secure way. 
+All keys are hashed using [SHA512](https://en.wikipedia.org/wiki/SHA-2) and all values are encrypted using [AES](https://en.wikipedia.org/wiki/Advanced_Encryption_Standard)-[GCM](https://en.wikipedia.org/wiki/Galois/Counter_Mode) to keep user information safe, auto*magic*ally.
+Symmetric key and nonce, are stored in Keychain in a totally secure way. 
 
 ## 🐒 Basic usage
 
 ### @UserDefault
 
-This property wrapper will store your property in [UserDefaults](https://developer.apple.com/documentation/foundation/userdefaults) using `StoreKey` (any `String` but i recommend you a String typed enum). Optionally, you can assign a default value to the property that will be secure stored at initialization.
+This property wrapper will store your property in [UserDefaults](https://developer.apple.com/documentation/foundation/userdefaults) using `StoreKey` (any `String` but i recommend you a String typed enum).
+Optionally, you can assign a default value to the property that will be secure stored at initialization.
 
 ```swift
 @UserDefault(<#StoreKey#>)
@@ -107,22 +109,79 @@ You can also combine previous cases in case you need it, unwrapped first please.
 
 - **@Register**
 
-This property wrapper will register the implementations of your dependencies. You can register them wherever you want before inject it, but be sure to do it only once (except if you use [qualifiers](#qualifiers)), for example, in an `Injector` class.
+This property wrapper will register the implementations of your dependencies.
+Register them wherever you want before inject it, but be sure to do it only once (except if you use [qualifiers](#qualifiers)), for example, in an `Injector` class.
+You can register through a protocol or directly using your class implementation.
 
 ```swift
 @Register
-var yourDependency: YourProtocol = YourImplementation
+var yourDependency: YourProtocol = YourImplementation()
+
+@Register
+var yourDependency = YourImplementation()
+```
+
+You can also define a closure that builds your dependency.
+Just remember cast your dependency if you are going to inject it through a protocol.
+
+```swift
+@Register
+var yourDependency = {
+    YourImplementation() as YourProtocol
+}
+
+@Register
+var yourDependency = {
+    YourImplementation()
+}
 ```
 
 - **@Inject** and **@UnwrappedInject**
 
-This property wrapper injects your dependencies `@Register` implementations.
+These property wrappers injects your dependencies `@Register` implementations.
 
 ```swift
 @Inject
 var yourDependency: YourProtocol?
 
+@Inject
+var yourDependency: YourImplementation?
+
 @UnwrappedInject
+var yourUnwrappedDependency: YourProtocol
+
+@UnwrappedInject
+var yourUnwrappedDependency: YourImplementation
+```
+
+#### Scope
+
+Because these property wrappers works similarly to `@Singleton`, the default scope is `.singleton`, but if you use builder closures on `@Register`, you can modify them to inject a single instance.
+
+```swift
+@Inject(.instance)
+var yourDependency: YourProtocol?
+
+@UnwrappedInject(.instance)
+var yourUnwrappedDependency: YourProtocol
+```
+
+- **@InjectWith** and **@UnwrappedInjectWith**
+
+Your dependency may need parameters when injecting, you can pass them with these property wrappers.
+Simply define a model with your dependency parameters  and pass it.
+It will inject a new instance built with these parameters.
+
+```swift
+@Register
+var yourDependency = { parameters in
+    YourImplementation(parameters) as YourProtocol
+}
+
+@Inject(YourParameters())
+var yourDependency: YourProtocol?
+
+@UnwrappedInject(YourParameters())
 var yourUnwrappedDependency: YourProtocol
 ```
 
@@ -177,6 +236,32 @@ dog.sound() // prints Woof!
 cat.sound() // prints Meow!
 ```
 
+### Testing
+
+One of the advantages of dependency injection is that the code can be easily testable with mock implementation.
+That is why there is a `Mock` qualifier that has priority over all, so you can have your dependencies defined in the app and create your mock in the test target simply by adding this qualifier.
+
+```swift
+// App target
+
+class YourImplementation: YourProtocol {}
+
+@Register
+var yourDependency: YourProtocol = YourImplementation()
+
+@Inject
+var yourDependency: YourProtocol?
+```
+
+```swift
+// Test target
+
+class YourMock: YourProtocol, Mock {}
+
+@Register
+var yourDependency: YourProtocol = YourMock()
+```
+
 ## 👀 Examples
 
 > Talk is cheap. Show me the code.
@@ -226,9 +311,8 @@ cat.sound() // prints Meow!
 .package(url: "https://github.com/alexruperez/SecurePropertyStorage", from: "0.3.0")
 ```
 
-You have a series of products that you can choose:
+By default, all property wrappers are installed, but if you want, you can choose only certain products:
 
-- **SecurePropertyStorage**: All property wrappers, by default.
 - **UserDefault**: @*UserDefault property wrappers.
 - **Keychain**: @*Keychain property wrappers.
 - **Singleton**: @*Singleton property wrappers.
