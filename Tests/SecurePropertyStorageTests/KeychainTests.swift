@@ -226,6 +226,9 @@ final class KeychainTests: XCTestCase {
     }
 
     static var allTests = [
+        ("testKeychainStorageAccessGroup", testKeychainStorageAccessGroup),
+        ("testKeychainStorageSynchronizable", testKeychainStorageSynchronizable),
+        ("testKeychainStorageAccessible", testKeychainStorageAccessible),
         ("testKeychainStoreError", testKeychainStoreError),
         ("testKeychainTagStoreError", testKeychainTagStoreError),
         ("testKeychainError", testKeychainError),
