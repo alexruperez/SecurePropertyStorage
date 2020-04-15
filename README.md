@@ -41,7 +41,7 @@ This property wrapper will store your property in [Keychain](https://developer.a
 var yourProperty: YourType? = yourDefaultValueIfNeeded
 ```
 
-As `UserDefaultsStorage`, [`KeychainStorage`](Sources/Keychain/KeychainStorage.swift) is also available, where you can customize access group or synchronize it with iCloud.
+As `UserDefaultsStorage`, [`KeychainStorage`](Sources/Keychain/KeychainStorage.swift) is also available, where you can customize access, group and synchronize it with iCloud.
 
 ### @Singleton
 

@@ -11,6 +11,7 @@ let keychainTagStorage: KeychainStorage = {
     let keychainStorage = KeychainStorage(authenticationTag: Data())
     keychainStorage.accessGroup = ""
     keychainStorage.synchronizable = true
+    keychainStorage.accessible = kSecAttrAccessibleAfterFirstUnlock
     return keychainStorage
 }()
 
@@ -44,6 +45,10 @@ final class KeychainTests: XCTestCase {
 
     func testKeychainStorageSynchronizable() {
         XCTAssertTrue(keychainTagStorage.synchronizable)
+    }
+
+    func testKeychainStorageAccessible() {
+        XCTAssertEqual(keychainTagStorage.accessible, kSecAttrAccessibleAfterFirstUnlock)
     }
 
     func testKeychainTagStoreError() {

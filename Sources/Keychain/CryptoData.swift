@@ -15,13 +15,21 @@ extension SymmetricKey: StorageData {
     }
 
     /// Generate a `SymmetricKey` and store it on the keychain.
-    public static func generate() -> SymmetricKey {
+    public static func generate(accessible: CFString = kSecAttrAccessibleWhenUnlocked,
+                                accessGroup: String? = nil,
+                                synchronizable: Bool = false) -> SymmetricKey {
         let account = "SecurePropertyStorage.SymmetricKey"
         let keychainStorage = KeychainStorageDelegate()
         do {
-            guard let symmetricKey: SymmetricKey = try keychainStorage.read(account: account) else {
+            guard let symmetricKey: SymmetricKey = try keychainStorage.read(account: account,
+                                                                            accessGroup: accessGroup,
+                                                                            synchronizable: synchronizable) else {
                 let symmetricKey = SymmetricKey(size: .bits256)
-                try keychainStorage.store(symmetricKey, account: account)
+                try keychainStorage.store(symmetricKey,
+                                          account: account,
+                                          accessible: accessible,
+                                          accessGroup: accessGroup,
+                                          synchronizable: synchronizable)
                 return symmetricKey
             }
             return symmetricKey
@@ -49,13 +57,21 @@ extension AES.GCM.Nonce: StorageData {
     }
 
     /// Generate a `AES.GCM.Nonce` and store it on the keychain.
-    public static func generate() -> AES.GCM.Nonce {
+    public static func generate(accessible: CFString = kSecAttrAccessibleWhenUnlocked,
+                                accessGroup: String? = nil,
+                                synchronizable: Bool = false) -> AES.GCM.Nonce {
         let account = "SecurePropertyStorage.Nonce"
         let keychainStorage = KeychainStorageDelegate()
         do {
-            guard let nonce: AES.GCM.Nonce = try keychainStorage.read(account: account) else {
+            guard let nonce: AES.GCM.Nonce = try keychainStorage.read(account: account,
+                                                                      accessGroup: accessGroup,
+                                                                      synchronizable: synchronizable) else {
                 let nonce = AES.GCM.Nonce()
-                try keychainStorage.store(nonce, account: account)
+                try keychainStorage.store(nonce,
+                                          account: account,
+                                          accessible: accessible,
+                                          accessGroup: accessGroup,
+                                          synchronizable: synchronizable)
                 return nonce
             }
             return nonce

@@ -23,7 +23,7 @@
         <a class="header-link" href="../../../index.html">
           SecurePropertyStorage Docs
         </a>
-         (99% documented)
+         (100% documented)
       </p>
     
       <p class="header-col--secondary">
@@ -292,7 +292,7 @@
                         </table>
                       </div>
                       <div class="slightly-smaller">
-                        <a href="https://github.com/alexruperez/SecurePropertyStorage/blob/master/Sources/Keychain/CryptoData.swift#L47-L49">Show on GitHub</a>
+                        <a href="https://github.com/alexruperez/SecurePropertyStorage/blob/master/Sources/Keychain/CryptoData.swift#L55-L57">Show on GitHub</a>
                       </div>
                     </section>
                   </div>
@@ -300,9 +300,9 @@
                 <li class="item">
                   <div>
                     <code>
-                    <a name="/s:9CryptoKit3AESO3GCMO5NonceV8KeychainE8generateAGyFZ"></a>
-                    <a name="//apple_ref/swift/Method/generate()" class="dashAnchor"></a>
-                    <a class="token" href="#/s:9CryptoKit3AESO3GCMO5NonceV8KeychainE8generateAGyFZ">generate()</a>
+                    <a name="/s:9CryptoKit3AESO3GCMO5NonceV8KeychainE8generate10accessible11accessGroup14synchronizableAGSo11CFStringRefa_SSSgSbtFZ"></a>
+                    <a name="//apple_ref/swift/Method/generate(accessible:accessGroup:synchronizable:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:9CryptoKit3AESO3GCMO5NonceV8KeychainE8generate10accessible11accessGroup14synchronizableAGSo11CFStringRefa_SSSgSbtFZ">generate(accessible:<wbr>accessGroup:<wbr>synchronizable:<wbr>)</a>
                     </code>
                   </div>
                   <div class="height-container">
@@ -317,12 +317,14 @@
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">static</span> <span class="kd">func</span> <span class="nf">generate</span><span class="p">()</span> <span class="o">-&gt;</span> <span class="kt">AES</span><span class="o">.</span><span class="kt">GCM</span><span class="o">.</span><span class="kt">Nonce</span></code></pre>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">static</span> <span class="kd">func</span> <span class="nf">generate</span><span class="p">(</span><span class="nv">accessible</span><span class="p">:</span> <span class="kt">CFString</span> <span class="o">=</span> <span class="n">kSecAttrAccessibleWhenUnlocked</span><span class="p">,</span>
+                            <span class="nv">accessGroup</span><span class="p">:</span> <span class="kt">String</span><span class="p">?</span> <span class="o">=</span> <span class="kc">nil</span><span class="p">,</span>
+                            <span class="nv">synchronizable</span><span class="p">:</span> <span class="kt">Bool</span> <span class="o">=</span> <span class="kc">false</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt">AES</span><span class="o">.</span><span class="kt">GCM</span><span class="o">.</span><span class="kt">Nonce</span></code></pre>
 
                         </div>
                       </div>
                       <div class="slightly-smaller">
-                        <a href="https://github.com/alexruperez/SecurePropertyStorage/blob/master/Sources/Keychain/CryptoData.swift#L52-L70">Show on GitHub</a>
+                        <a href="https://github.com/alexruperez/SecurePropertyStorage/blob/master/Sources/Keychain/CryptoData.swift#L60-L86">Show on GitHub</a>
                       </div>
                     </section>
                   </div>

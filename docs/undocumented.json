@@ -1,12 +1,6 @@
 {
   "warnings": [
-    {
-      "file": "/Users/alexruperez/Projects/SecurePropertyStorage/Sources/Storage/DelegatedStorage.swift",
-      "line": 9,
-      "symbol": "DelegatedStorage.delegate",
-      "symbol_kind": "source.lang.swift.decl.var.instance",
-      "warning": "undocumented"
-    }
+
   ],
   "source_directory": "/Users/alexruperez/Projects/SecurePropertyStorage"
 }

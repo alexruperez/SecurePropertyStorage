@@ -21,6 +21,12 @@ open class KeychainStorage: DelegatedStorage {
         set { keychainDelegate?.synchronizable = newValue }
     }
 
+    /// When `StorageData` can be accessed in the keychain.
+    open var accessible: CFString {
+        get { keychainDelegate?.accessible ?? kSecAttrAccessibleWhenUnlocked }
+        set { keychainDelegate?.accessible = newValue }
+    }
+
     /**
      Create a `KeychainStorage`.
 
@@ -45,6 +51,8 @@ open class KeychainStorageDelegate: StorageDelegate {
     open var accessGroup: String?
     /// Whether the `StorageData` can be synchronized.
     open var synchronizable = false
+    /// When `StorageData` can be accessed in the keychain.
+    open var accessible: CFString = kSecAttrAccessibleWhenUnlocked
 
     /// Create a `KeychainStorageDelegate`.
     public init() {}
@@ -77,6 +85,7 @@ open class KeychainStorageDelegate: StorageDelegate {
         if let data = data {
             try store(data,
                       account: key,
+                      accessible: accessible,
                       accessGroup: accessGroup,
                       synchronizable: synchronizable)
         }
@@ -108,9 +117,9 @@ open class KeychainStorageDelegate: StorageDelegate {
      */
     open func store<D: StorageData>(_ value: D,
                                     account: String,
-                                    accessible: CFString = kSecAttrAccessibleWhenUnlocked,
-                                    accessGroup: String? = nil,
-                                    synchronizable: Bool = false) throws {
+                                    accessible: CFString,
+                                    accessGroup: String?,
+                                    synchronizable: Bool) throws {
         var query = [kSecClass: kSecClassGenericPassword,
                      kSecAttrAccount: account,
                      kSecAttrAccessible: accessible,
@@ -141,8 +150,8 @@ open class KeychainStorageDelegate: StorageDelegate {
      - Returns: `StorageData` for account.
      */
     open func read<D: StorageData>(account: String,
-                                   accessGroup: String? = nil,
-                                   synchronizable: Bool = false) throws -> D? {
+                                   accessGroup: String?,
+                                   synchronizable: Bool) throws -> D? {
         var query = [kSecClass: kSecClassGenericPassword,
                      kSecAttrAccount: account,
                      kSecUseDataProtectionKeychain: true,
@@ -178,8 +187,8 @@ open class KeychainStorageDelegate: StorageDelegate {
      - Throws: `KeychainError.error`.
      */
     open func delete(account: String,
-                     accessGroup: String? = nil,
-                     synchronizable: Bool = false) throws {
+                     accessGroup: String?,
+                     synchronizable: Bool) throws {
         var query = [kSecClass: kSecClassGenericPassword,
                      kSecUseDataProtectionKeychain: true,
                      kSecAttrAccount: account] as [CFString: Any]

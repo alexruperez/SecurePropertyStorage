@@ -23,7 +23,7 @@
         <a class="header-link" href="../index.html">
           SecurePropertyStorage Docs
         </a>
-         (99% documented)
+         (100% documented)
       </p>
     
       <p class="header-col--secondary">
@@ -269,7 +269,7 @@
                         </div>
                       </div>
                       <div class="slightly-smaller">
-                        <a href="https://github.com/alexruperez/SecurePropertyStorage/blob/master/Sources/Keychain/KeychainStorage.swift#L45">Show on GitHub</a>
+                        <a href="https://github.com/alexruperez/SecurePropertyStorage/blob/master/Sources/Keychain/KeychainStorage.swift#L51">Show on GitHub</a>
                       </div>
                     </section>
                   </div>
@@ -299,7 +299,37 @@
                         </div>
                       </div>
                       <div class="slightly-smaller">
-                        <a href="https://github.com/alexruperez/SecurePropertyStorage/blob/master/Sources/Keychain/KeychainStorage.swift#L47">Show on GitHub</a>
+                        <a href="https://github.com/alexruperez/SecurePropertyStorage/blob/master/Sources/Keychain/KeychainStorage.swift#L53">Show on GitHub</a>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:8Keychain0A15StorageDelegateC10accessibleSo11CFStringRefavp"></a>
+                    <a name="//apple_ref/swift/Property/accessible" class="dashAnchor"></a>
+                    <a class="token" href="#/s:8Keychain0A15StorageDelegateC10accessibleSo11CFStringRefavp">accessible</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>When <code><a href="../Protocols/StorageData.html">StorageData</a></code> can be accessed in the keychain.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">open</span> <span class="k">var</span> <span class="nv">accessible</span><span class="p">:</span> <span class="kt">CFString</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div class="slightly-smaller">
+                        <a href="https://github.com/alexruperez/SecurePropertyStorage/blob/master/Sources/Keychain/KeychainStorage.swift#L55">Show on GitHub</a>
                       </div>
                     </section>
                   </div>
@@ -329,7 +359,7 @@
                         </div>
                       </div>
                       <div class="slightly-smaller">
-                        <a href="https://github.com/alexruperez/SecurePropertyStorage/blob/master/Sources/Keychain/KeychainStorage.swift#L50">Show on GitHub</a>
+                        <a href="https://github.com/alexruperez/SecurePropertyStorage/blob/master/Sources/Keychain/KeychainStorage.swift#L58">Show on GitHub</a>
                       </div>
                     </section>
                   </div>
@@ -387,7 +417,7 @@
                         <p><code><a href="../Protocols/StorageData.html">StorageData</a></code> for <code><a href="../Typealiases.html#/s:7Storage8StoreKeya">StoreKey</a></code>.</p>
                       </div>
                       <div class="slightly-smaller">
-                        <a href="https://github.com/alexruperez/SecurePropertyStorage/blob/master/Sources/Keychain/KeychainStorage.swift#L61-L65">Show on GitHub</a>
+                        <a href="https://github.com/alexruperez/SecurePropertyStorage/blob/master/Sources/Keychain/KeychainStorage.swift#L69-L73">Show on GitHub</a>
                       </div>
                     </section>
                   </div>
@@ -453,7 +483,7 @@
                         </table>
                       </div>
                       <div class="slightly-smaller">
-                        <a href="https://github.com/alexruperez/SecurePropertyStorage/blob/master/Sources/Keychain/KeychainStorage.swift#L75-L83">Show on GitHub</a>
+                        <a href="https://github.com/alexruperez/SecurePropertyStorage/blob/master/Sources/Keychain/KeychainStorage.swift#L83-L92">Show on GitHub</a>
                       </div>
                     </section>
                   </div>
@@ -507,7 +537,7 @@
                         </table>
                       </div>
                       <div class="slightly-smaller">
-                        <a href="https://github.com/alexruperez/SecurePropertyStorage/blob/master/Sources/Keychain/KeychainStorage.swift#L92-L96">Show on GitHub</a>
+                        <a href="https://github.com/alexruperez/SecurePropertyStorage/blob/master/Sources/Keychain/KeychainStorage.swift#L101-L105">Show on GitHub</a>
                       </div>
                     </section>
                   </div>
@@ -539,9 +569,9 @@
                           <p class="aside-title">Swift</p>
                           <pre class="highlight swift"><code><span class="kd">open</span> <span class="kd">func</span> <span class="n">store</span><span class="o">&lt;</span><span class="kt">D</span><span class="p">:</span> <span class="kt"><a href="../Protocols/StorageData.html">StorageData</a></span><span class="o">&gt;</span><span class="p">(</span><span class="n">_</span> <span class="nv">value</span><span class="p">:</span> <span class="kt">D</span><span class="p">,</span>
                                 <span class="nv">account</span><span class="p">:</span> <span class="kt">String</span><span class="p">,</span>
-                                <span class="nv">accessible</span><span class="p">:</span> <span class="kt">CFString</span> <span class="o">=</span> <span class="n">kSecAttrAccessibleWhenUnlocked</span><span class="p">,</span>
-                                <span class="nv">accessGroup</span><span class="p">:</span> <span class="kt">String</span><span class="p">?</span> <span class="o">=</span> <span class="kc">nil</span><span class="p">,</span>
-                                <span class="nv">synchronizable</span><span class="p">:</span> <span class="kt">Bool</span> <span class="o">=</span> <span class="kc">false</span><span class="p">)</span> <span class="k">throws</span></code></pre>
+                                <span class="nv">accessible</span><span class="p">:</span> <span class="kt">CFString</span><span class="p">,</span>
+                                <span class="nv">accessGroup</span><span class="p">:</span> <span class="kt">String</span><span class="p">?,</span>
+                                <span class="nv">synchronizable</span><span class="p">:</span> <span class="kt">Bool</span><span class="p">)</span> <span class="k">throws</span></code></pre>
 
                         </div>
                       </div>
@@ -613,7 +643,7 @@
                         </table>
                       </div>
                       <div class="slightly-smaller">
-                        <a href="https://github.com/alexruperez/SecurePropertyStorage/blob/master/Sources/Keychain/KeychainStorage.swift#L109-L130">Show on GitHub</a>
+                        <a href="https://github.com/alexruperez/SecurePropertyStorage/blob/master/Sources/Keychain/KeychainStorage.swift#L118-L139">Show on GitHub</a>
                       </div>
                     </section>
                   </div>
@@ -644,8 +674,8 @@
                         <div class="language">
                           <p class="aside-title">Swift</p>
                           <pre class="highlight swift"><code><span class="kd">open</span> <span class="kd">func</span> <span class="n">read</span><span class="o">&lt;</span><span class="kt">D</span><span class="p">:</span> <span class="kt"><a href="../Protocols/StorageData.html">StorageData</a></span><span class="o">&gt;</span><span class="p">(</span><span class="nv">account</span><span class="p">:</span> <span class="kt">String</span><span class="p">,</span>
-                               <span class="nv">accessGroup</span><span class="p">:</span> <span class="kt">String</span><span class="p">?</span> <span class="o">=</span> <span class="kc">nil</span><span class="p">,</span>
-                               <span class="nv">synchronizable</span><span class="p">:</span> <span class="kt">Bool</span> <span class="o">=</span> <span class="kc">false</span><span class="p">)</span> <span class="k">throws</span> <span class="o">-&gt;</span> <span class="kt">D</span><span class="p">?</span></code></pre>
+                               <span class="nv">accessGroup</span><span class="p">:</span> <span class="kt">String</span><span class="p">?,</span>
+                               <span class="nv">synchronizable</span><span class="p">:</span> <span class="kt">Bool</span><span class="p">)</span> <span class="k">throws</span> <span class="o">-&gt;</span> <span class="kt">D</span><span class="p">?</span></code></pre>
 
                         </div>
                       </div>
@@ -697,7 +727,7 @@
                         <p><code><a href="../Protocols/StorageData.html">StorageData</a></code> for account.</p>
                       </div>
                       <div class="slightly-smaller">
-                        <a href="https://github.com/alexruperez/SecurePropertyStorage/blob/master/Sources/Keychain/KeychainStorage.swift#L143-L169">Show on GitHub</a>
+                        <a href="https://github.com/alexruperez/SecurePropertyStorage/blob/master/Sources/Keychain/KeychainStorage.swift#L152-L178">Show on GitHub</a>
                       </div>
                     </section>
                   </div>
@@ -728,8 +758,8 @@
                         <div class="language">
                           <p class="aside-title">Swift</p>
                           <pre class="highlight swift"><code><span class="kd">open</span> <span class="kd">func</span> <span class="nf">delete</span><span class="p">(</span><span class="nv">account</span><span class="p">:</span> <span class="kt">String</span><span class="p">,</span>
-                 <span class="nv">accessGroup</span><span class="p">:</span> <span class="kt">String</span><span class="p">?</span> <span class="o">=</span> <span class="kc">nil</span><span class="p">,</span>
-                 <span class="nv">synchronizable</span><span class="p">:</span> <span class="kt">Bool</span> <span class="o">=</span> <span class="kc">false</span><span class="p">)</span> <span class="k">throws</span></code></pre>
+                 <span class="nv">accessGroup</span><span class="p">:</span> <span class="kt">String</span><span class="p">?,</span>
+                 <span class="nv">synchronizable</span><span class="p">:</span> <span class="kt">Bool</span><span class="p">)</span> <span class="k">throws</span></code></pre>
 
                         </div>
                       </div>
@@ -777,7 +807,7 @@
                         </table>
                       </div>
                       <div class="slightly-smaller">
-                        <a href="https://github.com/alexruperez/SecurePropertyStorage/blob/master/Sources/Keychain/KeychainStorage.swift#L180-L199">Show on GitHub</a>
+                        <a href="https://github.com/alexruperez/SecurePropertyStorage/blob/master/Sources/Keychain/KeychainStorage.swift#L189-L208">Show on GitHub</a>
                       </div>
                     </section>
                   </div>
