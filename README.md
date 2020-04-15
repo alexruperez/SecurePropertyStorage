@@ -105,7 +105,8 @@ You can also combine previous cases in case you need it, unwrapped first please.
 
 ## 💉 Dependency Injection usage
 
-- **@Register**
+<details>
+<summary><b>@Register</b> (<i>click to expand</i>)</summary>
 
 This property wrapper will register the implementations of your dependencies.
 Register them wherever you want before inject it, but be sure to do it only once (except if you use [qualifiers](#qualifiers)), for example, in an `Injector` class.
@@ -133,8 +134,10 @@ var yourDependency = {
     YourImplementation()
 }
 ```
+</details>
 
-- **@Inject** and **@UnwrappedInject**
+<details>
+<summary><b>@Inject</b> and <b>@UnwrappedInject</b> (<i>click to expand</i>)</summary>
 
 These property wrappers injects your dependencies `@Register` implementations.
 
@@ -163,8 +166,10 @@ var yourDependency: YourProtocol?
 @UnwrappedInject(.instance)
 var yourUnwrappedDependency: YourProtocol
 ```
+</details>
 
-- **@InjectWith** and **@UnwrappedInjectWith**
+<details>
+<summary><b>@InjectWith</b> and <b>@UnwrappedInjectWith</b> (<i>click to expand</i>)</summary>
 
 Your dependency may need parameters when injecting, you can pass them with these property wrappers.
 Simply define a model with your dependency parameters  and pass it.
@@ -182,8 +187,10 @@ var yourDependency: YourProtocol?
 @UnwrappedInject(YourParameters())
 var yourUnwrappedDependency: YourProtocol
 ```
+</details>
 
-### Qualifiers
+<details>
+<summary><b>Qualifiers</b> (<i>click to expand</i>)</summary>
 
 You can use [qualifiers](https://javaee.github.io/tutorial/cdi-basic006.html) to provide various implementations of a particular dependency. A qualifier is just a `@objc protocol` that you apply to a `class`.
 
@@ -233,8 +240,10 @@ var cat: Animal
 dog.sound() // prints Woof!
 cat.sound() // prints Meow!
 ```
+</details>
 
-### Testing
+<details>
+<summary><b>Testing</b> (<i>click to expand</i>)</summary>
 
 One of the advantages of dependency injection is that the code can be easily testable with mock implementation.
 That is why there is a `Mock` qualifier that has priority over all, so you can have your dependencies defined in the app and create your mock in the test target simply by adding this qualifier.
@@ -259,6 +268,7 @@ class YourMock: YourProtocol, Mock {}
 @Register
 var yourDependency: YourProtocol = YourMock()
 ```
+</details>
 
 ## 👀 Examples
 
