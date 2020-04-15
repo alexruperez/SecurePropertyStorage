@@ -81,7 +81,13 @@
                 <a class="nav-group-task-link" href="Classes/InjectPropertyWrapper.html">InjectPropertyWrapper</a>
               </li>
               <li class="nav-group-task">
+                <a class="nav-group-task-link" href="Classes/InjectPropertyWrapper/Scope.html">– Scope</a>
+              </li>
+              <li class="nav-group-task">
                 <a class="nav-group-task-link" href="Classes/InjectStorage.html">InjectStorage</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="Classes/InjectWith.html">InjectWith</a>
               </li>
               <li class="nav-group-task">
                 <a class="nav-group-task-link" href="Classes/Keychain.html">Keychain</a>
@@ -124,6 +130,9 @@
               </li>
               <li class="nav-group-task">
                 <a class="nav-group-task-link" href="Classes/UnwrappedInject.html">UnwrappedInject</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="Classes/UnwrappedInjectWith.html">UnwrappedInjectWith</a>
               </li>
               <li class="nav-group-task">
                 <a class="nav-group-task-link" href="Classes/UnwrappedKeychain.html">UnwrappedKeychain</a>
@@ -182,6 +191,9 @@
           <li class="nav-group-name">
             <a class="nav-group-name-link" href="Protocols.html">Protocols</a>
             <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="Protocols.html#/c:@M@Inject@objc(pl)Mock">Mock</a>
+              </li>
               <li class="nav-group-task">
                 <a class="nav-group-task-link" href="Protocols/Storage.html">Storage</a>
               </li>
@@ -252,7 +264,7 @@
                         </div>
                       </div>
                       <div class="slightly-smaller">
-                        <a href="https://github.com/alexruperez/SecurePropertyStorage/blob/master/Sources/Storage/DelegatedStorage.swift#L8-L256">Show on GitHub</a>
+                        <a href="https://github.com/alexruperez/SecurePropertyStorage/blob/master/Sources/Storage/DelegatedStorage.swift#L8-L257">Show on GitHub</a>
                       </div>
                     </section>
                   </div>
@@ -278,12 +290,12 @@
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">open</span> <span class="kd">class</span> <span class="kt">StorePropertyWrapper</span> <span class="p">:</span> <span class="kt"><a href="Protocols/StorePropertyWrapperProtocol.html">StorePropertyWrapperProtocol</a></span></code></pre>
+                          <pre class="highlight swift"><code><span class="kd">open</span> <span class="kd">class</span> <span class="kt">StorePropertyWrapper</span><span class="o">&lt;</span><span class="kt">StorageType</span><span class="o">&gt;</span> <span class="p">:</span> <span class="kt"><a href="Protocols/StorePropertyWrapperProtocol.html">StorePropertyWrapperProtocol</a></span> <span class="k">where</span> <span class="kt">StorageType</span> <span class="p">:</span> <span class="kt"><a href="Protocols/Storage.html">Storage</a></span></code></pre>
 
                         </div>
                       </div>
                       <div class="slightly-smaller">
-                        <a href="https://github.com/alexruperez/SecurePropertyStorage/blob/master/Sources/Storage/Store.swift#L10-L26">Show on GitHub</a>
+                        <a href="https://github.com/alexruperez/SecurePropertyStorage/blob/master/Sources/Storage/Store.swift#L12-L28">Show on GitHub</a>
                       </div>
                     </section>
                   </div>
@@ -310,12 +322,12 @@
                         <div class="language">
                           <p class="aside-title">Swift</p>
                           <pre class="highlight swift"><code><span class="kd">@propertyWrapper</span>
-<span class="kd">open</span> <span class="kd">class</span> <span class="kt">Store</span><span class="o">&lt;</span><span class="kt">Value</span><span class="o">&gt;</span> <span class="p">:</span> <span class="kt"><a href="Classes/StorePropertyWrapper.html">StorePropertyWrapper</a></span></code></pre>
+<span class="kd">open</span> <span class="kd">class</span> <span class="kt">Store</span><span class="o">&lt;</span><span class="kt">Value</span><span class="p">,</span> <span class="kt">StorageType</span><span class="o">&gt;</span> <span class="p">:</span> <span class="kt"><a href="Classes/StorePropertyWrapper.html">StorePropertyWrapper</a></span><span class="o">&lt;</span><span class="kt">StorageType</span><span class="o">&gt;</span> <span class="k">where</span> <span class="kt">StorageType</span> <span class="p">:</span> <span class="kt"><a href="Protocols/Storage.html">Storage</a></span></code></pre>
 
                         </div>
                       </div>
                       <div class="slightly-smaller">
-                        <a href="https://github.com/alexruperez/SecurePropertyStorage/blob/master/Sources/Storage/Store.swift#L30-L48">Show on GitHub</a>
+                        <a href="https://github.com/alexruperez/SecurePropertyStorage/blob/master/Sources/Storage/Store.swift#L32-L50">Show on GitHub</a>
                       </div>
                     </section>
                   </div>
@@ -342,12 +354,12 @@
                         <div class="language">
                           <p class="aside-title">Swift</p>
                           <pre class="highlight swift"><code><span class="kd">@propertyWrapper</span>
-<span class="kd">open</span> <span class="kd">class</span> <span class="kt">UnwrappedStore</span><span class="o">&lt;</span><span class="kt">Value</span><span class="o">&gt;</span> <span class="p">:</span> <span class="kt"><a href="Protocols/StorePropertyWrapperProtocol.html">StorePropertyWrapperProtocol</a></span></code></pre>
+<span class="kd">open</span> <span class="kd">class</span> <span class="kt">UnwrappedStore</span><span class="o">&lt;</span><span class="kt">Value</span><span class="p">,</span> <span class="kt">StorageType</span><span class="o">&gt;</span> <span class="p">:</span> <span class="kt"><a href="Protocols/StorePropertyWrapperProtocol.html">StorePropertyWrapperProtocol</a></span> <span class="k">where</span> <span class="kt">StorageType</span> <span class="p">:</span> <span class="kt"><a href="Protocols/Storage.html">Storage</a></span></code></pre>
 
                         </div>
                       </div>
                       <div class="slightly-smaller">
-                        <a href="https://github.com/alexruperez/SecurePropertyStorage/blob/master/Sources/Storage/Store.swift#L52-L79">Show on GitHub</a>
+                        <a href="https://github.com/alexruperez/SecurePropertyStorage/blob/master/Sources/Storage/Store.swift#L54-L81">Show on GitHub</a>
                       </div>
                     </section>
                   </div>
@@ -374,12 +386,12 @@
                         <div class="language">
                           <p class="aside-title">Swift</p>
                           <pre class="highlight swift"><code><span class="kd">@propertyWrapper</span>
-<span class="kd">open</span> <span class="kd">class</span> <span class="kt">CodableStore</span><span class="o">&lt;</span><span class="kt">Value</span><span class="o">&gt;</span> <span class="p">:</span> <span class="kt"><a href="Classes/StorePropertyWrapper.html">StorePropertyWrapper</a></span> <span class="k">where</span> <span class="kt">Value</span> <span class="p">:</span> <span class="kt">Decodable</span><span class="p">,</span> <span class="kt">Value</span> <span class="p">:</span> <span class="kt">Encodable</span></code></pre>
+<span class="kd">open</span> <span class="kd">class</span> <span class="kt">CodableStore</span><span class="o">&lt;</span><span class="kt">Value</span><span class="p">,</span> <span class="kt">StorageType</span><span class="o">&gt;</span> <span class="p">:</span> <span class="kt"><a href="Classes/StorePropertyWrapper.html">StorePropertyWrapper</a></span><span class="o">&lt;</span><span class="kt">StorageType</span><span class="o">&gt;</span> <span class="k">where</span> <span class="kt">Value</span> <span class="p">:</span> <span class="kt">Decodable</span><span class="p">,</span> <span class="kt">Value</span> <span class="p">:</span> <span class="kt">Encodable</span><span class="p">,</span> <span class="kt">StorageType</span> <span class="p">:</span> <span class="kt"><a href="Protocols/Storage.html">Storage</a></span></code></pre>
 
                         </div>
                       </div>
                       <div class="slightly-smaller">
-                        <a href="https://github.com/alexruperez/SecurePropertyStorage/blob/master/Sources/Storage/Store.swift#L83-L101">Show on GitHub</a>
+                        <a href="https://github.com/alexruperez/SecurePropertyStorage/blob/master/Sources/Storage/Store.swift#L85-L103">Show on GitHub</a>
                       </div>
                     </section>
                   </div>
@@ -406,12 +418,12 @@
                         <div class="language">
                           <p class="aside-title">Swift</p>
                           <pre class="highlight swift"><code><span class="kd">@propertyWrapper</span>
-<span class="kd">open</span> <span class="kd">class</span> <span class="kt">UnwrappedCodableStore</span><span class="o">&lt;</span><span class="kt">Value</span><span class="o">&gt;</span> <span class="p">:</span> <span class="kt"><a href="Protocols/StorePropertyWrapperProtocol.html">StorePropertyWrapperProtocol</a></span> <span class="k">where</span> <span class="kt">Value</span> <span class="p">:</span> <span class="kt">Decodable</span><span class="p">,</span> <span class="kt">Value</span> <span class="p">:</span> <span class="kt">Encodable</span></code></pre>
+<span class="kd">open</span> <span class="kd">class</span> <span class="kt">UnwrappedCodableStore</span><span class="o">&lt;</span><span class="kt">Value</span><span class="p">,</span> <span class="kt">StorageType</span><span class="o">&gt;</span> <span class="p">:</span> <span class="kt"><a href="Protocols/StorePropertyWrapperProtocol.html">StorePropertyWrapperProtocol</a></span> <span class="k">where</span> <span class="kt">Value</span> <span class="p">:</span> <span class="kt">Decodable</span><span class="p">,</span> <span class="kt">Value</span> <span class="p">:</span> <span class="kt">Encodable</span><span class="p">,</span> <span class="kt">StorageType</span> <span class="p">:</span> <span class="kt"><a href="Protocols/Storage.html">Storage</a></span></code></pre>
 
                         </div>
                       </div>
                       <div class="slightly-smaller">
-                        <a href="https://github.com/alexruperez/SecurePropertyStorage/blob/master/Sources/Storage/Store.swift#L105-L132">Show on GitHub</a>
+                        <a href="https://github.com/alexruperez/SecurePropertyStorage/blob/master/Sources/Storage/Store.swift#L107-L134">Show on GitHub</a>
                       </div>
                     </section>
                   </div>
@@ -438,7 +450,7 @@
                         <div class="language">
                           <p class="aside-title">Swift</p>
                           <pre class="highlight swift"><code><span class="kd">@propertyWrapper</span>
-<span class="kd">open</span> <span class="kd">class</span> <span class="kt">Keychain</span><span class="o">&lt;</span><span class="kt">Value</span><span class="o">&gt;</span> <span class="p">:</span> <span class="kt"><a href="Classes/StorePropertyWrapper.html">StorePropertyWrapper</a></span></code></pre>
+<span class="kd">open</span> <span class="kd">class</span> <span class="kt">Keychain</span><span class="o">&lt;</span><span class="kt">Value</span><span class="o">&gt;</span> <span class="p">:</span> <span class="kt"><a href="Classes/StorePropertyWrapper.html">StorePropertyWrapper</a></span><span class="o">&lt;</span><span class="kt"><a href="Classes/KeychainStorage.html">KeychainStorage</a></span><span class="o">&gt;</span></code></pre>
 
                         </div>
                       </div>
@@ -502,7 +514,7 @@
                         <div class="language">
                           <p class="aside-title">Swift</p>
                           <pre class="highlight swift"><code><span class="kd">@propertyWrapper</span>
-<span class="kd">open</span> <span class="kd">class</span> <span class="kt">CodableKeychain</span><span class="o">&lt;</span><span class="kt">Value</span><span class="o">&gt;</span> <span class="p">:</span> <span class="kt"><a href="Classes/StorePropertyWrapper.html">StorePropertyWrapper</a></span> <span class="k">where</span> <span class="kt">Value</span> <span class="p">:</span> <span class="kt">Decodable</span><span class="p">,</span> <span class="kt">Value</span> <span class="p">:</span> <span class="kt">Encodable</span></code></pre>
+<span class="kd">open</span> <span class="kd">class</span> <span class="kt">CodableKeychain</span><span class="o">&lt;</span><span class="kt">Value</span><span class="o">&gt;</span> <span class="p">:</span> <span class="kt"><a href="Classes/StorePropertyWrapper.html">StorePropertyWrapper</a></span><span class="o">&lt;</span><span class="kt"><a href="Classes/KeychainStorage.html">KeychainStorage</a></span><span class="o">&gt;</span> <span class="k">where</span> <span class="kt">Value</span> <span class="p">:</span> <span class="kt">Decodable</span><span class="p">,</span> <span class="kt">Value</span> <span class="p">:</span> <span class="kt">Encodable</span></code></pre>
 
                         </div>
                       </div>
@@ -570,7 +582,7 @@
                         </div>
                       </div>
                       <div class="slightly-smaller">
-                        <a href="https://github.com/alexruperez/SecurePropertyStorage/blob/master/Sources/Keychain/KeychainStorage.swift#L6-L27">Show on GitHub</a>
+                        <a href="https://github.com/alexruperez/SecurePropertyStorage/blob/master/Sources/Keychain/KeychainStorage.swift#L6-L46">Show on GitHub</a>
                       </div>
                     </section>
                   </div>
@@ -601,7 +613,7 @@
                         </div>
                       </div>
                       <div class="slightly-smaller">
-                        <a href="https://github.com/alexruperez/SecurePropertyStorage/blob/master/Sources/Keychain/KeychainStorage.swift#L30-L143">Show on GitHub</a>
+                        <a href="https://github.com/alexruperez/SecurePropertyStorage/blob/master/Sources/Keychain/KeychainStorage.swift#L49-L209">Show on GitHub</a>
                       </div>
                     </section>
                   </div>
@@ -628,7 +640,7 @@
                         <div class="language">
                           <p class="aside-title">Swift</p>
                           <pre class="highlight swift"><code><span class="kd">@propertyWrapper</span>
-<span class="kd">open</span> <span class="kd">class</span> <span class="kt">UserDefault</span><span class="o">&lt;</span><span class="kt">Value</span><span class="o">&gt;</span> <span class="p">:</span> <span class="kt"><a href="Classes/StorePropertyWrapper.html">StorePropertyWrapper</a></span></code></pre>
+<span class="kd">open</span> <span class="kd">class</span> <span class="kt">UserDefault</span><span class="o">&lt;</span><span class="kt">Value</span><span class="o">&gt;</span> <span class="p">:</span> <span class="kt"><a href="Classes/StorePropertyWrapper.html">StorePropertyWrapper</a></span><span class="o">&lt;</span><span class="kt"><a href="Classes/UserDefaultsStorage.html">UserDefaultsStorage</a></span><span class="o">&gt;</span></code></pre>
 
                         </div>
                       </div>
@@ -692,7 +704,7 @@
                         <div class="language">
                           <p class="aside-title">Swift</p>
                           <pre class="highlight swift"><code><span class="kd">@propertyWrapper</span>
-<span class="kd">open</span> <span class="kd">class</span> <span class="kt">CodableUserDefault</span><span class="o">&lt;</span><span class="kt">Value</span><span class="o">&gt;</span> <span class="p">:</span> <span class="kt"><a href="Classes/StorePropertyWrapper.html">StorePropertyWrapper</a></span> <span class="k">where</span> <span class="kt">Value</span> <span class="p">:</span> <span class="kt">Decodable</span><span class="p">,</span> <span class="kt">Value</span> <span class="p">:</span> <span class="kt">Encodable</span></code></pre>
+<span class="kd">open</span> <span class="kd">class</span> <span class="kt">CodableUserDefault</span><span class="o">&lt;</span><span class="kt">Value</span><span class="o">&gt;</span> <span class="p">:</span> <span class="kt"><a href="Classes/StorePropertyWrapper.html">StorePropertyWrapper</a></span><span class="o">&lt;</span><span class="kt"><a href="Classes/UserDefaultsStorage.html">UserDefaultsStorage</a></span><span class="o">&gt;</span> <span class="k">where</span> <span class="kt">Value</span> <span class="p">:</span> <span class="kt">Decodable</span><span class="p">,</span> <span class="kt">Value</span> <span class="p">:</span> <span class="kt">Encodable</span></code></pre>
 
                         </div>
                       </div>
@@ -787,7 +799,7 @@
                         <div class="language">
                           <p class="aside-title">Swift</p>
                           <pre class="highlight swift"><code><span class="kd">@propertyWrapper</span>
-<span class="kd">open</span> <span class="kd">class</span> <span class="kt">Singleton</span><span class="o">&lt;</span><span class="kt">Value</span><span class="o">&gt;</span> <span class="p">:</span> <span class="kt"><a href="Classes/StorePropertyWrapper.html">StorePropertyWrapper</a></span></code></pre>
+<span class="kd">open</span> <span class="kd">class</span> <span class="kt">Singleton</span><span class="o">&lt;</span><span class="kt">Value</span><span class="o">&gt;</span> <span class="p">:</span> <span class="kt"><a href="Classes/StorePropertyWrapper.html">StorePropertyWrapper</a></span><span class="o">&lt;</span><span class="kt"><a href="Classes/SingletonStorage.html">SingletonStorage</a></span><span class="o">&gt;</span></code></pre>
 
                         </div>
                       </div>
@@ -851,7 +863,7 @@
                         <div class="language">
                           <p class="aside-title">Swift</p>
                           <pre class="highlight swift"><code><span class="kd">@propertyWrapper</span>
-<span class="kd">open</span> <span class="kd">class</span> <span class="kt">CodableSingleton</span><span class="o">&lt;</span><span class="kt">Value</span><span class="o">&gt;</span> <span class="p">:</span> <span class="kt"><a href="Classes/StorePropertyWrapper.html">StorePropertyWrapper</a></span> <span class="k">where</span> <span class="kt">Value</span> <span class="p">:</span> <span class="kt">Decodable</span><span class="p">,</span> <span class="kt">Value</span> <span class="p">:</span> <span class="kt">Encodable</span></code></pre>
+<span class="kd">open</span> <span class="kd">class</span> <span class="kt">CodableSingleton</span><span class="o">&lt;</span><span class="kt">Value</span><span class="o">&gt;</span> <span class="p">:</span> <span class="kt"><a href="Classes/StorePropertyWrapper.html">StorePropertyWrapper</a></span><span class="o">&lt;</span><span class="kt"><a href="Classes/SingletonStorage.html">SingletonStorage</a></span><span class="o">&gt;</span> <span class="k">where</span> <span class="kt">Value</span> <span class="p">:</span> <span class="kt">Decodable</span><span class="p">,</span> <span class="kt">Value</span> <span class="p">:</span> <span class="kt">Encodable</span></code></pre>
 
                         </div>
                       </div>
@@ -976,12 +988,12 @@
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">open</span> <span class="kd">class</span> <span class="kt">InjectPropertyWrapper</span><span class="o">&lt;</span><span class="kt">Dependency</span><span class="o">&gt;</span> <span class="p">:</span> <span class="kt"><a href="Classes/StorePropertyWrapper.html">StorePropertyWrapper</a></span></code></pre>
+                          <pre class="highlight swift"><code><span class="kd">open</span> <span class="kd">class</span> <span class="kt">InjectPropertyWrapper</span><span class="o">&lt;</span><span class="kt">Dependency</span><span class="p">,</span> <span class="kt">Parameters</span><span class="o">&gt;</span> <span class="p">:</span> <span class="kt"><a href="Classes/StorePropertyWrapper.html">StorePropertyWrapper</a></span><span class="o">&lt;</span><span class="kt"><a href="Classes/InjectStorage.html">InjectStorage</a></span><span class="o">&gt;</span></code></pre>
 
                         </div>
                       </div>
                       <div class="slightly-smaller">
-                        <a href="https://github.com/alexruperez/SecurePropertyStorage/blob/master/Sources/Inject/Inject.swift#L8-L66">Show on GitHub</a>
+                        <a href="https://github.com/alexruperez/SecurePropertyStorage/blob/master/Sources/Inject/Inject.swift#L11-L148">Show on GitHub</a>
                       </div>
                     </section>
                   </div>
@@ -1008,12 +1020,44 @@
                         <div class="language">
                           <p class="aside-title">Swift</p>
                           <pre class="highlight swift"><code><span class="kd">@propertyWrapper</span>
-<span class="kd">public</span> <span class="kd">class</span> <span class="kt">Inject</span><span class="o">&lt;</span><span class="kt">Dependency</span><span class="o">&gt;</span> <span class="p">:</span> <span class="kt"><a href="Classes/InjectPropertyWrapper.html">InjectPropertyWrapper</a></span><span class="o">&lt;</span><span class="kt">Dependency</span><span class="o">&gt;</span></code></pre>
+<span class="kd">public</span> <span class="kd">class</span> <span class="kt">Inject</span><span class="o">&lt;</span><span class="kt">Dependency</span><span class="o">&gt;</span> <span class="p">:</span> <span class="kt"><a href="Classes/InjectPropertyWrapper.html">InjectPropertyWrapper</a></span><span class="o">&lt;</span><span class="kt">Dependency</span><span class="p">,</span> <span class="kt">Void</span><span class="o">&gt;</span></code></pre>
 
                         </div>
                       </div>
                       <div class="slightly-smaller">
-                        <a href="https://github.com/alexruperez/SecurePropertyStorage/blob/master/Sources/Inject/Inject.swift#L70-L78">Show on GitHub</a>
+                        <a href="https://github.com/alexruperez/SecurePropertyStorage/blob/master/Sources/Inject/Inject.swift#L152-L168">Show on GitHub</a>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:6Inject0A4WithC"></a>
+                    <a name="//apple_ref/swift/Class/InjectWith" class="dashAnchor"></a>
+                    <a class="token" href="#/s:6Inject0A4WithC">InjectWith</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p><code>@InjectWith</code> property wrapper.</p>
+
+                        <a href="Classes/InjectWith.html" class="slightly-smaller">See more</a>
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">@propertyWrapper</span>
+<span class="kd">public</span> <span class="kd">class</span> <span class="kt">InjectWith</span><span class="o">&lt;</span><span class="kt">Dependency</span><span class="p">,</span> <span class="kt">Parameters</span><span class="o">&gt;</span> <span class="p">:</span> <span class="kt"><a href="Classes/InjectPropertyWrapper.html">InjectPropertyWrapper</a></span><span class="o">&lt;</span><span class="kt">Dependency</span><span class="p">,</span> <span class="kt">Parameters</span><span class="o">&gt;</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div class="slightly-smaller">
+                        <a href="https://github.com/alexruperez/SecurePropertyStorage/blob/master/Sources/Inject/Inject.swift#L172-L188">Show on GitHub</a>
                       </div>
                     </section>
                   </div>
@@ -1040,12 +1084,44 @@
                         <div class="language">
                           <p class="aside-title">Swift</p>
                           <pre class="highlight swift"><code><span class="kd">@propertyWrapper</span>
-<span class="kd">public</span> <span class="kd">class</span> <span class="kt">UnwrappedInject</span><span class="o">&lt;</span><span class="kt">Dependency</span><span class="o">&gt;</span> <span class="p">:</span> <span class="kt"><a href="Classes/InjectPropertyWrapper.html">InjectPropertyWrapper</a></span><span class="o">&lt;</span><span class="kt">Dependency</span><span class="o">&gt;</span></code></pre>
+<span class="kd">public</span> <span class="kd">class</span> <span class="kt">UnwrappedInject</span><span class="o">&lt;</span><span class="kt">Dependency</span><span class="o">&gt;</span> <span class="p">:</span> <span class="kt"><a href="Classes/InjectPropertyWrapper.html">InjectPropertyWrapper</a></span><span class="o">&lt;</span><span class="kt">Dependency</span><span class="p">,</span> <span class="kt">Void</span><span class="o">&gt;</span></code></pre>
 
                         </div>
                       </div>
                       <div class="slightly-smaller">
-                        <a href="https://github.com/alexruperez/SecurePropertyStorage/blob/master/Sources/Inject/Inject.swift#L82-L98">Show on GitHub</a>
+                        <a href="https://github.com/alexruperez/SecurePropertyStorage/blob/master/Sources/Inject/Inject.swift#L192-L214">Show on GitHub</a>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:6Inject09UnwrappedA4WithC"></a>
+                    <a name="//apple_ref/swift/Class/UnwrappedInjectWith" class="dashAnchor"></a>
+                    <a class="token" href="#/s:6Inject09UnwrappedA4WithC">UnwrappedInjectWith</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p><code>@UnwrappedInjectWith</code> property wrapper.</p>
+
+                        <a href="Classes/UnwrappedInjectWith.html" class="slightly-smaller">See more</a>
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">@propertyWrapper</span>
+<span class="kd">public</span> <span class="kd">class</span> <span class="kt">UnwrappedInjectWith</span><span class="o">&lt;</span><span class="kt">Dependency</span><span class="p">,</span> <span class="kt">Parameters</span><span class="o">&gt;</span> <span class="p">:</span> <span class="kt"><a href="Classes/InjectPropertyWrapper.html">InjectPropertyWrapper</a></span><span class="o">&lt;</span><span class="kt">Dependency</span><span class="p">,</span> <span class="kt">Parameters</span><span class="o">&gt;</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div class="slightly-smaller">
+                        <a href="https://github.com/alexruperez/SecurePropertyStorage/blob/master/Sources/Inject/Inject.swift#L218-L240">Show on GitHub</a>
                       </div>
                     </section>
                   </div>
@@ -1072,12 +1148,12 @@
                         <div class="language">
                           <p class="aside-title">Swift</p>
                           <pre class="highlight swift"><code><span class="kd">@propertyWrapper</span>
-<span class="kd">public</span> <span class="kd">class</span> <span class="kt">Register</span><span class="o">&lt;</span><span class="kt">Dependency</span><span class="o">&gt;</span> <span class="p">:</span> <span class="kt"><a href="Classes/InjectPropertyWrapper.html">InjectPropertyWrapper</a></span><span class="o">&lt;</span><span class="kt">Dependency</span><span class="o">&gt;</span></code></pre>
+<span class="kd">public</span> <span class="kd">class</span> <span class="kt">Register</span><span class="o">&lt;</span><span class="kt">Dependency</span><span class="o">&gt;</span> <span class="p">:</span> <span class="kt"><a href="Classes/InjectPropertyWrapper.html">InjectPropertyWrapper</a></span><span class="o">&lt;</span><span class="kt">Dependency</span><span class="p">,</span> <span class="kt">Void</span><span class="o">&gt;</span></code></pre>
 
                         </div>
                       </div>
                       <div class="slightly-smaller">
-                        <a href="https://github.com/alexruperez/SecurePropertyStorage/blob/master/Sources/Inject/Inject.swift#L102-L126">Show on GitHub</a>
+                        <a href="https://github.com/alexruperez/SecurePropertyStorage/blob/master/Sources/Inject/Inject.swift#L244-L266">Show on GitHub</a>
                       </div>
                     </section>
                   </div>

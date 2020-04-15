@@ -80,7 +80,13 @@
                 <a class="nav-group-task-link" href="Classes/InjectPropertyWrapper.html">InjectPropertyWrapper</a>
               </li>
               <li class="nav-group-task">
+                <a class="nav-group-task-link" href="Classes/InjectPropertyWrapper/Scope.html">– Scope</a>
+              </li>
+              <li class="nav-group-task">
                 <a class="nav-group-task-link" href="Classes/InjectStorage.html">InjectStorage</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="Classes/InjectWith.html">InjectWith</a>
               </li>
               <li class="nav-group-task">
                 <a class="nav-group-task-link" href="Classes/Keychain.html">Keychain</a>
@@ -123,6 +129,9 @@
               </li>
               <li class="nav-group-task">
                 <a class="nav-group-task-link" href="Classes/UnwrappedInject.html">UnwrappedInject</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="Classes/UnwrappedInjectWith.html">UnwrappedInjectWith</a>
               </li>
               <li class="nav-group-task">
                 <a class="nav-group-task-link" href="Classes/UnwrappedKeychain.html">UnwrappedKeychain</a>
@@ -182,6 +191,9 @@
             <a class="nav-group-name-link" href="Protocols.html">Protocols</a>
             <ul class="nav-group-tasks">
               <li class="nav-group-task">
+                <a class="nav-group-task-link" href="Protocols.html#/c:@M@Inject@objc(pl)Mock">Mock</a>
+              </li>
+              <li class="nav-group-task">
                 <a class="nav-group-task-link" href="Protocols/Storage.html">Storage</a>
               </li>
               <li class="nav-group-task">
@@ -227,26 +239,25 @@
 <a href="LICENSE"><img src="https://img.shields.io/github/license/alexruperez/SecurePropertyStorage" alt="License"></a>
 <a href="https://swift.org/package-manager"><img src="https://img.shields.io/badge/Swift%20Package%20Manager-compatible-4BC51D.svg?style=flat" alt="Swift Package Manager"></a>
 <a href="https://github.com/Carthage/Carthage"><img src="https://img.shields.io/badge/Carthage-compatible-4BC51D.svg?style=flat" alt="Carthage"></a>
-<a href="https://github.com/alexruperez/SecurePropertyStorage/actions"><img src="https://github.com/alexruperez/SecurePropertyStorage/workflows/Swift/badge.svg" alt="Swift Action"></a>
-<a href="https://travis-ci.com/alexruperez/SecurePropertyStorage"><img src="https://travis-ci.com/alexruperez/SecurePropertyStorage.svg?branch=master" alt="Build Status"></a>
 <a href="https://app.bitrise.io/app/4fed1af31836d3bc"><img src="https://app.bitrise.io/app/4fed1af31836d3bc/status.svg?token=bYImtoKj0hxqCxnORhdgyg&branch=master" alt="Bitrise"></a>
-<a href="https://codebeat.co/projects/github-com-alexruperez-propertywrappers-master"><img src="https://codebeat.co/badges/09a12f07-f53c-4149-b033-df576ec3733b" alt="Codebeat"></a>
 <a href="https://app.codacy.com/manual/alexruperez/SecurePropertyStorage"><img src="https://api.codacy.com/project/badge/Grade/53a23dd2feca4b7ca8357c918c7d49c9" alt="Quality"></a>
 <a href="https://codeclimate.com/github/alexruperez/SecurePropertyStorage/maintainability"><img src="https://api.codeclimate.com/v1/badges/bbf38ddca9a26703cefd/maintainability" alt="Maintainability"></a>
 <a href="https://codecov.io/gh/alexruperez/SecurePropertyStorage"><img src="https://codecov.io/gh/alexruperez/SecurePropertyStorage/branch/master/graph/badge.svg" alt="Coverage"></a>
 <a href="https://alexruperez.github.io/SecurePropertyStorage"><img src="docs/badge.svg" alt="Documentation"></a></p>
 <h2 id='features' class='heading'>🌟 Features</h2>
 
-<p>All keys are hashed using <a href="https://en.wikipedia.org/wiki/SHA-2">SHA512</a> and all values are encrypted using <a href="https://en.wikipedia.org/wiki/Advanced_Encryption_Standard">AES</a>-<a href="https://en.wikipedia.org/wiki/Galois/Counter_Mode">GCM</a> to keep user information safe, auto*magic*ally. Symmetric key and nonce, are stored in Keychain in a totally secure way. </p>
+<p>All keys are hashed using <a href="https://en.wikipedia.org/wiki/SHA-2">SHA512</a> and all values are encrypted using <a href="https://en.wikipedia.org/wiki/Advanced_Encryption_Standard">AES</a>-<a href="https://en.wikipedia.org/wiki/Galois/Counter_Mode">GCM</a> to keep user information safe, auto*magic*ally.
+Symmetric key and nonce, are stored in Keychain in a totally secure way. </p>
 <h2 id='basic-usage' class='heading'>🐒 Basic usage</h2>
 <h3 id='userdefault' class='heading'>@UserDefault</h3>
 
-<p>This property wrapper will store your property in <a href="https://developer.apple.com/documentation/foundation/userdefaults">UserDefaults</a> using <code><a href="Typealiases.html#/s:7Storage8StoreKeya">StoreKey</a></code> (any <code>String</code> but i recommend you a String typed enum). Optionally, you can assign a default value to the property that will be secure stored at initialization.</p>
+<p>This property wrapper will store your property in <a href="https://developer.apple.com/documentation/foundation/userdefaults">UserDefaults</a> using <code><a href="Typealiases.html#/s:7Storage8StoreKeya">StoreKey</a></code> (any <code>String</code> but i recommend you a String typed enum).
+Optionally, you can assign a default value to the property that will be secure stored at initialization.</p>
 <pre class="highlight swift"><code><span class="kd">@UserDefault(&lt;#StoreKey#&gt;)</span>
 <span class="k">var</span> <span class="nv">yourProperty</span><span class="p">:</span> <span class="kt">YourType</span><span class="p">?</span> <span class="o">=</span> <span class="n">yourDefaultValueIfNeeded</span>
 </code></pre>
 
-<p><a href="Sources/UserDefault/UserDefaultsStorage.swift"><code><a href="Classes/UserDefaultsStorage.html">UserDefaultsStorage</a></code></a> is also available, a subclass of <a href="https://developer.apple.com/documentation/foundation/userdefaults"><code>UserDefaults</code></a> with all the security provided by this library.</p>
+<p><a href="Sources/UserDefault/UserDefaultsStorage.swift"><code><a href="Classes/UserDefaultsStorage.html">UserDefaultsStorage</a></code></a> is also available, a subclass of <a href="https://developer.apple.com/documentation/foundation/userdefaults"><code>UserDefaults</code></a> with all the security provided by this library, where you can customize suite name.</p>
 <h3 id='keychain' class='heading'>@Keychain</h3>
 
 <p>This property wrapper will store your property in <a href="https://developer.apple.com/documentation/security/keychain_services">Keychain</a> using <code><a href="Typealiases.html#/s:7Storage8StoreKeya">StoreKey</a></code>.</p>
@@ -254,7 +265,7 @@
 <span class="k">var</span> <span class="nv">yourProperty</span><span class="p">:</span> <span class="kt">YourType</span><span class="p">?</span> <span class="o">=</span> <span class="n">yourDefaultValueIfNeeded</span>
 </code></pre>
 
-<p>As <code><a href="Classes/UserDefaultsStorage.html">UserDefaultsStorage</a></code>, <a href="Sources/Keychain/KeychainStorage.swift"><code><a href="Classes/KeychainStorage.html">KeychainStorage</a></code></a> is also available.</p>
+<p>As <code><a href="Classes/UserDefaultsStorage.html">UserDefaultsStorage</a></code>, <a href="Sources/Keychain/KeychainStorage.swift"><code><a href="Classes/KeychainStorage.html">KeychainStorage</a></code></a> is also available, where you can customize access, group and synchronize it with iCloud.</p>
 <h3 id='singleton' class='heading'>@Singleton</h3>
 
 <p>This property wrapper will store your property in a memory <a href="https://en.wikipedia.org/wiki/Singleton_pattern">singleton</a>,  every property with the same wrapper and key can access or modify the value from wherever it is.</p>
@@ -274,7 +285,7 @@
 <h3 id='store' class='heading'>@Store</h3>
 
 <p>This is a custom wrapper, you can define your own <a href="Sources/Storage/Storage.swift"><code><a href="Protocols/Storage.html">Storage</a></code></a> protocol implementation.</p>
-<pre class="highlight swift"><code><span class="kd">@Store(&lt;#Storage#&gt;, &lt;#StoreKey#&gt;)</span>
+<pre class="highlight swift"><code><span class="kd">@Store(&lt;#YourStorage#&gt;, &lt;#StoreKey#&gt;)</span>
 <span class="k">var</span> <span class="nv">yourProperty</span><span class="p">:</span> <span class="kt">YourType</span><span class="p">?</span> <span class="o">=</span> <span class="n">yourDefaultValueIfNeeded</span>
 </code></pre>
 
@@ -316,20 +327,72 @@
 <li><strong>@Register</strong></li>
 </ul>
 
-<p>This property wrapper will register the implementations of your dependencies. You can register them wherever you want before inject it, but be sure to do it only once (except if you use <a href="#qualifiers">qualifiers</a>), for example, in an <code>Injector</code> class.</p>
+<p>This property wrapper will register the implementations of your dependencies.
+Register them wherever you want before inject it, but be sure to do it only once (except if you use <a href="#qualifiers">qualifiers</a>), for example, in an <code>Injector</code> class.
+You can register through a protocol or directly using your class implementation.</p>
 <pre class="highlight swift"><code><span class="kd">@Register</span>
-<span class="k">var</span> <span class="nv">yourDependency</span><span class="p">:</span> <span class="kt">YourProtocol</span> <span class="o">=</span> <span class="kt">YourImplementation</span>
+<span class="k">var</span> <span class="nv">yourDependency</span><span class="p">:</span> <span class="kt">YourProtocol</span> <span class="o">=</span> <span class="kt">YourImplementation</span><span class="p">()</span>
+
+<span class="kd">@Register</span>
+<span class="k">var</span> <span class="nv">yourDependency</span> <span class="o">=</span> <span class="kt">YourImplementation</span><span class="p">()</span>
+</code></pre>
+
+<p>You can also define a closure that builds your dependency.
+Just remember cast your dependency if you are going to inject it through a protocol.</p>
+<pre class="highlight swift"><code><span class="kd">@Register</span>
+<span class="k">var</span> <span class="nv">yourDependency</span> <span class="o">=</span> <span class="p">{</span>
+    <span class="kt">YourImplementation</span><span class="p">()</span> <span class="k">as</span> <span class="kt">YourProtocol</span>
+<span class="p">}</span>
+
+<span class="kd">@Register</span>
+<span class="k">var</span> <span class="nv">yourDependency</span> <span class="o">=</span> <span class="p">{</span>
+    <span class="kt">YourImplementation</span><span class="p">()</span>
+<span class="p">}</span>
 </code></pre>
 
 <ul>
 <li><strong>@Inject</strong> and <strong>@UnwrappedInject</strong></li>
 </ul>
 
-<p>This property wrapper injects your dependencies <code>@Register</code> implementations.</p>
+<p>These property wrappers injects your dependencies <code>@Register</code> implementations.</p>
 <pre class="highlight swift"><code><span class="kd">@Inject</span>
 <span class="k">var</span> <span class="nv">yourDependency</span><span class="p">:</span> <span class="kt">YourProtocol</span><span class="p">?</span>
 
+<span class="kd">@Inject</span>
+<span class="k">var</span> <span class="nv">yourDependency</span><span class="p">:</span> <span class="kt">YourImplementation</span><span class="p">?</span>
+
 <span class="kd">@UnwrappedInject</span>
+<span class="k">var</span> <span class="nv">yourUnwrappedDependency</span><span class="p">:</span> <span class="kt">YourProtocol</span>
+
+<span class="kd">@UnwrappedInject</span>
+<span class="k">var</span> <span class="nv">yourUnwrappedDependency</span><span class="p">:</span> <span class="kt">YourImplementation</span>
+</code></pre>
+<h4 id='scope' class='heading'>Scope</h4>
+
+<p>Because these property wrappers works similarly to <code>@Singleton</code>, the default scope is <code>.singleton</code>, but if you use builder closures on <code>@Register</code>, you can modify them to inject a single instance.</p>
+<pre class="highlight swift"><code><span class="kd">@Inject(.instance)</span>
+<span class="k">var</span> <span class="nv">yourDependency</span><span class="p">:</span> <span class="kt">YourProtocol</span><span class="p">?</span>
+
+<span class="kd">@UnwrappedInject(.instance)</span>
+<span class="k">var</span> <span class="nv">yourUnwrappedDependency</span><span class="p">:</span> <span class="kt">YourProtocol</span>
+</code></pre>
+
+<ul>
+<li><strong>@InjectWith</strong> and <strong>@UnwrappedInjectWith</strong></li>
+</ul>
+
+<p>Your dependency may need parameters when injecting, you can pass them with these property wrappers.
+Simply define a model with your dependency parameters  and pass it.
+It will inject a new instance built with these parameters.</p>
+<pre class="highlight swift"><code><span class="kd">@Register</span>
+<span class="k">var</span> <span class="nv">yourDependency</span> <span class="o">=</span> <span class="p">{</span> <span class="n">parameters</span> <span class="k">in</span>
+    <span class="kt">YourImplementation</span><span class="p">(</span><span class="n">parameters</span><span class="p">)</span> <span class="k">as</span> <span class="kt">YourProtocol</span>
+<span class="p">}</span>
+
+<span class="kd">@Inject(YourParameters()</span><span class="p">)</span>
+<span class="k">var</span> <span class="nv">yourDependency</span><span class="p">:</span> <span class="kt">YourProtocol</span><span class="p">?</span>
+
+<span class="kd">@UnwrappedInject(YourParameters()</span><span class="p">)</span>
 <span class="k">var</span> <span class="nv">yourUnwrappedDependency</span><span class="p">:</span> <span class="kt">YourProtocol</span>
 </code></pre>
 <h3 id='qualifiers' class='heading'>Qualifiers</h3>
@@ -373,6 +436,27 @@
 
 <span class="n">dog</span><span class="o">.</span><span class="nf">sound</span><span class="p">()</span> <span class="c1">// prints Woof!</span>
 <span class="n">cat</span><span class="o">.</span><span class="nf">sound</span><span class="p">()</span> <span class="c1">// prints Meow!</span>
+</code></pre>
+<h3 id='testing' class='heading'>Testing</h3>
+
+<p>One of the advantages of dependency injection is that the code can be easily testable with mock implementation.
+That is why there is a <code><a href="Protocols.html#/c:@M@Inject@objc(pl)Mock">Mock</a></code> qualifier that has priority over all, so you can have your dependencies defined in the app and create your mock in the test target simply by adding this qualifier.</p>
+<pre class="highlight swift"><code><span class="c1">// App target</span>
+
+<span class="kd">class</span> <span class="kt">YourImplementation</span><span class="p">:</span> <span class="kt">YourProtocol</span> <span class="p">{}</span>
+
+<span class="kd">@Register</span>
+<span class="k">var</span> <span class="nv">yourDependency</span><span class="p">:</span> <span class="kt">YourProtocol</span> <span class="o">=</span> <span class="kt">YourImplementation</span><span class="p">()</span>
+
+<span class="kd">@Inject</span>
+<span class="k">var</span> <span class="nv">yourDependency</span><span class="p">:</span> <span class="kt">YourProtocol</span><span class="p">?</span>
+</code></pre>
+<pre class="highlight swift"><code><span class="c1">// Test target</span>
+
+<span class="kd">class</span> <span class="kt">YourMock</span><span class="p">:</span> <span class="kt">YourProtocol</span><span class="p">,</span> <span class="kt">Mock</span> <span class="p">{}</span>
+
+<span class="kd">@Register</span>
+<span class="k">var</span> <span class="nv">yourDependency</span><span class="p">:</span> <span class="kt">YourProtocol</span> <span class="o">=</span> <span class="kt">YourMock</span><span class="p">()</span>
 </code></pre>
 <h2 id='examples' class='heading'>👀 Examples</h2>
 
@@ -420,10 +504,9 @@
 <pre class="highlight swift"><code><span class="o">.</span><span class="nf">package</span><span class="p">(</span><span class="nv">url</span><span class="p">:</span> <span class="s">"https://github.com/alexruperez/SecurePropertyStorage"</span><span class="p">,</span> <span class="nv">from</span><span class="p">:</span> <span class="s">"0.3.0"</span><span class="p">)</span>
 </code></pre>
 
-<p>You have a series of products that you can choose:</p>
+<p>By default, all property wrappers are installed, but if you want, you can choose only certain products:</p>
 
 <ul>
-<li><strong>SecurePropertyStorage</strong>: All property wrappers, by default.</li>
 <li><strong>UserDefault</strong>: @*UserDefault property wrappers.</li>
 <li><strong>Keychain</strong>: @*Keychain property wrappers.</li>
 <li><strong>Singleton</strong>: @*Singleton property wrappers.</li>

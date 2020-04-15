@@ -6,7 +6,8 @@ public typealias StorageErrorClosure = (Error) -> Void
 
 /// Class with the main `CryptoKit` logic.
 open class DelegatedStorage: Storage {
-    private let delegate: StorageDelegate?
+    /// `StorageDelegate` that stores `StorageData`.
+    public let delegate: StorageDelegate?
     private let symmetricKey: SymmetricKey?
     private let nonce: AES.GCM.Nonce?
     private let authenticationTag: Data?

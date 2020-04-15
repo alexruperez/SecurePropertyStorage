@@ -2,7 +2,7 @@ import Storage
 
 /// `@Singleton` property wrapper.
 @propertyWrapper
-open class Singleton<Value>: StorePropertyWrapper {
+open class Singleton<Value>: StorePropertyWrapper<SingletonStorage> {
     /**
      Create a `Singleton` property wrapper.
 
@@ -34,7 +34,7 @@ open class Singleton<Value>: StorePropertyWrapper {
 @propertyWrapper
 open class UnwrappedSingleton<Value>: StorePropertyWrapperProtocol {
     /// `Storage` used by property wrapper.
-    open var storage: Storage
+    open var storage: SingletonStorage
     /// `StoreKey` to store the value.
     open var key: StoreKey
     /// Default value.
@@ -62,7 +62,7 @@ open class UnwrappedSingleton<Value>: StorePropertyWrapperProtocol {
 
 /// `@CodableSingleton` property wrapper.
 @propertyWrapper
-open class CodableSingleton<Value: Codable>: StorePropertyWrapper {
+open class CodableSingleton<Value: Codable>: StorePropertyWrapper<SingletonStorage> {
     /**
      Create a `CodableSingleton` property wrapper.
 
@@ -94,7 +94,7 @@ open class CodableSingleton<Value: Codable>: StorePropertyWrapper {
 @propertyWrapper
 open class UnwrappedCodableSingleton<Value: Codable>: StorePropertyWrapperProtocol {
     /// `Storage` used by property wrapper.
-    open var storage: Storage
+    open var storage: SingletonStorage
     /// `StoreKey` to store the value.
     open var key: StoreKey
     /// Default value.

@@ -81,7 +81,13 @@
                 <a class="nav-group-task-link" href="../Classes/InjectPropertyWrapper.html">InjectPropertyWrapper</a>
               </li>
               <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Classes/InjectPropertyWrapper/Scope.html">– Scope</a>
+              </li>
+              <li class="nav-group-task">
                 <a class="nav-group-task-link" href="../Classes/InjectStorage.html">InjectStorage</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Classes/InjectWith.html">InjectWith</a>
               </li>
               <li class="nav-group-task">
                 <a class="nav-group-task-link" href="../Classes/Keychain.html">Keychain</a>
@@ -124,6 +130,9 @@
               </li>
               <li class="nav-group-task">
                 <a class="nav-group-task-link" href="../Classes/UnwrappedInject.html">UnwrappedInject</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Classes/UnwrappedInjectWith.html">UnwrappedInjectWith</a>
               </li>
               <li class="nav-group-task">
                 <a class="nav-group-task-link" href="../Classes/UnwrappedKeychain.html">UnwrappedKeychain</a>
@@ -183,6 +192,9 @@
             <a class="nav-group-name-link" href="../Protocols.html">Protocols</a>
             <ul class="nav-group-tasks">
               <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Protocols.html#/c:@M@Inject@objc(pl)Mock">Mock</a>
+              </li>
+              <li class="nav-group-task">
                 <a class="nav-group-task-link" href="../Protocols/Storage.html">Storage</a>
               </li>
               <li class="nav-group-task">
@@ -220,7 +232,7 @@
               <div class="declaration">
                 <div class="language">
                   <pre class="highlight swift"><code><span class="kd">@propertyWrapper</span>
-<span class="kd">open</span> <span class="kd">class</span> <span class="kt">CodableStore</span><span class="o">&lt;</span><span class="kt">Value</span><span class="o">&gt;</span> <span class="p">:</span> <span class="kt"><a href="../Classes/StorePropertyWrapper.html">StorePropertyWrapper</a></span> <span class="k">where</span> <span class="kt">Value</span> <span class="p">:</span> <span class="kt">Decodable</span><span class="p">,</span> <span class="kt">Value</span> <span class="p">:</span> <span class="kt">Encodable</span></code></pre>
+<span class="kd">open</span> <span class="kd">class</span> <span class="kt">CodableStore</span><span class="o">&lt;</span><span class="kt">Value</span><span class="p">,</span> <span class="kt">StorageType</span><span class="o">&gt;</span> <span class="p">:</span> <span class="kt"><a href="../Classes/StorePropertyWrapper.html">StorePropertyWrapper</a></span><span class="o">&lt;</span><span class="kt">StorageType</span><span class="o">&gt;</span> <span class="k">where</span> <span class="kt">Value</span> <span class="p">:</span> <span class="kt">Decodable</span><span class="p">,</span> <span class="kt">Value</span> <span class="p">:</span> <span class="kt">Encodable</span><span class="p">,</span> <span class="kt">StorageType</span> <span class="p">:</span> <span class="kt"><a href="../Protocols/Storage.html">Storage</a></span></code></pre>
 
                 </div>
               </div>
@@ -236,9 +248,9 @@
                 <li class="item">
                   <div>
                     <code>
-                    <a name="/s:7Storage12CodableStoreC12wrappedValue__ACyxGxSg_A2A_pSStcfc"></a>
+                    <a name="/s:7Storage12CodableStoreC12wrappedValue__ACyxq_GxSg_q_SStcfc"></a>
                     <a name="//apple_ref/swift/Method/init(wrappedValue:_:_:)" class="dashAnchor"></a>
-                    <a class="token" href="#/s:7Storage12CodableStoreC12wrappedValue__ACyxGxSg_A2A_pSStcfc">init(wrappedValue:<wbr>_:<wbr>_:<wbr>)</a>
+                    <a class="token" href="#/s:7Storage12CodableStoreC12wrappedValue__ACyxq_GxSg_q_SStcfc">init(wrappedValue:<wbr>_:<wbr>_:<wbr>)</a>
                     </code>
                   </div>
                   <div class="height-container">
@@ -253,7 +265,7 @@
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="n">convenience</span> <span class="nf">init</span><span class="p">(</span><span class="nv">wrappedValue</span><span class="p">:</span> <span class="kt">Value</span><span class="p">?,</span> <span class="n">_</span> <span class="nv">storage</span><span class="p">:</span> <span class="kt"><a href="../Protocols/Storage.html">Storage</a></span><span class="p">,</span> <span class="n">_</span> <span class="nv">key</span><span class="p">:</span> <span class="kt"><a href="../Typealiases.html#/s:7Storage8StoreKeya">StoreKey</a></span><span class="p">)</span></code></pre>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="n">convenience</span> <span class="nf">init</span><span class="p">(</span><span class="nv">wrappedValue</span><span class="p">:</span> <span class="kt">Value</span><span class="p">?,</span> <span class="n">_</span> <span class="nv">storage</span><span class="p">:</span> <span class="kt">StorageType</span><span class="p">,</span> <span class="n">_</span> <span class="nv">key</span><span class="p">:</span> <span class="kt"><a href="../Typealiases.html#/s:7Storage8StoreKeya">StoreKey</a></span><span class="p">)</span></code></pre>
 
                         </div>
                       </div>
@@ -301,7 +313,7 @@
                         </table>
                       </div>
                       <div class="slightly-smaller">
-                        <a href="https://github.com/alexruperez/SecurePropertyStorage/blob/master/Sources/Storage/Store.swift#L91-L94">Show on GitHub</a>
+                        <a href="https://github.com/alexruperez/SecurePropertyStorage/blob/master/Sources/Storage/Store.swift#L93-L96">Show on GitHub</a>
                       </div>
                     </section>
                   </div>
@@ -331,7 +343,7 @@
                         </div>
                       </div>
                       <div class="slightly-smaller">
-                        <a href="https://github.com/alexruperez/SecurePropertyStorage/blob/master/Sources/Storage/Store.swift#L97-L100">Show on GitHub</a>
+                        <a href="https://github.com/alexruperez/SecurePropertyStorage/blob/master/Sources/Storage/Store.swift#L99-L102">Show on GitHub</a>
                       </div>
                     </section>
                   </div>

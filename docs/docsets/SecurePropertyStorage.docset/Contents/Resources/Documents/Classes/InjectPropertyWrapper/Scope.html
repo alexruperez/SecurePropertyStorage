@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    <title>GCM Extension Reference</title>
+    <title>Scope Enumeration Reference</title>
     <link rel="stylesheet" type="text/css" href="../../css/jazzy.css" />
     <link rel="stylesheet" type="text/css" href="../../css/highlight.css" />
     <meta charset="utf-8">
@@ -14,9 +14,9 @@
   </head>
   <body>
 
-    <a name="//apple_ref/swift/Extension/GCM" class="dashAnchor"></a>
+    <a name="//apple_ref/swift/Enum/Scope" class="dashAnchor"></a>
 
-    <a title="GCM Extension Reference"></a>
+    <a title="Scope Enumeration Reference"></a>
 
     <header class="header">
       <p class="header-col header-col--primary">
@@ -50,7 +50,7 @@
     <p class="breadcrumbs">
       <a class="breadcrumb" href="../../index.html">SecurePropertyStorage Reference</a>
       <img class="carat" src="../../img/carat.png" />
-      GCM Extension Reference
+      Scope Enumeration Reference
     </p>
 
     <div class="content-wrapper">
@@ -228,8 +228,15 @@
 
         <section class="section">
           <div class="section-content top-matter">
-            <h1>GCM</h1>
-            
+            <h1>Scope</h1>
+              <div class="declaration">
+                <div class="language">
+                  <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">enum</span> <span class="kt">Scope</span></code></pre>
+
+                </div>
+              </div>
+            <p>Injection scope.</p>
+
           </div>
         </section>
 
@@ -240,9 +247,9 @@
                 <li class="item">
                   <div>
                     <code>
-                    <a name="/s:9CryptoKit3AESO3GCMO5NonceV"></a>
-                    <a name="//apple_ref/swift/Extension/Nonce" class="dashAnchor"></a>
-                    <a class="token" href="#/s:9CryptoKit3AESO3GCMO5NonceV">Nonce</a>
+                    <a name="/s:6Inject0A15PropertyWrapperC5ScopeO9singletonyAEyxq__GAGmr0_lF"></a>
+                    <a name="//apple_ref/swift/Element/singleton" class="dashAnchor"></a>
+                    <a class="token" href="#/s:6Inject0A15PropertyWrapperC5ScopeO9singletonyAEyxq__GAGmr0_lF">singleton</a>
                     </code>
                   </div>
                   <div class="height-container">
@@ -250,16 +257,49 @@
                     <section class="section">
                       <div class="pointer"></div>
                       <div class="abstract">
-                        
-                        <a href="../../Extensions/AES/GCM/Nonce.html" class="slightly-smaller">See more</a>
+                        <p>Singleton injection scope.</p>
+
                       </div>
                       <div class="declaration">
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">extension</span> <span class="kt">AES</span><span class="o">.</span><span class="kt">GCM</span><span class="o">.</span><span class="kt">Nonce</span><span class="p">:</span> <span class="kt"><a href="../../Protocols/StorageData.html">StorageData</a></span></code></pre>
+                          <pre class="highlight swift"><code><span class="k">case</span> <span class="n">singleton</span></code></pre>
 
                         </div>
+                      </div>
+                      <div class="slightly-smaller">
+                        <a href="https://github.com/alexruperez/SecurePropertyStorage/blob/master/Sources/Inject/Inject.swift#L15">Show on GitHub</a>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:6Inject0A15PropertyWrapperC5ScopeO8instanceyAEyxq__GAGmr0_lF"></a>
+                    <a name="//apple_ref/swift/Element/instance" class="dashAnchor"></a>
+                    <a class="token" href="#/s:6Inject0A15PropertyWrapperC5ScopeO8instanceyAEyxq__GAGmr0_lF">instance</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Instance injection scope.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="k">case</span> <span class="n">instance</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div class="slightly-smaller">
+                        <a href="https://github.com/alexruperez/SecurePropertyStorage/blob/master/Sources/Inject/Inject.swift#L17">Show on GitHub</a>
                       </div>
                     </section>
                   </div>

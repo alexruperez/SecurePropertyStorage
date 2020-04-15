@@ -7,7 +7,13 @@ enum KeychainCodable: String, Codable {
     case test2
 }
 
-let keychainTagStorage: DelegatedStorage = KeychainStorage(authenticationTag: Data())
+let keychainTagStorage: KeychainStorage = {
+    let keychainStorage = KeychainStorage(authenticationTag: Data())
+    keychainStorage.accessGroup = ""
+    keychainStorage.synchronizable = true
+    keychainStorage.accessible = kSecAttrAccessibleAfterFirstUnlock
+    return keychainStorage
+}()
 
 final class KeychainTests: XCTestCase {
     @Store(keychainTagStorage, "keychainTagStore")
@@ -33,12 +39,25 @@ final class KeychainTests: XCTestCase {
     @UnwrappedCodableKeychain("unwrappedKeychainCodable")
     var unwrappedKeychainCodable = KeychainCodable.test
 
+    func testKeychainStorageAccessGroup() {
+        XCTAssertEqual(keychainTagStorage.accessGroup, "")
+    }
+
+    func testKeychainStorageSynchronizable() {
+        XCTAssertTrue(keychainTagStorage.synchronizable)
+    }
+
+    func testKeychainStorageAccessible() {
+        XCTAssertEqual(keychainTagStorage.accessible, kSecAttrAccessibleAfterFirstUnlock)
+    }
+
     func testKeychainTagStoreError() {
         let keychainTagStoreError = expectation(description: "keychainTagStoreError")
         keychainTagStorage.errorClosure = { error in
             if case let KeychainError.error(message) = error {
                 XCTAssertFalse(message.isEmpty)
                 keychainTagStoreError.fulfill()
+                keychainTagStorage.errorClosure = nil
             }
         }
         keychainTagStore = "testKeychainTagStore"
@@ -78,6 +97,7 @@ final class KeychainTests: XCTestCase {
             if case let KeychainError.error(message) = error {
                 XCTAssertFalse(message.isEmpty)
                 keychainTagStoreDefaultError.fulfill()
+                keychainTagStorage.errorClosure = nil
             }
         }
         keychainTagDefault = "testKeychainTagStore"
@@ -104,6 +124,7 @@ final class KeychainTests: XCTestCase {
             if case let KeychainError.error(message) = error {
                 XCTAssertFalse(message.isEmpty)
                 keychainTagStoreCodableError.fulfill()
+                keychainTagStorage.errorClosure = nil
             }
         }
         keychainTagCodable = .test
@@ -130,6 +151,7 @@ final class KeychainTests: XCTestCase {
             if case let KeychainError.error(message) = error {
                 XCTAssertFalse(message.isEmpty)
                 unwrappedKeychainTagStoreDefaultError.fulfill()
+                keychainTagStorage.errorClosure = nil
             }
         }
         unwrappedKeychainTagDefault = "tagDefault2"
@@ -156,6 +178,7 @@ final class KeychainTests: XCTestCase {
             if case let KeychainError.error(message) = error {
                 XCTAssertFalse(message.isEmpty)
                 unwrappedKeychainTagStoreCodableError.fulfill()
+                keychainTagStorage.errorClosure = nil
             }
         }
         unwrappedKeychainTagCodable = .test2
@@ -203,6 +226,9 @@ final class KeychainTests: XCTestCase {
     }
 
     static var allTests = [
+        ("testKeychainStorageAccessGroup", testKeychainStorageAccessGroup),
+        ("testKeychainStorageSynchronizable", testKeychainStorageSynchronizable),
+        ("testKeychainStorageAccessible", testKeychainStorageAccessible),
         ("testKeychainStoreError", testKeychainStoreError),
         ("testKeychainTagStoreError", testKeychainTagStoreError),
         ("testKeychainError", testKeychainError),

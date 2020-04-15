@@ -3,7 +3,7 @@ import Foundation
 
 /// Indicates that the conforming type is a contiguous collection of raw bytes
 /// whose underlying storage is directly accessible by withUnsafeBytes.
-public protocol StorageData: ContiguousBytes, CustomStringConvertible {
+public protocol StorageData: ContiguousBytes {
     /**
      Create a `StorageData`.
 
@@ -23,13 +23,6 @@ public extension ContiguousBytes {
                                                      kCFAllocatorNull)
             return ((cfdata as NSData?) as Data?) ?? Data()
         }
-    }
-}
-
-/// `StorageData` extension to conform `CustomStringConvertible`.
-public extension StorageData {
-    var description: String {
-        data.withUnsafeBytes { "Data representation contains \($0.count) bytes." }
     }
 }
 

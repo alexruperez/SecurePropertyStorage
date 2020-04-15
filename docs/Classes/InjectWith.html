@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    <title>KeychainStorage Class Reference</title>
+    <title>InjectWith Class Reference</title>
     <link rel="stylesheet" type="text/css" href="../css/jazzy.css" />
     <link rel="stylesheet" type="text/css" href="../css/highlight.css" />
     <meta charset="utf-8">
@@ -14,9 +14,9 @@
   </head>
   <body>
 
-    <a name="//apple_ref/swift/Class/KeychainStorage" class="dashAnchor"></a>
+    <a name="//apple_ref/swift/Class/InjectWith" class="dashAnchor"></a>
 
-    <a title="KeychainStorage Class Reference"></a>
+    <a title="InjectWith Class Reference"></a>
 
     <header class="header">
       <p class="header-col header-col--primary">
@@ -50,7 +50,7 @@
     <p class="breadcrumbs">
       <a class="breadcrumb" href="../index.html">SecurePropertyStorage Reference</a>
       <img class="carat" src="../img/carat.png" />
-      KeychainStorage Class Reference
+      InjectWith Class Reference
     </p>
 
     <div class="content-wrapper">
@@ -228,14 +228,15 @@
 
         <section class="section">
           <div class="section-content top-matter">
-            <h1>KeychainStorage</h1>
+            <h1>InjectWith</h1>
               <div class="declaration">
                 <div class="language">
-                  <pre class="highlight swift"><code><span class="kd">open</span> <span class="kd">class</span> <span class="kt">KeychainStorage</span> <span class="p">:</span> <span class="kt"><a href="../Classes/DelegatedStorage.html">DelegatedStorage</a></span></code></pre>
+                  <pre class="highlight swift"><code><span class="kd">@propertyWrapper</span>
+<span class="kd">public</span> <span class="kd">class</span> <span class="kt">InjectWith</span><span class="o">&lt;</span><span class="kt">Dependency</span><span class="p">,</span> <span class="kt">Parameters</span><span class="o">&gt;</span> <span class="p">:</span> <span class="kt"><a href="../Classes/InjectPropertyWrapper.html">InjectPropertyWrapper</a></span><span class="o">&lt;</span><span class="kt">Dependency</span><span class="p">,</span> <span class="kt">Parameters</span><span class="o">&gt;</span></code></pre>
 
                 </div>
               </div>
-            <p><code>KeychainStorage</code> subclass of <code><a href="../Classes/DelegatedStorage.html">DelegatedStorage</a></code> that uses a <code><a href="../Classes/KeychainStorageDelegate.html">KeychainStorageDelegate</a></code>.</p>
+            <p><code>@InjectWith</code> property wrapper.</p>
 
           </div>
         </section>
@@ -247,9 +248,9 @@
                 <li class="item">
                   <div>
                     <code>
-                    <a name="/s:8Keychain0A7StorageC8standardACvpZ"></a>
-                    <a name="//apple_ref/swift/Variable/standard" class="dashAnchor"></a>
-                    <a class="token" href="#/s:8Keychain0A7StorageC8standardACvpZ">standard</a>
+                    <a name="/s:6Inject0A4WithC10parametersq_Sgvp"></a>
+                    <a name="//apple_ref/swift/Property/parameters" class="dashAnchor"></a>
+                    <a class="token" href="#/s:6Inject0A4WithC10parametersq_Sgvp">parameters</a>
                     </code>
                   </div>
                   <div class="height-container">
@@ -257,19 +258,19 @@
                     <section class="section">
                       <div class="pointer"></div>
                       <div class="abstract">
-                        <p><code>KeychainStorage</code> shared instance.</p>
+                        <p>Parameters to inject in builder.</p>
 
                       </div>
                       <div class="declaration">
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">open</span> <span class="kd">class</span> <span class="k">var</span> <span class="nv">standard</span><span class="p">:</span> <span class="kt">KeychainStorage</span> <span class="p">{</span> <span class="k">get</span> <span class="p">}</span></code></pre>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">var</span> <span class="nv">parameters</span><span class="p">:</span> <span class="kt">Parameters</span><span class="p">?</span></code></pre>
 
                         </div>
                       </div>
                       <div class="slightly-smaller">
-                        <a href="https://github.com/alexruperez/SecurePropertyStorage/blob/master/Sources/Keychain/KeychainStorage.swift#L8">Show on GitHub</a>
+                        <a href="https://github.com/alexruperez/SecurePropertyStorage/blob/master/Sources/Inject/Inject.swift#L174">Show on GitHub</a>
                       </div>
                     </section>
                   </div>
@@ -277,9 +278,9 @@
                 <li class="item">
                   <div>
                     <code>
-                    <a name="/s:8Keychain0A7StorageC11accessGroupSSSgvp"></a>
-                    <a name="//apple_ref/swift/Property/accessGroup" class="dashAnchor"></a>
-                    <a class="token" href="#/s:8Keychain0A7StorageC11accessGroupSSSgvp">accessGroup</a>
+                    <a name="/s:6Inject0A4WithCyACyxq_Gq_cfc"></a>
+                    <a name="//apple_ref/swift/Method/init(_:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:6Inject0A4WithCyACyxq_Gq_cfc">init(_:<wbr>)</a>
                     </code>
                   </div>
                   <div class="height-container">
@@ -287,106 +288,14 @@
                     <section class="section">
                       <div class="pointer"></div>
                       <div class="abstract">
-                        <p>Access group where <code><a href="../Protocols/StorageData.html">StorageData</a></code> is in.</p>
+                        <p>Create a <code>InjectWith</code> property wrapper.</p>
 
                       </div>
                       <div class="declaration">
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">open</span> <span class="k">var</span> <span class="nv">accessGroup</span><span class="p">:</span> <span class="kt">String</span><span class="p">?</span> <span class="p">{</span> <span class="k">get</span> <span class="k">set</span> <span class="p">}</span></code></pre>
-
-                        </div>
-                      </div>
-                      <div class="slightly-smaller">
-                        <a href="https://github.com/alexruperez/SecurePropertyStorage/blob/master/Sources/Keychain/KeychainStorage.swift#L13-L16">Show on GitHub</a>
-                      </div>
-                    </section>
-                  </div>
-                </li>
-                <li class="item">
-                  <div>
-                    <code>
-                    <a name="/s:8Keychain0A7StorageC14synchronizableSbvp"></a>
-                    <a name="//apple_ref/swift/Property/synchronizable" class="dashAnchor"></a>
-                    <a class="token" href="#/s:8Keychain0A7StorageC14synchronizableSbvp">synchronizable</a>
-                    </code>
-                  </div>
-                  <div class="height-container">
-                    <div class="pointer-container"></div>
-                    <section class="section">
-                      <div class="pointer"></div>
-                      <div class="abstract">
-                        <p>Whether the <code><a href="../Protocols/StorageData.html">StorageData</a></code> can be synchronized.</p>
-
-                      </div>
-                      <div class="declaration">
-                        <h4>Declaration</h4>
-                        <div class="language">
-                          <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">open</span> <span class="k">var</span> <span class="nv">synchronizable</span><span class="p">:</span> <span class="kt">Bool</span> <span class="p">{</span> <span class="k">get</span> <span class="k">set</span> <span class="p">}</span></code></pre>
-
-                        </div>
-                      </div>
-                      <div class="slightly-smaller">
-                        <a href="https://github.com/alexruperez/SecurePropertyStorage/blob/master/Sources/Keychain/KeychainStorage.swift#L19-L22">Show on GitHub</a>
-                      </div>
-                    </section>
-                  </div>
-                </li>
-                <li class="item">
-                  <div>
-                    <code>
-                    <a name="/s:8Keychain0A7StorageC10accessibleSo11CFStringRefavp"></a>
-                    <a name="//apple_ref/swift/Property/accessible" class="dashAnchor"></a>
-                    <a class="token" href="#/s:8Keychain0A7StorageC10accessibleSo11CFStringRefavp">accessible</a>
-                    </code>
-                  </div>
-                  <div class="height-container">
-                    <div class="pointer-container"></div>
-                    <section class="section">
-                      <div class="pointer"></div>
-                      <div class="abstract">
-                        <p>When <code><a href="../Protocols/StorageData.html">StorageData</a></code> can be accessed in the keychain.</p>
-
-                      </div>
-                      <div class="declaration">
-                        <h4>Declaration</h4>
-                        <div class="language">
-                          <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">open</span> <span class="k">var</span> <span class="nv">accessible</span><span class="p">:</span> <span class="kt">CFString</span> <span class="p">{</span> <span class="k">get</span> <span class="k">set</span> <span class="p">}</span></code></pre>
-
-                        </div>
-                      </div>
-                      <div class="slightly-smaller">
-                        <a href="https://github.com/alexruperez/SecurePropertyStorage/blob/master/Sources/Keychain/KeychainStorage.swift#L25-L28">Show on GitHub</a>
-                      </div>
-                    </section>
-                  </div>
-                </li>
-                <li class="item">
-                  <div>
-                    <code>
-                    <a name="/s:8Keychain0A7StorageC_17authenticationTag12errorClosureAC0B00B8Delegate_p_10Foundation4DataVSgys5Error_pcSgtcfc"></a>
-                    <a name="//apple_ref/swift/Method/init(_:authenticationTag:errorClosure:)" class="dashAnchor"></a>
-                    <a class="token" href="#/s:8Keychain0A7StorageC_17authenticationTag12errorClosureAC0B00B8Delegate_p_10Foundation4DataVSgys5Error_pcSgtcfc">init(_:<wbr>authenticationTag:<wbr>errorClosure:<wbr>)</a>
-                    </code>
-                  </div>
-                  <div class="height-container">
-                    <div class="pointer-container"></div>
-                    <section class="section">
-                      <div class="pointer"></div>
-                      <div class="abstract">
-                        <p>Create a <code>KeychainStorage</code>.</p>
-
-                      </div>
-                      <div class="declaration">
-                        <h4>Declaration</h4>
-                        <div class="language">
-                          <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="n">convenience</span> <span class="nf">init</span><span class="p">(</span><span class="n">_</span> <span class="nv">delegate</span><span class="p">:</span> <span class="kt"><a href="../Protocols/StorageDelegate.html">StorageDelegate</a></span> <span class="o">=</span> <span class="kt"><a href="../Classes/KeychainStorageDelegate.html">KeychainStorageDelegate</a></span><span class="p">(),</span>
-                        <span class="nv">authenticationTag</span><span class="p">:</span> <span class="kt">Data</span><span class="p">?</span> <span class="o">=</span> <span class="kc">nil</span><span class="p">,</span>
-                        <span class="nv">errorClosure</span><span class="p">:</span> <span class="kt"><a href="../Typealiases.html#/s:7Storage0A12ErrorClosurea">StorageErrorClosure</a></span><span class="p">?</span> <span class="o">=</span> <span class="kc">nil</span><span class="p">)</span></code></pre>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="n">convenience</span> <span class="nf">init</span><span class="p">(</span><span class="n">_</span> <span class="nv">parameters</span><span class="p">:</span> <span class="kt">Parameters</span><span class="p">)</span></code></pre>
 
                         </div>
                       </div>
@@ -397,36 +306,12 @@
                             <tr>
                               <td>
                                 <code>
-                                <em>delegate</em>
+                                <em>parameters</em>
                                 </code>
                               </td>
                               <td>
                                 <div>
-                                  <p><code><a href="../Protocols/StorageDelegate.html">StorageDelegate</a></code>, defaults <code><a href="../Classes/KeychainStorageDelegate.html">KeychainStorageDelegate</a></code>.</p>
-                                </div>
-                              </td>
-                            </tr>
-                            <tr>
-                              <td>
-                                <code>
-                                <em>authenticationTag</em>
-                                </code>
-                              </td>
-                              <td>
-                                <div>
-                                  <p>Custom additional <code>Data</code> to be authenticated.</p>
-                                </div>
-                              </td>
-                            </tr>
-                            <tr>
-                              <td>
-                                <code>
-                                <em>errorClosure</em>
-                                </code>
-                              </td>
-                              <td>
-                                <div>
-                                  <p>Closure to handle <code><a href="../Classes/KeychainStorageDelegate.html">KeychainStorageDelegate</a></code> errors.</p>
+                                  <p>Parameters to inject in builder.</p>
                                 </div>
                               </td>
                             </tr>
@@ -434,7 +319,37 @@
                         </table>
                       </div>
                       <div class="slightly-smaller">
-                        <a href="https://github.com/alexruperez/SecurePropertyStorage/blob/master/Sources/Keychain/KeychainStorage.swift#L37-L45">Show on GitHub</a>
+                        <a href="https://github.com/alexruperez/SecurePropertyStorage/blob/master/Sources/Inject/Inject.swift#L181-L184">Show on GitHub</a>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:6Inject0A4WithC12wrappedValuexSgvp"></a>
+                    <a name="//apple_ref/swift/Property/wrappedValue" class="dashAnchor"></a>
+                    <a class="token" href="#/s:6Inject0A4WithC12wrappedValuexSgvp">wrappedValue</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>New dependency instance with parameters injected.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">var</span> <span class="nv">wrappedValue</span><span class="p">:</span> <span class="kt">Dependency</span><span class="p">?</span> <span class="p">{</span> <span class="k">get</span> <span class="p">}</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div class="slightly-smaller">
+                        <a href="https://github.com/alexruperez/SecurePropertyStorage/blob/master/Sources/Inject/Inject.swift#L187">Show on GitHub</a>
                       </div>
                     </section>
                   </div>
