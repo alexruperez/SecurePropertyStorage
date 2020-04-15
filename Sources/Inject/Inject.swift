@@ -103,30 +103,31 @@ open class InjectPropertyWrapper<Dependency, Parameters>: StorePropertyWrapper<I
     open func instance(_ dependencies: [Any],
                        _ scope: Scope,
                        _ parameters: Parameters?) -> Dependency? {
+        var dependency: Dependency?
         let instances: [Dependency] = map(dependencies)
         if scope == .singleton,
             instances.count == 1 {
-            return instances.first
+            dependency = instances.first
         }
         if let parameters = parameters {
             let builders: [(Parameters) -> Dependency] = map(dependencies)
             if builders.count == 1,
                 let builder = builders.first {
-                return builder(parameters)
+                dependency = builder(parameters)
             }
         }
         let builders: [() -> Dependency] = map(dependencies)
         if builders.count == 1,
             let builder = builders.first {
-            let dependency = builder()
-            if scope == .instance {
-                return dependency
+            let instance = builder()
+            if scope == .instance, dependency == nil {
+                dependency = instance
             } else if instances.isEmpty {
-                register(dependency)
-                return dependency
+                register(instance)
+                dependency = instance
             }
         }
-        return nil
+        return dependency
     }
 
     func map<Result>(_ dependencies: [Any]) -> [Result] {
