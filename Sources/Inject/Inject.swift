@@ -103,42 +103,34 @@ open class InjectPropertyWrapper<Dependency, Parameters>: StorePropertyWrapper<I
     open func instance(_ dependencies: [Any],
                        _ scope: Scope,
                        _ parameters: Parameters?) -> Dependency? {
-        typealias BuilderWithParameters = (Parameters) -> Dependency
-        typealias Builder = () -> Dependency
-        var builderWithParameters: BuilderWithParameters?
-        var builder: Builder?
-        var instances = [Dependency]()
-
-        for dependency in dependencies {
-            if let dependency = dependency as? Dependency,
-                scope == .singleton {
-                instances.append(dependency)
-            }
-            if parameters != nil,
-                let dependencyBuilder = dependency as? BuilderWithParameters {
-                builderWithParameters = dependencyBuilder
-            }
-            if let dependencyBuilder = dependency as? Builder {
-                builder = dependencyBuilder
-            }
-        }
-
-        if instances.count == 1 {
+        let instances: [Dependency] = map(dependencies)
+        if scope == .singleton,
+            instances.count == 1 {
             return instances.first
-        } else if instances.isEmpty {
-            if let parameters = parameters,
-                let builder = builderWithParameters {
+        }
+        if let parameters = parameters {
+            let builders: [(Parameters) -> Dependency] = map(dependencies)
+            if builders.count == 1,
+                let builder = builders.first {
                 return builder(parameters)
             }
-            if let builder = builder {
-                let dependency = builder()
-                if scope == .singleton {
-                    register(dependency)
-                }
+        }
+        let builders: [() -> Dependency] = map(dependencies)
+        if builders.count == 1,
+            let builder = builders.first {
+            let dependency = builder()
+            if scope == .instance {
+                return dependency
+            } else if instances.isEmpty {
+                register(dependency)
                 return dependency
             }
         }
         return nil
+    }
+
+    func map<Result>(_ dependencies: [Any]) -> [Result] {
+        dependencies.compactMap { $0 as? Result }
     }
 
     /**
