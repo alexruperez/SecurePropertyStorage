@@ -25,6 +25,7 @@ Package.resolved
 Carthage/Build/
 
 #Jazzy
+docs/
 build/
 
 #SwiftLint
