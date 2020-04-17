@@ -109,7 +109,7 @@ You can also combine previous cases in case you need it, unwrapped first please.
 <summary><b>@Register</b> (<i>click to expand</i>)</summary>
 
 This property wrapper will register the implementations of your dependencies.
-Register them wherever you want before inject it, but be sure to do it only once (except if you use [qualifiers](#qualifiers)), for example, in an `Injector` class.
+Register them wherever you want before inject it, but be sure to do it only once (except if you use qualifiers), for example, in an `Injector` class.
 You can register through a protocol or directly using your class implementation.
 
 ```swift
@@ -319,7 +319,7 @@ var yourDependency: YourProtocol = YourMock()
 .package(url: "https://github.com/alexruperez/SecurePropertyStorage", from: "0.3.0")
 ```
 
-By default, all property wrappers are installed, but if you want, you can choose only certain products:
+By default, all property wrappers are installed and you can `import` them, but if you want, you can install only some of them:
 
 - **UserDefault**: @*UserDefault property wrappers.
 - **Keychain**: @*Keychain property wrappers.
