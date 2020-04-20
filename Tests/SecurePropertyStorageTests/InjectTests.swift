@@ -150,7 +150,7 @@ final class InjectTests: XCTestCase {
             .contains("String"))
         XCTAssert(stringPropertyWrapper
             .description(CocoaError(.userCancelled))
-            .contains("cancelled"))
+            .contains("cancel"))
     }
 
     static var allTests = [
