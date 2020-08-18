@@ -504,7 +504,7 @@
 				OBJ_29 /* SecureUserDefaultsStorage.swift */,
 			);
 			name = UserDefault;
-			path = Sources/UserDefault;
+			path = Sources/SecureUserDefault;
 			sourceTree = SOURCE_ROOT;
 		};
 		OBJ_30 /* Tests */ = {
