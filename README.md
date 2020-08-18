@@ -19,17 +19,17 @@ Symmetric key and nonce, are stored in Keychain in a totally secure way.
 
 ## 🐒 Basic usage
 
-### @UserDefault
+### @SecureUserDefault
 
 This property wrapper will store your property in [UserDefaults](https://developer.apple.com/documentation/foundation/userdefaults) using `StoreKey` (any `String` but i recommend you a String typed enum).
 Optionally, you can assign a default value to the property that will be secure stored at initialization.
 
 ```swift
-@UserDefault(<#StoreKey#>)
+@SecureUserDefault(<#StoreKey#>)
 var yourProperty: YourType? = yourDefaultValueIfNeeded
 ```
 
-[`UserDefaultsStorage`](Sources/UserDefault/UserDefaultsStorage.swift) is also available, a subclass of [`UserDefaults`](https://developer.apple.com/documentation/foundation/userdefaults) with all the security provided by this library, where you can customize suite name.
+[`SecureUserDefaultsStorage`](Sources/SecureUserDefault/SecureUserDefaultsStorage.swift) is also available, a subclass of [`UserDefaults`](https://developer.apple.com/documentation/foundation/userdefaults) with all the security provided by this library, where you can customize suite name.
 
 ### @Keychain
 
@@ -40,7 +40,7 @@ This property wrapper will store your property in [Keychain](https://developer.a
 var yourProperty: YourType? = yourDefaultValueIfNeeded
 ```
 
-As `UserDefaultsStorage`, [`KeychainStorage`](Sources/Keychain/KeychainStorage.swift) is also available, where you can customize access, group and synchronize it with iCloud.
+As `SecureUserDefaultsStorage`, [`KeychainStorage`](Sources/Keychain/KeychainStorage.swift) is also available, where you can customize access, group and synchronize it with iCloud.
 
 ### @Singleton
 
@@ -79,7 +79,7 @@ As `InjectStorage`, [`DelegatedStorage`](Sources/Storage/DelegatedStorage.swift)
 
 If your property conforms [`Codable`](https://developer.apple.com/documentation/swift/codable) protocol, just add `Codable` keyword as prefix of your property wrapper.
 
-- **@CodableUserDefault**
+- **@CodableSecureUserDefault**
 - **@CodableKeychain**
 - **@CodableSingleton**
 - **@CodableStore**
@@ -88,7 +88,7 @@ If your property conforms [`Codable`](https://developer.apple.com/documentation/
 
 To avoid continually unwrapping your property, just add `Unwrapped` keyword as prefix of your property wrapper, assign a default value (mandatory except for `@UnwrappedInject`), and it will return stored value or default value, but your property will always be there for you.
 
-- **@UnwrappedUserDefault**
+- **@UnwrappedSecureUserDefault**
 - **@UnwrappedKeychain**
 - **@UnwrappedSingleton**
 - **@UnwrappedInject**
@@ -98,7 +98,7 @@ To avoid continually unwrapping your property, just add `Unwrapped` keyword as p
 
 You can also combine previous cases in case you need it, unwrapped first please.
 
-- **@UnwrappedCodableUserDefault**
+- **@UnwrappedCodableSecureUserDefault**
 - **@UnwrappedCodableKeychain**
 - **@UnwrappedCodableSingleton**
 - **@UnwrappedCodableStore**
@@ -276,7 +276,7 @@ var yourDependency: YourProtocol = YourMock()
 
 ```swift
     // Securely stored in UserDefaults.
-    @UserDefault("username")
+    @SecureUserDefault("username")
     var username: String?
 
     // Securely stored in Keychain.
@@ -299,7 +299,7 @@ var yourDependency: YourProtocol = YourMock()
     }
 
     // Codable model securely stored in UserDefaults.
-    @CodableUserDefault("user")
+    @CodableSecureUserDefault("user")
     var user: User?
 ```
 
@@ -321,7 +321,7 @@ var yourDependency: YourProtocol = YourMock()
 
 By default, all property wrappers are installed and you can `import` them, but if you want, you can install only some of them:
 
-- **UserDefault**: @*UserDefault property wrappers.
+- **SecureUserDefault**: @*SecureUserDefault property wrappers.
 - **Keychain**: @*Keychain property wrappers.
 - **Singleton**: @*Singleton property wrappers.
 - **Storage**: @*Store property wrappers.

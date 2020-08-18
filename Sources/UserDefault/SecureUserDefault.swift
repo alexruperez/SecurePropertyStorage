@@ -1,19 +1,19 @@
 import Storage
 
-/// `@UserDefault` property wrapper.
+/// `@SecureUserDefault` property wrapper.
 @propertyWrapper
-open class UserDefault<Value>: StorePropertyWrapper<UserDefaultsStorage> {
+open class SecureUserDefault<Value>: StorePropertyWrapper<SecureUserDefaultsStorage> {
     /**
-     Create a `UserDefault` property wrapper.
+     Create a `SecureUserDefault` property wrapper.
 
      - Parameter key: `StoreKey` to store the value.
      */
     public convenience init(_ key: StoreKey) {
-        self.init(UserDefaultsStorage.standard, key)
+        self.init(SecureUserDefaultsStorage.standard, key)
     }
 
     /**
-     Create a `UserDefault` property wrapper.
+     Create a `SecureUserDefault` property wrapper.
 
      - Parameter wrappedValue: Default value.
      - Parameter key: `StoreKey` to store the value.
@@ -30,24 +30,24 @@ open class UserDefault<Value>: StorePropertyWrapper<UserDefaultsStorage> {
     }
 }
 
-/// `@UnwrappedUserDefault` property wrapper.
+/// `@UnwrappedSecureUserDefault` property wrapper.
 @propertyWrapper
-open class UnwrappedUserDefault<Value>: StorePropertyWrapperProtocol {
+open class UnwrappedSecureUserDefault<Value>: StorePropertyWrapperProtocol {
     /// `Storage` used by property wrapper.
-    open var storage: UserDefaultsStorage
+    open var storage: SecureUserDefaultsStorage
     /// `StoreKey` to store the value.
     open var key: StoreKey
     /// Default value.
     open var defaultValue: Value
 
     /**
-     Create a `UnwrappedUserDefault` property wrapper.
+     Create a `UnwrappedSecureUserDefault` property wrapper.
 
      - Parameter wrappedValue: Default value.
      - Parameter key: `StoreKey` to store the value.
      */
     public required init(wrappedValue: Value, _ key: StoreKey) {
-        storage = UserDefaultsStorage.standard
+        storage = SecureUserDefaultsStorage.standard
         self.key = key
         defaultValue = wrappedValue
         self.wrappedValue = defaultValue
@@ -60,20 +60,20 @@ open class UnwrappedUserDefault<Value>: StorePropertyWrapperProtocol {
     }
 }
 
-/// `@CodableUserDefault` property wrapper.
+/// `@CodableSecureUserDefault` property wrapper.
 @propertyWrapper
-open class CodableUserDefault<Value: Codable>: StorePropertyWrapper<UserDefaultsStorage> {
+open class CodableSecureUserDefault<Value: Codable>: StorePropertyWrapper<SecureUserDefaultsStorage> {
     /**
-     Create a `CodableUserDefault` property wrapper.
+     Create a `CodableSecureUserDefault` property wrapper.
 
      - Parameter key: `StoreKey` to store the value.
      */
     public convenience init(_ key: StoreKey) {
-        self.init(UserDefaultsStorage.standard, key)
+        self.init(SecureUserDefaultsStorage.standard, key)
     }
 
     /**
-     Create a `CodableUserDefault` property wrapper.
+     Create a `CodableSecureUserDefault` property wrapper.
 
      - Parameter wrappedValue: Default value.
      - Parameter key: `StoreKey` to store the value.
@@ -90,24 +90,24 @@ open class CodableUserDefault<Value: Codable>: StorePropertyWrapper<UserDefaults
     }
 }
 
-/// `@UnwrappedCodableUserDefault` property wrapper.
+/// `@UnwrappedCodableSecureUserDefault` property wrapper.
 @propertyWrapper
-open class UnwrappedCodableUserDefault<Value: Codable>: StorePropertyWrapperProtocol {
+open class UnwrappedCodableSecureUserDefault<Value: Codable>: StorePropertyWrapperProtocol {
     /// `Storage` used by property wrapper.
-    open var storage: UserDefaultsStorage
+    open var storage: SecureUserDefaultsStorage
     /// `StoreKey` to store the value.
     open var key: StoreKey
     /// Default value.
     open var defaultValue: Value
 
     /**
-     Create a `UnwrappedCodableUserDefault` property wrapper.
+     Create a `UnwrappedCodableSecureUserDefault` property wrapper.
 
      - Parameter wrappedValue: Default value.
      - Parameter key: `StoreKey` to store the value.
      */
     public required init(wrappedValue: Value, _ key: StoreKey) {
-        storage = UserDefaultsStorage.standard
+        storage = SecureUserDefaultsStorage.standard
         self.key = key
         defaultValue = wrappedValue
         self.wrappedValue = defaultValue

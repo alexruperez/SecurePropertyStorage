@@ -13,15 +13,15 @@ let package = Package(
     products: [
         .library(
             name: "SecurePropertyStorage",
-            targets: ["Storage", "UserDefault", "Singleton", "Keychain", "Inject"]
+            targets: ["Storage", "SecureUserDefault", "Singleton", "Keychain", "Inject"]
         ),
         .library(
             name: "Storage",
             targets: ["Storage"]
         ),
         .library(
-            name: "UserDefault",
-            targets: ["Storage", "UserDefault"]
+            name: "SecureUserDefault",
+            targets: ["Storage", "SecureUserDefault"]
         ),
         .library(
             name: "Singleton",
@@ -38,7 +38,7 @@ let package = Package(
         .library(
             name: "SecurePropertyStorageDynamic",
             type: .dynamic,
-            targets: ["Storage", "UserDefault", "Singleton", "Keychain", "Inject"]
+            targets: ["Storage", "SecureUserDefault", "Singleton", "Keychain", "Inject"]
         ),
         .library(
             name: "StorageDynamic",
@@ -48,7 +48,7 @@ let package = Package(
         .library(
             name: "UserDefaultDynamic",
             type: .dynamic,
-            targets: ["Storage", "UserDefault"]
+            targets: ["Storage", "SecureUserDefault"]
         ),
         .library(
             name: "SingletonDynamic",
@@ -70,7 +70,7 @@ let package = Package(
         .target(
             name: "Storage"),
         .target(
-            name: "UserDefault",
+            name: "SecureUserDefault",
             dependencies: ["Storage", "Keychain"]
         ),
         .target(
@@ -87,7 +87,7 @@ let package = Package(
         ),
         .testTarget(
             name: "SecurePropertyStorageTests",
-            dependencies: ["Storage", "UserDefault", "Singleton", "Keychain", "Inject"]
+            dependencies: ["Storage", "SecureUserDefault", "Singleton", "Keychain", "Inject"]
         )
     ]
 )

@@ -2,7 +2,7 @@ import Storage
 import UserDefault
 import XCTest
 
-enum UserDefaultsCodable: String, Codable {
+enum SecureUserDefaultsCodable: String, Codable {
     case test
 }
 
@@ -20,17 +20,17 @@ final class SecureUserDefaultTests: XCTestCase {
     @SecureUserDefault("userDefaultsDefault")
     var userDefaultsDefault = "default"
     @CodableStore(userDefaultsTagStorage, "userDefaultsTagCodable")
-    var userDefaultsTagCodable = UserDefaultsCodable.test
-    @CodableUserDefault("userDefaultsCodable")
-    var userDefaultsCodable = UserDefaultsCodable.test
+    var userDefaultsTagCodable = SecureUserDefaultsCodable.test
+    @CodableSecureUserDefault("userDefaultsCodable")
+    var userDefaultsCodable = SecureUserDefaultsCodable.test
     @UnwrappedStore(userDefaultsTagStorage, "unwrappedUserDefaultsTagDefault")
     var unwrappedUserDefaultsTagDefault = "tagDefault"
-    @UnwrappedUserDefault("unwrappedUserDefaultsDefault")
+    @UnwrappedSecureUserDefault("unwrappedUserDefaultsDefault")
     var unwrappedUserDefaultsDefault = "default"
     @UnwrappedCodableStore(userDefaultsTagStorage, "unwrappedUserDefaultsTagCodable")
-    var unwrappedUserDefaultsTagCodable = UserDefaultsCodable.test
-    @UnwrappedCodableUserDefault("unwrappedUserDefaultsCodable")
-    var unwrappedUserDefaultsCodable = UserDefaultsCodable.test
+    var unwrappedUserDefaultsTagCodable = SecureUserDefaultsCodable.test
+    @UnwrappedCodableSecureUserDefault("unwrappedUserDefaultsCodable")
+    var unwrappedUserDefaultsCodable = SecureUserDefaultsCodable.test
 
     func testUserDefault() {
         userDefaultsStore = nil

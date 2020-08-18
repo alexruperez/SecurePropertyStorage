@@ -3,15 +3,15 @@ import Foundation
 import Keychain
 import Storage
 
-/// `UserDefaultsStorage` subclass of `UserDefaults` that uses a `DelegatedStorage`.
-open class UserDefaultsStorage: UserDefaults, Storage {
-    /// `UserDefaultsStorage` shared instance.
-    open override class var standard: UserDefaultsStorage { shared }
-    private static let shared = UserDefaultsStorage()
+/// `SecureUserDefaultsStorage` subclass of `UserDefaults` that uses a `DelegatedStorage`.
+open class SecureUserDefaultsStorage: UserDefaults, Storage {
+    /// `SecureUserDefaultsStorage` shared instance.
+    open override class var standard: SecureUserDefaultsStorage { shared }
+    private static let shared = SecureUserDefaultsStorage()
     private var storage: Storage!
 
     /**
-     Create a `UserDefaultsStorage`.
+     Create a `SecureUserDefaultsStorage`.
 
      - Parameter authenticationTag: Custom additional `Data` to be authenticated.
      */
@@ -23,7 +23,7 @@ open class UserDefaultsStorage: UserDefaults, Storage {
     }
 
     /**
-     Create a `UserDefaultsStorage`.
+     Create a `SecureUserDefaultsStorage`.
 
      - Parameter suiteName: The domain identifier of the search list.
      - Parameter symmetricKey: A cryptographic key used to seal the message.

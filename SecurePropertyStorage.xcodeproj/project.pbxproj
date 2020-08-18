@@ -114,7 +114,7 @@
 		OBJ_122 /* InjectTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_32 /* InjectTests.swift */; };
 		OBJ_123 /* KeychainTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_33 /* KeychainTests.swift */; };
 		OBJ_124 /* SingletonTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_34 /* SingletonTests.swift */; };
-		OBJ_125 /* UserDefaultTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_35 /* UserDefaultTests.swift */; };
+		OBJ_125 /* SecureUserDefaultTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_35 /* SecureUserDefaultTests.swift */; };
 		OBJ_126 /* XCTestManifests.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_36 /* XCTestManifests.swift */; };
 		OBJ_128 /* Inject.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = "SecurePropertyStorage::Inject::Product" /* Inject.framework */; };
 		OBJ_129 /* Singleton.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = "SecurePropertyStorage::Singleton::Product" /* Singleton.framework */; };
@@ -131,8 +131,8 @@
 		OBJ_162 /* StorageData.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_24 /* StorageData.swift */; };
 		OBJ_163 /* StorageDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_25 /* StorageDelegate.swift */; };
 		OBJ_164 /* Store.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_26 /* Store.swift */; };
-		OBJ_175 /* UserDefault.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_28 /* UserDefault.swift */; };
-		OBJ_176 /* UserDefaultsStorage.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_29 /* UserDefaultsStorage.swift */; };
+		OBJ_175 /* SecureUserDefault.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_28 /* SecureUserDefault.swift */; };
+		OBJ_176 /* SecureUserDefaultsStorage.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_29 /* SecureUserDefaultsStorage.swift */; };
 		OBJ_178 /* Keychain.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = "SecurePropertyStorage::Keychain::Product" /* Keychain.framework */; };
 		OBJ_179 /* Storage.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = "SecurePropertyStorage::Storage::Product" /* Storage.framework */; };
 		OBJ_55 /* Inject.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_9 /* Inject.swift */; };
@@ -381,12 +381,12 @@
 		OBJ_24 /* StorageData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StorageData.swift; sourceTree = "<group>"; };
 		OBJ_25 /* StorageDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StorageDelegate.swift; sourceTree = "<group>"; };
 		OBJ_26 /* Store.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Store.swift; sourceTree = "<group>"; };
-		OBJ_28 /* UserDefault.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserDefault.swift; sourceTree = "<group>"; };
-		OBJ_29 /* UserDefaultsStorage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserDefaultsStorage.swift; sourceTree = "<group>"; };
+		OBJ_28 /* SecureUserDefault.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SecureUserDefault.swift; sourceTree = "<group>"; };
+		OBJ_29 /* SecureUserDefaultsStorage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SecureUserDefaultsStorage.swift; sourceTree = "<group>"; };
 		OBJ_32 /* InjectTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InjectTests.swift; sourceTree = "<group>"; };
 		OBJ_33 /* KeychainTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KeychainTests.swift; sourceTree = "<group>"; };
 		OBJ_34 /* SingletonTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SingletonTests.swift; sourceTree = "<group>"; };
-		OBJ_35 /* UserDefaultTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserDefaultTests.swift; sourceTree = "<group>"; };
+		OBJ_35 /* SecureUserDefaultTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SecureUserDefaultTests.swift; sourceTree = "<group>"; };
 		OBJ_36 /* XCTestManifests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = XCTestManifests.swift; sourceTree = "<group>"; };
 		OBJ_44 /* docs */ = {isa = PBXFileReference; lastKnownFileType = folder; path = docs; sourceTree = SOURCE_ROOT; };
 		OBJ_45 /* build */ = {isa = PBXFileReference; lastKnownFileType = folder; path = build; sourceTree = SOURCE_ROOT; };
@@ -500,8 +500,8 @@
 		OBJ_27 /* UserDefault */ = {
 			isa = PBXGroup;
 			children = (
-				OBJ_28 /* UserDefault.swift */,
-				OBJ_29 /* UserDefaultsStorage.swift */,
+				OBJ_28 /* SecureUserDefault.swift */,
+				OBJ_29 /* SecureUserDefaultsStorage.swift */,
 			);
 			name = UserDefault;
 			path = Sources/UserDefault;
@@ -521,7 +521,7 @@
 				OBJ_32 /* InjectTests.swift */,
 				OBJ_33 /* KeychainTests.swift */,
 				OBJ_34 /* SingletonTests.swift */,
-				OBJ_35 /* UserDefaultTests.swift */,
+				OBJ_35 /* SecureUserDefaultTests.swift */,
 				OBJ_36 /* XCTestManifests.swift */,
 			);
 			name = SecurePropertyStorageTests;
@@ -782,7 +782,7 @@
 				OBJ_122 /* InjectTests.swift in Sources */,
 				OBJ_123 /* KeychainTests.swift in Sources */,
 				OBJ_124 /* SingletonTests.swift in Sources */,
-				OBJ_125 /* UserDefaultTests.swift in Sources */,
+				OBJ_125 /* SecureUserDefaultTests.swift in Sources */,
 				OBJ_126 /* XCTestManifests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -813,8 +813,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 0;
 			files = (
-				OBJ_175 /* UserDefault.swift in Sources */,
-				OBJ_176 /* UserDefaultsStorage.swift in Sources */,
+				OBJ_175 /* SecureUserDefault.swift in Sources */,
+				OBJ_176 /* SecureUserDefaultsStorage.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
