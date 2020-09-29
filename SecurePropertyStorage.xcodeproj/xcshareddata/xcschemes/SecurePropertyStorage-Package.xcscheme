@@ -14,20 +14,6 @@
             buildForAnalyzing = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "SecurePropertyStorage::Keychain"
-               BuildableName = "Keychain.framework"
-               BlueprintName = "Keychain"
-               ReferencedContainer = "container:SecurePropertyStorage.xcodeproj">
-            </BuildableReference>
-         </BuildActionEntry>
-         <BuildActionEntry
-            buildForTesting = "YES"
-            buildForRunning = "YES"
-            buildForProfiling = "YES"
-            buildForArchiving = "YES"
-            buildForAnalyzing = "YES">
-            <BuildableReference
-               BuildableIdentifier = "primary"
                BlueprintIdentifier = "SecurePropertyStorage::Storage"
                BuildableName = "Storage.framework"
                BlueprintName = "Storage"
@@ -56,9 +42,9 @@
             buildForAnalyzing = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "SecurePropertyStorage::Singleton"
-               BuildableName = "Singleton.framework"
-               BlueprintName = "Singleton"
+               BlueprintIdentifier = "SecurePropertyStorage::Keychain"
+               BuildableName = "Keychain.framework"
+               BlueprintName = "Keychain"
                ReferencedContainer = "container:SecurePropertyStorage.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
@@ -73,6 +59,20 @@
                BlueprintIdentifier = "SecurePropertyStorage::UserDefault"
                BuildableName = "UserDefault.framework"
                BlueprintName = "UserDefault"
+               ReferencedContainer = "container:SecurePropertyStorage.xcodeproj">
+            </BuildableReference>
+         </BuildActionEntry>
+         <BuildActionEntry
+            buildForTesting = "YES"
+            buildForRunning = "YES"
+            buildForProfiling = "YES"
+            buildForArchiving = "YES"
+            buildForAnalyzing = "YES">
+            <BuildableReference
+               BuildableIdentifier = "primary"
+               BlueprintIdentifier = "SecurePropertyStorage::Singleton"
+               BuildableName = "Singleton.framework"
+               BlueprintName = "Singleton"
                ReferencedContainer = "container:SecurePropertyStorage.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
