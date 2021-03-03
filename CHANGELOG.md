@@ -2,6 +2,11 @@
 
 ## Next Version
 
+## 0.3.2
+
+#### Fixed
+- Xcode 12.
+
 ## 0.3.1
 
 #### Added
