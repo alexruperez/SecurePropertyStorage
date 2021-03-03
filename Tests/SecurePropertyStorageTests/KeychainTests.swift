@@ -66,11 +66,14 @@ final class KeychainTests: XCTestCase {
     }
 
     func testKeychainStoreError() {
+        var errorClosureCalled = false
         let keychainStoreError = expectation(description: "keychainStoreError")
         KeychainStorage.standard.errorClosure = { error in
-            if case let KeychainError.error(message) = error {
+            if case let KeychainError.error(message) = error,
+               !errorClosureCalled {
                 XCTAssertFalse(message.isEmpty)
                 keychainStoreError.fulfill()
+                errorClosureCalled = true
             }
         }
         keychainStore = "testKeychainStore"
@@ -79,11 +82,14 @@ final class KeychainTests: XCTestCase {
     }
 
     func testKeychainError() {
+        var errorClosureCalled = false
         let keychainError = expectation(description: "keychainError")
         KeychainStorage.standard.errorClosure = { error in
-            if case let KeychainError.error(message) = error {
+            if case let KeychainError.error(message) = error,
+               !errorClosureCalled {
                 XCTAssertFalse(message.isEmpty)
                 keychainError.fulfill()
+                errorClosureCalled = true
             }
         }
         keychain = "testKeychain"
@@ -106,11 +112,14 @@ final class KeychainTests: XCTestCase {
     }
 
     func testKeychainDefaultError() {
+        var errorClosureCalled = false
         let keychainDefaultError = expectation(description: "keychainDefaultError")
         KeychainStorage.standard.errorClosure = { error in
-            if case let KeychainError.error(message) = error {
+            if case let KeychainError.error(message) = error,
+               !errorClosureCalled {
                 XCTAssertFalse(message.isEmpty)
                 keychainDefaultError.fulfill()
+                errorClosureCalled = true
             }
         }
         keychainDefault = "testKeychain"
@@ -133,11 +142,14 @@ final class KeychainTests: XCTestCase {
     }
 
     func testKeychainCodableError() {
+        var errorClosureCalled = false
         let keychainCodableError = expectation(description: "keychainCodableError")
         KeychainStorage.standard.errorClosure = { error in
-            if case let KeychainError.error(message) = error {
+            if case let KeychainError.error(message) = error,
+               !errorClosureCalled {
                 XCTAssertFalse(message.isEmpty)
                 keychainCodableError.fulfill()
+                errorClosureCalled = true
             }
         }
         keychainCodable = .test
@@ -160,11 +172,14 @@ final class KeychainTests: XCTestCase {
     }
 
     func testUnwrappedKeychainDefaultError() {
+        var errorClosureCalled = false
         let unwrappedKeychainDefaultError = expectation(description: "unwrappedKeychainDefaultError")
         KeychainStorage.standard.errorClosure = { error in
-            if case let KeychainError.error(message) = error {
+            if case let KeychainError.error(message) = error,
+               !errorClosureCalled {
                 XCTAssertFalse(message.isEmpty)
                 unwrappedKeychainDefaultError.fulfill()
+                errorClosureCalled = true
             }
         }
         unwrappedKeychainDefault = "default2"
@@ -187,11 +202,14 @@ final class KeychainTests: XCTestCase {
     }
 
     func testUnwrappedKeychainCodableError() {
+        var errorClosureCalled = false
         let unwrappedKeychainCodableError = expectation(description: "unwrappedKeychainCodableError")
         KeychainStorage.standard.errorClosure = { error in
-            if case let KeychainError.error(message) = error {
+            if case let KeychainError.error(message) = error,
+               !errorClosureCalled {
                 XCTAssertFalse(message.isEmpty)
                 unwrappedKeychainCodableError.fulfill()
+                errorClosureCalled = true
             }
         }
         unwrappedKeychainCodable = .test2
@@ -200,11 +218,14 @@ final class KeychainTests: XCTestCase {
     }
 
     func testKeychainDeleteError() {
+        var errorClosureCalled = false
         let keychainDeleteError = expectation(description: "keychainDeleteError")
         KeychainStorage.standard.errorClosure = { error in
-            if case let KeychainError.error(message) = error {
+            if case let KeychainError.error(message) = error,
+               !errorClosureCalled {
                 XCTAssertFalse(message.isEmpty)
                 keychainDeleteError.fulfill()
+                errorClosureCalled = true
             }
         }
         keychain = nil
@@ -213,11 +234,14 @@ final class KeychainTests: XCTestCase {
     }
 
     func testKeychainCodableDeleteError() {
+        var errorClosureCalled = false
         let keychainCodableDeleteError = expectation(description: "keychainCodableDeleteError")
         KeychainStorage.standard.errorClosure = { error in
-            if case let KeychainError.error(message) = error {
+            if case let KeychainError.error(message) = error,
+               !errorClosureCalled {
                 XCTAssertFalse(message.isEmpty)
                 keychainCodableDeleteError.fulfill()
+                errorClosureCalled = true
             }
         }
         keychainCodable = nil
