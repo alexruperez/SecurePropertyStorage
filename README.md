@@ -15,7 +15,7 @@
 ## 🌟 Features
 
 All keys are hashed using [SHA512](https://en.wikipedia.org/wiki/SHA-2) and all values are encrypted using [AES](https://en.wikipedia.org/wiki/Advanced_Encryption_Standard)-[GCM](https://en.wikipedia.org/wiki/Galois/Counter_Mode) to keep user information safe, auto*magic*ally.
-Symmetric key and nonce, are stored in Keychain in a totally secure way. 
+Symmetric key is stored in Keychain in a totally secure way.
 
 ## 🐒 Basic usage
 

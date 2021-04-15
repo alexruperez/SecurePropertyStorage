@@ -18,7 +18,6 @@ open class UserDefaultsStorage: UserDefaults, Storage {
     public convenience init(authenticationTag: Data? = nil) {
         self.init(suiteName: nil,
                   symmetricKey: SymmetricKey.generate(),
-                  nonce: AES.GCM.Nonce.generate(),
                   authenticationTag: authenticationTag)!
     }
 
@@ -27,17 +26,14 @@ open class UserDefaultsStorage: UserDefaults, Storage {
 
      - Parameter suiteName: The domain identifier of the search list.
      - Parameter symmetricKey: A cryptographic key used to seal the message.
-     - Parameter nonce: A nonce used during the sealing process.
      - Parameter authenticationTag: Custom additional `Data` to be authenticated.
      */
     public init?(suiteName suitename: String?,
                  symmetricKey: SymmetricKey,
-                 nonce: AES.GCM.Nonce? = nil,
                  authenticationTag: Data? = nil) {
         super.init(suiteName: suitename)
         storage = DelegatedStorage(self,
                                    symmetricKey: symmetricKey,
-                                   nonce: nonce,
                                    authenticationTag: authenticationTag)
     }
 

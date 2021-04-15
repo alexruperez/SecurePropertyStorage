@@ -2,10 +2,19 @@
 
 ## Next Version
 
+## 0.4.0 (**SECURITY UPDATE!**)
+
+#### Fixed
+- Nonce [shouldn't be reused](https://www.elttam.com/blog/key-recovery-attacks-on-gcm). [#13](https://github.com/alexruperez/SecurePropertyStorage/issues/13) Thanks [@shphilippe](https://github.com/shphilippe)!
+
+[Commits](https://github.com/alexruperez/SecurePropertyStorage/compare/0.3.2...0.4.0)
+
 ## 0.3.2
 
 #### Fixed
 - Xcode 12.
+
+[Commits](https://github.com/alexruperez/SecurePropertyStorage/compare/0.3.1...0.3.2)
 
 ## 0.3.1
 
