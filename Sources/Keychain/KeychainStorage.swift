@@ -39,7 +39,6 @@ open class KeychainStorage: DelegatedStorage {
                             errorClosure: StorageErrorClosure? = nil) {
         self.init(delegate,
                   symmetricKey: SymmetricKey.generate(),
-                  nonce: AES.GCM.Nonce.generate(),
                   authenticationTag: authenticationTag,
                   errorClosure: errorClosure)
     }

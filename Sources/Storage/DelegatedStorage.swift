@@ -9,7 +9,6 @@ open class DelegatedStorage: Storage {
     /// `StorageDelegate` that stores `StorageData`.
     public let delegate: StorageDelegate?
     private let symmetricKey: SymmetricKey?
-    private let nonce: AES.GCM.Nonce?
     private let authenticationTag: Data?
     /// Error closure to handle `StorageDelegate` errors.
     open var errorClosure: StorageErrorClosure?
@@ -19,18 +18,15 @@ open class DelegatedStorage: Storage {
 
      - Parameter delegate: `StorageDelegate` that stores `StorageData`.
      - Parameter symmetricKey: A cryptographic key used to seal the message.
-     - Parameter nonce: A nonce used during the sealing process.
      - Parameter authenticationTag: Custom additional `Data` to be authenticated.
      - Parameter errorClosure: Closure to handle `StorageDelegate` errors.
      */
     public init(_ delegate: StorageDelegate? = nil,
                 symmetricKey: SymmetricKey? = nil,
-                nonce: AES.GCM.Nonce? = nil,
                 authenticationTag: Data? = nil,
                 errorClosure: StorageErrorClosure? = nil) {
         self.delegate = delegate
         self.symmetricKey = symmetricKey
-        self.nonce = nonce
         self.authenticationTag = authenticationTag
         self.errorClosure = errorClosure
     }
@@ -231,13 +227,11 @@ open class DelegatedStorage: Storage {
         if let authenticationTag = authenticationTag {
             let sealedBox = try AES.GCM.seal(bytes.data,
                                              using: symmetricKey,
-                                             nonce: nonce,
                                              authenticating: authenticationTag)
             try delegate?.set(sealedBox.combined, forKey: hash(key))
         } else {
             let sealedBox = try AES.GCM.seal(bytes.data,
-                                             using: symmetricKey,
-                                             nonce: nonce)
+                                             using: symmetricKey)
             try delegate?.set(sealedBox.combined, forKey: hash(key))
         }
     }

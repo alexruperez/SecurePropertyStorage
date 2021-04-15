@@ -19,7 +19,6 @@ open class SingletonStorage: DelegatedStorage {
                             authenticationTag: Data? = nil) {
         self.init(delegate,
                   symmetricKey: SymmetricKey.generate(),
-                  nonce: AES.GCM.Nonce.generate(),
                   authenticationTag: authenticationTag)
     }
 }
