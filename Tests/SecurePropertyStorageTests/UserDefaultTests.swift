@@ -4,6 +4,7 @@ import XCTest
 
 enum UserDefaultsCodable: String, Codable {
     case test
+    case testAlternative
 }
 
 let userDefaultsTagStorage = UserDefaultsStorage(authenticationTag: Data())
@@ -64,6 +65,14 @@ final class UserDefaultTests: XCTestCase {
         XCTAssertEqual(unwrappedUserDefaultsDefault, "default")
         XCTAssertEqual(unwrappedUserDefaultsTagCodable, .test)
         XCTAssertEqual(unwrappedUserDefaultsCodable, .test)
+        unwrappedUserDefaultsTagDefault = "tagDefaultAlternative"
+        unwrappedUserDefaultsDefault = "defaultAlternative"
+        unwrappedUserDefaultsTagCodable = .testAlternative
+        unwrappedUserDefaultsCodable = .testAlternative
+        XCTAssertEqual(unwrappedUserDefaultsTagDefault, "tagDefaultAlternative")
+        XCTAssertEqual(unwrappedUserDefaultsDefault, "defaultAlternative")
+        XCTAssertEqual(unwrappedUserDefaultsTagCodable, .testAlternative)
+        XCTAssertEqual(unwrappedUserDefaultsCodable, .testAlternative)
     }
 
     func testUserDefaultArray() {
