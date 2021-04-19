@@ -2,6 +2,13 @@
 
 ## Next Version
 
+## 0.4.1
+
+#### Fixed
+- `Unwrapped` always return defaultValue after restart app. [#15](https://github.com/alexruperez/SecurePropertyStorage/issues/15) Thanks [@qchenqizhi](https://github.com/qchenqizhi)!
+
+[Commits](https://github.com/alexruperez/SecurePropertyStorage/compare/0.4.0...0.4.1)
+
 ## 0.4.0 (**SECURITY UPDATE!**)
 
 #### Fixed
