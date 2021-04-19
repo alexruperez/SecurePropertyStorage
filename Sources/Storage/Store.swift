@@ -70,7 +70,6 @@ open class UnwrappedStore<Value, StorageType: Storage>: StorePropertyWrapperProt
         self.storage = storage
         self.key = key
         defaultValue = wrappedValue
-        self.wrappedValue = defaultValue
     }
 
     /// Property wrapper stored value.
@@ -123,7 +122,6 @@ open class UnwrappedCodableStore<Value: Codable, StorageType: Storage>: StorePro
         self.storage = storage
         self.key = key
         defaultValue = wrappedValue
-        self.wrappedValue = defaultValue
     }
 
     /// Property wrapper stored value.

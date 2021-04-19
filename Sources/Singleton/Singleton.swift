@@ -50,7 +50,6 @@ open class UnwrappedSingleton<Value>: StorePropertyWrapperProtocol {
         storage = SingletonStorage.standard
         self.key = key
         defaultValue = wrappedValue
-        self.wrappedValue = defaultValue
     }
 
     /// Property wrapper stored value.
@@ -110,7 +109,6 @@ open class UnwrappedCodableSingleton<Value: Codable>: StorePropertyWrapperProtoc
         storage = SingletonStorage.standard
         self.key = key
         defaultValue = wrappedValue
-        self.wrappedValue = defaultValue
     }
 
     /// Property wrapper stored value.

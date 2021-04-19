@@ -50,7 +50,6 @@ open class UnwrappedUserDefault<Value>: StorePropertyWrapperProtocol {
         storage = UserDefaultsStorage.standard
         self.key = key
         defaultValue = wrappedValue
-        self.wrappedValue = defaultValue
     }
 
     /// Property wrapper stored value.
@@ -110,7 +109,6 @@ open class UnwrappedCodableUserDefault<Value: Codable>: StorePropertyWrapperProt
         storage = UserDefaultsStorage.standard
         self.key = key
         defaultValue = wrappedValue
-        self.wrappedValue = defaultValue
     }
 
     /// Property wrapper stored value.
