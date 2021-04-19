@@ -50,7 +50,6 @@ open class UnwrappedKeychain<Value>: StorePropertyWrapperProtocol {
         storage = KeychainStorage.standard
         self.key = key
         defaultValue = wrappedValue
-        self.wrappedValue = defaultValue
     }
 
     /// Property wrapper stored value.
@@ -110,7 +109,6 @@ open class UnwrappedCodableKeychain<Value: Codable>: StorePropertyWrapperProtoco
         storage = KeychainStorage.standard
         self.key = key
         defaultValue = wrappedValue
-        self.wrappedValue = defaultValue
     }
 
     /// Property wrapper stored value.
