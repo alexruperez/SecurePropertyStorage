@@ -338,7 +338,7 @@ github "alexruperez/SecurePropertyStorage"
 ## 🍻 Etc.
 
 - Featured in [Dave Verwer](https://twitter.com/daveverwer)'s iOS Dev Weekly - [Issue 450](https://iosdevweekly.com/issues/450?#ll98q5s), thanks Dave!
-- Contributions are very welcome.
+- Contributions are very welcome. Thanks [Alberto Garcia](https://github.com/AlbGarciam) and [Chen](https://github.com/qchenqizhi)!
 - Attribution is appreciated (let's spread the word!), but not mandatory.
 
 ## 👨‍💻 Author
