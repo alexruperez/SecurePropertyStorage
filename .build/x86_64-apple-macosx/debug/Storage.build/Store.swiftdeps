@@ -1,0 +1,146 @@
+### Swift dependencies file v0 ###
+provides-top-level:
+- "StorePropertyWrapperProtocol"
+- "StorePropertyWrapper"
+- "Store"
+- "UnwrappedStore"
+- "CodableStore"
+- "UnwrappedCodableStore"
+provides-nominal:
+- "7Storage28StorePropertyWrapperProtocolP"
+- "7Storage20StorePropertyWrapperC"
+- "7Storage5StoreC"
+- "7Storage14UnwrappedStoreC"
+- "7Storage12CodableStoreC"
+- "7Storage21UnwrappedCodableStoreC"
+provides-member:
+- ["7Storage28StorePropertyWrapperProtocolP", ""]
+- ["7Storage20StorePropertyWrapperC", ""]
+- ["7Storage5StoreC", ""]
+- ["7Storage14UnwrappedStoreC", ""]
+- ["7Storage12CodableStoreC", ""]
+- ["7Storage21UnwrappedCodableStoreC", ""]
+provides-dynamic-lookup:
+depends-top-level:
+- !private "??"
+- "AssignmentPrecedence"
+- "Codable"
+- "CodableStore"
+- "Storage"
+- "StorageType"
+- "Store"
+- "StoreKey"
+- "StorePropertyWrapper"
+- "StorePropertyWrapperProtocol"
+- "UnwrappedCodableStore"
+- "UnwrappedStore"
+- "Value"
+- !private "defaultValue"
+- !private "key"
+- !private "storage"
+depends-member:
+- ["7Storage12CodableStoreC", "StoreKey"]
+- !private ["7Storage12CodableStoreC", ""]
+- ["7Storage12CodableStoreC", "deinit"]
+- ["7Storage12CodableStoreC", "init"]
+- !private ["7Storage12CodableStoreC", "key"]
+- ["7Storage12CodableStoreC", "projectedValue"]
+- !private ["7Storage12CodableStoreC", "storage"]
+- ["7Storage12CodableStoreC", "subscript"]
+- ["7Storage12CodableStoreC", "wrappedValue"]
+- ["7Storage12CodableStoreC", "wrapperValue"]
+- !private ["7StorageAAP", "decodable"]
+- !private ["7StorageAAP", "set"]
+- !private ["7StorageAAP", "value"]
+- ["7Storage0A8DelegateP", ""]
+- !private ["7Storage0A8DelegateP", "decodable"]
+- !private ["7Storage0A8DelegateP", "set"]
+- !private ["7Storage0A8DelegateP", "value"]
+- ["7Storage5StoreC", "StoreKey"]
+- !private ["7Storage5StoreC", ""]
+- ["7Storage5StoreC", "deinit"]
+- ["7Storage5StoreC", "init"]
+- !private ["7Storage5StoreC", "key"]
+- ["7Storage5StoreC", "projectedValue"]
+- !private ["7Storage5StoreC", "storage"]
+- ["7Storage5StoreC", "subscript"]
+- ["7Storage5StoreC", "wrappedValue"]
+- ["7Storage5StoreC", "wrapperValue"]
+- ["7Storage20StorePropertyWrapperC", "Default_StorageType"]
+- ["7Storage20StorePropertyWrapperC", "StorageType"]
+- ["7Storage20StorePropertyWrapperC", "StoreKey"]
+- ["7Storage20StorePropertyWrapperC", ""]
+- ["7Storage20StorePropertyWrapperC", "_Default_StorageType"]
+- ["7Storage20StorePropertyWrapperC", "deinit"]
+- ["7Storage20StorePropertyWrapperC", "init"]
+- ["7Storage20StorePropertyWrapperC", "key"]
+- ["7Storage20StorePropertyWrapperC", "projectedValue"]
+- ["7Storage20StorePropertyWrapperC", "storage"]
+- ["7Storage20StorePropertyWrapperC", "wrappedValue"]
+- ["7Storage20StorePropertyWrapperC", "wrapperValue"]
+- ["7Storage28StorePropertyWrapperProtocolP", "Default_StorageType"]
+- ["7Storage28StorePropertyWrapperProtocolP", "Storage"]
+- ["7Storage28StorePropertyWrapperProtocolP", "StorageType"]
+- ["7Storage28StorePropertyWrapperProtocolP", "StoreKey"]
+- ["7Storage28StorePropertyWrapperProtocolP", ""]
+- ["7Storage28StorePropertyWrapperProtocolP", "_Default_StorageType"]
+- !private ["7Storage28StorePropertyWrapperProtocolP", "defaultValue"]
+- !private ["7Storage28StorePropertyWrapperProtocolP", "init"]
+- ["7Storage28StorePropertyWrapperProtocolP", "key"]
+- ["7Storage28StorePropertyWrapperProtocolP", "storage"]
+- !private ["7Storage28StorePropertyWrapperProtocolP", "wrappedValue"]
+- ["7Storage21UnwrappedCodableStoreC", "Default_StorageType"]
+- ["7Storage21UnwrappedCodableStoreC", "StorageType"]
+- ["7Storage21UnwrappedCodableStoreC", "StoreKey"]
+- ["7Storage21UnwrappedCodableStoreC", ""]
+- ["7Storage21UnwrappedCodableStoreC", "_Default_StorageType"]
+- ["7Storage21UnwrappedCodableStoreC", "defaultValue"]
+- ["7Storage21UnwrappedCodableStoreC", "deinit"]
+- ["7Storage21UnwrappedCodableStoreC", "init"]
+- ["7Storage21UnwrappedCodableStoreC", "key"]
+- ["7Storage21UnwrappedCodableStoreC", "projectedValue"]
+- ["7Storage21UnwrappedCodableStoreC", "storage"]
+- ["7Storage21UnwrappedCodableStoreC", "subscript"]
+- ["7Storage21UnwrappedCodableStoreC", "wrappedValue"]
+- ["7Storage21UnwrappedCodableStoreC", "wrapperValue"]
+- ["7Storage14UnwrappedStoreC", "Default_StorageType"]
+- ["7Storage14UnwrappedStoreC", "StorageType"]
+- ["7Storage14UnwrappedStoreC", "StoreKey"]
+- ["7Storage14UnwrappedStoreC", ""]
+- ["7Storage14UnwrappedStoreC", "_Default_StorageType"]
+- ["7Storage14UnwrappedStoreC", "defaultValue"]
+- ["7Storage14UnwrappedStoreC", "deinit"]
+- ["7Storage14UnwrappedStoreC", "init"]
+- ["7Storage14UnwrappedStoreC", "key"]
+- ["7Storage14UnwrappedStoreC", "projectedValue"]
+- ["7Storage14UnwrappedStoreC", "storage"]
+- ["7Storage14UnwrappedStoreC", "subscript"]
+- ["7Storage14UnwrappedStoreC", "wrappedValue"]
+- ["7Storage14UnwrappedStoreC", "wrapperValue"]
+depends-nominal:
+- "7Storage12CodableStoreC"
+- !private "7StorageAAP"
+- "7Storage0A8DelegateP"
+- "7Storage5StoreC"
+- "7Storage20StorePropertyWrapperC"
+- "7Storage28StorePropertyWrapperProtocolP"
+- "7Storage21UnwrappedCodableStoreC"
+- "7Storage14UnwrappedStoreC"
+depends-dynamic-lookup:
+depends-external:
+- "/Users/vagrant/git/.build/x86_64-apple-macosx/debug/Storage.build/module.modulemap"
+- "/Users/vagrant/git/.build/x86_64-apple-macosx/debug/Keychain.build/module.modulemap"
+- "/Users/vagrant/git/.build/x86_64-apple-macosx/debug/Singleton.build/module.modulemap"
+- "/Users/vagrant/git/.build/x86_64-apple-macosx/debug/Inject.build/module.modulemap"
+- "/Users/vagrant/git/.build/x86_64-apple-macosx/debug/UserDefault.build/module.modulemap"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.15.sdk/usr/include/xpc/XPC.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.15.sdk/usr/include/objc/ObjectiveC.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/apinotes/Dispatch.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.15.sdk/usr/include/Darwin.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.15.sdk/System/Library/Frameworks/LocalAuthentication.framework/Headers/LocalAuthentication.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.15.sdk/System/Library/Frameworks/Foundation.framework/Headers/Foundation.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.15.sdk/System/Library/Frameworks/CoreGraphics.framework/Headers/CoreGraphics.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.15.sdk/System/Library/Frameworks/ApplicationServices.framework/Headers/ApplicationServices.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.15.sdk/System/Library/Frameworks/CoreText.framework/Headers/CoreText.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.15.sdk/System/Library/Frameworks/Security.framework/Headers/Security.apinotes"
+interface-hash: "7333b38658fd959c4b2e6b97d0492231"

@@ -1,0 +1,543 @@
+### Swift dependencies file v0 ###
+provides-top-level:
+- "StorageErrorClosure"
+- "DelegatedStorage"
+provides-nominal:
+- "7Storage09DelegatedA0C"
+provides-member:
+- ["7Storage09DelegatedA0C", ""]
+provides-dynamic-lookup:
+- "array"
+- "authenticationTag"
+- "bool"
+- "data"
+- "decodable"
+- "delegate"
+- "dictionary"
+- "double"
+- "errorClosure"
+- "float"
+- "hash"
+- "integer"
+- "object"
+- "register"
+- "remove"
+- "set"
+- "string"
+- "stringArray"
+- "symmetricKey"
+- "url"
+- "value"
+depends-top-level:
+- !private "AES"
+- "AssignmentPrecedence"
+- "Bool"
+- !private "BooleanLiteralType"
+- "CastingPrecedence"
+- "Data"
+- "Decodable"
+- "DelegatedStorage"
+- "Double"
+- "Encodable"
+- "Error"
+- "Float"
+- !private "FloatLiteralType"
+- "Int"
+- !private "IntegerLiteralType"
+- !private "NSKeyedArchiver"
+- !private "NSKeyedUnarchiver"
+- "NSSecureCoding"
+- !private "SHA512"
+- "Storage"
+- "StorageData"
+- "StorageDelegate"
+- "StorageErrorClosure"
+- "StoreKey"
+- "String"
+- "SymmetricKey"
+- "URL"
+- "Void"
+- !private "authenticationTag"
+- "data"
+- !private "delegate"
+- !private "errorClosure"
+- !private "hash"
+- !private "object"
+- !private "remove"
+- "set"
+- !private "symmetricKey"
+- !private "value"
+depends-member:
+- !private ["9CryptoKit3AESO", "GCM"]
+- !private ["s18AdditiveArithmeticP", ""]
+- !private ["s18AdditiveArithmeticP", "data"]
+- !private ["s18AdditiveArithmeticP", "init"]
+- !private ["SK", ""]
+- !private ["SK", "data"]
+- !private ["SK", "decode"]
+- !private ["SK", "init"]
+- !private ["SB", "data"]
+- !private ["SB", "init"]
+- !private ["Sz", ""]
+- !private ["Sz", "data"]
+- !private ["Sz", "init"]
+- !private ["Sb", ""]
+- !private ["Sb", "data"]
+- !private ["Sb", "init"]
+- !private ["s7CVarArgP", ""]
+- !private ["s7CVarArgP", "archivedData"]
+- !private ["s7CVarArgP", "data"]
+- !private ["s7CVarArgP", "forEach"]
+- !private ["s7CVarArgP", "init"]
+- !private ["s7CVarArgP", "unarchiveTopLevelObjectWithData"]
+- !private ["Sl", ""]
+- !private ["Sl", "data"]
+- !private ["Sl", "decode"]
+- !private ["Sl", "forEach"]
+- !private ["Sl", "init"]
+- !private ["SL", ""]
+- !private ["SL", "data"]
+- !private ["SL", "init"]
+- ["10Foundation15ContiguousBytesP", ""]
+- !private ["10Foundation15ContiguousBytesP", "data"]
+- !private ["10Foundation15ContiguousBytesP", "decode"]
+- !private ["s28CustomDebugStringConvertibleP", ""]
+- !private ["s28CustomDebugStringConvertibleP", "archivedData"]
+- !private ["s28CustomDebugStringConvertibleP", "data"]
+- !private ["s28CustomDebugStringConvertibleP", "dataRepresentation"]
+- !private ["s28CustomDebugStringConvertibleP", "decode"]
+- !private ["s28CustomDebugStringConvertibleP", "forEach"]
+- !private ["s28CustomDebugStringConvertibleP", "init"]
+- !private ["s28CustomDebugStringConvertibleP", "unarchiveTopLevelObjectWithData"]
+- !private ["s17CustomReflectableP", "data"]
+- !private ["s17CustomReflectableP", "decode"]
+- !private ["s17CustomReflectableP", "forEach"]
+- !private ["s17CustomReflectableP", "init"]
+- !private ["s23CustomStringConvertibleP", ""]
+- !private ["s23CustomStringConvertibleP", "archivedData"]
+- !private ["s23CustomStringConvertibleP", "data"]
+- !private ["s23CustomStringConvertibleP", "dataRepresentation"]
+- !private ["s23CustomStringConvertibleP", "decode"]
+- !private ["s23CustomStringConvertibleP", "forEach"]
+- !private ["s23CustomStringConvertibleP", "init"]
+- !private ["s23CustomStringConvertibleP", "unarchiveTopLevelObjectWithData"]
+- !private ["10Foundation4DataV", ""]
+- !private ["10Foundation4DataV", "decode"]
+- !private ["7Storage15DataConvertibleP", "data"]
+- !private ["7Storage15DataConvertibleP", "init"]
+- !private ["10Foundation12DataProtocolP", ""]
+- !private ["10Foundation12DataProtocolP", "decode"]
+- !private ["Se", "data"]
+- !private ["Se", "dataRepresentation"]
+- !private ["Se", "decode"]
+- !private ["Se", "forEach"]
+- !private ["Se", "init"]
+- !private ["7Storage09DelegatedA0C", "AES"]
+- ["7Storage09DelegatedA0C", "Bool"]
+- ["7Storage09DelegatedA0C", "Data"]
+- ["7Storage09DelegatedA0C", "Decodable"]
+- ["7Storage09DelegatedA0C", "Double"]
+- ["7Storage09DelegatedA0C", "Encodable"]
+- ["7Storage09DelegatedA0C", "Float"]
+- ["7Storage09DelegatedA0C", "Int"]
+- !private ["7Storage09DelegatedA0C", "NSKeyedArchiver"]
+- !private ["7Storage09DelegatedA0C", "NSKeyedUnarchiver"]
+- !private ["7Storage09DelegatedA0C", "NSSecureCoding"]
+- !private ["7Storage09DelegatedA0C", "SHA512"]
+- ["7Storage09DelegatedA0C", "StorageData"]
+- ["7Storage09DelegatedA0C", "StorageDelegate"]
+- ["7Storage09DelegatedA0C", "StorageErrorClosure"]
+- ["7Storage09DelegatedA0C", "StoreKey"]
+- ["7Storage09DelegatedA0C", "String"]
+- ["7Storage09DelegatedA0C", "SymmetricKey"]
+- ["7Storage09DelegatedA0C", "URL"]
+- ["7Storage09DelegatedA0C", ""]
+- ["7Storage09DelegatedA0C", "array"]
+- !private ["7Storage09DelegatedA0C", "authenticationTag"]
+- ["7Storage09DelegatedA0C", "bool"]
+- ["7Storage09DelegatedA0C", "data"]
+- ["7Storage09DelegatedA0C", "decodable"]
+- ["7Storage09DelegatedA0C", "deinit"]
+- ["7Storage09DelegatedA0C", "delegate"]
+- ["7Storage09DelegatedA0C", "dictionary"]
+- ["7Storage09DelegatedA0C", "double"]
+- ["7Storage09DelegatedA0C", "errorClosure"]
+- ["7Storage09DelegatedA0C", "float"]
+- ["7Storage09DelegatedA0C", "hash"]
+- ["7Storage09DelegatedA0C", "init"]
+- ["7Storage09DelegatedA0C", "integer"]
+- ["7Storage09DelegatedA0C", "object"]
+- ["7Storage09DelegatedA0C", "register"]
+- ["7Storage09DelegatedA0C", "remove"]
+- ["7Storage09DelegatedA0C", "set"]
+- ["7Storage09DelegatedA0C", "string"]
+- ["7Storage09DelegatedA0C", "stringArray"]
+- !private ["7Storage09DelegatedA0C", "symmetricKey"]
+- ["7Storage09DelegatedA0C", "url"]
+- ["7Storage09DelegatedA0C", "value"]
+- !private ["SD", "forEach"]
+- !private ["Sd", ""]
+- !private ["Sd", "data"]
+- !private ["Sd", "init"]
+- !private ["SE", "data"]
+- !private ["SE", "dataRepresentation"]
+- !private ["SE", "decode"]
+- !private ["SE", "encode"]
+- !private ["SE", "forEach"]
+- !private ["SE", "init"]
+- !private ["SQ", ""]
+- !private ["SQ", "archivedData"]
+- !private ["SQ", "data"]
+- !private ["SQ", "dataRepresentation"]
+- !private ["SQ", "decode"]
+- !private ["SQ", "forEach"]
+- !private ["SQ", "init"]
+- !private ["SQ", "unarchiveTopLevelObjectWithData"]
+- !private ["s27ExpressibleByBooleanLiteralP", "data"]
+- !private ["s27ExpressibleByBooleanLiteralP", "init"]
+- !private ["s30ExpressibleByDictionaryLiteralP", "forEach"]
+- !private ["s43ExpressibleByExtendedGraphemeClusterLiteralP", ""]
+- !private ["s43ExpressibleByExtendedGraphemeClusterLiteralP", "data"]
+- !private ["s43ExpressibleByExtendedGraphemeClusterLiteralP", "init"]
+- !private ["s25ExpressibleByFloatLiteralP", ""]
+- !private ["s25ExpressibleByFloatLiteralP", "data"]
+- !private ["s25ExpressibleByFloatLiteralP", "init"]
+- !private ["s27ExpressibleByIntegerLiteralP", ""]
+- !private ["s27ExpressibleByIntegerLiteralP", "data"]
+- !private ["s27ExpressibleByIntegerLiteralP", "init"]
+- !private ["s32ExpressibleByStringInterpolationP", ""]
+- !private ["s32ExpressibleByStringInterpolationP", "data"]
+- !private ["s32ExpressibleByStringInterpolationP", "init"]
+- !private ["s26ExpressibleByStringLiteralP", ""]
+- !private ["s26ExpressibleByStringLiteralP", "data"]
+- !private ["s26ExpressibleByStringLiteralP", "init"]
+- !private ["s33ExpressibleByUnicodeScalarLiteralP", ""]
+- !private ["s33ExpressibleByUnicodeScalarLiteralP", "data"]
+- !private ["s33ExpressibleByUnicodeScalarLiteralP", "init"]
+- !private ["s17FixedWidthIntegerP", "data"]
+- !private ["s17FixedWidthIntegerP", "init"]
+- !private ["Sf", ""]
+- !private ["Sf", "data"]
+- !private ["Sf", "init"]
+- !private ["SF", ""]
+- !private ["SF", "data"]
+- !private ["SF", "init"]
+- !private ["9CryptoKit3AESO3GCMO", "SealedBox"]
+- !private ["9CryptoKit3AESO3GCMO", "open"]
+- !private ["9CryptoKit3AESO3GCMO", "seal"]
+- !private ["9CryptoKit12HashFunctionP", "hash"]
+- !private ["SH", ""]
+- !private ["SH", "archivedData"]
+- !private ["SH", "data"]
+- !private ["SH", "dataRepresentation"]
+- !private ["SH", "decode"]
+- !private ["SH", "forEach"]
+- !private ["SH", "init"]
+- !private ["SH", "unarchiveTopLevelObjectWithData"]
+- !private ["Si", ""]
+- !private ["Si", "data"]
+- !private ["Si", "init"]
+- !private ["s25LosslessStringConvertibleP", ""]
+- !private ["s25LosslessStringConvertibleP", "data"]
+- !private ["s25LosslessStringConvertibleP", "init"]
+- !private ["s10MirrorPathP", "data"]
+- !private ["s10MirrorPathP", "init"]
+- !private ["SM", ""]
+- !private ["SM", "decode"]
+- !private ["10Foundation19MutableDataProtocolP", "decode"]
+- ["So7NSCoderC", ""]
+- !private ["So7NSCoderC", "archivedData"]
+- !private ["So7NSCoderC", "archivedDataWithRootObject"]
+- !private ["So7NSCoderC", "unarchiveTopLevelObject"]
+- !private ["So7NSCoderC", "unarchiveTopLevelObjectWithData"]
+- !private ["So8NSCodingP", ""]
+- !private ["So8NSCodingP", "data"]
+- !private ["So9NSCopyingP", "data"]
+- !private ["So21NSItemProviderReadingP", "data"]
+- !private ["So21NSItemProviderWritingP", "data"]
+- !private ["So15NSKeyedArchiverC", "archivedData"]
+- !private ["So17NSKeyedUnarchiverC", "unarchiveTopLevelObjectWithData"]
+- !private ["So16NSMutableCopyingP", "data"]
+- ["So8NSObjectC", ""]
+- !private ["So8NSObjectC", "archivedData"]
+- !private ["So8NSObjectC", "archivedDataWithRootObject"]
+- !private ["So8NSObjectC", "data"]
+- !private ["So8NSObjectC", "dataUsingEncoding"]
+- !private ["So8NSObjectC", "unarchiveTopLevelObject"]
+- !private ["So8NSObjectC", "unarchiveTopLevelObjectWithData"]
+- !private ["So8NSObjectP", ""]
+- !private ["So8NSObjectP", "archivedData"]
+- !private ["So8NSObjectP", "archivedDataWithRootObject"]
+- !private ["So8NSObjectP", "data"]
+- !private ["So8NSObjectP", "dataUsingEncoding"]
+- !private ["So8NSObjectP", "unarchiveTopLevelObject"]
+- !private ["So8NSObjectP", "unarchiveTopLevelObjectWithData"]
+- !private ["So14NSSecureCodingP", "data"]
+- !private ["So8NSStringC", "data"]
+- !private ["Sj", ""]
+- !private ["Sj", "data"]
+- !private ["Sj", "init"]
+- !private ["Sk", ""]
+- !private ["Sk", "decode"]
+- !private ["Sm", ""]
+- !private ["Sm", "data"]
+- !private ["Sm", "decode"]
+- !private ["Sm", "init"]
+- !private ["10Foundation20ReferenceConvertibleP", "dataRepresentation"]
+- !private ["10Foundation20ReferenceConvertibleP", "decode"]
+- !private ["10Foundation20ReferenceConvertibleP", "init"]
+- !private ["9CryptoKit6SHA512V", "hash"]
+- !private ["s10SIMDScalarP", "data"]
+- !private ["s10SIMDScalarP", "init"]
+- !private ["9CryptoKit3AESO3GCMO9SealedBoxV", "combined"]
+- !private ["9CryptoKit3AESO3GCMO9SealedBoxV", "init"]
+- !private ["ST", ""]
+- !private ["ST", "data"]
+- !private ["ST", "decode"]
+- !private ["ST", "forEach"]
+- !private ["ST", "init"]
+- !private ["SZ", "data"]
+- !private ["SZ", "init"]
+- !private ["s13SignedNumericP", ""]
+- !private ["s13SignedNumericP", "data"]
+- !private ["s13SignedNumericP", "init"]
+- !private ["7StorageAAP", "AES"]
+- !private ["7StorageAAP", "Bool"]
+- !private ["7StorageAAP", "Double"]
+- !private ["7StorageAAP", "Float"]
+- !private ["7StorageAAP", "Int"]
+- !private ["7StorageAAP", "NSKeyedArchiver"]
+- !private ["7StorageAAP", "NSKeyedUnarchiver"]
+- !private ["7StorageAAP", "SHA512"]
+- !private ["7StorageAAP", "String"]
+- !private ["7StorageAAP", "URL"]
+- ["7StorageAAP", ""]
+- ["7StorageAAP", "array"]
+- !private ["7StorageAAP", "authenticationTag"]
+- ["7StorageAAP", "bool"]
+- ["7StorageAAP", "data"]
+- ["7StorageAAP", "decodable"]
+- !private ["7StorageAAP", "delegate"]
+- ["7StorageAAP", "dictionary"]
+- ["7StorageAAP", "double"]
+- !private ["7StorageAAP", "errorClosure"]
+- ["7StorageAAP", "float"]
+- !private ["7StorageAAP", "hash"]
+- ["7StorageAAP", "integer"]
+- !private ["7StorageAAP", "object"]
+- ["7StorageAAP", "register"]
+- ["7StorageAAP", "remove"]
+- ["7StorageAAP", "set"]
+- ["7StorageAAP", "string"]
+- ["7StorageAAP", "stringArray"]
+- !private ["7StorageAAP", "symmetricKey"]
+- ["7StorageAAP", "url"]
+- ["7StorageAAP", "value"]
+- !private ["7Storage0A4DataP", "data"]
+- !private ["7Storage0A4DataP", "decode"]
+- !private ["7Storage0A8DelegateP", "AES"]
+- !private ["7Storage0A8DelegateP", "Bool"]
+- !private ["7Storage0A8DelegateP", "Double"]
+- !private ["7Storage0A8DelegateP", "Float"]
+- !private ["7Storage0A8DelegateP", "Int"]
+- !private ["7Storage0A8DelegateP", "NSKeyedArchiver"]
+- !private ["7Storage0A8DelegateP", "NSKeyedUnarchiver"]
+- !private ["7Storage0A8DelegateP", "SHA512"]
+- !private ["7Storage0A8DelegateP", "String"]
+- !private ["7Storage0A8DelegateP", "URL"]
+- ["7Storage0A8DelegateP", ""]
+- ["7Storage0A8DelegateP", "array"]
+- !private ["7Storage0A8DelegateP", "authenticationTag"]
+- ["7Storage0A8DelegateP", "bool"]
+- ["7Storage0A8DelegateP", "data"]
+- ["7Storage0A8DelegateP", "decodable"]
+- !private ["7Storage0A8DelegateP", "delegate"]
+- ["7Storage0A8DelegateP", "dictionary"]
+- ["7Storage0A8DelegateP", "double"]
+- !private ["7Storage0A8DelegateP", "errorClosure"]
+- ["7Storage0A8DelegateP", "float"]
+- !private ["7Storage0A8DelegateP", "hash"]
+- ["7Storage0A8DelegateP", "integer"]
+- !private ["7Storage0A8DelegateP", "object"]
+- ["7Storage0A8DelegateP", "register"]
+- ["7Storage0A8DelegateP", "remove"]
+- ["7Storage0A8DelegateP", "set"]
+- ["7Storage0A8DelegateP", "string"]
+- ["7Storage0A8DelegateP", "stringArray"]
+- !private ["7Storage0A8DelegateP", "symmetricKey"]
+- ["7Storage0A8DelegateP", "url"]
+- ["7Storage0A8DelegateP", "value"]
+- !private ["Sx", ""]
+- !private ["Sx", "data"]
+- !private ["Sx", "init"]
+- !private ["SS", ""]
+- !private ["SS", "data"]
+- !private ["SS", "init"]
+- !private ["Sy", "data"]
+- !private ["Sy", "init"]
+- !private ["s16TextOutputStreamP", ""]
+- !private ["s16TextOutputStreamP", "data"]
+- !private ["s16TextOutputStreamP", "init"]
+- !private ["s20TextOutputStreamableP", ""]
+- !private ["s20TextOutputStreamableP", "data"]
+- !private ["s20TextOutputStreamableP", "init"]
+- !private ["10Foundation3URLV", "dataRepresentation"]
+- !private ["10Foundation3URLV", "init"]
+- !private ["s15_CVarArgAlignedP", "data"]
+- !private ["s15_CVarArgAlignedP", "init"]
+- !private ["s22_CVarArgPassedAsDoubleP", "data"]
+- !private ["s22_CVarArgPassedAsDoubleP", "init"]
+- !private ["s30_CustomPlaygroundQuickLookableP", "data"]
+- !private ["s30_CustomPlaygroundQuickLookableP", "dataRepresentation"]
+- !private ["s30_CustomPlaygroundQuickLookableP", "init"]
+- !private ["s35_ExpressibleByBuiltinBooleanLiteralP", "data"]
+- !private ["s35_ExpressibleByBuiltinBooleanLiteralP", "init"]
+- !private ["s51_ExpressibleByBuiltinExtendedGraphemeClusterLiteralP", ""]
+- !private ["s51_ExpressibleByBuiltinExtendedGraphemeClusterLiteralP", "data"]
+- !private ["s51_ExpressibleByBuiltinExtendedGraphemeClusterLiteralP", "init"]
+- !private ["s33_ExpressibleByBuiltinFloatLiteralP", "data"]
+- !private ["s33_ExpressibleByBuiltinFloatLiteralP", "init"]
+- !private ["s35_ExpressibleByBuiltinIntegerLiteralP", "data"]
+- !private ["s35_ExpressibleByBuiltinIntegerLiteralP", "init"]
+- !private ["s34_ExpressibleByBuiltinStringLiteralP", "data"]
+- !private ["s34_ExpressibleByBuiltinStringLiteralP", "init"]
+- !private ["s41_ExpressibleByBuiltinUnicodeScalarLiteralP", ""]
+- !private ["s41_ExpressibleByBuiltinUnicodeScalarLiteralP", "data"]
+- !private ["s41_ExpressibleByBuiltinUnicodeScalarLiteralP", "init"]
+- !private ["s34_ExpressibleByFileReferenceLiteralP", "dataRepresentation"]
+- !private ["s34_ExpressibleByFileReferenceLiteralP", "init"]
+- !private ["s19_HasContiguousBytesP", "data"]
+- !private ["s19_HasContiguousBytesP", "init"]
+- !private ["s35_HasCustomAnyHashableRepresentationP", "data"]
+- !private ["s35_HasCustomAnyHashableRepresentationP", "forEach"]
+- !private ["s35_HasCustomAnyHashableRepresentationP", "init"]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "archivedData"]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "data"]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "unarchiveTopLevelObjectWithData"]
+- !private ["10Foundation37_KeyValueCodingAndObservingPublishingP", "archivedData"]
+- !private ["10Foundation37_KeyValueCodingAndObservingPublishingP", "data"]
+- !private ["10Foundation37_KeyValueCodingAndObservingPublishingP", "unarchiveTopLevelObjectWithData"]
+- !private ["s21_ObjectiveCBridgeableP", ""]
+- !private ["s21_ObjectiveCBridgeableP", "_ObjectiveCType"]
+- !private ["s21_ObjectiveCBridgeableP", "data"]
+- !private ["s21_ObjectiveCBridgeableP", "dataRepresentation"]
+- !private ["s21_ObjectiveCBridgeableP", "decode"]
+- !private ["s21_ObjectiveCBridgeableP", "forEach"]
+- !private ["s21_ObjectiveCBridgeableP", "init"]
+depends-nominal:
+- !private "9CryptoKit3AESO"
+- !private "s18AdditiveArithmeticP"
+- !private "SK"
+- !private "SB"
+- !private "Sz"
+- !private "Sb"
+- !private "s7CVarArgP"
+- !private "Sl"
+- !private "SL"
+- "10Foundation15ContiguousBytesP"
+- !private "s28CustomDebugStringConvertibleP"
+- !private "s17CustomReflectableP"
+- !private "s23CustomStringConvertibleP"
+- !private "10Foundation4DataV"
+- !private "7Storage15DataConvertibleP"
+- !private "10Foundation12DataProtocolP"
+- !private "Se"
+- "7Storage09DelegatedA0C"
+- !private "SD"
+- !private "Sd"
+- !private "SE"
+- !private "SQ"
+- !private "s27ExpressibleByBooleanLiteralP"
+- !private "s30ExpressibleByDictionaryLiteralP"
+- !private "s43ExpressibleByExtendedGraphemeClusterLiteralP"
+- !private "s25ExpressibleByFloatLiteralP"
+- !private "s27ExpressibleByIntegerLiteralP"
+- !private "s32ExpressibleByStringInterpolationP"
+- !private "s26ExpressibleByStringLiteralP"
+- !private "s33ExpressibleByUnicodeScalarLiteralP"
+- !private "s17FixedWidthIntegerP"
+- !private "Sf"
+- !private "SF"
+- !private "9CryptoKit3AESO3GCMO"
+- !private "9CryptoKit12HashFunctionP"
+- !private "SH"
+- !private "Si"
+- !private "s25LosslessStringConvertibleP"
+- !private "s10MirrorPathP"
+- !private "SM"
+- !private "10Foundation19MutableDataProtocolP"
+- "So7NSCoderC"
+- !private "So8NSCodingP"
+- !private "So9NSCopyingP"
+- !private "So21NSItemProviderReadingP"
+- !private "So21NSItemProviderWritingP"
+- !private "So15NSKeyedArchiverC"
+- !private "So17NSKeyedUnarchiverC"
+- !private "So16NSMutableCopyingP"
+- "So8NSObjectC"
+- !private "So8NSObjectP"
+- !private "So14NSSecureCodingP"
+- !private "So8NSStringC"
+- !private "Sj"
+- !private "Sk"
+- !private "Sm"
+- !private "10Foundation20ReferenceConvertibleP"
+- !private "9CryptoKit6SHA512V"
+- !private "s10SIMDScalarP"
+- !private "9CryptoKit3AESO3GCMO9SealedBoxV"
+- !private "ST"
+- !private "SZ"
+- !private "s13SignedNumericP"
+- "7StorageAAP"
+- !private "7Storage0A4DataP"
+- "7Storage0A8DelegateP"
+- !private "Sx"
+- !private "SS"
+- !private "Sy"
+- !private "s16TextOutputStreamP"
+- !private "s20TextOutputStreamableP"
+- !private "10Foundation3URLV"
+- !private "s15_CVarArgAlignedP"
+- !private "s22_CVarArgPassedAsDoubleP"
+- !private "s30_CustomPlaygroundQuickLookableP"
+- !private "s35_ExpressibleByBuiltinBooleanLiteralP"
+- !private "s51_ExpressibleByBuiltinExtendedGraphemeClusterLiteralP"
+- !private "s33_ExpressibleByBuiltinFloatLiteralP"
+- !private "s35_ExpressibleByBuiltinIntegerLiteralP"
+- !private "s34_ExpressibleByBuiltinStringLiteralP"
+- !private "s41_ExpressibleByBuiltinUnicodeScalarLiteralP"
+- !private "s34_ExpressibleByFileReferenceLiteralP"
+- !private "s19_HasContiguousBytesP"
+- !private "s35_HasCustomAnyHashableRepresentationP"
+- !private "10Foundation27_KeyValueCodingAndObservingP"
+- !private "10Foundation37_KeyValueCodingAndObservingPublishingP"
+- !private "s21_ObjectiveCBridgeableP"
+depends-dynamic-lookup:
+depends-external:
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/macosx/prebuilt-modules/XPC.swiftmodule/x86_64-apple-macos.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/macosx/prebuilt-modules/ObjectiveC.swiftmodule/x86_64-apple-macos.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/macosx/prebuilt-modules/Combine.swiftmodule/x86_64-apple-macos.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/macosx/prebuilt-modules/Dispatch.swiftmodule/x86_64-apple-macos.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/macosx/prebuilt-modules/Darwin.swiftmodule/x86_64-apple-macos.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/macosx/prebuilt-modules/Foundation.swiftmodule/x86_64-apple-macos.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/macosx/prebuilt-modules/CoreFoundation.swiftmodule/x86_64-apple-macos.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/macosx/prebuilt-modules/CoreGraphics.swiftmodule/x86_64-apple-macos.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/macosx/prebuilt-modules/IOKit.swiftmodule/x86_64-apple-macos.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/macosx/prebuilt-modules/CryptoKit.swiftmodule/x86_64-apple-macos.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/macosx/prebuilt-modules/SwiftOnoneSupport.swiftmodule/x86_64-apple-macos.swiftmodule"
+- "/Users/vagrant/git/.build/x86_64-apple-macosx/debug/Storage.build/module.modulemap"
+- "/Users/vagrant/git/.build/x86_64-apple-macosx/debug/Keychain.build/module.modulemap"
+- "/Users/vagrant/git/.build/x86_64-apple-macosx/debug/Singleton.build/module.modulemap"
+- "/Users/vagrant/git/.build/x86_64-apple-macosx/debug/Inject.build/module.modulemap"
+- "/Users/vagrant/git/.build/x86_64-apple-macosx/debug/UserDefault.build/module.modulemap"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.15.sdk/usr/include/xpc/XPC.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.15.sdk/usr/include/objc/ObjectiveC.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/apinotes/Dispatch.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.15.sdk/usr/include/Darwin.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.15.sdk/System/Library/Frameworks/LocalAuthentication.framework/Headers/LocalAuthentication.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.15.sdk/System/Library/Frameworks/Foundation.framework/Headers/Foundation.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.15.sdk/System/Library/Frameworks/CoreGraphics.framework/Headers/CoreGraphics.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.15.sdk/System/Library/Frameworks/ApplicationServices.framework/Headers/ApplicationServices.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.15.sdk/System/Library/Frameworks/CoreText.framework/Headers/CoreText.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.15.sdk/System/Library/Frameworks/Security.framework/Headers/Security.apinotes"
+interface-hash: "d2aabf2899ba6c2707d231f414218ee1"

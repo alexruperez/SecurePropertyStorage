@@ -1,0 +1,23 @@
+{
+  "builtTestProducts" : [
+    {
+      "binaryPath" : "\/Users\/vagrant\/git\/.build\/x86_64-apple-macosx\/debug\/SecurePropertyStoragePackageTests.xctest\/Contents\/MacOS\/SecurePropertyStoragePackageTests",
+      "packageName" : "SecurePropertyStorage",
+      "productName" : "SecurePropertyStoragePackageTests"
+    }
+  ],
+  "copyCommands" : {
+
+  },
+  "swiftTargetMap" : {
+    "C.Inject-debug.module" : "Inject",
+    "C.Keychain-debug.module" : "Keychain",
+    "C.SecurePropertyStorageTests-debug.module" : "SecurePropertyStorageTests",
+    "C.Singleton-debug.module" : "Singleton",
+    "C.Storage-debug.module" : "Storage",
+    "C.UserDefault-debug.module" : "UserDefault"
+  },
+  "testDiscoveryCommands" : {
+
+  }
+}

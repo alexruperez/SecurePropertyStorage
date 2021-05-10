@@ -1,0 +1,115 @@
+### Swift dependencies file v0 ###
+provides-top-level:
+provides-nominal:
+- "9CryptoKit12SymmetricKeyV"
+provides-member:
+- ["9CryptoKit12SymmetricKeyV", ""]
+provides-dynamic-lookup:
+depends-top-level:
+- "Bool"
+- "BooleanLiteralType"
+- "CFString"
+- "CastingPrecedence"
+- "KeychainError"
+- !private "KeychainStorageDelegate"
+- "StorageData"
+- "String"
+- !private "StringLiteralType"
+- "SymmetricKey"
+- !private "assertionFailure"
+- "kSecAttrAccessibleWhenUnlocked"
+- !private "print"
+depends-member:
+- !private ["10Foundation15ContiguousBytesP", "KeychainStorageDelegate"]
+- !private ["10Foundation15ContiguousBytesP", "SymmetricKey"]
+- ["10Foundation15ContiguousBytesP", ""]
+- !private ["10Foundation15ContiguousBytesP", "assertionFailure"]
+- ["10Foundation15ContiguousBytesP", "init"]
+- !private ["10Foundation15ContiguousBytesP", "kSecAttrAccessibleWhenUnlocked"]
+- !private ["10Foundation15ContiguousBytesP", "print"]
+- !private ["s23CustomStringConvertibleP", "description"]
+- !private ["SQ", "KeychainStorageDelegate"]
+- !private ["SQ", "SymmetricKey"]
+- !private ["SQ", "assertionFailure"]
+- ["SQ", "init"]
+- !private ["SQ", "kSecAttrAccessibleWhenUnlocked"]
+- !private ["SQ", "print"]
+- !private ["s5ErrorP", "description"]
+- !private ["s5ErrorP", "localizedDescription"]
+- !private ["8Keychain0A5ErrorO", ""]
+- !private ["8Keychain0A5ErrorO", "description"]
+- !private ["8Keychain0A15StorageDelegateC", "init"]
+- !private ["8Keychain0A15StorageDelegateC", "read"]
+- !private ["8Keychain0A15StorageDelegateC", "store"]
+- ["So8NSCodingP", ""]
+- !private ["7Storage0A4DataP", "KeychainStorageDelegate"]
+- !private ["7Storage0A4DataP", "SymmetricKey"]
+- ["7Storage0A4DataP", ""]
+- !private ["7Storage0A4DataP", "assertionFailure"]
+- ["7Storage0A4DataP", "init"]
+- !private ["7Storage0A4DataP", "kSecAttrAccessibleWhenUnlocked"]
+- !private ["7Storage0A4DataP", "print"]
+- !private ["7Storage0A8DelegateP", "init"]
+- !private ["7Storage0A8DelegateP", "read"]
+- !private ["7Storage0A8DelegateP", "store"]
+- ["9CryptoKit12SymmetricKeyV", "Bool"]
+- ["9CryptoKit12SymmetricKeyV", "CFString"]
+- !private ["9CryptoKit12SymmetricKeyV", "KeychainError"]
+- !private ["9CryptoKit12SymmetricKeyV", "KeychainStorageDelegate"]
+- ["9CryptoKit12SymmetricKeyV", "StorageData"]
+- ["9CryptoKit12SymmetricKeyV", "String"]
+- ["9CryptoKit12SymmetricKeyV", "SymmetricKey"]
+- ["9CryptoKit12SymmetricKeyV", ""]
+- !private ["9CryptoKit12SymmetricKeyV", "assertionFailure"]
+- ["9CryptoKit12SymmetricKeyV", "generate"]
+- ["9CryptoKit12SymmetricKeyV", "init"]
+- !private ["9CryptoKit12SymmetricKeyV", "kSecAttrAccessibleWhenUnlocked"]
+- !private ["9CryptoKit12SymmetricKeyV", "print"]
+- !private ["9CryptoKit16SymmetricKeySizeV", "bits256"]
+- ["s35_ExpressibleByBuiltinBooleanLiteralP", "init"]
+- !private ["s34_ExpressibleByBuiltinStringLiteralP", "init"]
+depends-nominal:
+- "10Foundation15ContiguousBytesP"
+- !private "s23CustomStringConvertibleP"
+- "SQ"
+- !private "s5ErrorP"
+- !private "8Keychain0A5ErrorO"
+- !private "8Keychain0A15StorageDelegateC"
+- "So8NSCodingP"
+- "7Storage0A4DataP"
+- !private "7Storage0A8DelegateP"
+- "9CryptoKit12SymmetricKeyV"
+- !private "9CryptoKit16SymmetricKeySizeV"
+- "s35_ExpressibleByBuiltinBooleanLiteralP"
+- !private "s34_ExpressibleByBuiltinStringLiteralP"
+depends-dynamic-lookup:
+depends-external:
+- "/Users/vagrant/git/.build/x86_64-apple-macosx/debug/Storage.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/macosx/prebuilt-modules/XPC.swiftmodule/x86_64-apple-macos.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/macosx/prebuilt-modules/ObjectiveC.swiftmodule/x86_64-apple-macos.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/macosx/prebuilt-modules/Combine.swiftmodule/x86_64-apple-macos.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/macosx/prebuilt-modules/Dispatch.swiftmodule/x86_64-apple-macos.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/macosx/prebuilt-modules/Darwin.swiftmodule/x86_64-apple-macos.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/macosx/prebuilt-modules/Foundation.swiftmodule/x86_64-apple-macos.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/macosx/prebuilt-modules/CoreFoundation.swiftmodule/x86_64-apple-macos.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/macosx/prebuilt-modules/CoreGraphics.swiftmodule/x86_64-apple-macos.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/macosx/prebuilt-modules/Swift.swiftmodule/x86_64-apple-macos.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/macosx/prebuilt-modules/IOKit.swiftmodule/x86_64-apple-macos.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/macosx/prebuilt-modules/CryptoKit.swiftmodule/x86_64-apple-macos.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/macosx/prebuilt-modules/SwiftOnoneSupport.swiftmodule/x86_64-apple-macos.swiftmodule"
+- "/Users/vagrant/git/.build/x86_64-apple-macosx/debug/Storage.build/module.modulemap"
+- "/Users/vagrant/git/.build/x86_64-apple-macosx/debug/Keychain.build/module.modulemap"
+- "/Users/vagrant/git/.build/x86_64-apple-macosx/debug/Singleton.build/module.modulemap"
+- "/Users/vagrant/git/.build/x86_64-apple-macosx/debug/Inject.build/module.modulemap"
+- "/Users/vagrant/git/.build/x86_64-apple-macosx/debug/UserDefault.build/module.modulemap"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.15.sdk/usr/include/xpc/XPC.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.15.sdk/usr/include/objc/ObjectiveC.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/apinotes/Dispatch.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.15.sdk/usr/include/Darwin.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.15.sdk/System/Library/Frameworks/LocalAuthentication.framework/Headers/LocalAuthentication.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.15.sdk/System/Library/Frameworks/Foundation.framework/Headers/Foundation.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.15.sdk/System/Library/Frameworks/CoreGraphics.framework/Headers/CoreGraphics.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.15.sdk/System/Library/Frameworks/ApplicationServices.framework/Headers/ApplicationServices.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.15.sdk/System/Library/Frameworks/CoreText.framework/Headers/CoreText.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.15.sdk/System/Library/Frameworks/Security.framework/Headers/Security.apinotes"
+interface-hash: "5028b629fe6d3b6b04cf25d127244800"

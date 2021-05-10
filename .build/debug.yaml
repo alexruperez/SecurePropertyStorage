@@ -1,0 +1,252 @@
+client:
+  name: basic
+tools: {}
+targets:
+  "Inject-debug.module": ["<Inject-debug.module>"]
+  "InjectDynamic-debug.dylib": ["<InjectDynamic-debug.dylib>"]
+  "Keychain-debug.module": ["<Keychain-debug.module>"]
+  "KeychainDynamic-debug.dylib": ["<KeychainDynamic-debug.dylib>"]
+  "PackageStructure": ["<PackageStructure>"]
+  "SecurePropertyStorageDynamic-debug.dylib": ["<SecurePropertyStorageDynamic-debug.dylib>"]
+  "SecurePropertyStoragePackageTests-debug.test": ["<SecurePropertyStoragePackageTests-debug.test>"]
+  "SecurePropertyStorageTests-debug.module": ["<SecurePropertyStorageTests-debug.module>"]
+  "Singleton-debug.module": ["<Singleton-debug.module>"]
+  "SingletonDynamic-debug.dylib": ["<SingletonDynamic-debug.dylib>"]
+  "Storage-debug.module": ["<Storage-debug.module>"]
+  "StorageDynamic-debug.dylib": ["<StorageDynamic-debug.dylib>"]
+  "UserDefault-debug.module": ["<UserDefault-debug.module>"]
+  "UserDefaultDynamic-debug.dylib": ["<UserDefaultDynamic-debug.dylib>"]
+  "main": ["<Inject-debug.module>","<InjectDynamic-debug.dylib>","<Keychain-debug.module>","<KeychainDynamic-debug.dylib>","<SecurePropertyStorageDynamic-debug.dylib>","<Singleton-debug.module>","<SingletonDynamic-debug.dylib>","<Storage-debug.module>","<StorageDynamic-debug.dylib>","<UserDefault-debug.module>","<UserDefaultDynamic-debug.dylib>"]
+  "test": ["<Inject-debug.module>","<InjectDynamic-debug.dylib>","<Keychain-debug.module>","<KeychainDynamic-debug.dylib>","<SecurePropertyStorageDynamic-debug.dylib>","<SecurePropertyStoragePackageTests-debug.test>","<SecurePropertyStorageTests-debug.module>","<Singleton-debug.module>","<SingletonDynamic-debug.dylib>","<Storage-debug.module>","<StorageDynamic-debug.dylib>","<UserDefault-debug.module>","<UserDefaultDynamic-debug.dylib>"]
+default: "main"
+nodes:
+  "/Users/vagrant/git/Sources/Inject/":
+    is-directory-structure: true
+  "/Users/vagrant/git/Sources/Keychain/":
+    is-directory-structure: true
+  "/Users/vagrant/git/Sources/Singleton/":
+    is-directory-structure: true
+  "/Users/vagrant/git/Sources/Storage/":
+    is-directory-structure: true
+  "/Users/vagrant/git/Sources/UserDefault/":
+    is-directory-structure: true
+  "/Users/vagrant/git/Tests/SecurePropertyStorageTests/":
+    is-directory-structure: true
+commands:
+  "<Inject-debug.module>":
+    tool: phony
+    inputs: ["/Users/vagrant/git/.build/x86_64-apple-macosx/debug/Inject.build/Inject.swift.o","/Users/vagrant/git/.build/x86_64-apple-macosx/debug/Inject.build/InjectError.swift.o","/Users/vagrant/git/.build/x86_64-apple-macosx/debug/Inject.build/InjectStorage.swift.o","/Users/vagrant/git/.build/x86_64-apple-macosx/debug/Inject.swiftmodule"]
+    outputs: ["<Inject-debug.module>"]
+
+  "<InjectDynamic-debug.dylib>":
+    tool: phony
+    inputs: ["/Users/vagrant/git/.build/x86_64-apple-macosx/debug/libInjectDynamic.dylib"]
+    outputs: ["<InjectDynamic-debug.dylib>"]
+
+  "<Keychain-debug.module>":
+    tool: phony
+    inputs: ["/Users/vagrant/git/.build/x86_64-apple-macosx/debug/Keychain.build/CryptoData.swift.o","/Users/vagrant/git/.build/x86_64-apple-macosx/debug/Keychain.build/Keychain.swift.o","/Users/vagrant/git/.build/x86_64-apple-macosx/debug/Keychain.build/KeychainError.swift.o","/Users/vagrant/git/.build/x86_64-apple-macosx/debug/Keychain.build/KeychainStorage.swift.o","/Users/vagrant/git/.build/x86_64-apple-macosx/debug/Keychain.swiftmodule"]
+    outputs: ["<Keychain-debug.module>"]
+
+  "<KeychainDynamic-debug.dylib>":
+    tool: phony
+    inputs: ["/Users/vagrant/git/.build/x86_64-apple-macosx/debug/libKeychainDynamic.dylib"]
+    outputs: ["<KeychainDynamic-debug.dylib>"]
+
+  "<SecurePropertyStorageDynamic-debug.dylib>":
+    tool: phony
+    inputs: ["/Users/vagrant/git/.build/x86_64-apple-macosx/debug/libSecurePropertyStorageDynamic.dylib"]
+    outputs: ["<SecurePropertyStorageDynamic-debug.dylib>"]
+
+  "<SecurePropertyStoragePackageTests-debug.test>":
+    tool: phony
+    inputs: ["/Users/vagrant/git/.build/x86_64-apple-macosx/debug/SecurePropertyStoragePackageTests.xctest/Contents/MacOS/SecurePropertyStoragePackageTests"]
+    outputs: ["<SecurePropertyStoragePackageTests-debug.test>"]
+
+  "<SecurePropertyStorageTests-debug.module>":
+    tool: phony
+    inputs: ["/Users/vagrant/git/.build/x86_64-apple-macosx/debug/SecurePropertyStorageTests.build/InjectTests.swift.o","/Users/vagrant/git/.build/x86_64-apple-macosx/debug/SecurePropertyStorageTests.build/KeychainTests.swift.o","/Users/vagrant/git/.build/x86_64-apple-macosx/debug/SecurePropertyStorageTests.build/SingletonTests.swift.o","/Users/vagrant/git/.build/x86_64-apple-macosx/debug/SecurePropertyStorageTests.build/UserDefaultTests.swift.o","/Users/vagrant/git/.build/x86_64-apple-macosx/debug/SecurePropertyStorageTests.build/XCTestManifests.swift.o","/Users/vagrant/git/.build/x86_64-apple-macosx/debug/SecurePropertyStorageTests.swiftmodule"]
+    outputs: ["<SecurePropertyStorageTests-debug.module>"]
+
+  "<Singleton-debug.module>":
+    tool: phony
+    inputs: ["/Users/vagrant/git/.build/x86_64-apple-macosx/debug/Singleton.build/Singleton.swift.o","/Users/vagrant/git/.build/x86_64-apple-macosx/debug/Singleton.build/SingletonStorage.swift.o","/Users/vagrant/git/.build/x86_64-apple-macosx/debug/Singleton.swiftmodule"]
+    outputs: ["<Singleton-debug.module>"]
+
+  "<SingletonDynamic-debug.dylib>":
+    tool: phony
+    inputs: ["/Users/vagrant/git/.build/x86_64-apple-macosx/debug/libSingletonDynamic.dylib"]
+    outputs: ["<SingletonDynamic-debug.dylib>"]
+
+  "<Storage-debug.module>":
+    tool: phony
+    inputs: ["/Users/vagrant/git/.build/x86_64-apple-macosx/debug/Storage.build/DataConvertible.swift.o","/Users/vagrant/git/.build/x86_64-apple-macosx/debug/Storage.build/DelegatedStorage.swift.o","/Users/vagrant/git/.build/x86_64-apple-macosx/debug/Storage.build/Storage.swift.o","/Users/vagrant/git/.build/x86_64-apple-macosx/debug/Storage.build/StorageData.swift.o","/Users/vagrant/git/.build/x86_64-apple-macosx/debug/Storage.build/StorageDelegate.swift.o","/Users/vagrant/git/.build/x86_64-apple-macosx/debug/Storage.build/Store.swift.o","/Users/vagrant/git/.build/x86_64-apple-macosx/debug/Storage.swiftmodule"]
+    outputs: ["<Storage-debug.module>"]
+
+  "<StorageDynamic-debug.dylib>":
+    tool: phony
+    inputs: ["/Users/vagrant/git/.build/x86_64-apple-macosx/debug/libStorageDynamic.dylib"]
+    outputs: ["<StorageDynamic-debug.dylib>"]
+
+  "<UserDefault-debug.module>":
+    tool: phony
+    inputs: ["/Users/vagrant/git/.build/x86_64-apple-macosx/debug/UserDefault.build/UserDefault.swift.o","/Users/vagrant/git/.build/x86_64-apple-macosx/debug/UserDefault.build/UserDefaultsStorage.swift.o","/Users/vagrant/git/.build/x86_64-apple-macosx/debug/UserDefault.swiftmodule"]
+    outputs: ["<UserDefault-debug.module>"]
+
+  "<UserDefaultDynamic-debug.dylib>":
+    tool: phony
+    inputs: ["/Users/vagrant/git/.build/x86_64-apple-macosx/debug/libUserDefaultDynamic.dylib"]
+    outputs: ["<UserDefaultDynamic-debug.dylib>"]
+
+  "C.Inject-debug.module":
+    tool: swift-compiler
+    inputs: ["/Users/vagrant/git/Sources/Inject/Inject.swift","/Users/vagrant/git/Sources/Inject/InjectError.swift","/Users/vagrant/git/Sources/Inject/InjectStorage.swift","/Users/vagrant/git/.build/x86_64-apple-macosx/debug/Storage.swiftmodule"]
+    outputs: ["/Users/vagrant/git/.build/x86_64-apple-macosx/debug/Inject.build/Inject.swift.o","/Users/vagrant/git/.build/x86_64-apple-macosx/debug/Inject.build/InjectError.swift.o","/Users/vagrant/git/.build/x86_64-apple-macosx/debug/Inject.build/InjectStorage.swift.o","/Users/vagrant/git/.build/x86_64-apple-macosx/debug/Inject.swiftmodule"]
+    executable: "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/swiftc"
+    module-name: "Inject"
+    module-output-path: "/Users/vagrant/git/.build/x86_64-apple-macosx/debug/Inject.swiftmodule"
+    import-paths: ["/Users/vagrant/git/.build/x86_64-apple-macosx/debug"]
+    temps-path: "/Users/vagrant/git/.build/x86_64-apple-macosx/debug/Inject.build"
+    objects: ["/Users/vagrant/git/.build/x86_64-apple-macosx/debug/Inject.build/Inject.swift.o","/Users/vagrant/git/.build/x86_64-apple-macosx/debug/Inject.build/InjectError.swift.o","/Users/vagrant/git/.build/x86_64-apple-macosx/debug/Inject.build/InjectStorage.swift.o"]
+    other-args: ["-target","x86_64-apple-macosx10.15","-swift-version","5","-enable-batch-mode","-index-store-path","/Users/vagrant/git/.build/x86_64-apple-macosx/debug/index/store","-sdk","/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.15.sdk","-F","/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/Library/Frameworks","-I","/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/usr/lib","-L","/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/usr/lib","-Onone","-enable-testing","-g","-j2","-DSWIFT_PACKAGE","-DDEBUG","-module-cache-path","/Users/vagrant/git/.build/x86_64-apple-macosx/debug/ModuleCache","-parseable-output","-emit-objc-header","-emit-objc-header-path","/Users/vagrant/git/.build/x86_64-apple-macosx/debug/Inject.build/Inject-Swift.h"]
+    sources: ["/Users/vagrant/git/Sources/Inject/Inject.swift","/Users/vagrant/git/Sources/Inject/InjectError.swift","/Users/vagrant/git/Sources/Inject/InjectStorage.swift"]
+    is-library: true
+    enable-whole-module-optimization: false
+    num-threads: 2
+
+  "C.InjectDynamic-debug.dylib":
+    tool: shell
+    inputs: ["/Users/vagrant/git/.build/x86_64-apple-macosx/debug/Inject.build/Inject.swift.o","/Users/vagrant/git/.build/x86_64-apple-macosx/debug/Inject.build/InjectError.swift.o","/Users/vagrant/git/.build/x86_64-apple-macosx/debug/Inject.build/InjectStorage.swift.o","/Users/vagrant/git/.build/x86_64-apple-macosx/debug/Storage.build/DataConvertible.swift.o","/Users/vagrant/git/.build/x86_64-apple-macosx/debug/Storage.build/DelegatedStorage.swift.o","/Users/vagrant/git/.build/x86_64-apple-macosx/debug/Storage.build/Storage.swift.o","/Users/vagrant/git/.build/x86_64-apple-macosx/debug/Storage.build/StorageData.swift.o","/Users/vagrant/git/.build/x86_64-apple-macosx/debug/Storage.build/StorageDelegate.swift.o","/Users/vagrant/git/.build/x86_64-apple-macosx/debug/Storage.build/Store.swift.o"]
+    outputs: ["/Users/vagrant/git/.build/x86_64-apple-macosx/debug/libInjectDynamic.dylib"]
+    description: "Linking ./.build/x86_64-apple-macosx/debug/libInjectDynamic.dylib"
+    args: ["/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/swiftc","-sdk","/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.15.sdk","-F","/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/Library/Frameworks","-I","/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/usr/lib","-L","/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/usr/lib","-L","/Users/vagrant/git/.build/x86_64-apple-macosx/debug","-o","/Users/vagrant/git/.build/x86_64-apple-macosx/debug/libInjectDynamic.dylib","-module-name","InjectDynamic","-emit-library","-Xlinker","-install_name","-Xlinker","@rpath/libInjectDynamic.dylib","-Xlinker","-rpath","-Xlinker","@loader_path","@/Users/vagrant/git/.build/x86_64-apple-macosx/debug/InjectDynamic.product/Objects.LinkFileList","-target","x86_64-apple-macosx10.15","-Xlinker","-add_ast_path","-Xlinker","/Users/vagrant/git/.build/x86_64-apple-macosx/debug/Inject.swiftmodule","-Xlinker","-add_ast_path","-Xlinker","/Users/vagrant/git/.build/x86_64-apple-macosx/debug/Storage.swiftmodule","-L","/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib"]
+
+  "C.Keychain-debug.module":
+    tool: swift-compiler
+    inputs: ["/Users/vagrant/git/Sources/Keychain/CryptoData.swift","/Users/vagrant/git/Sources/Keychain/Keychain.swift","/Users/vagrant/git/Sources/Keychain/KeychainError.swift","/Users/vagrant/git/Sources/Keychain/KeychainStorage.swift","/Users/vagrant/git/.build/x86_64-apple-macosx/debug/Storage.swiftmodule"]
+    outputs: ["/Users/vagrant/git/.build/x86_64-apple-macosx/debug/Keychain.build/CryptoData.swift.o","/Users/vagrant/git/.build/x86_64-apple-macosx/debug/Keychain.build/Keychain.swift.o","/Users/vagrant/git/.build/x86_64-apple-macosx/debug/Keychain.build/KeychainError.swift.o","/Users/vagrant/git/.build/x86_64-apple-macosx/debug/Keychain.build/KeychainStorage.swift.o","/Users/vagrant/git/.build/x86_64-apple-macosx/debug/Keychain.swiftmodule"]
+    executable: "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/swiftc"
+    module-name: "Keychain"
+    module-output-path: "/Users/vagrant/git/.build/x86_64-apple-macosx/debug/Keychain.swiftmodule"
+    import-paths: ["/Users/vagrant/git/.build/x86_64-apple-macosx/debug"]
+    temps-path: "/Users/vagrant/git/.build/x86_64-apple-macosx/debug/Keychain.build"
+    objects: ["/Users/vagrant/git/.build/x86_64-apple-macosx/debug/Keychain.build/CryptoData.swift.o","/Users/vagrant/git/.build/x86_64-apple-macosx/debug/Keychain.build/Keychain.swift.o","/Users/vagrant/git/.build/x86_64-apple-macosx/debug/Keychain.build/KeychainError.swift.o","/Users/vagrant/git/.build/x86_64-apple-macosx/debug/Keychain.build/KeychainStorage.swift.o"]
+    other-args: ["-target","x86_64-apple-macosx10.15","-swift-version","5","-enable-batch-mode","-index-store-path","/Users/vagrant/git/.build/x86_64-apple-macosx/debug/index/store","-sdk","/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.15.sdk","-F","/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/Library/Frameworks","-I","/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/usr/lib","-L","/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/usr/lib","-Onone","-enable-testing","-g","-j2","-DSWIFT_PACKAGE","-DDEBUG","-module-cache-path","/Users/vagrant/git/.build/x86_64-apple-macosx/debug/ModuleCache","-parseable-output","-emit-objc-header","-emit-objc-header-path","/Users/vagrant/git/.build/x86_64-apple-macosx/debug/Keychain.build/Keychain-Swift.h"]
+    sources: ["/Users/vagrant/git/Sources/Keychain/CryptoData.swift","/Users/vagrant/git/Sources/Keychain/Keychain.swift","/Users/vagrant/git/Sources/Keychain/KeychainError.swift","/Users/vagrant/git/Sources/Keychain/KeychainStorage.swift"]
+    is-library: true
+    enable-whole-module-optimization: false
+    num-threads: 2
+
+  "C.KeychainDynamic-debug.dylib":
+    tool: shell
+    inputs: ["/Users/vagrant/git/.build/x86_64-apple-macosx/debug/Keychain.build/CryptoData.swift.o","/Users/vagrant/git/.build/x86_64-apple-macosx/debug/Keychain.build/Keychain.swift.o","/Users/vagrant/git/.build/x86_64-apple-macosx/debug/Keychain.build/KeychainError.swift.o","/Users/vagrant/git/.build/x86_64-apple-macosx/debug/Keychain.build/KeychainStorage.swift.o","/Users/vagrant/git/.build/x86_64-apple-macosx/debug/Storage.build/DataConvertible.swift.o","/Users/vagrant/git/.build/x86_64-apple-macosx/debug/Storage.build/DelegatedStorage.swift.o","/Users/vagrant/git/.build/x86_64-apple-macosx/debug/Storage.build/Storage.swift.o","/Users/vagrant/git/.build/x86_64-apple-macosx/debug/Storage.build/StorageData.swift.o","/Users/vagrant/git/.build/x86_64-apple-macosx/debug/Storage.build/StorageDelegate.swift.o","/Users/vagrant/git/.build/x86_64-apple-macosx/debug/Storage.build/Store.swift.o"]
+    outputs: ["/Users/vagrant/git/.build/x86_64-apple-macosx/debug/libKeychainDynamic.dylib"]
+    description: "Linking ./.build/x86_64-apple-macosx/debug/libKeychainDynamic.dylib"
+    args: ["/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/swiftc","-sdk","/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.15.sdk","-F","/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/Library/Frameworks","-I","/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/usr/lib","-L","/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/usr/lib","-L","/Users/vagrant/git/.build/x86_64-apple-macosx/debug","-o","/Users/vagrant/git/.build/x86_64-apple-macosx/debug/libKeychainDynamic.dylib","-module-name","KeychainDynamic","-emit-library","-Xlinker","-install_name","-Xlinker","@rpath/libKeychainDynamic.dylib","-Xlinker","-rpath","-Xlinker","@loader_path","@/Users/vagrant/git/.build/x86_64-apple-macosx/debug/KeychainDynamic.product/Objects.LinkFileList","-target","x86_64-apple-macosx10.15","-Xlinker","-add_ast_path","-Xlinker","/Users/vagrant/git/.build/x86_64-apple-macosx/debug/Keychain.swiftmodule","-Xlinker","-add_ast_path","-Xlinker","/Users/vagrant/git/.build/x86_64-apple-macosx/debug/Storage.swiftmodule","-L","/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib"]
+
+  "C.SecurePropertyStorageDynamic-debug.dylib":
+    tool: shell
+    inputs: ["/Users/vagrant/git/.build/x86_64-apple-macosx/debug/Inject.build/Inject.swift.o","/Users/vagrant/git/.build/x86_64-apple-macosx/debug/Inject.build/InjectError.swift.o","/Users/vagrant/git/.build/x86_64-apple-macosx/debug/Inject.build/InjectStorage.swift.o","/Users/vagrant/git/.build/x86_64-apple-macosx/debug/Keychain.build/CryptoData.swift.o","/Users/vagrant/git/.build/x86_64-apple-macosx/debug/Keychain.build/Keychain.swift.o","/Users/vagrant/git/.build/x86_64-apple-macosx/debug/Keychain.build/KeychainError.swift.o","/Users/vagrant/git/.build/x86_64-apple-macosx/debug/Keychain.build/KeychainStorage.swift.o","/Users/vagrant/git/.build/x86_64-apple-macosx/debug/Singleton.build/Singleton.swift.o","/Users/vagrant/git/.build/x86_64-apple-macosx/debug/Singleton.build/SingletonStorage.swift.o","/Users/vagrant/git/.build/x86_64-apple-macosx/debug/Storage.build/DataConvertible.swift.o","/Users/vagrant/git/.build/x86_64-apple-macosx/debug/Storage.build/DelegatedStorage.swift.o","/Users/vagrant/git/.build/x86_64-apple-macosx/debug/Storage.build/Storage.swift.o","/Users/vagrant/git/.build/x86_64-apple-macosx/debug/Storage.build/StorageData.swift.o","/Users/vagrant/git/.build/x86_64-apple-macosx/debug/Storage.build/StorageDelegate.swift.o","/Users/vagrant/git/.build/x86_64-apple-macosx/debug/Storage.build/Store.swift.o","/Users/vagrant/git/.build/x86_64-apple-macosx/debug/UserDefault.build/UserDefault.swift.o","/Users/vagrant/git/.build/x86_64-apple-macosx/debug/UserDefault.build/UserDefaultsStorage.swift.o"]
+    outputs: ["/Users/vagrant/git/.build/x86_64-apple-macosx/debug/libSecurePropertyStorageDynamic.dylib"]
+    description: "Linking ./.build/x86_64-apple-macosx/debug/libSecurePropertyStorageDynamic.dylib"
+    args: ["/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/swiftc","-sdk","/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.15.sdk","-F","/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/Library/Frameworks","-I","/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/usr/lib","-L","/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/usr/lib","-L","/Users/vagrant/git/.build/x86_64-apple-macosx/debug","-o","/Users/vagrant/git/.build/x86_64-apple-macosx/debug/libSecurePropertyStorageDynamic.dylib","-module-name","SecurePropertyStorageDynamic","-emit-library","-Xlinker","-install_name","-Xlinker","@rpath/libSecurePropertyStorageDynamic.dylib","-Xlinker","-rpath","-Xlinker","@loader_path","@/Users/vagrant/git/.build/x86_64-apple-macosx/debug/SecurePropertyStorageDynamic.product/Objects.LinkFileList","-target","x86_64-apple-macosx10.15","-Xlinker","-add_ast_path","-Xlinker","/Users/vagrant/git/.build/x86_64-apple-macosx/debug/Inject.swiftmodule","-Xlinker","-add_ast_path","-Xlinker","/Users/vagrant/git/.build/x86_64-apple-macosx/debug/Keychain.swiftmodule","-Xlinker","-add_ast_path","-Xlinker","/Users/vagrant/git/.build/x86_64-apple-macosx/debug/Singleton.swiftmodule","-Xlinker","-add_ast_path","-Xlinker","/Users/vagrant/git/.build/x86_64-apple-macosx/debug/Storage.swiftmodule","-Xlinker","-add_ast_path","-Xlinker","/Users/vagrant/git/.build/x86_64-apple-macosx/debug/UserDefault.swiftmodule","-L","/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib"]
+
+  "C.SecurePropertyStoragePackageTests-debug.test":
+    tool: shell
+    inputs: ["/Users/vagrant/git/.build/x86_64-apple-macosx/debug/Inject.build/Inject.swift.o","/Users/vagrant/git/.build/x86_64-apple-macosx/debug/Inject.build/InjectError.swift.o","/Users/vagrant/git/.build/x86_64-apple-macosx/debug/Inject.build/InjectStorage.swift.o","/Users/vagrant/git/.build/x86_64-apple-macosx/debug/Keychain.build/CryptoData.swift.o","/Users/vagrant/git/.build/x86_64-apple-macosx/debug/Keychain.build/Keychain.swift.o","/Users/vagrant/git/.build/x86_64-apple-macosx/debug/Keychain.build/KeychainError.swift.o","/Users/vagrant/git/.build/x86_64-apple-macosx/debug/Keychain.build/KeychainStorage.swift.o","/Users/vagrant/git/.build/x86_64-apple-macosx/debug/SecurePropertyStorageTests.build/InjectTests.swift.o","/Users/vagrant/git/.build/x86_64-apple-macosx/debug/SecurePropertyStorageTests.build/KeychainTests.swift.o","/Users/vagrant/git/.build/x86_64-apple-macosx/debug/SecurePropertyStorageTests.build/SingletonTests.swift.o","/Users/vagrant/git/.build/x86_64-apple-macosx/debug/SecurePropertyStorageTests.build/UserDefaultTests.swift.o","/Users/vagrant/git/.build/x86_64-apple-macosx/debug/SecurePropertyStorageTests.build/XCTestManifests.swift.o","/Users/vagrant/git/.build/x86_64-apple-macosx/debug/Singleton.build/Singleton.swift.o","/Users/vagrant/git/.build/x86_64-apple-macosx/debug/Singleton.build/SingletonStorage.swift.o","/Users/vagrant/git/.build/x86_64-apple-macosx/debug/Storage.build/DataConvertible.swift.o","/Users/vagrant/git/.build/x86_64-apple-macosx/debug/Storage.build/DelegatedStorage.swift.o","/Users/vagrant/git/.build/x86_64-apple-macosx/debug/Storage.build/Storage.swift.o","/Users/vagrant/git/.build/x86_64-apple-macosx/debug/Storage.build/StorageData.swift.o","/Users/vagrant/git/.build/x86_64-apple-macosx/debug/Storage.build/StorageDelegate.swift.o","/Users/vagrant/git/.build/x86_64-apple-macosx/debug/Storage.build/Store.swift.o","/Users/vagrant/git/.build/x86_64-apple-macosx/debug/UserDefault.build/UserDefault.swift.o","/Users/vagrant/git/.build/x86_64-apple-macosx/debug/UserDefault.build/UserDefaultsStorage.swift.o"]
+    outputs: ["/Users/vagrant/git/.build/x86_64-apple-macosx/debug/SecurePropertyStoragePackageTests.xctest/Contents/MacOS/SecurePropertyStoragePackageTests"]
+    description: "Linking ./.build/x86_64-apple-macosx/debug/SecurePropertyStoragePackageTests.xctest/Contents/MacOS/SecurePropertyStoragePackageTests"
+    args: ["/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/swiftc","-sdk","/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.15.sdk","-F","/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/Library/Frameworks","-I","/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/usr/lib","-L","/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/usr/lib","-L","/Users/vagrant/git/.build/x86_64-apple-macosx/debug","-o","/Users/vagrant/git/.build/x86_64-apple-macosx/debug/SecurePropertyStoragePackageTests.xctest/Contents/MacOS/SecurePropertyStoragePackageTests","-module-name","SecurePropertyStoragePackageTests","-Xlinker","-bundle","-Xlinker","-rpath","-Xlinker","@loader_path/../../../","@/Users/vagrant/git/.build/x86_64-apple-macosx/debug/SecurePropertyStoragePackageTests.product/Objects.LinkFileList","-Xlinker","-rpath","-Xlinker","/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/macosx","-target","x86_64-apple-macosx10.15","-Xlinker","-add_ast_path","-Xlinker","/Users/vagrant/git/.build/x86_64-apple-macosx/debug/Inject.swiftmodule","-Xlinker","-add_ast_path","-Xlinker","/Users/vagrant/git/.build/x86_64-apple-macosx/debug/Keychain.swiftmodule","-Xlinker","-add_ast_path","-Xlinker","/Users/vagrant/git/.build/x86_64-apple-macosx/debug/SecurePropertyStorageTests.swiftmodule","-Xlinker","-add_ast_path","-Xlinker","/Users/vagrant/git/.build/x86_64-apple-macosx/debug/Singleton.swiftmodule","-Xlinker","-add_ast_path","-Xlinker","/Users/vagrant/git/.build/x86_64-apple-macosx/debug/Storage.swiftmodule","-Xlinker","-add_ast_path","-Xlinker","/Users/vagrant/git/.build/x86_64-apple-macosx/debug/UserDefault.swiftmodule","-L","/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib"]
+
+  "C.SecurePropertyStorageTests-debug.module":
+    tool: swift-compiler
+    inputs: ["/Users/vagrant/git/Tests/SecurePropertyStorageTests/InjectTests.swift","/Users/vagrant/git/Tests/SecurePropertyStorageTests/KeychainTests.swift","/Users/vagrant/git/Tests/SecurePropertyStorageTests/SingletonTests.swift","/Users/vagrant/git/Tests/SecurePropertyStorageTests/UserDefaultTests.swift","/Users/vagrant/git/Tests/SecurePropertyStorageTests/XCTestManifests.swift","/Users/vagrant/git/.build/x86_64-apple-macosx/debug/Storage.swiftmodule","/Users/vagrant/git/.build/x86_64-apple-macosx/debug/UserDefault.swiftmodule","/Users/vagrant/git/.build/x86_64-apple-macosx/debug/Singleton.swiftmodule","/Users/vagrant/git/.build/x86_64-apple-macosx/debug/Keychain.swiftmodule","/Users/vagrant/git/.build/x86_64-apple-macosx/debug/Inject.swiftmodule"]
+    outputs: ["/Users/vagrant/git/.build/x86_64-apple-macosx/debug/SecurePropertyStorageTests.build/InjectTests.swift.o","/Users/vagrant/git/.build/x86_64-apple-macosx/debug/SecurePropertyStorageTests.build/KeychainTests.swift.o","/Users/vagrant/git/.build/x86_64-apple-macosx/debug/SecurePropertyStorageTests.build/SingletonTests.swift.o","/Users/vagrant/git/.build/x86_64-apple-macosx/debug/SecurePropertyStorageTests.build/UserDefaultTests.swift.o","/Users/vagrant/git/.build/x86_64-apple-macosx/debug/SecurePropertyStorageTests.build/XCTestManifests.swift.o","/Users/vagrant/git/.build/x86_64-apple-macosx/debug/SecurePropertyStorageTests.swiftmodule"]
+    executable: "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/swiftc"
+    module-name: "SecurePropertyStorageTests"
+    module-output-path: "/Users/vagrant/git/.build/x86_64-apple-macosx/debug/SecurePropertyStorageTests.swiftmodule"
+    import-paths: ["/Users/vagrant/git/.build/x86_64-apple-macosx/debug"]
+    temps-path: "/Users/vagrant/git/.build/x86_64-apple-macosx/debug/SecurePropertyStorageTests.build"
+    objects: ["/Users/vagrant/git/.build/x86_64-apple-macosx/debug/SecurePropertyStorageTests.build/InjectTests.swift.o","/Users/vagrant/git/.build/x86_64-apple-macosx/debug/SecurePropertyStorageTests.build/KeychainTests.swift.o","/Users/vagrant/git/.build/x86_64-apple-macosx/debug/SecurePropertyStorageTests.build/SingletonTests.swift.o","/Users/vagrant/git/.build/x86_64-apple-macosx/debug/SecurePropertyStorageTests.build/UserDefaultTests.swift.o","/Users/vagrant/git/.build/x86_64-apple-macosx/debug/SecurePropertyStorageTests.build/XCTestManifests.swift.o"]
+    other-args: ["-target","x86_64-apple-macosx10.15","-swift-version","5","-enable-batch-mode","-index-store-path","/Users/vagrant/git/.build/x86_64-apple-macosx/debug/index/store","-sdk","/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.15.sdk","-F","/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/Library/Frameworks","-I","/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/usr/lib","-L","/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/usr/lib","-Onone","-enable-testing","-g","-j2","-DSWIFT_PACKAGE","-DDEBUG","-module-cache-path","/Users/vagrant/git/.build/x86_64-apple-macosx/debug/ModuleCache","-parseable-output"]
+    sources: ["/Users/vagrant/git/Tests/SecurePropertyStorageTests/InjectTests.swift","/Users/vagrant/git/Tests/SecurePropertyStorageTests/KeychainTests.swift","/Users/vagrant/git/Tests/SecurePropertyStorageTests/SingletonTests.swift","/Users/vagrant/git/Tests/SecurePropertyStorageTests/UserDefaultTests.swift","/Users/vagrant/git/Tests/SecurePropertyStorageTests/XCTestManifests.swift"]
+    is-library: true
+    enable-whole-module-optimization: false
+    num-threads: 2
+
+  "C.Singleton-debug.module":
+    tool: swift-compiler
+    inputs: ["/Users/vagrant/git/Sources/Singleton/Singleton.swift","/Users/vagrant/git/Sources/Singleton/SingletonStorage.swift","/Users/vagrant/git/.build/x86_64-apple-macosx/debug/Storage.swiftmodule","/Users/vagrant/git/.build/x86_64-apple-macosx/debug/Keychain.swiftmodule"]
+    outputs: ["/Users/vagrant/git/.build/x86_64-apple-macosx/debug/Singleton.build/Singleton.swift.o","/Users/vagrant/git/.build/x86_64-apple-macosx/debug/Singleton.build/SingletonStorage.swift.o","/Users/vagrant/git/.build/x86_64-apple-macosx/debug/Singleton.swiftmodule"]
+    executable: "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/swiftc"
+    module-name: "Singleton"
+    module-output-path: "/Users/vagrant/git/.build/x86_64-apple-macosx/debug/Singleton.swiftmodule"
+    import-paths: ["/Users/vagrant/git/.build/x86_64-apple-macosx/debug"]
+    temps-path: "/Users/vagrant/git/.build/x86_64-apple-macosx/debug/Singleton.build"
+    objects: ["/Users/vagrant/git/.build/x86_64-apple-macosx/debug/Singleton.build/Singleton.swift.o","/Users/vagrant/git/.build/x86_64-apple-macosx/debug/Singleton.build/SingletonStorage.swift.o"]
+    other-args: ["-target","x86_64-apple-macosx10.15","-swift-version","5","-enable-batch-mode","-index-store-path","/Users/vagrant/git/.build/x86_64-apple-macosx/debug/index/store","-sdk","/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.15.sdk","-F","/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/Library/Frameworks","-I","/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/usr/lib","-L","/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/usr/lib","-Onone","-enable-testing","-g","-j2","-DSWIFT_PACKAGE","-DDEBUG","-module-cache-path","/Users/vagrant/git/.build/x86_64-apple-macosx/debug/ModuleCache","-parseable-output","-emit-objc-header","-emit-objc-header-path","/Users/vagrant/git/.build/x86_64-apple-macosx/debug/Singleton.build/Singleton-Swift.h"]
+    sources: ["/Users/vagrant/git/Sources/Singleton/Singleton.swift","/Users/vagrant/git/Sources/Singleton/SingletonStorage.swift"]
+    is-library: true
+    enable-whole-module-optimization: false
+    num-threads: 2
+
+  "C.SingletonDynamic-debug.dylib":
+    tool: shell
+    inputs: ["/Users/vagrant/git/.build/x86_64-apple-macosx/debug/Keychain.build/CryptoData.swift.o","/Users/vagrant/git/.build/x86_64-apple-macosx/debug/Keychain.build/Keychain.swift.o","/Users/vagrant/git/.build/x86_64-apple-macosx/debug/Keychain.build/KeychainError.swift.o","/Users/vagrant/git/.build/x86_64-apple-macosx/debug/Keychain.build/KeychainStorage.swift.o","/Users/vagrant/git/.build/x86_64-apple-macosx/debug/Singleton.build/Singleton.swift.o","/Users/vagrant/git/.build/x86_64-apple-macosx/debug/Singleton.build/SingletonStorage.swift.o","/Users/vagrant/git/.build/x86_64-apple-macosx/debug/Storage.build/DataConvertible.swift.o","/Users/vagrant/git/.build/x86_64-apple-macosx/debug/Storage.build/DelegatedStorage.swift.o","/Users/vagrant/git/.build/x86_64-apple-macosx/debug/Storage.build/Storage.swift.o","/Users/vagrant/git/.build/x86_64-apple-macosx/debug/Storage.build/StorageData.swift.o","/Users/vagrant/git/.build/x86_64-apple-macosx/debug/Storage.build/StorageDelegate.swift.o","/Users/vagrant/git/.build/x86_64-apple-macosx/debug/Storage.build/Store.swift.o"]
+    outputs: ["/Users/vagrant/git/.build/x86_64-apple-macosx/debug/libSingletonDynamic.dylib"]
+    description: "Linking ./.build/x86_64-apple-macosx/debug/libSingletonDynamic.dylib"
+    args: ["/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/swiftc","-sdk","/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.15.sdk","-F","/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/Library/Frameworks","-I","/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/usr/lib","-L","/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/usr/lib","-L","/Users/vagrant/git/.build/x86_64-apple-macosx/debug","-o","/Users/vagrant/git/.build/x86_64-apple-macosx/debug/libSingletonDynamic.dylib","-module-name","SingletonDynamic","-emit-library","-Xlinker","-install_name","-Xlinker","@rpath/libSingletonDynamic.dylib","-Xlinker","-rpath","-Xlinker","@loader_path","@/Users/vagrant/git/.build/x86_64-apple-macosx/debug/SingletonDynamic.product/Objects.LinkFileList","-target","x86_64-apple-macosx10.15","-Xlinker","-add_ast_path","-Xlinker","/Users/vagrant/git/.build/x86_64-apple-macosx/debug/Keychain.swiftmodule","-Xlinker","-add_ast_path","-Xlinker","/Users/vagrant/git/.build/x86_64-apple-macosx/debug/Singleton.swiftmodule","-Xlinker","-add_ast_path","-Xlinker","/Users/vagrant/git/.build/x86_64-apple-macosx/debug/Storage.swiftmodule","-L","/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib"]
+
+  "C.Storage-debug.module":
+    tool: swift-compiler
+    inputs: ["/Users/vagrant/git/Sources/Storage/DataConvertible.swift","/Users/vagrant/git/Sources/Storage/DelegatedStorage.swift","/Users/vagrant/git/Sources/Storage/Storage.swift","/Users/vagrant/git/Sources/Storage/StorageData.swift","/Users/vagrant/git/Sources/Storage/StorageDelegate.swift","/Users/vagrant/git/Sources/Storage/Store.swift"]
+    outputs: ["/Users/vagrant/git/.build/x86_64-apple-macosx/debug/Storage.build/DataConvertible.swift.o","/Users/vagrant/git/.build/x86_64-apple-macosx/debug/Storage.build/DelegatedStorage.swift.o","/Users/vagrant/git/.build/x86_64-apple-macosx/debug/Storage.build/Storage.swift.o","/Users/vagrant/git/.build/x86_64-apple-macosx/debug/Storage.build/StorageData.swift.o","/Users/vagrant/git/.build/x86_64-apple-macosx/debug/Storage.build/StorageDelegate.swift.o","/Users/vagrant/git/.build/x86_64-apple-macosx/debug/Storage.build/Store.swift.o","/Users/vagrant/git/.build/x86_64-apple-macosx/debug/Storage.swiftmodule"]
+    executable: "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/swiftc"
+    module-name: "Storage"
+    module-output-path: "/Users/vagrant/git/.build/x86_64-apple-macosx/debug/Storage.swiftmodule"
+    import-paths: ["/Users/vagrant/git/.build/x86_64-apple-macosx/debug"]
+    temps-path: "/Users/vagrant/git/.build/x86_64-apple-macosx/debug/Storage.build"
+    objects: ["/Users/vagrant/git/.build/x86_64-apple-macosx/debug/Storage.build/DataConvertible.swift.o","/Users/vagrant/git/.build/x86_64-apple-macosx/debug/Storage.build/DelegatedStorage.swift.o","/Users/vagrant/git/.build/x86_64-apple-macosx/debug/Storage.build/Storage.swift.o","/Users/vagrant/git/.build/x86_64-apple-macosx/debug/Storage.build/StorageData.swift.o","/Users/vagrant/git/.build/x86_64-apple-macosx/debug/Storage.build/StorageDelegate.swift.o","/Users/vagrant/git/.build/x86_64-apple-macosx/debug/Storage.build/Store.swift.o"]
+    other-args: ["-target","x86_64-apple-macosx10.15","-swift-version","5","-enable-batch-mode","-index-store-path","/Users/vagrant/git/.build/x86_64-apple-macosx/debug/index/store","-sdk","/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.15.sdk","-F","/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/Library/Frameworks","-I","/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/usr/lib","-L","/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/usr/lib","-Onone","-enable-testing","-g","-j2","-DSWIFT_PACKAGE","-DDEBUG","-module-cache-path","/Users/vagrant/git/.build/x86_64-apple-macosx/debug/ModuleCache","-parseable-output","-emit-objc-header","-emit-objc-header-path","/Users/vagrant/git/.build/x86_64-apple-macosx/debug/Storage.build/Storage-Swift.h"]
+    sources: ["/Users/vagrant/git/Sources/Storage/DataConvertible.swift","/Users/vagrant/git/Sources/Storage/DelegatedStorage.swift","/Users/vagrant/git/Sources/Storage/Storage.swift","/Users/vagrant/git/Sources/Storage/StorageData.swift","/Users/vagrant/git/Sources/Storage/StorageDelegate.swift","/Users/vagrant/git/Sources/Storage/Store.swift"]
+    is-library: true
+    enable-whole-module-optimization: false
+    num-threads: 2
+
+  "C.StorageDynamic-debug.dylib":
+    tool: shell
+    inputs: ["/Users/vagrant/git/.build/x86_64-apple-macosx/debug/Storage.build/DataConvertible.swift.o","/Users/vagrant/git/.build/x86_64-apple-macosx/debug/Storage.build/DelegatedStorage.swift.o","/Users/vagrant/git/.build/x86_64-apple-macosx/debug/Storage.build/Storage.swift.o","/Users/vagrant/git/.build/x86_64-apple-macosx/debug/Storage.build/StorageData.swift.o","/Users/vagrant/git/.build/x86_64-apple-macosx/debug/Storage.build/StorageDelegate.swift.o","/Users/vagrant/git/.build/x86_64-apple-macosx/debug/Storage.build/Store.swift.o"]
+    outputs: ["/Users/vagrant/git/.build/x86_64-apple-macosx/debug/libStorageDynamic.dylib"]
+    description: "Linking ./.build/x86_64-apple-macosx/debug/libStorageDynamic.dylib"
+    args: ["/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/swiftc","-sdk","/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.15.sdk","-F","/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/Library/Frameworks","-I","/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/usr/lib","-L","/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/usr/lib","-L","/Users/vagrant/git/.build/x86_64-apple-macosx/debug","-o","/Users/vagrant/git/.build/x86_64-apple-macosx/debug/libStorageDynamic.dylib","-module-name","StorageDynamic","-emit-library","-Xlinker","-install_name","-Xlinker","@rpath/libStorageDynamic.dylib","-Xlinker","-rpath","-Xlinker","@loader_path","@/Users/vagrant/git/.build/x86_64-apple-macosx/debug/StorageDynamic.product/Objects.LinkFileList","-target","x86_64-apple-macosx10.15","-Xlinker","-add_ast_path","-Xlinker","/Users/vagrant/git/.build/x86_64-apple-macosx/debug/Storage.swiftmodule","-L","/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib"]
+
+  "C.UserDefault-debug.module":
+    tool: swift-compiler
+    inputs: ["/Users/vagrant/git/Sources/UserDefault/UserDefault.swift","/Users/vagrant/git/Sources/UserDefault/UserDefaultsStorage.swift","/Users/vagrant/git/.build/x86_64-apple-macosx/debug/Storage.swiftmodule","/Users/vagrant/git/.build/x86_64-apple-macosx/debug/Keychain.swiftmodule"]
+    outputs: ["/Users/vagrant/git/.build/x86_64-apple-macosx/debug/UserDefault.build/UserDefault.swift.o","/Users/vagrant/git/.build/x86_64-apple-macosx/debug/UserDefault.build/UserDefaultsStorage.swift.o","/Users/vagrant/git/.build/x86_64-apple-macosx/debug/UserDefault.swiftmodule"]
+    executable: "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/swiftc"
+    module-name: "UserDefault"
+    module-output-path: "/Users/vagrant/git/.build/x86_64-apple-macosx/debug/UserDefault.swiftmodule"
+    import-paths: ["/Users/vagrant/git/.build/x86_64-apple-macosx/debug"]
+    temps-path: "/Users/vagrant/git/.build/x86_64-apple-macosx/debug/UserDefault.build"
+    objects: ["/Users/vagrant/git/.build/x86_64-apple-macosx/debug/UserDefault.build/UserDefault.swift.o","/Users/vagrant/git/.build/x86_64-apple-macosx/debug/UserDefault.build/UserDefaultsStorage.swift.o"]
+    other-args: ["-target","x86_64-apple-macosx10.15","-swift-version","5","-enable-batch-mode","-index-store-path","/Users/vagrant/git/.build/x86_64-apple-macosx/debug/index/store","-sdk","/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.15.sdk","-F","/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/Library/Frameworks","-I","/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/usr/lib","-L","/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/usr/lib","-Onone","-enable-testing","-g","-j2","-DSWIFT_PACKAGE","-DDEBUG","-module-cache-path","/Users/vagrant/git/.build/x86_64-apple-macosx/debug/ModuleCache","-parseable-output","-emit-objc-header","-emit-objc-header-path","/Users/vagrant/git/.build/x86_64-apple-macosx/debug/UserDefault.build/UserDefault-Swift.h"]
+    sources: ["/Users/vagrant/git/Sources/UserDefault/UserDefault.swift","/Users/vagrant/git/Sources/UserDefault/UserDefaultsStorage.swift"]
+    is-library: true
+    enable-whole-module-optimization: false
+    num-threads: 2
+
+  "C.UserDefaultDynamic-debug.dylib":
+    tool: shell
+    inputs: ["/Users/vagrant/git/.build/x86_64-apple-macosx/debug/Keychain.build/CryptoData.swift.o","/Users/vagrant/git/.build/x86_64-apple-macosx/debug/Keychain.build/Keychain.swift.o","/Users/vagrant/git/.build/x86_64-apple-macosx/debug/Keychain.build/KeychainError.swift.o","/Users/vagrant/git/.build/x86_64-apple-macosx/debug/Keychain.build/KeychainStorage.swift.o","/Users/vagrant/git/.build/x86_64-apple-macosx/debug/Storage.build/DataConvertible.swift.o","/Users/vagrant/git/.build/x86_64-apple-macosx/debug/Storage.build/DelegatedStorage.swift.o","/Users/vagrant/git/.build/x86_64-apple-macosx/debug/Storage.build/Storage.swift.o","/Users/vagrant/git/.build/x86_64-apple-macosx/debug/Storage.build/StorageData.swift.o","/Users/vagrant/git/.build/x86_64-apple-macosx/debug/Storage.build/StorageDelegate.swift.o","/Users/vagrant/git/.build/x86_64-apple-macosx/debug/Storage.build/Store.swift.o","/Users/vagrant/git/.build/x86_64-apple-macosx/debug/UserDefault.build/UserDefault.swift.o","/Users/vagrant/git/.build/x86_64-apple-macosx/debug/UserDefault.build/UserDefaultsStorage.swift.o"]
+    outputs: ["/Users/vagrant/git/.build/x86_64-apple-macosx/debug/libUserDefaultDynamic.dylib"]
+    description: "Linking ./.build/x86_64-apple-macosx/debug/libUserDefaultDynamic.dylib"
+    args: ["/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/swiftc","-sdk","/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.15.sdk","-F","/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/Library/Frameworks","-I","/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/usr/lib","-L","/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/usr/lib","-L","/Users/vagrant/git/.build/x86_64-apple-macosx/debug","-o","/Users/vagrant/git/.build/x86_64-apple-macosx/debug/libUserDefaultDynamic.dylib","-module-name","UserDefaultDynamic","-emit-library","-Xlinker","-install_name","-Xlinker","@rpath/libUserDefaultDynamic.dylib","-Xlinker","-rpath","-Xlinker","@loader_path","@/Users/vagrant/git/.build/x86_64-apple-macosx/debug/UserDefaultDynamic.product/Objects.LinkFileList","-target","x86_64-apple-macosx10.15","-Xlinker","-add_ast_path","-Xlinker","/Users/vagrant/git/.build/x86_64-apple-macosx/debug/Keychain.swiftmodule","-Xlinker","-add_ast_path","-Xlinker","/Users/vagrant/git/.build/x86_64-apple-macosx/debug/Storage.swiftmodule","-Xlinker","-add_ast_path","-Xlinker","/Users/vagrant/git/.build/x86_64-apple-macosx/debug/UserDefault.swiftmodule","-L","/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib"]
+
+  "PackageStructure":
+    tool: package-structure-tool
+    inputs: ["/Users/vagrant/git/Sources/Inject/","/Users/vagrant/git/Sources/Keychain/","/Users/vagrant/git/Sources/Singleton/","/Users/vagrant/git/Sources/Storage/","/Users/vagrant/git/Sources/UserDefault/","/Users/vagrant/git/Tests/SecurePropertyStorageTests/","/Users/vagrant/git/Package.swift","/Users/vagrant/git/Package.resolved"]
+    outputs: ["<PackageStructure>"]
+    description: "Planning build"
+    allow-missing-inputs: true
+

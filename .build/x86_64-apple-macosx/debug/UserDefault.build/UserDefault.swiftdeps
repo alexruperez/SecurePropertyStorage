@@ -1,0 +1,259 @@
+### Swift dependencies file v0 ###
+provides-top-level:
+- "UserDefault"
+- "UnwrappedUserDefault"
+- "CodableUserDefault"
+- "UnwrappedCodableUserDefault"
+provides-nominal:
+- "11UserDefaultAAC"
+- "11UserDefault09UnwrappedaB0C"
+- "11UserDefault07CodableaB0C"
+- "11UserDefault016UnwrappedCodableaB0C"
+provides-member:
+- ["11UserDefaultAAC", ""]
+- ["11UserDefault09UnwrappedaB0C", ""]
+- ["11UserDefault07CodableaB0C", ""]
+- ["11UserDefault016UnwrappedCodableaB0C", ""]
+provides-dynamic-lookup:
+depends-top-level:
+- !private "??"
+- "AssignmentPrecedence"
+- "Codable"
+- "CodableUserDefault"
+- "StoreKey"
+- "StorePropertyWrapper"
+- "StorePropertyWrapperProtocol"
+- "UnwrappedCodableUserDefault"
+- "UnwrappedUserDefault"
+- "UserDefault"
+- "UserDefaultsStorage"
+- "Value"
+- !private "defaultValue"
+- !private "key"
+- !private "storage"
+depends-member:
+- !private ["SK", ""]
+- !private ["s7CVarArgP", "decodable"]
+- !private ["s7CVarArgP", "set"]
+- !private ["s7CVarArgP", "standard"]
+- !private ["s7CVarArgP", "value"]
+- ["11UserDefault07CodableaB0C", "StoreKey"]
+- !private ["11UserDefault07CodableaB0C", "UserDefaultsStorage"]
+- !private ["11UserDefault07CodableaB0C", ""]
+- ["11UserDefault07CodableaB0C", "deinit"]
+- ["11UserDefault07CodableaB0C", "init"]
+- !private ["11UserDefault07CodableaB0C", "key"]
+- ["11UserDefault07CodableaB0C", "projectedValue"]
+- !private ["11UserDefault07CodableaB0C", "storage"]
+- ["11UserDefault07CodableaB0C", "subscript"]
+- ["11UserDefault07CodableaB0C", "wrappedValue"]
+- ["11UserDefault07CodableaB0C", "wrapperValue"]
+- !private ["Sl", ""]
+- !private ["SL", ""]
+- !private ["10Foundation15ContiguousBytesP", ""]
+- !private ["s28CustomDebugStringConvertibleP", "decodable"]
+- !private ["s28CustomDebugStringConvertibleP", "set"]
+- !private ["s28CustomDebugStringConvertibleP", "standard"]
+- !private ["s28CustomDebugStringConvertibleP", "value"]
+- !private ["s23CustomStringConvertibleP", ""]
+- !private ["s23CustomStringConvertibleP", "decodable"]
+- !private ["s23CustomStringConvertibleP", "set"]
+- !private ["s23CustomStringConvertibleP", "standard"]
+- !private ["s23CustomStringConvertibleP", "value"]
+- !private ["SQ", ""]
+- !private ["SQ", "decodable"]
+- !private ["SQ", "set"]
+- !private ["SQ", "standard"]
+- !private ["SQ", "value"]
+- !private ["s43ExpressibleByExtendedGraphemeClusterLiteralP", ""]
+- !private ["s32ExpressibleByStringInterpolationP", ""]
+- !private ["s26ExpressibleByStringLiteralP", ""]
+- !private ["s33ExpressibleByUnicodeScalarLiteralP", ""]
+- !private ["SH", ""]
+- !private ["SH", "decodable"]
+- !private ["SH", "set"]
+- !private ["SH", "standard"]
+- !private ["SH", "value"]
+- !private ["s25LosslessStringConvertibleP", ""]
+- !private ["So8NSCodingP", ""]
+- ["So8NSObjectC", ""]
+- !private ["So8NSObjectC", "decodable"]
+- !private ["So8NSObjectC", "set"]
+- !private ["So8NSObjectC", "setBool"]
+- !private ["So8NSObjectC", "setDouble"]
+- !private ["So8NSObjectC", "setFloat"]
+- !private ["So8NSObjectC", "setInteger"]
+- !private ["So8NSObjectC", "setObject"]
+- !private ["So8NSObjectC", "setURL"]
+- !private ["So8NSObjectC", "standard"]
+- !private ["So8NSObjectC", "value"]
+- !private ["So8NSObjectP", ""]
+- !private ["So8NSObjectP", "decodable"]
+- !private ["So8NSObjectP", "set"]
+- !private ["So8NSObjectP", "setBool"]
+- !private ["So8NSObjectP", "setDouble"]
+- !private ["So8NSObjectP", "setFloat"]
+- !private ["So8NSObjectP", "setInteger"]
+- !private ["So8NSObjectP", "setObject"]
+- !private ["So8NSObjectP", "setURL"]
+- !private ["So8NSObjectP", "standard"]
+- !private ["So8NSObjectP", "value"]
+- !private ["ST", ""]
+- !private ["7StorageAAP", "decodable"]
+- !private ["7StorageAAP", "set"]
+- !private ["7StorageAAP", "standard"]
+- !private ["7StorageAAP", "value"]
+- ["7Storage0A8DelegateP", ""]
+- !private ["7Storage0A8DelegateP", "decodable"]
+- !private ["7Storage0A8DelegateP", "set"]
+- !private ["7Storage0A8DelegateP", "standard"]
+- !private ["7Storage0A8DelegateP", "value"]
+- ["7Storage20StorePropertyWrapperC", "StoreKey"]
+- !private ["7Storage20StorePropertyWrapperC", "UserDefaultsStorage"]
+- ["7Storage20StorePropertyWrapperC", ""]
+- ["7Storage20StorePropertyWrapperC", "init"]
+- !private ["7Storage20StorePropertyWrapperC", "key"]
+- ["7Storage20StorePropertyWrapperC", "projectedValue"]
+- !private ["7Storage20StorePropertyWrapperC", "storage"]
+- ["7Storage20StorePropertyWrapperC", "wrappedValue"]
+- ["7Storage20StorePropertyWrapperC", "wrapperValue"]
+- ["7Storage28StorePropertyWrapperProtocolP", "Default_StorageType"]
+- ["7Storage28StorePropertyWrapperProtocolP", "StorageType"]
+- !private ["7Storage28StorePropertyWrapperProtocolP", "UserDefaultsStorage"]
+- ["7Storage28StorePropertyWrapperProtocolP", ""]
+- ["7Storage28StorePropertyWrapperProtocolP", "_Default_StorageType"]
+- !private ["7Storage28StorePropertyWrapperProtocolP", "defaultValue"]
+- !private ["7Storage28StorePropertyWrapperProtocolP", "init"]
+- ["7Storage28StorePropertyWrapperProtocolP", "key"]
+- ["7Storage28StorePropertyWrapperProtocolP", "storage"]
+- !private ["7Storage28StorePropertyWrapperProtocolP", "wrappedValue"]
+- !private ["s16TextOutputStreamP", ""]
+- !private ["s20TextOutputStreamableP", ""]
+- ["11UserDefault016UnwrappedCodableaB0C", "Default_StorageType"]
+- ["11UserDefault016UnwrappedCodableaB0C", "StorageType"]
+- ["11UserDefault016UnwrappedCodableaB0C", "StoreKey"]
+- ["11UserDefault016UnwrappedCodableaB0C", "UserDefaultsStorage"]
+- ["11UserDefault016UnwrappedCodableaB0C", ""]
+- ["11UserDefault016UnwrappedCodableaB0C", "_Default_StorageType"]
+- ["11UserDefault016UnwrappedCodableaB0C", "defaultValue"]
+- ["11UserDefault016UnwrappedCodableaB0C", "deinit"]
+- ["11UserDefault016UnwrappedCodableaB0C", "init"]
+- ["11UserDefault016UnwrappedCodableaB0C", "key"]
+- ["11UserDefault016UnwrappedCodableaB0C", "projectedValue"]
+- ["11UserDefault016UnwrappedCodableaB0C", "storage"]
+- ["11UserDefault016UnwrappedCodableaB0C", "subscript"]
+- ["11UserDefault016UnwrappedCodableaB0C", "wrappedValue"]
+- ["11UserDefault016UnwrappedCodableaB0C", "wrapperValue"]
+- ["11UserDefault09UnwrappedaB0C", "Default_StorageType"]
+- ["11UserDefault09UnwrappedaB0C", "StorageType"]
+- ["11UserDefault09UnwrappedaB0C", "StoreKey"]
+- ["11UserDefault09UnwrappedaB0C", "UserDefaultsStorage"]
+- ["11UserDefault09UnwrappedaB0C", ""]
+- ["11UserDefault09UnwrappedaB0C", "_Default_StorageType"]
+- ["11UserDefault09UnwrappedaB0C", "defaultValue"]
+- ["11UserDefault09UnwrappedaB0C", "deinit"]
+- ["11UserDefault09UnwrappedaB0C", "init"]
+- ["11UserDefault09UnwrappedaB0C", "key"]
+- ["11UserDefault09UnwrappedaB0C", "projectedValue"]
+- ["11UserDefault09UnwrappedaB0C", "storage"]
+- ["11UserDefault09UnwrappedaB0C", "subscript"]
+- ["11UserDefault09UnwrappedaB0C", "wrappedValue"]
+- ["11UserDefault09UnwrappedaB0C", "wrapperValue"]
+- ["11UserDefaultAAC", "StoreKey"]
+- !private ["11UserDefaultAAC", "UserDefaultsStorage"]
+- !private ["11UserDefaultAAC", ""]
+- ["11UserDefaultAAC", "deinit"]
+- ["11UserDefaultAAC", "init"]
+- !private ["11UserDefaultAAC", "key"]
+- ["11UserDefaultAAC", "projectedValue"]
+- !private ["11UserDefaultAAC", "storage"]
+- ["11UserDefaultAAC", "subscript"]
+- ["11UserDefaultAAC", "wrappedValue"]
+- ["11UserDefaultAAC", "wrapperValue"]
+- ["So14NSUserDefaultsC", ""]
+- !private ["So14NSUserDefaultsC", "decodable"]
+- !private ["So14NSUserDefaultsC", "set"]
+- !private ["So14NSUserDefaultsC", "standard"]
+- !private ["So14NSUserDefaultsC", "value"]
+- ["11UserDefault0A15DefaultsStorageC", ""]
+- !private ["11UserDefault0A15DefaultsStorageC", "decodable"]
+- !private ["11UserDefault0A15DefaultsStorageC", "set"]
+- !private ["11UserDefault0A15DefaultsStorageC", "standard"]
+- !private ["11UserDefault0A15DefaultsStorageC", "value"]
+- !private ["s51_ExpressibleByBuiltinExtendedGraphemeClusterLiteralP", ""]
+- !private ["s41_ExpressibleByBuiltinUnicodeScalarLiteralP", ""]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "decodable"]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "set"]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "standard"]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "value"]
+- !private ["10Foundation37_KeyValueCodingAndObservingPublishingP", "decodable"]
+- !private ["10Foundation37_KeyValueCodingAndObservingPublishingP", "set"]
+- !private ["10Foundation37_KeyValueCodingAndObservingPublishingP", "standard"]
+- !private ["10Foundation37_KeyValueCodingAndObservingPublishingP", "value"]
+depends-nominal:
+- !private "SK"
+- !private "s7CVarArgP"
+- "11UserDefault07CodableaB0C"
+- !private "Sl"
+- !private "SL"
+- !private "10Foundation15ContiguousBytesP"
+- !private "s28CustomDebugStringConvertibleP"
+- !private "s23CustomStringConvertibleP"
+- !private "SQ"
+- !private "s43ExpressibleByExtendedGraphemeClusterLiteralP"
+- !private "s32ExpressibleByStringInterpolationP"
+- !private "s26ExpressibleByStringLiteralP"
+- !private "s33ExpressibleByUnicodeScalarLiteralP"
+- !private "SH"
+- !private "s25LosslessStringConvertibleP"
+- !private "So8NSCodingP"
+- "So8NSObjectC"
+- !private "So8NSObjectP"
+- !private "ST"
+- !private "7StorageAAP"
+- "7Storage0A8DelegateP"
+- "7Storage20StorePropertyWrapperC"
+- "7Storage28StorePropertyWrapperProtocolP"
+- !private "s16TextOutputStreamP"
+- !private "s20TextOutputStreamableP"
+- "11UserDefault016UnwrappedCodableaB0C"
+- "11UserDefault09UnwrappedaB0C"
+- "11UserDefaultAAC"
+- "So14NSUserDefaultsC"
+- "11UserDefault0A15DefaultsStorageC"
+- !private "s51_ExpressibleByBuiltinExtendedGraphemeClusterLiteralP"
+- !private "s41_ExpressibleByBuiltinUnicodeScalarLiteralP"
+- !private "10Foundation27_KeyValueCodingAndObservingP"
+- !private "10Foundation37_KeyValueCodingAndObservingPublishingP"
+depends-dynamic-lookup:
+depends-external:
+- "/Users/vagrant/git/.build/x86_64-apple-macosx/debug/Storage.swiftmodule"
+- "/Users/vagrant/git/.build/x86_64-apple-macosx/debug/Keychain.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/macosx/prebuilt-modules/XPC.swiftmodule/x86_64-apple-macos.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/macosx/prebuilt-modules/ObjectiveC.swiftmodule/x86_64-apple-macos.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/macosx/prebuilt-modules/Combine.swiftmodule/x86_64-apple-macos.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/macosx/prebuilt-modules/Dispatch.swiftmodule/x86_64-apple-macos.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/macosx/prebuilt-modules/Darwin.swiftmodule/x86_64-apple-macos.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/macosx/prebuilt-modules/Foundation.swiftmodule/x86_64-apple-macos.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/macosx/prebuilt-modules/CoreFoundation.swiftmodule/x86_64-apple-macos.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/macosx/prebuilt-modules/CoreGraphics.swiftmodule/x86_64-apple-macos.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/macosx/prebuilt-modules/Swift.swiftmodule/x86_64-apple-macos.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/macosx/prebuilt-modules/IOKit.swiftmodule/x86_64-apple-macos.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/macosx/prebuilt-modules/CryptoKit.swiftmodule/x86_64-apple-macos.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/macosx/prebuilt-modules/SwiftOnoneSupport.swiftmodule/x86_64-apple-macos.swiftmodule"
+- "/Users/vagrant/git/.build/x86_64-apple-macosx/debug/Storage.build/module.modulemap"
+- "/Users/vagrant/git/.build/x86_64-apple-macosx/debug/Keychain.build/module.modulemap"
+- "/Users/vagrant/git/.build/x86_64-apple-macosx/debug/Singleton.build/module.modulemap"
+- "/Users/vagrant/git/.build/x86_64-apple-macosx/debug/Inject.build/module.modulemap"
+- "/Users/vagrant/git/.build/x86_64-apple-macosx/debug/UserDefault.build/module.modulemap"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.15.sdk/usr/include/xpc/XPC.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.15.sdk/usr/include/objc/ObjectiveC.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/apinotes/Dispatch.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.15.sdk/usr/include/Darwin.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.15.sdk/System/Library/Frameworks/LocalAuthentication.framework/Headers/LocalAuthentication.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.15.sdk/System/Library/Frameworks/Foundation.framework/Headers/Foundation.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.15.sdk/System/Library/Frameworks/CoreGraphics.framework/Headers/CoreGraphics.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.15.sdk/System/Library/Frameworks/ApplicationServices.framework/Headers/ApplicationServices.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.15.sdk/System/Library/Frameworks/CoreText.framework/Headers/CoreText.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.15.sdk/System/Library/Frameworks/Security.framework/Headers/Security.apinotes"
+interface-hash: "b9d6b930d3c369f7a62081086a0fac63"

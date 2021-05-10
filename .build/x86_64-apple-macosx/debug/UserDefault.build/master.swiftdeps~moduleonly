@@ -1,0 +1,6 @@
+version: "Apple Swift version 5.3 (swiftlang-1200.0.29.2 clang-1200.0.30.1)"
+options: "6b3d93b231d9508d08538eae98468edc"
+build_time: [1620632651, 722948000]
+inputs:
+  "/Users/vagrant/git/Sources/UserDefault/UserDefault.swift": [1620632513, 930125982]
+  "/Users/vagrant/git/Sources/UserDefault/UserDefaultsStorage.swift": [1620632513, 930402010]

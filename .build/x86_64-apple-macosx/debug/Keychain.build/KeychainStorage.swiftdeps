@@ -1,0 +1,361 @@
+### Swift dependencies file v0 ###
+provides-top-level:
+- "KeychainStorage"
+- "KeychainStorageDelegate"
+provides-nominal:
+- "8Keychain0A7StorageC"
+- "8Keychain0A15StorageDelegateC"
+provides-member:
+- ["8Keychain0A7StorageC", ""]
+- ["8Keychain0A15StorageDelegateC", ""]
+provides-dynamic-lookup:
+- "accessGroup"
+- "accessible"
+- "data"
+- "delete"
+- "keychainDelegate"
+- "read"
+- "remove"
+- "set"
+- "shared"
+- "standard"
+- "store"
+- "synchronizable"
+depends-top-level:
+- !private "=="
+- !private "??"
+- "AssignmentPrecedence"
+- "Bool"
+- "BooleanLiteralType"
+- "CFDictionary"
+- "CFString"
+- "CFTypeRef"
+- "CastingPrecedence"
+- "Data"
+- "DelegatedStorage"
+- !private "Dictionary"
+- !private "FloatLiteralType"
+- !private "IntegerLiteralType"
+- !private "KeychainError"
+- "KeychainStorage"
+- "KeychainStorageDelegate"
+- !private "SecItemAdd"
+- !private "SecItemCopyMatching"
+- !private "SecItemDelete"
+- "StorageData"
+- "StorageDelegate"
+- "StorageErrorClosure"
+- "StoreKey"
+- "String"
+- !private "StringLiteralType"
+- !private "SymmetricKey"
+- !private "accessGroup"
+- !private "accessible"
+- !private "delegate"
+- !private "delete"
+- !private "errSecItemNotFound"
+- !private "errSecSuccess"
+- !private "kCFBooleanTrue"
+- !private "kSecAttrAccessGroup"
+- !private "kSecAttrAccessible"
+- "kSecAttrAccessibleWhenUnlocked"
+- !private "kSecAttrAccount"
+- !private "kSecAttrSynchronizable"
+- !private "kSecClass"
+- !private "kSecClassGenericPassword"
+- !private "kSecReturnData"
+- !private "kSecUseDataProtectionKeychain"
+- !private "kSecValueData"
+- !private "keychainDelegate"
+- !private "read"
+- !private "remove"
+- !private "shared"
+- !private "store"
+- !private "synchronizable"
+- !private "~="
+depends-member:
+- !private ["s18AdditiveArithmeticP", ""]
+- !private ["s18AdditiveArithmeticP", "message"]
+- !private ["Sz", ""]
+- !private ["Sz", "message"]
+- !private ["s7CVarArgP", "message"]
+- !private ["s7CVarArgP", "subscript"]
+- !private ["Sl", "subscript"]
+- !private ["SL", ""]
+- !private ["SL", "message"]
+- ["10Foundation15ContiguousBytesP", ""]
+- !private ["10Foundation15ContiguousBytesP", "data"]
+- !private ["10Foundation15ContiguousBytesP", "generate"]
+- !private ["10Foundation15ContiguousBytesP", "init"]
+- !private ["s28CustomDebugStringConvertibleP", "subscript"]
+- !private ["s17CustomReflectableP", "message"]
+- !private ["s17CustomReflectableP", "subscript"]
+- !private ["s23CustomStringConvertibleP", ""]
+- !private ["s23CustomStringConvertibleP", "appendInterpolation"]
+- !private ["s23CustomStringConvertibleP", "appendLiteral"]
+- !private ["s23CustomStringConvertibleP", "error"]
+- !private ["s23CustomStringConvertibleP", "message"]
+- !private ["s23CustomStringConvertibleP", "subscript"]
+- !private ["Se", "message"]
+- !private ["Se", "subscript"]
+- !private ["s26DefaultStringInterpolationV", "appendInterpolation"]
+- !private ["s26DefaultStringInterpolationV", "appendLiteral"]
+- ["7Storage09DelegatedA0C", "Bool"]
+- ["7Storage09DelegatedA0C", "CFString"]
+- ["7Storage09DelegatedA0C", "Data"]
+- ["7Storage09DelegatedA0C", "KeychainStorage"]
+- ["7Storage09DelegatedA0C", "KeychainStorageDelegate"]
+- ["7Storage09DelegatedA0C", "StorageDelegate"]
+- ["7Storage09DelegatedA0C", "StorageErrorClosure"]
+- ["7Storage09DelegatedA0C", "String"]
+- !private ["7Storage09DelegatedA0C", "SymmetricKey"]
+- ["7Storage09DelegatedA0C", ""]
+- ["7Storage09DelegatedA0C", "accessGroup"]
+- ["7Storage09DelegatedA0C", "accessible"]
+- !private ["7Storage09DelegatedA0C", "delegate"]
+- ["7Storage09DelegatedA0C", "init"]
+- !private ["7Storage09DelegatedA0C", "kSecAttrAccessibleWhenUnlocked"]
+- ["7Storage09DelegatedA0C", "keychainDelegate"]
+- ["7Storage09DelegatedA0C", "shared"]
+- ["7Storage09DelegatedA0C", "standard"]
+- ["7Storage09DelegatedA0C", "synchronizable"]
+- !private ["SD", "subscript"]
+- !private ["SE", "message"]
+- !private ["SE", "subscript"]
+- !private ["SQ", ""]
+- !private ["SQ", "generate"]
+- !private ["SQ", "message"]
+- !private ["SQ", "subscript"]
+- !private ["s5ErrorP", "error"]
+- !private ["s30ExpressibleByDictionaryLiteralP", "Key"]
+- !private ["s30ExpressibleByDictionaryLiteralP", "Value"]
+- !private ["s30ExpressibleByDictionaryLiteralP", "init"]
+- !private ["s30ExpressibleByDictionaryLiteralP", "subscript"]
+- !private ["s27ExpressibleByIntegerLiteralP", ""]
+- !private ["s27ExpressibleByIntegerLiteralP", "message"]
+- !private ["s32ExpressibleByStringInterpolationP", "StringInterpolation"]
+- !private ["s32ExpressibleByStringInterpolationP", "init"]
+- !private ["s17FixedWidthIntegerP", "message"]
+- !private ["SH", ""]
+- !private ["SH", "message"]
+- !private ["SH", "subscript"]
+- !private ["s5Int32V", "message"]
+- !private ["8Keychain0A5ErrorO", ""]
+- !private ["8Keychain0A5ErrorO", "error"]
+- ["8Keychain0A7StorageC", "Bool"]
+- ["8Keychain0A7StorageC", "CFString"]
+- ["8Keychain0A7StorageC", "Data"]
+- ["8Keychain0A7StorageC", "KeychainStorage"]
+- ["8Keychain0A7StorageC", "KeychainStorageDelegate"]
+- ["8Keychain0A7StorageC", "StorageDelegate"]
+- ["8Keychain0A7StorageC", "StorageErrorClosure"]
+- ["8Keychain0A7StorageC", "String"]
+- !private ["8Keychain0A7StorageC", "SymmetricKey"]
+- ["8Keychain0A7StorageC", "accessGroup"]
+- ["8Keychain0A7StorageC", "accessible"]
+- ["8Keychain0A7StorageC", "deinit"]
+- !private ["8Keychain0A7StorageC", "delegate"]
+- ["8Keychain0A7StorageC", "init"]
+- !private ["8Keychain0A7StorageC", "kSecAttrAccessibleWhenUnlocked"]
+- !private ["8Keychain0A7StorageC", "keychainDelegate"]
+- !private ["8Keychain0A7StorageC", "shared"]
+- ["8Keychain0A7StorageC", "standard"]
+- ["8Keychain0A7StorageC", "synchronizable"]
+- ["8Keychain0A15StorageDelegateC", "Bool"]
+- !private ["8Keychain0A15StorageDelegateC", "CFDictionary"]
+- ["8Keychain0A15StorageDelegateC", "CFString"]
+- !private ["8Keychain0A15StorageDelegateC", "CFTypeRef"]
+- !private ["8Keychain0A15StorageDelegateC", "Data"]
+- !private ["8Keychain0A15StorageDelegateC", "KeychainError"]
+- !private ["8Keychain0A15StorageDelegateC", "SecItemAdd"]
+- !private ["8Keychain0A15StorageDelegateC", "SecItemCopyMatching"]
+- !private ["8Keychain0A15StorageDelegateC", "SecItemDelete"]
+- ["8Keychain0A15StorageDelegateC", "StorageData"]
+- ["8Keychain0A15StorageDelegateC", "StoreKey"]
+- ["8Keychain0A15StorageDelegateC", "String"]
+- ["8Keychain0A15StorageDelegateC", ""]
+- ["8Keychain0A15StorageDelegateC", "accessGroup"]
+- ["8Keychain0A15StorageDelegateC", "accessible"]
+- ["8Keychain0A15StorageDelegateC", "data"]
+- ["8Keychain0A15StorageDelegateC", "deinit"]
+- ["8Keychain0A15StorageDelegateC", "delete"]
+- !private ["8Keychain0A15StorageDelegateC", "errSecItemNotFound"]
+- !private ["8Keychain0A15StorageDelegateC", "errSecSuccess"]
+- ["8Keychain0A15StorageDelegateC", "init"]
+- !private ["8Keychain0A15StorageDelegateC", "kCFBooleanTrue"]
+- !private ["8Keychain0A15StorageDelegateC", "kSecAttrAccessGroup"]
+- !private ["8Keychain0A15StorageDelegateC", "kSecAttrAccessible"]
+- ["8Keychain0A15StorageDelegateC", "kSecAttrAccessibleWhenUnlocked"]
+- !private ["8Keychain0A15StorageDelegateC", "kSecAttrAccount"]
+- !private ["8Keychain0A15StorageDelegateC", "kSecAttrSynchronizable"]
+- !private ["8Keychain0A15StorageDelegateC", "kSecClass"]
+- !private ["8Keychain0A15StorageDelegateC", "kSecClassGenericPassword"]
+- !private ["8Keychain0A15StorageDelegateC", "kSecReturnData"]
+- !private ["8Keychain0A15StorageDelegateC", "kSecUseDataProtectionKeychain"]
+- !private ["8Keychain0A15StorageDelegateC", "kSecValueData"]
+- ["8Keychain0A15StorageDelegateC", "read"]
+- ["8Keychain0A15StorageDelegateC", "remove"]
+- ["8Keychain0A15StorageDelegateC", "set"]
+- ["8Keychain0A15StorageDelegateC", "store"]
+- ["8Keychain0A15StorageDelegateC", "synchronizable"]
+- !private ["s25LosslessStringConvertibleP", ""]
+- !private ["s25LosslessStringConvertibleP", "message"]
+- !private ["So8NSCodingP", ""]
+- ["So8NSObjectC", ""]
+- !private ["So8NSObjectP", ""]
+- !private ["Sj", ""]
+- !private ["Sj", "message"]
+- !private ["s10SIMDScalarP", "message"]
+- !private ["ST", ""]
+- !private ["ST", "subscript"]
+- !private ["SZ", "message"]
+- !private ["s13SignedNumericP", ""]
+- !private ["s13SignedNumericP", "message"]
+- ["7StorageAAP", "KeychainStorage"]
+- !private ["7StorageAAP", "KeychainStorageDelegate"]
+- !private ["7StorageAAP", "SymmetricKey"]
+- ["7StorageAAP", ""]
+- !private ["7StorageAAP", "accessGroup"]
+- !private ["7StorageAAP", "accessible"]
+- !private ["7StorageAAP", "delegate"]
+- ["7StorageAAP", "init"]
+- !private ["7StorageAAP", "kSecAttrAccessibleWhenUnlocked"]
+- !private ["7StorageAAP", "keychainDelegate"]
+- !private ["7StorageAAP", "shared"]
+- !private ["7StorageAAP", "standard"]
+- !private ["7StorageAAP", "synchronizable"]
+- !private ["7Storage0A4DataP", "data"]
+- !private ["7Storage0A4DataP", "generate"]
+- !private ["7Storage0A4DataP", "init"]
+- !private ["7Storage0A8DelegateP", "KeychainError"]
+- ["7Storage0A8DelegateP", "KeychainStorage"]
+- !private ["7Storage0A8DelegateP", "KeychainStorageDelegate"]
+- !private ["7Storage0A8DelegateP", "SecItemAdd"]
+- !private ["7Storage0A8DelegateP", "SecItemCopyMatching"]
+- !private ["7Storage0A8DelegateP", "SecItemDelete"]
+- !private ["7Storage0A8DelegateP", "SymmetricKey"]
+- ["7Storage0A8DelegateP", ""]
+- !private ["7Storage0A8DelegateP", "accessGroup"]
+- !private ["7Storage0A8DelegateP", "accessible"]
+- ["7Storage0A8DelegateP", "data"]
+- !private ["7Storage0A8DelegateP", "delegate"]
+- !private ["7Storage0A8DelegateP", "delete"]
+- !private ["7Storage0A8DelegateP", "errSecItemNotFound"]
+- !private ["7Storage0A8DelegateP", "errSecSuccess"]
+- ["7Storage0A8DelegateP", "init"]
+- !private ["7Storage0A8DelegateP", "kCFBooleanTrue"]
+- !private ["7Storage0A8DelegateP", "kSecAttrAccessGroup"]
+- !private ["7Storage0A8DelegateP", "kSecAttrAccessible"]
+- ["7Storage0A8DelegateP", "kSecAttrAccessibleWhenUnlocked"]
+- !private ["7Storage0A8DelegateP", "kSecAttrAccount"]
+- !private ["7Storage0A8DelegateP", "kSecAttrSynchronizable"]
+- !private ["7Storage0A8DelegateP", "kSecClass"]
+- !private ["7Storage0A8DelegateP", "kSecClassGenericPassword"]
+- !private ["7Storage0A8DelegateP", "kSecReturnData"]
+- !private ["7Storage0A8DelegateP", "kSecUseDataProtectionKeychain"]
+- !private ["7Storage0A8DelegateP", "kSecValueData"]
+- !private ["7Storage0A8DelegateP", "keychainDelegate"]
+- !private ["7Storage0A8DelegateP", "read"]
+- ["7Storage0A8DelegateP", "remove"]
+- ["7Storage0A8DelegateP", "set"]
+- !private ["7Storage0A8DelegateP", "shared"]
+- !private ["7Storage0A8DelegateP", "standard"]
+- !private ["7Storage0A8DelegateP", "store"]
+- !private ["7Storage0A8DelegateP", "synchronizable"]
+- !private ["Sx", ""]
+- !private ["Sx", "message"]
+- !private ["s27StringInterpolationProtocolP", "appendInterpolation"]
+- !private ["s27StringInterpolationProtocolP", "appendLiteral"]
+- !private ["s27StringInterpolationProtocolP", "init"]
+- !private ["9CryptoKit12SymmetricKeyV", "generate"]
+- !private ["s16TextOutputStreamP", "appendInterpolation"]
+- !private ["s16TextOutputStreamP", "appendLiteral"]
+- !private ["s30_CustomPlaygroundQuickLookableP", "message"]
+- ["s35_ExpressibleByBuiltinBooleanLiteralP", "init"]
+- !private ["s35_ExpressibleByBuiltinIntegerLiteralP", "init"]
+- !private ["s35_ExpressibleByBuiltinIntegerLiteralP", "message"]
+- !private ["s34_ExpressibleByBuiltinStringLiteralP", "init"]
+- !private ["s35_HasCustomAnyHashableRepresentationP", "message"]
+- !private ["s35_HasCustomAnyHashableRepresentationP", "subscript"]
+- !private ["s21_ObjectiveCBridgeableP", "_ObjectiveCType"]
+- !private ["s21_ObjectiveCBridgeableP", "message"]
+- !private ["s21_ObjectiveCBridgeableP", "subscript"]
+depends-nominal:
+- !private "s18AdditiveArithmeticP"
+- !private "Sz"
+- !private "s7CVarArgP"
+- !private "Sl"
+- !private "SL"
+- "10Foundation15ContiguousBytesP"
+- !private "s28CustomDebugStringConvertibleP"
+- !private "s17CustomReflectableP"
+- !private "s23CustomStringConvertibleP"
+- !private "Se"
+- !private "s26DefaultStringInterpolationV"
+- "7Storage09DelegatedA0C"
+- !private "SD"
+- !private "SE"
+- !private "SQ"
+- !private "s5ErrorP"
+- !private "s30ExpressibleByDictionaryLiteralP"
+- !private "s27ExpressibleByIntegerLiteralP"
+- !private "s32ExpressibleByStringInterpolationP"
+- !private "s17FixedWidthIntegerP"
+- !private "SH"
+- !private "s5Int32V"
+- !private "8Keychain0A5ErrorO"
+- "8Keychain0A7StorageC"
+- "8Keychain0A15StorageDelegateC"
+- !private "s25LosslessStringConvertibleP"
+- !private "So8NSCodingP"
+- "So8NSObjectC"
+- !private "So8NSObjectP"
+- !private "Sj"
+- !private "s10SIMDScalarP"
+- !private "ST"
+- !private "SZ"
+- !private "s13SignedNumericP"
+- "7StorageAAP"
+- !private "7Storage0A4DataP"
+- "7Storage0A8DelegateP"
+- !private "Sx"
+- !private "s27StringInterpolationProtocolP"
+- !private "9CryptoKit12SymmetricKeyV"
+- !private "s16TextOutputStreamP"
+- !private "s30_CustomPlaygroundQuickLookableP"
+- "s35_ExpressibleByBuiltinBooleanLiteralP"
+- !private "s35_ExpressibleByBuiltinIntegerLiteralP"
+- !private "s34_ExpressibleByBuiltinStringLiteralP"
+- !private "s35_HasCustomAnyHashableRepresentationP"
+- !private "s21_ObjectiveCBridgeableP"
+depends-dynamic-lookup:
+depends-external:
+- "/Users/vagrant/git/.build/x86_64-apple-macosx/debug/Storage.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/macosx/prebuilt-modules/XPC.swiftmodule/x86_64-apple-macos.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/macosx/prebuilt-modules/ObjectiveC.swiftmodule/x86_64-apple-macos.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/macosx/prebuilt-modules/Combine.swiftmodule/x86_64-apple-macos.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/macosx/prebuilt-modules/Dispatch.swiftmodule/x86_64-apple-macos.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/macosx/prebuilt-modules/Darwin.swiftmodule/x86_64-apple-macos.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/macosx/prebuilt-modules/Foundation.swiftmodule/x86_64-apple-macos.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/macosx/prebuilt-modules/CoreFoundation.swiftmodule/x86_64-apple-macos.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/macosx/prebuilt-modules/CoreGraphics.swiftmodule/x86_64-apple-macos.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/macosx/prebuilt-modules/Swift.swiftmodule/x86_64-apple-macos.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/macosx/prebuilt-modules/IOKit.swiftmodule/x86_64-apple-macos.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/macosx/prebuilt-modules/CryptoKit.swiftmodule/x86_64-apple-macos.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/macosx/prebuilt-modules/SwiftOnoneSupport.swiftmodule/x86_64-apple-macos.swiftmodule"
+- "/Users/vagrant/git/.build/x86_64-apple-macosx/debug/Storage.build/module.modulemap"
+- "/Users/vagrant/git/.build/x86_64-apple-macosx/debug/Keychain.build/module.modulemap"
+- "/Users/vagrant/git/.build/x86_64-apple-macosx/debug/Singleton.build/module.modulemap"
+- "/Users/vagrant/git/.build/x86_64-apple-macosx/debug/Inject.build/module.modulemap"
+- "/Users/vagrant/git/.build/x86_64-apple-macosx/debug/UserDefault.build/module.modulemap"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.15.sdk/usr/include/xpc/XPC.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.15.sdk/usr/include/objc/ObjectiveC.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/apinotes/Dispatch.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.15.sdk/usr/include/Darwin.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.15.sdk/System/Library/Frameworks/LocalAuthentication.framework/Headers/LocalAuthentication.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.15.sdk/System/Library/Frameworks/Foundation.framework/Headers/Foundation.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.15.sdk/System/Library/Frameworks/CoreGraphics.framework/Headers/CoreGraphics.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.15.sdk/System/Library/Frameworks/ApplicationServices.framework/Headers/ApplicationServices.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.15.sdk/System/Library/Frameworks/CoreText.framework/Headers/CoreText.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.15.sdk/System/Library/Frameworks/Security.framework/Headers/Security.apinotes"
+interface-hash: "6c4dc89735ae0dced96abd66572faa09"

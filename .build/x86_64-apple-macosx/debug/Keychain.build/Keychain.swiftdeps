@@ -1,0 +1,166 @@
+### Swift dependencies file v0 ###
+provides-top-level:
+- "Keychain"
+- "UnwrappedKeychain"
+- "CodableKeychain"
+- "UnwrappedCodableKeychain"
+provides-nominal:
+- "8KeychainAAC"
+- "8Keychain09UnwrappedA0C"
+- "8Keychain07CodableA0C"
+- "8Keychain016UnwrappedCodableA0C"
+provides-member:
+- ["8KeychainAAC", ""]
+- ["8Keychain09UnwrappedA0C", ""]
+- ["8Keychain07CodableA0C", ""]
+- ["8Keychain016UnwrappedCodableA0C", ""]
+provides-dynamic-lookup:
+depends-top-level:
+- !private "??"
+- "AssignmentPrecedence"
+- "Codable"
+- "CodableKeychain"
+- "Keychain"
+- "KeychainStorage"
+- "StoreKey"
+- "StorePropertyWrapper"
+- "StorePropertyWrapperProtocol"
+- "UnwrappedCodableKeychain"
+- "UnwrappedKeychain"
+- "Value"
+- !private "defaultValue"
+- !private "key"
+- !private "storage"
+depends-member:
+- !private ["8Keychain07CodableA0C", "KeychainStorage"]
+- ["8Keychain07CodableA0C", "StoreKey"]
+- !private ["8Keychain07CodableA0C", ""]
+- ["8Keychain07CodableA0C", "deinit"]
+- ["8Keychain07CodableA0C", "init"]
+- !private ["8Keychain07CodableA0C", "key"]
+- ["8Keychain07CodableA0C", "projectedValue"]
+- !private ["8Keychain07CodableA0C", "storage"]
+- ["8Keychain07CodableA0C", "subscript"]
+- ["8Keychain07CodableA0C", "wrappedValue"]
+- ["8Keychain07CodableA0C", "wrapperValue"]
+- ["7Storage09DelegatedA0C", ""]
+- !private ["7Storage09DelegatedA0C", "decodable"]
+- !private ["7Storage09DelegatedA0C", "set"]
+- !private ["7Storage09DelegatedA0C", "standard"]
+- !private ["7Storage09DelegatedA0C", "value"]
+- !private ["8KeychainAAC", "KeychainStorage"]
+- ["8KeychainAAC", "StoreKey"]
+- !private ["8KeychainAAC", ""]
+- ["8KeychainAAC", "deinit"]
+- ["8KeychainAAC", "init"]
+- !private ["8KeychainAAC", "key"]
+- ["8KeychainAAC", "projectedValue"]
+- !private ["8KeychainAAC", "storage"]
+- ["8KeychainAAC", "subscript"]
+- ["8KeychainAAC", "wrappedValue"]
+- ["8KeychainAAC", "wrapperValue"]
+- ["8Keychain0A7StorageC", ""]
+- !private ["8Keychain0A7StorageC", "decodable"]
+- !private ["8Keychain0A7StorageC", "set"]
+- !private ["8Keychain0A7StorageC", "standard"]
+- !private ["8Keychain0A7StorageC", "value"]
+- !private ["7StorageAAP", "decodable"]
+- !private ["7StorageAAP", "set"]
+- !private ["7StorageAAP", "standard"]
+- !private ["7StorageAAP", "value"]
+- ["7Storage0A8DelegateP", ""]
+- !private ["7Storage0A8DelegateP", "decodable"]
+- !private ["7Storage0A8DelegateP", "set"]
+- !private ["7Storage0A8DelegateP", "standard"]
+- !private ["7Storage0A8DelegateP", "value"]
+- !private ["7Storage20StorePropertyWrapperC", "KeychainStorage"]
+- ["7Storage20StorePropertyWrapperC", "StoreKey"]
+- ["7Storage20StorePropertyWrapperC", ""]
+- ["7Storage20StorePropertyWrapperC", "init"]
+- !private ["7Storage20StorePropertyWrapperC", "key"]
+- ["7Storage20StorePropertyWrapperC", "projectedValue"]
+- !private ["7Storage20StorePropertyWrapperC", "storage"]
+- ["7Storage20StorePropertyWrapperC", "wrappedValue"]
+- ["7Storage20StorePropertyWrapperC", "wrapperValue"]
+- ["7Storage28StorePropertyWrapperProtocolP", "Default_StorageType"]
+- !private ["7Storage28StorePropertyWrapperProtocolP", "KeychainStorage"]
+- ["7Storage28StorePropertyWrapperProtocolP", "StorageType"]
+- ["7Storage28StorePropertyWrapperProtocolP", ""]
+- ["7Storage28StorePropertyWrapperProtocolP", "_Default_StorageType"]
+- !private ["7Storage28StorePropertyWrapperProtocolP", "defaultValue"]
+- !private ["7Storage28StorePropertyWrapperProtocolP", "init"]
+- ["7Storage28StorePropertyWrapperProtocolP", "key"]
+- ["7Storage28StorePropertyWrapperProtocolP", "storage"]
+- !private ["7Storage28StorePropertyWrapperProtocolP", "wrappedValue"]
+- ["8Keychain016UnwrappedCodableA0C", "Default_StorageType"]
+- ["8Keychain016UnwrappedCodableA0C", "KeychainStorage"]
+- ["8Keychain016UnwrappedCodableA0C", "StorageType"]
+- ["8Keychain016UnwrappedCodableA0C", "StoreKey"]
+- ["8Keychain016UnwrappedCodableA0C", ""]
+- ["8Keychain016UnwrappedCodableA0C", "_Default_StorageType"]
+- ["8Keychain016UnwrappedCodableA0C", "defaultValue"]
+- ["8Keychain016UnwrappedCodableA0C", "deinit"]
+- ["8Keychain016UnwrappedCodableA0C", "init"]
+- ["8Keychain016UnwrappedCodableA0C", "key"]
+- ["8Keychain016UnwrappedCodableA0C", "projectedValue"]
+- ["8Keychain016UnwrappedCodableA0C", "storage"]
+- ["8Keychain016UnwrappedCodableA0C", "subscript"]
+- ["8Keychain016UnwrappedCodableA0C", "wrappedValue"]
+- ["8Keychain016UnwrappedCodableA0C", "wrapperValue"]
+- ["8Keychain09UnwrappedA0C", "Default_StorageType"]
+- ["8Keychain09UnwrappedA0C", "KeychainStorage"]
+- ["8Keychain09UnwrappedA0C", "StorageType"]
+- ["8Keychain09UnwrappedA0C", "StoreKey"]
+- ["8Keychain09UnwrappedA0C", ""]
+- ["8Keychain09UnwrappedA0C", "_Default_StorageType"]
+- ["8Keychain09UnwrappedA0C", "defaultValue"]
+- ["8Keychain09UnwrappedA0C", "deinit"]
+- ["8Keychain09UnwrappedA0C", "init"]
+- ["8Keychain09UnwrappedA0C", "key"]
+- ["8Keychain09UnwrappedA0C", "projectedValue"]
+- ["8Keychain09UnwrappedA0C", "storage"]
+- ["8Keychain09UnwrappedA0C", "subscript"]
+- ["8Keychain09UnwrappedA0C", "wrappedValue"]
+- ["8Keychain09UnwrappedA0C", "wrapperValue"]
+depends-nominal:
+- "8Keychain07CodableA0C"
+- "7Storage09DelegatedA0C"
+- "8KeychainAAC"
+- "8Keychain0A7StorageC"
+- !private "7StorageAAP"
+- "7Storage0A8DelegateP"
+- "7Storage20StorePropertyWrapperC"
+- "7Storage28StorePropertyWrapperProtocolP"
+- "8Keychain016UnwrappedCodableA0C"
+- "8Keychain09UnwrappedA0C"
+depends-dynamic-lookup:
+depends-external:
+- "/Users/vagrant/git/.build/x86_64-apple-macosx/debug/Storage.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/macosx/prebuilt-modules/XPC.swiftmodule/x86_64-apple-macos.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/macosx/prebuilt-modules/ObjectiveC.swiftmodule/x86_64-apple-macos.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/macosx/prebuilt-modules/Combine.swiftmodule/x86_64-apple-macos.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/macosx/prebuilt-modules/Dispatch.swiftmodule/x86_64-apple-macos.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/macosx/prebuilt-modules/Darwin.swiftmodule/x86_64-apple-macos.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/macosx/prebuilt-modules/Foundation.swiftmodule/x86_64-apple-macos.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/macosx/prebuilt-modules/CoreFoundation.swiftmodule/x86_64-apple-macos.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/macosx/prebuilt-modules/CoreGraphics.swiftmodule/x86_64-apple-macos.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/macosx/prebuilt-modules/Swift.swiftmodule/x86_64-apple-macos.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/macosx/prebuilt-modules/IOKit.swiftmodule/x86_64-apple-macos.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/macosx/prebuilt-modules/CryptoKit.swiftmodule/x86_64-apple-macos.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/macosx/prebuilt-modules/SwiftOnoneSupport.swiftmodule/x86_64-apple-macos.swiftmodule"
+- "/Users/vagrant/git/.build/x86_64-apple-macosx/debug/Storage.build/module.modulemap"
+- "/Users/vagrant/git/.build/x86_64-apple-macosx/debug/Keychain.build/module.modulemap"
+- "/Users/vagrant/git/.build/x86_64-apple-macosx/debug/Singleton.build/module.modulemap"
+- "/Users/vagrant/git/.build/x86_64-apple-macosx/debug/Inject.build/module.modulemap"
+- "/Users/vagrant/git/.build/x86_64-apple-macosx/debug/UserDefault.build/module.modulemap"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.15.sdk/usr/include/xpc/XPC.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.15.sdk/usr/include/objc/ObjectiveC.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/apinotes/Dispatch.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.15.sdk/usr/include/Darwin.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.15.sdk/System/Library/Frameworks/LocalAuthentication.framework/Headers/LocalAuthentication.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.15.sdk/System/Library/Frameworks/Foundation.framework/Headers/Foundation.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.15.sdk/System/Library/Frameworks/CoreGraphics.framework/Headers/CoreGraphics.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.15.sdk/System/Library/Frameworks/ApplicationServices.framework/Headers/ApplicationServices.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.15.sdk/System/Library/Frameworks/CoreText.framework/Headers/CoreText.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.15.sdk/System/Library/Frameworks/Security.framework/Headers/Security.apinotes"
+interface-hash: "93cb5cab3abc55ce6d27a514d2f616d1"

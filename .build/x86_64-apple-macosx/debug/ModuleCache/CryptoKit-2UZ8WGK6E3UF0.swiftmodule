@@ -1,0 +1,48 @@
+---
+path:            '/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/macosx/prebuilt-modules/CryptoKit.swiftmodule/x86_64-apple-macos.swiftmodule'
+dependencies:
+  - mtime:           1600454086000000000
+    path:            '/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/macosx/prebuilt-modules/CryptoKit.swiftmodule/x86_64-apple-macos.swiftmodule'
+    size:            110276
+  - mtime:           1591401369000000000
+    path:            'usr/include/Darwin.apinotes'
+    size:            1133
+    sdk_relative:    true
+  - mtime:           1599028734000000000
+    path:            'usr/include/objc/ObjectiveC.apinotes'
+    size:            11147
+    sdk_relative:    true
+  - mtime:           1593624786000000000
+    path:            'System/Library/Frameworks/CoreGraphics.framework/Headers/CoreGraphics.apinotes'
+    size:            29817
+    sdk_relative:    true
+  - mtime:           1592181948000000000
+    path:            'System/Library/Frameworks/Security.framework/Headers/Security.apinotes'
+    size:            162
+    sdk_relative:    true
+  - mtime:           1591402611000000000
+    path:            'usr/include/xpc/XPC.apinotes'
+    size:            123
+    sdk_relative:    true
+  - mtime:           1591416114000000000
+    path:            'System/Library/Frameworks/CoreText.framework/Headers/CoreText.apinotes'
+    size:            1662
+    sdk_relative:    true
+  - mtime:           1593624904000000000
+    path:            'System/Library/Frameworks/ApplicationServices.framework/Headers/ApplicationServices.apinotes'
+    size:            2012
+    sdk_relative:    true
+  - mtime:           1591576484000000000
+    path:            'System/Library/Frameworks/Foundation.framework/Headers/Foundation.apinotes'
+    size:            80492
+    sdk_relative:    true
+  - mtime:           1592187529000000000
+    path:            'System/Library/Frameworks/LocalAuthentication.framework/Headers/LocalAuthentication.apinotes'
+    size:            83
+    sdk_relative:    true
+  - mtime:           1593625499000000000
+    path:            'System/Library/Frameworks/CryptoKit.framework/Modules/CryptoKit.swiftmodule/x86_64-apple-macos.swiftinterface'
+    size:            33232
+    sdk_relative:    true
+version:         1
+...
