@@ -2,6 +2,17 @@
 
 ## Next Version
 
+## 0.4.2
+
+#### Fixed
+- Carthage compatible fix. [#20](https://github.com/alexruperez/SecurePropertyStorage/pull/20) Thanks [@AlbGarciam](https://github.com/AlbGarciam)!
+
+#### Improvements
+
+- Swift Package Manager tools version update to 5.3
+
+[Commits](https://github.com/alexruperez/SecurePropertyStorage/compare/0.4.1...0.4.2)
+
 ## 0.4.1
 
 #### Fixed
