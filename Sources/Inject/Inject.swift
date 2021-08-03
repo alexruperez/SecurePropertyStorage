@@ -23,7 +23,7 @@ open class InjectPropertyWrapper<Dependency, Parameters>: StorePropertyWrapper<I
     /// All `@objc protocol`s to be used as qualifiers of your dependencies.
     open var qualifiers: [Qualifier]?
     /// Dependency group key.
-    open var group: DependencyGroupKey? = nil
+    open var group: DependencyGroupKey?
 
     /**
      Create a inject property wrapper.
@@ -59,8 +59,7 @@ open class InjectPropertyWrapper<Dependency, Parameters>: StorePropertyWrapper<I
      - Parameter dependency: Dependency to register.
      - Parameter group: Dependency group key.
      */
-    open func register(_ dependency: Dependency?,
-                       group: DependencyGroupKey? = nil) {
+    open func register(_ dependency: Dependency?) {
         if let group = group {
             var groupStorage: InjectStorage?
             if let storage = storage.groups[group] {
@@ -87,18 +86,8 @@ open class InjectPropertyWrapper<Dependency, Parameters>: StorePropertyWrapper<I
      - Returns: Resolved dependency.
      */
     open func resolve(_ scope: Scope = .singleton,
-                      _ parameters: Parameters? = nil,
-                      group: DependencyGroupKey? = nil) throws -> Dependency {
-        var resolved = [Any]()
-        if let group = group,
-           let storage = storage.groups[group],
-           let dependencies = storage.array(forKey: key) {
-            resolved = dependencies
-        } else if let dependencies = storage.array(forKey: key) {
-            resolved = dependencies
-        } else {
-            throw InjectError.notFound(Dependency.self)
-        }
+                      _ parameters: Parameters? = nil) throws -> Dependency {
+        var resolved = try dependencies()
         if let dependency = instance(resolved, scope, parameters) {
             return dependency
         }
@@ -121,6 +110,24 @@ open class InjectPropertyWrapper<Dependency, Parameters>: StorePropertyWrapper<I
             return dependency
         }
         throw InjectError.moreThanOne(Dependency.self)
+    }
+
+    /**
+     Get all matching dependencies.
+
+     - Throws: `InjectError`.
+
+     - Returns: Matching dependencies.
+     */
+    private func dependencies() throws -> [Any] {
+        if let group = group, let storage = storage.groups[group],
+           let dependencies = storage.array(forKey: key) {
+            return dependencies
+        }
+        if let dependencies = storage.array(forKey: key) {
+            return dependencies
+        }
+        throw InjectError.notFound(Dependency.self)
     }
 
     /**
@@ -198,8 +205,7 @@ public class Inject<Dependency>: InjectPropertyWrapper<Dependency, Void> {
     }
 
     /// Property wrapper stored dependency.
-    public var wrappedValue: Dependency? { try? resolve(scope,
-                                                        group: group) }
+    public var wrappedValue: Dependency? { try? resolve(scope) }
 }
 
 /// `@InjectWith` property wrapper.
@@ -221,8 +227,7 @@ public class InjectWith<Dependency, Parameters>: InjectPropertyWrapper<Dependenc
     }
 
     /// New dependency instance with parameters injected.
-    public var wrappedValue: Dependency? { try? resolve(.instance, parameters,
-                                                        group: group) }
+    public var wrappedValue: Dependency? { try? resolve(.instance, parameters) }
 }
 
 /// `@UnwrappedInject` property wrapper.
@@ -246,7 +251,7 @@ public class UnwrappedInject<Dependency>: InjectPropertyWrapper<Dependency, Void
     /// Property wrapper stored dependency.
     public var wrappedValue: Dependency {
         do {
-            return try resolve(scope, group: group)
+            return try resolve(scope)
         } catch {
             fatalError(description(error))
         }
@@ -274,7 +279,7 @@ public class UnwrappedInjectWith<Dependency, Parameters>: InjectPropertyWrapper<
     /// New dependency instance with parameters injected.
     public var wrappedValue: Dependency {
         do {
-            return try resolve(.instance, parameters, group: group)
+            return try resolve(.instance, parameters)
         } catch {
             fatalError(description(error))
         }
@@ -300,11 +305,11 @@ public class Register<Dependency>: InjectPropertyWrapper<Dependency, Void> {
     public var wrappedValue: Dependency {
         get {
             do {
-                return try resolve(group: group)
+                return try resolve()
             } catch {
                 fatalError(description(error))
             }
         }
-        set { register(newValue, group: group) }
+        set { register(newValue) }
     }
 }
