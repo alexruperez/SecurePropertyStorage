@@ -1,5 +1,5 @@
 --exclude .build
 --exclude .swiftpm
---swiftversion 5.2
+--swiftversion 5.3
 --disable trailingCommas
 --ifdef noindent
