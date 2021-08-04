@@ -274,6 +274,7 @@ var yourDependency: YourProtocol = YourMock()
 <summary><b>Groups</b> (<i>click to expand</i>)</summary>
 
 When you have **a lot** of dependencies in your app, you may want to optimize dependency resolution.
+
 You can group them using `@Register(group:)` and a `DependencyGroupKey`:
 
 ```swift
