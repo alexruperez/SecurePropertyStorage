@@ -57,7 +57,6 @@ open class InjectPropertyWrapper<Dependency, Parameters>: StorePropertyWrapper<I
      Register a dependency.
 
      - Parameter dependency: Dependency to register.
-     - Parameter group: Dependency group key.
      */
     open func register(_ dependency: Dependency?) {
         if let group = group {
@@ -79,7 +78,6 @@ open class InjectPropertyWrapper<Dependency, Parameters>: StorePropertyWrapper<I
 
      - Parameter scope: Dependency injection scope.
      - Parameter parameters: Parameters to inject in builder.
-     - Parameter group: Dependency group key.
 
      - Throws: `InjectError`.
 
