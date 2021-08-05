@@ -83,6 +83,16 @@ final class UserDefaultTests: XCTestCase {
         XCTAssertEqual(userDefaults.array(forKey: key) as? [Int], value)
     }
 
+    func testUserDefaultSet() {
+        let userDefaults = UserDefaultsStorage.standard
+        let key = "testSet"
+        let value = 1
+        var set = Set<Int>()
+        set.insert(value)
+        userDefaults.set(set, forKey: key)
+        XCTAssertEqual(userDefaults.set(forKey: key)?.randomElement(), value)
+    }
+
     func testUserDefaultDictionary() {
         let userDefaults = UserDefaultsStorage.standard
         let key = "testDictionary"

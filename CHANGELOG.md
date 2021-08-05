@@ -2,6 +2,14 @@
 
 ## Next Version
 
+## 0.5.0
+
+#### Added
+- Dependency Injection [Groups](https://github.com/alexruperez/SecurePropertyStorage/blob/master/README.md#-dependency-injection-usage).
+- [Set](https://developer.apple.com/documentation/swift/set) support.
+
+[Commits](https://github.com/alexruperez/SecurePropertyStorage/compare/0.4.2...0.5.0)
+
 ## 0.4.2
 
 #### Fixed

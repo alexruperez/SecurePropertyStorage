@@ -270,6 +270,27 @@ var yourDependency: YourProtocol = YourMock()
 ```
 </details>
 
+<details>
+<summary><b>Groups</b> (<i>click to expand</i>)</summary>
+
+When you have **a lot** of dependencies in your app, you may want to optimize dependency resolution.
+
+You can group them using `@Register(group:)` and a `DependencyGroupKey`:
+
+```swift
+@Register(group: <#DependencyGroupKey#>)
+var yourDependency: YourProtocol = YourImplementation()
+```
+
+`@Inject(group:)` will look for those dependencies only in that group:
+
+```swift
+@Inject(group: <#DependencyGroupKey#>)
+var yourDependency: YourProtocol?
+```
+</details>
+
+
 ## 👀 Examples
 
 > Talk is cheap. Show me the code.
@@ -316,7 +337,7 @@ var yourDependency: YourProtocol = YourMock()
 #### You can use the [Swift Package Manager](https://github.com/apple/swift-package-manager) by declaring SecurePropertyStorage as a dependency in your `Package.swift` file:
 
 ```swift
-.package(url: "https://github.com/alexruperez/SecurePropertyStorage", from: "0.3.0")
+.package(url: "https://github.com/alexruperez/SecurePropertyStorage", from: "0.5.0")
 ```
 
 By default, all property wrappers are installed and you can `import` them, but if you want, you can install only some of them:

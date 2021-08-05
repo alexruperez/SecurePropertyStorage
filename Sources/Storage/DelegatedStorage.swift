@@ -86,6 +86,10 @@ open class DelegatedStorage: Storage {
         value(forKey: key)
     }
 
+    open func set(forKey key: StoreKey) -> Set<AnyHashable>? {
+        value(forKey: key)
+    }
+
     open func dictionary(forKey key: StoreKey) -> [String: Any]? {
         value(forKey: key)
     }

@@ -4,6 +4,9 @@ import Storage
 /// Any `@objc protocol` to be used as qualifier of your dependencies.
 public typealias Qualifier = Protocol
 
+/// Dependency group key type.
+public typealias DependencyGroupKey = StoreKey
+
 /// Mock qualifier indicating that dependency must be injected before any other registered.
 @objc public protocol Mock {}
 
@@ -19,28 +22,35 @@ open class InjectPropertyWrapper<Dependency, Parameters>: StorePropertyWrapper<I
 
     /// All `@objc protocol`s to be used as qualifiers of your dependencies.
     open var qualifiers: [Qualifier]?
+    /// Dependency group key.
+    open var group: DependencyGroupKey?
 
     /**
      Create a inject property wrapper.
 
      - Parameter qualifier: Any `@objc protocol` to be used as qualifier of your dependencies.
+     - Parameter group: Dependency group key.
      */
-    public convenience init(_ qualifier: Qualifier) {
-        self.init([qualifier])
+    public convenience init(_ qualifier: Qualifier,
+                            group: DependencyGroupKey? = nil) {
+        self.init([qualifier], group: group)
     }
 
     /**
      Create a inject property wrapper.
 
      - Parameter qualifiers: All `@objc protocol`s to be used as qualifiers of your dependencies.
+     - Parameter group: Dependency group key.
      */
-    public convenience init(_ qualifiers: [Qualifier]) {
+    public convenience init(_ qualifiers: [Qualifier],
+                            group: DependencyGroupKey? = nil) {
         var key = String(describing: Dependency.self)
         if let index = key.lastIndex(of: " ") {
             key = String(key[key.index(after: index)...])
         }
         self.init(InjectStorage.standard, key)
         self.qualifiers = qualifiers
+        self.group = group
     }
 
     /**
@@ -49,7 +59,18 @@ open class InjectPropertyWrapper<Dependency, Parameters>: StorePropertyWrapper<I
      - Parameter dependency: Dependency to register.
      */
     open func register(_ dependency: Dependency?) {
-        storage.set(dependency, forKey: key)
+        if let group = group {
+            var groupStorage: InjectStorage?
+            if let storage = storage.groups[group] {
+                groupStorage = storage
+            } else {
+                groupStorage = InjectStorage()
+                storage.groups[group] = groupStorage
+            }
+            groupStorage?.set(dependency, forKey: key)
+        } else {
+            storage.set(dependency, forKey: key)
+        }
     }
 
     /**
@@ -64,14 +85,12 @@ open class InjectPropertyWrapper<Dependency, Parameters>: StorePropertyWrapper<I
      */
     open func resolve(_ scope: Scope = .singleton,
                       _ parameters: Parameters? = nil) throws -> Dependency {
-        guard var dependencies: [Any] = storage.array(forKey: key) else {
-            throw InjectError.notFound(Dependency.self)
-        }
-        if let dependency = instance(dependencies, scope, parameters) {
+        var resolved = try dependencies()
+        if let dependency = instance(resolved, scope, parameters) {
             return dependency
         }
         if let qualifiers = qualifiers {
-            let qualifiedDependencies = dependencies.filter { dependency in
+            let qualifiedDependencies = resolved.filter { dependency in
                 qualifiers.allSatisfy { qualifier in
                     class_conformsToProtocol(type(of: dependency) as? AnyClass, qualifier)
                 }
@@ -79,16 +98,34 @@ open class InjectPropertyWrapper<Dependency, Parameters>: StorePropertyWrapper<I
             if let dependency = instance(qualifiedDependencies, scope, parameters) {
                 return dependency
             } else if qualifiedDependencies.count > 1 {
-                dependencies = qualifiedDependencies
+                resolved = qualifiedDependencies
             }
         }
-        let mockDependencies = dependencies.filter { dependency in
+        let mockDependencies = resolved.filter { dependency in
             class_conformsToProtocol(type(of: dependency) as? AnyClass, Mock.self)
         }
         if let dependency = instance(mockDependencies, scope, parameters) {
             return dependency
         }
         throw InjectError.moreThanOne(Dependency.self)
+    }
+
+    /**
+     Get all matching dependencies.
+
+     - Throws: `InjectError`.
+
+     - Returns: Matching dependencies.
+     */
+    private func dependencies() throws -> [Any] {
+        if let group = group, let storage = storage.groups[group],
+           let dependencies = storage.array(forKey: key) {
+            return dependencies
+        }
+        if let dependencies = storage.array(forKey: key) {
+            return dependencies
+        }
+        throw InjectError.notFound(Dependency.self)
     }
 
     /**
@@ -157,9 +194,11 @@ public class Inject<Dependency>: InjectPropertyWrapper<Dependency, Void> {
      Create a `Inject` property wrapper.
 
      - Parameter scope: Injection scope.
+     - Parameter group: Dependency group key.
      */
-    public convenience init(_ scope: Scope = .singleton) {
-        self.init([])
+    public convenience init(_ scope: Scope = .singleton,
+                            group: DependencyGroupKey? = nil) {
+        self.init([], group: group)
         self.scope = scope
     }
 
@@ -177,9 +216,11 @@ public class InjectWith<Dependency, Parameters>: InjectPropertyWrapper<Dependenc
      Create a `InjectWith` property wrapper.
 
      - Parameter parameters: Parameters to inject in builder.
+     - Parameter group: Dependency group key.
      */
-    public convenience init(_ parameters: Parameters) {
-        self.init([])
+    public convenience init(_ parameters: Parameters,
+                            group: DependencyGroupKey? = nil) {
+        self.init([], group: group)
         self.parameters = parameters
     }
 
@@ -197,9 +238,11 @@ public class UnwrappedInject<Dependency>: InjectPropertyWrapper<Dependency, Void
      Create a `UnwrappedInject` property wrapper.
 
      - Parameter scope: Injection scope.
+     - Parameter group: Dependency group key.
      */
-    public convenience init(_ scope: Scope = .singleton) {
-        self.init([])
+    public convenience init(_ scope: Scope = .singleton,
+                            group: DependencyGroupKey? = nil) {
+        self.init([], group: group)
         self.scope = scope
     }
 
@@ -223,9 +266,11 @@ public class UnwrappedInjectWith<Dependency, Parameters>: InjectPropertyWrapper<
      Create a `UnwrappedInjectWith` property wrapper.
 
      - Parameter parameters: Parameters to inject in builder.
+     - Parameter group: Dependency group key.
      */
-    public convenience init(_ parameters: Parameters) {
-        self.init([])
+    public convenience init(_ parameters: Parameters,
+                            group: DependencyGroupKey? = nil) {
+        self.init([], group: group)
         self.parameters = parameters
     }
 
@@ -246,9 +291,11 @@ public class Register<Dependency>: InjectPropertyWrapper<Dependency, Void> {
      Create a `Register` property wrapper.
 
      - Parameter wrappedValue: Registered dependency.
+     - Parameter group: Dependency group key.
      */
-    public convenience init(wrappedValue: Dependency) {
-        self.init([])
+    public convenience init(wrappedValue: Dependency,
+                            group: DependencyGroupKey? = nil) {
+        self.init([], group: group)
         self.wrappedValue = wrappedValue
     }
 

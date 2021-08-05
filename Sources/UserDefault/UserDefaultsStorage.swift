@@ -50,7 +50,7 @@ open class UserDefaultsStorage: UserDefaults, Storage {
      Sets the value of the specified `StoreKey` to the specified `StorageData`.
 
      - Parameter data: `StorageData` to store.
-     - Parameter key: The `StoreKey` with which to associate the value.
+     - Parameter defaultName: The `StoreKey` with which to associate the value.
      */
     open func set<D: StorageData>(_ data: D?, forKey defaultName: StoreKey) {
         super.set(data, forKey: defaultName)
@@ -125,7 +125,7 @@ open class UserDefaultsStorage: UserDefaults, Storage {
     /**
      Returns the `String` associated with the specified `StoreKey`.
 
-     - Parameter key: A `StoreKey` in storage.
+     - Parameter defaultName: A `StoreKey` in storage.
      */
     open override func string(forKey defaultName: StoreKey) -> String? {
         storage.string(forKey: defaultName)
@@ -134,16 +134,25 @@ open class UserDefaultsStorage: UserDefaults, Storage {
     /**
      Returns the `[Any]` associated with the specified `StoreKey`.
 
-     - Parameter key: A `StoreKey` in storage.
+     - Parameter defaultName: A `StoreKey` in storage.
      */
     open override func array(forKey defaultName: StoreKey) -> [Any]? {
         storage.array(forKey: defaultName)
     }
 
     /**
+     Returns the `Set<AnyHashable>` associated with the specified `StoreKey`.
+
+     - Parameter defaultName: A `StoreKey` in storage.
+     */
+    open func set(forKey defaultName: StoreKey) -> Set<AnyHashable>? {
+        storage.set(forKey: defaultName)
+    }
+
+    /**
      Returns the `[String: Any]` associated with the specified `StoreKey`.
 
-     - Parameter key: A `StoreKey` in storage.
+     - Parameter defaultName: A `StoreKey` in storage.
      */
     open override func dictionary(forKey defaultName: StoreKey) -> [String: Any]? {
         storage.dictionary(forKey: defaultName)
@@ -152,7 +161,7 @@ open class UserDefaultsStorage: UserDefaults, Storage {
     /**
      Returns the `[String]` associated with the specified `StoreKey`.
 
-     - Parameter key: A `StoreKey` in storage.
+     - Parameter defaultName: A `StoreKey` in storage.
      */
     open override func stringArray(forKey defaultName: StoreKey) -> [String]? {
         storage.stringArray(forKey: defaultName)
@@ -161,7 +170,7 @@ open class UserDefaultsStorage: UserDefaults, Storage {
     /**
      Returns the `Int` associated with the specified `StoreKey`.
 
-     - Parameter key: A `StoreKey` in storage.
+     - Parameter defaultName: A `StoreKey` in storage.
      */
     open override func integer(forKey defaultName: StoreKey) -> Int {
         storage.integer(forKey: defaultName)
@@ -170,7 +179,7 @@ open class UserDefaultsStorage: UserDefaults, Storage {
     /**
      Returns the `Float` associated with the specified `StoreKey`.
 
-     - Parameter key: A `StoreKey` in storage.
+     - Parameter defaultName: A `StoreKey` in storage.
      */
     open override func float(forKey defaultName: StoreKey) -> Float {
         storage.float(forKey: defaultName)
@@ -179,7 +188,7 @@ open class UserDefaultsStorage: UserDefaults, Storage {
     /**
      Returns the `Double` associated with the specified `StoreKey`.
 
-     - Parameter key: A `StoreKey` in storage.
+     - Parameter defaultName: A `StoreKey` in storage.
      */
     open override func double(forKey defaultName: StoreKey) -> Double {
         storage.double(forKey: defaultName)
@@ -188,7 +197,7 @@ open class UserDefaultsStorage: UserDefaults, Storage {
     /**
      Returns the `Bool` associated with the specified `StoreKey`.
 
-     - Parameter key: A `StoreKey` in storage.
+     - Parameter defaultName: A `StoreKey` in storage.
      */
     open override func bool(forKey defaultName: StoreKey) -> Bool {
         storage.bool(forKey: defaultName)
@@ -197,7 +206,7 @@ open class UserDefaultsStorage: UserDefaults, Storage {
     /**
      Returns the `URL` associated with the specified `StoreKey`.
 
-     - Parameter key: A `StoreKey` in storage.
+     - Parameter defaultName: A `StoreKey` in storage.
      */
     open override func url(forKey defaultName: StoreKey) -> URL? {
         storage.url(forKey: defaultName)
@@ -207,7 +216,7 @@ open class UserDefaultsStorage: UserDefaults, Storage {
      Sets the value of the specified `StoreKey` to the specified `Int`.
 
      - Parameter value: `Int` to store.
-     - Parameter key: The `StoreKey` with which to associate the value.
+     - Parameter defaultName: The `StoreKey` with which to associate the value.
      */
     open override func set(_ value: Int, forKey defaultName: StoreKey) {
         storage.set(value, forKey: defaultName)
@@ -217,7 +226,7 @@ open class UserDefaultsStorage: UserDefaults, Storage {
      Sets the value of the specified `StoreKey` to the specified `Float`.
 
      - Parameter value: `Float` to store.
-     - Parameter key: The `StoreKey` with which to associate the value.
+     - Parameter defaultName: The `StoreKey` with which to associate the value.
      */
     open override func set(_ value: Float, forKey defaultName: StoreKey) {
         storage.set(value, forKey: defaultName)
@@ -227,7 +236,7 @@ open class UserDefaultsStorage: UserDefaults, Storage {
      Sets the value of the specified `StoreKey` to the specified `Double`.
 
      - Parameter value: `Double` to store.
-     - Parameter key: The `StoreKey` with which to associate the value.
+     - Parameter defaultName: The `StoreKey` with which to associate the value.
      */
     open override func set(_ value: Double, forKey defaultName: StoreKey) {
         storage.set(value, forKey: defaultName)
@@ -237,7 +246,7 @@ open class UserDefaultsStorage: UserDefaults, Storage {
      Sets the value of the specified `StoreKey` to the specified `Bool`.
 
      - Parameter value: `Bool` to store.
-     - Parameter key: The `StoreKey` with which to associate the value.
+     - Parameter defaultName: The `StoreKey` with which to associate the value.
      */
     open override func set(_ value: Bool, forKey defaultName: StoreKey) {
         storage.set(value, forKey: defaultName)
@@ -247,7 +256,7 @@ open class UserDefaultsStorage: UserDefaults, Storage {
      Sets the value of the specified `StoreKey` to the specified `URL`.
 
      - Parameter url: `URL` to store.
-     - Parameter key: The `StoreKey` with which to associate the value.
+     - Parameter defaultName: The `StoreKey` with which to associate the value.
      */
     open override func set(_ url: URL?, forKey defaultName: StoreKey) {
         storage.set(url, forKey: defaultName)

@@ -77,11 +77,14 @@ final class InjectTests: XCTestCase {
     private var registerBuilder = {
         InstanceDependency(Date().timeIntervalSince1970) as InstanceProtocol
     }
-
     @Register
     private var registerBuilderWith = { parameters in
         InstanceDependency(parameters) as InstanceProtocol
     }
+    @Register(group: "group")
+    private var registerGroup: DependencyProtocol = Dependency()
+    @Register(group: "group")
+    private var registerGroupAlternative: DependencyProtocol = AlternativeDependency()
 
     @Inject(DependencyQualifier.self)
     var inject: DependencyProtocol?
@@ -107,7 +110,12 @@ final class InjectTests: XCTestCase {
     var instanceWith: InstanceProtocol?
     @UnwrappedInjectWith(Date().timeIntervalSince1970)
     var unwrappedInstanceWith: InstanceProtocol
+    @Inject(DependencyQualifier.self, group: "group")
+    var injectGroup: DependencyProtocol?
+    @Inject(AlternativeQualifier.self, group: "group")
+    var alternativeGroup: DependencyProtocol?
     var injectDependency: Dependency? { inject as? Dependency }
+    var injectGroupDependency: Dependency? { injectGroup as? Dependency }
     var unwrappedDependency: Dependency? { unwrappedInject as? Dependency }
     var injectSharedInstance: InstanceDependency? { sharedInstance as? InstanceDependency }
     var injectUnwrappedSharedInstance: InstanceDependency? { unwrappedSharedInstance as? InstanceDependency }
@@ -135,6 +143,9 @@ final class InjectTests: XCTestCase {
         XCTAssertNotNil(instanceWith)
         XCTAssertNotEqual(injectInstanceWith, injectUnwrappedInstanceWith)
         XCTAssert(mock is MockInstance)
+        XCTAssertNotNil(injectGroup)
+        XCTAssertNotNil(alternativeGroup)
+        XCTAssertNotEqual(injectDependency, injectGroupDependency)
 
         let dependencyPropertyWrapper = InjectPropertyWrapper<DependencyProtocol, Void>([])
         XCTAssertThrowsError(try dependencyPropertyWrapper.resolve())

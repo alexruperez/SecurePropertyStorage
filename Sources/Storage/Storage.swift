@@ -48,6 +48,13 @@ public protocol Storage: StorageDelegate {
     func array(forKey key: StoreKey) -> [Any]?
 
     /**
+     Returns the `Set<AnyHashable>` associated with the specified `StoreKey`.
+
+     - Parameter key: A `StoreKey` in storage.
+     */
+    func set(forKey key: StoreKey) -> Set<AnyHashable>?
+
+    /**
      Returns the `[String: Any]` associated with the specified `StoreKey`.
 
      - Parameter key: A `StoreKey` in storage.
