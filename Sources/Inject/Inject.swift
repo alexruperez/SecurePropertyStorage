@@ -107,7 +107,7 @@ open class InjectPropertyWrapper<Dependency, Parameters>: StorePropertyWrapper<I
         if let dependency = instance(mockDependencies, scope, parameters) {
             return dependency
         }
-        throw InjectError.moreThanOne(Dependency.self)
+        throw InjectError.moreThanOne(Dependency.self, qualifiers: qualifiers, group: group)
     }
 
     /**
@@ -117,7 +117,7 @@ open class InjectPropertyWrapper<Dependency, Parameters>: StorePropertyWrapper<I
 
      - Returns: Matching dependencies.
      */
-    private func dependencies() throws -> [Any] {
+    private func dependencies(_ errorClosureExecuted: Bool = false) throws -> [Any] {
         if let group = group, let storage = storage.groups[group],
            let dependencies = storage.array(forKey: key) {
             return dependencies
@@ -125,7 +125,12 @@ open class InjectPropertyWrapper<Dependency, Parameters>: StorePropertyWrapper<I
         if let dependencies = storage.array(forKey: key) {
             return dependencies
         }
-        throw InjectError.notFound(Dependency.self)
+        let error = InjectError.notFound(Dependency.self, qualifiers: qualifiers, group: group)
+        if !errorClosureExecuted, let errorClosure = storage.errorClosure {
+            errorClosure(error)
+            return try dependencies(true)
+        }
+        throw error
     }
 
     /**
