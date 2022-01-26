@@ -134,6 +134,24 @@ var yourDependency = {
     YourImplementation()
 }
 ```
+
+You can also register your dependencies only after the moment someone tries to inject them and you haven't registered them yet,
+for this you can use the error closure.
+
+```swift
+InjectStorage.standard.errorClosure = { error in
+    if case InjectError.notFound = error {
+        YourImplementation.register()
+    }
+}
+```
+
+You can get this syntactic sugar because you can now use property wrappers in function parameters.
+
+```swift
+static func register(@Register yourDependency: YourProtocol = YourImplementation()) {}
+```
+
 </details>
 
 <details>
@@ -337,7 +355,7 @@ var yourDependency: YourProtocol?
 #### You can use the [Swift Package Manager](https://github.com/apple/swift-package-manager) by declaring SecurePropertyStorage as a dependency in your `Package.swift` file:
 
 ```swift
-.package(url: "https://github.com/alexruperez/SecurePropertyStorage", from: "0.5.0")
+.package(url: "https://github.com/alexruperez/SecurePropertyStorage", from: "0.6.0")
 ```
 
 By default, all property wrappers are installed and you can `import` them, but if you want, you can install only some of them:

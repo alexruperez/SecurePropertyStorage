@@ -2,6 +2,18 @@
 
 ## Next Version
 
+## 0.6.0 (In memory of my friend **[Haldo Spontón](https://linktr.ee/haldosponton)**. Rest in peace. 😢)
+
+#### Added
+- [Register](https://github.com/alexruperez/SecurePropertyStorage/blob/master/README.md#-dependency-injection-usage) dependencies on error closure.
+- More information in [InjectError](http://github.alexruperez.com/SecurePropertyStorage/Enums/InjectError.html).
+
+#### Improvements
+
+- Swift Package Manager tools version update to 5.5
+
+[Commits](https://github.com/alexruperez/SecurePropertyStorage/compare/0.5.0...0.6.0)
+
 ## 0.5.0
 
 #### Added
