@@ -58,6 +58,19 @@ class InstanceDependency: InstanceProtocol, Equatable {
     }
 }
 
+protocol ErrorClosureDependencyProtocol {}
+
+protocol ErrorClosureSubDependencyProtocol {}
+
+class ErrorClosureDependency: ErrorClosureDependencyProtocol {
+    @Register
+    private var errorClosureSubDependency: ErrorClosureSubDependencyProtocol = ErrorClosureSubDependency()
+
+    static func register(@Register errorClosureDependency: ErrorClosureDependencyProtocol = ErrorClosureDependency()) {}
+}
+
+class ErrorClosureSubDependency: ErrorClosureSubDependencyProtocol {}
+
 final class InjectTests: XCTestCase {
     @Register
     private var register: DependencyProtocol = Dependency()
@@ -114,6 +127,10 @@ final class InjectTests: XCTestCase {
     var injectGroup: DependencyProtocol?
     @Inject(AlternativeQualifier.self, group: "group")
     var alternativeGroup: DependencyProtocol?
+    @UnwrappedInject
+    var errorClosureDependency: ErrorClosureDependencyProtocol
+    @UnwrappedInject
+    var errorClosureSubDependency: ErrorClosureSubDependencyProtocol
     var injectDependency: Dependency? { inject as? Dependency }
     var injectGroupDependency: Dependency? { injectGroup as? Dependency }
     var unwrappedDependency: Dependency? { unwrappedInject as? Dependency }
@@ -146,6 +163,13 @@ final class InjectTests: XCTestCase {
         XCTAssertNotNil(injectGroup)
         XCTAssertNotNil(alternativeGroup)
         XCTAssertNotEqual(injectDependency, injectGroupDependency)
+        InjectStorage.standard.errorClosure = { error in
+            if case InjectError.notFound = error {
+                ErrorClosureDependency.register()
+            }
+        }
+        XCTAssertNotNil(errorClosureDependency)
+        XCTAssertNotNil(errorClosureSubDependency)
 
         let dependencyPropertyWrapper = InjectPropertyWrapper<DependencyProtocol, Void>([])
         XCTAssertThrowsError(try dependencyPropertyWrapper.resolve())
@@ -153,12 +177,16 @@ final class InjectTests: XCTestCase {
         let stringPropertyWrapper = InjectPropertyWrapper<String, Void>([])
         XCTAssertThrowsError(try stringPropertyWrapper.resolve())
 
-        XCTAssert(stringPropertyWrapper
-            .description(InjectError.notFound(String.self))
-            .contains("String"))
-        XCTAssert(stringPropertyWrapper
-            .description(InjectError.moreThanOne(String.self))
-            .contains("String"))
+        let notFoundError = stringPropertyWrapper
+            .description(InjectError.notFound(String.self, qualifiers: [DependencyQualifier.self], group: "Test"))
+        let moreThanOneError = stringPropertyWrapper
+            .description(InjectError.moreThanOne(String.self, qualifiers: [DependencyQualifier.self], group: "Test"))
+        XCTAssert(notFoundError.contains("String"))
+        XCTAssert(moreThanOneError.contains("String"))
+        XCTAssert(notFoundError.contains("[<Protocol"))
+        XCTAssert(moreThanOneError.contains("[<Protocol"))
+        XCTAssert(notFoundError.contains("Test"))
+        XCTAssert(moreThanOneError.contains("Test"))
         XCTAssert(stringPropertyWrapper
             .description(CocoaError(.userCancelled))
             .contains("cancel"))
