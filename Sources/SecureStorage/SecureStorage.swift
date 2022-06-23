@@ -4,7 +4,7 @@ import Foundation
 public typealias StoreKey = String
 
 /// `Storage` protocol.
-public protocol Storage: StorageDelegate {
+public protocol SecureStorage: StorageDelegate {
     /**
      Adds the contents of the specified dictionary to the registration domain.
 

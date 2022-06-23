@@ -1,7 +1,7 @@
 /// Property wrapper protocol.
 public protocol StorePropertyWrapperProtocol {
     /// `Storage` type used by property wrapper.
-    associatedtype StorageType: Storage
+    associatedtype StorageType: SecureStorage
     /// `Storage` used by property wrapper.
     var storage: StorageType { get }
     /// `StoreKey` to store the value.
@@ -9,7 +9,7 @@ public protocol StorePropertyWrapperProtocol {
 }
 
 /// Property wrapper reusable init class.
-open class StorePropertyWrapper<StorageType: Storage>: StorePropertyWrapperProtocol {
+open class StorePropertyWrapper<StorageType: SecureStorage>: StorePropertyWrapperProtocol {
     /// `Storage` used by property wrapper.
     open var storage: StorageType
     /// `StoreKey` to store the value.
@@ -29,7 +29,7 @@ open class StorePropertyWrapper<StorageType: Storage>: StorePropertyWrapperProto
 
 /// `@Store` property wrapper.
 @propertyWrapper
-open class Store<Value, StorageType: Storage>: StorePropertyWrapper<StorageType> {
+open class Store<Value, StorageType: SecureStorage>: StorePropertyWrapper<StorageType> {
     /**
      Create a `Store` property wrapper.
 
@@ -51,7 +51,7 @@ open class Store<Value, StorageType: Storage>: StorePropertyWrapper<StorageType>
 
 /// `@UnwrappedStore` property wrapper.
 @propertyWrapper
-open class UnwrappedStore<Value, StorageType: Storage>: StorePropertyWrapperProtocol {
+open class UnwrappedStore<Value, StorageType: SecureStorage>: StorePropertyWrapperProtocol {
     /// `Storage` used by property wrapper.
     open var storage: StorageType
     /// `StoreKey` to store the value.
@@ -81,7 +81,7 @@ open class UnwrappedStore<Value, StorageType: Storage>: StorePropertyWrapperProt
 
 /// `@CodableStore` property wrapper.
 @propertyWrapper
-open class CodableStore<Value: Codable, StorageType: Storage>: StorePropertyWrapper<StorageType> {
+open class CodableStore<Value: Codable, StorageType: SecureStorage>: StorePropertyWrapper<StorageType> {
     /**
      Create a `CodableStore` property wrapper.
 
@@ -103,7 +103,7 @@ open class CodableStore<Value: Codable, StorageType: Storage>: StorePropertyWrap
 
 /// `@UnwrappedCodableStore` property wrapper.
 @propertyWrapper
-open class UnwrappedCodableStore<Value: Codable, StorageType: Storage>: StorePropertyWrapperProtocol {
+open class UnwrappedCodableStore<Value: Codable, StorageType: SecureStorage>: StorePropertyWrapperProtocol {
     /// `Storage` used by property wrapper.
     open var storage: StorageType
     /// `StoreKey` to store the value.
