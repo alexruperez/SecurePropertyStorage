@@ -1,6 +1,6 @@
 import CryptoKit
 import Foundation
-import Storage
+import SecureStorage
 
 extension SymmetricKey: StorageData {
     /**

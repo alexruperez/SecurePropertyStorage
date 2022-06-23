@@ -1,4 +1,4 @@
-import Storage
+import SecureStorage
 
 /// `@Singleton` property wrapper.
 @propertyWrapper

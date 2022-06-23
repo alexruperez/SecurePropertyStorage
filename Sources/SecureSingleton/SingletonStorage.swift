@@ -1,7 +1,7 @@
 import CryptoKit
 import Foundation
-import Keychain
-import Storage
+import SecureKeychain
+import SecureStorage
 
 /// `SingletonStorage` subclass of `DelegatedStorage` that uses a `SingletonStorageDelegate`.
 open class SingletonStorage: DelegatedStorage {

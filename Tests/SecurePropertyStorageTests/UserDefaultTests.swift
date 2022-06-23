@@ -1,5 +1,5 @@
-import Storage
-import UserDefault
+import SecureStorage
+import SecureUserDefault
 import XCTest
 
 enum UserDefaultsCodable: String, Codable {

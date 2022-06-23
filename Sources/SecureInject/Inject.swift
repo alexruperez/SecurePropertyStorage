@@ -1,5 +1,5 @@
 import Foundation
-import Storage
+import SecureStorage
 
 /// Any `@objc protocol` to be used as qualifier of your dependencies.
 public typealias Qualifier = Protocol

@@ -1,4 +1,4 @@
-import Storage
+import SecureStorage
 
 /// `@UserDefault` property wrapper.
 @propertyWrapper

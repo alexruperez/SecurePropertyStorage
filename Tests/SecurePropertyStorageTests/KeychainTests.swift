@@ -1,5 +1,5 @@
-import Keychain
-import Storage
+import SecureKeychain
+import SecureStorage
 import XCTest
 
 enum KeychainCodable: String, Codable {

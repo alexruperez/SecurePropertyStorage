@@ -1,4 +1,4 @@
-import Storage
+import SecureStorage
 
 /// `@Keychain` property wrapper.
 @propertyWrapper

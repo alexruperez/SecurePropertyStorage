@@ -1,4 +1,4 @@
-import Storage
+import SecureStorage
 
 /// `InjectStorage` subclass of `DelegatedStorage` that uses a `[AnyHashable: Any]`.
 open class InjectStorage: DelegatedStorage {

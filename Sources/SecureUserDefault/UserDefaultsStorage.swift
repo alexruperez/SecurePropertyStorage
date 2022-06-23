@@ -1,14 +1,14 @@
 import CryptoKit
 import Foundation
-import Keychain
-import Storage
+import SecureKeychain
+import SecureStorage
 
 /// `UserDefaultsStorage` subclass of `UserDefaults` that uses a `DelegatedStorage`.
-open class UserDefaultsStorage: UserDefaults, Storage {
+open class UserDefaultsStorage: UserDefaults, SecureStorage {
     /// `UserDefaultsStorage` shared instance.
     open override class var standard: UserDefaultsStorage { shared }
     private static let shared = UserDefaultsStorage()
-    private var storage: Storage!
+    private var storage: SecureStorage!
 
     /**
      Create a `UserDefaultsStorage`.

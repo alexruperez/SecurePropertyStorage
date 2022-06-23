@@ -1,4 +1,4 @@
-@testable import Inject
+@testable import SecureInject
 import XCTest
 
 protocol SubDependencyProtocol {}
