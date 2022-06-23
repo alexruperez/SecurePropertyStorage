@@ -13,81 +13,81 @@ let package = Package(
     products: [
         .library(
             name: "SecurePropertyStorage",
-            targets: ["Storage", "UserDefault", "Singleton", "Keychain", "Inject"]
+            targets: ["SecureStorage", "SecureUserDefault", "SecureSingleton", "SecureKeychain", "SecureInject"]
         ),
         .library(
-            name: "Storage",
-            targets: ["Storage"]
+            name: "SecureStorage",
+            targets: ["SecureStorage"]
         ),
         .library(
-            name: "UserDefault",
-            targets: ["Storage", "UserDefault"]
+            name: "SecureUserDefault",
+            targets: ["SecureStorage", "SecureUserDefault"]
         ),
         .library(
-            name: "Singleton",
-            targets: ["Storage", "Singleton"]
+            name: "SecureSingleton",
+            targets: ["SecureStorage", "SecureSingleton"]
         ),
         .library(
-            name: "Keychain",
-            targets: ["Storage", "Keychain"]
+            name: "SecureKeychain",
+            targets: ["SecureStorage", "SecureKeychain"]
         ),
         .library(
-            name: "Inject",
-            targets: ["Storage", "Inject"]
+            name: "SecureInject",
+            targets: ["SecureStorage", "SecureInject"]
         ),
         .library(
             name: "SecurePropertyStorageDynamic",
             type: .dynamic,
-            targets: ["Storage", "UserDefault", "Singleton", "Keychain", "Inject"]
+            targets: ["SecureStorage", "SecureUserDefault", "SecureSingleton", "SecureKeychain", "SecureInject"]
         ),
         .library(
-            name: "StorageDynamic",
+            name: "SecureStorageDynamic",
             type: .dynamic,
-            targets: ["Storage"]
+            targets: ["SecureStorage"]
         ),
         .library(
-            name: "UserDefaultDynamic",
+            name: "SecureUserDefaultDynamic",
             type: .dynamic,
-            targets: ["Storage", "UserDefault"]
+            targets: ["SecureStorage", "SecureUserDefault"]
         ),
         .library(
-            name: "SingletonDynamic",
+            name: "SecureSingletonDynamic",
             type: .dynamic,
-            targets: ["Storage", "Singleton"]
+            targets: ["SecureStorage", "SecureSingleton"]
         ),
         .library(
-            name: "KeychainDynamic",
+            name: "SecureKeychainDynamic",
             type: .dynamic,
-            targets: ["Storage", "Keychain"]
+            targets: ["SecureStorage", "SecureKeychain"]
         ),
         .library(
-            name: "InjectDynamic",
+            name: "SecureInjectDynamic",
             type: .dynamic,
-            targets: ["Storage", "Inject"]
+            targets: ["SecureStorage", "SecureInject"]
         )
     ],
     targets: [
         .target(
-            name: "Storage"),
+            name: "SecureStorage"),
         .target(
-            name: "UserDefault",
-            dependencies: ["Storage", "Keychain"]
+            name: "SecureUserDefault",
+            dependencies: ["SecureStorage", "SecureKeychain"]
         ),
         .target(
-            name: "Singleton",
-            dependencies: ["Storage", "Keychain"]
+            name: "SecureSingleton",
+            dependencies: ["SecureStorage", "SecureKeychain"]
         ),
         .target(
-            name: "Keychain",
-            dependencies: ["Storage"]
+            name: "SecureKeychain",
+            dependencies: ["SecureStorage"]
         ),
         .target(
-            name: "Inject",
-            dependencies: ["Storage"]
+            name: "SecureInject",
+            dependencies: ["SecureStorage"]
         ),
         .testTarget(
             name: "SecurePropertyStorageTests",
-            dependencies: ["Storage", "UserDefault", "Singleton", "Keychain", "Inject"]
+            dependencies: ["SecureStorage", "SecureUserDefault", "SecureSingleton", "SecureKeychain", "SecureInject"]
         )
     ]
 )
