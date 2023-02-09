@@ -2,6 +2,14 @@
 
 ## Next Version
 
+## 0.7.0
+
+#### Added
+- Customizable `kSecClass`.
+- `kSecReturnAttributes` by default.
+
+[Commits](https://github.com/alexruperez/SecurePropertyStorage/compare/0.6.0...0.7.0)
+
 ## 0.6.0 (In memory of my friend **[Haldo Spontón](https://linktr.ee/haldosponton)**. Rest in peace. 😢)
 
 #### Added
