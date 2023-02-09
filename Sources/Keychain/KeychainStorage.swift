@@ -49,7 +49,7 @@ open class KeychainStorageDelegate: StorageDelegate {
     /// Access group where `StorageData` is in.
     open var accessGroup: String?
     /// Whether the `StorageData` can be synchronized.
-    open var synchronizable: Bool = false
+    open var synchronizable = false
     /// When `StorageData` can be accessed in the keychain.
     open var accessible: CFString = kSecAttrAccessibleWhenUnlocked
     /// Specifies item class used.
