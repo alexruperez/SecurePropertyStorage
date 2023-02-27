@@ -52,6 +52,8 @@ open class KeychainStorageDelegate: StorageDelegate {
     open var synchronizable = false
     /// When `StorageData` can be accessed in the keychain.
     open var accessible: CFString = kSecAttrAccessibleWhenUnlocked
+    /// Specifies item class used.
+    open var secClass: CFString = kSecClassGenericPassword
 
     /// Create a `KeychainStorageDelegate`.
     public init() {}
@@ -66,9 +68,10 @@ open class KeychainStorageDelegate: StorageDelegate {
      - Returns: `StorageData` for `StoreKey`.
      */
     open func data<D: StorageData>(forKey key: StoreKey) throws -> D? {
-        try read(account: key,
+        try read(key: key,
                  accessGroup: accessGroup,
-                 synchronizable: synchronizable)
+                 synchronizable: synchronizable,
+                 secClass: secClass)
     }
 
     /**
@@ -83,10 +86,11 @@ open class KeychainStorageDelegate: StorageDelegate {
         try? remove(forKey: key)
         if let data = data {
             try store(data,
-                      account: key,
+                      key: key,
                       accessible: accessible,
                       accessGroup: accessGroup,
-                      synchronizable: synchronizable)
+                      synchronizable: synchronizable,
+                      secClass: secClass)
         }
     }
 
@@ -98,9 +102,10 @@ open class KeychainStorageDelegate: StorageDelegate {
      - Throws: `KeychainError.error`.
      */
     open func remove(forKey key: StoreKey) throws {
-        try delete(account: key,
+        try delete(key: key,
                    accessGroup: accessGroup,
-                   synchronizable: synchronizable)
+                   synchronizable: synchronizable,
+                   secClass: secClass)
     }
 
     /**
@@ -111,16 +116,18 @@ open class KeychainStorageDelegate: StorageDelegate {
      - Parameter accessible: When the keychain item is accessible.
      - Parameter accessGroup: Access group where `StorageData` is in.
      - Parameter synchronizable: Whether the `StorageData` can be synchronized.
+     - Parameter secClass: Specifies item class used.
 
      - Throws: `KeychainError.error`.
      */
     open func store<D: StorageData>(_ value: D,
-                                    account: String,
-                                    accessible: CFString,
-                                    accessGroup: String?,
-                                    synchronizable: Bool) throws {
-        var query = [kSecClass: kSecClassGenericPassword,
-                     kSecAttrAccount: account,
+                                    key: String,
+                                    accessible: CFString = kSecAttrAccessibleWhenUnlocked,
+                                    accessGroup: String? = nil,
+                                    synchronizable: Bool = false,
+                                    secClass: CFString = kSecClassGenericPassword) throws {
+        var query = [kSecClass: secClass,
+                     kSecAttrAccount: key,
                      kSecAttrAccessible: accessible,
                      kSecUseDataProtectionKeychain: true,
                      kSecValueData: value.data] as [CFString: Any]
@@ -143,18 +150,25 @@ open class KeychainStorageDelegate: StorageDelegate {
      - Parameter account: Item's account name.
      - Parameter accessGroup: Access group where `StorageData` is in.
      - Parameter synchronizable: Whether the `StorageData` can be synchronized.
+     - Parameter secClass: Specifies item class used.
+     - Parameter returnAttributes: Return item attributes.
+     - Parameter returnData: Return item data.
 
      - Throws: `KeychainError.error`.
 
      - Returns: `StorageData` for account.
      */
-    open func read<D: StorageData>(account: String,
-                                   accessGroup: String?,
-                                   synchronizable: Bool) throws -> D? {
-        var query = [kSecClass: kSecClassGenericPassword,
-                     kSecAttrAccount: account,
+    open func read<D: StorageData>(key: String,
+                                   accessGroup: String? = nil,
+                                   synchronizable: Bool = false,
+                                   secClass: CFString = kSecClassGenericPassword,
+                                   returnAttributes: Bool = true,
+                                   returnData: Bool = true) throws -> D? {
+        var query = [kSecClass: secClass,
+                     kSecAttrAccount: key,
                      kSecUseDataProtectionKeychain: true,
-                     kSecReturnData: true] as [CFString: Any]
+                     kSecReturnAttributes: returnAttributes,
+                     kSecReturnData: returnData] as [CFString: Any]
         if let accessGroup = accessGroup {
             query[kSecAttrAccessGroup] = accessGroup
         }
@@ -182,15 +196,17 @@ open class KeychainStorageDelegate: StorageDelegate {
      - Parameter account: Item's account name.
      - Parameter accessGroup: Access group where `StorageData` is in.
      - Parameter synchronizable: Whether the `StorageData` can be synchronized.
+     - Parameter secClass: Specifies item class used.
 
      - Throws: `KeychainError.error`.
      */
-    open func delete(account: String,
-                     accessGroup: String?,
-                     synchronizable: Bool) throws {
-        var query = [kSecClass: kSecClassGenericPassword,
+    open func delete(key: String,
+                     accessGroup: String? = nil,
+                     synchronizable: Bool = false,
+                     secClass: CFString = kSecClassGenericPassword) throws {
+        var query = [kSecClass: secClass,
                      kSecUseDataProtectionKeychain: true,
-                     kSecAttrAccount: account] as [CFString: Any]
+                     kSecAttrAccount: key] as [CFString: Any]
         if let accessGroup = accessGroup {
             query[kSecAttrAccessGroup] = accessGroup
         }
