@@ -71,7 +71,9 @@ open class KeychainStorageDelegate: StorageDelegate {
         try read(key: key,
                  accessGroup: accessGroup,
                  synchronizable: synchronizable,
-                 secClass: secClass)
+                 secClass: secClass,
+                 returnAttributes: nil,
+                 returnData: true)
     }
 
     /**
@@ -162,18 +164,20 @@ open class KeychainStorageDelegate: StorageDelegate {
                                    accessGroup: String? = nil,
                                    synchronizable: Bool = false,
                                    secClass: CFString = kSecClassGenericPassword,
-                                   returnAttributes: Bool = true,
+                                   returnAttributes: Bool? = nil,
                                    returnData: Bool = true) throws -> D? {
         var query = [kSecClass: secClass,
                      kSecAttrAccount: key,
                      kSecUseDataProtectionKeychain: true,
-                     kSecReturnAttributes: returnAttributes,
                      kSecReturnData: returnData] as [CFString: Any]
         if let accessGroup = accessGroup {
             query[kSecAttrAccessGroup] = accessGroup
         }
         if synchronizable {
             query[kSecAttrSynchronizable] = kCFBooleanTrue
+        }
+        if let returnAttributes = returnAttributes {
+            query[kSecReturnAttributes] = returnAttributes
         }
 
         var item: CFTypeRef?
