@@ -5,7 +5,7 @@
 ## 0.7.1
 
 #### Fixed
-- `kSecReturnAttributes` nil by default. [#27](https://github.com/alexruperez/SecurePropertyStorage/issues/27) Thanks [@davidknight-seequent ](https://github.com/davidknight-seequent)!
+- `kSecReturnAttributes` nil by default. [#27](https://github.com/alexruperez/SecurePropertyStorage/issues/27) Thanks [@davidknight-seequent](https://github.com/davidknight-seequent)!
 
 [Commits](https://github.com/alexruperez/SecurePropertyStorage/compare/0.7.0...0.7.1)
 
