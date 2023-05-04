@@ -10,7 +10,7 @@
 [![Quality](https://api.codacy.com/project/badge/Grade/53a23dd2feca4b7ca8357c918c7d49c9)](https://app.codacy.com/manual/alexruperez/SecurePropertyStorage)
 [![Maintainability](https://api.codeclimate.com/v1/badges/bbf38ddca9a26703cefd/maintainability)](https://codeclimate.com/github/alexruperez/SecurePropertyStorage/maintainability)
 [![Coverage](https://codecov.io/gh/alexruperez/SecurePropertyStorage/branch/master/graph/badge.svg)](https://codecov.io/gh/alexruperez/SecurePropertyStorage)
-[![Documentation](https://alexruperez.github.io/SecurePropertyStorage/badge.svg)](https://alexruperez.github.io/SecurePropertyStorage)
+[![Documentation](https://alexruperez.github.io/SecurePropertyStorage/badge.svg)](https://alexruperez.github.io/SecurePropertyStorage/)
 
 ## 🌟 Features
 
