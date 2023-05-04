@@ -1,0 +1,7 @@
+version: "Apple Swift version 5.7.1 (swiftlang-5.7.1.135.3 clang-1400.0.29.51)"
+options: "b93cd7fe83d45d7232f1cb922f50d0c7f5fbe09ca56817e14955022a1b4d74b8"
+build_start_time: [1683198431, 419814109]
+build_end_time: [1683198431, 795531034]
+inputs:
+  "/Users/vagrant/git/Sources/Singleton/Singleton.swift": [1683198354, 378659963]
+  "/Users/vagrant/git/Sources/Singleton/SingletonStorage.swift": [1683198354, 378868103]

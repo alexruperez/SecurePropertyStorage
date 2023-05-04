@@ -1,0 +1,4 @@
+module UserDefault {
+    header "/Users/vagrant/git/.build/x86_64-apple-macosx/debug/UserDefault.build/UserDefault-Swift.h"
+    requires objc
+}

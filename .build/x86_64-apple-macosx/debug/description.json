@@ -1,0 +1,589 @@
+{
+  "builtTestProducts" : [
+    {
+      "binaryPath" : "/Users/vagrant/git/.build/x86_64-apple-macosx/debug/SecurePropertyStoragePackageTests.xctest/Contents/MacOS/SecurePropertyStoragePackageTests",
+      "productName" : "SecurePropertyStoragePackageTests"
+    }
+  ],
+  "copyCommands" : {
+
+  },
+  "pluginDescriptions" : [
+
+  ],
+  "swiftCommands" : {
+    "C.Inject-debug.module" : {
+      "executable" : "/Applications/Xcode-14.1.0.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/swiftc",
+      "importPath" : "/Users/vagrant/git/.build/x86_64-apple-macosx/debug",
+      "inputs" : [
+        {
+          "kind" : "file",
+          "name" : "/Users/vagrant/git/Sources/Inject/Inject.swift"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/vagrant/git/Sources/Inject/InjectError.swift"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/vagrant/git/Sources/Inject/InjectStorage.swift"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/vagrant/git/.build/x86_64-apple-macosx/debug/Storage.swiftmodule"
+        }
+      ],
+      "isLibrary" : true,
+      "moduleName" : "Inject",
+      "moduleOutputPath" : "/Users/vagrant/git/.build/x86_64-apple-macosx/debug/Inject.swiftmodule",
+      "objects" : [
+        "/Users/vagrant/git/.build/x86_64-apple-macosx/debug/Inject.build/Inject.swift.o",
+        "/Users/vagrant/git/.build/x86_64-apple-macosx/debug/Inject.build/InjectError.swift.o",
+        "/Users/vagrant/git/.build/x86_64-apple-macosx/debug/Inject.build/InjectStorage.swift.o"
+      ],
+      "otherArguments" : [
+        "-target",
+        "x86_64-apple-macosx10.15",
+        "-swift-version",
+        "5",
+        "-enable-batch-mode",
+        "-index-store-path",
+        "/Users/vagrant/git/.build/x86_64-apple-macosx/debug/index/store",
+        "-Onone",
+        "-enable-testing",
+        "-g",
+        "-j4",
+        "-DSWIFT_PACKAGE",
+        "-DDEBUG",
+        "-module-cache-path",
+        "/Users/vagrant/git/.build/x86_64-apple-macosx/debug/ModuleCache",
+        "-parseable-output",
+        "-parse-as-library",
+        "-emit-objc-header",
+        "-emit-objc-header-path",
+        "/Users/vagrant/git/.build/x86_64-apple-macosx/debug/Inject.build/Inject-Swift.h",
+        "-sdk",
+        "/Applications/Xcode-14.1.0.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX13.0.sdk",
+        "-F",
+        "/Applications/Xcode-14.1.0.app/Contents/Developer/Platforms/MacOSX.platform/Developer/Library/Frameworks",
+        "-I",
+        "/Applications/Xcode-14.1.0.app/Contents/Developer/Platforms/MacOSX.platform/Developer/usr/lib",
+        "-L",
+        "/Applications/Xcode-14.1.0.app/Contents/Developer/Platforms/MacOSX.platform/Developer/usr/lib"
+      ],
+      "outputs" : [
+        {
+          "kind" : "file",
+          "name" : "/Users/vagrant/git/.build/x86_64-apple-macosx/debug/Inject.build/Inject.swift.o"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/vagrant/git/.build/x86_64-apple-macosx/debug/Inject.build/InjectError.swift.o"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/vagrant/git/.build/x86_64-apple-macosx/debug/Inject.build/InjectStorage.swift.o"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/vagrant/git/.build/x86_64-apple-macosx/debug/Inject.swiftmodule"
+        }
+      ],
+      "sources" : [
+        "/Users/vagrant/git/Sources/Inject/Inject.swift",
+        "/Users/vagrant/git/Sources/Inject/InjectError.swift",
+        "/Users/vagrant/git/Sources/Inject/InjectStorage.swift"
+      ],
+      "tempsPath" : "/Users/vagrant/git/.build/x86_64-apple-macosx/debug/Inject.build",
+      "wholeModuleOptimization" : false
+    },
+    "C.Keychain-debug.module" : {
+      "executable" : "/Applications/Xcode-14.1.0.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/swiftc",
+      "importPath" : "/Users/vagrant/git/.build/x86_64-apple-macosx/debug",
+      "inputs" : [
+        {
+          "kind" : "file",
+          "name" : "/Users/vagrant/git/Sources/Keychain/CryptoData.swift"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/vagrant/git/Sources/Keychain/Keychain.swift"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/vagrant/git/Sources/Keychain/KeychainError.swift"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/vagrant/git/Sources/Keychain/KeychainStorage.swift"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/vagrant/git/.build/x86_64-apple-macosx/debug/Storage.swiftmodule"
+        }
+      ],
+      "isLibrary" : true,
+      "moduleName" : "Keychain",
+      "moduleOutputPath" : "/Users/vagrant/git/.build/x86_64-apple-macosx/debug/Keychain.swiftmodule",
+      "objects" : [
+        "/Users/vagrant/git/.build/x86_64-apple-macosx/debug/Keychain.build/CryptoData.swift.o",
+        "/Users/vagrant/git/.build/x86_64-apple-macosx/debug/Keychain.build/Keychain.swift.o",
+        "/Users/vagrant/git/.build/x86_64-apple-macosx/debug/Keychain.build/KeychainError.swift.o",
+        "/Users/vagrant/git/.build/x86_64-apple-macosx/debug/Keychain.build/KeychainStorage.swift.o"
+      ],
+      "otherArguments" : [
+        "-target",
+        "x86_64-apple-macosx10.15",
+        "-swift-version",
+        "5",
+        "-enable-batch-mode",
+        "-index-store-path",
+        "/Users/vagrant/git/.build/x86_64-apple-macosx/debug/index/store",
+        "-Onone",
+        "-enable-testing",
+        "-g",
+        "-j4",
+        "-DSWIFT_PACKAGE",
+        "-DDEBUG",
+        "-module-cache-path",
+        "/Users/vagrant/git/.build/x86_64-apple-macosx/debug/ModuleCache",
+        "-parseable-output",
+        "-parse-as-library",
+        "-emit-objc-header",
+        "-emit-objc-header-path",
+        "/Users/vagrant/git/.build/x86_64-apple-macosx/debug/Keychain.build/Keychain-Swift.h",
+        "-sdk",
+        "/Applications/Xcode-14.1.0.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX13.0.sdk",
+        "-F",
+        "/Applications/Xcode-14.1.0.app/Contents/Developer/Platforms/MacOSX.platform/Developer/Library/Frameworks",
+        "-I",
+        "/Applications/Xcode-14.1.0.app/Contents/Developer/Platforms/MacOSX.platform/Developer/usr/lib",
+        "-L",
+        "/Applications/Xcode-14.1.0.app/Contents/Developer/Platforms/MacOSX.platform/Developer/usr/lib"
+      ],
+      "outputs" : [
+        {
+          "kind" : "file",
+          "name" : "/Users/vagrant/git/.build/x86_64-apple-macosx/debug/Keychain.build/CryptoData.swift.o"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/vagrant/git/.build/x86_64-apple-macosx/debug/Keychain.build/Keychain.swift.o"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/vagrant/git/.build/x86_64-apple-macosx/debug/Keychain.build/KeychainError.swift.o"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/vagrant/git/.build/x86_64-apple-macosx/debug/Keychain.build/KeychainStorage.swift.o"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/vagrant/git/.build/x86_64-apple-macosx/debug/Keychain.swiftmodule"
+        }
+      ],
+      "sources" : [
+        "/Users/vagrant/git/Sources/Keychain/CryptoData.swift",
+        "/Users/vagrant/git/Sources/Keychain/Keychain.swift",
+        "/Users/vagrant/git/Sources/Keychain/KeychainError.swift",
+        "/Users/vagrant/git/Sources/Keychain/KeychainStorage.swift"
+      ],
+      "tempsPath" : "/Users/vagrant/git/.build/x86_64-apple-macosx/debug/Keychain.build",
+      "wholeModuleOptimization" : false
+    },
+    "C.SecurePropertyStorageTests-debug.module" : {
+      "executable" : "/Applications/Xcode-14.1.0.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/swiftc",
+      "importPath" : "/Users/vagrant/git/.build/x86_64-apple-macosx/debug",
+      "inputs" : [
+        {
+          "kind" : "file",
+          "name" : "/Users/vagrant/git/Tests/SecurePropertyStorageTests/InjectTests.swift"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/vagrant/git/Tests/SecurePropertyStorageTests/KeychainTests.swift"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/vagrant/git/Tests/SecurePropertyStorageTests/SingletonTests.swift"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/vagrant/git/Tests/SecurePropertyStorageTests/UserDefaultTests.swift"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/vagrant/git/Tests/SecurePropertyStorageTests/XCTestManifests.swift"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/vagrant/git/.build/x86_64-apple-macosx/debug/Storage.swiftmodule"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/vagrant/git/.build/x86_64-apple-macosx/debug/UserDefault.swiftmodule"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/vagrant/git/.build/x86_64-apple-macosx/debug/Singleton.swiftmodule"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/vagrant/git/.build/x86_64-apple-macosx/debug/Keychain.swiftmodule"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/vagrant/git/.build/x86_64-apple-macosx/debug/Inject.swiftmodule"
+        }
+      ],
+      "isLibrary" : true,
+      "moduleName" : "SecurePropertyStorageTests",
+      "moduleOutputPath" : "/Users/vagrant/git/.build/x86_64-apple-macosx/debug/SecurePropertyStorageTests.swiftmodule",
+      "objects" : [
+        "/Users/vagrant/git/.build/x86_64-apple-macosx/debug/SecurePropertyStorageTests.build/InjectTests.swift.o",
+        "/Users/vagrant/git/.build/x86_64-apple-macosx/debug/SecurePropertyStorageTests.build/KeychainTests.swift.o",
+        "/Users/vagrant/git/.build/x86_64-apple-macosx/debug/SecurePropertyStorageTests.build/SingletonTests.swift.o",
+        "/Users/vagrant/git/.build/x86_64-apple-macosx/debug/SecurePropertyStorageTests.build/UserDefaultTests.swift.o",
+        "/Users/vagrant/git/.build/x86_64-apple-macosx/debug/SecurePropertyStorageTests.build/XCTestManifests.swift.o"
+      ],
+      "otherArguments" : [
+        "-target",
+        "x86_64-apple-macosx11.0",
+        "-swift-version",
+        "5",
+        "-enable-batch-mode",
+        "-index-store-path",
+        "/Users/vagrant/git/.build/x86_64-apple-macosx/debug/index/store",
+        "-Onone",
+        "-enable-testing",
+        "-g",
+        "-j4",
+        "-DSWIFT_PACKAGE",
+        "-DDEBUG",
+        "-module-cache-path",
+        "/Users/vagrant/git/.build/x86_64-apple-macosx/debug/ModuleCache",
+        "-parseable-output",
+        "-parse-as-library",
+        "-sdk",
+        "/Applications/Xcode-14.1.0.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX13.0.sdk",
+        "-F",
+        "/Applications/Xcode-14.1.0.app/Contents/Developer/Platforms/MacOSX.platform/Developer/Library/Frameworks",
+        "-I",
+        "/Applications/Xcode-14.1.0.app/Contents/Developer/Platforms/MacOSX.platform/Developer/usr/lib",
+        "-L",
+        "/Applications/Xcode-14.1.0.app/Contents/Developer/Platforms/MacOSX.platform/Developer/usr/lib"
+      ],
+      "outputs" : [
+        {
+          "kind" : "file",
+          "name" : "/Users/vagrant/git/.build/x86_64-apple-macosx/debug/SecurePropertyStorageTests.build/InjectTests.swift.o"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/vagrant/git/.build/x86_64-apple-macosx/debug/SecurePropertyStorageTests.build/KeychainTests.swift.o"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/vagrant/git/.build/x86_64-apple-macosx/debug/SecurePropertyStorageTests.build/SingletonTests.swift.o"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/vagrant/git/.build/x86_64-apple-macosx/debug/SecurePropertyStorageTests.build/UserDefaultTests.swift.o"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/vagrant/git/.build/x86_64-apple-macosx/debug/SecurePropertyStorageTests.build/XCTestManifests.swift.o"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/vagrant/git/.build/x86_64-apple-macosx/debug/SecurePropertyStorageTests.swiftmodule"
+        }
+      ],
+      "sources" : [
+        "/Users/vagrant/git/Tests/SecurePropertyStorageTests/InjectTests.swift",
+        "/Users/vagrant/git/Tests/SecurePropertyStorageTests/KeychainTests.swift",
+        "/Users/vagrant/git/Tests/SecurePropertyStorageTests/SingletonTests.swift",
+        "/Users/vagrant/git/Tests/SecurePropertyStorageTests/UserDefaultTests.swift",
+        "/Users/vagrant/git/Tests/SecurePropertyStorageTests/XCTestManifests.swift"
+      ],
+      "tempsPath" : "/Users/vagrant/git/.build/x86_64-apple-macosx/debug/SecurePropertyStorageTests.build",
+      "wholeModuleOptimization" : false
+    },
+    "C.Singleton-debug.module" : {
+      "executable" : "/Applications/Xcode-14.1.0.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/swiftc",
+      "importPath" : "/Users/vagrant/git/.build/x86_64-apple-macosx/debug",
+      "inputs" : [
+        {
+          "kind" : "file",
+          "name" : "/Users/vagrant/git/Sources/Singleton/Singleton.swift"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/vagrant/git/Sources/Singleton/SingletonStorage.swift"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/vagrant/git/.build/x86_64-apple-macosx/debug/Storage.swiftmodule"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/vagrant/git/.build/x86_64-apple-macosx/debug/Keychain.swiftmodule"
+        }
+      ],
+      "isLibrary" : true,
+      "moduleName" : "Singleton",
+      "moduleOutputPath" : "/Users/vagrant/git/.build/x86_64-apple-macosx/debug/Singleton.swiftmodule",
+      "objects" : [
+        "/Users/vagrant/git/.build/x86_64-apple-macosx/debug/Singleton.build/Singleton.swift.o",
+        "/Users/vagrant/git/.build/x86_64-apple-macosx/debug/Singleton.build/SingletonStorage.swift.o"
+      ],
+      "otherArguments" : [
+        "-target",
+        "x86_64-apple-macosx10.15",
+        "-swift-version",
+        "5",
+        "-enable-batch-mode",
+        "-index-store-path",
+        "/Users/vagrant/git/.build/x86_64-apple-macosx/debug/index/store",
+        "-Onone",
+        "-enable-testing",
+        "-g",
+        "-j4",
+        "-DSWIFT_PACKAGE",
+        "-DDEBUG",
+        "-module-cache-path",
+        "/Users/vagrant/git/.build/x86_64-apple-macosx/debug/ModuleCache",
+        "-parseable-output",
+        "-parse-as-library",
+        "-emit-objc-header",
+        "-emit-objc-header-path",
+        "/Users/vagrant/git/.build/x86_64-apple-macosx/debug/Singleton.build/Singleton-Swift.h",
+        "-sdk",
+        "/Applications/Xcode-14.1.0.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX13.0.sdk",
+        "-F",
+        "/Applications/Xcode-14.1.0.app/Contents/Developer/Platforms/MacOSX.platform/Developer/Library/Frameworks",
+        "-I",
+        "/Applications/Xcode-14.1.0.app/Contents/Developer/Platforms/MacOSX.platform/Developer/usr/lib",
+        "-L",
+        "/Applications/Xcode-14.1.0.app/Contents/Developer/Platforms/MacOSX.platform/Developer/usr/lib"
+      ],
+      "outputs" : [
+        {
+          "kind" : "file",
+          "name" : "/Users/vagrant/git/.build/x86_64-apple-macosx/debug/Singleton.build/Singleton.swift.o"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/vagrant/git/.build/x86_64-apple-macosx/debug/Singleton.build/SingletonStorage.swift.o"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/vagrant/git/.build/x86_64-apple-macosx/debug/Singleton.swiftmodule"
+        }
+      ],
+      "sources" : [
+        "/Users/vagrant/git/Sources/Singleton/Singleton.swift",
+        "/Users/vagrant/git/Sources/Singleton/SingletonStorage.swift"
+      ],
+      "tempsPath" : "/Users/vagrant/git/.build/x86_64-apple-macosx/debug/Singleton.build",
+      "wholeModuleOptimization" : false
+    },
+    "C.Storage-debug.module" : {
+      "executable" : "/Applications/Xcode-14.1.0.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/swiftc",
+      "importPath" : "/Users/vagrant/git/.build/x86_64-apple-macosx/debug",
+      "inputs" : [
+        {
+          "kind" : "file",
+          "name" : "/Users/vagrant/git/Sources/Storage/DataConvertible.swift"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/vagrant/git/Sources/Storage/DelegatedStorage.swift"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/vagrant/git/Sources/Storage/Storage.swift"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/vagrant/git/Sources/Storage/StorageData.swift"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/vagrant/git/Sources/Storage/StorageDelegate.swift"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/vagrant/git/Sources/Storage/Store.swift"
+        }
+      ],
+      "isLibrary" : true,
+      "moduleName" : "Storage",
+      "moduleOutputPath" : "/Users/vagrant/git/.build/x86_64-apple-macosx/debug/Storage.swiftmodule",
+      "objects" : [
+        "/Users/vagrant/git/.build/x86_64-apple-macosx/debug/Storage.build/DataConvertible.swift.o",
+        "/Users/vagrant/git/.build/x86_64-apple-macosx/debug/Storage.build/DelegatedStorage.swift.o",
+        "/Users/vagrant/git/.build/x86_64-apple-macosx/debug/Storage.build/Storage.swift.o",
+        "/Users/vagrant/git/.build/x86_64-apple-macosx/debug/Storage.build/StorageData.swift.o",
+        "/Users/vagrant/git/.build/x86_64-apple-macosx/debug/Storage.build/StorageDelegate.swift.o",
+        "/Users/vagrant/git/.build/x86_64-apple-macosx/debug/Storage.build/Store.swift.o"
+      ],
+      "otherArguments" : [
+        "-target",
+        "x86_64-apple-macosx10.15",
+        "-swift-version",
+        "5",
+        "-enable-batch-mode",
+        "-index-store-path",
+        "/Users/vagrant/git/.build/x86_64-apple-macosx/debug/index/store",
+        "-Onone",
+        "-enable-testing",
+        "-g",
+        "-j4",
+        "-DSWIFT_PACKAGE",
+        "-DDEBUG",
+        "-module-cache-path",
+        "/Users/vagrant/git/.build/x86_64-apple-macosx/debug/ModuleCache",
+        "-parseable-output",
+        "-parse-as-library",
+        "-emit-objc-header",
+        "-emit-objc-header-path",
+        "/Users/vagrant/git/.build/x86_64-apple-macosx/debug/Storage.build/Storage-Swift.h",
+        "-sdk",
+        "/Applications/Xcode-14.1.0.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX13.0.sdk",
+        "-F",
+        "/Applications/Xcode-14.1.0.app/Contents/Developer/Platforms/MacOSX.platform/Developer/Library/Frameworks",
+        "-I",
+        "/Applications/Xcode-14.1.0.app/Contents/Developer/Platforms/MacOSX.platform/Developer/usr/lib",
+        "-L",
+        "/Applications/Xcode-14.1.0.app/Contents/Developer/Platforms/MacOSX.platform/Developer/usr/lib"
+      ],
+      "outputs" : [
+        {
+          "kind" : "file",
+          "name" : "/Users/vagrant/git/.build/x86_64-apple-macosx/debug/Storage.build/DataConvertible.swift.o"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/vagrant/git/.build/x86_64-apple-macosx/debug/Storage.build/DelegatedStorage.swift.o"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/vagrant/git/.build/x86_64-apple-macosx/debug/Storage.build/Storage.swift.o"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/vagrant/git/.build/x86_64-apple-macosx/debug/Storage.build/StorageData.swift.o"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/vagrant/git/.build/x86_64-apple-macosx/debug/Storage.build/StorageDelegate.swift.o"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/vagrant/git/.build/x86_64-apple-macosx/debug/Storage.build/Store.swift.o"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/vagrant/git/.build/x86_64-apple-macosx/debug/Storage.swiftmodule"
+        }
+      ],
+      "sources" : [
+        "/Users/vagrant/git/Sources/Storage/DataConvertible.swift",
+        "/Users/vagrant/git/Sources/Storage/DelegatedStorage.swift",
+        "/Users/vagrant/git/Sources/Storage/Storage.swift",
+        "/Users/vagrant/git/Sources/Storage/StorageData.swift",
+        "/Users/vagrant/git/Sources/Storage/StorageDelegate.swift",
+        "/Users/vagrant/git/Sources/Storage/Store.swift"
+      ],
+      "tempsPath" : "/Users/vagrant/git/.build/x86_64-apple-macosx/debug/Storage.build",
+      "wholeModuleOptimization" : false
+    },
+    "C.UserDefault-debug.module" : {
+      "executable" : "/Applications/Xcode-14.1.0.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/swiftc",
+      "importPath" : "/Users/vagrant/git/.build/x86_64-apple-macosx/debug",
+      "inputs" : [
+        {
+          "kind" : "file",
+          "name" : "/Users/vagrant/git/Sources/UserDefault/UserDefault.swift"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/vagrant/git/Sources/UserDefault/UserDefaultsStorage.swift"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/vagrant/git/.build/x86_64-apple-macosx/debug/Storage.swiftmodule"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/vagrant/git/.build/x86_64-apple-macosx/debug/Keychain.swiftmodule"
+        }
+      ],
+      "isLibrary" : true,
+      "moduleName" : "UserDefault",
+      "moduleOutputPath" : "/Users/vagrant/git/.build/x86_64-apple-macosx/debug/UserDefault.swiftmodule",
+      "objects" : [
+        "/Users/vagrant/git/.build/x86_64-apple-macosx/debug/UserDefault.build/UserDefault.swift.o",
+        "/Users/vagrant/git/.build/x86_64-apple-macosx/debug/UserDefault.build/UserDefaultsStorage.swift.o"
+      ],
+      "otherArguments" : [
+        "-target",
+        "x86_64-apple-macosx10.15",
+        "-swift-version",
+        "5",
+        "-enable-batch-mode",
+        "-index-store-path",
+        "/Users/vagrant/git/.build/x86_64-apple-macosx/debug/index/store",
+        "-Onone",
+        "-enable-testing",
+        "-g",
+        "-j4",
+        "-DSWIFT_PACKAGE",
+        "-DDEBUG",
+        "-module-cache-path",
+        "/Users/vagrant/git/.build/x86_64-apple-macosx/debug/ModuleCache",
+        "-parseable-output",
+        "-parse-as-library",
+        "-emit-objc-header",
+        "-emit-objc-header-path",
+        "/Users/vagrant/git/.build/x86_64-apple-macosx/debug/UserDefault.build/UserDefault-Swift.h",
+        "-sdk",
+        "/Applications/Xcode-14.1.0.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX13.0.sdk",
+        "-F",
+        "/Applications/Xcode-14.1.0.app/Contents/Developer/Platforms/MacOSX.platform/Developer/Library/Frameworks",
+        "-I",
+        "/Applications/Xcode-14.1.0.app/Contents/Developer/Platforms/MacOSX.platform/Developer/usr/lib",
+        "-L",
+        "/Applications/Xcode-14.1.0.app/Contents/Developer/Platforms/MacOSX.platform/Developer/usr/lib"
+      ],
+      "outputs" : [
+        {
+          "kind" : "file",
+          "name" : "/Users/vagrant/git/.build/x86_64-apple-macosx/debug/UserDefault.build/UserDefault.swift.o"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/vagrant/git/.build/x86_64-apple-macosx/debug/UserDefault.build/UserDefaultsStorage.swift.o"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/vagrant/git/.build/x86_64-apple-macosx/debug/UserDefault.swiftmodule"
+        }
+      ],
+      "sources" : [
+        "/Users/vagrant/git/Sources/UserDefault/UserDefault.swift",
+        "/Users/vagrant/git/Sources/UserDefault/UserDefaultsStorage.swift"
+      ],
+      "tempsPath" : "/Users/vagrant/git/.build/x86_64-apple-macosx/debug/UserDefault.build",
+      "wholeModuleOptimization" : false
+    }
+  },
+  "swiftFrontendCommands" : {
+
+  },
+  "testDiscoveryCommands" : {
+
+  }
+}

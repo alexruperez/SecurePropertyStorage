@@ -1,0 +1,4 @@
+module Storage {
+    header "/Users/vagrant/git/.build/x86_64-apple-macosx/debug/Storage.build/Storage-Swift.h"
+    requires objc
+}

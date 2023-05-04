@@ -1,0 +1,8 @@
+version: "Apple Swift version 5.7.1 (swiftlang-5.7.1.135.3 clang-1400.0.29.51)"
+options: "21cf2ced9cdb65692fc261e9a8d2d401856dcac3ec4129fe9e634bdfd0794f2c"
+build_start_time: [1683198430, 651561975]
+build_end_time: [1683198431, 223317146]
+inputs:
+  "/Users/vagrant/git/Sources/Inject/Inject.swift": [1683198354, 377262353]
+  "/Users/vagrant/git/Sources/Inject/InjectError.swift": [1683198354, 377451658]
+  "/Users/vagrant/git/Sources/Inject/InjectStorage.swift": [1683198354, 377633571]

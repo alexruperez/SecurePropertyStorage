@@ -1,0 +1,7 @@
+version: "Apple Swift version 5.7.1 (swiftlang-5.7.1.135.3 clang-1400.0.29.51)"
+options: "2f8fd00b5759ca3792987f4f364a1cb0015b65d4bdbcec5c503928244033ec84"
+build_start_time: [1683198431, 419806003]
+build_end_time: [1683198431, 859076023]
+inputs:
+  "/Users/vagrant/git/Sources/UserDefault/UserDefault.swift": [1683198354, 380401611]
+  "/Users/vagrant/git/Sources/UserDefault/UserDefaultsStorage.swift": [1683198354, 380554676]
