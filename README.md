@@ -349,6 +349,7 @@ var yourDependency: YourProtocol?
 - iPadOS 13.0+
 - tvOS 13.0+
 - watchOS 6.0+
+- visionOS 1.0+
 
 ## ⚙️ Installation
 

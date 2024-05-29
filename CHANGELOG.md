@@ -2,6 +2,10 @@
 
 ## Next Version
 
+- visionOS Compatible.
+- Swift Package Manager tools version update to 5.9
+- Xcode version update to 15.4
+
 ## 0.7.1
 
 #### Fixed
