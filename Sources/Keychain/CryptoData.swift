@@ -15,11 +15,11 @@ extension SymmetricKey: StorageData {
     }
 
     /// Generate a `SymmetricKey` and store it on the keychain.
-    public static func generate(accessible: CFString = kSecAttrAccessibleWhenUnlocked,
+    public static func generate(key: String = "SecurePropertyStorage.SymmetricKey",
+                                accessible: CFString = kSecAttrAccessibleWhenUnlocked,
                                 accessGroup: String? = nil,
                                 synchronizable: Bool = false,
                                 secClass: CFString = kSecClassGenericPassword) -> SymmetricKey {
-        let key = "SecurePropertyStorage.SymmetricKey"
         let keychainStorage = KeychainStorageDelegate()
         do {
             guard let symmetricKey: SymmetricKey = try keychainStorage.read(key: key,
