@@ -2,6 +2,10 @@
 
 ## Next Version
 
+#### Added
+- Configurable Symmetric Key Naming. [#31](https://github.com/alexruperez/SecurePropertyStorage/pull/31) Thanks [@nuomi1](https://github.com/nuomi1)!
+
+#### Improvements
 - visionOS Compatible.
 - Swift Package Manager tools version update to 5.9
 - Xcode version update to 15.4
