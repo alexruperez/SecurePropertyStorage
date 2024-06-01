@@ -9,7 +9,8 @@
 [![Bitrise](https://app.bitrise.io/app/4fed1af31836d3bc/status.svg?token=bYImtoKj0hxqCxnORhdgyg&branch=master)](https://app.bitrise.io/app/4fed1af31836d3bc)
 [![Quality](https://api.codacy.com/project/badge/Grade/53a23dd2feca4b7ca8357c918c7d49c9)](https://app.codacy.com/manual/alexruperez/SecurePropertyStorage)
 [![Maintainability](https://api.codeclimate.com/v1/badges/bbf38ddca9a26703cefd/maintainability)](https://codeclimate.com/github/alexruperez/SecurePropertyStorage/maintainability)
-[![Coverage](https://codecov.io/gh/alexruperez/SecurePropertyStorage/branch/master/graph/badge.svg)](https://codecov.io/gh/alexruperez/SecurePropertyStorage)
+[![Test Coverage](https://api.codeclimate.com/v1/badges/bbf38ddca9a26703cefd/test_coverage)](https://codeclimate.com/github/alexruperez/SecurePropertyStorage/test_coverage)
+[![codecov](https://codecov.io/gh/alexruperez/SecurePropertyStorage/graph/badge.svg?token=T3NNtLnmsA)](https://codecov.io/gh/alexruperez/SecurePropertyStorage)
 [![Documentation](https://alexruperez.github.io/SecurePropertyStorage/badge.svg)](https://alexruperez.github.io/SecurePropertyStorage/)
 
 ## 🌟 Features
