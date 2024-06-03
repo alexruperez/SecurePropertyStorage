@@ -90,10 +90,12 @@ final class InjectTests: XCTestCase {
     private var registerBuilder = {
         InstanceDependency(Date().timeIntervalSince1970) as InstanceProtocol
     }
+
     @Register
     private var registerBuilderWith = { parameters in
         InstanceDependency(parameters) as InstanceProtocol
     }
+
     @Register(group: "group")
     private var registerGroup: DependencyProtocol = Dependency()
     @Register(group: "group")

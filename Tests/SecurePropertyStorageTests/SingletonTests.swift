@@ -4,7 +4,7 @@ import XCTest
 
 enum SingletonCodable: String, Codable {
     case test
-    case testAlternative
+    case alternative
 }
 
 let singletonTagStorage: DelegatedStorage = SingletonStorage(authenticationTag: Data())
@@ -68,12 +68,12 @@ final class SingletonTests: XCTestCase {
         XCTAssertEqual(unwrappedSingletonCodable, .test)
         unwrappedSingletonTagDefault = "tagDefaultAlternative"
         unwrappedSingletonDefault = "defaultAlternative"
-        unwrappedSingletonTagCodable = .testAlternative
-        unwrappedSingletonCodable = .testAlternative
+        unwrappedSingletonTagCodable = .alternative
+        unwrappedSingletonCodable = .alternative
         XCTAssertEqual(unwrappedSingletonTagDefault, "tagDefaultAlternative")
         XCTAssertEqual(unwrappedSingletonDefault, "defaultAlternative")
-        XCTAssertEqual(unwrappedSingletonTagCodable, .testAlternative)
-        XCTAssertEqual(unwrappedSingletonCodable, .testAlternative)
+        XCTAssertEqual(unwrappedSingletonTagCodable, .alternative)
+        XCTAssertEqual(unwrappedSingletonCodable, .alternative)
     }
 
     static var allTests = [

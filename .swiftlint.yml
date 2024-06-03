@@ -1,7 +1,6 @@
 disabled_rules:
-  - weak_delegate
+  - unused_optional_binding
 opt_in_rules:
-  - anyobject_protocol
   - array_init
   - attributes
   - closure_body_length
@@ -83,3 +82,6 @@ opt_in_rules:
   - vertical_whitespace_opening_braces
   - xct_specific_matcher
   - yoda_condition
+attributes:
+  always_on_same_line:  ["@IBAction", "@NSManaged", "@objc"]
+  always_on_line_above: ["@Inject", "@Register", "@UnwrappedInject"]

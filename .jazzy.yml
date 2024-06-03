@@ -1,7 +1,7 @@
 author: Alex Rupérez
-author_url: https://twitter.com/alexruperez
+author_url: http://alexruperez.com
 clean: true
-copyright: Copyright (c) 2021 Alex Rupérez
+copyright: Copyright (c) 2024 Alex Rupérez
 github_file_prefix: https://github.com/alexruperez/SecurePropertyStorage/blob/master
 github_url: https://github.com/alexruperez/SecurePropertyStorage
 module: SecurePropertyStorage

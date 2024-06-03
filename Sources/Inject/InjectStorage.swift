@@ -13,9 +13,9 @@ open class InjectStorage: DelegatedStorage {
 
      - Parameter key: A `StoreKey` in storage.
      */
-    open override func array(forKey key: StoreKey) -> [Any]? { storage[hash(key)] }
+    override open func array(forKey key: StoreKey) -> [Any]? { storage[hash(key)] }
 
-    open override func set(object: Any?, forKey key: StoreKey) {
+    override open func set(object: Any?, forKey key: StoreKey) {
         let storeKey = hash(key)
         if let dependency = object {
             if storage[storeKey] == nil {

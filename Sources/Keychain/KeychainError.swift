@@ -8,7 +8,7 @@ public enum KeychainError: Error, CustomStringConvertible {
     public var description: String {
         switch self {
         case let .error(message):
-            return message
+            message
         }
     }
 }

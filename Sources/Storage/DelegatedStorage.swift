@@ -32,9 +32,9 @@ open class DelegatedStorage: Storage {
     }
 
     open func register(defaults registrationDictionary: [StoreKey: Any]) {
-        registrationDictionary.forEach { key, value in
+        for (key, value) in registrationDictionary {
             if let _: Data = data(forKey: key) {
-                return
+                continue
             }
             set(value, forKey: key)
         }
@@ -56,7 +56,7 @@ open class DelegatedStorage: Storage {
      */
     open func object(forKey key: StoreKey) throws -> Any? {
         guard let data: Data = data(forKey: key),
-            let object = try NSKeyedUnarchiver.unarchiveTopLevelObjectWithData(data) else {
+              let object = try NSKeyedUnarchiver.unarchiveTopLevelObjectWithData(data) else {
             return nil
         }
         return object
@@ -76,7 +76,7 @@ open class DelegatedStorage: Storage {
 
     open func string(forKey key: StoreKey) -> String? {
         guard let data: Data = data(forKey: key),
-            let string = String(data) else {
+              let string = String(data) else {
             return nil
         }
         return string
@@ -100,7 +100,7 @@ open class DelegatedStorage: Storage {
 
     open func integer(forKey key: StoreKey) -> Int {
         guard let data: Data = data(forKey: key),
-            let integer = Int(data) else {
+              let integer = Int(data) else {
             return 0
         }
         return integer
@@ -108,7 +108,7 @@ open class DelegatedStorage: Storage {
 
     open func float(forKey key: StoreKey) -> Float {
         guard let data: Data = data(forKey: key),
-            let float = Float(data) else {
+              let float = Float(data) else {
             return 0
         }
         return float
@@ -116,7 +116,7 @@ open class DelegatedStorage: Storage {
 
     open func double(forKey key: StoreKey) -> Double {
         guard let data: Data = data(forKey: key),
-            let double = Double(data) else {
+              let double = Double(data) else {
             return 0
         }
         return double
@@ -124,7 +124,7 @@ open class DelegatedStorage: Storage {
 
     open func bool(forKey key: StoreKey) -> Bool {
         guard let data: Data = data(forKey: key),
-            let bool = Bool(data) else {
+              let bool = Bool(data) else {
             return false
         }
         return bool
@@ -140,11 +140,11 @@ open class DelegatedStorage: Storage {
     open func data<D: StorageData>(forKey key: StoreKey) -> D? {
         do {
             guard let data: Data = try delegate?.data(forKey: hash(key)),
-                let symmetricKey = symmetricKey else {
+                  let symmetricKey else {
                 return nil
             }
             let sealedBox = try AES.GCM.SealedBox(combined: data)
-            if let authenticationTag = authenticationTag {
+            if let authenticationTag {
                 return try AES.GCM.open(sealedBox,
                                         using: symmetricKey,
                                         authenticating: authenticationTag) as? D
@@ -181,7 +181,7 @@ open class DelegatedStorage: Storage {
         try? set(string.data, forKey: key)
     }
 
-    open func set<V>(_ value: V?, forKey key: StoreKey) {
+    open func set(_ value: (some Any)?, forKey key: StoreKey) {
         do {
             try set(object: value, forKey: key)
         } catch {
@@ -200,7 +200,7 @@ open class DelegatedStorage: Storage {
      - Parameter key: The `StoreKey` with which to associate the value.
      */
     open func set(object: Any?, forKey key: StoreKey) throws {
-        guard let object = object else {
+        guard let object else {
             remove(forKey: key)
             return
         }
@@ -210,7 +210,7 @@ open class DelegatedStorage: Storage {
     }
 
     open func set(encodable: Encodable?, forKey key: StoreKey) {
-        guard let encodable = encodable else {
+        guard let encodable else {
             remove(forKey: key)
             return
         }
@@ -222,13 +222,13 @@ open class DelegatedStorage: Storage {
         }
     }
 
-    open func set<D: StorageData>(_ data: D?, forKey key: StoreKey) throws {
+    open func set(_ data: (some StorageData)?, forKey key: StoreKey) throws {
         guard let bytes = data,
-            let symmetricKey = symmetricKey else {
+              let symmetricKey else {
             remove(forKey: key)
             return
         }
-        if let authenticationTag = authenticationTag {
+        if let authenticationTag {
             let sealedBox = try AES.GCM.seal(bytes.data,
                                              using: symmetricKey,
                                              authenticating: authenticationTag)

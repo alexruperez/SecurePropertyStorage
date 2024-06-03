@@ -44,7 +44,7 @@ extension Data: StorageData {
 
      - Parameter bytes: `StorageData` of `Data`.
      */
-    public init<B: StorageData>(bytes: B) {
+    public init(bytes: some StorageData) {
         self = bytes.data
     }
 
