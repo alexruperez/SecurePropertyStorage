@@ -10,7 +10,7 @@ extension SymmetricKey: StorageData {
 
      - Throws: `CipherError` errors.
      */
-    public init<B: StorageData>(bytes: B) throws {
+    public init(bytes: some StorageData) throws {
         self.init(data: bytes)
     }
 

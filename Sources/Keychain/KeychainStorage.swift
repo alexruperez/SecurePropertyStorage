@@ -84,9 +84,9 @@ open class KeychainStorageDelegate: StorageDelegate {
 
      - Throws: `KeychainError.error`.
      */
-    open func set<D: StorageData>(_ data: D?, forKey key: StoreKey) throws {
+    open func set(_ data: (some StorageData)?, forKey key: StoreKey) throws {
         try? remove(forKey: key)
-        if let data = data {
+        if let data {
             try store(data,
                       key: key,
                       accessible: accessible,
@@ -122,18 +122,18 @@ open class KeychainStorageDelegate: StorageDelegate {
 
      - Throws: `KeychainError.error`.
      */
-    open func store<D: StorageData>(_ value: D,
-                                    key: String,
-                                    accessible: CFString = kSecAttrAccessibleWhenUnlocked,
-                                    accessGroup: String? = nil,
-                                    synchronizable: Bool = false,
-                                    secClass: CFString = kSecClassGenericPassword) throws {
+    open func store(_ value: some StorageData,
+                    key: String,
+                    accessible: CFString = kSecAttrAccessibleWhenUnlocked,
+                    accessGroup: String? = nil,
+                    synchronizable: Bool = false,
+                    secClass: CFString = kSecClassGenericPassword) throws {
         var query = [kSecClass: secClass,
                      kSecAttrAccount: key,
                      kSecAttrAccessible: accessible,
                      kSecUseDataProtectionKeychain: true,
                      kSecValueData: value.data] as [CFString: Any]
-        if let accessGroup = accessGroup {
+        if let accessGroup {
             query[kSecAttrAccessGroup] = accessGroup
         }
         if synchronizable {
@@ -170,13 +170,13 @@ open class KeychainStorageDelegate: StorageDelegate {
                      kSecAttrAccount: key,
                      kSecUseDataProtectionKeychain: true,
                      kSecReturnData: returnData] as [CFString: Any]
-        if let accessGroup = accessGroup {
+        if let accessGroup {
             query[kSecAttrAccessGroup] = accessGroup
         }
         if synchronizable {
             query[kSecAttrSynchronizable] = kCFBooleanTrue
         }
-        if let returnAttributes = returnAttributes {
+        if let returnAttributes {
             query[kSecReturnAttributes] = returnAttributes
         }
 
@@ -211,7 +211,7 @@ open class KeychainStorageDelegate: StorageDelegate {
         var query = [kSecClass: secClass,
                      kSecUseDataProtectionKeychain: true,
                      kSecAttrAccount: key] as [CFString: Any]
-        if let accessGroup = accessGroup {
+        if let accessGroup {
             query[kSecAttrAccessGroup] = accessGroup
         }
         if synchronizable {

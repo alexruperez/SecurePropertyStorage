@@ -45,7 +45,7 @@ open class SingletonStorageDelegate: StorageDelegate {
      - Parameter data: `StorageData` to store.
      - Parameter key: `StoreKey` to store the `StorageData`.
      */
-    open func set<D: StorageData>(_ data: D?, forKey key: StoreKey) { storage[key] = data }
+    open func set(_ data: (some StorageData)?, forKey key: StoreKey) { storage[key] = data }
 
     /**
      Remove `StorageData` for `StoreKey` from the keychain.

@@ -59,7 +59,7 @@ open class InjectPropertyWrapper<Dependency, Parameters>: StorePropertyWrapper<I
      - Parameter dependency: Dependency to register.
      */
     open func register(_ dependency: Dependency?) {
-        if let group = group {
+        if let group {
             var groupStorage: InjectStorage?
             if let storage = storage.groups[group] {
                 groupStorage = storage
@@ -89,7 +89,7 @@ open class InjectPropertyWrapper<Dependency, Parameters>: StorePropertyWrapper<I
         if let dependency = instance(resolved, scope, parameters) {
             return dependency
         }
-        if let qualifiers = qualifiers {
+        if let qualifiers {
             let qualifiedDependencies = resolved.filter { dependency in
                 qualifiers.allSatisfy { qualifier in
                     class_conformsToProtocol(type(of: dependency) as? AnyClass, qualifier)
@@ -118,7 +118,7 @@ open class InjectPropertyWrapper<Dependency, Parameters>: StorePropertyWrapper<I
      - Returns: Matching dependencies.
      */
     private func dependencies(_ errorClosureExecuted: Bool = false) throws -> [Any] {
-        if let group = group, let storage = storage.groups[group],
+        if let group, let storage = storage.groups[group],
            let dependencies = storage.array(forKey: key) {
             return dependencies
         }
@@ -148,19 +148,19 @@ open class InjectPropertyWrapper<Dependency, Parameters>: StorePropertyWrapper<I
         var dependency: Dependency?
         let instances: [Dependency] = map(dependencies)
         if scope == .singleton,
-            instances.count == 1 {
+           instances.count == 1 {
             dependency = instances.first
         }
-        if let parameters = parameters {
+        if let parameters {
             let builders: [(Parameters) -> Dependency] = map(dependencies)
             if builders.count == 1,
-                let builder = builders.first {
+               let builder = builders.first {
                 dependency = builder(parameters)
             }
         }
         let builders: [() -> Dependency] = map(dependencies)
         if builders.count == 1,
-            let builder = builders.first {
+           let builder = builders.first {
             let instance = builder()
             if scope == .instance, dependency == nil {
                 dependency = instance
