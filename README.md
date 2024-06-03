@@ -1,7 +1,7 @@
 # 🔐 Secure Property Storage
 > Helps you define secure storages for your properties using Swift *property wrappers*.
 
-[![Twitter](https://img.shields.io/badge/contact-%40alexruperez-blue)](http://twitter.com/alexruperez)
+[![Twitter](https://img.shields.io/badge/contact-%40alexruperez-blue)](http://alexruperez.com)
 [![Swift](https://img.shields.io/badge/swift-5-orange)](https://swift.org)
 [![License](https://img.shields.io/github/license/alexruperez/SecurePropertyStorage)](LICENSE)
 [![Swift Package Manager](https://img.shields.io/badge/Swift%20Package%20Manager-compatible-4BC51D.svg?style=flat)](https://swift.org/package-manager)
@@ -11,8 +11,8 @@
 [![Test Coverage](https://api.codeclimate.com/v1/badges/bbf38ddca9a26703cefd/test_coverage)](https://codeclimate.com/github/alexruperez/SecurePropertyStorage/test_coverage)
 [![codecov](https://codecov.io/gh/alexruperez/SecurePropertyStorage/graph/badge.svg?token=T3NNtLnmsA)](https://codecov.io/gh/alexruperez/SecurePropertyStorage)
 [![codebeat badge](https://codebeat.co/badges/ee2372f0-2188-43c6-bf7b-f6860834096c)](https://codebeat.co/projects/github-com-alexruperez-securepropertystorage-master)
-[![Quality](https://api.codacy.com/project/badge/Grade/53a23dd2feca4b7ca8357c918c7d49c9)](https://app.codacy.com/manual/alexruperez/SecurePropertyStorage)
-[![Documentation](https://alexruperez.github.io/SecurePropertyStorage/badge.svg)](https://alexruperez.github.io/SecurePropertyStorage/)
+[![Quality](https://api.codacy.com/project/badge/Grade/53a23dd2feca4b7ca8357c918c7d49c9)](https://app.codacy.com/gh/alexruperez/SecurePropertyStorage/dashboard)
+[![Documentation](https://alexruperez.github.io/SecurePropertyStorage/badge.svg)](https://alexruperez.github.io/SecurePropertyStorage)
 
 ## 🌟 Features
 
