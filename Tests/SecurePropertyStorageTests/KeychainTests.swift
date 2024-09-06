@@ -51,7 +51,7 @@ final class KeychainTests: XCTestCase {
         XCTAssertEqual(keychainTagStorage.accessible, kSecAttrAccessibleAfterFirstUnlock)
     }
 
-    func testKeychainTagStoreError() {
+    @MainActor func testKeychainTagStoreError() {
         let keychainTagStoreError = expectation(description: "keychainTagStoreError")
         keychainTagStorage.errorClosure = { error in
             if case let KeychainError.error(message) = error {
@@ -65,7 +65,7 @@ final class KeychainTests: XCTestCase {
         waitForExpectations(timeout: 1)
     }
 
-    func testKeychainStoreError() {
+    @MainActor func testKeychainStoreError() {
         var errorClosureCalled = false
         let keychainStoreError = expectation(description: "keychainStoreError")
         KeychainStorage.standard.errorClosure = { error in
@@ -81,7 +81,7 @@ final class KeychainTests: XCTestCase {
         waitForExpectations(timeout: 1)
     }
 
-    func testKeychainError() {
+    @MainActor func testKeychainError() {
         var errorClosureCalled = false
         let keychainError = expectation(description: "keychainError")
         KeychainStorage.standard.errorClosure = { error in
@@ -97,7 +97,7 @@ final class KeychainTests: XCTestCase {
         waitForExpectations(timeout: 1)
     }
 
-    func testKeychainTagStoreDefaultError() {
+    @MainActor func testKeychainTagStoreDefaultError() {
         let keychainTagStoreDefaultError = expectation(description: "keychainTagStoreDefaultError")
         keychainTagStorage.errorClosure = { error in
             if case let KeychainError.error(message) = error {
@@ -111,7 +111,7 @@ final class KeychainTests: XCTestCase {
         waitForExpectations(timeout: 1)
     }
 
-    func testKeychainDefaultError() {
+    @MainActor func testKeychainDefaultError() {
         var errorClosureCalled = false
         let keychainDefaultError = expectation(description: "keychainDefaultError")
         KeychainStorage.standard.errorClosure = { error in
@@ -127,7 +127,7 @@ final class KeychainTests: XCTestCase {
         waitForExpectations(timeout: 1)
     }
 
-    func testKeychainTagStoreCodableError() {
+    @MainActor func testKeychainTagStoreCodableError() {
         let keychainTagStoreCodableError = expectation(description: "keychainTagStoreCodableError")
         keychainTagStorage.errorClosure = { error in
             if case let KeychainError.error(message) = error {
@@ -141,7 +141,7 @@ final class KeychainTests: XCTestCase {
         waitForExpectations(timeout: 1)
     }
 
-    func testKeychainCodableError() {
+    @MainActor func testKeychainCodableError() {
         var errorClosureCalled = false
         let keychainCodableError = expectation(description: "keychainCodableError")
         KeychainStorage.standard.errorClosure = { error in
@@ -157,7 +157,7 @@ final class KeychainTests: XCTestCase {
         waitForExpectations(timeout: 1)
     }
 
-    func testUnwrappedKeychainTagStoreDefaultError() {
+    @MainActor func testUnwrappedKeychainTagStoreDefaultError() {
         let unwrappedKeychainTagStoreDefaultError = expectation(description: "unwrappedKeychainTagStoreDefaultError")
         keychainTagStorage.errorClosure = { error in
             if case let KeychainError.error(message) = error {
@@ -171,7 +171,7 @@ final class KeychainTests: XCTestCase {
         waitForExpectations(timeout: 1)
     }
 
-    func testUnwrappedKeychainDefaultError() {
+    @MainActor func testUnwrappedKeychainDefaultError() {
         var errorClosureCalled = false
         let unwrappedKeychainDefaultError = expectation(description: "unwrappedKeychainDefaultError")
         KeychainStorage.standard.errorClosure = { error in
@@ -187,7 +187,7 @@ final class KeychainTests: XCTestCase {
         waitForExpectations(timeout: 1)
     }
 
-    func testUnwrappedKeychainTagStoreCodableError() {
+    @MainActor func testUnwrappedKeychainTagStoreCodableError() {
         let unwrappedKeychainTagStoreCodableError = expectation(description: "unwrappedKeychainTagStoreCodableError")
         keychainTagStorage.errorClosure = { error in
             if case let KeychainError.error(message) = error {
@@ -201,7 +201,7 @@ final class KeychainTests: XCTestCase {
         waitForExpectations(timeout: 1)
     }
 
-    func testUnwrappedKeychainCodableError() {
+    @MainActor func testUnwrappedKeychainCodableError() {
         var errorClosureCalled = false
         let unwrappedKeychainCodableError = expectation(description: "unwrappedKeychainCodableError")
         KeychainStorage.standard.errorClosure = { error in
@@ -217,7 +217,7 @@ final class KeychainTests: XCTestCase {
         waitForExpectations(timeout: 1)
     }
 
-    func testKeychainDeleteError() {
+    @MainActor func testKeychainDeleteError() {
         var errorClosureCalled = false
         let keychainDeleteError = expectation(description: "keychainDeleteError")
         KeychainStorage.standard.errorClosure = { error in
@@ -233,7 +233,7 @@ final class KeychainTests: XCTestCase {
         waitForExpectations(timeout: 1)
     }
 
-    func testKeychainCodableDeleteError() {
+    @MainActor func testKeychainCodableDeleteError() {
         var errorClosureCalled = false
         let keychainCodableDeleteError = expectation(description: "keychainCodableDeleteError")
         KeychainStorage.standard.errorClosure = { error in
@@ -249,7 +249,7 @@ final class KeychainTests: XCTestCase {
         waitForExpectations(timeout: 1)
     }
 
-    static var allTests = [
+    @MainActor static let allTests = [
         ("testKeychainStorageAccessGroup", testKeychainStorageAccessGroup),
         ("testKeychainStorageSynchronizable", testKeychainStorageSynchronizable),
         ("testKeychainStorageAccessible", testKeychainStorageAccessible),

@@ -76,7 +76,7 @@ final class SingletonTests: XCTestCase {
         XCTAssertEqual(unwrappedSingletonCodable, .alternative)
     }
 
-    static var allTests = [
+    @MainActor static let allTests = [
         ("testSingleton", testSingleton)
     ]
 }
