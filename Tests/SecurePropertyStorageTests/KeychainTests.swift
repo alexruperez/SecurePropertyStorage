@@ -7,18 +7,14 @@ enum KeychainCodable: String, Codable {
     case test2
 }
 
-extension Storages {
-    static let keychainTagStorage: KeychainStorage = {
-        let keychainStorage = KeychainStorage(authenticationTag: Data())
-        keychainStorage.accessGroup = ""
-        keychainStorage.synchronizable = true
-        keychainStorage.accessible = kSecAttrAccessibleAfterFirstUnlock
-        return keychainStorage
-    }()
-}
-var keychainTagStorage: KeychainStorage {
-    Storages.keychainTagStorage
-}
+@StorageActor
+let keychainTagStorage: KeychainStorage = {
+    let keychainStorage = KeychainStorage(authenticationTag: Data())
+    keychainStorage.accessGroup = ""
+    keychainStorage.synchronizable = true
+    keychainStorage.accessible = kSecAttrAccessibleAfterFirstUnlock
+    return keychainStorage
+}()
 
 final class KeychainTests: XCTestCase, Sendable {
     @Store(keychainTagStorage, "keychainTagStore")

@@ -7,6 +7,7 @@ public protocol StorageDelegate: AnyObject {
 
      - Throws: `StorageDelegate` implementation possible errors.
      */
+    @StorageActor 
     func data<D: StorageData>(forKey key: StoreKey) throws -> D?
 
     /**
@@ -17,6 +18,7 @@ public protocol StorageDelegate: AnyObject {
 
      - Throws: `StorageDelegate` implementation possible errors.
      */
+    @StorageActor 
     func set<D: StorageData>(_ data: D?, forKey key: StoreKey) throws
 
     /**
@@ -26,5 +28,6 @@ public protocol StorageDelegate: AnyObject {
 
      - Throws: `StorageDelegate` implementation possible errors.
      */
+    @StorageActor 
     func remove(forKey key: StoreKey) throws
 }

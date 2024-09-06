@@ -19,7 +19,7 @@ protocol DependencyProtocol {
     var timestamp: TimeInterval { get }
 }
 
-class Dependency: DependencyProtocol, Equatable, DependencyQualifier {
+class Dependency: DependencyProtocol, Equatable, DependencyQualifier, Sendable {
     let timestamp = Date().timeIntervalSince1970
     @Inject
     var sub: SubDependencyProtocol?

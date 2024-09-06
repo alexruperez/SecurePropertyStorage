@@ -7,34 +7,29 @@ enum UserDefaultsCodable: String, Codable {
     case alternative
 }
 
-actor Storages {
-    static let userDefaultsStorage = UserDefaultsStorage(authenticationTag: Data())
-}
-
-func userDefaultsTagStorage() -> UserDefaultsStorage {
-    UserDefaultsStorage(authenticationTag: Data())
-}
+@StorageActor
+let userDefaultsTagStorage = UserDefaultsStorage(authenticationTag: Data())
 
 final class UserDefaultTests: XCTestCase {
-    @Store(Storages.userDefaultsStorage, "userDefaultsTagStore")
+    @Store(userDefaultsTagStorage, "userDefaultsTagStore")
     var userDefaultsTagStore: String?
     @Store(UserDefaultsStorage.standard, "userDefaultsStore")
     var userDefaultsStore: String?
     @UserDefault("userDefaults")
     var userDefaults: String?
-    @Store(Storages.userDefaultsStorage, "userDefaultsTagDefault")
+    @Store(userDefaultsTagStorage, "userDefaultsTagDefault")
     var userDefaultsTagDefault = "tagDefault"
     @UserDefault("userDefaultsDefault")
     var userDefaultsDefault = "default"
-    @CodableStore(Storages.userDefaultsStorage, "userDefaultsTagCodable")
+    @CodableStore(userDefaultsTagStorage, "userDefaultsTagCodable")
     var userDefaultsTagCodable = UserDefaultsCodable.test
     @CodableUserDefault("userDefaultsCodable")
     var userDefaultsCodable = UserDefaultsCodable.test
-    @UnwrappedStore(Storages.userDefaultsStorage, "unwrappedUserDefaultsTagDefault")
+    @UnwrappedStore(userDefaultsTagStorage, "unwrappedUserDefaultsTagDefault")
     var unwrappedUserDefaultsTagDefault = "tagDefault"
     @UnwrappedUserDefault("unwrappedUserDefaultsDefault")
     var unwrappedUserDefaultsDefault = "default"
-    @UnwrappedCodableStore(Storages.userDefaultsStorage, "unwrappedUserDefaultsTagCodable")
+    @UnwrappedCodableStore(userDefaultsTagStorage, "unwrappedUserDefaultsTagCodable")
     var unwrappedUserDefaultsTagCodable = UserDefaultsCodable.test
     @UnwrappedCodableUserDefault("unwrappedUserDefaultsCodable")
     var unwrappedUserDefaultsCodable = UserDefaultsCodable.test

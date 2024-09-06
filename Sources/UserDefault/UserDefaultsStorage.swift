@@ -4,11 +4,12 @@ import Keychain
 import Storage
 
 /// `UserDefaultsStorage` subclass of `UserDefaults` that uses a `DelegatedStorage`.
-open class UserDefaultsStorage: UserDefaults, Storage {
+open class UserDefaultsStorage: Storage {
     /// `UserDefaultsStorage` shared instance.
-    override open class var standard: UserDefaultsStorage { shared }
-    nonisolated(unsafe) private static let shared = UserDefaultsStorage()
+    open class var standard: UserDefaultsStorage { shared }
+    private static let shared = UserDefaultsStorage()
     private var storage: Storage!
+    private let userDefaults: UserDefaults
 
     /**
      Create a `UserDefaultsStorage`.
@@ -31,8 +32,9 @@ open class UserDefaultsStorage: UserDefaults, Storage {
     public init?(suiteName suitename: String?,
                  symmetricKey: SymmetricKey,
                  authenticationTag: Data? = nil) {
-        super.init(suiteName: suitename)
-        storage = DelegatedStorage(self,
+        guard let userDefaults = UserDefaults(suiteName: suitename) else { fatalError("Esto antes no pasaba") }
+        self.userDefaults = userDefaults
+        self.storage = DelegatedStorage(self,
                                    symmetricKey: symmetricKey,
                                    authenticationTag: authenticationTag)
     }
@@ -43,7 +45,7 @@ open class UserDefaultsStorage: UserDefaults, Storage {
      - Parameter key: A `StoreKey` in storage.
      */
     open func data<D: StorageData>(forKey key: StoreKey) -> D? {
-        super.data(forKey: key) as? D
+        userDefaults.data(forKey: key) as? D
     }
 
     /**
@@ -53,7 +55,7 @@ open class UserDefaultsStorage: UserDefaults, Storage {
      - Parameter defaultName: The `StoreKey` with which to associate the value.
      */
     open func set(_ data: (some StorageData)?, forKey defaultName: StoreKey) {
-        super.set(data, forKey: defaultName)
+        userDefaults.set(data, forKey: defaultName)
     }
 
     /**
@@ -62,7 +64,7 @@ open class UserDefaultsStorage: UserDefaults, Storage {
      - Parameter key: The `StoreKey` whose value you want to remove.
      */
     open func remove(forKey key: StoreKey) {
-        super.removeObject(forKey: key)
+        userDefaults.removeObject(forKey: key)
     }
 
     /**
@@ -70,7 +72,7 @@ open class UserDefaultsStorage: UserDefaults, Storage {
 
      - Parameter defaults: The dictionary of keys and values you want to register.
      */
-    override open func register(defaults registrationDictionary: [StoreKey: Any]) {
+    open func register(defaults registrationDictionary: [StoreKey: Any]) {
         storage.register(defaults: registrationDictionary)
     }
 
@@ -127,7 +129,7 @@ open class UserDefaultsStorage: UserDefaults, Storage {
 
      - Parameter defaultName: A `StoreKey` in storage.
      */
-    override open func string(forKey defaultName: StoreKey) -> String? {
+    open func string(forKey defaultName: StoreKey) -> String? {
         storage.string(forKey: defaultName)
     }
 
@@ -136,7 +138,7 @@ open class UserDefaultsStorage: UserDefaults, Storage {
 
      - Parameter defaultName: A `StoreKey` in storage.
      */
-    override open func array(forKey defaultName: StoreKey) -> [Any]? {
+    open func array(forKey defaultName: StoreKey) -> [Any]? {
         storage.array(forKey: defaultName)
     }
 
@@ -154,7 +156,7 @@ open class UserDefaultsStorage: UserDefaults, Storage {
 
      - Parameter defaultName: A `StoreKey` in storage.
      */
-    override open func dictionary(forKey defaultName: StoreKey) -> [String: Any]? {
+    open func dictionary(forKey defaultName: StoreKey) -> [String: Any]? {
         storage.dictionary(forKey: defaultName)
     }
 
@@ -163,7 +165,7 @@ open class UserDefaultsStorage: UserDefaults, Storage {
 
      - Parameter defaultName: A `StoreKey` in storage.
      */
-    override open func stringArray(forKey defaultName: StoreKey) -> [String]? {
+    open func stringArray(forKey defaultName: StoreKey) -> [String]? {
         storage.stringArray(forKey: defaultName)
     }
 
@@ -172,7 +174,7 @@ open class UserDefaultsStorage: UserDefaults, Storage {
 
      - Parameter defaultName: A `StoreKey` in storage.
      */
-    override open func integer(forKey defaultName: StoreKey) -> Int {
+    open func integer(forKey defaultName: StoreKey) -> Int {
         storage.integer(forKey: defaultName)
     }
 
@@ -181,7 +183,7 @@ open class UserDefaultsStorage: UserDefaults, Storage {
 
      - Parameter defaultName: A `StoreKey` in storage.
      */
-    override open func float(forKey defaultName: StoreKey) -> Float {
+    open func float(forKey defaultName: StoreKey) -> Float {
         storage.float(forKey: defaultName)
     }
 
@@ -190,7 +192,7 @@ open class UserDefaultsStorage: UserDefaults, Storage {
 
      - Parameter defaultName: A `StoreKey` in storage.
      */
-    override open func double(forKey defaultName: StoreKey) -> Double {
+    open func double(forKey defaultName: StoreKey) -> Double {
         storage.double(forKey: defaultName)
     }
 
@@ -199,7 +201,7 @@ open class UserDefaultsStorage: UserDefaults, Storage {
 
      - Parameter defaultName: A `StoreKey` in storage.
      */
-    override open func bool(forKey defaultName: StoreKey) -> Bool {
+    open func bool(forKey defaultName: StoreKey) -> Bool {
         storage.bool(forKey: defaultName)
     }
 
@@ -208,7 +210,7 @@ open class UserDefaultsStorage: UserDefaults, Storage {
 
      - Parameter defaultName: A `StoreKey` in storage.
      */
-    override open func url(forKey defaultName: StoreKey) -> URL? {
+    open func url(forKey defaultName: StoreKey) -> URL? {
         storage.url(forKey: defaultName)
     }
 
@@ -218,7 +220,7 @@ open class UserDefaultsStorage: UserDefaults, Storage {
      - Parameter value: `Int` to store.
      - Parameter defaultName: The `StoreKey` with which to associate the value.
      */
-    override open func set(_ value: Int, forKey defaultName: StoreKey) {
+    open func set(_ value: Int, forKey defaultName: StoreKey) {
         storage.set(value, forKey: defaultName)
     }
 
@@ -228,7 +230,7 @@ open class UserDefaultsStorage: UserDefaults, Storage {
      - Parameter value: `Float` to store.
      - Parameter defaultName: The `StoreKey` with which to associate the value.
      */
-    override open func set(_ value: Float, forKey defaultName: StoreKey) {
+    open func set(_ value: Float, forKey defaultName: StoreKey) {
         storage.set(value, forKey: defaultName)
     }
 
@@ -238,7 +240,7 @@ open class UserDefaultsStorage: UserDefaults, Storage {
      - Parameter value: `Double` to store.
      - Parameter defaultName: The `StoreKey` with which to associate the value.
      */
-    override open func set(_ value: Double, forKey defaultName: StoreKey) {
+    open func set(_ value: Double, forKey defaultName: StoreKey) {
         storage.set(value, forKey: defaultName)
     }
 
@@ -248,7 +250,7 @@ open class UserDefaultsStorage: UserDefaults, Storage {
      - Parameter value: `Bool` to store.
      - Parameter defaultName: The `StoreKey` with which to associate the value.
      */
-    override open func set(_ value: Bool, forKey defaultName: StoreKey) {
+    open func set(_ value: Bool, forKey defaultName: StoreKey) {
         storage.set(value, forKey: defaultName)
     }
 
@@ -258,7 +260,7 @@ open class UserDefaultsStorage: UserDefaults, Storage {
      - Parameter url: `URL` to store.
      - Parameter defaultName: The `StoreKey` with which to associate the value.
      */
-    override open func set(_ url: URL?, forKey defaultName: StoreKey) {
+    open func set(_ url: URL?, forKey defaultName: StoreKey) {
         storage.set(url, forKey: defaultName)
     }
 }
