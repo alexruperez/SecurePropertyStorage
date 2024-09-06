@@ -7,28 +7,34 @@ enum UserDefaultsCodable: String, Codable {
     case alternative
 }
 
-let userDefaultsTagStorage = UserDefaultsStorage(authenticationTag: Data())
+actor Storages {
+    static let userDefaultsStorage = UserDefaultsStorage(authenticationTag: Data())
+}
+
+func userDefaultsTagStorage() -> UserDefaultsStorage {
+    UserDefaultsStorage(authenticationTag: Data())
+}
 
 final class UserDefaultTests: XCTestCase {
-    @Store(userDefaultsTagStorage, "userDefaultsTagStore")
+    @Store(Storages.userDefaultsStorage, "userDefaultsTagStore")
     var userDefaultsTagStore: String?
     @Store(UserDefaultsStorage.standard, "userDefaultsStore")
     var userDefaultsStore: String?
     @UserDefault("userDefaults")
     var userDefaults: String?
-    @Store(userDefaultsTagStorage, "userDefaultsTagDefault")
+    @Store(Storages.userDefaultsStorage, "userDefaultsTagDefault")
     var userDefaultsTagDefault = "tagDefault"
     @UserDefault("userDefaultsDefault")
     var userDefaultsDefault = "default"
-    @CodableStore(userDefaultsTagStorage, "userDefaultsTagCodable")
+    @CodableStore(Storages.userDefaultsStorage, "userDefaultsTagCodable")
     var userDefaultsTagCodable = UserDefaultsCodable.test
     @CodableUserDefault("userDefaultsCodable")
     var userDefaultsCodable = UserDefaultsCodable.test
-    @UnwrappedStore(userDefaultsTagStorage, "unwrappedUserDefaultsTagDefault")
+    @UnwrappedStore(Storages.userDefaultsStorage, "unwrappedUserDefaultsTagDefault")
     var unwrappedUserDefaultsTagDefault = "tagDefault"
     @UnwrappedUserDefault("unwrappedUserDefaultsDefault")
     var unwrappedUserDefaultsDefault = "default"
-    @UnwrappedCodableStore(userDefaultsTagStorage, "unwrappedUserDefaultsTagCodable")
+    @UnwrappedCodableStore(Storages.userDefaultsStorage, "unwrappedUserDefaultsTagCodable")
     var unwrappedUserDefaultsTagCodable = UserDefaultsCodable.test
     @UnwrappedCodableUserDefault("unwrappedUserDefaultsCodable")
     var unwrappedUserDefaultsCodable = UserDefaultsCodable.test

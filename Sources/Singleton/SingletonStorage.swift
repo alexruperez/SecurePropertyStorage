@@ -7,7 +7,7 @@ import Storage
 open class SingletonStorage: DelegatedStorage {
     /// `SingletonStorage` shared instance.
     open class var standard: SingletonStorage { shared }
-    private static let shared = SingletonStorage()
+    nonisolated(unsafe) private static let shared = SingletonStorage()
 
     /**
      Create a `SingletonStorage`.

@@ -4,7 +4,7 @@ import Storage
 open class InjectStorage: DelegatedStorage {
     /// `InjectStorage` shared instance.
     open class var standard: InjectStorage { shared }
-    private static let shared = InjectStorage()
+    nonisolated(unsafe) private static let shared = InjectStorage()
     var groups = [DependencyGroupKey: InjectStorage]()
     var storage = [StoreKey: [Any]]()
 

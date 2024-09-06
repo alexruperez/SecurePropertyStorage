@@ -7,7 +7,7 @@ import Storage
 open class UserDefaultsStorage: UserDefaults, Storage {
     /// `UserDefaultsStorage` shared instance.
     override open class var standard: UserDefaultsStorage { shared }
-    private static let shared = UserDefaultsStorage()
+    nonisolated(unsafe) private static let shared = UserDefaultsStorage()
     private var storage: Storage!
 
     /**

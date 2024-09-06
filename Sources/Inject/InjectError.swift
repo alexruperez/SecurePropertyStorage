@@ -1,5 +1,5 @@
 /// Inject error enum.
-public enum InjectError: Error, CustomStringConvertible {
+public enum InjectError: @unchecked Sendable, Error, CustomStringConvertible {
     /// When no dependency has been registered.
     case notFound(_ dependency: Any, qualifiers: [Qualifier]?, group: DependencyGroupKey?)
     /// When more than one dependency registered.
