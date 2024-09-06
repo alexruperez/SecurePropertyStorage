@@ -27,7 +27,7 @@ class Dependency: DependencyProtocol, Equatable, DependencyQualifier {
     var subClass: SubDependency?
     var subDependency: SubDependency? { sub as? SubDependency }
 
-    static func == (lhs: Dependency, rhs: Dependency) -> Bool {
+    nonisolated static func == (lhs: Dependency, rhs: Dependency) -> Bool {
         lhs.timestamp == rhs.timestamp
     }
 }
@@ -194,7 +194,7 @@ final class InjectTests: XCTestCase {
             .contains("cancel"))
     }
 
-    @MainActor static let allTests = [
+    static let allTests = [
         ("testInject", testInject)
     ]
 }

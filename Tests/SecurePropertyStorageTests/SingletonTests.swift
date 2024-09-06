@@ -80,7 +80,7 @@ final class SingletonTests: XCTestCase {
         XCTAssertEqual(unwrappedSingletonCodable, .alternative)
     }
 
-    @MainActor static let allTests = [
+    static let allTests = [
         ("testSingleton", testSingleton)
     ]
 }

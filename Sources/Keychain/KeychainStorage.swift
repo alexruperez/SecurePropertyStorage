@@ -6,7 +6,7 @@ import Storage
 open class KeychainStorage: DelegatedStorage {
     /// `KeychainStorage` shared instance.
     open class var standard: KeychainStorage { shared }
-    nonisolated(unsafe) private static let shared = KeychainStorage()
+    private static let shared = KeychainStorage()
     private var keychainDelegate: KeychainStorageDelegate? { delegate as? KeychainStorageDelegate }
 
     /// Access group where `StorageData` is in.
