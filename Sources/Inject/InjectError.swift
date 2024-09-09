@@ -1,9 +1,12 @@
 /// Inject error enum.
-public enum InjectError: @unchecked Sendable, Error, CustomStringConvertible {
+public enum InjectError: Error, CustomStringConvertible {
+    /// A descriptor for the dependencies qualifiers
+    public typealias QualifierDescriptor = String
+    
     /// When no dependency has been registered.
-    case notFound(_ dependency: Any, qualifiers: [Qualifier]?, group: DependencyGroupKey?)
+    case notFound(_ dependency: any Sendable, qualifiers: [QualifierDescriptor]?, group: DependencyGroupKey?)
     /// When more than one dependency registered.
-    case moreThanOne(_ dependency: Any, qualifiers: [Qualifier]?, group: DependencyGroupKey?)
+    case moreThanOne(_ dependency: any Sendable, qualifiers: [QualifierDescriptor]?, group: DependencyGroupKey?)
 
     public var description: String {
         switch self {
@@ -20,5 +23,21 @@ public enum InjectError: @unchecked Sendable, Error, CustomStringConvertible {
             please use a Qualifier to specify which one you want to inject.
             """
         }
+    }
+    
+    static func notFound(_ dependency: any Sendable, qualifiers: [Qualifier]?, group: DependencyGroupKey?) -> InjectError {
+        .notFound(
+            dependency,
+            qualifiers: ["\(qualifiers ?? [])"],
+            group: group
+        )
+    }
+    
+    static func moreThanOne(_ dependency: any Sendable, qualifiers: [Qualifier]?, group: DependencyGroupKey?) -> InjectError {
+        .moreThanOne(
+            dependency,
+            qualifiers: ["\(qualifiers ?? [])"],
+            group: group
+        )
     }
 }
