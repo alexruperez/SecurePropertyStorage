@@ -24,7 +24,7 @@ public enum InjectError: Error, CustomStringConvertible {
             """
         }
     }
-    
+
     static func notFound(
         _ dependency: any Sendable,
         qualifiers: [Qualifier]?,
