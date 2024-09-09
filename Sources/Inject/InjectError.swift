@@ -2,7 +2,7 @@
 public enum InjectError: Error, CustomStringConvertible {
     /// A descriptor for the dependencies qualifiers
     public typealias QualifierDescriptor = String
-    
+
     /// When no dependency has been registered.
     case notFound(_ dependency: any Sendable, qualifiers: [QualifierDescriptor]?, group: DependencyGroupKey?)
     /// When more than one dependency registered.
@@ -25,15 +25,23 @@ public enum InjectError: Error, CustomStringConvertible {
         }
     }
     
-    static func notFound(_ dependency: any Sendable, qualifiers: [Qualifier]?, group: DependencyGroupKey?) -> InjectError {
+    static func notFound(
+        _ dependency: any Sendable,
+        qualifiers: [Qualifier]?,
+        group: DependencyGroupKey?
+    ) -> InjectError {
         .notFound(
             dependency,
             qualifiers: ["\(qualifiers ?? [])"],
             group: group
         )
     }
-    
-    static func moreThanOne(_ dependency: any Sendable, qualifiers: [Qualifier]?, group: DependencyGroupKey?) -> InjectError {
+
+    static func moreThanOne(
+        _ dependency: any Sendable,
+        qualifiers: [Qualifier]?,
+        group: DependencyGroupKey?
+    ) -> InjectError {
         .moreThanOne(
             dependency,
             qualifiers: ["\(qualifiers ?? [])"],

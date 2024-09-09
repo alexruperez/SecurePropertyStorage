@@ -1,5 +1,5 @@
 /// Property wrapper protocol.
-@StorageActor 
+@StorageActor
 public protocol StorePropertyWrapperProtocol {
     /// `Storage` type used by property wrapper.
     associatedtype StorageType: Storage
