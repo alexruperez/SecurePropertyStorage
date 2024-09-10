@@ -32,8 +32,12 @@ open class UserDefaultsStorage: Storage {
     public init?(suiteName suitename: String?,
                  symmetricKey: SymmetricKey,
                  authenticationTag: Data? = nil) {
-        guard let userDefaults = UserDefaults(suiteName: suitename) else { 
-            fatalError("Unable to initialize UserDefaults with the provided suite name. Please check that the suite name is valid and that the app has the appropriate entitlements")
+        guard 
+            let userDefaults = UserDefaults(suiteName: suitename)
+        else {
+            fatalError(
+                "Unable to initialize UserDefaults. Please check that the suite name is valid and that the app has the appropriate entitlements"
+            )
         }
         self.userDefaults = userDefaults
         storage = DelegatedStorage(self,
