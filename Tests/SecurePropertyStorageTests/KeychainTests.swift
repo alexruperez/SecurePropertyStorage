@@ -271,11 +271,11 @@ final class KeychainTests: XCTestCase, Sendable {
         }
         keychainCodable = nil
         XCTAssertNil(keychainCodable)
-        await MainActor.run {
-            waitForExpectations(timeout: 1)
-        }
+        await MainActor.run {waitForExpectations(timeout: 1) }
     }
+}
 
+extension KeychainTests {
     static var allTests = [
         ("testKeychainStorageAccessGroup", testKeychainStorageAccessGroup),
         ("testKeychainStorageSynchronizable", testKeychainStorageSynchronizable),
