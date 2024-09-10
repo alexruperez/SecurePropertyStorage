@@ -77,7 +77,7 @@ final class SingletonTests: XCTestCase {
         XCTAssertEqual(unwrappedSingletonCodable, .alternative)
     }
 
-    static let allTests = [
+    static var allTests = [
         ("testSingleton", testSingleton)
     ]
 }

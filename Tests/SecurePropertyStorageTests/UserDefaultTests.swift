@@ -241,7 +241,7 @@ final class UserDefaultTests: XCTestCase {
         XCTAssertNil(userDefaults.url(forKey: key))
     }
 
-    static let allTests = [
+    static var allTests = [
         ("testUserDefault", testUserDefault),
         ("testUserDefaultArray", testUserDefaultArray),
         ("testUserDefaultDictionary", testUserDefaultDictionary),

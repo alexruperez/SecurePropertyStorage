@@ -276,7 +276,7 @@ final class KeychainTests: XCTestCase, Sendable {
         }
     }
 
-    static let allTests = [
+    static var allTests = [
         ("testKeychainStorageAccessGroup", testKeychainStorageAccessGroup),
         ("testKeychainStorageSynchronizable", testKeychainStorageSynchronizable),
         ("testKeychainStorageAccessible", testKeychainStorageAccessible),

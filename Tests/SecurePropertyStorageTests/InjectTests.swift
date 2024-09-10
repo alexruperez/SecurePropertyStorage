@@ -194,7 +194,7 @@ final class InjectTests: XCTestCase {
             .contains("cancel"))
     }
 
-    static let allTests = [
+    static var allTests = [
         ("testInject", testInject)
     ]
 }
