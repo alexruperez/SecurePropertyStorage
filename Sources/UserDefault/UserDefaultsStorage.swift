@@ -38,7 +38,7 @@ open class UserDefaultsStorage: Storage {
             fatalError(
                 """
                 Unable to initialize UserDefaults.
-                Please check that the suite name is valid and that the app has the appropriate entitlements
+                Please check that the suite name is valid and that the app has the appropriate entitlements.
                 """
             )
         }
