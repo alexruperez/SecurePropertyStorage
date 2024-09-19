@@ -54,13 +54,7 @@ final class KeychainTests: XCTestCase, Sendable {
 
     func testKeychainTagStoreError() async {
         let keychainTagStoreError = expectation(description: "keychainTagStoreError")
-        keychainTagStorage.errorClosure = { error in
-            if case let KeychainError.error(message) = error {
-                XCTAssertFalse(message.isEmpty)
-                keychainTagStoreError.fulfill()
-                keychainTagStorage.errorClosure = nil
-            }
-        }
+        setupErrorClosure(storage: keychainTagStorage, expectation: keychainTagStoreError)
         keychainTagStore = "testKeychainTagStore"
         XCTAssertNil(keychainTagStore)
         await MainActor.run {
@@ -69,16 +63,8 @@ final class KeychainTests: XCTestCase, Sendable {
     }
 
     func testKeychainStoreError() async {
-        var errorClosureCalled = false
         let keychainStoreError = expectation(description: "keychainStoreError")
-        KeychainStorage.standard.errorClosure = { error in
-            if case let KeychainError.error(message) = error,
-               !errorClosureCalled {
-                XCTAssertFalse(message.isEmpty)
-                keychainStoreError.fulfill()
-                errorClosureCalled = true
-            }
-        }
+        setupErrorClosure(storage: KeychainStorage.standard, expectation: keychainStoreError)
         keychainStore = "testKeychainStore"
         XCTAssertNil(keychainStore)
         await MainActor.run {
@@ -87,16 +73,8 @@ final class KeychainTests: XCTestCase, Sendable {
     }
 
     func testKeychainError() async {
-        var errorClosureCalled = false
         let keychainError = expectation(description: "keychainError")
-        KeychainStorage.standard.errorClosure = { error in
-            if case let KeychainError.error(message) = error,
-               !errorClosureCalled {
-                XCTAssertFalse(message.isEmpty)
-                keychainError.fulfill()
-                errorClosureCalled = true
-            }
-        }
+        setupErrorClosure(storage: KeychainStorage.standard, expectation: keychainError)
         keychain = "testKeychain"
         XCTAssertNil(keychain)
         await MainActor.run {
@@ -106,13 +84,7 @@ final class KeychainTests: XCTestCase, Sendable {
 
     func testKeychainTagStoreDefaultError() async {
         let keychainTagStoreDefaultError = expectation(description: "keychainTagStoreDefaultError")
-        keychainTagStorage.errorClosure = { error in
-            if case let KeychainError.error(message) = error {
-                XCTAssertFalse(message.isEmpty)
-                keychainTagStoreDefaultError.fulfill()
-                keychainTagStorage.errorClosure = nil
-            }
-        }
+        setupErrorClosure(storage: keychainTagStorage, expectation: keychainTagStoreDefaultError)
         keychainTagDefault = "testKeychainTagStore"
         XCTAssertNil(keychainTagDefault)
         await MainActor.run {
@@ -121,16 +93,8 @@ final class KeychainTests: XCTestCase, Sendable {
     }
 
     func testKeychainDefaultError() async {
-        var errorClosureCalled = false
         let keychainDefaultError = expectation(description: "keychainDefaultError")
-        KeychainStorage.standard.errorClosure = { error in
-            if case let KeychainError.error(message) = error,
-               !errorClosureCalled {
-                XCTAssertFalse(message.isEmpty)
-                keychainDefaultError.fulfill()
-                errorClosureCalled = true
-            }
-        }
+        setupErrorClosure(storage: KeychainStorage.standard, expectation: keychainDefaultError)
         keychainDefault = "testKeychain"
         XCTAssertNil(keychainDefault)
         await MainActor.run {
@@ -140,6 +104,7 @@ final class KeychainTests: XCTestCase, Sendable {
 
     func testKeychainTagStoreCodableError() async {
         let keychainTagStoreCodableError = expectation(description: "keychainTagStoreCodableError")
+        setupErrorClosure(storage: keychainTagStorage, expectation: keychainTagStoreCodableError)
         keychainTagStorage.errorClosure = { error in
             if case let KeychainError.error(message) = error {
                 XCTAssertFalse(message.isEmpty)
@@ -155,16 +120,8 @@ final class KeychainTests: XCTestCase, Sendable {
     }
 
     func testKeychainCodableError() async {
-        var errorClosureCalled = false
         let keychainCodableError = expectation(description: "keychainCodableError")
-        KeychainStorage.standard.errorClosure = { error in
-            if case let KeychainError.error(message) = error,
-               !errorClosureCalled {
-                XCTAssertFalse(message.isEmpty)
-                keychainCodableError.fulfill()
-                errorClosureCalled = true
-            }
-        }
+        setupErrorClosure(storage: KeychainStorage.standard, expectation: keychainCodableError)
         keychainCodable = .test
         XCTAssertNil(keychainCodable)
         await MainActor.run {
@@ -174,13 +131,7 @@ final class KeychainTests: XCTestCase, Sendable {
 
     func testUnwrappedKeychainTagStoreDefaultError() async {
         let unwrappedKeychainTagStoreDefaultError = expectation(description: "unwrappedKeychainTagStoreDefaultError")
-        keychainTagStorage.errorClosure = { error in
-            if case let KeychainError.error(message) = error {
-                XCTAssertFalse(message.isEmpty)
-                unwrappedKeychainTagStoreDefaultError.fulfill()
-                keychainTagStorage.errorClosure = nil
-            }
-        }
+        setupErrorClosure(storage: keychainTagStorage, expectation: unwrappedKeychainTagStoreDefaultError)
         unwrappedKeychainTagDefault = "tagDefault2"
         XCTAssertEqual(unwrappedKeychainTagDefault, "tagDefault")
         await MainActor.run {
@@ -189,16 +140,8 @@ final class KeychainTests: XCTestCase, Sendable {
     }
 
     func testUnwrappedKeychainDefaultError() async {
-        var errorClosureCalled = false
         let unwrappedKeychainDefaultError = expectation(description: "unwrappedKeychainDefaultError")
-        KeychainStorage.standard.errorClosure = { error in
-            if case let KeychainError.error(message) = error,
-               !errorClosureCalled {
-                XCTAssertFalse(message.isEmpty)
-                unwrappedKeychainDefaultError.fulfill()
-                errorClosureCalled = true
-            }
-        }
+        setupErrorClosure(storage: KeychainStorage.standard, expectation: unwrappedKeychainDefaultError)
         unwrappedKeychainDefault = "default2"
         XCTAssertEqual(unwrappedKeychainDefault, "default")
         await MainActor.run {
@@ -208,13 +151,7 @@ final class KeychainTests: XCTestCase, Sendable {
 
     func testUnwrappedKeychainTagStoreCodableError() async {
         let unwrappedKeychainTagStoreCodableError = expectation(description: "unwrappedKeychainTagStoreCodableError")
-        keychainTagStorage.errorClosure = { error in
-            if case let KeychainError.error(message) = error {
-                XCTAssertFalse(message.isEmpty)
-                unwrappedKeychainTagStoreCodableError.fulfill()
-                keychainTagStorage.errorClosure = nil
-            }
-        }
+        setupErrorClosure(storage: keychainTagStorage, expectation: unwrappedKeychainTagStoreCodableError)
         unwrappedKeychainTagCodable = .test2
         XCTAssertEqual(unwrappedKeychainTagCodable, .test)
         await MainActor.run {
@@ -223,16 +160,8 @@ final class KeychainTests: XCTestCase, Sendable {
     }
 
     func testUnwrappedKeychainCodableError() async {
-        var errorClosureCalled = false
         let unwrappedKeychainCodableError = expectation(description: "unwrappedKeychainCodableError")
-        KeychainStorage.standard.errorClosure = { error in
-            if case let KeychainError.error(message) = error,
-               !errorClosureCalled {
-                XCTAssertFalse(message.isEmpty)
-                unwrappedKeychainCodableError.fulfill()
-                errorClosureCalled = true
-            }
-        }
+        setupErrorClosure(storage: KeychainStorage.standard, expectation: unwrappedKeychainCodableError)
         unwrappedKeychainCodable = .test2
         XCTAssertEqual(unwrappedKeychainCodable, .test)
         await MainActor.run {
@@ -241,16 +170,8 @@ final class KeychainTests: XCTestCase, Sendable {
     }
 
     func testKeychainDeleteError() async {
-        var errorClosureCalled = false
         let keychainDeleteError = expectation(description: "keychainDeleteError")
-        KeychainStorage.standard.errorClosure = { error in
-            if case let KeychainError.error(message) = error,
-               !errorClosureCalled {
-                XCTAssertFalse(message.isEmpty)
-                keychainDeleteError.fulfill()
-                errorClosureCalled = true
-            }
-        }
+        setupErrorClosure(storage: KeychainStorage.standard, expectation: keychainDeleteError)
         keychain = nil
         XCTAssertNil(keychain)
         await MainActor.run {
@@ -259,20 +180,23 @@ final class KeychainTests: XCTestCase, Sendable {
     }
 
     func testKeychainCodableDeleteError() async {
-        var errorClosureCalled = false
         let keychainCodableDeleteError = expectation(description: "keychainCodableDeleteError")
-        KeychainStorage.standard.errorClosure = { error in
-            if case let KeychainError.error(message) = error,
-               !errorClosureCalled {
-                XCTAssertFalse(message.isEmpty)
-                keychainCodableDeleteError.fulfill()
-                errorClosureCalled = true
-            }
-        }
+        setupErrorClosure(storage: KeychainStorage.standard, expectation: keychainCodableDeleteError)
         keychainCodable = nil
         XCTAssertNil(keychainCodable)
         await MainActor.run {
             waitForExpectations(timeout: 1)
+        }
+    }
+
+    private func setupErrorClosure(storage: DelegatedStorage, expectation: XCTestExpectation) {
+        var errorClosureCalled = false
+        storage.errorClosure = { error in
+            if case let KeychainError.error(message) = error, !errorClosureCalled {
+                XCTAssertFalse(message.isEmpty)
+                expectation.fulfill()
+                errorClosureCalled = true
+            }
         }
     }
 
