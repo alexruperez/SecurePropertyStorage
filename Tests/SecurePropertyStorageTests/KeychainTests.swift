@@ -7,8 +7,7 @@ enum KeychainCodable: String, Codable {
     case test2
 }
 
-@StorageActor
-let keychainTagStorage: KeychainStorage = {
+@StorageActor let keychainTagStorage: KeychainStorage = {
     let keychainStorage = KeychainStorage(authenticationTag: Data())
     keychainStorage.accessGroup = ""
     keychainStorage.synchronizable = true

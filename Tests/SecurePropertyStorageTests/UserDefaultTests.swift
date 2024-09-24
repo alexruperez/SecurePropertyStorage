@@ -7,8 +7,7 @@ enum UserDefaultsCodable: String, Codable {
     case alternative
 }
 
-@StorageActor
-let userDefaultsTagStorage = UserDefaultsStorage(authenticationTag: Data())
+@StorageActor let userDefaultsTagStorage = UserDefaultsStorage(authenticationTag: Data())
 
 final class UserDefaultTests: XCTestCase {
     @Store(userDefaultsTagStorage, "userDefaultsTagStore")

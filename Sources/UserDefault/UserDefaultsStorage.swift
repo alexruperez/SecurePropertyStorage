@@ -35,12 +35,7 @@ open class UserDefaultsStorage: Storage {
         guard
             let userDefaults = UserDefaults(suiteName: suitename)
         else {
-            fatalError(
-                """
-                Unable to initialize UserDefaults.
-                Please check that the suite name is valid and that the app has the appropriate entitlements.
-                """
-            )
+            fatalError("Unable to initialize UserDefaults.")
         }
         self.userDefaults = userDefaults
         storage = DelegatedStorage(self,

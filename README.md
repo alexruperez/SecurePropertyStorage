@@ -346,7 +346,7 @@ var yourDependency: YourProtocol?
 
 ## 🛠 Compatibility
 
-- macOS 10.15+
+- macOS 11.5+
 - iOS 13.0+
 - iPadOS 13.0+
 - tvOS 13.0+

@@ -2,7 +2,7 @@ import CryptoKit
 import Foundation
 import Storage
 
-extension SymmetricKey: StorageData {
+extension SymmetricKey: @retroactive StorageData {
     /**
      Create a `SymmetricKey`.
 
