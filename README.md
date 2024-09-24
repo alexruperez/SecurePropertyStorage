@@ -1,8 +1,8 @@
 # 🔐 Secure Property Storage
 > Helps you define secure storages for your properties using Swift *property wrappers*.
 
-[![Twitter](https://img.shields.io/badge/contact-%40alexruperez-blue)](http://alexruperez.com)
-[![Swift](https://img.shields.io/badge/swift-5-orange)](https://swift.org)
+[![Twitter](https://img.shields.io/badge/me-%40alexruperez-blue)](http://alexruperez.com)
+[![Swift](https://img.shields.io/badge/swift-6-orange)](https://swift.org)
 [![License](https://img.shields.io/github/license/alexruperez/SecurePropertyStorage)](LICENSE)
 [![Swift Package Manager](https://img.shields.io/badge/Swift%20Package%20Manager-compatible-4BC51D.svg?style=flat)](https://swift.org/package-manager)
 [![Carthage](https://img.shields.io/badge/Carthage-compatible-4BC51D.svg?style=flat)](https://github.com/Carthage/Carthage)
@@ -380,7 +380,7 @@ github "alexruperez/SecurePropertyStorage"
 ## 🍻 Etc.
 
 - Featured in [Dave Verwer](https://twitter.com/daveverwer)'s iOS Dev Weekly - [Issue 450](https://iosdevweekly.com/issues/450?#ll98q5s), thanks Dave!
-- Contributions are very welcome. Thanks [Alberto Garcia](https://github.com/AlbGarciam) and [Chen](https://github.com/qchenqizhi)!
+- Contributions are very welcome. Thanks [Alberto Garcia](https://github.com/AlbGarciam), [Manu](https://github.com/Manu-Globant) and [Chen](https://github.com/qchenqizhi)!
 - Attribution is appreciated (let's spread the word!), but not mandatory.
 
 ## 👨‍💻 Author
