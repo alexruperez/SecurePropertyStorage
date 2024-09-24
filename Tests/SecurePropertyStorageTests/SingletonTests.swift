@@ -7,7 +7,7 @@ enum SingletonCodable: String, Codable {
     case alternative
 }
 
-let singletonTagStorage: DelegatedStorage = SingletonStorage(authenticationTag: Data())
+@StorageActor let singletonTagStorage: DelegatedStorage = SingletonStorage(authenticationTag: Data())
 
 final class SingletonTests: XCTestCase {
     @Store(singletonTagStorage, "singletonTagStore")

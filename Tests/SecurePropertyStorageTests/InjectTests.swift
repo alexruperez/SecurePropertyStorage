@@ -19,7 +19,7 @@ protocol DependencyProtocol {
     var timestamp: TimeInterval { get }
 }
 
-class Dependency: DependencyProtocol, Equatable, DependencyQualifier {
+class Dependency: DependencyProtocol, Equatable, DependencyQualifier, Sendable {
     let timestamp = Date().timeIntervalSince1970
     @Inject
     var sub: SubDependencyProtocol?
@@ -27,7 +27,7 @@ class Dependency: DependencyProtocol, Equatable, DependencyQualifier {
     var subClass: SubDependency?
     var subDependency: SubDependency? { sub as? SubDependency }
 
-    static func == (lhs: Dependency, rhs: Dependency) -> Bool {
+    nonisolated static func == (lhs: Dependency, rhs: Dependency) -> Bool {
         lhs.timestamp == rhs.timestamp
     }
 }

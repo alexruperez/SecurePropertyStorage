@@ -2,13 +2,21 @@
 
 ## Next Version
 
+## 0.8.0
+
 #### Added
 - Configurable Symmetric Key Naming. [#31](https://github.com/alexruperez/SecurePropertyStorage/pull/31) Thanks [@nuomi1](https://github.com/nuomi1)!
 
+#### Fixed
+- Fixed concurrency issues in Swift 6. [#30](https://github.com/alexruperez/SecurePropertyStorage/issues/30) Thanks [Manu-Globant](https://github.com/Manu-Globant)!
+
 #### Improvements
 - visionOS Compatible.
-- Swift Package Manager tools version update to 5.10
-- Xcode version update to 15.4
+- Swift Package Manager tools version update to 6.0
+- Xcode version update to 16.0
+- macOS Deployment Target update to 11.5
+
+[Commits](https://github.com/alexruperez/SecurePropertyStorage/compare/0.7.1...0.8.0)
 
 ## 0.7.1
 
