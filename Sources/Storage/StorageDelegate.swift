@@ -19,7 +19,7 @@ public protocol StorageDelegate: AnyObject {
      - Throws: `StorageDelegate` implementation possible errors.
      */
     @StorageActor
-    func set<D: StorageData>(_ data: D?, forKey key: StoreKey) throws
+    func set(_ data: (some StorageData)?, forKey key: StoreKey) throws
 
     /**
      Removes the value of the specified `StoreKey`.

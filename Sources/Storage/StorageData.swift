@@ -9,7 +9,7 @@ public protocol StorageData: ContiguousBytes {
 
      - Parameter bytes: `ContiguousBytes` of `StorageData`.
      */
-    init<B: StorageData>(bytes: B) throws
+    init(bytes: some StorageData) throws
 }
 
 public extension ContiguousBytes {
