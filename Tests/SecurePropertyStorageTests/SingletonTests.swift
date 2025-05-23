@@ -1,5 +1,5 @@
-import Singleton
-import Storage
+@testable import Singleton
+@testable import Storage
 import XCTest
 
 enum SingletonCodable: String, Codable {

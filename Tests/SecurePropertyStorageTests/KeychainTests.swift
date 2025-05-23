@@ -1,5 +1,5 @@
-import Keychain
-import Storage
+@testable import Keychain
+@testable import Storage
 import XCTest
 
 enum KeychainCodable: String, Codable {

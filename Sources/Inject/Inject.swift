@@ -60,14 +60,8 @@ open class InjectPropertyWrapper<Dependency, Parameters>: StorePropertyWrapper<I
      */
     open func register(_ dependency: Dependency?) {
         if let group {
-            var groupStorage: InjectStorage?
-            if let storage = storage.groups[group] {
-                groupStorage = storage
-            } else {
-                groupStorage = InjectStorage()
-                storage.groups[group] = groupStorage
-            }
-            groupStorage?.set(dependency, forKey: key)
+            let groupStorage = storage.storageForGroup(group)
+            groupStorage.set(dependency, forKey: key)
         } else {
             storage.set(dependency, forKey: key)
         }
@@ -118,9 +112,11 @@ open class InjectPropertyWrapper<Dependency, Parameters>: StorePropertyWrapper<I
      - Returns: Matching dependencies.
      */
     private func dependencies(_ errorClosureExecuted: Bool = false) throws -> [Any] {
-        if let group, let storage = storage.groups[group],
-           let dependencies = storage.array(forKey: key) {
-            return dependencies
+        if let group {
+            let groupStorage = storage.storageForGroup(group)
+            if let dependencies = groupStorage.array(forKey: key) {
+                return dependencies
+            }
         }
         if let dependencies = storage.array(forKey: key) {
             return dependencies
