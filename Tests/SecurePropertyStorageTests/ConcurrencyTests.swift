@@ -10,7 +10,7 @@ final class ConcurrencyTests: XCTestCase, @unchecked Sendable {
 
     final class MyConcurrentService: ConcurrentInjectable, Sendable {
         let uniqueID: String
-        init(id: String = UUID().uuidString) { uniqueID = id }
+        init(_ identifier: String = UUID().uuidString) { uniqueID = identifier }
     }
 
     func testConcurrentRegistrationAndResolutionInject() async {
@@ -20,7 +20,7 @@ final class ConcurrencyTests: XCTestCase, @unchecked Sendable {
         await withTaskGroup(of: Void.self) { taskGroup in
             for task in 0 ..< taskCount {
                 taskGroup.addTask {
-                    let service = MyConcurrentService(id: "service-\(task)")
+                    let service = MyConcurrentService("service-\(task)")
                     await InjectStorage.standard.testableRegister(service,
                                                                   group: groupKey,
                                                                   key: "service-\(task)")
