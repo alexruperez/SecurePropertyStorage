@@ -24,4 +24,15 @@ open class InjectStorage: DelegatedStorage {
             storage[storeKey]?.append(dependency)
         }
     }
+
+    @StorageActor // Ensure it's explicitly on the same actor, though implied by class context
+    public func storageForGroup(_ groupKey: DependencyGroupKey) -> InjectStorage {
+        if let existingGroupStorage = self.groups[groupKey] {
+            return existingGroupStorage
+        } else {
+            let newGroupStorage = InjectStorage() // Same type as self
+            self.groups[groupKey] = newGroupStorage
+            return newGroupStorage
+        }
+    }
 }
