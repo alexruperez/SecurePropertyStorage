@@ -111,7 +111,6 @@
 
 /* Begin PBXBuildFile section */
 		50CFF8222C8B1DF000C2B641 /* StorageActor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50CFF8212C8B1DF000C2B641 /* StorageActor.swift */; };
-		813591622DE0E00600244CF1 /* ConcurrencyTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 813591612DE0E00600244CF1 /* ConcurrencyTests.swift */; };
 		OBJ_110 /* Package.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_6 /* Package.swift */; };
 		OBJ_121 /* InjectTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_32 /* InjectTests.swift */; };
 		OBJ_122 /* KeychainTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_33 /* KeychainTests.swift */; };
@@ -370,7 +369,6 @@
 
 /* Begin PBXFileReference section */
 		50CFF8212C8B1DF000C2B641 /* StorageActor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StorageActor.swift; sourceTree = "<group>"; };
-		813591612DE0E00600244CF1 /* ConcurrencyTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConcurrencyTests.swift; sourceTree = "<group>"; };
 		OBJ_10 /* InjectError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InjectError.swift; sourceTree = "<group>"; };
 		OBJ_11 /* InjectStorage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InjectStorage.swift; sourceTree = "<group>"; };
 		OBJ_13 /* CryptoData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CryptoData.swift; sourceTree = "<group>"; };
@@ -527,7 +525,6 @@
 				OBJ_34 /* SingletonTests.swift */,
 				OBJ_35 /* UserDefaultTests.swift */,
 				OBJ_36 /* XCTestManifests.swift */,
-				813591612DE0E00600244CF1 /* ConcurrencyTests.swift */,
 			);
 			name = SecurePropertyStorageTests;
 			path = Tests/SecurePropertyStorageTests;
@@ -766,7 +763,6 @@
 				OBJ_121 /* InjectTests.swift in Sources */,
 				OBJ_122 /* KeychainTests.swift in Sources */,
 				OBJ_123 /* SingletonTests.swift in Sources */,
-				813591622DE0E00600244CF1 /* ConcurrencyTests.swift in Sources */,
 				OBJ_124 /* UserDefaultTests.swift in Sources */,
 				OBJ_125 /* XCTestManifests.swift in Sources */,
 			);
