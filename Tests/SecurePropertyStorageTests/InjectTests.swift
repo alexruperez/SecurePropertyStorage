@@ -3,7 +3,7 @@ import XCTest
 
 protocol SubDependencyProtocol {}
 
-class SubDependency: SubDependencyProtocol, Equatable {
+final class SubDependency: SubDependencyProtocol, Equatable, Sendable {
     let timestamp = Date().timeIntervalSince1970
 
     static func == (lhs: SubDependency, rhs: SubDependency) -> Bool {
@@ -32,21 +32,21 @@ class Dependency: DependencyProtocol, Equatable, DependencyQualifier, Sendable {
     }
 }
 
-class AlternativeDependency: DependencyProtocol, AlternativeQualifier {
+final class AlternativeDependency: DependencyProtocol, AlternativeQualifier, Sendable {
     let timestamp = Date().timeIntervalSince1970
 }
 
 protocol MockableProtocol {}
 
-class MockInstance: MockableProtocol, Mock {}
+final class MockInstance: MockableProtocol, Mock, Sendable {}
 
-class RealInstance: MockableProtocol {}
+final class RealInstance: MockableProtocol, Sendable {}
 
 protocol InstanceProtocol {
     var timestamp: TimeInterval { get }
 }
 
-class InstanceDependency: InstanceProtocol, Equatable {
+final class InstanceDependency: InstanceProtocol, Equatable, Sendable {
     let timestamp: TimeInterval
 
     init(_ timestamp: TimeInterval) {
@@ -62,14 +62,14 @@ protocol ErrorClosureDependencyProtocol {}
 
 protocol ErrorClosureSubDependencyProtocol {}
 
-class ErrorClosureDependency: ErrorClosureDependencyProtocol {
+final class ErrorClosureDependency: ErrorClosureDependencyProtocol, Sendable {
     @Register
     private var errorClosureSubDependency: ErrorClosureSubDependencyProtocol = ErrorClosureSubDependency()
 
     static func register(@Register errorClosureDependency: ErrorClosureDependencyProtocol = ErrorClosureDependency()) {}
 }
 
-class ErrorClosureSubDependency: ErrorClosureSubDependencyProtocol {}
+final class ErrorClosureSubDependency: ErrorClosureSubDependencyProtocol, Sendable {}
 
 final class InjectTests: XCTestCase {
     @Register

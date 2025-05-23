@@ -2,11 +2,6 @@
 
 ## Next Version
 
-## 0.8.1
-
-#### Fixed
-- Ensure thread-safe access to grouped dependencies in Inject module. [#38](https://github.com/alexruperez/SecurePropertyStorage/pull/38) Thanks [Google Jules](https://jules.google.com)!
-
 ## 0.8.0
 
 #### Added

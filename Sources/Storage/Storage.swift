@@ -157,7 +157,7 @@ public protocol Storage: StorageDelegate, Sendable {
      - Parameter value: Generic value to store.
      - Parameter key: The `StoreKey` with which to associate the value.
      */
-    func set(_ value: (some Any)?, forKey key: StoreKey)
+    func set<V>(_ value: V?, forKey key: StoreKey)
 
     /**
      Sets the value of the specified `StoreKey` to the specified `Encodable`.
@@ -173,7 +173,7 @@ public protocol Storage: StorageDelegate, Sendable {
      - Parameter data: `StorageData` to store.
      - Parameter key: The `StoreKey` with which to associate the value.
      */
-    func set(_ data: (some StorageData)?, forKey key: StoreKey)
+    func set<D: StorageData>(_ data: D?, forKey key: StoreKey)
 
     /**
      Removes the value of the specified `StoreKey`.

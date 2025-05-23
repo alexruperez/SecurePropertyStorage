@@ -19,6 +19,18 @@
 All keys are hashed using [SHA512](https://en.wikipedia.org/wiki/SHA-2) and all values are encrypted using [AES](https://en.wikipedia.org/wiki/Advanced_Encryption_Standard)-[GCM](https://en.wikipedia.org/wiki/Galois/Counter_Mode) to keep user information safe, auto*magic*ally.
 Symmetric key is stored in Keychain in a totally secure way.
 
+## 🔒 Concurrency and `Sendable`
+
+This library is designed with Swift's modern concurrency features in mind. Access to the underlying storage mechanisms (UserDefaults, Keychain, etc.) is serialized through a global actor (`StorageActor`), preventing data races during read and write operations performed by the library itself.
+
+However, for your application to be fully concurrency-safe when using this library, it is crucial that **the types you store and retrieve are `Sendable`**.
+
+*   **Generic Types**: When using generic property wrappers or methods like `@Store var item: MyType?`, `storage.value(forKey: "key") as? MyType`, or `storage.decodable(forKey: "key") as? MyDecodableType`, ensure that `MyType` and `MyDecodableType` conform to the `Sendable` protocol.
+*   **Object Archiving**: If you use methods that rely on `NSKeyedArchiver` (such as `storage.set(object: myNSObject, forKey: "key")`), the class `myNSObject` should conform to `NSSecureCoding` for security and also be `Sendable` for concurrency safety.
+*   **Why is `Sendable` important?**: While the library ensures that the act of storing or retrieving data is safe, if the data itself (e.g., a class instance) is not `Sendable`, then passing it across different concurrent tasks or actors after retrieval can lead to data races if the data is mutable. Conforming to `Sendable` helps Swift enforce that such types can be safely shared.
+
+Enabling strict concurrency checking in your project's build settings (e.g., "Strict Concurrency Checking" set to "Complete" in Xcode) is highly recommended to help identify potential concurrency issues at compile time.
+
 ## 🐒 Basic usage
 
 ### @UserDefault
