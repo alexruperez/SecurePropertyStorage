@@ -1,0 +1,4 @@
+module UserDefault {
+    header "/Users/alejandro.ruperez/Projects/SecurePropertyStorage/.build/arm64-apple-macosx/debug/UserDefault.build/UserDefault-Swift.h"
+    requires objc
+}

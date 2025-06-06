@@ -1,0 +1,47 @@
+{
+  "": {
+    "swift-dependencies": "/Users/alejandro.ruperez/Projects/SecurePropertyStorage/.build/arm64-apple-macosx/debug/Storage.build/master.swiftdeps"
+  },
+  "/Users/alejandro.ruperez/Projects/SecurePropertyStorage/Sources/Storage/DataConvertible.swift": {
+    "dependencies": "/Users/alejandro.ruperez/Projects/SecurePropertyStorage/.build/arm64-apple-macosx/debug/Storage.build/DataConvertible.d",
+    "object": "/Users/alejandro.ruperez/Projects/SecurePropertyStorage/.build/arm64-apple-macosx/debug/Storage.build/DataConvertible.swift.o",
+    "swiftmodule": "/Users/alejandro.ruperez/Projects/SecurePropertyStorage/.build/arm64-apple-macosx/debug/Storage.build/DataConvertible~partial.swiftmodule",
+    "swift-dependencies": "/Users/alejandro.ruperez/Projects/SecurePropertyStorage/.build/arm64-apple-macosx/debug/Storage.build/DataConvertible.swiftdeps"
+  },
+  "/Users/alejandro.ruperez/Projects/SecurePropertyStorage/Sources/Storage/DelegatedStorage.swift": {
+    "dependencies": "/Users/alejandro.ruperez/Projects/SecurePropertyStorage/.build/arm64-apple-macosx/debug/Storage.build/DelegatedStorage.d",
+    "object": "/Users/alejandro.ruperez/Projects/SecurePropertyStorage/.build/arm64-apple-macosx/debug/Storage.build/DelegatedStorage.swift.o",
+    "swiftmodule": "/Users/alejandro.ruperez/Projects/SecurePropertyStorage/.build/arm64-apple-macosx/debug/Storage.build/DelegatedStorage~partial.swiftmodule",
+    "swift-dependencies": "/Users/alejandro.ruperez/Projects/SecurePropertyStorage/.build/arm64-apple-macosx/debug/Storage.build/DelegatedStorage.swiftdeps"
+  },
+  "/Users/alejandro.ruperez/Projects/SecurePropertyStorage/Sources/Storage/Storage.swift": {
+    "dependencies": "/Users/alejandro.ruperez/Projects/SecurePropertyStorage/.build/arm64-apple-macosx/debug/Storage.build/Storage.d",
+    "object": "/Users/alejandro.ruperez/Projects/SecurePropertyStorage/.build/arm64-apple-macosx/debug/Storage.build/Storage.swift.o",
+    "swiftmodule": "/Users/alejandro.ruperez/Projects/SecurePropertyStorage/.build/arm64-apple-macosx/debug/Storage.build/Storage~partial.swiftmodule",
+    "swift-dependencies": "/Users/alejandro.ruperez/Projects/SecurePropertyStorage/.build/arm64-apple-macosx/debug/Storage.build/Storage.swiftdeps"
+  },
+  "/Users/alejandro.ruperez/Projects/SecurePropertyStorage/Sources/Storage/StorageActor.swift": {
+    "dependencies": "/Users/alejandro.ruperez/Projects/SecurePropertyStorage/.build/arm64-apple-macosx/debug/Storage.build/StorageActor.d",
+    "object": "/Users/alejandro.ruperez/Projects/SecurePropertyStorage/.build/arm64-apple-macosx/debug/Storage.build/StorageActor.swift.o",
+    "swiftmodule": "/Users/alejandro.ruperez/Projects/SecurePropertyStorage/.build/arm64-apple-macosx/debug/Storage.build/StorageActor~partial.swiftmodule",
+    "swift-dependencies": "/Users/alejandro.ruperez/Projects/SecurePropertyStorage/.build/arm64-apple-macosx/debug/Storage.build/StorageActor.swiftdeps"
+  },
+  "/Users/alejandro.ruperez/Projects/SecurePropertyStorage/Sources/Storage/StorageData.swift": {
+    "dependencies": "/Users/alejandro.ruperez/Projects/SecurePropertyStorage/.build/arm64-apple-macosx/debug/Storage.build/StorageData.d",
+    "object": "/Users/alejandro.ruperez/Projects/SecurePropertyStorage/.build/arm64-apple-macosx/debug/Storage.build/StorageData.swift.o",
+    "swiftmodule": "/Users/alejandro.ruperez/Projects/SecurePropertyStorage/.build/arm64-apple-macosx/debug/Storage.build/StorageData~partial.swiftmodule",
+    "swift-dependencies": "/Users/alejandro.ruperez/Projects/SecurePropertyStorage/.build/arm64-apple-macosx/debug/Storage.build/StorageData.swiftdeps"
+  },
+  "/Users/alejandro.ruperez/Projects/SecurePropertyStorage/Sources/Storage/StorageDelegate.swift": {
+    "dependencies": "/Users/alejandro.ruperez/Projects/SecurePropertyStorage/.build/arm64-apple-macosx/debug/Storage.build/StorageDelegate.d",
+    "object": "/Users/alejandro.ruperez/Projects/SecurePropertyStorage/.build/arm64-apple-macosx/debug/Storage.build/StorageDelegate.swift.o",
+    "swiftmodule": "/Users/alejandro.ruperez/Projects/SecurePropertyStorage/.build/arm64-apple-macosx/debug/Storage.build/StorageDelegate~partial.swiftmodule",
+    "swift-dependencies": "/Users/alejandro.ruperez/Projects/SecurePropertyStorage/.build/arm64-apple-macosx/debug/Storage.build/StorageDelegate.swiftdeps"
+  },
+  "/Users/alejandro.ruperez/Projects/SecurePropertyStorage/Sources/Storage/Store.swift": {
+    "dependencies": "/Users/alejandro.ruperez/Projects/SecurePropertyStorage/.build/arm64-apple-macosx/debug/Storage.build/Store.d",
+    "object": "/Users/alejandro.ruperez/Projects/SecurePropertyStorage/.build/arm64-apple-macosx/debug/Storage.build/Store.swift.o",
+    "swiftmodule": "/Users/alejandro.ruperez/Projects/SecurePropertyStorage/.build/arm64-apple-macosx/debug/Storage.build/Store~partial.swiftmodule",
+    "swift-dependencies": "/Users/alejandro.ruperez/Projects/SecurePropertyStorage/.build/arm64-apple-macosx/debug/Storage.build/Store.swiftdeps"
+  }
+}

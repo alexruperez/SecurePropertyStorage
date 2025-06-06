@@ -1,0 +1,4 @@
+module Keychain {
+    header "/Users/alejandro.ruperez/Projects/SecurePropertyStorage/.build/arm64-apple-macosx/debug/Keychain.build/Keychain-Swift.h"
+    requires objc
+}

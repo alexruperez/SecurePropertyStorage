@@ -1,0 +1,4 @@
+module SecurePropertyStoragePackageTests {
+    header "/Users/alejandro.ruperez/Projects/SecurePropertyStorage/.build/arm64-apple-macosx/debug/SecurePropertyStoragePackageTests.build/SecurePropertyStoragePackageTests-Swift.h"
+    requires objc
+}

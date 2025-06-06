@@ -1,0 +1,11 @@
+{
+  "": {
+    "swift-dependencies": "/Users/alejandro.ruperez/Projects/SecurePropertyStorage/.build/arm64-apple-macosx/debug/SecurePropertyStoragePackageTests.build/master.swiftdeps"
+  },
+  "/Users/alejandro.ruperez/Projects/SecurePropertyStorage/.build/arm64-apple-macosx/debug/SecurePropertyStoragePackageTests.derived/runner.swift": {
+    "dependencies": "/Users/alejandro.ruperez/Projects/SecurePropertyStorage/.build/arm64-apple-macosx/debug/SecurePropertyStoragePackageTests.build/runner.d",
+    "object": "/Users/alejandro.ruperez/Projects/SecurePropertyStorage/.build/arm64-apple-macosx/debug/SecurePropertyStoragePackageTests.build/runner.swift.o",
+    "swiftmodule": "/Users/alejandro.ruperez/Projects/SecurePropertyStorage/.build/arm64-apple-macosx/debug/SecurePropertyStoragePackageTests.build/runner~partial.swiftmodule",
+    "swift-dependencies": "/Users/alejandro.ruperez/Projects/SecurePropertyStorage/.build/arm64-apple-macosx/debug/SecurePropertyStoragePackageTests.build/runner.swiftdeps"
+  }
+}

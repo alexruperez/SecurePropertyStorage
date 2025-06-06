@@ -1,0 +1,17 @@
+{
+  "": {
+    "swift-dependencies": "/Users/alejandro.ruperez/Projects/SecurePropertyStorage/.build/arm64-apple-macosx/debug/UserDefault.build/master.swiftdeps"
+  },
+  "/Users/alejandro.ruperez/Projects/SecurePropertyStorage/Sources/UserDefault/UserDefault.swift": {
+    "dependencies": "/Users/alejandro.ruperez/Projects/SecurePropertyStorage/.build/arm64-apple-macosx/debug/UserDefault.build/UserDefault.d",
+    "object": "/Users/alejandro.ruperez/Projects/SecurePropertyStorage/.build/arm64-apple-macosx/debug/UserDefault.build/UserDefault.swift.o",
+    "swiftmodule": "/Users/alejandro.ruperez/Projects/SecurePropertyStorage/.build/arm64-apple-macosx/debug/UserDefault.build/UserDefault~partial.swiftmodule",
+    "swift-dependencies": "/Users/alejandro.ruperez/Projects/SecurePropertyStorage/.build/arm64-apple-macosx/debug/UserDefault.build/UserDefault.swiftdeps"
+  },
+  "/Users/alejandro.ruperez/Projects/SecurePropertyStorage/Sources/UserDefault/UserDefaultsStorage.swift": {
+    "dependencies": "/Users/alejandro.ruperez/Projects/SecurePropertyStorage/.build/arm64-apple-macosx/debug/UserDefault.build/UserDefaultsStorage.d",
+    "object": "/Users/alejandro.ruperez/Projects/SecurePropertyStorage/.build/arm64-apple-macosx/debug/UserDefault.build/UserDefaultsStorage.swift.o",
+    "swiftmodule": "/Users/alejandro.ruperez/Projects/SecurePropertyStorage/.build/arm64-apple-macosx/debug/UserDefault.build/UserDefaultsStorage~partial.swiftmodule",
+    "swift-dependencies": "/Users/alejandro.ruperez/Projects/SecurePropertyStorage/.build/arm64-apple-macosx/debug/UserDefault.build/UserDefaultsStorage.swiftdeps"
+  }
+}

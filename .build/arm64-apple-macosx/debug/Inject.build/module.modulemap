@@ -1,0 +1,4 @@
+module Inject {
+    header "/Users/alejandro.ruperez/Projects/SecurePropertyStorage/.build/arm64-apple-macosx/debug/Inject.build/Inject-Swift.h"
+    requires objc
+}

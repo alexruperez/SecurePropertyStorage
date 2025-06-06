@@ -1,0 +1,4 @@
+module Storage {
+    header "/Users/alejandro.ruperez/Projects/SecurePropertyStorage/.build/arm64-apple-macosx/debug/Storage.build/Storage-Swift.h"
+    requires objc
+}

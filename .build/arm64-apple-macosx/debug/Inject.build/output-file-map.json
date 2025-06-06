@@ -1,0 +1,23 @@
+{
+  "": {
+    "swift-dependencies": "/Users/alejandro.ruperez/Projects/SecurePropertyStorage/.build/arm64-apple-macosx/debug/Inject.build/master.swiftdeps"
+  },
+  "/Users/alejandro.ruperez/Projects/SecurePropertyStorage/Sources/Inject/Inject.swift": {
+    "dependencies": "/Users/alejandro.ruperez/Projects/SecurePropertyStorage/.build/arm64-apple-macosx/debug/Inject.build/Inject.d",
+    "object": "/Users/alejandro.ruperez/Projects/SecurePropertyStorage/.build/arm64-apple-macosx/debug/Inject.build/Inject.swift.o",
+    "swiftmodule": "/Users/alejandro.ruperez/Projects/SecurePropertyStorage/.build/arm64-apple-macosx/debug/Inject.build/Inject~partial.swiftmodule",
+    "swift-dependencies": "/Users/alejandro.ruperez/Projects/SecurePropertyStorage/.build/arm64-apple-macosx/debug/Inject.build/Inject.swiftdeps"
+  },
+  "/Users/alejandro.ruperez/Projects/SecurePropertyStorage/Sources/Inject/InjectError.swift": {
+    "dependencies": "/Users/alejandro.ruperez/Projects/SecurePropertyStorage/.build/arm64-apple-macosx/debug/Inject.build/InjectError.d",
+    "object": "/Users/alejandro.ruperez/Projects/SecurePropertyStorage/.build/arm64-apple-macosx/debug/Inject.build/InjectError.swift.o",
+    "swiftmodule": "/Users/alejandro.ruperez/Projects/SecurePropertyStorage/.build/arm64-apple-macosx/debug/Inject.build/InjectError~partial.swiftmodule",
+    "swift-dependencies": "/Users/alejandro.ruperez/Projects/SecurePropertyStorage/.build/arm64-apple-macosx/debug/Inject.build/InjectError.swiftdeps"
+  },
+  "/Users/alejandro.ruperez/Projects/SecurePropertyStorage/Sources/Inject/InjectStorage.swift": {
+    "dependencies": "/Users/alejandro.ruperez/Projects/SecurePropertyStorage/.build/arm64-apple-macosx/debug/Inject.build/InjectStorage.d",
+    "object": "/Users/alejandro.ruperez/Projects/SecurePropertyStorage/.build/arm64-apple-macosx/debug/Inject.build/InjectStorage.swift.o",
+    "swiftmodule": "/Users/alejandro.ruperez/Projects/SecurePropertyStorage/.build/arm64-apple-macosx/debug/Inject.build/InjectStorage~partial.swiftmodule",
+    "swift-dependencies": "/Users/alejandro.ruperez/Projects/SecurePropertyStorage/.build/arm64-apple-macosx/debug/Inject.build/InjectStorage.swiftdeps"
+  }
+}
