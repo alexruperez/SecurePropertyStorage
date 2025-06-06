@@ -15,14 +15,7 @@ public protocol StorageData: ContiguousBytes {
 public extension ContiguousBytes {
     /// `Data` representation.
     var data: Data {
-        withUnsafeBytes {
-            let pointer = $0.baseAddress?.assumingMemoryBound(to: UInt8.self)
-            let cfdata = CFDataCreateWithBytesNoCopy(nil,
-                                                     pointer,
-                                                     $0.count,
-                                                     kCFAllocatorNull)
-            return ((cfdata as NSData?) as Data?) ?? Data()
-        }
+        withUnsafeBytes { Data($0) }
     }
 }
 
