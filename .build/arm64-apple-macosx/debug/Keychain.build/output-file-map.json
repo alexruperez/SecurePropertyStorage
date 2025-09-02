@@ -1,0 +1,33 @@
+{
+  "": {
+    "swift-dependencies": "/Users/vagrant/git/.build/arm64-apple-macosx/debug/Keychain.build/master.swiftdeps"
+  },
+  "/Users/vagrant/git/Sources/Keychain/CryptoData.swift": {
+    "dependencies": "/Users/vagrant/git/.build/arm64-apple-macosx/debug/Keychain.build/CryptoData.d",
+    "object": "/Users/vagrant/git/.build/arm64-apple-macosx/debug/Keychain.build/CryptoData.swift.o",
+    "swiftmodule": "/Users/vagrant/git/.build/arm64-apple-macosx/debug/Keychain.build/CryptoData~partial.swiftmodule",
+    "swift-dependencies": "/Users/vagrant/git/.build/arm64-apple-macosx/debug/Keychain.build/CryptoData.swiftdeps",
+    "diagnostics": "/Users/vagrant/git/.build/arm64-apple-macosx/debug/Keychain.build/CryptoData.dia"
+  },
+  "/Users/vagrant/git/Sources/Keychain/Keychain.swift": {
+    "dependencies": "/Users/vagrant/git/.build/arm64-apple-macosx/debug/Keychain.build/Keychain.d",
+    "object": "/Users/vagrant/git/.build/arm64-apple-macosx/debug/Keychain.build/Keychain.swift.o",
+    "swiftmodule": "/Users/vagrant/git/.build/arm64-apple-macosx/debug/Keychain.build/Keychain~partial.swiftmodule",
+    "swift-dependencies": "/Users/vagrant/git/.build/arm64-apple-macosx/debug/Keychain.build/Keychain.swiftdeps",
+    "diagnostics": "/Users/vagrant/git/.build/arm64-apple-macosx/debug/Keychain.build/Keychain.dia"
+  },
+  "/Users/vagrant/git/Sources/Keychain/KeychainError.swift": {
+    "dependencies": "/Users/vagrant/git/.build/arm64-apple-macosx/debug/Keychain.build/KeychainError.d",
+    "object": "/Users/vagrant/git/.build/arm64-apple-macosx/debug/Keychain.build/KeychainError.swift.o",
+    "swiftmodule": "/Users/vagrant/git/.build/arm64-apple-macosx/debug/Keychain.build/KeychainError~partial.swiftmodule",
+    "swift-dependencies": "/Users/vagrant/git/.build/arm64-apple-macosx/debug/Keychain.build/KeychainError.swiftdeps",
+    "diagnostics": "/Users/vagrant/git/.build/arm64-apple-macosx/debug/Keychain.build/KeychainError.dia"
+  },
+  "/Users/vagrant/git/Sources/Keychain/KeychainStorage.swift": {
+    "dependencies": "/Users/vagrant/git/.build/arm64-apple-macosx/debug/Keychain.build/KeychainStorage.d",
+    "object": "/Users/vagrant/git/.build/arm64-apple-macosx/debug/Keychain.build/KeychainStorage.swift.o",
+    "swiftmodule": "/Users/vagrant/git/.build/arm64-apple-macosx/debug/Keychain.build/KeychainStorage~partial.swiftmodule",
+    "swift-dependencies": "/Users/vagrant/git/.build/arm64-apple-macosx/debug/Keychain.build/KeychainStorage.swiftdeps",
+    "diagnostics": "/Users/vagrant/git/.build/arm64-apple-macosx/debug/Keychain.build/KeychainStorage.dia"
+  }
+}
