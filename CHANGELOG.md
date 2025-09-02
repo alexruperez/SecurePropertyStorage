@@ -2,6 +2,29 @@
 
 ## Next Version
 
+## 0.8.2
+
+#### Fixed
+- Make StorageActor.shared immutable. [#41](https://github.com/alexruperez/SecurePropertyStorage/pull/41) Thanks [@dineshvijaykumar
+](https://github.com/dineshvijaykumar
+)!
+
+[Commits](https://github.com/alexruperez/SecurePropertyStorage/compare/0.8.1...0.8.2)
+
+## 0.8.1
+
+#### Improvements
+- Fix ContiguousBytes.data memory issue (#39)
+- Fix memory safety issue in ContiguousBytes data extension
+- Updated Jazzy.
+- Ensure thread-safe access to grouped dependencies in Inject module. (#38)
+- Ensure thread-safe access to grouped dependencies in Inject module.
+- I've made some enhancements to improve Sendable conformance, documentation.
+- I updated example classes in InjectTests.swift to conform to Sendable.
+- I added a new section to README.md explaining Sendable requirements for concurrent safety.
+
+[Commits](https://github.com/alexruperez/SecurePropertyStorage/compare/0.8.0...0.8.1)
+
 ## 0.8.0
 
 #### Added
