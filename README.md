@@ -8,9 +8,7 @@
 [![Carthage](https://img.shields.io/badge/Carthage-compatible-4BC51D.svg?style=flat)](https://github.com/Carthage/Carthage)
 [![Bitrise](https://app.bitrise.io/app/4fed1af31836d3bc/status.svg?token=bYImtoKj0hxqCxnORhdgyg&branch=master)](https://app.bitrise.io/app/4fed1af31836d3bc)
 [![Maintainability](https://api.codeclimate.com/v1/badges/bbf38ddca9a26703cefd/maintainability)](https://codeclimate.com/github/alexruperez/SecurePropertyStorage/maintainability)
-[![Test Coverage](https://api.codeclimate.com/v1/badges/bbf38ddca9a26703cefd/test_coverage)](https://codeclimate.com/github/alexruperez/SecurePropertyStorage/test_coverage)
 [![codecov](https://codecov.io/gh/alexruperez/SecurePropertyStorage/graph/badge.svg?token=T3NNtLnmsA)](https://codecov.io/gh/alexruperez/SecurePropertyStorage)
-[![codebeat badge](https://codebeat.co/badges/ee2372f0-2188-43c6-bf7b-f6860834096c)](https://codebeat.co/projects/github-com-alexruperez-securepropertystorage-master)
 [![Quality](https://api.codacy.com/project/badge/Grade/53a23dd2feca4b7ca8357c918c7d49c9)](https://app.codacy.com/gh/alexruperez/SecurePropertyStorage/dashboard)
 [![Documentation](https://alexruperez.github.io/SecurePropertyStorage/badge.svg)](https://alexruperez.github.io/SecurePropertyStorage)
 
