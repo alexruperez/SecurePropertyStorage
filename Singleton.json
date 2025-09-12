@@ -1,0 +1,1981 @@
+[{
+  "\/Users\/vagrant\/git\/Sources\/Singleton\/Singleton.swift" : {
+    "key.diagnostic_stage" : "source.diagnostic.stage.swift.parse",
+    "key.length" : 3494,
+    "key.offset" : 0,
+    "key.substructure" : [
+      {
+        "key.accessibility" : "source.lang.swift.accessibility.open",
+        "key.annotated_decl" : "<Declaration>@propertyWrapper @<Type usr=\"s:7Storage0A5ActorC\">StorageActor<\/Type> open class Singleton&lt;Value&gt; : <Type usr=\"s:7Storage20StorePropertyWrapperC\">StorePropertyWrapper<\/Type>&lt;<Type usr=\"s:9Singleton0A7StorageC\">SingletonStorage<\/Type>&gt;<\/Declaration>",
+        "key.attributes" : [
+          {
+            "key.attribute" : "source.decl.attribute.open",
+            "key.length" : 4,
+            "key.offset" : 68
+          },
+          {
+            "key.attribute" : "source.decl.attribute.propertyWrapper",
+            "key.length" : 16,
+            "key.offset" : 51
+          }
+        ],
+        "key.bodylength" : 694,
+        "key.bodyoffset" : 137,
+        "key.column" : 12,
+        "key.decl_lang" : "source.lang.swift",
+        "key.doc_comment" : "`@Singleton` property wrapper.",
+        "key.doc.column" : 12,
+        "key.doc.comment" : "`@Singleton` property wrapper.",
+        "key.doc.declaration" : "@propertyWrapper @Storage.StorageActor open class Singleton<Value> : StorePropertyWrapper<SingletonStorage>",
+        "key.doc.file" : "\/Users\/vagrant\/git\/Sources\/Singleton\/Singleton.swift",
+        "key.doc.full_as_xml" : "<Class file=\"\/Users\/vagrant\/git\/Sources\/Singleton\/Singleton.swift\" line=\"5\" column=\"12\"><Name>Singleton<\/Name><USR>s:9SingletonAAC<\/USR><Declaration>@propertyWrapper @Storage.StorageActor open class Singleton&lt;Value&gt; : StorePropertyWrapper&lt;SingletonStorage&gt;<\/Declaration><CommentParts><Abstract><Para><codeVoice>@Singleton<\/codeVoice> property wrapper.<\/Para><\/Abstract><\/CommentParts><\/Class>",
+        "key.doc.line" : 5,
+        "key.doc.name" : "Singleton",
+        "key.doc.type" : "Class",
+        "key.doclength" : 35,
+        "key.docoffset" : 16,
+        "key.elements" : [
+          {
+            "key.kind" : "source.lang.swift.structure.elem.typeref",
+            "key.length" : 38,
+            "key.offset" : 97
+          }
+        ],
+        "key.filepath" : "\/Users\/vagrant\/git\/Sources\/Singleton\/Singleton.swift",
+        "key.fully_annotated_decl" : "<decl.class><syntaxtype.attribute.builtin><syntaxtype.attribute.name>@propertyWrapper<\/syntaxtype.attribute.name><\/syntaxtype.attribute.builtin> <syntaxtype.attribute.builtin><syntaxtype.attribute.name>@<ref.class usr=\"s:7Storage0A5ActorC\">StorageActor<\/ref.class><\/syntaxtype.attribute.name><\/syntaxtype.attribute.builtin> <syntaxtype.keyword>open<\/syntaxtype.keyword> <syntaxtype.keyword>class<\/syntaxtype.keyword> <decl.name>Singleton<\/decl.name>&lt;<decl.generic_type_param usr=\"s:9SingletonAAC5Valuexmfp\"><decl.generic_type_param.name>Value<\/decl.generic_type_param.name><\/decl.generic_type_param>&gt; : <ref.class usr=\"s:7Storage20StorePropertyWrapperC\">StorePropertyWrapper<\/ref.class>&lt;<ref.class usr=\"s:9Singleton0A7StorageC\">SingletonStorage<\/ref.class>&gt;<\/decl.class>",
+        "key.inheritedtypes" : [
+          {
+            "key.name" : "StorePropertyWrapper<SingletonStorage>"
+          }
+        ],
+        "key.kind" : "source.lang.swift.decl.class",
+        "key.length" : 759,
+        "key.line" : 5,
+        "key.modulename" : "Singleton",
+        "key.name" : "Singleton",
+        "key.namelength" : 9,
+        "key.nameoffset" : 79,
+        "key.offset" : 73,
+        "key.parsed_declaration" : "open class Singleton<Value>: StorePropertyWrapper<SingletonStorage>",
+        "key.parsed_scope.end" : 31,
+        "key.parsed_scope.start" : 5,
+        "key.reusingastcontext" : false,
+        "key.substructure" : [
+          {
+            "key.annotated_decl" : "<Declaration>Value<\/Declaration>",
+            "key.column" : 22,
+            "key.decl_lang" : "source.lang.swift",
+            "key.filepath" : "\/Users\/vagrant\/git\/Sources\/Singleton\/Singleton.swift",
+            "key.fully_annotated_decl" : "<decl.generic_type_param><decl.generic_type_param.name>Value<\/decl.generic_type_param.name><\/decl.generic_type_param>",
+            "key.is_dynamic" : true,
+            "key.kind" : "source.lang.swift.decl.generic_type_param",
+            "key.length" : 5,
+            "key.line" : 5,
+            "key.modulename" : "Singleton",
+            "key.name" : "Value",
+            "key.namelength" : 5,
+            "key.nameoffset" : 89,
+            "key.offset" : 89,
+            "key.parsed_declaration" : "open class Singleton<Value",
+            "key.parsed_scope.end" : 5,
+            "key.parsed_scope.start" : 5,
+            "key.receivers" : [
+              {
+                "key.usr" : "s:9SingletonAAC"
+              }
+            ],
+            "key.reusingastcontext" : false,
+            "key.typename" : "Value.Type",
+            "key.typeusr" : "$sxmD",
+            "key.usr" : "s:9SingletonAAC5Valuexmfp"
+          },
+          {
+            "key.accessibility" : "source.lang.swift.accessibility.public",
+            "key.annotated_decl" : "<Declaration>@<Type usr=\"s:7Storage0A5ActorC\">StorageActor<\/Type> public convenience init(_ key: <Type usr=\"s:7Storage8StoreKeya\">StoreKey<\/Type>)<\/Declaration>",
+            "key.attributes" : [
+              {
+                "key.attribute" : "source.decl.attribute.convenience",
+                "key.length" : 11,
+                "key.offset" : 263
+              },
+              {
+                "key.attribute" : "source.decl.attribute.public",
+                "key.length" : 6,
+                "key.offset" : 256
+              }
+            ],
+            "key.bodylength" : 55,
+            "key.bodyoffset" : 298,
+            "key.column" : 24,
+            "key.decl_lang" : "source.lang.swift",
+            "key.doc_comment" : "Create a `Singleton` property wrapper.\n\n- Parameter key: `StoreKey` to store the value.\n",
+            "key.doc.column" : 24,
+            "key.doc.comment" : "Create a `Singleton` property wrapper.\n\n- Parameter key: `StoreKey` to store the value.",
+            "key.doc.declaration" : "@Storage.StorageActor public convenience init(_ key: StoreKey)",
+            "key.doc.file" : "\/Users\/vagrant\/git\/Sources\/Singleton\/Singleton.swift",
+            "key.doc.full_as_xml" : "<Function file=\"\/Users\/vagrant\/git\/Sources\/Singleton\/Singleton.swift\" line=\"11\" column=\"24\"><Name>init(_:)<\/Name><USR>s:9SingletonAACyAByxGSScfc<\/USR><Declaration>@Storage.StorageActor public convenience init(_ key: StoreKey)<\/Declaration><CommentParts><Abstract><Para>Create a <codeVoice>Singleton<\/codeVoice> property wrapper.<\/Para><\/Abstract><Parameters><Parameter><Name>key<\/Name><Direction isExplicit=\"0\">in<\/Direction><Discussion><Para><codeVoice>StoreKey<\/codeVoice> to store the value.<\/Para><\/Discussion><\/Parameter><\/Parameters><\/CommentParts><\/Function>",
+            "key.doc.line" : 11,
+            "key.doc.name" : "init(_:)",
+            "key.doc.parameters" : [
+              {
+                "discussion" : [
+                  {
+                    "Para" : "`StoreKey` to store the value."
+                  }
+                ],
+                "name" : "key"
+              }
+            ],
+            "key.doc.type" : "Function",
+            "key.doclength" : 109,
+            "key.docoffset" : 142,
+            "key.filepath" : "\/Users\/vagrant\/git\/Sources\/Singleton\/Singleton.swift",
+            "key.fully_annotated_decl" : "<decl.function.constructor><syntaxtype.attribute.builtin><syntaxtype.attribute.name>@<ref.class usr=\"s:7Storage0A5ActorC\">StorageActor<\/ref.class><\/syntaxtype.attribute.name><\/syntaxtype.attribute.builtin> <syntaxtype.keyword>public<\/syntaxtype.keyword> <syntaxtype.keyword>convenience<\/syntaxtype.keyword> <syntaxtype.keyword>init<\/syntaxtype.keyword>(<decl.var.parameter><decl.var.parameter.argument_label>_<\/decl.var.parameter.argument_label> <decl.var.parameter.name>key<\/decl.var.parameter.name>: <decl.var.parameter.type><ref.typealias usr=\"s:7Storage8StoreKeya\">StoreKey<\/ref.typealias><\/decl.var.parameter.type><\/decl.var.parameter>)<\/decl.function.constructor>",
+            "key.is_dynamic" : true,
+            "key.kind" : "source.lang.swift.decl.function.method.instance",
+            "key.length" : 79,
+            "key.line" : 11,
+            "key.modulename" : "Singleton",
+            "key.name" : "init(_:)",
+            "key.namelength" : 21,
+            "key.nameoffset" : 275,
+            "key.offset" : 275,
+            "key.parsed_declaration" : "public convenience init(_ key: StoreKey)",
+            "key.parsed_scope.end" : 13,
+            "key.parsed_scope.start" : 11,
+            "key.receivers" : [
+              {
+                "key.usr" : "s:9SingletonAAC"
+              }
+            ],
+            "key.related_decls" : [
+              {
+                "key.annotated_decl" : "<RelatedName usr=\"s:9SingletonAAC12wrappedValue_AByxGxSg_SStcfc\">init(wrappedValue:_:)<\/RelatedName>"
+              },
+              {
+                "key.annotated_decl" : "<RelatedName usr=\"s:9SingletonAACyAByxGAA0A7StorageC_SStcfc\">init(_:_:)<\/RelatedName>"
+              }
+            ],
+            "key.reusingastcontext" : false,
+            "key.substructure" : [
+
+            ],
+            "key.typename" : "<Value> (Singleton<Value>.Type) -> (String) -> Singleton<Value>",
+            "key.typeusr" : "$sy9SingletonAACyxGSScD",
+            "key.usr" : "s:9SingletonAACyAByxGSScfc"
+          },
+          {
+            "key.accessibility" : "source.lang.swift.accessibility.public",
+            "key.annotated_decl" : "<Declaration>@<Type usr=\"s:7Storage0A5ActorC\">StorageActor<\/Type> public convenience init(wrappedValue: <Type usr=\"s:9SingletonAAC5Valuexmfp\">Value<\/Type>?, _ key: <Type usr=\"s:7Storage8StoreKeya\">StoreKey<\/Type>)<\/Declaration>",
+            "key.attributes" : [
+              {
+                "key.attribute" : "source.decl.attribute.convenience",
+                "key.length" : 11,
+                "key.offset" : 527
+              },
+              {
+                "key.attribute" : "source.decl.attribute.public",
+                "key.length" : 6,
+                "key.offset" : 520
+              }
+            ],
+            "key.bodylength" : 69,
+            "key.bodyoffset" : 584,
+            "key.column" : 24,
+            "key.decl_lang" : "source.lang.swift",
+            "key.doc_comment" : "Create a `Singleton` property wrapper.\n\n- Parameter wrappedValue: Default value.\n- Parameter key: `StoreKey` to store the value.\n",
+            "key.doc.column" : 24,
+            "key.doc.comment" : "Create a `Singleton` property wrapper.\n\n- Parameter wrappedValue: Default value.\n- Parameter key: `StoreKey` to store the value.",
+            "key.doc.declaration" : "@Storage.StorageActor public convenience init(wrappedValue: Value?, _ key: StoreKey)",
+            "key.doc.file" : "\/Users\/vagrant\/git\/Sources\/Singleton\/Singleton.swift",
+            "key.doc.full_as_xml" : "<Function file=\"\/Users\/vagrant\/git\/Sources\/Singleton\/Singleton.swift\" line=\"21\" column=\"24\"><Name>init(wrappedValue:_:)<\/Name><USR>s:9SingletonAAC12wrappedValue_AByxGxSg_SStcfc<\/USR><Declaration>@Storage.StorageActor public convenience init(wrappedValue: Value?, _ key: StoreKey)<\/Declaration><CommentParts><Abstract><Para>Create a <codeVoice>Singleton<\/codeVoice> property wrapper.<\/Para><\/Abstract><Parameters><Parameter><Name>wrappedValue<\/Name><Direction isExplicit=\"0\">in<\/Direction><Discussion><Para>Default value.<\/Para><\/Discussion><\/Parameter><Parameter><Name>key<\/Name><Direction isExplicit=\"0\">in<\/Direction><Discussion><Para><codeVoice>StoreKey<\/codeVoice> to store the value.<\/Para><\/Discussion><\/Parameter><\/Parameters><\/CommentParts><\/Function>",
+            "key.doc.line" : 21,
+            "key.doc.name" : "init(wrappedValue:_:)",
+            "key.doc.parameters" : [
+              {
+                "discussion" : [
+                  {
+                    "Para" : "Default value."
+                  }
+                ],
+                "name" : "wrappedValue"
+              },
+              {
+                "discussion" : [
+                  {
+                    "Para" : "`StoreKey` to store the value."
+                  }
+                ],
+                "name" : "key"
+              }
+            ],
+            "key.doc.type" : "Function",
+            "key.doclength" : 155,
+            "key.docoffset" : 360,
+            "key.filepath" : "\/Users\/vagrant\/git\/Sources\/Singleton\/Singleton.swift",
+            "key.fully_annotated_decl" : "<decl.function.constructor><syntaxtype.attribute.builtin><syntaxtype.attribute.name>@<ref.class usr=\"s:7Storage0A5ActorC\">StorageActor<\/ref.class><\/syntaxtype.attribute.name><\/syntaxtype.attribute.builtin> <syntaxtype.keyword>public<\/syntaxtype.keyword> <syntaxtype.keyword>convenience<\/syntaxtype.keyword> <syntaxtype.keyword>init<\/syntaxtype.keyword>(<decl.var.parameter><decl.var.parameter.argument_label>wrappedValue<\/decl.var.parameter.argument_label>: <decl.var.parameter.type><ref.generic_type_param usr=\"s:9SingletonAAC5Valuexmfp\">Value<\/ref.generic_type_param>?<\/decl.var.parameter.type><\/decl.var.parameter>, <decl.var.parameter><decl.var.parameter.argument_label>_<\/decl.var.parameter.argument_label> <decl.var.parameter.name>key<\/decl.var.parameter.name>: <decl.var.parameter.type><ref.typealias usr=\"s:7Storage8StoreKeya\">StoreKey<\/ref.typealias><\/decl.var.parameter.type><\/decl.var.parameter>)<\/decl.function.constructor>",
+            "key.is_dynamic" : true,
+            "key.kind" : "source.lang.swift.decl.function.method.instance",
+            "key.length" : 115,
+            "key.line" : 21,
+            "key.modulename" : "Singleton",
+            "key.name" : "init(wrappedValue:_:)",
+            "key.namelength" : 43,
+            "key.nameoffset" : 539,
+            "key.offset" : 539,
+            "key.parsed_declaration" : "public convenience init(wrappedValue: Value?, _ key: StoreKey)",
+            "key.parsed_scope.end" : 24,
+            "key.parsed_scope.start" : 21,
+            "key.receivers" : [
+              {
+                "key.usr" : "s:9SingletonAAC"
+              }
+            ],
+            "key.related_decls" : [
+              {
+                "key.annotated_decl" : "<RelatedName usr=\"s:9SingletonAACyAByxGSScfc\">init(_:)<\/RelatedName>"
+              },
+              {
+                "key.annotated_decl" : "<RelatedName usr=\"s:9SingletonAACyAByxGAA0A7StorageC_SStcfc\">init(_:_:)<\/RelatedName>"
+              }
+            ],
+            "key.reusingastcontext" : false,
+            "key.substructure" : [
+
+            ],
+            "key.typename" : "<Value> (Singleton<Value>.Type) -> (Value?, String) -> Singleton<Value>",
+            "key.typeusr" : "$s12wrappedValue_9SingletonABCyxGxSg_SStcD",
+            "key.usr" : "s:9SingletonAAC12wrappedValue_AByxGxSg_SStcfc"
+          },
+          {
+            "key.accessibility" : "source.lang.swift.accessibility.open",
+            "key.annotated_decl" : "<Declaration>@<Type usr=\"s:7Storage0A5ActorC\">StorageActor<\/Type> open var wrappedValue: <Type usr=\"s:9SingletonAAC5Valuexmfp\">Value<\/Type>? { get set }<\/Declaration>",
+            "key.attributes" : [
+              {
+                "key.attribute" : "source.decl.attribute.open",
+                "key.length" : 4,
+                "key.offset" : 699
+              }
+            ],
+            "key.bodylength" : 99,
+            "key.bodyoffset" : 730,
+            "key.column" : 14,
+            "key.decl_lang" : "source.lang.swift",
+            "key.doc_comment" : "Property wrapper stored value.",
+            "key.doc.column" : 14,
+            "key.doc.comment" : "Property wrapper stored value.",
+            "key.doc.declaration" : "@Storage.StorageActor open var wrappedValue: Value? { get set }",
+            "key.doc.file" : "\/Users\/vagrant\/git\/Sources\/Singleton\/Singleton.swift",
+            "key.doc.full_as_xml" : "<Other file=\"\/Users\/vagrant\/git\/Sources\/Singleton\/Singleton.swift\" line=\"27\" column=\"14\"><Name>wrappedValue<\/Name><USR>s:9SingletonAAC12wrappedValuexSgvp<\/USR><Declaration>@Storage.StorageActor open var wrappedValue: Value? { get set }<\/Declaration><CommentParts><Abstract><Para>Property wrapper stored value.<\/Para><\/Abstract><\/CommentParts><\/Other>",
+            "key.doc.line" : 27,
+            "key.doc.name" : "wrappedValue",
+            "key.doc.type" : "Other",
+            "key.doclength" : 35,
+            "key.docoffset" : 660,
+            "key.filepath" : "\/Users\/vagrant\/git\/Sources\/Singleton\/Singleton.swift",
+            "key.fully_annotated_decl" : "<decl.var.instance><syntaxtype.attribute.builtin><syntaxtype.attribute.name>@<ref.class usr=\"s:7Storage0A5ActorC\">StorageActor<\/ref.class><\/syntaxtype.attribute.name><\/syntaxtype.attribute.builtin> <syntaxtype.keyword>open<\/syntaxtype.keyword> <syntaxtype.keyword>var<\/syntaxtype.keyword> <decl.name>wrappedValue<\/decl.name>: <decl.var.type><ref.generic_type_param usr=\"s:9SingletonAAC5Valuexmfp\">Value<\/ref.generic_type_param>?<\/decl.var.type> { <syntaxtype.keyword>get<\/syntaxtype.keyword> <syntaxtype.keyword>set<\/syntaxtype.keyword> }<\/decl.var.instance>",
+            "key.is_dynamic" : true,
+            "key.kind" : "source.lang.swift.decl.var.instance",
+            "key.length" : 126,
+            "key.line" : 27,
+            "key.modulename" : "Singleton",
+            "key.name" : "wrappedValue",
+            "key.namelength" : 12,
+            "key.nameoffset" : 708,
+            "key.offset" : 704,
+            "key.parsed_declaration" : "open var wrappedValue: Value?",
+            "key.parsed_scope.end" : 30,
+            "key.parsed_scope.start" : 27,
+            "key.receivers" : [
+              {
+                "key.usr" : "s:9SingletonAAC"
+              }
+            ],
+            "key.reusingastcontext" : false,
+            "key.setter_accessibility" : "source.lang.swift.accessibility.open",
+            "key.typename" : "Value?",
+            "key.typeusr" : "$sxSgD",
+            "key.usr" : "s:9SingletonAAC12wrappedValuexSgvp"
+          }
+        ],
+        "key.typename" : "Singleton<Value>.Type",
+        "key.typeusr" : "$s9SingletonAACyxGmD",
+        "key.usr" : "s:9SingletonAAC"
+      },
+      {
+        "key.accessibility" : "source.lang.swift.accessibility.open",
+        "key.annotated_decl" : "<Declaration>@propertyWrapper @<Type usr=\"s:7Storage0A5ActorC\">StorageActor<\/Type> open class UnwrappedSingleton&lt;Value&gt; : <Type usr=\"s:7Storage28StorePropertyWrapperProtocolP\">StorePropertyWrapperProtocol<\/Type><\/Declaration>",
+        "key.attributes" : [
+          {
+            "key.attribute" : "source.decl.attribute.open",
+            "key.length" : 4,
+            "key.offset" : 895
+          },
+          {
+            "key.attribute" : "source.decl.attribute.propertyWrapper",
+            "key.length" : 16,
+            "key.offset" : 878
+          }
+        ],
+        "key.bodylength" : 741,
+        "key.bodyoffset" : 963,
+        "key.column" : 12,
+        "key.decl_lang" : "source.lang.swift",
+        "key.doc_comment" : "`@UnwrappedSingleton` property wrapper.",
+        "key.doc.column" : 12,
+        "key.doc.comment" : "`@UnwrappedSingleton` property wrapper.",
+        "key.doc.declaration" : "@propertyWrapper @Storage.StorageActor open class UnwrappedSingleton<Value> : StorePropertyWrapperProtocol",
+        "key.doc.file" : "\/Users\/vagrant\/git\/Sources\/Singleton\/Singleton.swift",
+        "key.doc.full_as_xml" : "<Class file=\"\/Users\/vagrant\/git\/Sources\/Singleton\/Singleton.swift\" line=\"35\" column=\"12\"><Name>UnwrappedSingleton<\/Name><USR>s:9Singleton09UnwrappedA0C<\/USR><Declaration>@propertyWrapper @Storage.StorageActor open class UnwrappedSingleton&lt;Value&gt; : StorePropertyWrapperProtocol<\/Declaration><CommentParts><Abstract><Para><codeVoice>@UnwrappedSingleton<\/codeVoice> property wrapper.<\/Para><\/Abstract><\/CommentParts><\/Class>",
+        "key.doc.line" : 35,
+        "key.doc.name" : "UnwrappedSingleton",
+        "key.doc.type" : "Class",
+        "key.doclength" : 44,
+        "key.docoffset" : 834,
+        "key.elements" : [
+          {
+            "key.kind" : "source.lang.swift.structure.elem.typeref",
+            "key.length" : 28,
+            "key.offset" : 933
+          }
+        ],
+        "key.filepath" : "\/Users\/vagrant\/git\/Sources\/Singleton\/Singleton.swift",
+        "key.fully_annotated_decl" : "<decl.class><syntaxtype.attribute.builtin><syntaxtype.attribute.name>@propertyWrapper<\/syntaxtype.attribute.name><\/syntaxtype.attribute.builtin> <syntaxtype.attribute.builtin><syntaxtype.attribute.name>@<ref.class usr=\"s:7Storage0A5ActorC\">StorageActor<\/ref.class><\/syntaxtype.attribute.name><\/syntaxtype.attribute.builtin> <syntaxtype.keyword>open<\/syntaxtype.keyword> <syntaxtype.keyword>class<\/syntaxtype.keyword> <decl.name>UnwrappedSingleton<\/decl.name>&lt;<decl.generic_type_param usr=\"s:9Singleton09UnwrappedA0C5Valuexmfp\"><decl.generic_type_param.name>Value<\/decl.generic_type_param.name><\/decl.generic_type_param>&gt; : <ref.protocol usr=\"s:7Storage28StorePropertyWrapperProtocolP\">StorePropertyWrapperProtocol<\/ref.protocol><\/decl.class>",
+        "key.inheritedtypes" : [
+          {
+            "key.name" : "StorePropertyWrapperProtocol"
+          }
+        ],
+        "key.kind" : "source.lang.swift.decl.class",
+        "key.length" : 805,
+        "key.line" : 35,
+        "key.modulename" : "Singleton",
+        "key.name" : "UnwrappedSingleton",
+        "key.namelength" : 18,
+        "key.nameoffset" : 906,
+        "key.offset" : 900,
+        "key.parsed_declaration" : "open class UnwrappedSingleton<Value>: StorePropertyWrapperProtocol",
+        "key.parsed_scope.end" : 60,
+        "key.parsed_scope.start" : 35,
+        "key.reusingastcontext" : false,
+        "key.substructure" : [
+          {
+            "key.annotated_decl" : "<Declaration>Value<\/Declaration>",
+            "key.column" : 31,
+            "key.decl_lang" : "source.lang.swift",
+            "key.filepath" : "\/Users\/vagrant\/git\/Sources\/Singleton\/Singleton.swift",
+            "key.fully_annotated_decl" : "<decl.generic_type_param><decl.generic_type_param.name>Value<\/decl.generic_type_param.name><\/decl.generic_type_param>",
+            "key.is_dynamic" : true,
+            "key.kind" : "source.lang.swift.decl.generic_type_param",
+            "key.length" : 5,
+            "key.line" : 35,
+            "key.modulename" : "Singleton",
+            "key.name" : "Value",
+            "key.namelength" : 5,
+            "key.nameoffset" : 925,
+            "key.offset" : 925,
+            "key.parsed_declaration" : "open class UnwrappedSingleton<Value",
+            "key.parsed_scope.end" : 35,
+            "key.parsed_scope.start" : 35,
+            "key.receivers" : [
+              {
+                "key.usr" : "s:9Singleton09UnwrappedA0C"
+              }
+            ],
+            "key.reusingastcontext" : false,
+            "key.typename" : "Value.Type",
+            "key.typeusr" : "$sxmD",
+            "key.usr" : "s:9Singleton09UnwrappedA0C5Valuexmfp"
+          },
+          {
+            "key.accessibility" : "source.lang.swift.accessibility.open",
+            "key.annotated_decl" : "<Declaration>@<Type usr=\"s:7Storage0A5ActorC\">StorageActor<\/Type> open var storage: <Type usr=\"s:9Singleton0A7StorageC\">SingletonStorage<\/Type><\/Declaration>",
+            "key.attributes" : [
+              {
+                "key.attribute" : "source.decl.attribute.open",
+                "key.length" : 4,
+                "key.offset" : 1012
+              }
+            ],
+            "key.column" : 14,
+            "key.decl_lang" : "source.lang.swift",
+            "key.doc_comment" : "`Storage` used by property wrapper.",
+            "key.doc.column" : 14,
+            "key.doc.comment" : "`Storage` used by property wrapper.",
+            "key.doc.declaration" : "@Storage.StorageActor open var storage: SingletonStorage",
+            "key.doc.file" : "\/Users\/vagrant\/git\/Sources\/Singleton\/Singleton.swift",
+            "key.doc.full_as_xml" : "<Other file=\"\/Users\/vagrant\/git\/Sources\/Singleton\/Singleton.swift\" line=\"37\" column=\"14\"><Name>storage<\/Name><USR>s:9Singleton09UnwrappedA0C7storageAA0A7StorageCvp<\/USR><Declaration>@Storage.StorageActor open var storage: SingletonStorage<\/Declaration><CommentParts><Abstract><Para><codeVoice>Storage<\/codeVoice> used by property wrapper.<\/Para><\/Abstract><\/CommentParts><\/Other>",
+            "key.doc.line" : 37,
+            "key.doc.name" : "storage",
+            "key.doc.type" : "Other",
+            "key.doclength" : 40,
+            "key.docoffset" : 968,
+            "key.filepath" : "\/Users\/vagrant\/git\/Sources\/Singleton\/Singleton.swift",
+            "key.fully_annotated_decl" : "<decl.var.instance><syntaxtype.attribute.builtin><syntaxtype.attribute.name>@<ref.class usr=\"s:7Storage0A5ActorC\">StorageActor<\/ref.class><\/syntaxtype.attribute.name><\/syntaxtype.attribute.builtin> <syntaxtype.keyword>open<\/syntaxtype.keyword> <syntaxtype.keyword>var<\/syntaxtype.keyword> <decl.name>storage<\/decl.name>: <decl.var.type><ref.class usr=\"s:9Singleton0A7StorageC\">SingletonStorage<\/ref.class><\/decl.var.type><\/decl.var.instance>",
+            "key.is_dynamic" : true,
+            "key.kind" : "source.lang.swift.decl.var.instance",
+            "key.length" : 29,
+            "key.line" : 37,
+            "key.modulename" : "Singleton",
+            "key.name" : "storage",
+            "key.namelength" : 7,
+            "key.nameoffset" : 1021,
+            "key.offset" : 1017,
+            "key.overrides" : [
+              {
+                "key.usr" : "s:7Storage28StorePropertyWrapperProtocolP7storage0A4TypeQzvp"
+              }
+            ],
+            "key.parsed_declaration" : "open var storage: SingletonStorage",
+            "key.parsed_scope.end" : 37,
+            "key.parsed_scope.start" : 37,
+            "key.receivers" : [
+              {
+                "key.usr" : "s:9Singleton09UnwrappedA0C"
+              }
+            ],
+            "key.reusingastcontext" : false,
+            "key.setter_accessibility" : "source.lang.swift.accessibility.open",
+            "key.typename" : "SingletonStorage",
+            "key.typeusr" : "$s9Singleton0A7StorageCD",
+            "key.usr" : "s:9Singleton09UnwrappedA0C7storageAA0A7StorageCvp"
+          },
+          {
+            "key.accessibility" : "source.lang.swift.accessibility.open",
+            "key.annotated_decl" : "<Declaration>@<Type usr=\"s:7Storage0A5ActorC\">StorageActor<\/Type> open var key: <Type usr=\"s:7Storage8StoreKeya\">StoreKey<\/Type><\/Declaration>",
+            "key.attributes" : [
+              {
+                "key.attribute" : "source.decl.attribute.open",
+                "key.length" : 4,
+                "key.offset" : 1090
+              }
+            ],
+            "key.column" : 14,
+            "key.decl_lang" : "source.lang.swift",
+            "key.doc_comment" : "`StoreKey` to store the value.",
+            "key.doc.column" : 14,
+            "key.doc.comment" : "`StoreKey` to store the value.",
+            "key.doc.declaration" : "@Storage.StorageActor open var key: StoreKey",
+            "key.doc.file" : "\/Users\/vagrant\/git\/Sources\/Singleton\/Singleton.swift",
+            "key.doc.full_as_xml" : "<Other file=\"\/Users\/vagrant\/git\/Sources\/Singleton\/Singleton.swift\" line=\"39\" column=\"14\"><Name>key<\/Name><USR>s:9Singleton09UnwrappedA0C3keySSvp<\/USR><Declaration>@Storage.StorageActor open var key: StoreKey<\/Declaration><CommentParts><Abstract><Para><codeVoice>StoreKey<\/codeVoice> to store the value.<\/Para><\/Abstract><\/CommentParts><\/Other>",
+            "key.doc.line" : 39,
+            "key.doc.name" : "key",
+            "key.doc.type" : "Other",
+            "key.doclength" : 35,
+            "key.docoffset" : 1051,
+            "key.filepath" : "\/Users\/vagrant\/git\/Sources\/Singleton\/Singleton.swift",
+            "key.fully_annotated_decl" : "<decl.var.instance><syntaxtype.attribute.builtin><syntaxtype.attribute.name>@<ref.class usr=\"s:7Storage0A5ActorC\">StorageActor<\/ref.class><\/syntaxtype.attribute.name><\/syntaxtype.attribute.builtin> <syntaxtype.keyword>open<\/syntaxtype.keyword> <syntaxtype.keyword>var<\/syntaxtype.keyword> <decl.name>key<\/decl.name>: <decl.var.type><ref.typealias usr=\"s:7Storage8StoreKeya\">StoreKey<\/ref.typealias><\/decl.var.type><\/decl.var.instance>",
+            "key.is_dynamic" : true,
+            "key.kind" : "source.lang.swift.decl.var.instance",
+            "key.length" : 17,
+            "key.line" : 39,
+            "key.modulename" : "Singleton",
+            "key.name" : "key",
+            "key.namelength" : 3,
+            "key.nameoffset" : 1099,
+            "key.offset" : 1095,
+            "key.overrides" : [
+              {
+                "key.usr" : "s:7Storage28StorePropertyWrapperProtocolP3keySSvp"
+              }
+            ],
+            "key.parsed_declaration" : "open var key: StoreKey",
+            "key.parsed_scope.end" : 39,
+            "key.parsed_scope.start" : 39,
+            "key.receivers" : [
+              {
+                "key.usr" : "s:9Singleton09UnwrappedA0C"
+              }
+            ],
+            "key.reusingastcontext" : false,
+            "key.setter_accessibility" : "source.lang.swift.accessibility.open",
+            "key.typename" : "String",
+            "key.typeusr" : "$sSSD",
+            "key.usr" : "s:9Singleton09UnwrappedA0C3keySSvp"
+          },
+          {
+            "key.accessibility" : "source.lang.swift.accessibility.open",
+            "key.annotated_decl" : "<Declaration>@<Type usr=\"s:7Storage0A5ActorC\">StorageActor<\/Type> open var defaultValue: <Type usr=\"s:9Singleton09UnwrappedA0C5Valuexmfp\">Value<\/Type><\/Declaration>",
+            "key.attributes" : [
+              {
+                "key.attribute" : "source.decl.attribute.open",
+                "key.length" : 4,
+                "key.offset" : 1140
+              }
+            ],
+            "key.column" : 14,
+            "key.decl_lang" : "source.lang.swift",
+            "key.doc_comment" : "Default value.",
+            "key.doc.column" : 14,
+            "key.doc.comment" : "Default value.",
+            "key.doc.declaration" : "@Storage.StorageActor open var defaultValue: Value",
+            "key.doc.file" : "\/Users\/vagrant\/git\/Sources\/Singleton\/Singleton.swift",
+            "key.doc.full_as_xml" : "<Other file=\"\/Users\/vagrant\/git\/Sources\/Singleton\/Singleton.swift\" line=\"41\" column=\"14\"><Name>defaultValue<\/Name><USR>s:9Singleton09UnwrappedA0C12defaultValuexvp<\/USR><Declaration>@Storage.StorageActor open var defaultValue: Value<\/Declaration><CommentParts><Abstract><Para>Default value.<\/Para><\/Abstract><\/CommentParts><\/Other>",
+            "key.doc.line" : 41,
+            "key.doc.name" : "defaultValue",
+            "key.doc.type" : "Other",
+            "key.doclength" : 19,
+            "key.docoffset" : 1117,
+            "key.filepath" : "\/Users\/vagrant\/git\/Sources\/Singleton\/Singleton.swift",
+            "key.fully_annotated_decl" : "<decl.var.instance><syntaxtype.attribute.builtin><syntaxtype.attribute.name>@<ref.class usr=\"s:7Storage0A5ActorC\">StorageActor<\/ref.class><\/syntaxtype.attribute.name><\/syntaxtype.attribute.builtin> <syntaxtype.keyword>open<\/syntaxtype.keyword> <syntaxtype.keyword>var<\/syntaxtype.keyword> <decl.name>defaultValue<\/decl.name>: <decl.var.type><ref.generic_type_param usr=\"s:9Singleton09UnwrappedA0C5Valuexmfp\">Value<\/ref.generic_type_param><\/decl.var.type><\/decl.var.instance>",
+            "key.is_dynamic" : true,
+            "key.kind" : "source.lang.swift.decl.var.instance",
+            "key.length" : 23,
+            "key.line" : 41,
+            "key.modulename" : "Singleton",
+            "key.name" : "defaultValue",
+            "key.namelength" : 12,
+            "key.nameoffset" : 1149,
+            "key.offset" : 1145,
+            "key.parsed_declaration" : "open var defaultValue: Value",
+            "key.parsed_scope.end" : 41,
+            "key.parsed_scope.start" : 41,
+            "key.receivers" : [
+              {
+                "key.usr" : "s:9Singleton09UnwrappedA0C"
+              }
+            ],
+            "key.reusingastcontext" : false,
+            "key.setter_accessibility" : "source.lang.swift.accessibility.open",
+            "key.typename" : "Value",
+            "key.typeusr" : "$sxD",
+            "key.usr" : "s:9Singleton09UnwrappedA0C12defaultValuexvp"
+          },
+          {
+            "key.accessibility" : "source.lang.swift.accessibility.public",
+            "key.annotated_decl" : "<Declaration>@<Type usr=\"s:7Storage0A5ActorC\">StorageActor<\/Type> public required init(wrappedValue: <Type usr=\"s:9Singleton09UnwrappedA0C5Valuexmfp\">Value<\/Type>, _ key: <Type usr=\"s:7Storage8StoreKeya\">StoreKey<\/Type>)<\/Declaration>",
+            "key.attributes" : [
+              {
+                "key.attribute" : "source.decl.attribute.required",
+                "key.length" : 8,
+                "key.offset" : 1350
+              },
+              {
+                "key.attribute" : "source.decl.attribute.public",
+                "key.length" : 6,
+                "key.offset" : 1343
+              }
+            ],
+            "key.bodylength" : 108,
+            "key.bodyoffset" : 1403,
+            "key.column" : 21,
+            "key.decl_lang" : "source.lang.swift",
+            "key.doc_comment" : "Create a `UnwrappedSingleton` property wrapper.\n\n- Parameter wrappedValue: Default value.\n- Parameter key: `StoreKey` to store the value.\n",
+            "key.doc.column" : 21,
+            "key.doc.comment" : "Create a `UnwrappedSingleton` property wrapper.\n\n- Parameter wrappedValue: Default value.\n- Parameter key: `StoreKey` to store the value.",
+            "key.doc.declaration" : "@Storage.StorageActor public required init(wrappedValue: Value, _ key: StoreKey)",
+            "key.doc.file" : "\/Users\/vagrant\/git\/Sources\/Singleton\/Singleton.swift",
+            "key.doc.full_as_xml" : "<Function file=\"\/Users\/vagrant\/git\/Sources\/Singleton\/Singleton.swift\" line=\"49\" column=\"21\"><Name>init(wrappedValue:_:)<\/Name><USR>s:9Singleton09UnwrappedA0C12wrappedValue_ACyxGx_SStcfc<\/USR><Declaration>@Storage.StorageActor public required init(wrappedValue: Value, _ key: StoreKey)<\/Declaration><CommentParts><Abstract><Para>Create a <codeVoice>UnwrappedSingleton<\/codeVoice> property wrapper.<\/Para><\/Abstract><Parameters><Parameter><Name>wrappedValue<\/Name><Direction isExplicit=\"0\">in<\/Direction><Discussion><Para>Default value.<\/Para><\/Discussion><\/Parameter><Parameter><Name>key<\/Name><Direction isExplicit=\"0\">in<\/Direction><Discussion><Para><codeVoice>StoreKey<\/codeVoice> to store the value.<\/Para><\/Discussion><\/Parameter><\/Parameters><\/CommentParts><\/Function>",
+            "key.doc.line" : 49,
+            "key.doc.name" : "init(wrappedValue:_:)",
+            "key.doc.parameters" : [
+              {
+                "discussion" : [
+                  {
+                    "Para" : "Default value."
+                  }
+                ],
+                "name" : "wrappedValue"
+              },
+              {
+                "discussion" : [
+                  {
+                    "Para" : "`StoreKey` to store the value."
+                  }
+                ],
+                "name" : "key"
+              }
+            ],
+            "key.doc.type" : "Function",
+            "key.doclength" : 164,
+            "key.docoffset" : 1174,
+            "key.filepath" : "\/Users\/vagrant\/git\/Sources\/Singleton\/Singleton.swift",
+            "key.fully_annotated_decl" : "<decl.function.constructor><syntaxtype.attribute.builtin><syntaxtype.attribute.name>@<ref.class usr=\"s:7Storage0A5ActorC\">StorageActor<\/ref.class><\/syntaxtype.attribute.name><\/syntaxtype.attribute.builtin> <syntaxtype.keyword>public<\/syntaxtype.keyword> <syntaxtype.keyword>required<\/syntaxtype.keyword> <syntaxtype.keyword>init<\/syntaxtype.keyword>(<decl.var.parameter><decl.var.parameter.argument_label>wrappedValue<\/decl.var.parameter.argument_label>: <decl.var.parameter.type><ref.generic_type_param usr=\"s:9Singleton09UnwrappedA0C5Valuexmfp\">Value<\/ref.generic_type_param><\/decl.var.parameter.type><\/decl.var.parameter>, <decl.var.parameter><decl.var.parameter.argument_label>_<\/decl.var.parameter.argument_label> <decl.var.parameter.name>key<\/decl.var.parameter.name>: <decl.var.parameter.type><ref.typealias usr=\"s:7Storage8StoreKeya\">StoreKey<\/ref.typealias><\/decl.var.parameter.type><\/decl.var.parameter>)<\/decl.function.constructor>",
+            "key.is_dynamic" : true,
+            "key.kind" : "source.lang.swift.decl.function.method.instance",
+            "key.length" : 153,
+            "key.line" : 49,
+            "key.modulename" : "Singleton",
+            "key.name" : "init(wrappedValue:_:)",
+            "key.namelength" : 42,
+            "key.nameoffset" : 1359,
+            "key.offset" : 1359,
+            "key.parsed_declaration" : "public required init(wrappedValue: Value, _ key: StoreKey)",
+            "key.parsed_scope.end" : 53,
+            "key.parsed_scope.start" : 49,
+            "key.receivers" : [
+              {
+                "key.usr" : "s:9Singleton09UnwrappedA0C"
+              }
+            ],
+            "key.reusingastcontext" : false,
+            "key.substructure" : [
+
+            ],
+            "key.typename" : "<Value> (UnwrappedSingleton<Value>.Type) -> (Value, String) -> UnwrappedSingleton<Value>",
+            "key.typeusr" : "$s12wrappedValue_9Singleton09UnwrappedC0CyxGx_SStcD",
+            "key.usr" : "s:9Singleton09UnwrappedA0C12wrappedValue_ACyxGx_SStcfc"
+          },
+          {
+            "key.accessibility" : "source.lang.swift.accessibility.open",
+            "key.annotated_decl" : "<Declaration>@<Type usr=\"s:7Storage0A5ActorC\">StorageActor<\/Type> open var wrappedValue: <Type usr=\"s:9Singleton09UnwrappedA0C5Valuexmfp\">Value<\/Type> { get set }<\/Declaration>",
+            "key.attributes" : [
+              {
+                "key.attribute" : "source.decl.attribute.open",
+                "key.length" : 4,
+                "key.offset" : 1557
+              }
+            ],
+            "key.bodylength" : 115,
+            "key.bodyoffset" : 1587,
+            "key.column" : 14,
+            "key.decl_lang" : "source.lang.swift",
+            "key.doc_comment" : "Property wrapper stored value.",
+            "key.doc.column" : 14,
+            "key.doc.comment" : "Property wrapper stored value.",
+            "key.doc.declaration" : "@Storage.StorageActor open var wrappedValue: Value { get set }",
+            "key.doc.file" : "\/Users\/vagrant\/git\/Sources\/Singleton\/Singleton.swift",
+            "key.doc.full_as_xml" : "<Other file=\"\/Users\/vagrant\/git\/Sources\/Singleton\/Singleton.swift\" line=\"56\" column=\"14\"><Name>wrappedValue<\/Name><USR>s:9Singleton09UnwrappedA0C12wrappedValuexvp<\/USR><Declaration>@Storage.StorageActor open var wrappedValue: Value { get set }<\/Declaration><CommentParts><Abstract><Para>Property wrapper stored value.<\/Para><\/Abstract><\/CommentParts><\/Other>",
+            "key.doc.line" : 56,
+            "key.doc.name" : "wrappedValue",
+            "key.doc.type" : "Other",
+            "key.doclength" : 35,
+            "key.docoffset" : 1518,
+            "key.filepath" : "\/Users\/vagrant\/git\/Sources\/Singleton\/Singleton.swift",
+            "key.fully_annotated_decl" : "<decl.var.instance><syntaxtype.attribute.builtin><syntaxtype.attribute.name>@<ref.class usr=\"s:7Storage0A5ActorC\">StorageActor<\/ref.class><\/syntaxtype.attribute.name><\/syntaxtype.attribute.builtin> <syntaxtype.keyword>open<\/syntaxtype.keyword> <syntaxtype.keyword>var<\/syntaxtype.keyword> <decl.name>wrappedValue<\/decl.name>: <decl.var.type><ref.generic_type_param usr=\"s:9Singleton09UnwrappedA0C5Valuexmfp\">Value<\/ref.generic_type_param><\/decl.var.type> { <syntaxtype.keyword>get<\/syntaxtype.keyword> <syntaxtype.keyword>set<\/syntaxtype.keyword> }<\/decl.var.instance>",
+            "key.is_dynamic" : true,
+            "key.kind" : "source.lang.swift.decl.var.instance",
+            "key.length" : 141,
+            "key.line" : 56,
+            "key.modulename" : "Singleton",
+            "key.name" : "wrappedValue",
+            "key.namelength" : 12,
+            "key.nameoffset" : 1566,
+            "key.offset" : 1562,
+            "key.parsed_declaration" : "open var wrappedValue: Value",
+            "key.parsed_scope.end" : 59,
+            "key.parsed_scope.start" : 56,
+            "key.receivers" : [
+              {
+                "key.usr" : "s:9Singleton09UnwrappedA0C"
+              }
+            ],
+            "key.reusingastcontext" : false,
+            "key.setter_accessibility" : "source.lang.swift.accessibility.open",
+            "key.typename" : "Value",
+            "key.typeusr" : "$sxD",
+            "key.usr" : "s:9Singleton09UnwrappedA0C12wrappedValuexvp"
+          }
+        ],
+        "key.typename" : "UnwrappedSingleton<Value>.Type",
+        "key.typeusr" : "$s9Singleton09UnwrappedA0CyxGmD",
+        "key.usr" : "s:9Singleton09UnwrappedA0C"
+      },
+      {
+        "key.accessibility" : "source.lang.swift.accessibility.open",
+        "key.annotated_decl" : "<Declaration>@propertyWrapper @<Type usr=\"s:7Storage0A5ActorC\">StorageActor<\/Type> open class CodableSingleton&lt;Value&gt; : <Type usr=\"s:7Storage20StorePropertyWrapperC\">StorePropertyWrapper<\/Type>&lt;<Type usr=\"s:9Singleton0A7StorageC\">SingletonStorage<\/Type>&gt; where <Type usr=\"s:9Singleton07CodableA0C5Valuexmfp\">Value<\/Type> : <Type usr=\"s:Se\">Decodable<\/Type>, <Type usr=\"s:9Singleton07CodableA0C5Valuexmfp\">Value<\/Type> : <Type usr=\"s:SE\">Encodable<\/Type><\/Declaration>",
+        "key.attributes" : [
+          {
+            "key.attribute" : "source.decl.attribute.open",
+            "key.length" : 4,
+            "key.offset" : 1766
+          },
+          {
+            "key.attribute" : "source.decl.attribute.propertyWrapper",
+            "key.length" : 16,
+            "key.offset" : 1749
+          }
+        ],
+        "key.bodylength" : 723,
+        "key.bodyoffset" : 1851,
+        "key.column" : 12,
+        "key.decl_lang" : "source.lang.swift",
+        "key.doc_comment" : "`@CodableSingleton` property wrapper.",
+        "key.doc.column" : 12,
+        "key.doc.comment" : "`@CodableSingleton` property wrapper.",
+        "key.doc.declaration" : "@propertyWrapper @Storage.StorageActor open class CodableSingleton<Value> : StorePropertyWrapper<SingletonStorage> where Value : Decodable, Value : Encodable",
+        "key.doc.file" : "\/Users\/vagrant\/git\/Sources\/Singleton\/Singleton.swift",
+        "key.doc.full_as_xml" : "<Class file=\"\/Users\/vagrant\/git\/Sources\/Singleton\/Singleton.swift\" line=\"64\" column=\"12\"><Name>CodableSingleton<\/Name><USR>s:9Singleton07CodableA0C<\/USR><Declaration>@propertyWrapper @Storage.StorageActor open class CodableSingleton&lt;Value&gt; : StorePropertyWrapper&lt;SingletonStorage&gt; where Value : Decodable, Value : Encodable<\/Declaration><CommentParts><Abstract><Para><codeVoice>@CodableSingleton<\/codeVoice> property wrapper.<\/Para><\/Abstract><\/CommentParts><\/Class>",
+        "key.doc.line" : 64,
+        "key.doc.name" : "CodableSingleton",
+        "key.doc.type" : "Class",
+        "key.doclength" : 42,
+        "key.docoffset" : 1707,
+        "key.elements" : [
+          {
+            "key.kind" : "source.lang.swift.structure.elem.typeref",
+            "key.length" : 38,
+            "key.offset" : 1811
+          }
+        ],
+        "key.filepath" : "\/Users\/vagrant\/git\/Sources\/Singleton\/Singleton.swift",
+        "key.fully_annotated_decl" : "<decl.class><syntaxtype.attribute.builtin><syntaxtype.attribute.name>@propertyWrapper<\/syntaxtype.attribute.name><\/syntaxtype.attribute.builtin> <syntaxtype.attribute.builtin><syntaxtype.attribute.name>@<ref.class usr=\"s:7Storage0A5ActorC\">StorageActor<\/ref.class><\/syntaxtype.attribute.name><\/syntaxtype.attribute.builtin> <syntaxtype.keyword>open<\/syntaxtype.keyword> <syntaxtype.keyword>class<\/syntaxtype.keyword> <decl.name>CodableSingleton<\/decl.name>&lt;<decl.generic_type_param usr=\"s:9Singleton07CodableA0C5Valuexmfp\"><decl.generic_type_param.name>Value<\/decl.generic_type_param.name><\/decl.generic_type_param>&gt; : <ref.class usr=\"s:7Storage20StorePropertyWrapperC\">StorePropertyWrapper<\/ref.class>&lt;<ref.class usr=\"s:9Singleton0A7StorageC\">SingletonStorage<\/ref.class>&gt; <syntaxtype.keyword>where<\/syntaxtype.keyword> <decl.generic_type_requirement><ref.generic_type_param usr=\"s:9Singleton07CodableA0C5Valuexmfp\">Value<\/ref.generic_type_param> : <ref.protocol usr=\"s:Se\">Decodable<\/ref.protocol><\/decl.generic_type_requirement>, <decl.generic_type_requirement><ref.generic_type_param usr=\"s:9Singleton07CodableA0C5Valuexmfp\">Value<\/ref.generic_type_param> : <ref.protocol usr=\"s:SE\">Encodable<\/ref.protocol><\/decl.generic_type_requirement><\/decl.class>",
+        "key.inheritedtypes" : [
+          {
+            "key.name" : "StorePropertyWrapper<SingletonStorage>"
+          }
+        ],
+        "key.kind" : "source.lang.swift.decl.class",
+        "key.length" : 804,
+        "key.line" : 64,
+        "key.modulename" : "Singleton",
+        "key.name" : "CodableSingleton",
+        "key.namelength" : 16,
+        "key.nameoffset" : 1777,
+        "key.offset" : 1771,
+        "key.parsed_declaration" : "open class CodableSingleton<Value: Codable>: StorePropertyWrapper<SingletonStorage>",
+        "key.parsed_scope.end" : 90,
+        "key.parsed_scope.start" : 64,
+        "key.reusingastcontext" : false,
+        "key.substructure" : [
+          {
+            "key.annotated_decl" : "<Declaration>Value : <Type usr=\"s:s7Codablea\">Codable<\/Type><\/Declaration>",
+            "key.column" : 29,
+            "key.decl_lang" : "source.lang.swift",
+            "key.elements" : [
+              {
+                "key.kind" : "source.lang.swift.structure.elem.typeref",
+                "key.length" : 7,
+                "key.offset" : 1801
+              }
+            ],
+            "key.filepath" : "\/Users\/vagrant\/git\/Sources\/Singleton\/Singleton.swift",
+            "key.fully_annotated_decl" : "<decl.generic_type_param><decl.generic_type_param.name>Value<\/decl.generic_type_param.name> : <decl.generic_type_param.constraint><ref.typealias usr=\"s:s7Codablea\">Codable<\/ref.typealias><\/decl.generic_type_param.constraint><\/decl.generic_type_param>",
+            "key.inheritedtypes" : [
+              {
+                "key.name" : "Codable"
+              }
+            ],
+            "key.is_dynamic" : true,
+            "key.kind" : "source.lang.swift.decl.generic_type_param",
+            "key.length" : 14,
+            "key.line" : 64,
+            "key.modulename" : "Singleton",
+            "key.name" : "Value",
+            "key.namelength" : 5,
+            "key.nameoffset" : 1794,
+            "key.offset" : 1794,
+            "key.parsed_declaration" : "open class CodableSingleton<Value: Codable",
+            "key.parsed_scope.end" : 64,
+            "key.parsed_scope.start" : 64,
+            "key.receivers" : [
+              {
+                "key.usr" : "s:9Singleton07CodableA0C"
+              }
+            ],
+            "key.reusingastcontext" : false,
+            "key.typename" : "Value.Type",
+            "key.typeusr" : "$sxmD",
+            "key.usr" : "s:9Singleton07CodableA0C5Valuexmfp"
+          },
+          {
+            "key.accessibility" : "source.lang.swift.accessibility.public",
+            "key.annotated_decl" : "<Declaration>@<Type usr=\"s:7Storage0A5ActorC\">StorageActor<\/Type> public convenience init(_ key: <Type usr=\"s:7Storage8StoreKeya\">StoreKey<\/Type>)<\/Declaration>",
+            "key.attributes" : [
+              {
+                "key.attribute" : "source.decl.attribute.convenience",
+                "key.length" : 11,
+                "key.offset" : 1984
+              },
+              {
+                "key.attribute" : "source.decl.attribute.public",
+                "key.length" : 6,
+                "key.offset" : 1977
+              }
+            ],
+            "key.bodylength" : 55,
+            "key.bodyoffset" : 2019,
+            "key.column" : 24,
+            "key.decl_lang" : "source.lang.swift",
+            "key.doc_comment" : "Create a `CodableSingleton` property wrapper.\n\n- Parameter key: `StoreKey` to store the value.\n",
+            "key.doc.column" : 24,
+            "key.doc.comment" : "Create a `CodableSingleton` property wrapper.\n\n- Parameter key: `StoreKey` to store the value.",
+            "key.doc.declaration" : "@Storage.StorageActor public convenience init(_ key: StoreKey)",
+            "key.doc.file" : "\/Users\/vagrant\/git\/Sources\/Singleton\/Singleton.swift",
+            "key.doc.full_as_xml" : "<Function file=\"\/Users\/vagrant\/git\/Sources\/Singleton\/Singleton.swift\" line=\"70\" column=\"24\"><Name>init(_:)<\/Name><USR>s:9Singleton07CodableA0CyACyxGSScfc<\/USR><Declaration>@Storage.StorageActor public convenience init(_ key: StoreKey)<\/Declaration><CommentParts><Abstract><Para>Create a <codeVoice>CodableSingleton<\/codeVoice> property wrapper.<\/Para><\/Abstract><Parameters><Parameter><Name>key<\/Name><Direction isExplicit=\"0\">in<\/Direction><Discussion><Para><codeVoice>StoreKey<\/codeVoice> to store the value.<\/Para><\/Discussion><\/Parameter><\/Parameters><\/CommentParts><\/Function>",
+            "key.doc.line" : 70,
+            "key.doc.name" : "init(_:)",
+            "key.doc.parameters" : [
+              {
+                "discussion" : [
+                  {
+                    "Para" : "`StoreKey` to store the value."
+                  }
+                ],
+                "name" : "key"
+              }
+            ],
+            "key.doc.type" : "Function",
+            "key.doclength" : 116,
+            "key.docoffset" : 1856,
+            "key.filepath" : "\/Users\/vagrant\/git\/Sources\/Singleton\/Singleton.swift",
+            "key.fully_annotated_decl" : "<decl.function.constructor><syntaxtype.attribute.builtin><syntaxtype.attribute.name>@<ref.class usr=\"s:7Storage0A5ActorC\">StorageActor<\/ref.class><\/syntaxtype.attribute.name><\/syntaxtype.attribute.builtin> <syntaxtype.keyword>public<\/syntaxtype.keyword> <syntaxtype.keyword>convenience<\/syntaxtype.keyword> <syntaxtype.keyword>init<\/syntaxtype.keyword>(<decl.var.parameter><decl.var.parameter.argument_label>_<\/decl.var.parameter.argument_label> <decl.var.parameter.name>key<\/decl.var.parameter.name>: <decl.var.parameter.type><ref.typealias usr=\"s:7Storage8StoreKeya\">StoreKey<\/ref.typealias><\/decl.var.parameter.type><\/decl.var.parameter>)<\/decl.function.constructor>",
+            "key.is_dynamic" : true,
+            "key.kind" : "source.lang.swift.decl.function.method.instance",
+            "key.length" : 79,
+            "key.line" : 70,
+            "key.modulename" : "Singleton",
+            "key.name" : "init(_:)",
+            "key.namelength" : 21,
+            "key.nameoffset" : 1996,
+            "key.offset" : 1996,
+            "key.parsed_declaration" : "public convenience init(_ key: StoreKey)",
+            "key.parsed_scope.end" : 72,
+            "key.parsed_scope.start" : 70,
+            "key.receivers" : [
+              {
+                "key.usr" : "s:9Singleton07CodableA0C"
+              }
+            ],
+            "key.related_decls" : [
+              {
+                "key.annotated_decl" : "<RelatedName usr=\"s:9Singleton07CodableA0C12wrappedValue_ACyxGxSg_SStcfc\">init(wrappedValue:_:)<\/RelatedName>"
+              },
+              {
+                "key.annotated_decl" : "<RelatedName usr=\"s:9Singleton07CodableA0CyACyxGAA0A7StorageC_SStcfc\">init(_:_:)<\/RelatedName>"
+              }
+            ],
+            "key.reusingastcontext" : false,
+            "key.substructure" : [
+
+            ],
+            "key.typename" : "<Value where Value : Decodable, Value : Encodable> (CodableSingleton<Value>.Type) -> (String) -> CodableSingleton<Value>",
+            "key.typeusr" : "$sy9Singleton07CodableA0CyxGSScD",
+            "key.usr" : "s:9Singleton07CodableA0CyACyxGSScfc"
+          },
+          {
+            "key.accessibility" : "source.lang.swift.accessibility.public",
+            "key.annotated_decl" : "<Declaration>@<Type usr=\"s:7Storage0A5ActorC\">StorageActor<\/Type> public convenience init(wrappedValue: <Type usr=\"s:9Singleton07CodableA0C5Valuexmfp\">Value<\/Type>?, _ key: <Type usr=\"s:7Storage8StoreKeya\">StoreKey<\/Type>)<\/Declaration>",
+            "key.attributes" : [
+              {
+                "key.attribute" : "source.decl.attribute.convenience",
+                "key.length" : 11,
+                "key.offset" : 2255
+              },
+              {
+                "key.attribute" : "source.decl.attribute.public",
+                "key.length" : 6,
+                "key.offset" : 2248
+              }
+            ],
+            "key.bodylength" : 69,
+            "key.bodyoffset" : 2312,
+            "key.column" : 24,
+            "key.decl_lang" : "source.lang.swift",
+            "key.doc_comment" : "Create a `CodableSingleton` property wrapper.\n\n- Parameter wrappedValue: Default value.\n- Parameter key: `StoreKey` to store the value.\n",
+            "key.doc.column" : 24,
+            "key.doc.comment" : "Create a `CodableSingleton` property wrapper.\n\n- Parameter wrappedValue: Default value.\n- Parameter key: `StoreKey` to store the value.",
+            "key.doc.declaration" : "@Storage.StorageActor public convenience init(wrappedValue: Value?, _ key: StoreKey)",
+            "key.doc.file" : "\/Users\/vagrant\/git\/Sources\/Singleton\/Singleton.swift",
+            "key.doc.full_as_xml" : "<Function file=\"\/Users\/vagrant\/git\/Sources\/Singleton\/Singleton.swift\" line=\"80\" column=\"24\"><Name>init(wrappedValue:_:)<\/Name><USR>s:9Singleton07CodableA0C12wrappedValue_ACyxGxSg_SStcfc<\/USR><Declaration>@Storage.StorageActor public convenience init(wrappedValue: Value?, _ key: StoreKey)<\/Declaration><CommentParts><Abstract><Para>Create a <codeVoice>CodableSingleton<\/codeVoice> property wrapper.<\/Para><\/Abstract><Parameters><Parameter><Name>wrappedValue<\/Name><Direction isExplicit=\"0\">in<\/Direction><Discussion><Para>Default value.<\/Para><\/Discussion><\/Parameter><Parameter><Name>key<\/Name><Direction isExplicit=\"0\">in<\/Direction><Discussion><Para><codeVoice>StoreKey<\/codeVoice> to store the value.<\/Para><\/Discussion><\/Parameter><\/Parameters><\/CommentParts><\/Function>",
+            "key.doc.line" : 80,
+            "key.doc.name" : "init(wrappedValue:_:)",
+            "key.doc.parameters" : [
+              {
+                "discussion" : [
+                  {
+                    "Para" : "Default value."
+                  }
+                ],
+                "name" : "wrappedValue"
+              },
+              {
+                "discussion" : [
+                  {
+                    "Para" : "`StoreKey` to store the value."
+                  }
+                ],
+                "name" : "key"
+              }
+            ],
+            "key.doc.type" : "Function",
+            "key.doclength" : 162,
+            "key.docoffset" : 2081,
+            "key.filepath" : "\/Users\/vagrant\/git\/Sources\/Singleton\/Singleton.swift",
+            "key.fully_annotated_decl" : "<decl.function.constructor><syntaxtype.attribute.builtin><syntaxtype.attribute.name>@<ref.class usr=\"s:7Storage0A5ActorC\">StorageActor<\/ref.class><\/syntaxtype.attribute.name><\/syntaxtype.attribute.builtin> <syntaxtype.keyword>public<\/syntaxtype.keyword> <syntaxtype.keyword>convenience<\/syntaxtype.keyword> <syntaxtype.keyword>init<\/syntaxtype.keyword>(<decl.var.parameter><decl.var.parameter.argument_label>wrappedValue<\/decl.var.parameter.argument_label>: <decl.var.parameter.type><ref.generic_type_param usr=\"s:9Singleton07CodableA0C5Valuexmfp\">Value<\/ref.generic_type_param>?<\/decl.var.parameter.type><\/decl.var.parameter>, <decl.var.parameter><decl.var.parameter.argument_label>_<\/decl.var.parameter.argument_label> <decl.var.parameter.name>key<\/decl.var.parameter.name>: <decl.var.parameter.type><ref.typealias usr=\"s:7Storage8StoreKeya\">StoreKey<\/ref.typealias><\/decl.var.parameter.type><\/decl.var.parameter>)<\/decl.function.constructor>",
+            "key.is_dynamic" : true,
+            "key.kind" : "source.lang.swift.decl.function.method.instance",
+            "key.length" : 115,
+            "key.line" : 80,
+            "key.modulename" : "Singleton",
+            "key.name" : "init(wrappedValue:_:)",
+            "key.namelength" : 43,
+            "key.nameoffset" : 2267,
+            "key.offset" : 2267,
+            "key.parsed_declaration" : "public convenience init(wrappedValue: Value?, _ key: StoreKey)",
+            "key.parsed_scope.end" : 83,
+            "key.parsed_scope.start" : 80,
+            "key.receivers" : [
+              {
+                "key.usr" : "s:9Singleton07CodableA0C"
+              }
+            ],
+            "key.related_decls" : [
+              {
+                "key.annotated_decl" : "<RelatedName usr=\"s:9Singleton07CodableA0CyACyxGSScfc\">init(_:)<\/RelatedName>"
+              },
+              {
+                "key.annotated_decl" : "<RelatedName usr=\"s:9Singleton07CodableA0CyACyxGAA0A7StorageC_SStcfc\">init(_:_:)<\/RelatedName>"
+              }
+            ],
+            "key.reusingastcontext" : false,
+            "key.substructure" : [
+
+            ],
+            "key.typename" : "<Value where Value : Decodable, Value : Encodable> (CodableSingleton<Value>.Type) -> (Value?, String) -> CodableSingleton<Value>",
+            "key.typeusr" : "$s12wrappedValue_9Singleton07CodableC0CyxGxSg_SStcD",
+            "key.usr" : "s:9Singleton07CodableA0C12wrappedValue_ACyxGxSg_SStcfc"
+          },
+          {
+            "key.accessibility" : "source.lang.swift.accessibility.open",
+            "key.annotated_decl" : "<Declaration>@<Type usr=\"s:7Storage0A5ActorC\">StorageActor<\/Type> open var wrappedValue: <Type usr=\"s:9Singleton07CodableA0C5Valuexmfp\">Value<\/Type>? { get set }<\/Declaration>",
+            "key.attributes" : [
+              {
+                "key.attribute" : "source.decl.attribute.open",
+                "key.length" : 4,
+                "key.offset" : 2427
+              }
+            ],
+            "key.bodylength" : 114,
+            "key.bodyoffset" : 2458,
+            "key.column" : 14,
+            "key.decl_lang" : "source.lang.swift",
+            "key.doc_comment" : "Property wrapper stored value.",
+            "key.doc.column" : 14,
+            "key.doc.comment" : "Property wrapper stored value.",
+            "key.doc.declaration" : "@Storage.StorageActor open var wrappedValue: Value? { get set }",
+            "key.doc.file" : "\/Users\/vagrant\/git\/Sources\/Singleton\/Singleton.swift",
+            "key.doc.full_as_xml" : "<Other file=\"\/Users\/vagrant\/git\/Sources\/Singleton\/Singleton.swift\" line=\"86\" column=\"14\"><Name>wrappedValue<\/Name><USR>s:9Singleton07CodableA0C12wrappedValuexSgvp<\/USR><Declaration>@Storage.StorageActor open var wrappedValue: Value? { get set }<\/Declaration><CommentParts><Abstract><Para>Property wrapper stored value.<\/Para><\/Abstract><\/CommentParts><\/Other>",
+            "key.doc.line" : 86,
+            "key.doc.name" : "wrappedValue",
+            "key.doc.type" : "Other",
+            "key.doclength" : 35,
+            "key.docoffset" : 2388,
+            "key.filepath" : "\/Users\/vagrant\/git\/Sources\/Singleton\/Singleton.swift",
+            "key.fully_annotated_decl" : "<decl.var.instance><syntaxtype.attribute.builtin><syntaxtype.attribute.name>@<ref.class usr=\"s:7Storage0A5ActorC\">StorageActor<\/ref.class><\/syntaxtype.attribute.name><\/syntaxtype.attribute.builtin> <syntaxtype.keyword>open<\/syntaxtype.keyword> <syntaxtype.keyword>var<\/syntaxtype.keyword> <decl.name>wrappedValue<\/decl.name>: <decl.var.type><ref.generic_type_param usr=\"s:9Singleton07CodableA0C5Valuexmfp\">Value<\/ref.generic_type_param>?<\/decl.var.type> { <syntaxtype.keyword>get<\/syntaxtype.keyword> <syntaxtype.keyword>set<\/syntaxtype.keyword> }<\/decl.var.instance>",
+            "key.is_dynamic" : true,
+            "key.kind" : "source.lang.swift.decl.var.instance",
+            "key.length" : 141,
+            "key.line" : 86,
+            "key.modulename" : "Singleton",
+            "key.name" : "wrappedValue",
+            "key.namelength" : 12,
+            "key.nameoffset" : 2436,
+            "key.offset" : 2432,
+            "key.parsed_declaration" : "open var wrappedValue: Value?",
+            "key.parsed_scope.end" : 89,
+            "key.parsed_scope.start" : 86,
+            "key.receivers" : [
+              {
+                "key.usr" : "s:9Singleton07CodableA0C"
+              }
+            ],
+            "key.reusingastcontext" : false,
+            "key.setter_accessibility" : "source.lang.swift.accessibility.open",
+            "key.typename" : "Value?",
+            "key.typeusr" : "$sxSgD",
+            "key.usr" : "s:9Singleton07CodableA0C12wrappedValuexSgvp"
+          }
+        ],
+        "key.typename" : "CodableSingleton<Value>.Type",
+        "key.typeusr" : "$s9Singleton07CodableA0CyxGmD",
+        "key.usr" : "s:9Singleton07CodableA0C"
+      },
+      {
+        "key.accessibility" : "source.lang.swift.accessibility.open",
+        "key.annotated_decl" : "<Declaration>@propertyWrapper @<Type usr=\"s:7Storage0A5ActorC\">StorageActor<\/Type> open class UnwrappedCodableSingleton&lt;Value&gt; : <Type usr=\"s:7Storage28StorePropertyWrapperProtocolP\">StorePropertyWrapperProtocol<\/Type> where <Type usr=\"s:9Singleton016UnwrappedCodableA0C5Valuexmfp\">Value<\/Type> : <Type usr=\"s:Se\">Decodable<\/Type>, <Type usr=\"s:9Singleton016UnwrappedCodableA0C5Valuexmfp\">Value<\/Type> : <Type usr=\"s:SE\">Encodable<\/Type><\/Declaration>",
+        "key.attributes" : [
+          {
+            "key.attribute" : "source.decl.attribute.open",
+            "key.length" : 4,
+            "key.offset" : 2645
+          },
+          {
+            "key.attribute" : "source.decl.attribute.propertyWrapper",
+            "key.length" : 16,
+            "key.offset" : 2628
+          }
+        ],
+        "key.bodylength" : 763,
+        "key.bodyoffset" : 2729,
+        "key.column" : 12,
+        "key.decl_lang" : "source.lang.swift",
+        "key.doc_comment" : "`@UnwrappedCodableSingleton` property wrapper.",
+        "key.doc.column" : 12,
+        "key.doc.comment" : "`@UnwrappedCodableSingleton` property wrapper.",
+        "key.doc.declaration" : "@propertyWrapper @Storage.StorageActor open class UnwrappedCodableSingleton<Value> : StorePropertyWrapperProtocol where Value : Decodable, Value : Encodable",
+        "key.doc.file" : "\/Users\/vagrant\/git\/Sources\/Singleton\/Singleton.swift",
+        "key.doc.full_as_xml" : "<Class file=\"\/Users\/vagrant\/git\/Sources\/Singleton\/Singleton.swift\" line=\"94\" column=\"12\"><Name>UnwrappedCodableSingleton<\/Name><USR>s:9Singleton016UnwrappedCodableA0C<\/USR><Declaration>@propertyWrapper @Storage.StorageActor open class UnwrappedCodableSingleton&lt;Value&gt; : StorePropertyWrapperProtocol where Value : Decodable, Value : Encodable<\/Declaration><CommentParts><Abstract><Para><codeVoice>@UnwrappedCodableSingleton<\/codeVoice> property wrapper.<\/Para><\/Abstract><\/CommentParts><\/Class>",
+        "key.doc.line" : 94,
+        "key.doc.name" : "UnwrappedCodableSingleton",
+        "key.doc.type" : "Class",
+        "key.doclength" : 51,
+        "key.docoffset" : 2577,
+        "key.elements" : [
+          {
+            "key.kind" : "source.lang.swift.structure.elem.typeref",
+            "key.length" : 28,
+            "key.offset" : 2699
+          }
+        ],
+        "key.filepath" : "\/Users\/vagrant\/git\/Sources\/Singleton\/Singleton.swift",
+        "key.fully_annotated_decl" : "<decl.class><syntaxtype.attribute.builtin><syntaxtype.attribute.name>@propertyWrapper<\/syntaxtype.attribute.name><\/syntaxtype.attribute.builtin> <syntaxtype.attribute.builtin><syntaxtype.attribute.name>@<ref.class usr=\"s:7Storage0A5ActorC\">StorageActor<\/ref.class><\/syntaxtype.attribute.name><\/syntaxtype.attribute.builtin> <syntaxtype.keyword>open<\/syntaxtype.keyword> <syntaxtype.keyword>class<\/syntaxtype.keyword> <decl.name>UnwrappedCodableSingleton<\/decl.name>&lt;<decl.generic_type_param usr=\"s:9Singleton016UnwrappedCodableA0C5Valuexmfp\"><decl.generic_type_param.name>Value<\/decl.generic_type_param.name><\/decl.generic_type_param>&gt; : <ref.protocol usr=\"s:7Storage28StorePropertyWrapperProtocolP\">StorePropertyWrapperProtocol<\/ref.protocol> <syntaxtype.keyword>where<\/syntaxtype.keyword> <decl.generic_type_requirement><ref.generic_type_param usr=\"s:9Singleton016UnwrappedCodableA0C5Valuexmfp\">Value<\/ref.generic_type_param> : <ref.protocol usr=\"s:Se\">Decodable<\/ref.protocol><\/decl.generic_type_requirement>, <decl.generic_type_requirement><ref.generic_type_param usr=\"s:9Singleton016UnwrappedCodableA0C5Valuexmfp\">Value<\/ref.generic_type_param> : <ref.protocol usr=\"s:SE\">Encodable<\/ref.protocol><\/decl.generic_type_requirement><\/decl.class>",
+        "key.inheritedtypes" : [
+          {
+            "key.name" : "StorePropertyWrapperProtocol"
+          }
+        ],
+        "key.kind" : "source.lang.swift.decl.class",
+        "key.length" : 843,
+        "key.line" : 94,
+        "key.modulename" : "Singleton",
+        "key.name" : "UnwrappedCodableSingleton",
+        "key.namelength" : 25,
+        "key.nameoffset" : 2656,
+        "key.offset" : 2650,
+        "key.parsed_declaration" : "open class UnwrappedCodableSingleton<Value: Codable>: StorePropertyWrapperProtocol",
+        "key.parsed_scope.end" : 119,
+        "key.parsed_scope.start" : 94,
+        "key.reusingastcontext" : false,
+        "key.substructure" : [
+          {
+            "key.annotated_decl" : "<Declaration>Value : <Type usr=\"s:s7Codablea\">Codable<\/Type><\/Declaration>",
+            "key.column" : 38,
+            "key.decl_lang" : "source.lang.swift",
+            "key.elements" : [
+              {
+                "key.kind" : "source.lang.swift.structure.elem.typeref",
+                "key.length" : 7,
+                "key.offset" : 2689
+              }
+            ],
+            "key.filepath" : "\/Users\/vagrant\/git\/Sources\/Singleton\/Singleton.swift",
+            "key.fully_annotated_decl" : "<decl.generic_type_param><decl.generic_type_param.name>Value<\/decl.generic_type_param.name> : <decl.generic_type_param.constraint><ref.typealias usr=\"s:s7Codablea\">Codable<\/ref.typealias><\/decl.generic_type_param.constraint><\/decl.generic_type_param>",
+            "key.inheritedtypes" : [
+              {
+                "key.name" : "Codable"
+              }
+            ],
+            "key.is_dynamic" : true,
+            "key.kind" : "source.lang.swift.decl.generic_type_param",
+            "key.length" : 14,
+            "key.line" : 94,
+            "key.modulename" : "Singleton",
+            "key.name" : "Value",
+            "key.namelength" : 5,
+            "key.nameoffset" : 2682,
+            "key.offset" : 2682,
+            "key.parsed_declaration" : "open class UnwrappedCodableSingleton<Value: Codable",
+            "key.parsed_scope.end" : 94,
+            "key.parsed_scope.start" : 94,
+            "key.receivers" : [
+              {
+                "key.usr" : "s:9Singleton016UnwrappedCodableA0C"
+              }
+            ],
+            "key.reusingastcontext" : false,
+            "key.typename" : "Value.Type",
+            "key.typeusr" : "$sxmD",
+            "key.usr" : "s:9Singleton016UnwrappedCodableA0C5Valuexmfp"
+          },
+          {
+            "key.accessibility" : "source.lang.swift.accessibility.open",
+            "key.annotated_decl" : "<Declaration>@<Type usr=\"s:7Storage0A5ActorC\">StorageActor<\/Type> open var storage: <Type usr=\"s:9Singleton0A7StorageC\">SingletonStorage<\/Type><\/Declaration>",
+            "key.attributes" : [
+              {
+                "key.attribute" : "source.decl.attribute.open",
+                "key.length" : 4,
+                "key.offset" : 2778
+              }
+            ],
+            "key.column" : 14,
+            "key.decl_lang" : "source.lang.swift",
+            "key.doc_comment" : "`Storage` used by property wrapper.",
+            "key.doc.column" : 14,
+            "key.doc.comment" : "`Storage` used by property wrapper.",
+            "key.doc.declaration" : "@Storage.StorageActor open var storage: SingletonStorage",
+            "key.doc.file" : "\/Users\/vagrant\/git\/Sources\/Singleton\/Singleton.swift",
+            "key.doc.full_as_xml" : "<Other file=\"\/Users\/vagrant\/git\/Sources\/Singleton\/Singleton.swift\" line=\"96\" column=\"14\"><Name>storage<\/Name><USR>s:9Singleton016UnwrappedCodableA0C7storageAA0A7StorageCvp<\/USR><Declaration>@Storage.StorageActor open var storage: SingletonStorage<\/Declaration><CommentParts><Abstract><Para><codeVoice>Storage<\/codeVoice> used by property wrapper.<\/Para><\/Abstract><\/CommentParts><\/Other>",
+            "key.doc.line" : 96,
+            "key.doc.name" : "storage",
+            "key.doc.type" : "Other",
+            "key.doclength" : 40,
+            "key.docoffset" : 2734,
+            "key.filepath" : "\/Users\/vagrant\/git\/Sources\/Singleton\/Singleton.swift",
+            "key.fully_annotated_decl" : "<decl.var.instance><syntaxtype.attribute.builtin><syntaxtype.attribute.name>@<ref.class usr=\"s:7Storage0A5ActorC\">StorageActor<\/ref.class><\/syntaxtype.attribute.name><\/syntaxtype.attribute.builtin> <syntaxtype.keyword>open<\/syntaxtype.keyword> <syntaxtype.keyword>var<\/syntaxtype.keyword> <decl.name>storage<\/decl.name>: <decl.var.type><ref.class usr=\"s:9Singleton0A7StorageC\">SingletonStorage<\/ref.class><\/decl.var.type><\/decl.var.instance>",
+            "key.is_dynamic" : true,
+            "key.kind" : "source.lang.swift.decl.var.instance",
+            "key.length" : 29,
+            "key.line" : 96,
+            "key.modulename" : "Singleton",
+            "key.name" : "storage",
+            "key.namelength" : 7,
+            "key.nameoffset" : 2787,
+            "key.offset" : 2783,
+            "key.overrides" : [
+              {
+                "key.usr" : "s:7Storage28StorePropertyWrapperProtocolP7storage0A4TypeQzvp"
+              }
+            ],
+            "key.parsed_declaration" : "open var storage: SingletonStorage",
+            "key.parsed_scope.end" : 96,
+            "key.parsed_scope.start" : 96,
+            "key.receivers" : [
+              {
+                "key.usr" : "s:9Singleton016UnwrappedCodableA0C"
+              }
+            ],
+            "key.reusingastcontext" : false,
+            "key.setter_accessibility" : "source.lang.swift.accessibility.open",
+            "key.typename" : "SingletonStorage",
+            "key.typeusr" : "$s9Singleton0A7StorageCD",
+            "key.usr" : "s:9Singleton016UnwrappedCodableA0C7storageAA0A7StorageCvp"
+          },
+          {
+            "key.accessibility" : "source.lang.swift.accessibility.open",
+            "key.annotated_decl" : "<Declaration>@<Type usr=\"s:7Storage0A5ActorC\">StorageActor<\/Type> open var key: <Type usr=\"s:7Storage8StoreKeya\">StoreKey<\/Type><\/Declaration>",
+            "key.attributes" : [
+              {
+                "key.attribute" : "source.decl.attribute.open",
+                "key.length" : 4,
+                "key.offset" : 2856
+              }
+            ],
+            "key.column" : 14,
+            "key.decl_lang" : "source.lang.swift",
+            "key.doc_comment" : "`StoreKey` to store the value.",
+            "key.doc.column" : 14,
+            "key.doc.comment" : "`StoreKey` to store the value.",
+            "key.doc.declaration" : "@Storage.StorageActor open var key: StoreKey",
+            "key.doc.file" : "\/Users\/vagrant\/git\/Sources\/Singleton\/Singleton.swift",
+            "key.doc.full_as_xml" : "<Other file=\"\/Users\/vagrant\/git\/Sources\/Singleton\/Singleton.swift\" line=\"98\" column=\"14\"><Name>key<\/Name><USR>s:9Singleton016UnwrappedCodableA0C3keySSvp<\/USR><Declaration>@Storage.StorageActor open var key: StoreKey<\/Declaration><CommentParts><Abstract><Para><codeVoice>StoreKey<\/codeVoice> to store the value.<\/Para><\/Abstract><\/CommentParts><\/Other>",
+            "key.doc.line" : 98,
+            "key.doc.name" : "key",
+            "key.doc.type" : "Other",
+            "key.doclength" : 35,
+            "key.docoffset" : 2817,
+            "key.filepath" : "\/Users\/vagrant\/git\/Sources\/Singleton\/Singleton.swift",
+            "key.fully_annotated_decl" : "<decl.var.instance><syntaxtype.attribute.builtin><syntaxtype.attribute.name>@<ref.class usr=\"s:7Storage0A5ActorC\">StorageActor<\/ref.class><\/syntaxtype.attribute.name><\/syntaxtype.attribute.builtin> <syntaxtype.keyword>open<\/syntaxtype.keyword> <syntaxtype.keyword>var<\/syntaxtype.keyword> <decl.name>key<\/decl.name>: <decl.var.type><ref.typealias usr=\"s:7Storage8StoreKeya\">StoreKey<\/ref.typealias><\/decl.var.type><\/decl.var.instance>",
+            "key.is_dynamic" : true,
+            "key.kind" : "source.lang.swift.decl.var.instance",
+            "key.length" : 17,
+            "key.line" : 98,
+            "key.modulename" : "Singleton",
+            "key.name" : "key",
+            "key.namelength" : 3,
+            "key.nameoffset" : 2865,
+            "key.offset" : 2861,
+            "key.overrides" : [
+              {
+                "key.usr" : "s:7Storage28StorePropertyWrapperProtocolP3keySSvp"
+              }
+            ],
+            "key.parsed_declaration" : "open var key: StoreKey",
+            "key.parsed_scope.end" : 98,
+            "key.parsed_scope.start" : 98,
+            "key.receivers" : [
+              {
+                "key.usr" : "s:9Singleton016UnwrappedCodableA0C"
+              }
+            ],
+            "key.reusingastcontext" : false,
+            "key.setter_accessibility" : "source.lang.swift.accessibility.open",
+            "key.typename" : "String",
+            "key.typeusr" : "$sSSD",
+            "key.usr" : "s:9Singleton016UnwrappedCodableA0C3keySSvp"
+          },
+          {
+            "key.accessibility" : "source.lang.swift.accessibility.open",
+            "key.annotated_decl" : "<Declaration>@<Type usr=\"s:7Storage0A5ActorC\">StorageActor<\/Type> open var defaultValue: <Type usr=\"s:9Singleton016UnwrappedCodableA0C5Valuexmfp\">Value<\/Type><\/Declaration>",
+            "key.attributes" : [
+              {
+                "key.attribute" : "source.decl.attribute.open",
+                "key.length" : 4,
+                "key.offset" : 2906
+              }
+            ],
+            "key.column" : 14,
+            "key.decl_lang" : "source.lang.swift",
+            "key.doc_comment" : "Default value.",
+            "key.doc.column" : 14,
+            "key.doc.comment" : "Default value.",
+            "key.doc.declaration" : "@Storage.StorageActor open var defaultValue: Value",
+            "key.doc.file" : "\/Users\/vagrant\/git\/Sources\/Singleton\/Singleton.swift",
+            "key.doc.full_as_xml" : "<Other file=\"\/Users\/vagrant\/git\/Sources\/Singleton\/Singleton.swift\" line=\"100\" column=\"14\"><Name>defaultValue<\/Name><USR>s:9Singleton016UnwrappedCodableA0C12defaultValuexvp<\/USR><Declaration>@Storage.StorageActor open var defaultValue: Value<\/Declaration><CommentParts><Abstract><Para>Default value.<\/Para><\/Abstract><\/CommentParts><\/Other>",
+            "key.doc.line" : 100,
+            "key.doc.name" : "defaultValue",
+            "key.doc.type" : "Other",
+            "key.doclength" : 19,
+            "key.docoffset" : 2883,
+            "key.filepath" : "\/Users\/vagrant\/git\/Sources\/Singleton\/Singleton.swift",
+            "key.fully_annotated_decl" : "<decl.var.instance><syntaxtype.attribute.builtin><syntaxtype.attribute.name>@<ref.class usr=\"s:7Storage0A5ActorC\">StorageActor<\/ref.class><\/syntaxtype.attribute.name><\/syntaxtype.attribute.builtin> <syntaxtype.keyword>open<\/syntaxtype.keyword> <syntaxtype.keyword>var<\/syntaxtype.keyword> <decl.name>defaultValue<\/decl.name>: <decl.var.type><ref.generic_type_param usr=\"s:9Singleton016UnwrappedCodableA0C5Valuexmfp\">Value<\/ref.generic_type_param><\/decl.var.type><\/decl.var.instance>",
+            "key.is_dynamic" : true,
+            "key.kind" : "source.lang.swift.decl.var.instance",
+            "key.length" : 23,
+            "key.line" : 100,
+            "key.modulename" : "Singleton",
+            "key.name" : "defaultValue",
+            "key.namelength" : 12,
+            "key.nameoffset" : 2915,
+            "key.offset" : 2911,
+            "key.parsed_declaration" : "open var defaultValue: Value",
+            "key.parsed_scope.end" : 100,
+            "key.parsed_scope.start" : 100,
+            "key.receivers" : [
+              {
+                "key.usr" : "s:9Singleton016UnwrappedCodableA0C"
+              }
+            ],
+            "key.reusingastcontext" : false,
+            "key.setter_accessibility" : "source.lang.swift.accessibility.open",
+            "key.typename" : "Value",
+            "key.typeusr" : "$sxD",
+            "key.usr" : "s:9Singleton016UnwrappedCodableA0C12defaultValuexvp"
+          },
+          {
+            "key.accessibility" : "source.lang.swift.accessibility.public",
+            "key.annotated_decl" : "<Declaration>@<Type usr=\"s:7Storage0A5ActorC\">StorageActor<\/Type> public required init(wrappedValue: <Type usr=\"s:9Singleton016UnwrappedCodableA0C5Valuexmfp\">Value<\/Type>, _ key: <Type usr=\"s:7Storage8StoreKeya\">StoreKey<\/Type>)<\/Declaration>",
+            "key.attributes" : [
+              {
+                "key.attribute" : "source.decl.attribute.required",
+                "key.length" : 8,
+                "key.offset" : 3123
+              },
+              {
+                "key.attribute" : "source.decl.attribute.public",
+                "key.length" : 6,
+                "key.offset" : 3116
+              }
+            ],
+            "key.bodylength" : 108,
+            "key.bodyoffset" : 3176,
+            "key.column" : 21,
+            "key.decl_lang" : "source.lang.swift",
+            "key.doc_comment" : "Create a `UnwrappedCodableSingleton` property wrapper.\n\n- Parameter wrappedValue: Default value.\n- Parameter key: `StoreKey` to store the value.\n",
+            "key.doc.column" : 21,
+            "key.doc.comment" : "Create a `UnwrappedCodableSingleton` property wrapper.\n\n- Parameter wrappedValue: Default value.\n- Parameter key: `StoreKey` to store the value.",
+            "key.doc.declaration" : "@Storage.StorageActor public required init(wrappedValue: Value, _ key: StoreKey)",
+            "key.doc.file" : "\/Users\/vagrant\/git\/Sources\/Singleton\/Singleton.swift",
+            "key.doc.full_as_xml" : "<Function file=\"\/Users\/vagrant\/git\/Sources\/Singleton\/Singleton.swift\" line=\"108\" column=\"21\"><Name>init(wrappedValue:_:)<\/Name><USR>s:9Singleton016UnwrappedCodableA0C12wrappedValue_ACyxGx_SStcfc<\/USR><Declaration>@Storage.StorageActor public required init(wrappedValue: Value, _ key: StoreKey)<\/Declaration><CommentParts><Abstract><Para>Create a <codeVoice>UnwrappedCodableSingleton<\/codeVoice> property wrapper.<\/Para><\/Abstract><Parameters><Parameter><Name>wrappedValue<\/Name><Direction isExplicit=\"0\">in<\/Direction><Discussion><Para>Default value.<\/Para><\/Discussion><\/Parameter><Parameter><Name>key<\/Name><Direction isExplicit=\"0\">in<\/Direction><Discussion><Para><codeVoice>StoreKey<\/codeVoice> to store the value.<\/Para><\/Discussion><\/Parameter><\/Parameters><\/CommentParts><\/Function>",
+            "key.doc.line" : 108,
+            "key.doc.name" : "init(wrappedValue:_:)",
+            "key.doc.parameters" : [
+              {
+                "discussion" : [
+                  {
+                    "Para" : "Default value."
+                  }
+                ],
+                "name" : "wrappedValue"
+              },
+              {
+                "discussion" : [
+                  {
+                    "Para" : "`StoreKey` to store the value."
+                  }
+                ],
+                "name" : "key"
+              }
+            ],
+            "key.doc.type" : "Function",
+            "key.doclength" : 171,
+            "key.docoffset" : 2940,
+            "key.filepath" : "\/Users\/vagrant\/git\/Sources\/Singleton\/Singleton.swift",
+            "key.fully_annotated_decl" : "<decl.function.constructor><syntaxtype.attribute.builtin><syntaxtype.attribute.name>@<ref.class usr=\"s:7Storage0A5ActorC\">StorageActor<\/ref.class><\/syntaxtype.attribute.name><\/syntaxtype.attribute.builtin> <syntaxtype.keyword>public<\/syntaxtype.keyword> <syntaxtype.keyword>required<\/syntaxtype.keyword> <syntaxtype.keyword>init<\/syntaxtype.keyword>(<decl.var.parameter><decl.var.parameter.argument_label>wrappedValue<\/decl.var.parameter.argument_label>: <decl.var.parameter.type><ref.generic_type_param usr=\"s:9Singleton016UnwrappedCodableA0C5Valuexmfp\">Value<\/ref.generic_type_param><\/decl.var.parameter.type><\/decl.var.parameter>, <decl.var.parameter><decl.var.parameter.argument_label>_<\/decl.var.parameter.argument_label> <decl.var.parameter.name>key<\/decl.var.parameter.name>: <decl.var.parameter.type><ref.typealias usr=\"s:7Storage8StoreKeya\">StoreKey<\/ref.typealias><\/decl.var.parameter.type><\/decl.var.parameter>)<\/decl.function.constructor>",
+            "key.is_dynamic" : true,
+            "key.kind" : "source.lang.swift.decl.function.method.instance",
+            "key.length" : 153,
+            "key.line" : 108,
+            "key.modulename" : "Singleton",
+            "key.name" : "init(wrappedValue:_:)",
+            "key.namelength" : 42,
+            "key.nameoffset" : 3132,
+            "key.offset" : 3132,
+            "key.parsed_declaration" : "public required init(wrappedValue: Value, _ key: StoreKey)",
+            "key.parsed_scope.end" : 112,
+            "key.parsed_scope.start" : 108,
+            "key.receivers" : [
+              {
+                "key.usr" : "s:9Singleton016UnwrappedCodableA0C"
+              }
+            ],
+            "key.reusingastcontext" : false,
+            "key.substructure" : [
+
+            ],
+            "key.typename" : "<Value where Value : Decodable, Value : Encodable> (UnwrappedCodableSingleton<Value>.Type) -> (Value, String) -> UnwrappedCodableSingleton<Value>",
+            "key.typeusr" : "$s12wrappedValue_9Singleton016UnwrappedCodableC0CyxGx_SStcD",
+            "key.usr" : "s:9Singleton016UnwrappedCodableA0C12wrappedValue_ACyxGx_SStcfc"
+          },
+          {
+            "key.accessibility" : "source.lang.swift.accessibility.open",
+            "key.annotated_decl" : "<Declaration>@<Type usr=\"s:7Storage0A5ActorC\">StorageActor<\/Type> open var wrappedValue: <Type usr=\"s:9Singleton016UnwrappedCodableA0C5Valuexmfp\">Value<\/Type> { get set }<\/Declaration>",
+            "key.attributes" : [
+              {
+                "key.attribute" : "source.decl.attribute.open",
+                "key.length" : 4,
+                "key.offset" : 3330
+              }
+            ],
+            "key.bodylength" : 130,
+            "key.bodyoffset" : 3360,
+            "key.column" : 14,
+            "key.decl_lang" : "source.lang.swift",
+            "key.doc_comment" : "Property wrapper stored value.",
+            "key.doc.column" : 14,
+            "key.doc.comment" : "Property wrapper stored value.",
+            "key.doc.declaration" : "@Storage.StorageActor open var wrappedValue: Value { get set }",
+            "key.doc.file" : "\/Users\/vagrant\/git\/Sources\/Singleton\/Singleton.swift",
+            "key.doc.full_as_xml" : "<Other file=\"\/Users\/vagrant\/git\/Sources\/Singleton\/Singleton.swift\" line=\"115\" column=\"14\"><Name>wrappedValue<\/Name><USR>s:9Singleton016UnwrappedCodableA0C12wrappedValuexvp<\/USR><Declaration>@Storage.StorageActor open var wrappedValue: Value { get set }<\/Declaration><CommentParts><Abstract><Para>Property wrapper stored value.<\/Para><\/Abstract><\/CommentParts><\/Other>",
+            "key.doc.line" : 115,
+            "key.doc.name" : "wrappedValue",
+            "key.doc.type" : "Other",
+            "key.doclength" : 35,
+            "key.docoffset" : 3291,
+            "key.filepath" : "\/Users\/vagrant\/git\/Sources\/Singleton\/Singleton.swift",
+            "key.fully_annotated_decl" : "<decl.var.instance><syntaxtype.attribute.builtin><syntaxtype.attribute.name>@<ref.class usr=\"s:7Storage0A5ActorC\">StorageActor<\/ref.class><\/syntaxtype.attribute.name><\/syntaxtype.attribute.builtin> <syntaxtype.keyword>open<\/syntaxtype.keyword> <syntaxtype.keyword>var<\/syntaxtype.keyword> <decl.name>wrappedValue<\/decl.name>: <decl.var.type><ref.generic_type_param usr=\"s:9Singleton016UnwrappedCodableA0C5Valuexmfp\">Value<\/ref.generic_type_param><\/decl.var.type> { <syntaxtype.keyword>get<\/syntaxtype.keyword> <syntaxtype.keyword>set<\/syntaxtype.keyword> }<\/decl.var.instance>",
+            "key.is_dynamic" : true,
+            "key.kind" : "source.lang.swift.decl.var.instance",
+            "key.length" : 156,
+            "key.line" : 115,
+            "key.modulename" : "Singleton",
+            "key.name" : "wrappedValue",
+            "key.namelength" : 12,
+            "key.nameoffset" : 3339,
+            "key.offset" : 3335,
+            "key.parsed_declaration" : "open var wrappedValue: Value",
+            "key.parsed_scope.end" : 118,
+            "key.parsed_scope.start" : 115,
+            "key.receivers" : [
+              {
+                "key.usr" : "s:9Singleton016UnwrappedCodableA0C"
+              }
+            ],
+            "key.reusingastcontext" : false,
+            "key.setter_accessibility" : "source.lang.swift.accessibility.open",
+            "key.typename" : "Value",
+            "key.typeusr" : "$sxD",
+            "key.usr" : "s:9Singleton016UnwrappedCodableA0C12wrappedValuexvp"
+          }
+        ],
+        "key.typename" : "UnwrappedCodableSingleton<Value>.Type",
+        "key.typeusr" : "$s9Singleton016UnwrappedCodableA0CyxGmD",
+        "key.usr" : "s:9Singleton016UnwrappedCodableA0C"
+      }
+    ]
+  }
+}, {
+  "\/Users\/vagrant\/git\/Sources\/Singleton\/SingletonStorage.swift" : {
+    "key.diagnostic_stage" : "source.diagnostic.stage.swift.parse",
+    "key.length" : 1862,
+    "key.offset" : 0,
+    "key.substructure" : [
+      {
+        "key.accessibility" : "source.lang.swift.accessibility.open",
+        "key.annotated_decl" : "<Declaration>@<Type usr=\"s:7Storage0A5ActorC\">StorageActor<\/Type> open class SingletonStorage : <Type usr=\"s:7Storage09DelegatedA0C\">DelegatedStorage<\/Type><\/Declaration>",
+        "key.attributes" : [
+          {
+            "key.attribute" : "source.decl.attribute.open",
+            "key.length" : 4,
+            "key.offset" : 161
+          }
+        ],
+        "key.bodylength" : 665,
+        "key.bodyoffset" : 208,
+        "key.column" : 12,
+        "key.decl_lang" : "source.lang.swift",
+        "key.doc_comment" : "`SingletonStorage` subclass of `DelegatedStorage` that uses a `SingletonStorageDelegate`.",
+        "key.doc.column" : 12,
+        "key.doc.comment" : "`SingletonStorage` subclass of `DelegatedStorage` that uses a `SingletonStorageDelegate`.",
+        "key.doc.declaration" : "@Storage.StorageActor open class SingletonStorage : DelegatedStorage",
+        "key.doc.file" : "\/Users\/vagrant\/git\/Sources\/Singleton\/SingletonStorage.swift",
+        "key.doc.full_as_xml" : "<Class file=\"\/Users\/vagrant\/git\/Sources\/Singleton\/SingletonStorage.swift\" line=\"7\" column=\"12\"><Name>SingletonStorage<\/Name><USR>s:9Singleton0A7StorageC<\/USR><Declaration>@Storage.StorageActor open class SingletonStorage : DelegatedStorage<\/Declaration><CommentParts><Abstract><Para><codeVoice>SingletonStorage<\/codeVoice> subclass of <codeVoice>DelegatedStorage<\/codeVoice> that uses a <codeVoice>SingletonStorageDelegate<\/codeVoice>.<\/Para><\/Abstract><\/CommentParts><\/Class>",
+        "key.doc.line" : 7,
+        "key.doc.name" : "SingletonStorage",
+        "key.doc.type" : "Class",
+        "key.doclength" : 94,
+        "key.docoffset" : 67,
+        "key.elements" : [
+          {
+            "key.kind" : "source.lang.swift.structure.elem.typeref",
+            "key.length" : 16,
+            "key.offset" : 190
+          }
+        ],
+        "key.filepath" : "\/Users\/vagrant\/git\/Sources\/Singleton\/SingletonStorage.swift",
+        "key.fully_annotated_decl" : "<decl.class><syntaxtype.attribute.builtin><syntaxtype.attribute.name>@<ref.class usr=\"s:7Storage0A5ActorC\">StorageActor<\/ref.class><\/syntaxtype.attribute.name><\/syntaxtype.attribute.builtin> <syntaxtype.keyword>open<\/syntaxtype.keyword> <syntaxtype.keyword>class<\/syntaxtype.keyword> <decl.name>SingletonStorage<\/decl.name> : <ref.class usr=\"s:7Storage09DelegatedA0C\">DelegatedStorage<\/ref.class><\/decl.class>",
+        "key.inheritedtypes" : [
+          {
+            "key.name" : "DelegatedStorage"
+          }
+        ],
+        "key.kind" : "source.lang.swift.decl.class",
+        "key.length" : 708,
+        "key.line" : 7,
+        "key.modulename" : "Singleton",
+        "key.name" : "SingletonStorage",
+        "key.namelength" : 16,
+        "key.nameoffset" : 172,
+        "key.offset" : 166,
+        "key.parsed_declaration" : "open class SingletonStorage: DelegatedStorage",
+        "key.parsed_scope.end" : 24,
+        "key.parsed_scope.start" : 7,
+        "key.reusingastcontext" : false,
+        "key.substructure" : [
+          {
+            "key.accessibility" : "source.lang.swift.accessibility.open",
+            "key.annotated_decl" : "<Declaration>@<Type usr=\"s:7Storage0A5ActorC\">StorageActor<\/Type> open class var standard: <Type usr=\"s:9Singleton0A7StorageC\">SingletonStorage<\/Type> { get }<\/Declaration>",
+            "key.attributes" : [
+              {
+                "key.attribute" : "source.decl.attribute.open",
+                "key.length" : 4,
+                "key.offset" : 257
+              }
+            ],
+            "key.bodylength" : 8,
+            "key.bodyoffset" : 300,
+            "key.column" : 20,
+            "key.decl_lang" : "source.lang.swift",
+            "key.doc_comment" : "`SingletonStorage` shared instance.",
+            "key.doc.column" : 20,
+            "key.doc.comment" : "`SingletonStorage` shared instance.",
+            "key.doc.declaration" : "@Storage.StorageActor open class var standard: SingletonStorage { get }",
+            "key.doc.file" : "\/Users\/vagrant\/git\/Sources\/Singleton\/SingletonStorage.swift",
+            "key.doc.full_as_xml" : "<Other file=\"\/Users\/vagrant\/git\/Sources\/Singleton\/SingletonStorage.swift\" line=\"9\" column=\"20\"><Name>standard<\/Name><USR>s:9Singleton0A7StorageC8standardACvpZ<\/USR><Declaration>@Storage.StorageActor open class var standard: SingletonStorage { get }<\/Declaration><CommentParts><Abstract><Para><codeVoice>SingletonStorage<\/codeVoice> shared instance.<\/Para><\/Abstract><\/CommentParts><\/Other>",
+            "key.doc.line" : 9,
+            "key.doc.name" : "standard",
+            "key.doc.type" : "Other",
+            "key.doclength" : 40,
+            "key.docoffset" : 213,
+            "key.filepath" : "\/Users\/vagrant\/git\/Sources\/Singleton\/SingletonStorage.swift",
+            "key.fully_annotated_decl" : "<decl.var.class><syntaxtype.attribute.builtin><syntaxtype.attribute.name>@<ref.class usr=\"s:7Storage0A5ActorC\">StorageActor<\/ref.class><\/syntaxtype.attribute.name><\/syntaxtype.attribute.builtin> <syntaxtype.keyword>open<\/syntaxtype.keyword> <syntaxtype.keyword>class<\/syntaxtype.keyword> <syntaxtype.keyword>var<\/syntaxtype.keyword> <decl.name>standard<\/decl.name>: <decl.var.type><ref.class usr=\"s:9Singleton0A7StorageC\">SingletonStorage<\/ref.class><\/decl.var.type> { <syntaxtype.keyword>get<\/syntaxtype.keyword> }<\/decl.var.class>",
+            "key.is_dynamic" : true,
+            "key.kind" : "source.lang.swift.decl.var.class",
+            "key.length" : 47,
+            "key.line" : 9,
+            "key.modulename" : "Singleton",
+            "key.name" : "standard",
+            "key.namelength" : 8,
+            "key.nameoffset" : 272,
+            "key.offset" : 262,
+            "key.parsed_declaration" : "open class var standard: SingletonStorage",
+            "key.parsed_scope.end" : 9,
+            "key.parsed_scope.start" : 9,
+            "key.receivers" : [
+              {
+                "key.usr" : "s:9Singleton0A7StorageC"
+              }
+            ],
+            "key.reusingastcontext" : false,
+            "key.typename" : "SingletonStorage",
+            "key.typeusr" : "$s9Singleton0A7StorageCD",
+            "key.usr" : "s:9Singleton0A7StorageC8standardACvpZ"
+          },
+          {
+            "key.accessibility" : "source.lang.swift.accessibility.private",
+            "key.annotated_decl" : "<Declaration>@<Type usr=\"s:7Storage0A5ActorC\">StorageActor<\/Type> private static let shared: <Type usr=\"s:9Singleton0A7StorageC\">SingletonStorage<\/Type><\/Declaration>",
+            "key.attributes" : [
+              {
+                "key.attribute" : "source.decl.attribute.private",
+                "key.length" : 7,
+                "key.offset" : 314
+              }
+            ],
+            "key.column" : 24,
+            "key.decl_lang" : "source.lang.swift",
+            "key.filepath" : "\/Users\/vagrant\/git\/Sources\/Singleton\/SingletonStorage.swift",
+            "key.fully_annotated_decl" : "<decl.var.static><syntaxtype.attribute.builtin><syntaxtype.attribute.name>@<ref.class usr=\"s:7Storage0A5ActorC\">StorageActor<\/ref.class><\/syntaxtype.attribute.name><\/syntaxtype.attribute.builtin> <syntaxtype.keyword>private<\/syntaxtype.keyword> <syntaxtype.keyword>static<\/syntaxtype.keyword> <syntaxtype.keyword>let<\/syntaxtype.keyword> <decl.name>shared<\/decl.name>: <decl.var.type><ref.class usr=\"s:9Singleton0A7StorageC\">SingletonStorage<\/ref.class><\/decl.var.type><\/decl.var.static>",
+            "key.kind" : "source.lang.swift.decl.var.static",
+            "key.length" : 38,
+            "key.line" : 10,
+            "key.modulename" : "Singleton",
+            "key.name" : "shared",
+            "key.namelength" : 6,
+            "key.nameoffset" : 333,
+            "key.offset" : 322,
+            "key.parsed_declaration" : "private static let shared = SingletonStorage()",
+            "key.parsed_scope.end" : 10,
+            "key.parsed_scope.start" : 10,
+            "key.reusingastcontext" : false,
+            "key.typename" : "SingletonStorage",
+            "key.typeusr" : "$s9Singleton0A7StorageCD",
+            "key.usr" : "s:9Singleton0A7StorageC6shared33_FED5851B7EBDAF542FAD8B393E6A4D12LLACvpZ"
+          },
+          {
+            "key.accessibility" : "source.lang.swift.accessibility.public",
+            "key.annotated_decl" : "<Declaration>@<Type usr=\"s:7Storage0A5ActorC\">StorageActor<\/Type> public convenience init(_ delegate: <Type usr=\"s:7Storage0A8DelegateP\">StorageDelegate<\/Type> = SingletonStorageDelegate(), authenticationTag: <Type usr=\"s:10Foundation4DataV\">Data<\/Type>? = nil)<\/Declaration>",
+            "key.attributes" : [
+              {
+                "key.attribute" : "source.decl.attribute.convenience",
+                "key.length" : 11,
+                "key.offset" : 589
+              },
+              {
+                "key.attribute" : "source.decl.attribute.public",
+                "key.length" : 6,
+                "key.offset" : 582
+              }
+            ],
+            "key.bodylength" : 146,
+            "key.bodyoffset" : 725,
+            "key.column" : 24,
+            "key.decl_lang" : "source.lang.swift",
+            "key.doc_comment" : "Create a `SingletonStorage`.\n\n- Parameter delegate: `StorageDelegate`, defaults `SingletonStorageDelegate`.\n- Parameter authenticationTag: Custom additional `Data` to be authenticated.\n",
+            "key.doc.column" : 24,
+            "key.doc.comment" : "Create a `SingletonStorage`.\n\n- Parameter delegate: `StorageDelegate`, defaults `SingletonStorageDelegate`.\n- Parameter authenticationTag: Custom additional `Data` to be authenticated.",
+            "key.doc.declaration" : "@Storage.StorageActor public convenience init(_ delegate: StorageDelegate = SingletonStorageDelegate(), authenticationTag: Data? = nil)",
+            "key.doc.file" : "\/Users\/vagrant\/git\/Sources\/Singleton\/SingletonStorage.swift",
+            "key.doc.full_as_xml" : "<Function file=\"\/Users\/vagrant\/git\/Sources\/Singleton\/SingletonStorage.swift\" line=\"18\" column=\"24\"><Name>init(_:authenticationTag:)<\/Name><USR>s:9Singleton0A7StorageC_17authenticationTagAC0B00B8Delegate_p_10Foundation4DataVSgtcfc<\/USR><Declaration>@Storage.StorageActor public convenience init(_ delegate: StorageDelegate = SingletonStorageDelegate(), authenticationTag: Data? = nil)<\/Declaration><CommentParts><Abstract><Para>Create a <codeVoice>SingletonStorage<\/codeVoice>.<\/Para><\/Abstract><Parameters><Parameter><Name>delegate<\/Name><Direction isExplicit=\"0\">in<\/Direction><Discussion><Para><codeVoice>StorageDelegate<\/codeVoice>, defaults <codeVoice>SingletonStorageDelegate<\/codeVoice>.<\/Para><\/Discussion><\/Parameter><Parameter><Name>authenticationTag<\/Name><Direction isExplicit=\"0\">in<\/Direction><Discussion><Para>Custom additional <codeVoice>Data<\/codeVoice> to be authenticated.<\/Para><\/Discussion><\/Parameter><\/Parameters><\/CommentParts><\/Function>",
+            "key.doc.line" : 18,
+            "key.doc.name" : "init(_:authenticationTag:)",
+            "key.doc.parameters" : [
+              {
+                "discussion" : [
+                  {
+                    "Para" : "`StorageDelegate`, defaults `SingletonStorageDelegate`."
+                  }
+                ],
+                "name" : "delegate"
+              },
+              {
+                "discussion" : [
+                  {
+                    "Para" : "Custom additional `Data` to be authenticated."
+                  }
+                ],
+                "name" : "authenticationTag"
+              }
+            ],
+            "key.doc.type" : "Function",
+            "key.doclength" : 211,
+            "key.docoffset" : 366,
+            "key.filepath" : "\/Users\/vagrant\/git\/Sources\/Singleton\/SingletonStorage.swift",
+            "key.fully_annotated_decl" : "<decl.function.constructor><syntaxtype.attribute.builtin><syntaxtype.attribute.name>@<ref.class usr=\"s:7Storage0A5ActorC\">StorageActor<\/ref.class><\/syntaxtype.attribute.name><\/syntaxtype.attribute.builtin> <syntaxtype.keyword>public<\/syntaxtype.keyword> <syntaxtype.keyword>convenience<\/syntaxtype.keyword> <syntaxtype.keyword>init<\/syntaxtype.keyword>(<decl.var.parameter><decl.var.parameter.argument_label>_<\/decl.var.parameter.argument_label> <decl.var.parameter.name>delegate<\/decl.var.parameter.name>: <decl.var.parameter.type><ref.protocol usr=\"s:7Storage0A8DelegateP\">StorageDelegate<\/ref.protocol><\/decl.var.parameter.type> = SingletonStorageDelegate()<\/decl.var.parameter>, <decl.var.parameter><decl.var.parameter.argument_label>authenticationTag<\/decl.var.parameter.argument_label>: <decl.var.parameter.type><ref.struct usr=\"s:10Foundation4DataV\">Data<\/ref.struct>?<\/decl.var.parameter.type> = nil<\/decl.var.parameter>)<\/decl.function.constructor>",
+            "key.is_dynamic" : true,
+            "key.kind" : "source.lang.swift.decl.function.method.instance",
+            "key.length" : 271,
+            "key.line" : 18,
+            "key.modulename" : "Singleton",
+            "key.name" : "init(_:authenticationTag:)",
+            "key.namelength" : 122,
+            "key.nameoffset" : 601,
+            "key.offset" : 601,
+            "key.parsed_declaration" : "public convenience init(_ delegate: StorageDelegate = SingletonStorageDelegate(),\n                        authenticationTag: Data? = nil)",
+            "key.parsed_scope.end" : 23,
+            "key.parsed_scope.start" : 18,
+            "key.receivers" : [
+              {
+                "key.usr" : "s:9Singleton0A7StorageC"
+              }
+            ],
+            "key.related_decls" : [
+              {
+                "key.annotated_decl" : "<RelatedName usr=\"s:9Singleton0A7StorageC_12symmetricKey17authenticationTag12errorClosureAC0B00B8Delegate_pSg_9CryptoKit09SymmetricD0VSg10Foundation4DataVSgys5Error_pcSgtcfc\">init(_:symmetricKey:authenticationTag:errorClosure:)<\/RelatedName>"
+              }
+            ],
+            "key.reusingastcontext" : false,
+            "key.substructure" : [
+
+            ],
+            "key.typename" : "(SingletonStorage.Type) -> (any StorageDelegate, Data?) -> SingletonStorage",
+            "key.typeusr" : "$s_17authenticationTag9Singleton0C7StorageC0D00D8Delegate_p_10Foundation4DataVSgtcD",
+            "key.usr" : "s:9Singleton0A7StorageC_17authenticationTagAC0B00B8Delegate_p_10Foundation4DataVSgtcfc"
+          }
+        ],
+        "key.typename" : "SingletonStorage.Type",
+        "key.typeusr" : "$s9Singleton0A7StorageCmD",
+        "key.usr" : "s:9Singleton0A7StorageC"
+      },
+      {
+        "key.accessibility" : "source.lang.swift.accessibility.open",
+        "key.annotated_decl" : "<Declaration>open class SingletonStorageDelegate : <Type usr=\"s:7Storage0A8DelegateP\">StorageDelegate<\/Type><\/Declaration>",
+        "key.attributes" : [
+          {
+            "key.attribute" : "source.decl.attribute.open",
+            "key.length" : 4,
+            "key.offset" : 946
+          }
+        ],
+        "key.bodylength" : 860,
+        "key.bodyoffset" : 1000,
+        "key.column" : 12,
+        "key.decl_lang" : "source.lang.swift",
+        "key.doc_comment" : "`SingletonStorageDelegate` conforming `StorageDelegate` protocol.",
+        "key.doc.column" : 12,
+        "key.doc.comment" : "`SingletonStorageDelegate` conforming `StorageDelegate` protocol.",
+        "key.doc.declaration" : "open class SingletonStorageDelegate : StorageDelegate",
+        "key.doc.file" : "\/Users\/vagrant\/git\/Sources\/Singleton\/SingletonStorage.swift",
+        "key.doc.full_as_xml" : "<Class file=\"\/Users\/vagrant\/git\/Sources\/Singleton\/SingletonStorage.swift\" line=\"27\" column=\"12\"><Name>SingletonStorageDelegate<\/Name><USR>s:9Singleton0A15StorageDelegateC<\/USR><Declaration>open class SingletonStorageDelegate : StorageDelegate<\/Declaration><CommentParts><Abstract><Para><codeVoice>SingletonStorageDelegate<\/codeVoice> conforming <codeVoice>StorageDelegate<\/codeVoice> protocol.<\/Para><\/Abstract><\/CommentParts><\/Class>",
+        "key.doc.line" : 27,
+        "key.doc.name" : "SingletonStorageDelegate",
+        "key.doc.type" : "Class",
+        "key.doclength" : 70,
+        "key.docoffset" : 876,
+        "key.elements" : [
+          {
+            "key.kind" : "source.lang.swift.structure.elem.typeref",
+            "key.length" : 15,
+            "key.offset" : 983
+          }
+        ],
+        "key.filepath" : "\/Users\/vagrant\/git\/Sources\/Singleton\/SingletonStorage.swift",
+        "key.fully_annotated_decl" : "<decl.class><syntaxtype.keyword>open<\/syntaxtype.keyword> <syntaxtype.keyword>class<\/syntaxtype.keyword> <decl.name>SingletonStorageDelegate<\/decl.name> : <ref.protocol usr=\"s:7Storage0A8DelegateP\">StorageDelegate<\/ref.protocol><\/decl.class>",
+        "key.inheritedtypes" : [
+          {
+            "key.name" : "StorageDelegate"
+          }
+        ],
+        "key.kind" : "source.lang.swift.decl.class",
+        "key.length" : 910,
+        "key.line" : 27,
+        "key.modulename" : "Singleton",
+        "key.name" : "SingletonStorageDelegate",
+        "key.namelength" : 24,
+        "key.nameoffset" : 957,
+        "key.offset" : 951,
+        "key.parsed_declaration" : "open class SingletonStorageDelegate: StorageDelegate",
+        "key.parsed_scope.end" : 56,
+        "key.parsed_scope.start" : 27,
+        "key.reusingastcontext" : false,
+        "key.substructure" : [
+          {
+            "key.accessibility" : "source.lang.swift.accessibility.private",
+            "key.annotated_decl" : "<Declaration>private var storage: [<Type usr=\"s:s11AnyHashableV\">AnyHashable<\/Type> : Any]<\/Declaration>",
+            "key.attributes" : [
+              {
+                "key.attribute" : "source.decl.attribute.private",
+                "key.length" : 7,
+                "key.offset" : 1005
+              }
+            ],
+            "key.column" : 17,
+            "key.decl_lang" : "source.lang.swift",
+            "key.filepath" : "\/Users\/vagrant\/git\/Sources\/Singleton\/SingletonStorage.swift",
+            "key.fully_annotated_decl" : "<decl.var.instance><syntaxtype.keyword>private<\/syntaxtype.keyword> <syntaxtype.keyword>var<\/syntaxtype.keyword> <decl.name>storage<\/decl.name>: <decl.var.type>[<ref.struct usr=\"s:s11AnyHashableV\">AnyHashable<\/ref.struct> : <syntaxtype.keyword>Any<\/syntaxtype.keyword>]<\/decl.var.type><\/decl.var.instance>",
+            "key.is_dynamic" : true,
+            "key.kind" : "source.lang.swift.decl.var.instance",
+            "key.length" : 34,
+            "key.line" : 28,
+            "key.modulename" : "Singleton",
+            "key.name" : "storage",
+            "key.namelength" : 7,
+            "key.nameoffset" : 1017,
+            "key.offset" : 1013,
+            "key.parsed_declaration" : "private var storage = [AnyHashable: Any]()",
+            "key.parsed_scope.end" : 28,
+            "key.parsed_scope.start" : 28,
+            "key.receivers" : [
+              {
+                "key.usr" : "s:9Singleton0A15StorageDelegateC"
+              }
+            ],
+            "key.reusingastcontext" : false,
+            "key.setter_accessibility" : "source.lang.swift.accessibility.private",
+            "key.typename" : "[AnyHashable : Any]",
+            "key.typeusr" : "$sSDys11AnyHashableVypGD",
+            "key.usr" : "s:9Singleton0A15StorageDelegateC7storage33_FED5851B7EBDAF542FAD8B393E6A4D12LLSDys11AnyHashableVypGvp"
+          },
+          {
+            "key.accessibility" : "source.lang.swift.accessibility.public",
+            "key.annotated_decl" : "<Declaration>public init()<\/Declaration>",
+            "key.attributes" : [
+              {
+                "key.attribute" : "source.decl.attribute.public",
+                "key.length" : 6,
+                "key.offset" : 1098
+              }
+            ],
+            "key.bodylength" : 0,
+            "key.bodyoffset" : 1113,
+            "key.column" : 12,
+            "key.decl_lang" : "source.lang.swift",
+            "key.doc_comment" : "Create a `SingletonStorageDelegate`.",
+            "key.doc.column" : 12,
+            "key.doc.comment" : "Create a `SingletonStorageDelegate`.",
+            "key.doc.declaration" : "public init()",
+            "key.doc.file" : "\/Users\/vagrant\/git\/Sources\/Singleton\/SingletonStorage.swift",
+            "key.doc.full_as_xml" : "<Function file=\"\/Users\/vagrant\/git\/Sources\/Singleton\/SingletonStorage.swift\" line=\"31\" column=\"12\"><Name>init()<\/Name><USR>s:9Singleton0A15StorageDelegateCACycfc<\/USR><Declaration>public init()<\/Declaration><CommentParts><Abstract><Para>Create a <codeVoice>SingletonStorageDelegate<\/codeVoice>.<\/Para><\/Abstract><\/CommentParts><\/Function>",
+            "key.doc.line" : 31,
+            "key.doc.name" : "init()",
+            "key.doc.type" : "Function",
+            "key.doclength" : 41,
+            "key.docoffset" : 1053,
+            "key.filepath" : "\/Users\/vagrant\/git\/Sources\/Singleton\/SingletonStorage.swift",
+            "key.fully_annotated_decl" : "<decl.function.constructor><syntaxtype.keyword>public<\/syntaxtype.keyword> <syntaxtype.keyword>init<\/syntaxtype.keyword>()<\/decl.function.constructor>",
+            "key.is_dynamic" : true,
+            "key.kind" : "source.lang.swift.decl.function.method.instance",
+            "key.length" : 9,
+            "key.line" : 31,
+            "key.modulename" : "Singleton",
+            "key.name" : "init()",
+            "key.namelength" : 6,
+            "key.nameoffset" : 1105,
+            "key.offset" : 1105,
+            "key.parsed_declaration" : "public init()",
+            "key.parsed_scope.end" : 31,
+            "key.parsed_scope.start" : 31,
+            "key.receivers" : [
+              {
+                "key.usr" : "s:9Singleton0A15StorageDelegateC"
+              }
+            ],
+            "key.reusingastcontext" : false,
+            "key.typename" : "(SingletonStorageDelegate.Type) -> () -> SingletonStorageDelegate",
+            "key.typeusr" : "$s9Singleton0A15StorageDelegateCycD",
+            "key.usr" : "s:9Singleton0A15StorageDelegateCACycfc"
+          },
+          {
+            "key.accessibility" : "source.lang.swift.accessibility.open",
+            "key.annotated_decl" : "<Declaration>@<Type usr=\"s:7Storage0A5ActorC\">StorageActor<\/Type> open func data&lt;D&gt;(forKey key: <Type usr=\"s:7Storage8StoreKeya\">StoreKey<\/Type>) -&gt; <Type usr=\"s:9Singleton0A15StorageDelegateC4data6forKeyxSgSS_t0B00B4DataRzlF1DL_xmfp\">D<\/Type>? where <Type usr=\"s:9Singleton0A15StorageDelegateC4data6forKeyxSgSS_t0B00B4DataRzlF1DL_xmfp\">D<\/Type> : <Type usr=\"s:7Storage0A4DataP\">StorageData<\/Type><\/Declaration>",
+            "key.attributes" : [
+              {
+                "key.attribute" : "source.decl.attribute.open",
+                "key.length" : 4,
+                "key.offset" : 1302
+              }
+            ],
+            "key.bodylength" : 20,
+            "key.bodyoffset" : 1362,
+            "key.column" : 15,
+            "key.decl_lang" : "source.lang.swift",
+            "key.doc_comment" : "Get `StorageData` for `StoreKey` from the keychain.\n\n- Parameter key: `StoreKey` to store the `StorageData`.\n\n- Returns: `StorageData` for `StoreKey`.\n",
+            "key.doc.column" : 15,
+            "key.doc.comment" : "Get `StorageData` for `StoreKey` from the keychain.\n\n- Parameter key: `StoreKey` to store the `StorageData`.\n\n- Returns: `StorageData` for `StoreKey`.",
+            "key.doc.declaration" : "@Storage.StorageActor open func data<D>(forKey key: StoreKey) -> D? where D : Storage.StorageData",
+            "key.doc.file" : "\/Users\/vagrant\/git\/Sources\/Singleton\/SingletonStorage.swift",
+            "key.doc.full_as_xml" : "<Function file=\"\/Users\/vagrant\/git\/Sources\/Singleton\/SingletonStorage.swift\" line=\"40\" column=\"15\"><Name>data(forKey:)<\/Name><USR>s:9Singleton0A15StorageDelegateC4data6forKeyxSgSS_t0B00B4DataRzlF<\/USR><Declaration>@Storage.StorageActor open func data&lt;D&gt;(forKey key: StoreKey) -&gt; D? where D : Storage.StorageData<\/Declaration><CommentParts><Abstract><Para>Get <codeVoice>StorageData<\/codeVoice> for <codeVoice>StoreKey<\/codeVoice> from the keychain.<\/Para><\/Abstract><Parameters><Parameter><Name>key<\/Name><Direction isExplicit=\"0\">in<\/Direction><Discussion><Para><codeVoice>StoreKey<\/codeVoice> to store the <codeVoice>StorageData<\/codeVoice>.<\/Para><\/Discussion><\/Parameter><\/Parameters><ResultDiscussion><Para><codeVoice>StorageData<\/codeVoice> for <codeVoice>StoreKey<\/codeVoice>.<\/Para><\/ResultDiscussion><\/CommentParts><\/Function>",
+            "key.doc.line" : 40,
+            "key.doc.name" : "data(forKey:)",
+            "key.doc.parameters" : [
+              {
+                "discussion" : [
+                  {
+                    "Para" : "`StoreKey` to store the `StorageData`."
+                  }
+                ],
+                "name" : "key"
+              }
+            ],
+            "key.doc.result_discussion" : [
+              {
+                "Para" : "`StorageData` for `StoreKey`."
+              }
+            ],
+            "key.doc.type" : "Function",
+            "key.doclength" : 177,
+            "key.docoffset" : 1120,
+            "key.filepath" : "\/Users\/vagrant\/git\/Sources\/Singleton\/SingletonStorage.swift",
+            "key.fully_annotated_decl" : "<decl.function.method.instance><syntaxtype.attribute.builtin><syntaxtype.attribute.name>@<ref.class usr=\"s:7Storage0A5ActorC\">StorageActor<\/ref.class><\/syntaxtype.attribute.name><\/syntaxtype.attribute.builtin> <syntaxtype.keyword>open<\/syntaxtype.keyword> <syntaxtype.keyword>func<\/syntaxtype.keyword> <decl.name>data<\/decl.name>&lt;<decl.generic_type_param usr=\"s:9Singleton0A15StorageDelegateC4data6forKeyxSgSS_t0B00B4DataRzlF1DL_xmfp\"><decl.generic_type_param.name>D<\/decl.generic_type_param.name><\/decl.generic_type_param>&gt;(<decl.var.parameter><decl.var.parameter.argument_label>forKey<\/decl.var.parameter.argument_label> <decl.var.parameter.name>key<\/decl.var.parameter.name>: <decl.var.parameter.type><ref.typealias usr=\"s:7Storage8StoreKeya\">StoreKey<\/ref.typealias><\/decl.var.parameter.type><\/decl.var.parameter>) -&gt; <decl.function.returntype><ref.generic_type_param usr=\"s:9Singleton0A15StorageDelegateC4data6forKeyxSgSS_t0B00B4DataRzlF1DL_xmfp\">D<\/ref.generic_type_param>?<\/decl.function.returntype> <syntaxtype.keyword>where<\/syntaxtype.keyword> <decl.generic_type_requirement><ref.generic_type_param usr=\"s:9Singleton0A15StorageDelegateC4data6forKeyxSgSS_t0B00B4DataRzlF1DL_xmfp\">D<\/ref.generic_type_param> : <ref.protocol usr=\"s:7Storage0A4DataP\">StorageData<\/ref.protocol><\/decl.generic_type_requirement><\/decl.function.method.instance>",
+            "key.is_dynamic" : true,
+            "key.kind" : "source.lang.swift.decl.function.method.instance",
+            "key.length" : 76,
+            "key.line" : 40,
+            "key.modulename" : "Singleton",
+            "key.name" : "data(forKey:)",
+            "key.namelength" : 42,
+            "key.nameoffset" : 1312,
+            "key.offset" : 1307,
+            "key.overrides" : [
+              {
+                "key.usr" : "s:7Storage0A8DelegateP4data6forKeyqd__SgSS_tKAA0A4DataRd__lF"
+              }
+            ],
+            "key.parsed_declaration" : "open func data<D: StorageData>(forKey key: StoreKey) -> D?",
+            "key.parsed_scope.end" : 40,
+            "key.parsed_scope.start" : 40,
+            "key.receivers" : [
+              {
+                "key.usr" : "s:9Singleton0A15StorageDelegateC"
+              }
+            ],
+            "key.reusingastcontext" : false,
+            "key.substructure" : [
+              {
+                "key.annotated_decl" : "<Declaration>D : <Type usr=\"s:7Storage0A4DataP\">StorageData<\/Type><\/Declaration>",
+                "key.column" : 20,
+                "key.decl_lang" : "source.lang.swift",
+                "key.elements" : [
+                  {
+                    "key.kind" : "source.lang.swift.structure.elem.typeref",
+                    "key.length" : 11,
+                    "key.offset" : 1320
+                  }
+                ],
+                "key.filepath" : "\/Users\/vagrant\/git\/Sources\/Singleton\/SingletonStorage.swift",
+                "key.fully_annotated_decl" : "<decl.generic_type_param><decl.generic_type_param.name>D<\/decl.generic_type_param.name> : <decl.generic_type_param.constraint><ref.protocol usr=\"s:7Storage0A4DataP\">StorageData<\/ref.protocol><\/decl.generic_type_param.constraint><\/decl.generic_type_param>",
+                "key.inheritedtypes" : [
+                  {
+                    "key.name" : "StorageData"
+                  }
+                ],
+                "key.kind" : "source.lang.swift.decl.generic_type_param",
+                "key.length" : 14,
+                "key.line" : 40,
+                "key.modulename" : "Singleton",
+                "key.name" : "D",
+                "key.namelength" : 1,
+                "key.nameoffset" : 1317,
+                "key.offset" : 1317,
+                "key.parsed_declaration" : "open func data<D: StorageData",
+                "key.parsed_scope.end" : 40,
+                "key.parsed_scope.start" : 40,
+                "key.reusingastcontext" : false,
+                "key.typename" : "D.Type",
+                "key.typeusr" : "$sxmD",
+                "key.usr" : "s:9Singleton0A15StorageDelegateC4data6forKeyxSgSS_t0B00B4DataRzlF1DL_xmfp"
+              }
+            ],
+            "key.typename" : "<D where D : StorageData> (SingletonStorageDelegate) -> (String) -> D?",
+            "key.typeusr" : "$s6forKeyxSgSS_tc7Storage0C4DataRzluD",
+            "key.usr" : "s:9Singleton0A15StorageDelegateC4data6forKeyxSgSS_t0B00B4DataRzlF"
+          },
+          {
+            "key.accessibility" : "source.lang.swift.accessibility.open",
+            "key.annotated_decl" : "<Declaration>@<Type usr=\"s:7Storage0A5ActorC\">StorageActor<\/Type> open func set(_ data: (some <Type usr=\"s:7Storage0A4DataP\">StorageData<\/Type>)?, forKey key: <Type usr=\"s:7Storage8StoreKeya\">StoreKey<\/Type>)<\/Declaration>",
+            "key.attributes" : [
+              {
+                "key.attribute" : "source.decl.attribute.open",
+                "key.length" : 4,
+                "key.offset" : 1569
+              }
+            ],
+            "key.bodylength" : 21,
+            "key.bodyoffset" : 1635,
+            "key.column" : 15,
+            "key.decl_lang" : "source.lang.swift",
+            "key.doc_comment" : "Set `StorageData` for `StoreKey` in the keychain.\n\n- Parameter data: `StorageData` to store.\n- Parameter key: `StoreKey` to store the `StorageData`.\n",
+            "key.doc.column" : 15,
+            "key.doc.comment" : "Set `StorageData` for `StoreKey` in the keychain.\n\n- Parameter data: `StorageData` to store.\n- Parameter key: `StoreKey` to store the `StorageData`.",
+            "key.doc.declaration" : "@Storage.StorageActor open func set(_ data: (some StorageData)?, forKey key: StoreKey)",
+            "key.doc.file" : "\/Users\/vagrant\/git\/Sources\/Singleton\/SingletonStorage.swift",
+            "key.doc.full_as_xml" : "<Function file=\"\/Users\/vagrant\/git\/Sources\/Singleton\/SingletonStorage.swift\" line=\"48\" column=\"15\"><Name>set(_:forKey:)<\/Name><USR>s:9Singleton0A15StorageDelegateC3set_6forKeyyxSg_SSt0B00B4DataRzlF<\/USR><Declaration>@Storage.StorageActor open func set(_ data: (some StorageData)?, forKey key: StoreKey)<\/Declaration><CommentParts><Abstract><Para>Set <codeVoice>StorageData<\/codeVoice> for <codeVoice>StoreKey<\/codeVoice> in the keychain.<\/Para><\/Abstract><Parameters><Parameter><Name>data<\/Name><Direction isExplicit=\"0\">in<\/Direction><Discussion><Para><codeVoice>StorageData<\/codeVoice> to store.<\/Para><\/Discussion><\/Parameter><Parameter><Name>key<\/Name><Direction isExplicit=\"0\">in<\/Direction><Discussion><Para><codeVoice>StoreKey<\/codeVoice> to store the <codeVoice>StorageData<\/codeVoice>.<\/Para><\/Discussion><\/Parameter><\/Parameters><\/CommentParts><\/Function>",
+            "key.doc.line" : 48,
+            "key.doc.name" : "set(_:forKey:)",
+            "key.doc.parameters" : [
+              {
+                "discussion" : [
+                  {
+                    "Para" : "`StorageData` to store."
+                  }
+                ],
+                "name" : "data"
+              },
+              {
+                "discussion" : [
+                  {
+                    "Para" : "`StoreKey` to store the `StorageData`."
+                  }
+                ],
+                "name" : "key"
+              }
+            ],
+            "key.doc.type" : "Function",
+            "key.doclength" : 175,
+            "key.docoffset" : 1389,
+            "key.filepath" : "\/Users\/vagrant\/git\/Sources\/Singleton\/SingletonStorage.swift",
+            "key.fully_annotated_decl" : "<decl.function.method.instance><syntaxtype.attribute.builtin><syntaxtype.attribute.name>@<ref.class usr=\"s:7Storage0A5ActorC\">StorageActor<\/ref.class><\/syntaxtype.attribute.name><\/syntaxtype.attribute.builtin> <syntaxtype.keyword>open<\/syntaxtype.keyword> <syntaxtype.keyword>func<\/syntaxtype.keyword> <decl.name>set<\/decl.name>(<decl.var.parameter><decl.var.parameter.argument_label>_<\/decl.var.parameter.argument_label> <decl.var.parameter.name>data<\/decl.var.parameter.name>: <decl.var.parameter.type><tuple>(<tuple.element><tuple.element.type><syntaxtype.keyword>some<\/syntaxtype.keyword> <ref.protocol usr=\"s:7Storage0A4DataP\">StorageData<\/ref.protocol><\/tuple.element.type><\/tuple.element>)<\/tuple>?<\/decl.var.parameter.type><\/decl.var.parameter>, <decl.var.parameter><decl.var.parameter.argument_label>forKey<\/decl.var.parameter.argument_label> <decl.var.parameter.name>key<\/decl.var.parameter.name>: <decl.var.parameter.type><ref.typealias usr=\"s:7Storage8StoreKeya\">StoreKey<\/ref.typealias><\/decl.var.parameter.type><\/decl.var.parameter>)<\/decl.function.method.instance>",
+            "key.is_dynamic" : true,
+            "key.kind" : "source.lang.swift.decl.function.method.instance",
+            "key.length" : 83,
+            "key.line" : 48,
+            "key.modulename" : "Singleton",
+            "key.name" : "set(_:forKey:)",
+            "key.namelength" : 54,
+            "key.nameoffset" : 1579,
+            "key.offset" : 1574,
+            "key.overrides" : [
+              {
+                "key.usr" : "s:7Storage0A8DelegateP3set_6forKeyyqd__Sg_SStKAA0A4DataRd__lF"
+              }
+            ],
+            "key.parsed_declaration" : "open func set(_ data: (some StorageData)?, forKey key: StoreKey)",
+            "key.parsed_scope.end" : 48,
+            "key.parsed_scope.start" : 48,
+            "key.receivers" : [
+              {
+                "key.usr" : "s:9Singleton0A15StorageDelegateC"
+              }
+            ],
+            "key.reusingastcontext" : false,
+            "key.substructure" : [
+
+            ],
+            "key.typename" : " (SingletonStorageDelegate) -> ((some StorageData)?, String) -> ()",
+            "key.typeusr" : "$s_6forKeyyxSg_SStc7Storage0C4DataRzluD",
+            "key.usr" : "s:9Singleton0A15StorageDelegateC3set_6forKeyyxSg_SSt0B00B4DataRzlF"
+          },
+          {
+            "key.accessibility" : "source.lang.swift.accessibility.open",
+            "key.annotated_decl" : "<Declaration>@<Type usr=\"s:7Storage0A5ActorC\">StorageActor<\/Type> open func remove(forKey key: <Type usr=\"s:7Storage8StoreKeya\">StoreKey<\/Type>)<\/Declaration>",
+            "key.attributes" : [
+              {
+                "key.attribute" : "source.decl.attribute.open",
+                "key.length" : 4,
+                "key.offset" : 1784
+              }
+            ],
+            "key.bodylength" : 34,
+            "key.bodyoffset" : 1824,
+            "key.column" : 15,
+            "key.decl_lang" : "source.lang.swift",
+            "key.doc_comment" : "Remove `StorageData` for `StoreKey` from the keychain.\n\n- Parameter key: `StoreKey` to remove.\n",
+            "key.doc.column" : 15,
+            "key.doc.comment" : "Remove `StorageData` for `StoreKey` from the keychain.\n\n- Parameter key: `StoreKey` to remove.",
+            "key.doc.declaration" : "@Storage.StorageActor open func remove(forKey key: StoreKey)",
+            "key.doc.file" : "\/Users\/vagrant\/git\/Sources\/Singleton\/SingletonStorage.swift",
+            "key.doc.full_as_xml" : "<Function file=\"\/Users\/vagrant\/git\/Sources\/Singleton\/SingletonStorage.swift\" line=\"55\" column=\"15\"><Name>remove(forKey:)<\/Name><USR>s:9Singleton0A15StorageDelegateC6remove6forKeyySS_tF<\/USR><Declaration>@Storage.StorageActor open func remove(forKey key: StoreKey)<\/Declaration><CommentParts><Abstract><Para>Remove <codeVoice>StorageData<\/codeVoice> for <codeVoice>StoreKey<\/codeVoice> from the keychain.<\/Para><\/Abstract><Parameters><Parameter><Name>key<\/Name><Direction isExplicit=\"0\">in<\/Direction><Discussion><Para><codeVoice>StoreKey<\/codeVoice> to remove.<\/Para><\/Discussion><\/Parameter><\/Parameters><\/CommentParts><\/Function>",
+            "key.doc.line" : 55,
+            "key.doc.name" : "remove(forKey:)",
+            "key.doc.parameters" : [
+              {
+                "discussion" : [
+                  {
+                    "Para" : "`StoreKey` to remove."
+                  }
+                ],
+                "name" : "key"
+              }
+            ],
+            "key.doc.type" : "Function",
+            "key.doclength" : 116,
+            "key.docoffset" : 1663,
+            "key.filepath" : "\/Users\/vagrant\/git\/Sources\/Singleton\/SingletonStorage.swift",
+            "key.fully_annotated_decl" : "<decl.function.method.instance><syntaxtype.attribute.builtin><syntaxtype.attribute.name>@<ref.class usr=\"s:7Storage0A5ActorC\">StorageActor<\/ref.class><\/syntaxtype.attribute.name><\/syntaxtype.attribute.builtin> <syntaxtype.keyword>open<\/syntaxtype.keyword> <syntaxtype.keyword>func<\/syntaxtype.keyword> <decl.name>remove<\/decl.name>(<decl.var.parameter><decl.var.parameter.argument_label>forKey<\/decl.var.parameter.argument_label> <decl.var.parameter.name>key<\/decl.var.parameter.name>: <decl.var.parameter.type><ref.typealias usr=\"s:7Storage8StoreKeya\">StoreKey<\/ref.typealias><\/decl.var.parameter.type><\/decl.var.parameter>)<\/decl.function.method.instance>",
+            "key.is_dynamic" : true,
+            "key.kind" : "source.lang.swift.decl.function.method.instance",
+            "key.length" : 70,
+            "key.line" : 55,
+            "key.modulename" : "Singleton",
+            "key.name" : "remove(forKey:)",
+            "key.namelength" : 28,
+            "key.nameoffset" : 1794,
+            "key.offset" : 1789,
+            "key.overrides" : [
+              {
+                "key.usr" : "s:7Storage0A8DelegateP6remove6forKeyySS_tKF"
+              }
+            ],
+            "key.parsed_declaration" : "open func remove(forKey key: StoreKey)",
+            "key.parsed_scope.end" : 55,
+            "key.parsed_scope.start" : 55,
+            "key.receivers" : [
+              {
+                "key.usr" : "s:9Singleton0A15StorageDelegateC"
+              }
+            ],
+            "key.reusingastcontext" : false,
+            "key.substructure" : [
+
+            ],
+            "key.typename" : "(SingletonStorageDelegate) -> (String) -> ()",
+            "key.typeusr" : "$s6forKeyySS_tcD",
+            "key.usr" : "s:9Singleton0A15StorageDelegateC6remove6forKeyySS_tF"
+          }
+        ],
+        "key.typename" : "SingletonStorageDelegate.Type",
+        "key.typeusr" : "$s9Singleton0A15StorageDelegateCmD",
+        "key.usr" : "s:9Singleton0A15StorageDelegateC"
+      }
+    ]
+  }
+}]

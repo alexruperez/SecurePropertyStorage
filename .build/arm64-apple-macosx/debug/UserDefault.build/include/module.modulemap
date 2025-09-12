@@ -1,0 +1,3 @@
+module UserDefault {
+    header "/Users/vagrant/git/.build/arm64-apple-macosx/debug/UserDefault.build/include/UserDefault-Swift.h"
+}
