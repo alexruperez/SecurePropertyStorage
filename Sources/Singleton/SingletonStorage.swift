@@ -31,7 +31,7 @@ open class SingletonStorageDelegate: StorageDelegate {
     public init() {}
 
     /**
-     Get `StorageData` for `StoreKey` from the keychain.
+     Get `StorageData` for `StoreKey` from the in-memory storage.
 
      - Parameter key: `StoreKey` to store the `StorageData`.
 
@@ -40,7 +40,7 @@ open class SingletonStorageDelegate: StorageDelegate {
     open func data<D: StorageData>(forKey key: StoreKey) -> D? { storage[key] as? D }
 
     /**
-     Set `StorageData` for `StoreKey` in the keychain.
+     Set `StorageData` for `StoreKey` in the in-memory storage.
 
      - Parameter data: `StorageData` to store.
      - Parameter key: `StoreKey` to store the `StorageData`.
@@ -48,7 +48,7 @@ open class SingletonStorageDelegate: StorageDelegate {
     open func set(_ data: (some StorageData)?, forKey key: StoreKey) { storage[key] = data }
 
     /**
-     Remove `StorageData` for `StoreKey` from the keychain.
+     Remove `StorageData` for `StoreKey` from the in-memory storage.
 
      - Parameter key: `StoreKey` to remove.
      */
