@@ -2,6 +2,22 @@
 
 ## Next Version
 
+#### ⚠️ Breaking changes
+- Minimum deployment targets raised: **iOS 15.0** (was 13.0), **macOS 12.0** (was 11.5), **tvOS 15.0** (was 13.0), **watchOS 9.0** (was 6.0). visionOS 1.0 is unchanged.
+  Projects that need older OS versions must stay on `0.8.2`.
+- There are **no public API changes**.
+
+#### Improvements
+- Xcode 27.1 / Swift 6.4 compatibility; the Xcode project now builds in Swift 6 language mode (`SWIFT_VERSION = 6.0`), matching `Package.swift`.
+- Replaced the deprecated `NSKeyedUnarchiver.unarchiveTopLevelObjectWithData(_:)` in `DelegatedStorage.object(forKey:)` with the non-deprecated unarchiver API, keeping the same behavior (archived `NSCoding` objects keep decoding). The library now builds without deprecation warnings.
+- Added GitHub Actions CI (`.github/workflows/ci.yml`) on the `xcode-27` runner image using Xcode 27.1: SwiftPM resolve + clean build + tests on macOS, tests on iPhone 17 Simulator (iOS 27.0), build checks for macOS, Mac Catalyst, iOS, tvOS, watchOS and visionOS, and an external-consumer integration check. Added Dependabot for the workflow actions.
+
+#### Tests
+- `swift test` compiles and runs again with Swift 6 (it failed to compile before): test classes are isolated to `@StorageActor`, expectations use `fulfillment(of:)`, and the non-isolated `allTests` lists were removed.
+- Removed the dead Linux scaffolding (`Tests/LinuxMain.swift`, `XCTestManifests.swift`), which referenced a non-existent module and is not used by SwiftPM on current toolchains.
+- Added `StorageTests` (18 tests): primitive/codable/`NSCoding` round trips, missing keys, removal, `register(defaults:)`, key hashing and value encryption, wrong key / authentication tag errors, corrupted data, `DataConvertible` edge cases and `SymmetricKey` round trip. Total: 56 tests.
+
+
 ## 0.8.2
 
 #### Fixed

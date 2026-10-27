@@ -2,6 +2,7 @@
 > Helps you define secure storages for your properties using Swift *property wrappers*.
 
 [![Twitter](https://img.shields.io/badge/me-%40alexruperez-blue)](http://alexruperez.com)
+[![CI](https://github.com/alexruperez/SecurePropertyStorage/actions/workflows/ci.yml/badge.svg)](https://github.com/alexruperez/SecurePropertyStorage/actions/workflows/ci.yml)
 [![Swift](https://img.shields.io/badge/swift-6-orange)](https://swift.org)
 [![License](https://img.shields.io/github/license/alexruperez/SecurePropertyStorage)](LICENSE)
 [![Swift Package Manager](https://img.shields.io/badge/Swift%20Package%20Manager-compatible-4BC51D.svg?style=flat)](https://swift.org/package-manager)
@@ -355,19 +356,27 @@ Enabling strict concurrency checking in your project's build settings (e.g., "St
 
 ## 🛠 Compatibility
 
-- macOS 11.5+
-- iOS 13.0+
-- iPadOS 13.0+
-- tvOS 13.0+
-- watchOS 6.0+
-- visionOS 1.0+
+| Platform | Minimum deployment target |
+|---|---|
+| iOS / iPadOS | 15.0 |
+| macOS | 12.0 |
+| tvOS | 15.0 |
+| watchOS | 9.0 |
+| visionOS | 1.0 |
+
+- Developed and tested with **Xcode 27.1** and **Swift 6.4** (`swift-tools-version:6.0`, Swift 6 language mode).
+- Mac Catalyst builds are supported as well.
+- Continuous integration (see [`.github/workflows/ci.yml`](.github/workflows/ci.yml)) runs the full test suite on an **iPhone 17 Simulator (iOS 27.0)** and on macOS (`swift test`),
+  and verifies that the package builds for macOS, Mac Catalyst, iOS, tvOS, watchOS and visionOS and that it can be consumed as an external Swift Package.
+- tvOS, watchOS and visionOS are **compile-verified only**: the test suite is not executed on those platforms.
+- If you need to support older OS versions, use the previous releases (`0.8.2` supports iOS 13, macOS 11.5, tvOS 13 and watchOS 6).
 
 ## ⚙️ Installation
 
 #### You can use the [Swift Package Manager](https://github.com/apple/swift-package-manager) by declaring SecurePropertyStorage as a dependency in your `Package.swift` file:
 
 ```swift
-.package(url: "https://github.com/alexruperez/SecurePropertyStorage", from: "0.7.1")
+.package(url: "https://github.com/alexruperez/SecurePropertyStorage", from: "0.8.2")
 ```
 
 By default, all property wrappers are installed and you can `import` them, but if you want, you can install only some of them:
@@ -378,6 +387,20 @@ By default, all property wrappers are installed and you can `import` them, but i
 - **Storage**: @*Store property wrappers.
 - **Inject**: @*Inject property wrappers.
 
+Then add the products you need to your target dependencies:
+
+```swift
+.target(
+    name: "YourTarget",
+    dependencies: [
+        .product(name: "SecurePropertyStorage", package: "SecurePropertyStorage")
+        // or only some of them: "UserDefault", "Keychain", "Singleton", "Inject", "Storage"
+    ]
+)
+```
+
+In Xcode: **File ▸ Add Package Dependencies…** and enter `https://github.com/alexruperez/SecurePropertyStorage`.
+
 *For more information, see [the Swift Package Manager documentation](https://github.com/apple/swift-package-manager/tree/master/Documentation).*
 
 #### Or you can use [Carthage](https://github.com/Carthage/Carthage):
@@ -385,6 +408,32 @@ By default, all property wrappers are installed and you can `import` them, but i
 ```ogdl
 github "alexruperez/SecurePropertyStorage"
 ```
+
+## 🧪 Development
+
+```bash
+swift build                      # Build all targets
+swift test                       # Run the test suite on macOS
+
+# Run the test suite on the iPhone 17 Simulator (iOS 27.0), as the CI does
+xcodebuild test \
+  -project SecurePropertyStorage.xcodeproj \
+  -scheme SecurePropertyStorage-Package \
+  -destination 'platform=iOS Simulator,name=iPhone 17,OS=27.0'
+
+# Compile-check another platform
+xcodebuild build \
+  -project SecurePropertyStorage.xcodeproj \
+  -scheme SecurePropertyStorage-Package \
+  -destination 'generic/platform=watchOS Simulator'
+```
+
+Notes for contributors:
+
+- Test classes are isolated to `@StorageActor` and their test methods are `async`, so XCTest runs them on that actor.
+- The Keychain needs entitlements that are not available to `swift test` on macOS; the Keychain tests therefore assert the error path there.
+  `StorageTests` use an in-memory delegate and cover the encryption logic deterministically.
+- Please keep the public API source compatible and add a [CHANGELOG](CHANGELOG.md) entry for every user-facing change.
 
 ## 🍻 Etc.
 

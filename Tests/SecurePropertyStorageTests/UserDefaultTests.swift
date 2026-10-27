@@ -1,3 +1,6 @@
+// swiftformat:disable redundantAsync
+// Test methods are `async` on purpose: it makes XCTest run them on `StorageActor` instead of the main thread.
+
 @testable import Storage
 @testable import UserDefault
 import XCTest
@@ -9,6 +12,7 @@ enum UserDefaultsCodable: String, Codable {
 
 @StorageActor let userDefaultsTagStorage = UserDefaultsStorage(authenticationTag: Data())
 
+@StorageActor
 final class UserDefaultTests: XCTestCase {
     @Store(userDefaultsTagStorage, "userDefaultsTagStore")
     var userDefaultsTagStore: String?
@@ -33,7 +37,7 @@ final class UserDefaultTests: XCTestCase {
     @UnwrappedCodableUserDefault("unwrappedUserDefaultsCodable")
     var unwrappedUserDefaultsCodable = UserDefaultsCodable.test
 
-    func testUserDefault() {
+    func testUserDefault() async {
         userDefaultsStore = nil
         XCTAssertNil(userDefaultsStore)
         let test = "testUserDefault"
@@ -75,7 +79,7 @@ final class UserDefaultTests: XCTestCase {
         XCTAssertEqual(unwrappedUserDefaultsCodable, .alternative)
     }
 
-    func testUserDefaultArray() {
+    func testUserDefaultArray() async {
         let userDefaults = UserDefaultsStorage.standard
         let key = "testArray"
         let value = [1]
@@ -83,7 +87,7 @@ final class UserDefaultTests: XCTestCase {
         XCTAssertEqual(userDefaults.array(forKey: key) as? [Int], value)
     }
 
-    func testUserDefaultSet() {
+    func testUserDefaultSet() async {
         let userDefaults = UserDefaultsStorage.standard
         let key = "testSet"
         let value = 1
@@ -93,7 +97,7 @@ final class UserDefaultTests: XCTestCase {
         XCTAssertEqual(userDefaults.set(forKey: key)?.randomElement(), value)
     }
 
-    func testUserDefaultDictionary() {
+    func testUserDefaultDictionary() async {
         let userDefaults = UserDefaultsStorage.standard
         let key = "testDictionary"
         let value = [key: 1]
@@ -101,7 +105,7 @@ final class UserDefaultTests: XCTestCase {
         XCTAssertEqual(userDefaults.dictionary(forKey: key) as? [String: Int], value)
     }
 
-    func testUserDefaultStringArray() {
+    func testUserDefaultStringArray() async {
         let userDefaults = UserDefaultsStorage.standard
         let key = "testStringArray"
         let value = [key]
@@ -109,7 +113,7 @@ final class UserDefaultTests: XCTestCase {
         XCTAssertEqual(userDefaults.stringArray(forKey: key), value)
     }
 
-    func testUserDefaultInteger() {
+    func testUserDefaultInteger() async {
         let userDefaults = UserDefaultsStorage.standard
         let key = "testInteger"
         let value = 1
@@ -117,7 +121,7 @@ final class UserDefaultTests: XCTestCase {
         XCTAssertEqual(userDefaults.integer(forKey: key), value)
     }
 
-    func testUserDefaultFloat() {
+    func testUserDefaultFloat() async {
         let userDefaults = UserDefaultsStorage.standard
         let key = "testFloat"
         let value: Float = 1
@@ -125,7 +129,7 @@ final class UserDefaultTests: XCTestCase {
         XCTAssertEqual(userDefaults.float(forKey: key), value)
     }
 
-    func testUserDefaultDouble() {
+    func testUserDefaultDouble() async {
         let userDefaults = UserDefaultsStorage.standard
         let key = "testDouble"
         let value: Double = 1
@@ -133,7 +137,7 @@ final class UserDefaultTests: XCTestCase {
         XCTAssertEqual(userDefaults.double(forKey: key), value)
     }
 
-    func testUserDefaultBool() {
+    func testUserDefaultBool() async {
         let userDefaults = UserDefaultsStorage.standard
         let key = "testBool"
         let value = true
@@ -141,7 +145,7 @@ final class UserDefaultTests: XCTestCase {
         XCTAssertEqual(userDefaults.bool(forKey: key), value)
     }
 
-    func testUserDefaultString() {
+    func testUserDefaultString() async {
         let userDefaults = UserDefaultsStorage.standard
         let key = "testURL"
         let value = "testString"
@@ -150,7 +154,7 @@ final class UserDefaultTests: XCTestCase {
         XCTAssertEqual(userDefaults.string(forKey: key), value)
     }
 
-    func testUserDefaultURL() {
+    func testUserDefaultURL() async {
         let userDefaults = UserDefaultsStorage.standard
         let key = "testURL"
         let value = URL(string: "https://github.com/alexruperez")
@@ -159,7 +163,7 @@ final class UserDefaultTests: XCTestCase {
         XCTAssertEqual(userDefaults.url(forKey: key), value)
     }
 
-    func testUserDefaultArrayNil() {
+    func testUserDefaultArrayNil() async {
         let userDefaults = UserDefaultsStorage.standard
         let key = "testArray"
         let value: [Any]? = nil
@@ -168,7 +172,7 @@ final class UserDefaultTests: XCTestCase {
         XCTAssertNil(userDefaults.array(forKey: key))
     }
 
-    func testUserDefaultDictionaryNil() {
+    func testUserDefaultDictionaryNil() async {
         let userDefaults = UserDefaultsStorage.standard
         let key = "testDictionary"
         let value: [String: Any]? = nil
@@ -177,7 +181,7 @@ final class UserDefaultTests: XCTestCase {
         XCTAssertNil(userDefaults.dictionary(forKey: key))
     }
 
-    func testUserDefaultStringArrayNil() {
+    func testUserDefaultStringArrayNil() async {
         let userDefaults = UserDefaultsStorage.standard
         let key = "testStringArray"
         let value: [String]? = nil
@@ -186,7 +190,7 @@ final class UserDefaultTests: XCTestCase {
         XCTAssertNil(userDefaults.stringArray(forKey: key))
     }
 
-    func testUserDefaultIntegerNil() {
+    func testUserDefaultIntegerNil() async {
         let userDefaults = UserDefaultsStorage.standard
         let key = "testInteger"
         let value: Int? = nil
@@ -195,7 +199,7 @@ final class UserDefaultTests: XCTestCase {
         XCTAssertEqual(userDefaults.integer(forKey: key), 0)
     }
 
-    func testUserDefaultFloatNil() {
+    func testUserDefaultFloatNil() async {
         let userDefaults = UserDefaultsStorage.standard
         let key = "testFloat"
         let value: Float? = nil
@@ -204,7 +208,7 @@ final class UserDefaultTests: XCTestCase {
         XCTAssertEqual(userDefaults.float(forKey: key), 0)
     }
 
-    func testUserDefaultDoubleNil() {
+    func testUserDefaultDoubleNil() async {
         let userDefaults = UserDefaultsStorage.standard
         let key = "testDouble"
         let value: Double? = nil
@@ -213,7 +217,7 @@ final class UserDefaultTests: XCTestCase {
         XCTAssertEqual(userDefaults.double(forKey: key), 0)
     }
 
-    func testUserDefaultBoolNil() {
+    func testUserDefaultBoolNil() async {
         let userDefaults = UserDefaultsStorage.standard
         let key = "testBool"
         let value: Bool? = nil
@@ -222,7 +226,7 @@ final class UserDefaultTests: XCTestCase {
         XCTAssertFalse(userDefaults.bool(forKey: key))
     }
 
-    func testUserDefaultStringNil() {
+    func testUserDefaultStringNil() async {
         let userDefaults = UserDefaultsStorage.standard
         let key = "testString"
         let value: String? = nil
@@ -231,7 +235,7 @@ final class UserDefaultTests: XCTestCase {
         XCTAssertNil(userDefaults.string(forKey: key))
     }
 
-    func testUserDefaultURLNil() {
+    func testUserDefaultURLNil() async {
         let userDefaults = UserDefaultsStorage.standard
         let key = "testURL"
         let value: URL? = nil
@@ -239,26 +243,4 @@ final class UserDefaultTests: XCTestCase {
         userDefaults.set(value, forKey: key)
         XCTAssertNil(userDefaults.url(forKey: key))
     }
-
-    static var allTests = [
-        ("testUserDefault", testUserDefault),
-        ("testUserDefaultArray", testUserDefaultArray),
-        ("testUserDefaultDictionary", testUserDefaultDictionary),
-        ("testUserDefaultStringArray", testUserDefaultStringArray),
-        ("testUserDefaultInteger", testUserDefaultInteger),
-        ("testUserDefaultFloat", testUserDefaultFloat),
-        ("testUserDefaultDouble", testUserDefaultDouble),
-        ("testUserDefaultBool", testUserDefaultBool),
-        ("testUserDefaultString", testUserDefaultString),
-        ("testUserDefaultURL", testUserDefaultURL),
-        ("testUserDefaultArrayNil", testUserDefaultArrayNil),
-        ("testUserDefaultDictionaryNil", testUserDefaultDictionaryNil),
-        ("testUserDefaultStringArrayNil", testUserDefaultStringArrayNil),
-        ("testUserDefaultIntegerNil", testUserDefaultIntegerNil),
-        ("testUserDefaultFloatNil", testUserDefaultFloatNil),
-        ("testUserDefaultDoubleNil", testUserDefaultDoubleNil),
-        ("testUserDefaultBoolNil", testUserDefaultBoolNil),
-        ("testUserDefaultStringNil", testUserDefaultStringNil),
-        ("testUserDefaultURLNil", testUserDefaultURLNil)
-    ]
 }

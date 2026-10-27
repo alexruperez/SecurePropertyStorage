@@ -1,0 +1,174 @@
+name: CI
+
+on:
+  push:
+    branches: [master]
+  pull_request:
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+concurrency:
+  group: ci-${{ github.workflow }}-${{ github.ref }}
+  cancel-in-progress: true
+
+env:
+  # `xcode-27` runner image (arm64): https://github.com/actions/runner-images/blob/main/images/macos/xcode-27-arm64-Readme.md
+  DEVELOPER_DIR: /Applications/Xcode_27.1.app/Contents/Developer
+  XCODE_PROJECT: SecurePropertyStorage.xcodeproj
+  XCODE_SCHEME: SecurePropertyStorage-Package
+
+jobs:
+  spm:
+    name: Swift Package (macOS) - resolve, build, test
+    runs-on: xcode-27
+    timeout-minutes: 20
+    steps:
+      - uses: actions/checkout@v7
+      - name: Toolchain
+        run: |
+          xcodebuild -version
+          swift --version
+      - name: Resolve dependencies
+        run: swift package resolve
+      - name: Clean build (warnings are errors)
+        run: |
+          swift package clean
+          swift build --build-tests -Xswiftc -warnings-as-errors
+      - name: Test
+        run: swift test
+
+  ios-tests:
+    name: Tests (iPhone 17 Simulator, iOS 27.0)
+    runs-on: xcode-27
+    timeout-minutes: 30
+    steps:
+      - uses: actions/checkout@v7
+      - name: Toolchain
+        run: |
+          xcodebuild -version
+          swift --version
+      - name: Available simulators
+        run: |
+          xcrun simctl list runtimes
+          xcrun simctl list devices available
+      - name: Verify the iPhone 17 / iOS 27.0 combination exists
+        run: |
+          # Do not assume iPhone 17 exists on every iOS 27.x runtime: fail loudly if the combination is missing.
+          xcrun simctl list devices available "iOS 27.0" | grep -E "^\s+iPhone 17 \(" \
+            || { echo "::error::No available 'iPhone 17' simulator on iOS 27.0"; exit 1; }
+      - name: Test
+        run: |
+          set -o pipefail
+          xcodebuild test \
+            -project "$XCODE_PROJECT" \
+            -scheme "$XCODE_SCHEME" \
+            -destination 'platform=iOS Simulator,name=iPhone 17,OS=27.0' \
+            -resultBundlePath TestResults.xcresult \
+            -enableCodeCoverage YES
+      - name: Upload test results
+        if: ${{ !cancelled() }}
+        uses: actions/upload-artifact@v7
+        with:
+          name: ios-test-results
+          path: TestResults.xcresult
+          if-no-files-found: warn
+          retention-days: 7
+
+  build-platforms:
+    name: Build (${{ matrix.name }})
+    runs-on: xcode-27
+    timeout-minutes: 30
+    strategy:
+      fail-fast: false
+      matrix:
+        include:
+          - name: macOS
+            destination: generic/platform=macOS
+          - name: Mac Catalyst
+            destination: generic/platform=macOS,variant=Mac Catalyst
+          - name: iOS device
+            destination: generic/platform=iOS
+          - name: tvOS Simulator
+            destination: generic/platform=tvOS Simulator
+          - name: watchOS Simulator
+            destination: generic/platform=watchOS Simulator
+          - name: visionOS Simulator
+            destination: generic/platform=visionOS Simulator
+    steps:
+      - uses: actions/checkout@v7
+      - name: Toolchain
+        run: |
+          xcodebuild -version
+          swift --version
+      - name: Build
+        run: |
+          set -o pipefail
+          xcodebuild build \
+            -project "$XCODE_PROJECT" \
+            -scheme "$XCODE_SCHEME" \
+            -destination "${{ matrix.destination }}" \
+            CODE_SIGNING_ALLOWED=NO \
+            SWIFT_TREAT_WARNINGS_AS_ERRORS=YES
+
+  consumer:
+    name: Integration as an external SwiftPM dependency
+    runs-on: xcode-27
+    timeout-minutes: 30
+    steps:
+      - uses: actions/checkout@v7
+      - name: Toolchain
+        run: |
+          xcodebuild -version
+          swift --version
+      - name: Create consumer package
+        run: |
+          mkdir -p "$RUNNER_TEMP/Consumer/Sources/Consumer"
+          cd "$RUNNER_TEMP/Consumer"
+          cat > Package.swift <<PACKAGE
+          // swift-tools-version:6.0
+          import PackageDescription
+
+          let package = Package(
+              name: "Consumer",
+              platforms: [.iOS(.v15), .macOS(.v12), .tvOS(.v15), .watchOS(.v9), .visionOS(.v1)],
+              dependencies: [.package(path: "$GITHUB_WORKSPACE")],
+              targets: [
+                  .target(name: "Consumer", dependencies: [
+                      .product(name: "SecurePropertyStorage", package: "SecurePropertyStorage")
+                  ])
+              ]
+          )
+          PACKAGE
+          cat > Sources/Consumer/Consumer.swift <<'SOURCE'
+          import Inject
+          import Keychain
+          import Singleton
+          import Storage
+          import UserDefault
+
+          @StorageActor
+          public final class Consumer {
+              @UserDefault("username") public var username: String?
+              @Keychain("password") public var password: String?
+              @UnwrappedSingleton("token") public var token = "default"
+              @CodableUserDefault("model") public var model: [String]?
+              @Inject public var dependency: String?
+              public init() {}
+          }
+          SOURCE
+      - name: Resolve and build (macOS)
+        working-directory: ${{ runner.temp }}/Consumer
+        run: |
+          swift package resolve
+          swift build
+      - name: Build (iOS, tvOS, watchOS, visionOS simulators)
+        working-directory: ${{ runner.temp }}/Consumer
+        run: |
+          set -o pipefail
+          for destination in "iOS Simulator" "tvOS Simulator" "watchOS Simulator" "visionOS Simulator"; do
+            echo "::group::$destination"
+            xcodebuild build -scheme Consumer-Package -destination "generic/platform=$destination"
+            echo "::endgroup::"
+          done

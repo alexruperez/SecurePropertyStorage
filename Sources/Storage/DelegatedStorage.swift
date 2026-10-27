@@ -55,11 +55,15 @@ open class DelegatedStorage: Storage {
      - Parameter key: A `StoreKey` in storage.
      */
     open func object(forKey key: StoreKey) throws -> Any? {
-        guard let data: Data = data(forKey: key),
-              let object = try NSKeyedUnarchiver.unarchiveTopLevelObjectWithData(data) else {
+        guard let data: Data = data(forKey: key) else {
             return nil
         }
-        return object
+        // Equivalent to the deprecated `unarchiveTopLevelObjectWithData(_:)`: the archived object graph
+        // may contain arbitrary classes, so secure coding can't be enforced here.
+        let unarchiver = try NSKeyedUnarchiver(forReadingFrom: data)
+        unarchiver.requiresSecureCoding = false
+        defer { unarchiver.finishDecoding() }
+        return try unarchiver.decodeTopLevelObject(forKey: NSKeyedArchiveRootObjectKey)
     }
 
     open func decodable<D: Decodable>(forKey key: StoreKey) -> D? {
