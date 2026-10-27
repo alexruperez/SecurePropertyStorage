@@ -1,0 +1,65 @@
+name: Documentation
+
+# Builds the Jazzy API documentation and publishes it to GitHub Pages.
+# Requires: Settings > Pages > Source = "GitHub Actions", and the `github-pages` environment
+# must allow deployments from the `main` branch.
+
+on:
+  push:
+    branches: [main]
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+concurrency:
+  group: pages
+  cancel-in-progress: false
+
+env:
+  DEVELOPER_DIR: /Applications/Xcode_27.1.app/Contents/Developer
+
+jobs:
+  build:
+    name: Build documentation
+    runs-on: xcode-27
+    timeout-minutes: 30
+    steps:
+      - uses: actions/checkout@v7
+      - name: Toolchain
+        run: |
+          xcodebuild -version
+          swift --version
+      - uses: ruby/setup-ruby@v1
+        with:
+          ruby-version: ".ruby-version"
+      - name: Install Jazzy
+        run: gem install jazzy
+      - name: Install SourceKitten
+        run: brew list sourcekitten >/dev/null 2>&1 || brew install sourcekitten
+      - name: Generate documentation
+        run: |
+          set -euo pipefail
+          # SourceKitten needs the native build system manifest (.build/debug.yaml).
+          swift build --build-system native
+          bash -euo pipefail jazzy.sh
+          test -f docs/index.html
+      - uses: actions/configure-pages@v6
+      - uses: actions/upload-pages-artifact@v5
+        with:
+          path: docs
+
+  deploy:
+    name: Deploy to GitHub Pages
+    needs: build
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    permissions:
+      pages: write
+      id-token: write
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    steps:
+      - id: deployment
+        uses: actions/deploy-pages@v5

@@ -2,6 +2,10 @@
 
 ## Next Version
 
+#### Tooling
+- API documentation is now built with Jazzy and published to GitHub Pages by a GitHub Actions workflow (`.github/workflows/docs.yml`) instead of the Bitrise `gh-pages.sh` script, which force-pushed build artifacts to `gh-pages`. Removed `gh-pages.sh`.
+- Moved the remaining `master` references to `main`.
+
 ## 0.9.0
 
 #### ⚠️ Breaking changes

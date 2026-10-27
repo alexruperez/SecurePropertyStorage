@@ -390,7 +390,6 @@
 		OBJ_34 /* SingletonTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SingletonTests.swift; sourceTree = "<group>"; };
 		A0A0A0A02F00000000000001 /* StorageTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StorageTests.swift; sourceTree = "<group>"; };
 		OBJ_35 /* UserDefaultTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserDefaultTests.swift; sourceTree = "<group>"; };
-		OBJ_44 /* gh-pages.sh */ = {isa = PBXFileReference; lastKnownFileType = text.script.sh; path = "gh-pages.sh"; sourceTree = "<group>"; };
 		OBJ_45 /* LICENSE */ = {isa = PBXFileReference; lastKnownFileType = text; path = LICENSE; sourceTree = "<group>"; };
 		OBJ_46 /* jazzy.sh */ = {isa = PBXFileReference; lastKnownFileType = text.script.sh; path = jazzy.sh; sourceTree = "<group>"; };
 		OBJ_47 /* CHANGELOG.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = CHANGELOG.md; sourceTree = "<group>"; };
@@ -550,7 +549,6 @@
 				OBJ_7 /* Sources */,
 				OBJ_30 /* Tests */,
 				OBJ_37 /* Products */,
-				OBJ_44 /* gh-pages.sh */,
 				OBJ_45 /* LICENSE */,
 				OBJ_46 /* jazzy.sh */,
 				OBJ_47 /* CHANGELOG.md */,
