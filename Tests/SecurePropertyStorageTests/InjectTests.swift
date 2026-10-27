@@ -1,4 +1,8 @@
+// swiftformat:disable redundantAsync
+// Test methods are `async` on purpose: it makes XCTest run them on `StorageActor` instead of the main thread.
+
 @testable import Inject
+@testable import Storage
 import XCTest
 
 protocol SubDependencyProtocol {}
@@ -19,7 +23,8 @@ protocol DependencyProtocol {
     var timestamp: TimeInterval { get }
 }
 
-class Dependency: DependencyProtocol, Equatable, DependencyQualifier, Sendable {
+@StorageActor
+final class Dependency: DependencyProtocol, Equatable, DependencyQualifier, Sendable {
     let timestamp = Date().timeIntervalSince1970
     @Inject
     var sub: SubDependencyProtocol?
@@ -62,6 +67,7 @@ protocol ErrorClosureDependencyProtocol {}
 
 protocol ErrorClosureSubDependencyProtocol {}
 
+@StorageActor
 final class ErrorClosureDependency: ErrorClosureDependencyProtocol, Sendable {
     @Register
     private var errorClosureSubDependency: ErrorClosureSubDependencyProtocol = ErrorClosureSubDependency()
@@ -71,6 +77,7 @@ final class ErrorClosureDependency: ErrorClosureDependencyProtocol, Sendable {
 
 final class ErrorClosureSubDependency: ErrorClosureSubDependencyProtocol, Sendable {}
 
+@StorageActor
 final class InjectTests: XCTestCase {
     @Register
     private var register: DependencyProtocol = Dependency()
@@ -143,7 +150,7 @@ final class InjectTests: XCTestCase {
     var injectInstanceWith: InstanceDependency? { instanceWith as? InstanceDependency }
     var injectUnwrappedInstanceWith: InstanceDependency? { unwrappedInstanceWith as? InstanceDependency }
 
-    func testInject() {
+    func testInject() async {
         XCTAssertNotNil(inject)
         XCTAssertNotNil(alternative)
         XCTAssertNotNil(injectClass)
@@ -193,8 +200,4 @@ final class InjectTests: XCTestCase {
             .description(CocoaError(.userCancelled))
             .contains("cancel"))
     }
-
-    static var allTests = [
-        ("testInject", testInject)
-    ]
 }

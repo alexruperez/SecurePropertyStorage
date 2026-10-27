@@ -116,7 +116,7 @@
 		OBJ_122 /* KeychainTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_33 /* KeychainTests.swift */; };
 		OBJ_123 /* SingletonTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_34 /* SingletonTests.swift */; };
 		OBJ_124 /* UserDefaultTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_35 /* UserDefaultTests.swift */; };
-		OBJ_125 /* XCTestManifests.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_36 /* XCTestManifests.swift */; };
+		A0A0A0A02F00000000000002 /* StorageTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0A0A0A02F00000000000001 /* StorageTests.swift */; };
 		OBJ_127 /* Inject.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = "SecurePropertyStorage::Inject::Product" /* Inject.framework */; };
 		OBJ_128 /* Singleton.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = "SecurePropertyStorage::Singleton::Product" /* Singleton.framework */; };
 		OBJ_129 /* UserDefault.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = "SecurePropertyStorage::UserDefault::Product" /* UserDefault.framework */; };
@@ -388,8 +388,8 @@
 		OBJ_32 /* InjectTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InjectTests.swift; sourceTree = "<group>"; };
 		OBJ_33 /* KeychainTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KeychainTests.swift; sourceTree = "<group>"; };
 		OBJ_34 /* SingletonTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SingletonTests.swift; sourceTree = "<group>"; };
+		A0A0A0A02F00000000000001 /* StorageTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StorageTests.swift; sourceTree = "<group>"; };
 		OBJ_35 /* UserDefaultTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserDefaultTests.swift; sourceTree = "<group>"; };
-		OBJ_36 /* XCTestManifests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = XCTestManifests.swift; sourceTree = "<group>"; };
 		OBJ_44 /* gh-pages.sh */ = {isa = PBXFileReference; lastKnownFileType = text.script.sh; path = "gh-pages.sh"; sourceTree = "<group>"; };
 		OBJ_45 /* LICENSE */ = {isa = PBXFileReference; lastKnownFileType = text; path = LICENSE; sourceTree = "<group>"; };
 		OBJ_46 /* jazzy.sh */ = {isa = PBXFileReference; lastKnownFileType = text.script.sh; path = jazzy.sh; sourceTree = "<group>"; };
@@ -523,8 +523,8 @@
 				OBJ_32 /* InjectTests.swift */,
 				OBJ_33 /* KeychainTests.swift */,
 				OBJ_34 /* SingletonTests.swift */,
+				A0A0A0A02F00000000000001 /* StorageTests.swift */,
 				OBJ_35 /* UserDefaultTests.swift */,
-				OBJ_36 /* XCTestManifests.swift */,
 			);
 			name = SecurePropertyStorageTests;
 			path = Tests/SecurePropertyStorageTests;
@@ -713,7 +713,7 @@
 			attributes = {
 				BuildIndependentTargetsInParallel = YES;
 				LastSwiftMigration = 9999;
-				LastUpgradeCheck = 1600;
+				LastUpgradeCheck = 2710;
 			};
 			buildConfigurationList = OBJ_2 /* Build configuration list for PBXProject "SecurePropertyStorage" */;
 			compatibilityVersion = "Xcode 3.2";
@@ -763,8 +763,8 @@
 				OBJ_121 /* InjectTests.swift in Sources */,
 				OBJ_122 /* KeychainTests.swift in Sources */,
 				OBJ_123 /* SingletonTests.swift in Sources */,
+				A0A0A0A02F00000000000002 /* StorageTests.swift in Sources */,
 				OBJ_124 /* UserDefaultTests.swift in Sources */,
-				OBJ_125 /* XCTestManifests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1252,10 +1252,10 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
-				MACOSX_DEPLOYMENT_TARGET = 11.5;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
+				MACOSX_DEPLOYMENT_TARGET = 12.0;
 				ONLY_ACTIVE_ARCH = YES;
-				OTHER_SWIFT_FLAGS = "$(inherited) -DXcode";
+				OTHER_SWIFT_FLAGS = "$(inherited) -DXcode -package-name SecurePropertyStorage";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SDKROOT = macosx;
 				SUPPORTED_PLATFORMS = "xrsimulator xros watchsimulator watchos macosx iphonesimulator iphoneos appletvsimulator appletvos";
@@ -1263,10 +1263,10 @@
 				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) SWIFT_PACKAGE DEBUG";
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_STRICT_CONCURRENCY = complete;
-				SWIFT_VERSION = 5.0;
-				TVOS_DEPLOYMENT_TARGET = 13.0;
+				SWIFT_VERSION = 6.0;
+				TVOS_DEPLOYMENT_TARGET = 15.0;
 				USE_HEADERMAP = NO;
-				WATCHOS_DEPLOYMENT_TARGET = 6.0;
+				WATCHOS_DEPLOYMENT_TARGET = 9.0;
 				XROS_DEPLOYMENT_TARGET = 1.0;
 			};
 			name = Debug;
@@ -1314,9 +1314,9 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
-				MACOSX_DEPLOYMENT_TARGET = 11.5;
-				OTHER_SWIFT_FLAGS = "$(inherited) -DXcode";
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
+				MACOSX_DEPLOYMENT_TARGET = 12.0;
+				OTHER_SWIFT_FLAGS = "$(inherited) -DXcode -package-name SecurePropertyStorage";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SDKROOT = macosx;
 				SUPPORTED_PLATFORMS = "xrsimulator xros watchsimulator watchos macosx iphonesimulator iphoneos appletvsimulator appletvos";
@@ -1325,10 +1325,10 @@
 				SWIFT_COMPILATION_MODE = wholemodule;
 				SWIFT_OPTIMIZATION_LEVEL = "-O";
 				SWIFT_STRICT_CONCURRENCY = complete;
-				SWIFT_VERSION = 5.0;
-				TVOS_DEPLOYMENT_TARGET = 13.0;
+				SWIFT_VERSION = 6.0;
+				TVOS_DEPLOYMENT_TARGET = 15.0;
 				USE_HEADERMAP = NO;
-				WATCHOS_DEPLOYMENT_TARGET = 6.0;
+				WATCHOS_DEPLOYMENT_TARGET = 9.0;
 				XROS_DEPLOYMENT_TARGET = 1.0;
 			};
 			name = Release;

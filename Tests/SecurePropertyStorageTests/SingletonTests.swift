@@ -1,3 +1,6 @@
+// swiftformat:disable redundantAsync
+// Test methods are `async` on purpose: it makes XCTest run them on `StorageActor` instead of the main thread.
+
 @testable import Singleton
 @testable import Storage
 import XCTest
@@ -9,6 +12,7 @@ enum SingletonCodable: String, Codable {
 
 @StorageActor let singletonTagStorage: DelegatedStorage = SingletonStorage(authenticationTag: Data())
 
+@StorageActor
 final class SingletonTests: XCTestCase {
     @Store(singletonTagStorage, "singletonTagStore")
     var singletonTagStore: String?
@@ -33,7 +37,7 @@ final class SingletonTests: XCTestCase {
     @UnwrappedCodableSingleton("unwrappedSingletonCodable")
     var unwrappedSingletonCodable = SingletonCodable.test
 
-    func testSingleton() {
+    func testSingleton() async {
         singletonStore = nil
         XCTAssertNil(singletonStore)
         let test = "testSingleton"
@@ -75,8 +79,4 @@ final class SingletonTests: XCTestCase {
         XCTAssertEqual(unwrappedSingletonTagCodable, .alternative)
         XCTAssertEqual(unwrappedSingletonCodable, .alternative)
     }
-
-    static var allTests = [
-        ("testSingleton", testSingleton)
-    ]
 }

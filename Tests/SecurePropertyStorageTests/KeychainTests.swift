@@ -1,3 +1,6 @@
+// swiftformat:disable redundantAsync
+// Test methods are `async` on purpose: it makes XCTest run them on `StorageActor` instead of the main thread.
+
 @testable import Keychain
 @testable import Storage
 import XCTest
@@ -15,7 +18,8 @@ enum KeychainCodable: String, Codable {
     return keychainStorage
 }()
 
-final class KeychainTests: XCTestCase, Sendable {
+@StorageActor
+final class KeychainTests: XCTestCase {
     @Store(keychainTagStorage, "keychainTagStore")
     var keychainTagStore: String?
     @Store(KeychainStorage.standard, "keychainStore")
@@ -39,15 +43,15 @@ final class KeychainTests: XCTestCase, Sendable {
     @UnwrappedCodableKeychain("unwrappedKeychainCodable")
     var unwrappedKeychainCodable = KeychainCodable.test
 
-    func testKeychainStorageAccessGroup() {
+    func testKeychainStorageAccessGroup() async {
         XCTAssertEqual(keychainTagStorage.accessGroup, "")
     }
 
-    func testKeychainStorageSynchronizable() {
+    func testKeychainStorageSynchronizable() async {
         XCTAssertTrue(keychainTagStorage.synchronizable)
     }
 
-    func testKeychainStorageAccessible() {
+    func testKeychainStorageAccessible() async {
         XCTAssertEqual(keychainTagStorage.accessible, kSecAttrAccessibleAfterFirstUnlock)
     }
 
@@ -56,9 +60,7 @@ final class KeychainTests: XCTestCase, Sendable {
         setupErrorClosure(storage: keychainTagStorage, expectation: keychainTagStoreError)
         keychainTagStore = "testKeychainTagStore"
         XCTAssertNil(keychainTagStore)
-        await MainActor.run {
-            waitForExpectations(timeout: 1)
-        }
+        await fulfillment(of: [keychainTagStoreError], timeout: 1)
     }
 
     func testKeychainStoreError() async {
@@ -66,9 +68,7 @@ final class KeychainTests: XCTestCase, Sendable {
         setupErrorClosure(storage: KeychainStorage.standard, expectation: keychainStoreError)
         keychainStore = "testKeychainStore"
         XCTAssertNil(keychainStore)
-        await MainActor.run {
-            waitForExpectations(timeout: 1)
-        }
+        await fulfillment(of: [keychainStoreError], timeout: 1)
     }
 
     func testKeychainError() async {
@@ -76,9 +76,7 @@ final class KeychainTests: XCTestCase, Sendable {
         setupErrorClosure(storage: KeychainStorage.standard, expectation: keychainError)
         keychain = "testKeychain"
         XCTAssertNil(keychain)
-        await MainActor.run {
-            waitForExpectations(timeout: 1)
-        }
+        await fulfillment(of: [keychainError], timeout: 1)
     }
 
     func testKeychainTagStoreDefaultError() async {
@@ -86,9 +84,7 @@ final class KeychainTests: XCTestCase, Sendable {
         setupErrorClosure(storage: keychainTagStorage, expectation: keychainTagStoreDefaultError)
         keychainTagDefault = "testKeychainTagStore"
         XCTAssertNil(keychainTagDefault)
-        await MainActor.run {
-            waitForExpectations(timeout: 1)
-        }
+        await fulfillment(of: [keychainTagStoreDefaultError], timeout: 1)
     }
 
     func testKeychainDefaultError() async {
@@ -96,9 +92,7 @@ final class KeychainTests: XCTestCase, Sendable {
         setupErrorClosure(storage: KeychainStorage.standard, expectation: keychainDefaultError)
         keychainDefault = "testKeychain"
         XCTAssertNil(keychainDefault)
-        await MainActor.run {
-            waitForExpectations(timeout: 1)
-        }
+        await fulfillment(of: [keychainDefaultError], timeout: 1)
     }
 
     func testKeychainTagStoreCodableError() async {
@@ -113,9 +107,7 @@ final class KeychainTests: XCTestCase, Sendable {
         }
         keychainTagCodable = .test
         XCTAssertNil(keychainTagCodable)
-        await MainActor.run {
-            waitForExpectations(timeout: 1)
-        }
+        await fulfillment(of: [keychainTagStoreCodableError], timeout: 1)
     }
 
     func testKeychainCodableError() async {
@@ -123,9 +115,7 @@ final class KeychainTests: XCTestCase, Sendable {
         setupErrorClosure(storage: KeychainStorage.standard, expectation: keychainCodableError)
         keychainCodable = .test
         XCTAssertNil(keychainCodable)
-        await MainActor.run {
-            waitForExpectations(timeout: 1)
-        }
+        await fulfillment(of: [keychainCodableError], timeout: 1)
     }
 
     func testUnwrappedKeychainTagStoreDefaultError() async {
@@ -133,9 +123,7 @@ final class KeychainTests: XCTestCase, Sendable {
         setupErrorClosure(storage: keychainTagStorage, expectation: unwrappedKeychainTagStoreDefaultError)
         unwrappedKeychainTagDefault = "tagDefault2"
         XCTAssertEqual(unwrappedKeychainTagDefault, "tagDefault")
-        await MainActor.run {
-            waitForExpectations(timeout: 1)
-        }
+        await fulfillment(of: [unwrappedKeychainTagStoreDefaultError], timeout: 1)
     }
 
     func testUnwrappedKeychainDefaultError() async {
@@ -143,9 +131,7 @@ final class KeychainTests: XCTestCase, Sendable {
         setupErrorClosure(storage: KeychainStorage.standard, expectation: unwrappedKeychainDefaultError)
         unwrappedKeychainDefault = "default2"
         XCTAssertEqual(unwrappedKeychainDefault, "default")
-        await MainActor.run {
-            waitForExpectations(timeout: 1)
-        }
+        await fulfillment(of: [unwrappedKeychainDefaultError], timeout: 1)
     }
 
     func testUnwrappedKeychainTagStoreCodableError() async {
@@ -153,9 +139,7 @@ final class KeychainTests: XCTestCase, Sendable {
         setupErrorClosure(storage: keychainTagStorage, expectation: unwrappedKeychainTagStoreCodableError)
         unwrappedKeychainTagCodable = .test2
         XCTAssertEqual(unwrappedKeychainTagCodable, .test)
-        await MainActor.run {
-            waitForExpectations(timeout: 1)
-        }
+        await fulfillment(of: [unwrappedKeychainTagStoreCodableError], timeout: 1)
     }
 
     func testUnwrappedKeychainCodableError() async {
@@ -163,9 +147,7 @@ final class KeychainTests: XCTestCase, Sendable {
         setupErrorClosure(storage: KeychainStorage.standard, expectation: unwrappedKeychainCodableError)
         unwrappedKeychainCodable = .test2
         XCTAssertEqual(unwrappedKeychainCodable, .test)
-        await MainActor.run {
-            waitForExpectations(timeout: 1)
-        }
+        await fulfillment(of: [unwrappedKeychainCodableError], timeout: 1)
     }
 
     func testKeychainDeleteError() async {
@@ -173,9 +155,7 @@ final class KeychainTests: XCTestCase, Sendable {
         setupErrorClosure(storage: KeychainStorage.standard, expectation: keychainDeleteError)
         keychain = nil
         XCTAssertNil(keychain)
-        await MainActor.run {
-            waitForExpectations(timeout: 1)
-        }
+        await fulfillment(of: [keychainDeleteError], timeout: 1)
     }
 
     func testKeychainCodableDeleteError() async {
@@ -183,9 +163,7 @@ final class KeychainTests: XCTestCase, Sendable {
         setupErrorClosure(storage: KeychainStorage.standard, expectation: keychainCodableDeleteError)
         keychainCodable = nil
         XCTAssertNil(keychainCodable)
-        await MainActor.run {
-            waitForExpectations(timeout: 1)
-        }
+        await fulfillment(of: [keychainCodableDeleteError], timeout: 1)
     }
 
     private func setupErrorClosure(storage: DelegatedStorage, expectation: XCTestExpectation) {
@@ -198,23 +176,4 @@ final class KeychainTests: XCTestCase, Sendable {
             }
         }
     }
-
-    static var allTests = [
-        ("testKeychainStorageAccessGroup", testKeychainStorageAccessGroup),
-        ("testKeychainStorageSynchronizable", testKeychainStorageSynchronizable),
-        ("testKeychainStorageAccessible", testKeychainStorageAccessible),
-        ("testKeychainStoreError", testKeychainStoreError),
-        ("testKeychainTagStoreError", testKeychainTagStoreError),
-        ("testKeychainError", testKeychainError),
-        ("testKeychainDeleteError", testKeychainDeleteError),
-        ("testKeychainTagStoreDefaultError", testKeychainTagStoreDefaultError),
-        ("testKeychainDefaultError", testKeychainDefaultError),
-        ("testKeychainTagStoreCodableError", testKeychainTagStoreCodableError),
-        ("testKeychainCodableError", testKeychainCodableError),
-        ("testKeychainCodableDeleteError", testKeychainCodableDeleteError),
-        ("testUnwrappedKeychainTagStoreDefaultError", testUnwrappedKeychainTagStoreDefaultError),
-        ("testUnwrappedKeychainDefaultError", testUnwrappedKeychainDefaultError),
-        ("testUnwrappedKeychainTagStoreCodableError", testUnwrappedKeychainTagStoreCodableError),
-        ("testUnwrappedKeychainCodableError", testUnwrappedKeychainCodableError)
-    ]
 }
