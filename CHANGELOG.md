@@ -2,6 +2,8 @@
 
 ## Next Version
 
+## 0.9.0
+
 #### ⚠️ Breaking changes
 - Minimum deployment targets raised: **iOS 15.0** (was 13.0), **macOS 12.0** (was 11.5), **tvOS 15.0** (was 13.0), **watchOS 9.0** (was 6.0). visionOS 1.0 is unchanged.
   Projects that need older OS versions must stay on `0.8.2`.
@@ -17,6 +19,13 @@
 - Removed the dead Linux scaffolding (`Tests/LinuxMain.swift`, `XCTestManifests.swift`), which referenced a non-existent module and is not used by SwiftPM on current toolchains.
 - Added `StorageTests` (18 tests): primitive/codable/`NSCoding` round trips, missing keys, removal, `register(defaults:)`, key hashing and value encryption, wrong key / authentication tag errors, corrupted data, `DataConvertible` edge cases and `SymmetricKey` round trip. Total: 56 tests.
 
+#### Documentation
+- Clarify that `SingletonStorageDelegate` uses in-memory storage. [#42](https://github.com/alexruperez/SecurePropertyStorage/pull/42) Thanks [@dajiaohuang](https://github.com/dajiaohuang)!
+
+#### Tooling
+- Disabled the `wrapPropertyBodies`, `wrapFunctionBodies`, `blankLinesBetweenScopes` and `wrapArguments` SwiftFormat rules, which newer SwiftFormat versions flag on the existing code style.
+
+[Commits](https://github.com/alexruperez/SecurePropertyStorage/compare/0.8.2...0.9.0)
 
 ## 0.8.2
 

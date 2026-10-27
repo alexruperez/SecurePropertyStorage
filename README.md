@@ -376,7 +376,7 @@ Enabling strict concurrency checking in your project's build settings (e.g., "St
 #### You can use the [Swift Package Manager](https://github.com/apple/swift-package-manager) by declaring SecurePropertyStorage as a dependency in your `Package.swift` file:
 
 ```swift
-.package(url: "https://github.com/alexruperez/SecurePropertyStorage", from: "0.8.2")
+.package(url: "https://github.com/alexruperez/SecurePropertyStorage", from: "0.9.0")
 ```
 
 By default, all property wrappers are installed and you can `import` them, but if you want, you can install only some of them:
