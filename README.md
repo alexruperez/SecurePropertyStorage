@@ -7,7 +7,7 @@
 [![License](https://img.shields.io/github/license/alexruperez/SecurePropertyStorage)](LICENSE)
 [![Swift Package Manager](https://img.shields.io/badge/Swift%20Package%20Manager-compatible-4BC51D.svg?style=flat)](https://swift.org/package-manager)
 [![Carthage](https://img.shields.io/badge/Carthage-compatible-4BC51D.svg?style=flat)](https://github.com/Carthage/Carthage)
-[![Bitrise](https://app.bitrise.io/app/4fed1af31836d3bc/status.svg?token=bYImtoKj0hxqCxnORhdgyg&branch=master)](https://app.bitrise.io/app/4fed1af31836d3bc)
+[![Bitrise](https://app.bitrise.io/app/4fed1af31836d3bc/status.svg?token=bYImtoKj0hxqCxnORhdgyg&branch=main)](https://app.bitrise.io/app/4fed1af31836d3bc)
 [![Maintainability](https://api.codeclimate.com/v1/badges/bbf38ddca9a26703cefd/maintainability)](https://codeclimate.com/github/alexruperez/SecurePropertyStorage/maintainability)
 [![codecov](https://codecov.io/gh/alexruperez/SecurePropertyStorage/graph/badge.svg?token=T3NNtLnmsA)](https://codecov.io/gh/alexruperez/SecurePropertyStorage)
 [![Quality](https://api.codacy.com/project/badge/Grade/53a23dd2feca4b7ca8357c918c7d49c9)](https://app.codacy.com/gh/alexruperez/SecurePropertyStorage/dashboard)
@@ -401,7 +401,7 @@ Then add the products you need to your target dependencies:
 
 In Xcode: **File ▸ Add Package Dependencies…** and enter `https://github.com/alexruperez/SecurePropertyStorage`.
 
-*For more information, see [the Swift Package Manager documentation](https://github.com/apple/swift-package-manager/tree/master/Documentation).*
+*For more information, see [the Swift Package Manager documentation](https://github.com/apple/swift-package-manager/tree/main/Documentation).*
 
 #### Or you can use [Carthage](https://github.com/Carthage/Carthage):
 

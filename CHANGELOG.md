@@ -84,7 +84,7 @@
 ## 0.6.0 (In memory of my friend **[Haldo Spontón](https://linktr.ee/haldosponton)**. Rest in peace. 😢)
 
 #### Added
-- [Register](https://github.com/alexruperez/SecurePropertyStorage/blob/master/README.md#-dependency-injection-usage) dependencies on error closure.
+- [Register](https://github.com/alexruperez/SecurePropertyStorage/blob/main/README.md#-dependency-injection-usage) dependencies on error closure.
 - More information in [InjectError](http://github.alexruperez.com/SecurePropertyStorage/Enums/InjectError.html).
 
 #### Improvements
@@ -96,7 +96,7 @@
 ## 0.5.0
 
 #### Added
-- Dependency Injection [Groups](https://github.com/alexruperez/SecurePropertyStorage/blob/master/README.md#-dependency-injection-usage).
+- Dependency Injection [Groups](https://github.com/alexruperez/SecurePropertyStorage/blob/main/README.md#-dependency-injection-usage).
 - [Set](https://developer.apple.com/documentation/swift/set) support.
 
 [Commits](https://github.com/alexruperez/SecurePropertyStorage/compare/0.4.2...0.5.0)
